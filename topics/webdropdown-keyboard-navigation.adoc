@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-keyboard-navigation",
+    "controlName": ["WebDropDown"],
+    "tags": [],
+    "guid": "{D5FCF7BC-A55D-404B-896D-AA44B4842FD5}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Keyboard Navigation
+
+WebDropDown™ supports keyboard navigation.
+
+* *TAB* - Sets focus on the drop-down.
+* *ALT + AccessKey (ALT + SHIFT + AccessKey)* - Places focus on the drop-down.
+* *ESC* - Automatically closes the drop-down and cancels any animations that are currently executing when the drop-down container is opened or while it is opening.
+* *ALT+DOWN ARROW* - Shows the drop-down container once the focus is on the drop-down.
+* *ALT+ UP ARROW* - Hides the drop-down container once the focus is on the drop-down.
+* *DOWN ARROW & UP ARROW* - Navigates through the items and the current item is automatically activated and selected when the drop-down container is shown; the drop-down container should only be closed when the end-user presses *ESC* or *ENTER* .
+* *ENTER* - Invokes NavigateUrl.
+* *SPACE +CTRL* - Selects or deselects an item when multiple selection is enabled.
+* *CTRL + UP/DOWN* - Changes the current active item but doesn’t modify selection when multiple selection is enabled (exactly as it is in Windows Explorer).
+* *HOME* - Scrolls to the first drop-down item, selects and activates it.
+* *END* - Scrolls to the last drop-down item, selects and activates it.

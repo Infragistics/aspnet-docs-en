@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-regions-of-webhtmleditor",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{0B89D46C-5697-420B-BA28-2661EA9B052F}",  
+    "buildFlags": [],
+    "createdOn": "2006-09-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Regions of WebHtmlEditor
+
+The WebHtmlEditor™ control is comprised of three regions that you need to be familiar with. In the following screenshot of WebHtmlEditor on a form, each region has been outlined and labeled.
+
+For a brief summary of the features and functionalities provided by each region see the following topics:
+
+* link:webhtmleditor-webhtmleditor-toolbar.html[WebHtmlEditor Toolbar]
+* link:webhtmleditor-webhtmleditor-text-window.html[WebHtmlEditor Text Window]
+* link:webhtmleditor-webhtmleditor-tab-strip.html[WebHtmlEditor Tab Strip]
+
+image::Images/WebHtmlEditor_Layout_of_the_WebHtmlEditor_1.PNG[]

@@ -1,0 +1,73 @@
+﻿////
+
+|metadata|
+{
+    "name": "setting-up-a-client-side-event",
+    "controlName": ["WebDialogWindow"],
+    "tags": ["Events"],
+    "guid": "{CD416D7D-0066-4039-A420-6E943CAE81A5}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Setting Up a Client Side Event
+
+== Before You Begin
+
+The Infragistics ASP.NET controls include a rich client-side object model, allowing you to manipulate how users interact with controls.
+
+*To complete this topic, we assume the following:*
+
+* You have created a new ASP.NET AJAX-Enabled Web Site.
+* You have an instance of ASP.NET Ajax ScriptManager on the WebForm.
+* You have enabled Infragistics Application Styling for this application. For information on how to do this, see link:web-enabling-application-styling-using-the-web-config-file.html[Enabling Application Styling Using the web.config File].
+* An instance of WebSplitter™ is on the form.
+
+== What You Will Accomplish
+
+You will set up a client-side event for the WebSplitter control.
+
+.Note:
+[NOTE]
+====
+This procedure is similar for all Infragistics ASP.NET controls built on the 'Infragistics ASP.NET AJAX Framework'.
+====
+
+== Follow these Steps
+
+[start=1]
+. In Source view, locate the closing <HEAD> tag and place the following snippet before it.
+
+*In JavaScript:*
+
+----
+<script type="text/javascript"><!--
+-$$->$$</script>
+----
+
+[start=2]
+. Inside the script block, define a function for WebSplitter's Expanding event. The event accepts two arguments. For more information on these arguments, see Client-Side Object Model (CSOM) CHM.
+
+*In JavaScript:*
+
+----
+...
+function WebSplitter1_Expanding(sender, splitArgs){
+}
+...
+----
+
+[start=3]
+. Return Design view and select the WebSplitter control.
+[start=4]
+. In the Properties window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.websplitter~clientevents.html[ClientEvents]"]  property and expand it.
+[start=5]
+. Next to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.splitterclientevents~expanding.html[Expanding]"]  property, type "WebSplitter1_Expanding". The event is now defined.
+
+.Note:
+[NOTE]
+====
+At this point you will need to add code to the event in order for WebSplitter to perform a task when expanding.
+====

@@ -1,0 +1,48 @@
+﻿////
+
+|metadata|
+{
+    "name": "webslider-change-websliders-increment-value",
+    "controlName": ["WebSlider"],
+    "tags": ["Editing","How Do I","Selection"],
+    "guid": "{DC28A292-6E77-4274-8438-83B759AA816A}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-05T14:47:38Z"
+}
+|metadata|
+////
+
+= Change WebSlider's Increment Value
+
+Your end user can change WebSlider's value in various different ways; they can click the increment buttons, drag the thumb, and click the track or tick marks. In addition, keyboard keys, such as the arrow and page keys, can change WebSlider’s value.
+
+There are several properties you can set to specify the amount of change in WebSlider’s value when your end user clicks a button or presses a key.
+
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webslider~smallchange.html[SmallChange]"]  -- Specifies the increment amount when your end user clicks a button or presses an arrow key.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webslider~largechange.html[LargeChange]"]  -- Specifies the increment amount when your end user presses PAGE UP or PAGE DOWN.
+
+The following example code demonstrates how to set the small and large increments of WebSlider.
+
+*In Visual Basic:*
+
+----
+Me.WebSlider1.SmallChange = 1
+Me.WebSlider1.LargeChange = 5
+----
+
+*In C#:*
+
+----
+this.WebSlider1.SmallChange = 1;
+this.WebSlider1.LargeChange = 5;
+----
+
+== Related Topics
+
+link:webslider-display-custom-formatted-values.html[Display Custom Formatted Values]
+
+link:webslider-edit-two-values.html[Edit Two Values]
+
+link:webslider-set-min,-max,-and-starting-values.html[Set Min, Max, and Starting Values]
+
+link:webslider-set-the-values-type.html[Set the Value's Type]

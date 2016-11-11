@@ -1,0 +1,88 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-enable-error-template",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids","Templating"],
+    "guid": "{21DED717-EA3B-477D-AABF-5D9F72D503F2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Enable Error Template
+
+You can use the Error Template of WebDataGrid™ to display custom messages for exceptions that occur within the control. These include any exceptions originating from WebDataGrid, as well as data operational error. Like all templates, you can place any control within the Error Template. WebDataGrid exposes the ErrorMessage property allowing you to access the exception message.
+
+The Error Template should only be used for full-page postbacks. For AJAX custom error-handling, see link:webdatagrid-handling-server-side-exceptions-using-ajax.html[Handling AJAX Error with WebDataGrid].
+
+.Note:
+[NOTE]
+====
+In order for the template to display, you must have something present within the template. If not, and the exception is not handled, your application loads the generic exception page.
+====
+
+You can set up the Error Template at design time by right-clicking WebDataGrid, mouse over Edit Template, and selecting Control Templates. You can then drag controls onto the Error Template surface.
+
+The following code shows you how to create a custom display for your end-users when an exception occurs, using the Error Template. As with the creation of any template, you need a class that implements the ITemplate interface.
+
+*In Visual Basic:*
+
+----
+Protected Overloads Overrides Sub OnInit(ByVal e As EventArgs) 
+    MyBase.OnInit(e) 
+    'template has to be instantiated every postback 
+    Me.WebDataGrid1.ErrorTemplate = New CustomErrorTemplate() 
+End Sub 
+Protected Overloads Overrides OnPreRender(ByVal e As EventArgs) Implements ITemplate.InstantiateIn
+    MyBase.OnPreRender(e);
+    'after label is created, get reference to add the error message 
+    Me.WebDataGrid1.DataBind()
+    Dim label1 As System.Web.UI.WebControls.Label = DirectCast(Me.WebDataGrid1.ErrorTemplateContainer.FindControl("Label1"), System.Web.UI.WebControls.Label) 
+    label1.Text += Me.WebDataGrid1.ErrorMessage 
+End Sub 
+Private Class CustomErrorTemplate 
+    Implements ITemplate 
+    #Region "ITemplate Members" 
+    Public Sub InstantiateIn(ByVal container As Control) 
+        Dim label1 As New System.Web.UI.WebControls.Label() 
+        label1.Text = "An operation has failed in WebDataGrid. The reason is provided: " 
+        label1.ID = "Label1" 
+        container.Controls.Add(label1) 
+    End Sub 
+#End Region
+End Class
+----
+
+*In C#:*
+
+----
+protected override void OnInit(EventArgs e)
+{
+	base.OnInit(e);
+		//template has to be instantiated every postback
+	this.WebDataGrid1.ErrorTemplate = new CustomErrorTemplate();
+}
+protected override void OnPreRender(EventArgs e)
+{
+	base.OnPreRender(e);
+	//after label is created, get reference to add the error message        
+	this.WebDataGrid1.DataBind();
+	System.Web.UI.WebControls.Label label1 = (System.Web.UI.WebControls.Label)this.WebDataGrid1.ErrorTemplateContainer.FindControl("Label1");
+	label1.Text += this.WebDataGrid1.ErrorMessage;
+}
+private class CustomErrorTemplate : ITemplate
+{
+	#region ITemplate Members
+	public void InstantiateIn(Control container)
+	{
+		System.Web.UI.WebControls.Label label1 = new System.Web.UI.WebControls.Label();
+		label1.Text = "An operation has failed in WebDataGrid. The reason is provided: ";
+		label1.ID = "Label1";
+		container.Controls.Add(label1);
+	}
+	#endregion
+}
+----

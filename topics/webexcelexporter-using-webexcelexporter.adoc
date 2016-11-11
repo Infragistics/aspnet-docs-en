@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexcelexporter-using-webexcelexporter",
+    "controlName": ["WebExcelExporter"],
+    "tags": ["Exporting","Getting Started","Grids"],
+    "guid": "b91c7f5f-1321-44f3-9663-c6600c303b10",  
+    "buildFlags": [],
+    "createdOn": "2010-06-06T07:47:58.3876939Z"
+}
+|metadata|
+////
+
+= Using WebExcelExporter
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebExcelExporter™.
+
+link:webexcelexporter-saving-exported-data-on-the-server.html[Saving Exported Data on the Server]
+
+This topic will map out a few easy steps to setup and use WebExcelExporter to export data into a Microsoft™ Excel™ file that gets saved directly to the web server’s hard drive.
+
+link:webexcelexporter-saving-all-data-in-the-data-source.html[Saving all Data in the Data Source]
+
+In most cases when WebDataGrid / WebHierarchicalDataGrid are used they have enabled Paging or Virtual Scrolling for a better visualization and optimization. Here is the place to learn how to set up WebExcelExporter to export the entire data from the grids into Excel™ file.
+
+link:webexcelexporter-exporting-data-into-different-file-formats.html[Exporting Data into Different File Formats]
+
+This topic introduces how to export WebDataGrid / WebHierarchicalDataGrid data into different Excel™ file formats, using WebExcelExporter component.
+
+link:webexcelexporter-exporting-multiple-grids-with-webexcelexporter.html[Exporting Multiple Grids with WebExcelExporter]
+
+In this topic you will see how easy it is to set up and use WebExcelExporter to export data from more than one WebDataGrid / WebHierarchicalDataGrid data into a single Excel™ file.
+
+link:webexcelexporter-exporting-custom-summary.html[Exporting Custom Summary]
+
+The example in this topic exports WebDataGrid / WebHierarchicalDataGrid custom summary formula into Excel™ file.

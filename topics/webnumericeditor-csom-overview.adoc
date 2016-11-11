@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webnumericeditor-csom-overview",
+    "controlName": ["WebNumericEditor"],
+    "tags": ["API","Editing"],
+    "guid": "{14284C86-226C-4F2A-9DE6-B493A15527FB}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T10:07:14Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebNumericEditor™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webtexteditor~infragistics.web.ui_namespace.html[WebNumericEditor CSOM Overview]

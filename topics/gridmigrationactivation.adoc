@@ -1,0 +1,235 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridmigrationactivation",
+    "controlName": [],
+    "tags": [],
+    "guid": "05043500-9773-4a54-a227-f2fbc32e9622",  
+    "buildFlags": [],
+    "createdOn": "2016-02-29T16:27:42.5022347Z"
+}
+|metadata|
+////
+
+= Grid Migration - Activation
+
+Grid Activation behavior is used to determine whether the current row/cell in the grid is active. The row/cell is active if it is the current row/cell (the one with focus) or it is the last one to receive an action from the user (button press, mouse click etc.). Certain functionalities of the grid depend directly on the Activation – keyboard navigation, cell editing, row adding, activation border display, activation based events etc.
+
+It is important to remember that there can only be one active row and one active cell at a time. Activation is not the same thing as selection. While multiple rows or cells can be selected, only one row and one cell are the active ones. Typically, the active row and cell serve as the anchor point for a selection.
+
+In “WebGrid” (“UltraWebGrid”) control an “Activation Object” is used to specify the attributes of the object that is currently active. The Active object is the object that currently has the input focus. In “WebGrid”, only Row and Cell objects become active. When a cell becomes active, its row becomes the active row. The “Activation Object” can be used to distinguish the active cell and row from other cells and rows in the grid that are only selected, or neither active nor selected. The attributes of the Activation object are applied to the “ActiveCell” and the “ActiveRow” objects when a cell and a row become active. Properties of the “Activation” object include BorderColor, BorderStyle and BorderWidth. ”AllowActivation” property of the object can be used to toggle the user's ability to activate rows and cells. With activation disabled, the user cannot edit cell contents or add new rows.
+
+Activation in “WebGrid” can be enabled or disabled in the Visual Studio designer mode for the grid from “Properties > Display Layout > Activation Object > Allow Activation”. The same can be done in the “.aspx” source code:
+
+*In ASPX:*
+
+[source,html]
+----
+<DisplayLayout …>
+…
+<ActivationObject AllowActivation="true" BorderColor="" BorderWidth="">
+</ActivationObject>
+…
+</DisplayLayout>
+----
+
+In “WebDataGrid/WebHierarchicalDataGrid” the Activation is represented as а Behavior. These grid controls support cell activation. A cell is active when it is the current or the last one to receive an action, such as a mouse click. The row or column to which an active cell belongs to is considered active as well. An element can also be activated through code. Certain functionalities of “WebDataGrid/WebHierarchicalDataGrid” require an active element. In “WebDataGrid/WebHierarchicalDataGrid” you can only have one active cell at a time.
+
+When using “WebHierarchicalDataGrid” with Activation turned on, if the currently active row has children pressing the “+” key on your keyboard will expand it, pressing the “–“key will collapse it.
+
+To enable “Activation” behavior at Design Time for “WebDataGrid/WebHierarchicalDataGrid” you should click the Ellipsis (...) button for Behavior in the property window and check the “Activation” behavior in the Behaviors editor.
+
+“Activation” for the “WebDataGrid/WebHierarchicalDataGrid” behaves in the following ways:
+
+[start=1]
+. When a user clicks on a cell, that cell and its row will both become active.
+[start=2]
+. If the user tabs into “WebDataGrid”, the first cell will become active. The user can then continue to tab into other cells, or use the arrow keys to navigate.
+[start=3]
+. If the end user tabs into “WebHierarchicalDataGrid”, the first cell will become active. The end user can then continue to tab into other cells, or use the arrow keys to navigate. With child bands expanded, the end user can Tab into or use the arrow keys to navigate through the child level cells.
+[start=4]
+. Once a cell has been activated, “WebDataGrid/WebHierarchicalDataGrid” will maintain its activation even if it loses focus.
+[start=5]
+. “WebDataGrid/WebHierarchicalDataGrid” will maintain the active cell during postbacks.
+[start=6]
+. When a row is selected the first cell in a row will be activated.
+
+“Activation” behavior can be enabled trough “.aspx” source code in this way:
+
+*In ASPX:*
+
+[source,html]
+----
+<Behaviors>
+     <ig:Activation>
+     </ig:Activation>
+</Behaviors>
+----
+
+Activation for the “WebDataGrid/WebHierarchicalDataGrid” can also be achieved with:
+
+Keyboard - *Arrow Keys*, *Tab*, *Enter*, *Shift* *+ Enter*, *Shift + Tab*, *Shift + [Any Arrow Keys]* .
+
+Mouse - By *Left Mouse Button* Click.
+
+*Client side code snippets* :
+
+UltraWebGrid Activation:
+
+Row Activation:
+
+*In JavaScript:*
+
+[source,js]
+----
+function MyFunction() {
+            var grid = igtbl_getGridById('UltraWebGrid1'); // get grid 
+            var row = grid.Rows.getRow(1); // get row number 1
+            row.activate(); // activate row 
+        }
+----
+
+Row can be activated directly from the grid object also:
+
+*In JavaScript:*
+
+[source,js]
+----
+function MyFunction() {
+            var grid = igtbl_getGridById('UltraWebGrid1'); // get grid 
+            var row = grid.Rows.getRow(1); // get row number 1
+            grid.setActiveRow(row); // activate row 
+        }
+----
+
+Cell Activation:
+
+*In JavaScript:*
+
+[source,js]
+----
+function MyFunction() {
+            var grid = igtbl_getGridById('UltraWebGrid1'); // get grid 
+            var row = grid.Rows.getRow(1); // get row number 1
+            var cell = row.getCell(2); // get cell 2 from row 1
+            cell.activate(); // activate cell 
+        }
+----
+
+Cell can be activated directly from the grid object also:
+
+*In JavaScript:*
+
+[source,js]
+----
+function MyFunction() {
+            var grid = igtbl_getGridById('UltraWebGrid1'); // get grid 
+            var row = grid.Rows.getRow(1); // get row number 1
+            var cell = row.getCell(2); // get cell 2 from row 1
+            grid.setActiveCell(cell); // activate cell 
+        }
+----
+
+*Web**Data**Grid* *Activation* :
+
+*In JavaScript:*
+
+[source,js]
+----
+function MyFunction() {
+var grid = $find("WebDataGrid1");
+// Set active cell
+grid.get_behaviors().get_activation().set_activeCell(grid.get_rows().get_row(0).get_cell(1));
+// Get active cell
+var activeCell = grid.get_behaviors().get_activation().get_activeCell();
+}
+----
+
+*Web**HierarchicalData**Grid* *Activation* :
+
+*In JavaScript:*
+
+[source,js]
+----
+function MyFunction() {
+var parentGrid = grid.get_gridView();
+// Set Active parent Cell
+if (parentGrid != null) parentGrid.get_behaviors().get_activation().set_activeCell(parentGrid.get_rows().get_row(0).get_cell(2));
+var childGrid = grid.get_gridView().get_rows().get_row(0).get_rowIslands(0)[0];
+// Set Active cell in child level
+if (childGrid != null)    childGrid.get_behaviors().get_activation().set_activeCell(childGrid.get_rows().get_row(0).get_cell(2));
+}
+----
+
+*Server side code snippets** :*
+
+UltraWebGrid Activation:
+
+RowActivation:
+
+*In C#:*
+
+[source,csharp]
+----
+UltraGridRow row = UltraWebGrid1.Rows[1];
+if (!row.Activated)
+ {
+    // When the postback is over, this row will have focus in the grid 
+    // and show the activation border
+     row.Activated = true;
+}
+----
+
+Cell Activation:
+
+*In C#:*
+
+[source,csharp]
+----
+UltraGridCell cell = UltraWebGrid1.Rows[0].Cells[0];
+if (!cell.Activated)
+{
+    // When the postback is over, this cell will have focus in the grid 
+    // and show the activation border
+    cell.Activated = true;
+}
+----
+
+*WebDataGrid* *Activation* :
+
+*In C#:*
+
+[source,csharp]
+----
+// Set active cell
+this.WebDataGrid1.Behaviors.Activation.ActiveCell = this.WebDataGrid1.Rows[0].Items[1];
+----
+
+*WebHierarchicalDataGrid*Activation:*
+
+*In C#:*
+
+[source,csharp]
+----
+// Hook up RowIslandDataBound event
+this.WebHierarchicalDataGrid1.RowIslandDataBound += new RowIslandEventHandler(WebHierarchicalDataGrid1_RowIslandDataBound);
+protected void WebHierarchicalDataGrid1_RowIslandDataBound(object sender, RowIslandEventArgs e)
+{
+   // Parent band
+   if (e.RowIsland.DataMember == "SqlDataSource1_DefaultView")
+   {
+      //Set active cell in parent band
+      Activation active = e.RowIsland.Behaviors.Activation;
+      active.ActiveCell = e.RowIsland.Rows[0].Items[1];
+   }
+   // Child band
+   if (e.RowIsland.DataMember == "SqlDataSource2_DefaultView"
+        && e.RowIsland.ParentRow == this.WebHierarchicalDataGrid1.GridView.Rows[0])
+   {
+      // Set active cell in child band
+      Activation active = e.RowIsland.Behaviors.Activation;
+      active.ActiveCell = e.RowIsland.Rows[0].Items[2];
+   }
+}
+----

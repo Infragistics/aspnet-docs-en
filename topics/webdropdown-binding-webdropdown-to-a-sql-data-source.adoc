@@ -1,0 +1,72 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-binding-webdropdown-to-a-sql-data-source",
+    "controlName": ["WebDropDown"],
+    "tags": ["Data Binding","Data Presentation"],
+    "guid": "{E7162A33-8D78-48B6-854C-EB74FCBE48B6}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-03T14:03:09Z"
+}
+|metadata|
+////
+
+= Binding WebDropDown to a Sql Data Source
+
+== Before You Begin
+
+WebDropDown™ can be bound to a SQL Data Source using the Data Source editor.WebDropDown allows you to show more than one column through the use of templating.
+
+In this topic, you will bind WebDropDown to a single column of the Customers table from the Northwind database.
+
+== What You Will Accomplish
+
+You will learn how to bind WebDropDown to a SQL Data Source.
+
+== Follow these Steps
+
+[start=1]
+. Create an ASP.NET web page.
+[start=2]
+. Drag a ScriptManager component from the Microsoft® Visual Studio™ toolbox onto the page.
+[start=3]
+. Drag a WebDropDown control onto the page.
+[start=4]
+. Drag a SqlDataSource component onto the page.
+[start=5]
+. Click the SqlDataSource component’s smart tag and select Configure Data Source. The Configure Data Source configuration wizard appears.
+
+image::images\WebDropDown_Binding_WebDropDown_to_a_SQL_Data_Source_01.png[]
+
+[start=7]
+. Click New Connection… to configure the connection string. The Add Connection dialog appears.
+
+image::images\WebDropDown_Binding_WebDropDown_to_a_SQL_Data_Source_02.png[]
+
+[start=9]
+. Set the server name to the server you are using, .\SQLEXPRESS in this case. Set the database to Northwind.
+[start=10]
+. Click Ok. You are returned to the Configure Connection screen.
+[start=11]
+. Click Next.
+[start=12]
+. Select Specify Columns from a Table or View and do the following:
+
+** Choose the Customers table from the drop-down list.
+** In the Columns section, select CompanyName to display the column.
+
+[start=13]
+. Click Next.
+[start=14]
+. Test your query to make sure SqlDataSource retrieves your data.
+[start=15]
+. Click Finish to close the configuration wizard. SqlDataSource is set up to retrieve the CompanyName of the Customers table from the Northwind database.
+[start=16]
+. In the Property window for WebDropDown, set the DataSourceID property to be the id of the SqlDataSource component.
+[start=17]
+. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]"]  property to CompanyName.
+[start=18]
+. Save and run the application. WebDropDown displays the list of company names similar to the following image:
+
+image::images\WebDropDown_Binding_WebDropDown_to_a_SQL_Data_Source_03.png[]

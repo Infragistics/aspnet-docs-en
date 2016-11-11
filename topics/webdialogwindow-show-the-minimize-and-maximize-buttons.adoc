@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdialogwindow-show-the-minimize-and-maximize-buttons",
+    "controlName": ["WebDialogWindow"],
+    "tags": ["How Do I"],
+    "guid": "{3BF84148-A45F-4E6E-B6FD-6B34C52CE396}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Show the Minimize and Maximize Buttons
+
+WebDialogWindow™ allows your end users to either minimize or maximize the dialog window by using two buttons in the header, very similar to a Windows Forms window. Both found off the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~header.html[Header]"]  object, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.restoredialogbutton~visible.html[MaximizeBox.Visible]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.restoredialogbutton~visible.html[MinimizeBox.Visible]"]  properties allow you to display both the maximize and minimize boxes, respectively.
+
+When the end user clicks the minimize box, the dialog window all but disappears, except for the header. The header itself decreases its width to a default size of 100 pixels. You can modify the minimized width manually; see link:webdialogwindow-maintain-the-headers-width-on-minimize.html[Maintain the Header's Width on Minimize] for more information.
+
+When the end user clicks the maximize box, the dialog window expands until it uses all of the available screen real estate within its parent page. The end user may wish to maximize the dialog window if there is a large amount of information in it, or if there is another web page displaying inside.
+
+The following code demonstrates how to display both the maximize and minimize boxes in the dialog window's header.
+
+*In Visual Basic:*
+
+----
+' Show the Minimize and Maximize Buttons.
+Me.WebDialogWindow1.Header.MaximizeBox.Visible = True
+Me.WebDialogWindow1.Header.MinimizeBox.Visible = True
+----
+
+*In C#:*
+
+----
+// Show the Minimize and Maximize Buttons.
+this.WebDialogWindow1.Header.MaximizeBox.Visible = true;
+this.WebDialogWindow1.Header.MinimizeBox.Visible = true;
+----

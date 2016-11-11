@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webnumericeditor-about-webnumericeditor",
+    "controlName": ["WebNumericEditor"],
+    "tags": [],
+    "guid": "{F9895D48-6576-4E79-865A-647DB833724B}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T10:03:38Z"
+}
+|metadata|
+////
+
+= About WebNumericEditor
+
+WebNumericEditor™ is an editor control which allows numeric editing functionality and provides various appearance and behavior based properties. WebNumericEditor is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebNumericEditor in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols_namespace.html[Infragistics.Web.UI.EditorControls]"]  namespace.
+
+image::images/WebNumericEditor_About_WebNumericEditor_01.png[]
+
+Like all Infragistics ASP.NET AJAX controls, WebNumericEditor seamlessly integrates into the Infragistics® Application Styling Framework. With CSS based properties you can manually customize the WebNumericEditor by leveraging your existing style sheets.
+
+WebNumericEditor also exposes a robust model within the client-side Javascript programming environment. The client-side object model (CSOM) consists of full-fledged properties and methods that enable developers to program significant units of functionality without the need of server-side postbacks.
+
+Some of the WebNumericEditor control’s features include:
+
+* *High-Performance* -- Lightweight markup and optimized code improve performance.
+* *Spin Buttons* -- End-users can easily spin through a list of values.
+* *Standard Validators support* -- Supports ASP.NET validator controls.
+* *NegativeCssClass* -- This is applied to the editor when the value is negative.
+* *DisplayFactor* -- Applies a multiplier to the value(List of supported values : 1, 10,100,1000,10000,100000,1000000).
+* *Min and Max values* -- You can easily specify the allowable range of numbers that can be entered into the editor.
+* *Min and Max DecimalPlaces* -- Allows you to set the minimum an maximum number of decimal places to be displayed when the control loses focus.
+* *DataMode* -- Allows you to set the type of object that is used to wrap the value in the control.
+* *SelectionOnFocus* -- You can set different selection types for whenever entering edit mode.
+* *MaxLength* -- Allows you to set the maximum length of a text string that can be entered into the control.
+* *Culture* -- You can set the CultureInfo object used by the control for localized formatting.

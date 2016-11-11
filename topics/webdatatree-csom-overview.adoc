@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-csom-overview",
+    "controlName": ["WebDataTree"],
+    "tags": [],
+    "guid": "{D059F81F-A1D1-4CD8-A3DA-5A9F728ED1C4}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Client-Side Object Model (CSOM) Overview
+
+The WebDataTree™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webdatatree~infragistics.web.ui_namespace.html[WebDataTree CSOM Overview]

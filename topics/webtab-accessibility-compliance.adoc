@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-accessibility-compliance",
+    "controlName": ["WebTab"],
+    "tags": ["Section 508"],
+    "guid": "{E508A5F0-3A73-4D0B-BBC2-8D927455484F}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebTab Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|All IMG tags, which have key functionality, have "alt" attributes property set or allow for setting of the alt attribute value.
+
+|(c)
+|Using client side events, the user can change any attribute of any of the control's DOM element reflecting the current node state (activate, selected, disabled and so on...) In this way, the information conveyed by colors (or styles) are available to the screen reader.
+
+|====

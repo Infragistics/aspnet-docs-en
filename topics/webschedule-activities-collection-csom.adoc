@@ -1,0 +1,102 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-activities-collection-csom",
+    "controlName": [],
+    "tags": ["API","How Do I","Scheduling"],
+    "guid": "{EDF3C213-C42B-42E3-8622-EE5F409A8BB4}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Activities Collection
+
+== ActivitiesCollection
+
+A collection of Activity objects.
+
+=== ActivitiesCollection Methods
+
+[cols="a,a"]
+|====
+|*createActivity* 
+|Creates a new Activity. 
+
+*Returns*
+
+The newly created activity with the following values: 
+
+StartDateTime - The date and time that this method is called 
+
+Duration - The default activity duration 
+
+DataKey - null 
+
+AllDayEvent - false 
+
+Status - 0(Normal) 
+
+EnableReminder - true 
+
+ReminderInterval - The default activity reminder interval 
+
+Importance - 1 (Normal) 
+
+ShowTimeAs - 3 (Busy) 
+
+SnoozeInterval - The default activity snooze interval 
+
+Subject - "" 
+
+Location - "" 
+
+Description - "" 
+
+*Remarks*
+
+Note: that this method does not add the newly created activity to the Activities Collection. In order to do that, you must call addActivity off of the WebScheduleInfo object.
+
+|*getItem* 
+|Gets the Activity from the specified index. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _index_ </dt> 
+
+<dd>The index of the Activity in the collection.</dd> 
+
+</dl> 
+
+*Returns*
+
+An activity object.
+
+|*getItemFromKey* 
+|Gets the Activity from the specified datakey. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _dataKey_ </dt> 
+
+<dd>The dataKey of the activity to retrieve.</dd> 
+
+</dl> 
+
+*Returns*
+
+Returns the Activity if its in the collection. Otherwise it will return null.
+
+|====
+
+=== ActivitiesCollection Properties
+
+==== length
+
+The number of activies in the ActivitiesCollection.

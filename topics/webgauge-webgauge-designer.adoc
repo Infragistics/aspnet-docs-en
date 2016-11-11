@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-webgauge-designer",
+    "controlName": ["WebGauge"],
+    "tags": ["Design Environment"],
+    "guid": "{B5EE4388-6084-4601-9200-5B9E1B326ED8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebGauge Designer
+
+The Gauge Designer consists of a gallery of Linear, Digital and Radial gauges, ranging from basic to complex designs. It allows you to choose a predefined gauge, and add it to the Gauge control. For example if you wanted to create a complex radial gauge such as a speedometer you can simply select it from the designer and it will be automatically added to your Gauge control. With the designer's user-friendly interface, you can quickly and easily manipulate the properties of the Gauge control.
+
+Click the following links to get started with the WebGauge Designer:
+
+* link:webgauge-layout-of-the-webgauge-designer.html[Layout of the WebGauge Designer]
+* link:webgauge-working-with-webgauge-presets.html[Working with WebGauge Presets]
+* link:webgauge-using-the-webgauge-designer.html[Using the WebGauge Designer]

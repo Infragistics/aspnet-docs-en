@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webcalcmanager",
+    "controlName": ["WebCalcManager"],
+    "tags": ["Getting Started"],
+    "guid": "{43DAC7D2-8D2A-4E27-9859-CF0C9673A77F}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebCalcManager
+
+If you're looking for an area that houses all of the overview/task-based information related to the WebCalcManager™ component, you've come to the right place. This section contains valuable information about WebCalcManager, ranging from what the component does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the component.
+
+== link:webcalcmanager-understanding-webcalcmanager.html[Understanding WebCalcManager]
+
+In this section you'll find any information that will help you to better understand the functionalities of the WebCalcManager component, as well as why you would want to use it to as part of building your applications.
+
+== link:web-webcalcmanager-using-webcalcmanager.html[Using WebCalcManager]
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebCalcManager™ control.
+
+== link:webcalcmanager-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebCalcManager component. The namespaces and classes listed in this topic link conveniently into the link:web-api-reference-guide.html[API Reference Guide] section of the Infragistics ASP.NET help.

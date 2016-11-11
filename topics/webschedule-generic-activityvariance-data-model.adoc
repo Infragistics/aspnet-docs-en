@@ -1,0 +1,134 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-generic-activityvariance-data-model",
+    "controlName": ["WebSchedule"],
+    "tags": ["Scheduling"],
+    "guid": "{4F96BD54-379A-4DD5-9748-0A551EC6EFAD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Generic Activity/Variance Data Model
+
+The Activity/Variance table shown here represents a sample WebSchedule™ Activity or Variance data table. The only difference between Activity and Variance data is the OriginalStartDateTimeUtc field for the Variance data cannot be null. All columns correspond with .NET properties that have the same name on an Activity or Appointment object, unless otherwise noted. If your custom data source publicly exposes property names matching the column name shown here, the field bindings will automatically occur. If you have different names, use the binding objects to specify the field bindings. For more information on data binding, see link:webschedule-data-bindings.html[Data Binding].
+
+The following shows the required fields you will need in order for WebScheduleGenericDataProvider™ to operate correctly:
+
+* ID
+* StartDateTimeUtc
+* Duration
+* ResourceID
+* VarianceID
+* Subject
+* Status
+* OriginalStartDateTimeUtc (Variance only)
+
+[options="header", cols="a,a,a,a"]
+|====
+|Column Name|Data Type|Null Allowed|Remarks
+
+|ID
+|int
+|No
+|Primary Key. A numeric value uniquely identifying this Activity.
+
+|StartDateTimeUtc
+|datetime
+|Yes
+|Starting date/time of the Activity represented in Universal Coordinated Time (UTC).
+
+|Duration
+|int
+|Yes
+|Length of the activity measured in seconds (3600 seconds = 1 hour).
+
+|Subject
+|nvarchar(50)
+|Yes
+|Free-form text appearing as the Activity's subject.
+
+|ActivityDescription
+|ntext
+|Yes
+|Free-form text describing additional details about the Activity.
+
+|AllDayEvent
+|bit
+|Yes
+|Indicates whether the Activity spans an entire day. An all-day activity renders with a distinctive style.
+
+|Location
+|nvarchar(50)
+|Yes
+|Free-form text describing the location where the Activity takes place.
+
+|Status
+|int
+|Yes
+|Indicates the Activity's status code that is currently used for indicating whether or not a reminder notice of the Activity has already expired.
+
+|EnableReminder
+|bit
+|Yes
+|Indicates whether or not the primary Resource affiliated with this Activity requires a reminder notification.
+
+|ReminderInterval
+|int
+|Yes
+|The period (if time in seconds) before activity's StartDateTimeUtc when a reminder notice should be given. Not used when EnableReminder is False.
+
+|ShowTimeAs
+|int
+|Yes
+|Determines the color of the time bar for an Activity (not rendered by all WebSchedule views.)
+
+|Importance
+|int
+|Yes
+|Priority associated with this activity. Affects which "Importance" button is selected by default on the Edit Appointment dialog box.
+
+|RecurrenceID
+|int
+|Yes
+|Every activity requires a recurrence id. Non-recurring activities must reference -999, the key of the default Recurrence.
+
+|RecurrencePattern
+|Varchar(70)
+|Yes
+|Determines the recurrence schedule.
+
+|VarianceID
+|unique identifier
+|No
+|Correlates a recurring root Activity with one or more of its variance data. 
+
+Each variance has a unique ID, but is related to it's root Activity because both share the same GUID value in this column. 
+
+Non-recurring Activities, and recurring Activities having no variance data, will have a NULL value in this column.
+
+|OriginalStartDateTimeUtc
+|datetime
+|Yes
+|Identifies an individual occurrence of a recurring Activity to be overridden with column values from this row by what the occurrence's originally scheduled Start Date/Time (in UTC) would have been, based on it's recurrence pattern. 
+
+Applies to variance data only, all others will have a NULL value in this column.
+
+|_ts
+|timestamp
+|No
+|Timestamp that is used to detect concurrency conflicts.
+
+|ResourceID
+|Int
+|No
+|Correlates to the Resource data that this activity belongs to.
+
+|====
+
+== Related Topic
+
+link:webschedule-generic-resource-data-model.html[Generic Resource Data Model]

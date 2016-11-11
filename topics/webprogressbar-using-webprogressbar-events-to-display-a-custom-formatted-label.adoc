@@ -1,0 +1,105 @@
+﻿////
+
+|metadata|
+{
+    "name": "webprogressbar-using-webprogressbar-events-to-display-a-custom-formatted-label",
+    "controlName": ["WebProgressBar"],
+    "tags": [],
+    "guid": "{4B246BFD-D467-45DA-B1B9-506B0FE0BE91}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-03T16:56:41Z"
+}
+|metadata|
+////
+
+= Using WebProgressBar Events to Display a Custom Formatted Label
+
+== Before You Begin
+
+The WebProgressBar™ control’s progress label text can be accessed so that it can be displayed within any other control. For example, you may want to display the remaining progress within a Label control. The WebProgressBar control’s client side object model (CSOM) exposes this text through the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~formattedlabel.html[FormattedLabel]"]  property.
+
+== What You Will Accomplish
+
+You will display the WebProgressBar control’s progress label text within a standard label control. You will achieve this by handling the WebProgressBar  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.progressbarclientevents~progresschanged.html[ProgressChanged]"]  client-side event and using the FormattedLabel property.
+
+In this topic, you will use the WebSlider™ control so that whenever the end-user moves the slider, the WebProgressBar progress is updated. The WebProgressBar formatted label text that shows the remaining percentage is then displayed within a Label control.
+
+== Follow these Steps
+
+[start=1]
+. Place a ScriptManager component, a WebProgressBar control, a WebSlider control and a standard Label control on the form.
+[start=2]
+. Set the Label control’s ID property to lblMsg.
+[start=3]
+. The WebProgressBar and WebSlider can be left with their default minimum and maximum values.
+[start=4]
+. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelformatstring.html[LabelFormatString]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelalignment.html[LabelAlignment]"]  properties as shown in the following code:
+
+*In Visual Basic:*
+
+----
+      'Sets the label format to display the remaining progress in percentage
+      WebProgressBar1.LabelFormatString = "Remaining progress : {3}%"
+      'Stops showing the label inside the WebProgressBar
+      WebProgressBar1.LabelAlignment = Infragistics.Web.UI.DisplayControls.ProgressBarLabelAlignment.None
+----
+
+*In C#:*
+
+----
+      //Sets the label format to display the remaining progress in percentage
+      WebProgressBar1.LabelFormatString = "Remaining progress : {3}%";
+      //Stops showing the label inside the WebProgressBar
+      WebProgressBar1.LabelAlignment = Infragistics.Web.UI.DisplayControls.ProgressBarLabelAlignment.None;
+----
+
+[start=5]
+. Handle the WebSlider control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.sliderclientevents~valuechanged.html [ValueChanged]"]  client-side event to display its current value in the WebProgressBar.
+
+*In JavaScript:*
+
+----
+        // The client event ‘ValueChanged’ takes two parameters sender and e
+        // sender  is the object which is raising the event
+        // e is the SliderValueChangedEventArgs 
+        function WebSlider1_ValueChanged(sender, e) {
+            //Gets reference to the WebSlider
+            var slider = $find("WebSlider1");
+            //Gets reference to the WebProgressBar
+            var progressbar = $find("WebProgressBar1");
+            //Gets the new value of the WebSlider
+            var slider_newValue = e.get_newValue();
+            //Sets the value property of WebProgressBar
+            progressbar.set_progressValue(slider_newValue);
+        }
+----
+
+[start=6]
+. Next, handle the WebProgressBar control’s ProgressChanged client-side event to display the WebProgressBar control’s formatted label text within the Label control.
+
+*In JavaScript:*
+
+----
+      // The client event ‘ProgressChanged’ takes two parameters sender and e
+      // sender  is the object which is raising the event
+      // e is the ProgressChangedEventArgs 
+        function WebProgressBar1_ProgressChanged(sender, e) {
+            //Gets the reference of WebProgressBar
+            var progressbar = $find("WebProgressBar1");
+            //Gets the formatted label of WebProgressBar 
+            var progressbar_labelFormat = progressbar.get_formattedLabel();
+            //Shows the label of WebProgressBar in the label control  
+            lblMsg.innerHTML = progressbar_labelFormat;
+        }
+----
+
+[start=7]
+. Save and run your application. Move the slider thumb and observe how the Label control displays the remaining progress.
+
+*Before moving the slider’s thumb:*
+
+image::images\WebProgressBar_Using_WebProgressBar_Events_to_Display_a_Custom_Formatted_Label_01.png[]
+
+*After moving the slider’s thumb:*
+
+image::images\WebProgressBar_Using_WebProgressBar_Events_to_Display_a_Custom_Formatted_Label_02.png[]

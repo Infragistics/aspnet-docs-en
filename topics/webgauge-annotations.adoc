@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-annotations",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{04113EBA-6AD0-42DE-9E3B-BE5AE26F2332}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Annotations
+
+Click the links below to learn about the annotation types available for the WebGauge control, as well as to access a task-based procedure on creating annotations:
+
+* link:webgauge-box-annotations.html[Box Annotations]
+* link:webgauge-ellipse-annotations.html[Ellipse Annotations]
+* link:webgauge-create-a-box-annotation-on-a-gauge.html[Create a Box Annotation on a Gauge]

@@ -1,0 +1,60 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-refrence-a-cell-when-creating-an-item-template",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids"],
+    "guid": "{44ABF1AF-7819-4AB1-9C0A-DA19AC33A42B}",  
+    "buildFlags": [],
+    "createdOn": "2008-06-10T16:00:45Z"
+}
+|metadata|
+////
+
+= Reference a Cell When Creating an Item Template
+
+Creating an Item Template for WebDataGrid™ in code requires that you implement the InstantiateIn method of the ITemplate interface. If you need to get a cell's value within this method, you cannot access the value by simply referencing the WebDataGrid object directly.
+
+To get a get a cell's value, you must get a reference to the DataItem of the Container passed to the method. This DataItem is a DataRowView when the template is an Item Template. With the DataRowView, you can access the cells for that row.
+
+The following code shows you how to get a cell's value to set for a Label's text when creating an Item Template in code.
+
+*In Visual Basic:*
+
+----
+Private Class CustomItemTemplate 
+    Implements ITemplate 
+    #Region "ITemplate Members" 
+    Public Sub InstantiateIn(container As Control) Implements ITemplate.InstantiateIn
+        Dim label1 As New Label() 
+        label1.ID = "TemplateLabel" 
+        ' Get the cell value from the DataItem
+        label1.Text = DirectCast(DirectCast(container, TemplateContainer).DataItem, DataRowView)("CustomerID").ToString() 
+        container.Controls.Add(label1) 
+    End Sub 
+    #End Region 
+End Class
+----
+
+*In C#:*
+
+----
+private class CustomItemTemplate : ITemplate
+{
+	#region ITemplate Members
+	public void InstantiateIn(Control container)
+	{
+		Label label1 = new Label();
+		label1.ID = "TemplateLabel";
+		// Get the cell value from the DataItem
+		label1.Text = ((DataRowView)((TemplateContainer)container).DataItem)["CustomerID"].ToString();
+		container.Controls.Add(label1);
+	}
+	#endregion
+}
+----
+
+== Related Topics
+
+link:webdatagrid-using-item-template.html[Using Item Template]

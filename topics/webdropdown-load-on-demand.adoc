@@ -1,0 +1,85 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-load-on-demand",
+    "controlName": ["WebDropDown"],
+    "tags": [],
+    "guid": "{068BDA6B-9E98-4A83-9DFE-DB1C53BAFB5C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Load-on-demand
+
+WebDropDown™ supports load-on-demand. If load-on-demand is enabled, the end-user should first be able to see a scrollbar in the dropdown container, and if they scroll to the end of the list more items are fetched and appended at the bottom of the list through asynchronous callbacks. Enabling load-on-demand significantly reduces the bandwidth and processing overhead on both the server and the client. The data loading message can be set by using the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~loadingitemsmessagetext.html[LoadingItemsMessageText]"]  property.
+
+To enable load-on-demand, theWebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enableloadondemand.html[EnableLoadOnDemand]"]  property must be set to True. By default, this property is set to False. You can set the EnableLoadOnDemand property by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+[source]
+----
+WebDropDown1.EnableLoadOnDemand = true
+----
+
+*In C#:*
+
+[source]
+----
+WebDropDown1.EnableLoadOnDemand = true;
+----
+
+.Note:
+[NOTE]
+====
+Load-on-demand cannot be used with paging. If both load-on-demand and paging are enabled, unexpected results will occur.
+====
+
+== Using load-on-demand in WebDropDown
+
+The example below expects that you will be using the Customers table of the Northwind database.
+
+[start=1]
+. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component, a WebDropDown control and a SqlDataSource component.
+[start=2]
+. Bind WebDropDown to the Categories table of the Northwind database. For more information on how to bind WebDropDown to a SqlDataSource, see link:webdropdown-binding-webdropdown-to-a-sql-data-source.html[Binding WebDropDown to a Sql Data Source].
+[start=3]
+. Set the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]"]  property to CompanyName.
+[start=4]
+. Set the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~dropdowncontainerheight.html[DropDownContainerHeight]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~dropdowncontainerwidth.html[DropDownContainerWidth]"]  properties to 200px. You can set these properties in the property window or through the following code:
+
+*In Visual Basic:*
+
+[source]
+----
+WebDropDown1.DropDownContainerHeight = 200;WebDropDown1.DropDownContainerWidth = 200;
+----
+
+*In C#:*
+
+----
+WebDropDown1.DropDownContainerHeight = 200;
+WebDropDown1.DropDownContainerWidth = 200;
+----
+
+[start=5]
+. Enable load-on-demand by setting the EnableDropDown property through the property window or using the following code :
+
+*In Visual Basic:*
+
+[source]
+----
+WebDropDown1.EnableLoadOnDemand = true
+----
+
+*In C#:*
+
+----
+WebDropDown1.EnableLoadOnDemand = true;
+----
+
+[start=6]
+. Save and run your application. You will observe that once you scroll down the end of the list you will see more items added to the drop-down container.

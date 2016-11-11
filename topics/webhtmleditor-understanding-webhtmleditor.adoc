@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-understanding-webhtmleditor",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","Getting Started"],
+    "guid": "{A168108E-AFBB-4B47-B580-84BCDC52FA19}",  
+    "buildFlags": [],
+    "createdOn": "2006-03-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Understanding WebHtmlEditor
+
+This is a great place for you to start learning about the WebHtmlEditor™ control, and its key features and functionalities. The topics in this section will give you a better idea of why you would want to use WebHtmlEditor in your applications.
+
+Click the links below to gain an overview of the WebHtmlEditor control.
+
+* link:webhtmleditor-about-webhtmleditor.html[About WebHtmlEditor] -- Introduces you to the WebHtmlEditor control.
+* link:webhtmleditor-browser-feature-support-of-webhtmleditor.html[Browser Feature Support of WebHtmlEditor] -- This topic explains the browser support for some of the features.
+* link:webhtmleditor-managing-file-uploads.html[Managing File Uploads] -- Explains how uploaded images are stored that your end users upload using the WebHtmlEditor.
+* link:webhtmleditor-multi-language-support.html[Multi-Language Support] -- This topic explains the multi-language support.
+* link:webhtmleditor-smart-tag.html[WebHtmlEditor Smart Tag] -- Explains the functionality available on the WebHtmlEditor smart tag.
+* link:webhtmleditor-layout-of-webhtmleditor.html[Layout of WebHtmlEditor] -- This section helps you familiarize yourself with the layout of the WebHtmlEditor control.
+* link:webhtmleditor-working-with-webhtmleditors-toolbar.html[Working with WebHtmlEditor's Toolbar] -- This section shows and provides a description for the buttons on the WebHtmlEditor toolbar.

@@ -1,0 +1,61 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-add-or-remove-a-column",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids"],
+    "guid": "{F383C0CD-CED8-46EC-B848-046694D5F3FC}",  
+    "buildFlags": [],
+    "createdOn": "2008-10-09T14:49:31Z"
+}
+|metadata|
+////
+
+= Add or Remove a Column
+
+WebDataGrid™ allows you to add or remove bound data fields and template data fields. When adding a bound field you must specify the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.bounddatafield~datafieldname.html[DataFieldName]"]  to retrieve data from that field in the underlying data source. When adding a template column you can set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.templatedatafield~itemtemplate.html[ItemTemplate]"] ,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.templatedatafield~alternatingitemtemplate.html[AlternateItemTemplate]"] ,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.templatedatafield~headertemplate.html[HeaderTemplate]"] , or  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.templatedatafield~footertemplate.html[FooterTemplate]"]  to define the look of that column; if you do not specify any template, the column is empty. For more information on column templates, see link:webdatagrid-column-templates.html[Column Templates].
+
+The following code shows you how to add or remove both a bound data field and a template data field.
+
+*In Visual Basic:*
+
+----
+' Define Columns 
+Dim boundField1 As New BoundDataField(True) 
+boundField1.Key = "CompanyName1" 
+boundField1.Header.Text = "Company Name1" 
+'Bind to CompanyName field in data source 
+boundField1.DataFieldName = "CompanyName" 
+Dim templateField1 As New TemplateDataField(True) 
+templateField1.Key = "TemplateField1" 
+templateField1.Header.Text = "Template Column" 
+' At this point you can set up a template for the template column 
+' ADD COLUMNS 
+Me.WebDataGrid1.Columns.Add(boundField1) 
+Me.WebDataGrid1.Columns.Add(templateField1) 
+' REMOVE COLUMNS 
+Me.WebDataGrid1.Columns.Remove(Me.WebDataGrid1.Columns("CompanyName1")) 
+Me.WebDataGrid1.Columns.Remove(Me.WebDataGrid1.Columns("TemplateField1"))
+----
+
+*In C#:*
+
+----
+// Define Columns
+BoundDataField boundField1 = new BoundDataField(true);
+boundField1.Key = "CompanyName1";
+boundField1.Header.Text = "Company Name1";
+//Bind to CompanyName field in data source
+boundField1.DataFieldName = "CompanyName";
+TemplateDataField templateField1 = new TemplateDataField(true);
+templateField1.Key = "TemplateField1";
+templateField1.Header.Text = "Template Column";
+// At this point you can set up a template for the template column
+// ADD COLUMNS
+this.WebDataGrid1.Columns.Add(boundField1);
+this.WebDataGrid1.Columns.Add(templateField1);
+// REMOVE COLUMNS
+this.WebDataGrid1.Columns.Remove(this.WebDataGrid1.Columns["CompanyName1"]);       
+this.WebDataGrid1.Columns.Remove(this.WebDataGrid1.Columns["TemplateField1"]);
+----

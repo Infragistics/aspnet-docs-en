@@ -1,0 +1,34 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-delete-a-recurring-appointment-client-side",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{D7501857-4235-42FF-AC09-4C425D82FCC1}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Delete a Recurring Appointment Client Side
+
+To update an already existing Recurrence object, you must first retrieve an appointment that has the recurrence. For this topic, let's assume that you know the datakey of your appointment. Because you are deleting the recurrence, you don't need to retrieve the object from the appointment. Instead, you can just set the activityUpdateProps to have a Recurrence attribute set to Null. The final step is just to call the updateActivity method off of WebScheduleInfo.
+
+*In JavaScript:*
+
+----
+// Retrieve the appointment from the Activities collection.
+var appointment = oWebScheduleInfo1.getActivities().getItemFromKey("3522");
+// Set the Recurrence attribute of the activityUpdateProps to null.
+var activityUpdateProps = {Recurrence: null};
+// Update the activity by passing in the updated properties.
+oWebScheduleInfo1.updateActivity(activityUpdateProps, appointment, "");
+----
+
+== Related Topics
+
+link:webschedule-add-a-recurring-appointment-client-side.html[Add a Recurring Appointment Client Side]
+
+link:webschedule-update-a-recurring-appointment-client-side.html[Update a Recurring Appointment Client Side]

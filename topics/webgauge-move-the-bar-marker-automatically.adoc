@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-move-the-bar-marker-automatically",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{269F8474-547D-40E1-AF91-43457FC0C6FC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Move the Bar Marker Automatically
+
+This topic explains how you can configure the bar marker on your Linear gauge to move automatically. For example, if you created a Linear gauge to represent a thermometer, you could configure the mercury level to rise and fall, simulating a real thermometer.
+
+This topic assumes that you already created a Linear gauge. For information on how to create a gauge, see link:webgauge-getting-started-with-webgauge.html[Getting Started with WebGauge].
+
+*To move the needle marker automatically on your gauge:*
+
+[start=1]
+. In the Properties window, set the RefreshInterval property to 10 seconds. This fires an AsyncRefresh event on the server at each of these intervals.
+[start=2]
+. The following example code accesses the needle marker on your Linear gauge and increases the value by 5.
+
+*In Visual Basic:*
+
+----
+Protected Sub UltraGauge1_AsyncRefresh(ByVal sender As Object, _
+  ByVal e As Infragistics.WebUI.UltraWebGauge.RefreshEventArgs) _
+  Handles UltraGauge1.AsyncRefresh
+	Dim gauge As LinearGauge = Me.UltraGauge1.Gauges(0)
+	Dim marker As LinearGaugeMarker = gauge.Scales(0).Markers(0)
+	Dim value As Integer = Convert.ToInt32(marker.Value)
+	marker.Value = value + 5
+End Sub
+----
+
+*In C#:*
+
+----
+protected void UltraGauge1_AsyncRefresh(object sender, 
+  Infragistics.WebUI.UltraWebGauge.RefreshEventArgs e)
+{
+	LinearGauge gauge = this.UltraGauge1.Gauges[0] as LinearGauge;
+	LinearGaugeMarker marker = gauge.Scales[0].Markers[0];
+	int value = Convert.ToInt32(marker.Value);
+	marker.Value = value+5;
+}
+----
+
+[start=3]
+. Save and run the application.

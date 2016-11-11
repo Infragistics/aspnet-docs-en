@@ -1,0 +1,31 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webwordexporter",
+    "controlName": ["WebWordExporter"],
+    "tags": ["Exporting"],
+    "guid": "63363739-8458-4bc7-a215-0848c01cd8c0",  
+    "buildFlags": [],
+    "createdOn": "2011-10-26T12:52:43.0648215Z"
+}
+|metadata|
+////
+
+= WebWordExporter
+
+This page contains all of the overview/task-based information related to the WebWordExporter™. This section contains valuable information about the component, ranging from what it does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the component.
+
+Click the links below to learn about the WebDocumentExporter control.
+
+== link:webwordexporter-about-webwordexporter.html[About WebWordExporter]
+
+In this section, you will find information that will help you better understand functionalities of the WebWordExporter component. Further, you will understand the purpose of the component.
+
+== link:webwordexporter-getting-started-with-webwordexporter.html[Getting Started With WebWordExporter]
+
+This section provides you with information on how to get up and running as quickly as possible with the WebWordExporter component.
+
+== link:webdocumnetexporter-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebWordExporter component. The namespaces and classes listed in this topic link conveniently into the API Reference Guide section of the Infragistics ASP.NET help.

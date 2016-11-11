@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-setting-up-your-project-for-styling",
+    "controlName": [],
+    "tags": ["Getting Started","Styling"],
+    "guid": "{38DB96D0-6D86-42D3-AF70-8AD7EE9F431E}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:29:39Z"
+}
+|metadata|
+////
+
+= Setting Up Your Project for Styling
+
+Application Styling isn't just for the graphic designer; the application developer is just as much a part of Application Styling. The topics in this section will help you, the application developer, perform tasks such as Loading Style Libraries at design time and run time, setting StyleSets for specific components, and much more. Click the links below to find out more about these tasks.
+
+* link:web-preparing-your-application-for-application-styling.html[Preparing Your Application for Application Styling]
+* link:web-enabling-application-styling-at-design-time.html[Enabling Application Styling at Design Time]
+* link:web-enabling-application-styling-at-run-time.html[Enabling Application Styling at Run Time]
+* link:web-changing-stylesets-at-run-time.html[Changing StyleSets at Run Time]
+* link:web-changing-stylesets-at-the-control-level.html[Changing StyleSets at the Control Level]
+* link:web-upgrading-web-applications-to-make-use-of-application-styling.html[Upgrading Web Applications to Make Use of Application Styling]

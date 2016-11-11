@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-aspnet-ajax-extenders",
+    "controlName": ["WebResizingExtender"],
+    "tags": ["Extending","Performance"],
+    "guid": "{22198E4A-C30F-4B23-9700-B8C679B3CE7B}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= ASP.NET AJAX Extenders
+
+With the emergence of link:http://ajax.asp.net/default.aspx?tabid=47[Microsoft® ASP.NET AJAX Extensions], comes a new breed of controls. One of these new types is an extender-type control, which basically means it targets another control on the form, and extends its functionality by adding new properties, methods, or events to it.
+
+WebResizingExtender™ is an extender control because it extends the panel to which it is attached, with some new properties and client-side events.
+
+Extender controls are usually small JavaScript code snippets that have been created for a specific feature on a Web page. By turning that JavaScript code into an extender, you can use it across multiple pages, and other people can use it too without having to worry about how the back-end really works, or how it works with the different browsers. The concern is removed because the link:http://ajax.asp.net/default.aspx?tabid=47&subtabid=477[ASP.NET AJAX Control Toolkit], which is used to create these new controls, handles the generation of the JavaScript. Therefore compliancy issues are removed from your shoulders and placed on the ASP.NET AJAX Extension Library.

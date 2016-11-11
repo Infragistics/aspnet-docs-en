@@ -1,0 +1,33 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-removing-a-behavior",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids"],
+    "guid": "{0CBF13F8-5A9F-4038-A948-8C75F20707EF}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Removing a Behavior
+
+You can remove a behavior from the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection in order to disable it. If a behavior has dependent behaviors when you remove it, you will remove those dependent behaviors as well. You can also disable the behavior without removing it by setting its Enabled property to False.
+
+At design time bring up the Behaviors Editor dialog and uncheck the behavior you want to remove.
+
+The code below shows you how to remove the Pager behavior from WebDataGrid™. The Paging property is used to reference the behavior. This is the same process as removing any other behavior. For the full list of behaviors, see link:webdatagrid-adding-a-behavior-at-runtime.html[Adding a Behavior at Runtime].
+
+*In Visual Basic:*
+
+----
+Me.WebDataGrid1.Behaviors.Remove(Me.WebDataGrid1.Behaviors.Paging)
+----
+
+*In C#:*
+
+----
+this.WebDataGrid1.Behaviors.Remove(this.WebDataGrid1.Behaviors.Paging);
+----

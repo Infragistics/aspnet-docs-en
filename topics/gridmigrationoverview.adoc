@@ -1,0 +1,132 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridmigrationoverview",
+    "controlName": [],
+    "tags": [],
+    "guid": "3b61ec85-c2b2-480e-9f93-0d30891a74ff",  
+    "buildFlags": [],
+    "createdOn": "2016-02-29T16:48:44.0665364Z"
+}
+|metadata|
+////
+
+= Migrating from UltraWebGrid to WebDataGrid and WebHierarchicalDataGrid
+
+This page contains all of the overview/task-based information related to WebDataGrid migration. This section contains valuable information about the control, ranging from what it does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control while upgrading your application.
+
+Migrating to the WebDataGrid from the UltraWebGrid
+
+== Purpose
+
+Provide an approach to take to replace the UltraWebGrid with the WebDataGrid or WebHierarchicalDataGrid in an existing application.  These steps could be applied to replace any of the retired controls and the UltraWebGrid and WebDataGrid are used as examples as they are complex controls that will take longer to replace than the other controls.
+
+== Getting Started
+
+To begin using the WebDataGrid it is first necessary to set up the references to your project so that you can use the current volume of the WebDataGrid in your application.  In the simplest scenario you can just add this one assembly and the dependent documents assemblies to your application and start using the control.  To do this add the following references:
+
+* Infragistics45.Web.v{ProductVersion}
+* Infragistics45.WebUI.Documents.Word.v{ProductVersion}
+* Infragistics45.WebUI.Documents.Core.v{ProductVersion}
+* Infragistics45.WebUI.Documents.IO.v{ProductVersion}
+* Infragistics45.WebUI.Documents.Reports.v{ProductVersion}
+* Infragistics45.WebUI.Documents.Excel.v{ProductVersion}
+
+Note that if you were referencing an earlier version of any of these assemblies you should be replacing that reference rather than just adding a new reference.
+
+If at this point in time your application builds and runs without issue, you may start using the WebDataGrid in your application to replace the UltraWebGrid.
+
+If your application doesn’t build or doesn’t run correctly, please continue with this post to see how to address the most common scenarios.
+
+== What to do if you are using the UltraWebGridExcelExporter and/or UltraWebGridDocumentExporter.
+
+There are a few options that you can use to address this:
+
+1.  Remove the exporters and plan to add the export functionality back after replacing the relevant UltraWebGrid with a WebDataGrid or WebHierarchicalDataGrid.
+
+2.  Compile the source code for exporter assembly you are using so that it is referencing the current version of the Infragistics.Documents.Excel or Infragistics.Documents.Reports assemblies.
+
+== What if I need to use the current version of the WebSchedule (or another control still included in the current toolset)to get bug fixes?
+
+As the WebSchedule references the Infragistics.Shared assembly like the UltraWebGrid does, it will be necessary to update all assemblies to the current volume.  For the assemblies that are still included in the toolset, simply change the reference.  For the assemblies for the retired controls like the UltraWebGrid it will be necessary to compile the source code for these against the shared assembly in the current volume of the toolset.
+
+== Replacing the UltraWebGrid with the WebDataGrid or WebHierarchicalDataGrid
+
+There are some architectural differences between the UltraWebGrid and WebDataGrid/WebHierarchicalDataGrid controls and as such there isn’t a one to one mapping between properties and events between the UltraWebGrid and the newer WebHierarchicalDataGrid.
+
+For example the UltraWebGrid allows you add a check box column by setting the Type of the Column to CheckBox and for the WebHierarchicalDataGrid you add a BoundCheckBoxField or an UnboundCheckBoxField to the Columns Collection.  Also there are other architectural changes in the way styles are applied where they used to be applied by Style properties, now they are done through CSS.
+
+Because of the differences, when replacing the UltraWebGrid with the WebHierarchicalDataGrid it is important to begin with the functionality that you wish to accomplish and approach how to best achieve that functionality with the new control as this will be the most efficient way to make use of the new control in your application.  Once you know the best approach to get the desired functionality in the new control you can evaluate how much of the code that you have from the old control will be able to be reused.
+
+To help you get started we have put together the link:http://dl.infragistics.com/pg/cheat-sheet/InfragisticsASPNETGridCheatSheet.pdf[NetAdvantage for ASP.NET Grid Cheat Sheet] which shows step-by-step instructions for using the features and behaviors of the new ASP.NET AJAX controls.  If you have any specific questions on how to implement any feature or behavior in the WebHierarchicalDataGrid after using this resource and the online documentation, feel free to ask these questions and we will assist you with implementing the features that you need.
+
+== *Learn details about how to migrate Grid features.*
+
+== link:gridmigrationactivation.html[Grid Migration - Activation]
+
+In this section, you will find information that will help you to better understand how Activation works and how to use it with the new Grid
+
+== link:gridmigrationautomaticloadondemand.html[Grid Migration - Automatic Load On Demand]
+
+This section provides you with information on how to start using Load On Demand feature.
+
+== link:gridmigrationcolumnmoving.html[Grid Migration - Column Moving]
+
+Column Moving allows developers and end users to rearrange the position of the grid columns in design time or in source code. With Column Moving feature the customization of the grid is increased and data presentation is enhanced. Column moving can be performed in both client and server side.
+
+== link:gridmigrationfiltering.html[Grid Migration - Filtering]
+
+Filtering is the ability of grid to filter the data it is bound to. Filtering breaks the data into a smaller subset that matches your filter criteria and displays it. This makes the data more viewable and manageable to your end-users.
+
+== link:gridmigrationrowadding.html[Grid Migration - Row Adding]
+
+Row Adding behavior of the grid allows the end user to add rows to the grid through a UI, as well as use javascript calls to add new rows. RowAdding behavior is a child behavior of EditingCore and both need to be enabled in order to be able to add rows for WebDataGrid (WDG) or WebHierarchicalDataGrid (WHDG).
+
+== link:gridmigrationrowdelete.html[Grid Migration - Row Delete]
+
+Row Delete functionality is created and used to help end user easily remove certain rows from the grid by pressing “Delete” button on the keyboard or any other page element (such as button or link) that can rise the event needed for row deletion.
+
+== link:gridmigrationselection.html[Grid Migration - Selection]
+
+Selection behavior of the Infragistics grid controls gives the end users ability to select columns, rows and cells (both single and multiple) and thus help them visualize the grid parts that will eventually be edited or modified.
+
+== link:gridmigrationsorting.html[Grid Migration - Sorting]
+
+Sorting behavior allows the end user to sort data by one or more columns in WebDataGrid (WDG) or WebHierarchicalDataGrid (WHDG).
+
+== link:gridmigrationeditorproviders.html[Grid Migration - Editor Providers]
+
+Editor provider ia a special object that allows using an external editor inside of the WebDataGrid (WebHierarchicalDataGrid). Each Infragistics editor has an editor provider that can be used inside of the grid. Custom editor providers can be written for any of non-Infragistics editors.
+
+== link:gridmigrationhiddencolumns.html[Grid Migration - Hidden Columns]
+
+Hidden columns are used to bring information from the server into the client and have them available in the grid object model, but invisible to a user. Generally hidden columns contain information that is not informative to the user, for example data key field.
+
+== link:gridmigrationmanualloadondemand.html[Grid Migration - Manual Load On Demand]
+
+In this document will be presented how Manual Load on Demand works for WebGrid and respectively for WebHierarchicalDataGrid. The first section will be dedicated on the on WebGrid component while the second part will be focused on WebHierarchicalDataGrid.
+
+== link:gridmigrationsummary.html[Grid Migration - Summary]
+
+When you enable column footers for a band, the footers will appear, but you must still specify what information they will contain. You can do this through the UltraGridColumn.FooterText property and/or the UltraGridColumn.FooterTotal property.
+
+== link:gridmigrationmultirowsummaries.html[Grid Migration - Multi-Row summaries]
+
+WebDataGrid allows you and your end users to display a summary in any column.
+
+== link:gridmigrationpdfexport.html[Grid Migration - PDF Export]
+
+Grid PDF file exporting allow users to export their grid data to the formatted .pdf file that can be later used as archive or visual representation of the received from the grid data.
+
+== link:gridsmigrationoutlookgroupby.html[Grids Migration - Outlook GroupBy]
+
+OutlookGroupBy feature allows grid rows to be grouped by the data values of a column.
+
+== link:gridsmigrationcustomoutlookgroupby.html[Grids Migration - Custom Outlook Group By]
+
+OutlookGroupBy feature allows you to group columns with custom grouping logic
+
+== link:emptytemplate.html[Empty Template]
+
+WebDataGrid/WebHierarchicalDataGrid have an Empty Template that you can use to provide your end-users with a custom display that appears whenever there are no rows in the data source. Like all templates, you can place any control within the Empty Template to provide a custom message to end-users.

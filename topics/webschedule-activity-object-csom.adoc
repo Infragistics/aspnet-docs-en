@@ -1,0 +1,254 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-activity-object-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{46A348F2-E878-467D-A5B8-587946DBB49A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Activity Object
+
+== Activity
+
+All properties of the Activity object are implemented as Set and Get methods in order to allow dynamic changes to occur on the client and also to permit more complex handling of property settings.
+
+=== Activity Methods
+
+[cols="a,a"]
+|====
+|*clone* 
+|Creates a copy of the activity.
+
+|*compare* 
+|Compares the activity with the specificed activity. 
+
+*Parameters*
+
+_activity_ 
+
+The activity that will be compared. 
+
+*Remarks*
+
+Returns true if the activities are the same, otherwise it returns false.
+
+|*createRecurrence* 
+|Creates a recurrence object. 
+
+*Remarks*
+
+Calling this method does not automatically attach the recurrence to the activity. In order to attach the recurrence you will need to call the setRecurrence method on the Activity.
+
+|*getAllDayEvent* 
+|Returns a boolean value that determines if the Activity is an AllDayEvent.
+
+|*getDataKey* 
+|Returns the dataKey for the Activity.
+
+|*getDescription* 
+|Returns the description for the Activity.
+
+|*getDuration* 
+|Returns the duration for the Activity in minutes.
+
+|*getEnableReminder* 
+|Returns a boolean value that determines if the Activity has reminders enabled.
+
+|*getImportance* 
+|Returns a value from 0 - 2 based on the Importance level for the Activity. 
+
+*Remarks*
+
+0 - Low 
+
+1 - Normal 
+
+2 - High
+
+|*getIsOccurrence* 
+|Returns true if the activity is an occurrence.
+
+|*getIsVariance* 
+|Returns true if the activity is a variance.
+
+|*getLocation* 
+|Returns the location for the Activity.
+
+|*getRecurrence* 
+|Returns the recurrence object attached to the activity, or null if there is no recurrence object.
+
+|*getRecurrenceKey* 
+|Returns the recurrence key.
+
+|*getReminderInterval* 
+|Returns the ReminderInterval for the Activity in ticks.
+
+|*getRootActivityKey* 
+|Returns the key of the rootActivity. This only applies to activities that are occurrences.
+
+|*getShowTimeAs* 
+|Returns a value from 0 - 3. 
+
+*Remarks*
+
+0 - Free 
+
+1 - Tentative 
+
+2 - OutofOffice 
+
+3 - Busy
+
+|*getSnoozeInterval* 
+|Returns the SnoozeInterval for the Activity in ticks.
+
+|*getStartDateTime* 
+|Returns a date object that represents the StartDateTime for the Activity.
+
+|*getStatus* 
+|Returns the status for the Activity. 
+
+*Remarks*
+
+0 - Normal 
+
+3 - Expired
+
+|*getSubject* 
+|Returns the subject for the Activity.
+
+|*getVarianceKey* 
+|Returns the variance key if there is one.
+
+|*setAllDayEvent* 
+|Sets the AllDayEvent field of the Activity. 
+
+*Parameters*
+
+_allDayEvent_ 
+
+A boolean value that determines if the Activity is an All Day Event.
+
+|*setDescription* 
+|Sets the description field of the Activity. 
+
+*Parameters*
+
+_description_ 
+
+A string value to set the description of the Activity.
+
+|*setDuration* 
+|Sets the duration field of the Activity. 
+
+*Parameters*
+
+_duration_ 
+
+An integer value that represents the duration of the Activity in minutes.
+
+|*setEnableReminder* 
+|Sets the EnableReminder field of the Activity. 
+
+*Parameters*
+
+_enableReminder_ 
+
+A boolean value that determines if the Activity has reminders enabled.
+
+|*setImportance* 
+|Sets the Importance of the Activity. 
+
+*Parameters*
+
+_importance_ 
+
+An integer value ranging from 0 - 2 that determines the importance of the Activity. 
+
+0 - Low 
+
+1 - Normal 
+
+2 - High
+
+|*setIsVariance* 
+|Marks the occurrence as a variance.
+
+|*setLocation* 
+|Sets the location field of the Activity. 
+
+*Parameters*
+
+_location_ 
+
+A string value to set the location of the Activity.
+
+|*setRecurrence* 
+|Sets the recurrence object on the activity. 
+
+*Parameters*
+
+_recurrence_ 
+
+The recurrence object to be set on the activity. If the passed in recurrence is null, then the recurrence object will be removed from the activity.
+
+|*setReminderInterval* 
+|Sets the ReminderInterval field of the Activity. 
+
+*Parameters*
+
+_ReminderInterval_ 
+
+An integer value to set the reminder interval of the Activity in ticks.
+
+|*setShowTimeAs* 
+|Sets the ShowTimeAs field of the Activity. 
+
+*Parameters*
+
+_showTimeAs_ 
+
+An integer value ranging from 0 - 3 that determines how the Activity should be displayed. 
+
+0 - Free 
+
+1 - Tentative 
+
+2 - OutofOffice 
+
+3 - Busy
+
+|*setSnoozeInterval* 
+|Sets the SnoozeInterval field of the Activity. 
+
+*Parameters*
+
+_snoozeInterval_ 
+
+An integer value to set the snooze interval of the Activity in ticks.
+
+|*setStartDateTime* 
+|Sets the StartDateTime field of the Activity. 
+
+*Parameters*
+
+_startDateTime_ 
+
+A date object to set the startdatetime of the Activity.
+
+|*setSubject* 
+|Sets the subject field of the Activity. 
+
+*Parameters*
+
+_subject_ 
+
+A string value to set the subject of the Activity.
+
+|====

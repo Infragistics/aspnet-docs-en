@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-asp-net-aptca-assemblies",
+    "controlName": [],
+    "tags": ["Application Scenarios","FAQ"],
+    "guid": "{55D2A85F-5B9D-4B81-A792-D84FDFD30FDD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= ASP.NET APTCA Assemblies
+
+The Infragistics ASP.NET product includes a set of assemblies marked with the link:http://msdn2.microsoft.com/en-us/library/system.security.allowpartiallytrustedcallersattribute(VS.80).aspx[AllowPartiallyTrustedCallersAttribute] (APTCA) attribute, and capable of running in a partial-trust environment. To get answers to frequently asked questions about our APTCA assemblies, click the links below:
+
+* link:web-what-are-the-netadvantage-for-asp-net-aptca-assemblies.html[What are the Infragistics ASP.NET APTCA Assemblies?]
+* link:web-should-i-use-the-aptca-assemblies-in-visual-studio.html[Should I Use the APTCA Assemblies in Visual Studio?]
+* link:web-how-do-i-deploy-aptca-assemblies.html[How Do I Deploy APTCA Assemblies?]
+* link:web-what-minimum-trust-level-do-i-require-from-my-hosting-provider.html[What Minimum Trust Level Do I Require from My Hosting Provider?]
+* link:web-what-are-the-limitations-when-working-under-medium-trust.html[What are the Limitations When Working Under Medium Trust?]
+* link:web-how-do-i-test-my-web-application-under-medium-trust-during-development.html[How Do I Test My Web Application Under Medium Trust During Development?]
+* link:web-how-do-i-know-if-a-problem-is-security-policy-related.html[How Do I Know if a Problem is Security Policy-Related?]

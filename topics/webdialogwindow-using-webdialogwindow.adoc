@@ -1,0 +1,73 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdialogwindow-using-webdialogwindow",
+    "controlName": ["WebDialogWindow"],
+    "tags": ["How Do I"],
+    "guid": "{AB38C933-7EC8-4BDA-AEB5-F1CE61CF11EF}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-01T20:58:10Z"
+}
+|metadata|
+////
+
+= Using WebDialogWindow
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebDialogWindow™ control.
+
+link:webdialogwindow-add-a-caption-to-the-dialog-windows-header.html[Add a Caption to the Dialog Windows Header]
+
+In this section you will find information about adding a caption to the WebDialogWindow control and working with the exposed properties for it.
+
+link:webdialogwindow-allow-the-end-user-to-resize-the-dialog-window.html[Allow the End User to Resize the Dialog Window]
+
+Depending on the size of the information shown in the WebDialogWindow control it might need to be resizable. This section shows how to edit the property which determines whether the control is resizable or not.
+
+link:webdialogwindow-center-the-dialog-window.html[Center the Dialog Window]
+
+This section explains how the control's positioning work.
+
+link:webdialogwindow-display-the-dialog-window.html[Display the Dialog Window]
+
+When working with the WebDialogWindow control it is important to know how to show and hide it, especially when using it as a popup dialog box. This section contains information about how these actions can be performed.
+
+link:webdialogwindow-displaying-the-webdialogwindow-client-side.html[Displaying the WebDialogWindow Client Side]
+
+This section contains comprehensive information on how to use the control on client side.
+
+link:webdialogwindow-hide-the-dialog-window.html[Hide the Dialog Window]
+
+In this section you will find how to hide the WebDialogWindow. This is important when the control is used as a popup dialog box.
+
+link:webdialogwindow-maintain-the-headers-width-on-minimize.html[Maintain the Header's Width on Minimize]
+
+If you are allowing the user to minimize the WebDialogWindow you might prefer to have the header's width to remain intact. This section provides information on how to make minimizing works the way you want.
+
+link:webdialogwindow-make-the-dialog-window-modal.html[Make the Dialog Window Modal]
+
+This section contains information about making the WebDialogWindow work like a modal dialog.
+
+link:webdialogwindow-prevent-the-end-user-from-moving-the-dialog-window.html[Prevent the End User from Moving the Dialog Window]
+
+In some cases you might need to make the WebDialogWindow immovable for the user. This section provides information on how to accomplish this.
+
+link:webdialogwindow-remove-the-header.html[Remove the Header]
+
+The header of the WebDialogWindow control can be removed should you need the window not to have one. You can find out how to do this in this section.
+
+link:retrieving-a-reference-to-a-client-side-html-element.html[Retrieving a Reference to a Client Side HTML Element]
+
+This section contains information about retrieving a reference to a client side HTML element from the WebDialogWindow control.
+
+link:setting-up-a-client-side-event.html[Setting Up a Client Side Event]
+
+The Infragistics ASP.NET controls include a rich client-side object model, allowing you to manipulate how users interact with controls.
+
+link:webdialogwindow-show-the-minimize-and-maximize-buttons.html[Show the Minimize and Maximize Buttons]
+
+This section contains information about the properties responsible for showing and hiding the minimize and maximize buttons on the WebDialogWindow control.
+
+link:webdialogwindow-smart-tag.html[WebDialogWindow Smart Tag]
+
+This section contains information about the WebDialogWindow Smart Tag.

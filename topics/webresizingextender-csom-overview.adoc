@@ -1,0 +1,31 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-csom-overview",
+    "controlName": ["WebResizingExtender"],
+    "tags": ["API"],
+    "guid": "{29E6581B-AC7D-4CAB-8C4E-BB24BBBE5120}",  
+    "buildFlags": [],
+    "createdOn": "2007-08-02T08:12:21Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+WebResizingExtender™ exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledge JavaScript objects, events, and utility functions that enable developers to program significant units of functionality pertaining to the calendar control without the need for server-side post-backs.
+
+In general, the object model is derived directly from the object model as it exists on the server. The property names, events, parameters and return values have very similar meanings to their counterparts on the server. However, where noted, properties are sometimes read-only on the client. These properties are only for informational purposes and must not be altered.
+
+Select one of the following sections of the Client-Side Object Model reference for the WebResizeExtender control:
+
+link:webresizingextender-utility-functions.html[WebResizingExtender Utility Functions]
+
+link:webresizingextender-object.html[WebResizingExtender Object]
+
+____
+link:webresizingextender-canceleventargs-object.html[CancelEventArgs Object]
+
+link:webresizingextender-resizeeventargs-object.html[ResizeEventArgs Object]
+____

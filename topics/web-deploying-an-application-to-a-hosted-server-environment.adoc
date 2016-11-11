@@ -1,0 +1,56 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-deploying-an-application-to-a-hosted-server-environment",
+    "controlName": [],
+    "tags": ["Deployment","How Do I"],
+    "guid": "{A45B1DFC-3447-48CC-BD0E-FC8CD2E9EF4E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Deploying an Application to a Hosted Server Environment
+
+If you are deploying your application to a hosted server environment, you often face unique challenges because your access to resources such as IIS is often limited and you have limited means of uploading content. Infragistics has made it very easy to deploy Infragistics ASP.NET tools into environments where you have limited or no rights to IIS.
+
+[start=1]
+. FTP your application assemblies, include the Infragistics ASP.NET assemblies, the assemblies to the applications BIN directory
+[start=2]
+. The script files required by the Aikido controls are shipped as embedded resources. For the style sets and the related images a separate directory should be created where you should copy the style sets that are used from the ig_res folder generated in the application or from the instalation directory of the product.
+[start=3]
+. FTP the required style sets into the ig_res directory you create in Step 2.
+[start=4]
+. Finally, you need to modify your web.config file in order to add the configuration information needed by the Infragistics ASP.NET tools. The modifications needed are shown in the next section of this topic.
+
+=== Using the web.config File to Configure the style sets location
+
+One key item that you need to configure when you deploy an application that uses Infragistics ASP.NET tools is the location your application should use to locate the style sets and their related images that the Aikido ASP.NET controls in the NetAdvangate toolset require. Normally, you would configure an IIS virtual directory which would allow your to locate the files, but when deploying to a hosted web server, you might not have the ability to configure virtual directories for your web application, so a different solution is required.
+
+In a hosted environment deployment it is recommended that you configure StyleSetPath option of your web controls using the web.config file. By adding a simple configuration section to your web.config file, your can specify where all Infragistics ASP.NET controls in your application should look for the needed styles and images files.
+
+There are two steps in setting up this configuration. The first step is to add the config Section shown below to the <configuration> section of your web.config file.
+
+.Note:
+[NOTE]
+====
+The snippet below shows the section tag broken over multiple lines to avoid horizontal scrolling in the topic. When you copy this snippet for use in your project you will have modify the section tag to appear on one line in order for it to work.
+====
+
+----
+<configSections>
+  <section name="infragistics.web"
+      type="System.Configuration.SingleTagSectionHandler,System, Version=1.0.3300.0,
+      Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+</configSections>
+----
+
+This XML specifies that infragistics.web section is indeed a valid element for the web.config file.
+
+After adding the configSection tag, you can then add the actual infragistics.web tag. The following is an example of a web.config with specified styleSetPath, which points to the directory in IIS where the style sets have been deployed.
+
+----
+<infragistics.web enableAppStyling="true" styleSetPath="~/ig_res/"/>
+----

@@ -1,0 +1,196 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-using-custom-paging-template-in-code",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids","Paging"],
+    "guid": "{1A5E0BF3-B17D-4161-9853-7E7DED503F4C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using Custom Paging Template in Code
+
+== Before You Begin
+
+This walkthrough shows you how to set up a custom pager in WebDataGrid™ through code. You will set up the same template from the link:webdatagrid-using-custom-paging-template.html[Using Custom Paging Template] topic.
+
+== What You Will Accomplish
+
+You will set up WebDataGrid paging using two buttons and a dropdown list. The two buttons handle moving to the previous and next pages while the dropdown list moves to the selected page.
+
+== Follow these Steps
+
+[start=1]
+. Bind WebDataGrid to the Customers table using a SqlDataSource component. For more information on this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
+[start=2]
+. Create a class that implements ITemplate that will act as the paging template for WebDataGrid.
+
+*In Visual Basic:*
+
+----
+Private Class CustomPagerTemplate 
+    Implements ITemplate 
+    #Region "ITemplate Members" 
+    Public Sub InstantiateIn(ByVal container As Control) Implements ITemplate.InstantiateIn
+        Dim prevButton As New HtmlButton() 
+        prevButton.ID = "PrevButton" 
+        prevButton.InnerText = "Prev" 
+        prevButton.Attributes("onclick") = "return PreviousPage()" 
+        Dim ddl As New DropDownList() 
+        ddl.ID = "DropDownList1" 
+        For i As Integer = 1 To 12 
+            ddl.Items.Add(i.ToString()) 
+        Next 
+        ddl.Attributes("onchange") = "return IndexChanged()" 
+        Dim nextButton As New HtmlButton() 
+        nextButton.InnerText = "Next" 
+        nextButton.Attributes("onclick") = "return NextPage()" 
+        container.Controls.Add(prevButton) 
+        container.Controls.Add(ddl) 
+        container.Controls.Add(nextButton) 
+    End Sub 
+    #End Region 
+End Class
+----
+
+*In C#:*
+
+----
+private class CustomPagerTemplate : ITemplate
+{
+        #region ITemplate Members
+        public void InstantiateIn(Control container)
+        {
+        HtmlButton prevButton = new HtmlButton();
+        prevButton.ID = "PrevButton";
+        prevButton.InnerText = "Prev";
+        prevButton.Attributes["onclick"] = "return PreviousPage()";
+        DropDownList ddl = new DropDownList();
+        ddl.ID = "DropDownList1";
+        for (int i = 1; i $$<=$$ 12; i++)
+        {
+                ddl.Items.Add(i.ToString());
+        }
+        ddl.Attributes["onchange"] = "return IndexChanged()";
+        HtmlButton nextButton = new HtmlButton();
+        nextButton.InnerText = "Next";
+        nextButton.Attributes["onclick"] = "return NextPage()";
+        container.Controls.Add(prevButton);
+        container.Controls.Add(ddl);
+        container.Controls.Add(nextButton);
+        }
+        #endregion
+}
+----
+
+[start=3]
+. In the load event handler of the page, add code to add the paging behavior for WebDataGrid.
+
+.. Enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  behavior.
+.. Handle the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.pagingclientevents~pageindexchanged.html[PageIndexChanged]"]  client-side event.
+.. Instantiate the custom paging template and assign it as the paging template.
+
+*In Visual Basic:*
+
+----
+If Not Page.IsPostBack Then 
+    'Add behavior 
+    Me.WebDataGrid1.Behaviors.CreateBehavior(Of Paging)()
+    'Handle PageIndexChanged event 
+    Me.WebDataGrid1.Behaviors.Paging.PagingClientEvents.PageIndexChanged = "WebDataGrid1_PageIndexChanged" 
+End If 
+Me.WebDataGrid1.Behaviors.Paging.PagerTemplate = New CustomPagerTemplate()
+----
+
+*In C#:*
+
+----
+if (!Page.IsPostBack)
+{
+        //Add behavior
+        this.WebDataGrid1.Behaviors.CreateBehavior<Paging>();
+        //Handle PageIndexChanged event
+        this.WebDataGrid1.Behaviors.Paging.PagingClientEvents.PageIndexChanged = "WebDataGrid1_PageIndexChanged";
+}
+this.WebDataGrid1.Behaviors.Paging.PagerTemplate = new CustomPagerTemplate();
+----
+
+[start=4]
+. Manually page WebDataGrid in the dropdown list's IndexChanged event handler.
+
+.. Get a reference to WebDataGrid.
+.. Page WebDataGrid based on the value selected from the dropdown list.
+
+.Note:
+[NOTE]
+====
+Since the dropwdown list is embedded within a template, you need to use a hard-coded client-side id to get reference to the control. This is true in most cases when a control is embedded within a container and you need its client-side id. You can get the id from the source of the page.
+====
+
+*In JavaScript:*
+
+----
+function IndexChanged() {
+        var dropdownlist = document.getElementById("WebDataGrid1_ctl00_DropDownList1");
+        var grid = $find("WebDataGrid1");
+        var newValue = dropdownlist.selectedIndex;
+        grid.get_behaviors().get_paging().set_pageIndex(newValue);
+}
+----
+
+[start=5]
+. In the event handler for the Prev button click, manually page WebDataGrid.
+
+.. Get a reference to WebDataGrid.
+.. Get a reference to the dropdown list.
+.. Check that by decreasing the index, you do not exceed the bounds of the selectable pages.
+.. Go to the previous page.
+
+*In JavaScript:*
+
+----
+function PreviousPage() {
+        var grid = $find("WebDataGrid1");
+        var dropdownlist = document.getElementById("WebDataGrid1_ctl00_DropDownList1");
+        if( grid.get_behaviors().get_paging().get_pageIndex() > 0 ) {
+                grid.get_behaviors().get_paging().set_pageIndex(grid.get_behaviors().get_paging().get_pageIndex() - 1);
+        }
+}
+----
+
+[start=6]
+. Do the same thing for the Next button event handler except that you are increasing the page index.
+
+*In JavaScript:*
+
+----
+function NextPage() {
+        var grid = $find("WebDataGrid1");
+        var dropdownlist = document.getElementById("WebDataGrid1_ctl00_DropDownList1");
+        if(grid.get_behaviors().get_paging().get_pageIndex() < grid.get_behaviors().get_paging().get_pageCount() - 1) {
+                grid.get_behaviors().get_paging().set_pageIndex(grid.get_behaviors().get_paging().get_pageIndex() + 1);
+        }
+}
+----
+
+[start=7]
+. Add code to handle the PageIndexChanged event you added earlier.
+
+*In JavaScript:*
+
+----
+function WebDataGrid1_PageIndexChanged() {
+    var grid = $find("WebDataGrid1");
+    var dropdownlist = document.getElementById("WebDataGrid1_ctl00_DropDownList1");
+    dropdownlist.options[grid.get_behaviors().get_paging().get_pageIndex()].selected = true;
+}
+----
+
+[start=8]
+. Run the application. WebDataGrid’s pager consists of two buttons and a dropdown list, each of which can be used for paging.
+
+image::images/WebDataGrid_Using_Custom_Paging_Template_01.png[]

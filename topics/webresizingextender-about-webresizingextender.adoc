@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-about-webresizingextender",
+    "controlName": ["WebResizingExtender"],
+    "tags": ["Extending","Getting Started"],
+    "guid": "{30421DED-BE84-4A91-ADBD-97E1E472D0F1}",  
+    "buildFlags": [],
+    "createdOn": "2006-08-12T14:12:57Z"
+}
+|metadata|
+////
+
+= About WebResizingExtender
+
+The WebResizingExtender™ control is based on the link:http://ajax.asp.net/default.aspx?tabid=47[Microsoft® ASP.NET 2.0 AJAX Extensions], and provides resizing capabilities for any panel, or container such as a DIV element. The list of supported panels includes:
+
+* Microsoft® Panel
+* Microsoft UpdatePanel
+* Infragistics WebPanel™
+* Infragistics WebAsyncRefreshPanel™
+* The following HTML elements
+
+** TABLE
+** SPAN
+** TD
+** DIV
+** INPUT
+
+The following is an example use case for WebResizingExtender:
+
+A Web form has the following two areas:
+
+* Main window where all the content is shown
+* Side window where you specify changes to the content shown in the main window. The content in the side window is all contained within a panel control
+
+The issue that some end users of the application experience is that because of different monitor size resolutions, the side window sometimes occupies too much screen real estate. By attaching WebResizingExtender to that panel, the end user can now resize the area to the size they want.

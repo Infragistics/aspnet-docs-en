@@ -1,0 +1,28 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-csom",
+    "controlName": [],
+    "tags": ["API","Events","Scheduling"],
+    "guid": "{55750A9E-B8AF-43A3-AEF1-83171B933CD5}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= WebScheduleInfo CSOM
+
+WebScheduleInfo™ exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledge JavaScript objects, events, and utility functions that enable developers to program significant units of functionality pertaining to the WebScheduleInfo component without the need for server-side post-backs.
+
+In general, the object model is derived directly from the object model as it exists on the server. The property names, events, parameters and return values have very similar meanings to their counterparts on the server. However, where noted, properties are sometimes read-only on the client. These properties are only for informational purposes and must not be altered.
+
+Client-Side Object Model reference for the WebScheduleInfo component:
+
+* link:webscheduleinfo-utility-functions-csom.html[WebSchedule Utility Functions]
+* link:webscheduleinfo-object-csom.html[WebScheduleInfo Object]
+
+** link:webscheduleinfo-client-side-events-csom.html[Client-Side Events]
+
+*** link:webscheduleinfo-activityeditprops-object-csom.html[ActivityEditProps Object]

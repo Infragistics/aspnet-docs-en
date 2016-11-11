@@ -1,0 +1,167 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-supported-data-sources",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Data Binding","Grids"],
+    "guid": "{B50810DC-F840-4CDC-9030-F72E0A737FBD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Supported Data Sources
+
+== Data Binding
+
+WebDataGrid™ uses a discoverable approach for data binding. This means that all of the records returned by the data source are displayed by WebDataGrid; you must specify the fields that you do not want to show in the control.
+
+In addition, WebDataGrid is strictly a flat data control: it will only display one level of data. If the data source you use contains hierarchical data, by default, only the root level data will be displayed. You can specify which level of data to display using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband~datamember.html[DataMember]"]  property.
+
+Binding to data requires setting the DataSource property at runtime or the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasourceid.html[DataSourceID]"]  property at design time or at runtime. An explicit call to DataBind is not needed as data is requested automatically in the Page PreRender event or on the first attempt to access a row.
+
+== Data Operations
+
+Any operations that are supported by the underlying data source are performed using the mechanism of that data source. If an operation is not supported by the data source, but is supported by WebDataGrid, that operation is performed internally by WebDataGrid. For example, not all data sources can return sorted data, for those that do not implement this functionality, WebDataGrid uses its own implementation to sort the data.
+
+== Data Updates
+
+For CRUD operations, there is no internal mechanism employed: WebDataGrid attempts to automatically persist changes using the mechanism of the underlying data source. This means that if the data source control does not support CRUD operations, you must handle these operations manually to provide such functionality.
+
+== Supported Data Sources
+
+WebDataGrid supports binding to Microsoft® data source controls, data tables, and any data entity that implements IEnumerable.
+
+The following table displays supported data sources and depicts the status of support for certain data operations. The status of support is as follows:
+
+* Yes – automatic support.
+* Configure – data source must be configured for support.
+* Implement – data source must implement proper interface for support.
+
+[options="header", cols="a,a,a,a,a,a,a"]
+|====
+|Data Source|Sort|Page|Filter|Auto Update|Auto Delete|Auto Insert
+
+|Array
+|Yes
+|Yes
+|Yes
+|No
+|No
+|No
+
+|AccessDataSource
+|Yes
+|Yes
+|Yes
+|Configure
+|Configure
+|Configure
+
+|DataSet
+|Yes
+|Yes
+|Yes
+|No
+|No
+|No
+
+|DataTable
+|Yes
+|Yes
+|Yes
+|Yes
+|Yes
+|Yes
+
+|DataView
+|Yes
+|Yes
+|Yes
+|No
+|No
+|No
+
+|DomainDataSource
+|Yes
+|Yes
+|Yes
+|Configure
+|Configure
+|Configure
+
+|IBindingList
+|Yes
+|Yes
+|Yes
+|No
+|No
+|No
+
+|ICollection
+|Yes
+|Yes
+|Yes
+|No
+|No
+|No
+
+|IEnumerable
+|Yes
+|Yes
+|Yes
+|No
+|No
+|No
+
+|IHierarchicalEnumerable
+|Yes
+|Yes
+|Yes
+|No
+|No
+|No
+
+|IList
+|Yes
+|Yes
+|Yes
+|No
+|No
+|No
+
+|IQueryable
+|Yes
+|Yes
+|Yes
+|Implement
+|Implement
+|Implement
+
+|LinqDataSource
+|Yes
+|Yes
+|Yes
+|Configure
+|Configure
+|Configure
+
+|ObjectDataSource
+|Yes
+|Yes
+|Yes
+|Configure
+|Configure
+|Configure
+
+|SqlDataSource
+|Yes
+|Yes
+|Yes
+|Configure
+|Configure
+|Configure
+
+|====

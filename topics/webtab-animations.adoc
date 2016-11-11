@@ -1,0 +1,111 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-animations",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I"],
+    "guid": "{9500CD52-55B8-456C-A165-C77079DE80AF}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Animations
+
+WebTab™ supports animation when closing and opening a tab, providing your end users with rich UI. The animation effect when opening a new tab shows a gradual increase in tab item size and opacity. This depends on the animation duration, which can be set by  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~addnewtabitem.html[AddNewTabItem]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabaddnewitem~animationduration.html[AnimationDuration]"]  property.
+
+.Note:
+[NOTE]
+====
+In order to provide your end users an option to open a new tab, you must enable AddNewTabItem object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabaddnewitem~enabled.html[Enabled]"]  property to True.
+====
+
+*In HTML:*
+
+----
+<AddNewTabItem AnimationDuration="1500" Enabled="True">
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.AddNewTabItem.Enabled = True 
+WebTab1.AddNewTabItem.AnimationDuration = 1500
+----
+
+*In C#:*
+
+----
+WebTab1.AddNewTabItem.Enabled = true;
+WebTab1.AddNewTabItem.AnimationDuration = 1500;
+----
+
+The animation effect when closing a tab shows a gradual decrease in tab item size and opacity. This depends on the animation duration, which can be set by CloseButton object’s AnimationDuration property.
+
+.Note:
+[NOTE]
+====
+In order to provide your end users with an option to close a tab, you must enable  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~closebutton.html[CloseButton]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabclosebutton~enabled.html[Enabled]"]  property to True or set the link:webtab~infragistics.web.ui.tabitem.html[TabItem] object’s link:webtab~infragistics.web.ui.tabitem~hidden.html[hidden] property to True.
+====
+
+*In HTML:*
+
+----
+<CloseButton AnimationDuration="1500" Enabled="True" />
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.CloseButton.Enabled = True
+WebTab1.CloseButton.AnimationDuration = 1500
+----
+
+*In C#:*
+
+----
+WebTab1.CloseButton.Enabled = true;
+WebTab1.CloseButton.AnimationDuration = 1500;
+----
+
+
+
+.Note:
+[NOTE]
+====
+The animation duration is set in milliseconds ranging from 0 to 1500, however values less than 30 are equal to zero.
+====
+
+== Related Topics
+
+link:webtab-about-webtab.html[Understanding WebTab]
+
+link:webtab-getting-started-with-webtab.html[Getting Started with WebTab]
+
+link:webtab-header-and-content-panes.html[Header and Content Panes]
+
+link:webtab-tab-states.html[Tab States]
+
+link:webtab-ajax-indicator-support-for-webtab.html[Ajax Indicator Support for WebTab]
+
+link:webtab-display-modes.html[Display Modes]
+
+link:webtab-handling-overflow-in-webtab.html[Handling Overflow in WebTab]
+
+link:webtab-load-on-demand.html[Load on Demand]
+
+link:webtab-orientation-and-alignment.html[Orientation and Alignment]
+
+link:webtab-overlapping-tabs.html[Overlapping Tabs]
+
+link:webtab-tab-moving.html[Tab Moving]
+
+link:webtab-scrolling.html[Scrolling]
+
+link:webtab-validation-in-webtab.html[Validation in WebTab]
+
+link:webtab-api-overview.html[API Overview]
+
+link:webtab-client-side-object-model.html[Client-Side Object Model(CSOM) Overview]

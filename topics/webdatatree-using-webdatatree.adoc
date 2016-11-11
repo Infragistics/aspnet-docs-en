@@ -1,0 +1,69 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-using-webdatatree",
+    "controlName": ["WebDataTree"],
+    "tags": [],
+    "guid": "{DD80F8CB-C09C-43A1-9F99-E67EE3494038}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebDataTree
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebDataTree™.
+
+link:webdatatree-webdatatree-smart-tag.html[WebDataTree Smart Tag]
+
+This topic introduces WebDataTree Smart Tag anchor and pop-up panel, which give the ability to see and set most of the contol properties and settings.
+
+link:webdatatree-keyboard-navigation.html[Keyboard Navigation]
+
+This topic shows how easily to navigate through the WebDataTree items using the keyboard.
+
+link:webdatatree-animations-for-expanding-and-collapsing-nodes.html[Animations for Expanding and Collapsing Nodes]
+
+This topic contains list of different animation types that WebDataTree supports when expanding and collapsing its nodes.
+
+link:webdatatree-binding-to-data.html[Binding to Data]
+
+In this topic you will learn how to bind the WebDataTree contol to different data soucres, including Infragistics ASP.NET data source controls.
+
+link:webdatatree-connector-lines-in-webdatatree.html[Connector Lines in WebDataTree]
+
+In this topic you will learn how to configure the WebDataTree to "draw" connector lines between its nodes.
+
+link:webdatatree-load-on-demand.html[Load-on-demand]
+
+In this topic you will learn how to use Load-on-demand functionallity of the WebDataTree, and how to customize its loading message.
+
+link:webdatatree-node-editing.html[Node Editing]
+
+This topic presnets how to enable and disable editing of WebDataTree node.
+
+link:webdatatree-node-selection.html[Node Selection]
+
+This topic demonstrates how to determine the type of selection on WebDataTree nodes.
+
+link:webdatatree-node-templating.html[Node Templating]
+
+Here you can learn how to set up custom template and to apply it on WebDataTree nodes.
+
+link:webdatatree-using-checkboxes-in-webdatatree.html[Using CheckBoxes in WebDataTree]
+
+This topic presents how to use and configure checkboxes within WebDataTree.
+
+link:webdatatree-disabling-auto-checking-in-webdatatree.html[Disabling Auto-Checking in WebDataTree]
+
+In this topic you will find which WebDataTree property you need to configure to manage Auto-Checking in WebDataTree.
+
+link:webdatatree-ajax-indicator-support-for-webdatatree.html[Ajax Indicator Support for WebDataTree]
+
+This topic presents how to customize Ajax Indicator properties to fit WebDataTree needs.
+
+link:webdatatree-drag-and-drop.html[Drag and Drop]
+
+This sections contains detailed information about WebDataTree Drag and Drop functionallity.

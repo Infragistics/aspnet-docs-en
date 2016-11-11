@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-formatting-pane",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{2FC2CF1D-ED2F-4A45-B476-51EF92D69AB3}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Formatting Pane
+
+The Formatting pane determines the pattern and value of the labels.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.labelappearance~formatstring.html[Format String]"]  -- This value sets the value of the label. If you want the labels to be numeric values, you must set the value to <DATA_VALUE:0>; otherwise, you can enter the text of the label.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gaugescalelabelsappearance~frequency.html[Frequency]"]  -- Set this value to a value from 1.00 and 100.00. This value determines the intervals at which the labels are displayed.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugescalelabelsappearance~spanmaximum.html[Span Max]"]  -- Set this value to an integer from 0 to 100. This value sets the size of the labels on your gauge.
+
+image::images/Formatting_Pane_01.png[The formatting pane in the gauge designer.]
+
+== Related Topic
+
+link:webgauge-labels-layout-tab.html[Labels Layout Tab]

@@ -1,0 +1,28 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-designers",
+    "controlName": ["WebSchedule"],
+    "tags": ["Design Environment"],
+    "guid": "{DE3565EF-781F-4B00-AEAB-51679F94C0A1}",  
+    "buildFlags": [],
+    "createdOn": "2005-01-08T00:00:00Z"
+}
+|metadata|
+////
+
+= Designers
+
+The WebSchedule™ controls offer a very helpful and robust designer to aid you in setting up the look and functionality you want. The designer can help you easily choose which key features you want to enable on the controls by using the Feature Picker option in the designer. This allows you to quickly set up the main features of each of the WebSchedule controls.
+
+In the designer, you can also set one of the predefined Presets on control. You can also use the Preset option to save your own custom preset for use on other instances of the control across your project.
+
+The Controls Settings option allows you to see all of the properties available on a particular control, similar to the Properties dialog box of Visual Studio .NET.
+
+In the middle column in the Control Settings option, there is an expandable tree that you can use to easily navigate through that particular controls styling settings. Selecting a particular style will update the properties grid on the far right to show that style's available properties for you to set.
+
+* link:webcalendarview-using-webcalendarviews-designer.html[Using WebCalendarView's Designer]
+* link:webschedule-using-webdayviews-designer.html[Using WebDayView's Designer]
+* link:webschedule-using-webmonthviews-designer.html[Using WebMonthView's Designer]
+* link:webscheduleinfo-using-webscheduleinfos-designer.html[Using WebScheduleInfo's Designer]

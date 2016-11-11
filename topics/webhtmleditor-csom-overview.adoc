@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-csom-overview",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["API","Editing"],
+    "guid": "{641B927F-02F1-44BD-BBE8-79ABFBF6F9B9}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+WebHtmlEditor™ exposes a robust object model within the client-side JavaScript programming environment. The client-side object model (CSOM) consists of full-fledged JavaScript objects, events, and utility functions that enable developers to program significant units of functionality pertaining to the WebHtmlEditor control without the need for server-side postbacks.
+
+In general, the object model is derived directly from the object model as it exists on the server. The property names, events, parameters and return values have very similar meanings to their counterparts on the server. However, where noted, properties are sometimes read-only on the client. These properties are only for informational purposes; you should not modify them.
+
+The following are links to the CSOM reference information for the WebHtmlEditor control:
+
+link:webhtmleditor-utility-functions-csom.html[WebHtmlEditor Utility Functions]
+
+link:webhtmleditor-object-csom.html[WebHtmlEditor Object]
+
+____
+link:webhtmleditor-client-side-events-csom.html[Client-Side Events]
+____

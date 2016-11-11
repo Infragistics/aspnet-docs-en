@@ -1,0 +1,50 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-customize-images-in-navigational-buttons",
+    "controlName": ["WebSchedule"],
+    "tags": ["Navigation","Scheduling","Styling"],
+    "guid": "{FF1A5300-0620-4587-8C25-B7A889F73920}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Customize Images in Navigational Buttons
+
+Navigation buttons within the WebSchedule UI elements can be customized by using your own images in place of the buttons.
+
+To show your own Previous and Next buttons, simply set the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~prevbuttonimage.html[PrevButtonImage]"]  and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~nextbuttonimage.html[NextButtonImage]"]  object properties on the WebMonthView™ or WebDayView™ control.
+
+The PrevButtonImage and NextButtonImage objects both have four properties that you can set:
+
+*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.simpleimage~url.html[Url]"]  -- This property is the primary one that you set to the source of the image you want to display for that button.
+*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.image~height.html[Height]"]  -- This property is used to specify the height of the image on the user interface, and is optional.
+*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.image~width.html[Width]"]  -- This property is used to specify the width of the image on the user interface.
+*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.simpleimage~alternatetext.html[AlternateText]"]  -- This property can be set to the string you would want to show if the image wasn't available.
+
+The code below shows an example of setting the Url property of both the PrevButtonImage and NextButtonImage objects.
+
+image::images\WebSchedule_How_to_Customize_the_Navigational_Buttons_Images_01.png[]
+
+*In Visual Basic:*
+
+----
+Private Sub Page_Load(ByVal sender As System.Object, ByVal _
+  e As System.EventArgs) Handles MyBase.Load
+	Me.WebDayView1.NextButtonImage.Url = "./add_down.gif"
+	Me.WebDayView1.PrevButtonImage.Url = "./del_down.gif"
+End Sub
+----
+
+*In C#:*
+
+----
+private void Page_Load(object sender, System.EventArgs e)
+{
+	this.WebDayView1.PrevButtonImage.Url = "./del_down.gif";
+	this.WebDayView1.NextButtonImage.Url = "./add_down.gif";
+}
+----

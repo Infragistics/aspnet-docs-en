@@ -1,0 +1,31 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatetimeeditor-reducing-day-on-invalid-date-in-webdatetimeeditor",
+    "controlName": ["WebDateTimeEditor"],
+    "tags": ["Editing","How Do I","Tips and Tricks"],
+    "guid": "{D003183C-BFE4-4931-81BC-A913D08D0A22}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T17:08:18Z"
+}
+|metadata|
+////
+
+= Reducing Day on Invalid Date in WebDateTimeEditor
+
+A common end-user scenario is when they enter a day of month value that actually exceeds the days in that month; WebDateTimeEditor™ allows you to handle this situation elegantly by automatically reducing the day of the month value upon invalid entry. The day of the month is reduced to the last day in that month. This feature is enabled by simply setting the WebDateTimeEditor control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~reducedayoninvaliddate.html[ReduceDayOnInvalidDate]"]  property. For example with this feature enabled, if the end-user enters 31 in the date field for the month of November, then the editor automatically sets the day field to 30 which is the maximum day in that month. However if the feature is not enabled, then the editor sets the day field to 1 and the month to December, essentially rolling the date forward into the next month.
+
+You can set the ReduceDayOnInvalidDate property either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebDateTimeEditor1.ReduceDayOnInvalidDate = true
+----
+
+*In C#:*
+
+----
+WebDateTimeEditor1.ReduceDayOnInvalidDate = true;
+----

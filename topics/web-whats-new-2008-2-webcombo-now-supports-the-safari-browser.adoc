@@ -1,0 +1,17 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-whats-new-2008-2-webcombo-now-supports-the-safari-browser",
+    "controlName": [],
+    "tags": ["FAQ","Getting Started","Selection"],
+    "guid": "{FD9AD1C2-9DF5-4B1E-A4AC-E83599C685F0}",  
+    "buildFlags": ["docx-online","docx-booklet"],
+    "createdOn": "2008-01-05T15:36:21Z"
+}
+|metadata|
+////
+
+= WebCombo Now Supports the Safari Browser
+
+Starting in Infragistics ASP.NET 2008 Volume 2, the WebCombo™ control supports the Apple® Safari™ Web Browser. The rich features of WebCombo that were previously unavailable in Safari are now implemented for the browser.

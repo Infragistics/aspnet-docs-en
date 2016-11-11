@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "support-for-mono",
+    "controlName": [],
+    "tags": ["API"],
+    "guid": "85afeae0-fb50-4bba-a966-d4dd1ccec25e",  
+    "buildFlags": [],
+    "createdOn": "2010-06-01T06:28:23.1433206Z"
+}
+|metadata|
+////
+
+= Support for Mono
+
+We now support integrating Infragistics ASP.NET controls into Mono-based ASP.NET applications. For more information on getting started with Mono, see link:http://www.mono-project.com/Start[Start].
+
+See the following table on how we support Mono:
+
+[options="header", cols="a,a"]
+|====
+|Environment|Supported Versions
+
+|Mono
+|Mono Version 2.6.3.0 or later
+
+|Infragistics ASP.NET
+|Infragistics ASP.NET v10.1 CLR 3.5 or later
+
+|Browsers
+|All the browsers that we currently support
+
+|Platforms
+|All the platforms that Mono supports, see link:http://www.mono-project.com/Supported_Platforms[Supported Platforms].
+
+|====
+
+== Known Issues
+
+There may be situations where the case sensitivity of the files may break the applications when running on Linux. For example, the ig_dataGrid.css is referenced in the head section of the page as ig_datagrid.css, which works on Windows-based web server but fails on Linux box. One of the workarounds is to rename the file name with lowercase letters.
+
+== Related Topics
+
+link:http://www.go-mono.com/mono-downloads/download.html[Mono Downloads]
+
+link:http://www.mono-project.com/ASP.NET[Mono and ASP.NET]

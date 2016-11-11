@@ -1,0 +1,65 @@
+﻿////
+
+|metadata|
+{
+    "name": "webslider-using-webslider",
+    "controlName": ["WebSlider"],
+    "tags": ["Editing","How Do I","Selection"],
+    "guid": "{BC8ADB1E-67A9-468C-97C1-B8D0E9225C82}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-05T12:09:13Z"
+}
+|metadata|
+////
+
+= Using WebSlider
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by the WebSlider™ control.
+
+link:webslider-webslider-smart-tag.html[WebSlider Smart Tag]
+
+This topic introduces WebSlider Smart Tag anchor and pop-up panel, which give the ability to see and set most of the control properties and settings.
+
+link:webslider-set-thumb-appearance.html[Set Thumb Appearance]
+
+In this topic you can learn how to adjust WebSlider thumbs' appearance defining CSS styles.
+
+link:webslider-set-thumb-interaction.html[Set Thumb Interaction]
+
+WebSlider can have two sliding thumbs. In this topic you will learn how these thumbs can interact with each other.
+
+link:webslider-customize-appearance-of-tick-marks.html[Customize Appearance of Tick Marks]
+
+WebSlider has tick marks to distinguish values on the control. This topic explains which options to use to customize the WebSlider contol's tick marks.
+
+link:webslider-set-tick-mark-behavior.html[Set Tick Mark Behavior]
+
+Use this topic if you want to learn how to change the behavior of the WebSlider contol's tick marks.
+
+link:webslider-set-websliders-track-appearance.html[Set WebSlider's Track Appearance]
+
+WebSlider has a track that connects the increment and decrement buttons together. In this topic you can find the properties that set the track appearance.
+
+link:webslider-set-websliders-track-behavior.html[Set WebSlider's Track Behavior]
+
+In this topic you can see how to set WebSlider track to response the interactions of the end users.
+
+link:webslider-change-websliders-increment-value.html[Change WebSlider's Increment Value]
+
+WebSlider provides properties that specify the amount of change in WebSlider's value. This topic shows the properties and what values you can give them.
+
+link:webslider-display-custom-formatted-values.html[Display Custom Formatted Values]
+
+This topic explains how to display custom formatted values in the WebSlider contol.
+
+link:webslider-edit-two-values.html[Edit Two Values]
+
+This topic demonstrates how to allow your end user to edit a second value of the WebSlider contol.
+
+link:webslider-set-min,-max,-and-starting-values.html[Set Min, Max, and Starting Values]
+
+In this topic are listed the necessary WebSlider contol's options to set the appropriate minimum, maximum and starting values gor your application.
+
+link:webslider-set-the-values-type.html[Set the Value's Type]
+
+This topic reveals how to change the default value type of the WebSlider contol.

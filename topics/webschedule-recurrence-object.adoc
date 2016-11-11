@@ -1,0 +1,169 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-recurrence-object",
+    "controlName": [],
+    "tags": ["API","How Do I","Recurrences","Scheduling"],
+    "guid": "{12399A3C-5754-4FE2-BA5C-0072D1902A6B}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Recurrence Object
+
+== Recurrence
+
+All properties of the Recurrence object are implemented as Set and Get methods in order to allow dynamic changes to occur on the client and also to permit more complex handling of property settings.
+
+=== Recurrence Methods
+
+==== clone
+
+Creates a clone of the current recurrence object.
+
+=== Recurrence Properties
+
+[cols="a,a"]
+|====
+|*getEditType* 
+|Determines whether the entire series or only the individual occurrence will be deleted, or if the user will be prompted to select.
+
+|*getDayOfMonth*
+|The number of the day in its respective month on which each occurrence will occur.
+
+|*getDayOfWeekMask*
+|The day(s) of the week on which each occurrence occurs in.
+
+|*getEndDate*
+|The date that defines the end of the recurrence
+
+|*getLastReminderDateTimeUtc*
+|The date/time of the last reminder notification produced for an occurrence.
+
+|*getMaxOccurences*
+|The maximum number of occurrences for the recurrence.
+
+|*getMonthOfYear*
+|The month of the year on which individual occurrences will occur.
+
+|*getPeriod*
+|The frequency at which the recurrence occurs (e.g., whether it occurs daily, weekly, monthly, or yearly).
+
+|*getPeriodMultiple*
+|The interval between occurrences of the recurrence.
+
+|*getRecurrenceDescription*
+|The human-readable description of this recurrence.
+
+|*setDayOfMonth*
+|Set the number of the day in its respective month on which each occurrence will occur. 
+
+*Parameters*
+
+_dom_ 
+
+An integer value ranging from 1 - 31 that determines the day of the month.
+
+|*setDayOfWeekMask*
+|Set the day(s) of the week on which each occurrence occurs in. 
+
+*Parameters*
+
+_dowm_ 
+
+An integer value that determines the mask for the day of week. 
+
+0 - None 
+
+1 - Sunday 
+
+2 - Monday 
+
+4 - Tuesday 
+
+8 - Wednesday 
+
+16 - Thursday 
+
+32 - Friday 
+
+64 - Saturday 
+
+65 - AllWeekendDays 
+
+62 - AllWeekDays 
+
+127 - All
+
+|*setEditType*
+|Sets the RecurrenceEditType that should be applied: 
+
+*Parameters*
+
+_type_ 
+
+An integer value that determines the type of editing allowed. 
+
+0 - UserSelect 
+
+1 - Series 
+
+2 - Occurrence
+
+|*setEndDate*
+|Sets the date that defined the end of the recurrence. 
+
+*Parameters*
+
+_date_ 
+
+Date object to set the EndDate of the occurrence.
+
+|*setMaxOccurrences*
+|Sets the maximum number of occurrences for the recurrence. 
+
+*Parameters*
+
+_max_ 
+
+An integer value that determines the maximum occurrences.
+
+|*setMonthOfYear*
+|Sets the month of the year on which individual occurrences will occur. 
+
+*Parameters*
+
+_moy_ 
+
+An integer value ranging from 0 - 12 that determines the month of the year.
+
+|*setPeriod*
+|Sets the frequency at which the recurrence occurs. 
+
+*Parameters*
+
+_period_ 
+
+An integer value that determines the period. 
+
+0 - Daily 
+
+1 - Weekly 
+
+2 - Monthly 
+
+3 - Yearly
+
+|*setPeriodMultiple*
+|Sets the interval between occurrences of the recurrence. 
+
+*Parameters*
+
+_pm_ 
+
+An integer value that determines the interval in between periods.
+
+|====

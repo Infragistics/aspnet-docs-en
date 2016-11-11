@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-multi-language-support",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","Localization"],
+    "guid": "{77EF9582-57D2-4C0F-92FA-8ED1A2115D79}",  
+    "buildFlags": [],
+    "createdOn": "2006-11-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Multi-Language Support
+
+The WebHtmlEditor™ control features built-in support for multiple languages through a simple setting of the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~localizationtype.html[LocalizationType]"]  property. With this single setting, the default text of all labels, ToolTips, menus, dialog boxes and drop-down list can be translated to a number of languages. It is easy to customize your own language files, because the language files are plain XML text files.
+
+WebHtmlEditor provides built-in language files for each of the following languages:
+
+* English
+* French
+* German
+* Spanish

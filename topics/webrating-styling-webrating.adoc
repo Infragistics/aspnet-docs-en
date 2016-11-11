@@ -1,0 +1,92 @@
+﻿////
+
+|metadata|
+{
+    "name": "webrating-styling-webrating",
+    "controlName": ["WebRating"],
+    "tags": ["Selection","Styling","Templating"],
+    "guid": "e0b480a0-cef9-4f19-a693-fec17381f771",  
+    "buildFlags": [],
+    "createdOn": "2010-06-01T05:54:29.8663206Z"
+}
+|metadata|
+////
+
+= Styling WebRating
+
+The WebRating control allows you to set custom images and styles for a unique look and feel. WebRating exposes the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~customimages.html[CustomImages]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~ratingimage.html[RatingImage]"]  properties that you can use to customize the look of the control.
+
+The RatingImage property allows you to set CSS styles for the rating items’ different states: normal, hovered, and selected. The CustomImages property allows you to define individual rating items that you want to display. You can specify custom CSS classes for the rating items just like you would with the RatingImage property.
+
+.Note:
+[NOTE]
+====
+When using custom images you must set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~imageheight.html[ImageHeight]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~imagewidth.html[ImageWidth]"]  properties on WebRating to define the image size.
+====
+
+== Rating Image
+
+The following code shows you how to customize your rating images using the RatingImage property.
+
+*In HTML:*
+
+----
+<style>    .empty
+        {
+                background-image: url(images/nfrating.png);
+                background-repeat: no-repeat;
+                background-position: 0px 0px;
+        }
+        .selected
+        {
+                background-image: url(images/nfrating.png);
+                background-repeat: no-repeat;
+                background-position: -18px 0px;
+        }
+        .hovered
+        {
+                background-image: url(images/nfrating.png);
+                background-repeat: no-repeat;
+                background-position: -36px 0px;
+        }
+</style>
+<ig:webrating ID="WebRating1" runat="server" ImageHeight="18" ImageWidth="18">
+   <ClientEvents Rating="WebRating_RatingEventHandler" />
+   <%-- Set custom css classes --%>
+   <RatingImage HoveredImageCssClass="hovered" ImageCssClass="empty"          SelectedImageCssClass="selected" />
+</ig:webrating>
+----
+
+== Custom Images
+
+The following code shows you how to set custom images using the CustomImages property.
+
+*In HTML:*
+
+----
+<style>
+       .badRating
+        {
+            background: url('images/Splat.png');
+        }
+        .mediumRating
+        {
+            background: url('images/Rotten.png');
+        }
+        .goodRating 
+        {
+            background: url('images/Fresh.png');
+        }
+        .noImage 
+        {
+            cursor: pointer;
+        }
+</style>
+<ig:webrating ID="WebRating1" runat="server" ImageHeight="31" ImageWidth="31">
+   <CustomImages>
+               <ig:ratingimageitem Value="1" ImageCssClass="badRating"                  HoveredImageCssClass="noImage" SelectedImageCssClass="noImage" />
+               <ig:ratingimageitem Value="2" ImageCssClass="mediumRating"                       HoveredImageCssClass="noImage" SelectedImageCssClass="noImage" />
+               <ig:ratingimageitem Value="3" ImageCssClass="goodRating"                         HoveredImageCssClass="noImage" SelectedImageCssClass="noImage" />
+   </CustomImages>
+</ig:webrating>
+----

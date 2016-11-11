@@ -1,0 +1,24 @@
+﻿////
+|metadata|
+{
+    "name": "webgauge-bar-marker",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "a678dc74-061a-4582-b447-0a0c8923b979",
+    "buildFlags": [],
+    "createdOn": "2012-04-23T12:21:43.601793Z"
+}
+|metadata|
+////
+
+= Bar Marker
+
+Bar markers are displayed as bars that have a start and end point on the scale of your Radial or Linear gauge.
+
+For example, if you were creating a Linear gauge to represent a thermometer you would use a bar marker to display the mercury level.
+
+image::images/gauge_add_bar_marker_01.png[Gauge_Add_Bar_Marker_01.png]
+
+== Related Topic
+
+link:webgauge-add-a-bar-marker-to-a-gauge.html[Add a Bar Marker to a Gauge]

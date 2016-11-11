@@ -1,0 +1,113 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-progressindicator-object-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{D33F0381-6C43-483B-A16F-2DC91EB63A6F}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= ProgressIndicator Object
+
+== ProgressIndicator
+
+The Progress Indicator is a client side object that is displayed during SmartCallbacks.
+
+=== ProgressIndicator Methods
+
+[cols="a,a"]
+|====
+|*display* 
+|Displays the Progress Indicator.
+
+|*getImageUrl* 
+|Retrieves the ImageUrl that is being used for the Progress Indicator.
+
+|*getTemplate* 
+|Retrieves the HTML that has been set for the Progress Indicator.
+
+|*hide* 
+|Hides the Progress Indicator.
+
+|*setImageUrl* 
+|Sets the ImageUrl of the Progress Indicator. 
+
+*Parameters*
+
+_imageUrl_ 
+
+The image URL to be set. 
+
+*Remarks*
+
+The progress Indicator will use this image, if no HTML has been specified via the setHtml method.
+
+|*setLocation* 
+|Sets the location that the Progress Indicator should be displayed at, relative to the page. 
+
+*Parameters*
+
+_location_ 
+
+ig_Location.TopLeft = 0 
+
+ig_Location.TopCenter = 1 
+
+ig_Location.TopRight = 2 
+
+ig_Location.TopInfront = 3 
+
+ig_Location.TopBehind = 4 
+
+ig_Location.MiddleLeft = 8 
+
+ig_Location.MiddleCenter = 9 
+
+ig_Location.MiddleRight = 10 
+
+ig_Location.MiddleInfront = 11 
+
+ig_Location.MiddleBehind = 12 
+
+ig_Location.BottomLeft = 16 
+
+ig_Location.BottomCenter = 17 
+
+ig_Location.BottomRight = 18 
+
+ig_Location.BottomInfront = 19 
+
+ig_Location.BottomBehind = 20 
+
+ig_Location.AboveLeft = 32 
+
+ig_Location.AboveCenter = 33 
+
+ig_Location.AboveRight = 34 
+
+ig_Location.AboveInfront = 35 
+
+ig_Location.AboveBehind = 36 
+
+ig_Location.BelowLeft = 64 
+
+ig_Location.BelowCenter = 65 
+
+ig_Location.BelowRight = 66 
+
+ig_Location.BelowInfront = 67 
+
+ig_Location.BelowBehind = 68
+
+|*setRelativeContainer* 
+|Sets the container to display the Progress Indicator in. The location that is set on the Progress Indicator, will determine where in the container it will be displayed.
+
+|*setTemplate* 
+|Sets the HTML to be used in the Progress Indicator.
+
+|====

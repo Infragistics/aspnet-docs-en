@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-properties-panel",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Styling","Theming"],
+    "guid": "{C4362E9D-1375-4084-B86C-18BD4D2B55BC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Properties Panel
+
+The Properties Panel is where you do the actual styling of an application. You find a Role (either in the Style Explorer or by using a Keyboard Shortcut) you change a Role through the Properties Panel, and you see those changes in the Canvas. The Properties Panel is divided into two sections: Designer and Text Editor. The Designer is where you can visually set styles and choose colors. The Text Editor is exactly what it sounds like, you edit the raw CSS text. Whatever you change in the Designer is reflected in the Text Editor, and vice versa.
+
+* link:webappstylist-designer.html[Designer] -- The Designer is a logical grouping of properties that are all changeable. However, depending on what Role you click on in the Roles tree, you will see different properties. Clicking on a control itself will give you control-specific properties to modify that do not translate to CSS. Clicking on an individual Role beneath the control will translate directly to a CSS class.
+* link:webappstylist-text-editor.html[Text Editor] -- If you feel that your typing is quicker than your clicking, use the Text Editor to input CSS directly into the associated class.

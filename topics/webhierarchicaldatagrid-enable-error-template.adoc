@@ -1,0 +1,94 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-enable-error-template",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids","Templating"],
+    "guid": "{553CADFA-A503-455A-9482-3DEF210ED251}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Enable Error Template
+
+You can use the Error Template of WebHierarchicalDataGrid™ to display custom messages for exceptions that occur within the control. This includes any exceptions originating from WebHierarchicalDataGrid, as well as any data operation exceptions. Like all templates, you can place any control within the Error Template. The GridView property of WebHierarchicalDataGrid exposes the ErrorMessage property allowing you to access the exception message.
+
+.Note:
+[NOTE]
+====
+In order for the template to display, you must have something present within the template. If not, and the exception is not handled, your application will load the generic exception page.
+====
+
+You can set up the Error Template at design time by clicking the control’s smart tag and selecting Edit Templates. From the Display drop-down list select Error Template. You can then drag controls onto the Error Template surface.
+
+The following code shows you how to create a custom display for your end-users when an exception occurs by using the Error Template. As with the creation of any template, you need a class that implements the ITemplate interface.
+
+*In Visual Basic:*
+
+----
+Protected Overloads Overrides Sub OnInit(ByVal e As EventArgs)
+   MyBase.OnInit(e)
+   'template has to be instantiated every postback 
+   Me.WebHierarchicalDataGrid1.ErrorTemplate = New CustomErrorTemplate()
+End Sub
+Protected Overloads Overrides Sub OnPreRender(ByVal e As EventArgs)
+   MyBase.OnPreRender(e)
+   'after label is created, get reference to add the error message 
+   Me.WebHierarchicalDataGrid1.DataBind()
+   Dim label1 As System.Web.UI.WebControls.Label = DirectCast(Me.WebHierarchicalDataGrid1.GridView.ErrorTemplateContainer.FindControl("Label1"), System.Web.UI.WebControls.Label)
+   label1.Text += Me.WebHierarchicalDataGrid1.GridView.ErrorMessage
+End Sub
+Private Class CustomErrorTemplate
+        Implements ITemplate
+   #Region "ITemplate Members"
+   Public Sub InstantiateIn(ByVal container As Control)
+      Dim label1 As New System.Web.UI.WebControls.Label()
+      label1.Text = "An operation has failed in WebDataGrid. The reason is provided: "
+      label1.ID = "Label1"
+      container.Controls.Add(label1)
+   End Sub
+   #End Region
+End Class
+----
+
+*In C#:*
+
+----
+protected override void OnInit(EventArgs e)
+{
+   base.OnInit(e);
+   //template has to be instantiated every postback
+   this.WebHierarchicalDataGrid1.ErrorTemplate = new CustomErrorTemplate();
+}
+protected override void OnPreRender(EventArgs e)
+{
+   base.OnPreRender(e);
+   //after label is created, get reference to add the error message 
+   this.WebHierarchicalDataGrid1.DataBind();
+   System.Web.UI.WebControls.Label label1 = (System.Web.UI.WebControls.Label)this.WebHierarchicalDataGrid1.GridView.ErrorTemplateContainer.FindControl("Label1");
+   label1.Text += this.WebHierarchicalDataGrid1.GridView.ErrorMessage;
+}
+private class CustomErrorTemplate : ITemplate
+{
+   #region ITemplate Members
+   public void InstantiateIn(Control container)
+   {
+      System.Web.UI.WebControls.Label label1 = new System.Web.UI.WebControls.Label();
+      label1.Text = "An operation has failed in WebDataGrid. The reason is provided: ";
+      label1.ID = "Label1";
+      container.Controls.Add(label1);
+    }
+    #endregion
+}
+----
+
+== Related Topics
+
+link:webhierarchicladatagrid-column-templates.html[Column Templates]
+
+link:webhierarchicaldatagrid-paging-template.html[Paging Template]
+
+link:webhierarchicaldatagrid-enable-error-template.html[Enable Empty Rows Template]

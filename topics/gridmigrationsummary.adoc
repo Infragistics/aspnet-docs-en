@@ -1,0 +1,570 @@
+﻿////
+|metadata|
+{
+	"name":"gridmigrationsummary",
+	"controlName":[],
+	"tags":[],
+	"guid":"4fcf99fe-198f-48e6-994b-f6d617c25067",
+	"buildFlags":[],
+	"createdOn":"2016-07-20T17:26:00.2768827Z"}
+|metadata|
+////
+
+= Grid Migration - Summary
+
+== UltraWebGrid
+
+When you enable column footers for a band, the footers will appear, but you must still specify what information they will contain. You can do this through the `UltraGridColumn.FooterText` property and/or the `UltraGridColumn.FooterTotal` property.
+
+==== SummaryInfo
+
+[options="header", cols="a,a"]
+|====
+|Enumeration|Description
+
+|Avg
+|The average of the column is displayed.
+
+|Count
+|The number of cells in the column is displayed.
+
+|Formula
+|Evaluates an UltraCalc formula assigned to the Formula property and displays calculation.
+
+|Max
+|The maximum value of the column is displayed.
+
+|Min
+|The minimum value of the column is displayed.
+
+|Sum
+|The sum of the column is displayed.
+
+|Text
+|The text of the column is displayed.
+
+|====
+
+Interesting tips in this section:
+
+http://help.infragistics.com/NetAdvantage/ASPNET/2010.3?page=WebCalcManager_Creating_a_Calculated_Column_in_WebGrid.html[Creating a Calculated Column in WebGrid]
+
+http://help.infragistics.com/NetAdvantage/ASPNET/2010.3?page=WebCalcManager_Creating_Running_Totals_in_WebGrid.html[Creating Running Totals in WebGrid]
+
+link:++http://help.infragistics.com/NetAdvantage/ASPNET/2010.3?page=Infragistics4.WebUI.UltraWebGrid.v10.3~Infragistics.WebUI.UltraWebGrid.UltraGridBand~GroupByRowDescriptionMask.html++[Using GroupByRowDescriptionMask]
+
+http://forums.infragistics.com/forums/p/22657/82874.aspx[Update a child row footer]
+
+== WebDataGrid
+
+WebDataGrid allows you and your end users to display a summary of the numeric data in any column.
+
+The summaries can be:
+
+* Count 
+* Sum 
+* Average 
+* Min 
+* Max 
+* Custom summaries
+
+The standard summaries are available for numeric data only. An exception is Count SummaryType, which is always available.
+
+**In C#:**
+
+[source,csharp]
+----
+WebDataGrid1.Behaviors.CreateBehavior<SummaryRow>();
+----
+
+When enabled, the behavior adds a summary button to each header. When the button is pressed, a drop-down with available summaries appears.
+
+==== Enabling Summary Row
+
+**In ASPX:**
+
+[source,html]
+----
+<Behaviors>
+    <ig:SummaryRow AnimationType="Linear">
+        <ColumnSummaries>
+            <ig:ColumnSummaryInfo ColumnKey="UnitPrice">
+                <Summaries>
+                    <ig:Summary SummaryType="Average" />
+                    <ig:Summary SummaryType="Max" />
+                </Summaries>
+            </ig:ColumnSummaryInfo>
+        </ColumnSummaries>
+    </ig:SummaryRow>
+</Behaviors>
+----
+
+To add a summary row from the code-behind, add the following code:
+
+**In C#:**
+
+[source,csharp]
+----
+ColumnSummaryInfo unitPriceSummary = new ColumnSummaryInfo();
+unitPriceSummary.ColumnKey = "UnitPrice";
+unitPriceSummary.Summaries.Add(SummaryType.Average);
+unitPriceSummary.Summaries.Add(SummaryType.Max);
+WebDataGrid1.Behaviors.SummaryRow.ColumnSummaries.Add(unitPriceSummary);
+----
+
+==== Summary Settings
+
+When Summary Row behavior is enabled, a summary button is rendered at the header of every column. When the button is pressed, a drop-down with the available summaries occurs. When a summary is chosen, a new row (summary row) appears at the footer of the grid and the summary value is shown.
+
+You can disable a summary button for a column, disable a summary from the summary options, and format the string of the summary value.
+
+Set `ShowSummaryButton` to False. This way the summary button (showing the list of the summaries) for the column will not be shown at the header. Other available properties from this level are:
+
+* `EnableColumnSummaryOptions` – if this is set to False, the default summary types won’t be available via the drop-down. 
+* `Enabled` – if this is set to False, the user will not be able to calculate any summaries for this column.
+
+The following mark-up should be generated:
+
+**In ASPX:**
+
+[source,html]
+----
+<Behaviors>
+    <ig:SummaryRow>
+        <ColumnSummaries>
+            <ig:ColumnSummaryInfo ColumnKey="UnitPrice">
+                <Summaries>
+                    <ig:Summary SummaryType="Average" />
+                </Summaries>
+            </ig:ColumnSummaryInfo>
+        </ColumnSummaries>
+        <ColumnSettings>
+            <ig:SummaryRowSetting ColumnKey="ProductID" ShowSummaryButton="False">
+            </ig:SummaryRowSetting>
+            <ig:SummaryRowSetting ColumnKey="UnitPrice">
+                <SummarySettings>
+                    <ig:SummarySetting ShowOptionInDropDown="False"SummaryType="Max" />
+                    <ig:SumarySetting FormatString="{0} = {1:###.00}" 
+                        SummaryType="Average" />
+                </SummarySettings>
+            </ig:SummaryRowSetting>
+        </ColumnSettings>
+    </ig:SummaryRow>
+</Behaviors>
+----
+
+To do that from the code-behind, you should add the following code:
+
+**In C#:**
+
+[source,csharp]
+----
+SummaryRowSetting settings = new SummaryRowSetting(WebDataGrid1, "ProductID");
+settings.ShowSummaryButton = false;
+this.WebDataGrid1.Behaviors.SummaryRow.ColumnSettings.Add(settings);
+SummaryRowSetting unitPriceSetting = new SummaryRowSetting(WebDataGrid1, "UnitPrice");
+SummarySetting maxSummarySetting = new SummarySetting();
+maxSummarySetting.ShowOptionInDropDown = false;
+maxSummarySetting.SummaryType = SummaryType.Max;
+unitPriceSetting.SummarySettings.Add(maxSummarySetting);
+SummarySetting averegeSummarySetting = new SummarySetting();
+averegeSummarySetting.FormatString = "{0} = {1:###.00}";
+averegeSummarySetting.SummaryType = SummaryType.Average;
+unitPriceSetting.SummarySettings.Add(averegeSummarySetting);
+this.WebDataGrid1.Behaviors.SummaryRow.ColumnSettings.Add(unitPriceSetting);
+----
+
+==== Adding Custom Summary
+
+**In ASPX:**
+
+[source,html]
+----
+<Behaviors>
+    <ig:FooterSummaries AnimationType="Bounce">
+        <ColumnSummaries>
+            <ig:ColumnSummaryInfo ColumnKey="UnitPrice">
+                <Summaries>
+                <ig:Summary SummaryType="Custom" CustomSummaryName="STDEV" />
+                </Summaries>
+            </ig:ColumnSummaryInfo>
+        </ColumnSummaries>
+        <ColumnSettings>
+            <ig:FooterSummariesSetting ColumnKey="UnitPrice">
+                <SummarySettings>
+                    <ig:SummarySetting CustomSummaryName="Standard Deviation" SummaryType="Custom" />
+                </SummarySettings>
+            </ig:FooterSummariesSetting>
+        </ColumnSettings>
+    </ig:FooterSummaries>
+</Behaviors>
+----
+
+The following code shows how to add custom summary from the code-behind:
+
+**In C#:**
+
+[source,csharp]
+----
+FooterSummariesSetting unitPriceSetting = new FooterSummariesSetting(this.WebDataGrid1, "UnitPrice");
+SummarySetting stdevSetting = new SummarySetting();
+stdevSetting.SummaryType = SummaryType.Custom;
+stdevSetting.CustomSummaryName = "STDEV";
+stdevSetting.FormatString = "STDEV = {1}";
+unitPriceSetting.SummarySettings.Add(stdevSetting);
+WebDataGrid1.Behaviors.FooterSummaries.ColumnSettings.Add(unitPriceSetting);
+ColumnSummaryInfo stdevInfo = new ColumnSummaryInfo();
+stdevInfo.ColumnKey = "UnitPrice";
+Summary stdevSummary = new Summary();
+stdevSummary.SummaryType = SummaryType.Custom;
+stdevSummary.CustomSummaryName = "STDEV";
+stdevInfo.Summaries.Add(stdevSummary);
+WebDataGrid1.Behaviors.FooterSummaries.ColumnSummaries.Add(stdevInfo);
+protected object WebDataGrid1_CalculateCustomSummary(object sender, CustomSummaryEventArgs e)
+    {
+        //calculate the St.dev summary
+        if (e.Summary.CustomSummaryName == "STDEV")
+        {
+            //calculate the sum of all values
+            double sum = 0.0;
+            int n = 0;
+            foreach (GridRecord gr in this.WebDataGrid1.Rows)
+            {
+                sum += Convert.ToDouble(gr.Items[2].Value);
+                ++n;
+            }
+            //calculate the sum of squared deviations
+            double mean = sum / n;
+            sum = 0;
+            foreach (GridRecord gr in this.WebDataGrid1.Rows)
+            {
+                sum += Math.Pow(mean - Convert.ToDouble(gr.Items[2].Value), 2);
+            }
+            sum = sum / (n - 1);
+            return Math.Round(Math.Sqrt(sum), 2);
+        }
+        return null;
+    }
+----
+
+==== Summary Row and Filtering Behavior
+
+When Summary Row and Filtering behaviors are enabled, the summary value can be calculated for the filtered data. There is a property called `EnableSummariesFilter`, which specifies how the summaries are calculated.
+
+If the property is set to True then summaries will calculate based on the data that has not been filtered out by the filtering conditions applied through the grid's Filtering behavior. If the property is set to False then the summaries will be calculated on the whole data no matter if it is filtered out or not.
+
+.Note:
+[NOTE]
+====
+The summaries are always calculated for the whole data, except for filtered or edited data i.e. when you edit (CRUD) or filter the data in the grid, the summary value is calculated for the filtered or edited data. For the other behaviors (paging, scrolling, etc.), the calculated summary value is for the whole data.
+====
+
+==== Client side events:
+
+[options="header", cols="a,a"]
+|====
+|Event|Description
+
+|CalculateCustomSummary
+|Event fired after an update operation occured on the client, so a custom summary can be re-calculated.
+
+|Initialize
+|Gets sets name of javascript function which is called after javascript object was created and initialized. (Inherited from Infragistics.Web.UI.Framework.ClientEventsBase)
+
+|IsEmpty
+|Checks if ViewState has any property with not a default value. This property should be overriden by extended class when additional subobjects are supported. IsEmpty will then check each subobject and return a value based on the check of those objects plus itself.
+
+|SummaryCalculated
+|Event fired after a Summary is calculated
+
+|SummaryDropdownDisplayed
+|Event fired after the summaries option dropdown is displayed.
+
+|SummaryDropdownDisplaying
+|Event fired just before the summaries option dropdown is displayed.
+
+This event is cancelable.
+
+|SummaryDropdownHidden
+|Event fired after the summaries option dropdown is hidden.
+
+|SummaryDropdownHiding
+|Event fired just before the summaries option dropdown is hidden.
+
+This event is cancelable.
+
+|====
+
+==== Example:
+
+**In JavaScript:**
+
+[source,javascript]
+----
+function SummaryCalculated(sender, evntArgs) {
+            var summariesText = " ";
+            var columnSummaryInfo = evntArgs.get_columnSummaryInfo();
+            var columnKey = columnSummaryInfo.get_columnKey();
+            var count = columnSummaryInfo.get_summaryCount();
+            for (var i = 0; i <= 5; i++) {
+                var summary = columnSummaryInfo.get_summaryByType(i);
+                if (summary != null) {
+                    summariesText += getSummaryType(i) + " = " + summary.get_value() + "; ";
+                }
+            }
+            alert ("SummaryCalculated Event Fired for Column " + columnKey + ": " + summariesText);
+        }
+function getSummaryType(summaryTypeIndex) {
+            switch (summaryTypeIndex) {
+                case 0:
+                    return "Count";
+                case 1:
+                    return "Min";
+                case 2:
+                    return "Max";
+                case 3:
+                    return "Average";
+                case 4:
+                    return "Sum";
+                case 5:
+                    return "Custom";
+            }
+        }
+----
+
+==== Server events:
+
+**In C#:**
+
+[source,csharp]
+----
+protected object WebDataGrid1_CalculateCustomSummary(object sender, CustomSummaryEventArgs e)
+   {   
+        switch (e.ColumnSummaryInfo.ColumnKey)
+        {
+            case "UnitPrice":
+                return this.CalcStDev(2);
+            case "UnitsInStock":
+                return this.CalcStDev(3);
+            case "UnitsOnOrder":
+                return this.CalcStDev(4);
+            default:
+                return null;
+        }
+    }
+    protected double CalcStDev(int colNumber)
+    {
+        double sum = 0.0;
+        int n = 0;
+        foreach (GridRecord gr in this.WebDataGrid1.Rows)
+        {
+            sum += Convert.ToDouble(gr.Items[colNumber].Value);
+            ++n;
+        }
+        //calculate the sum of squared deviations
+        double mean = sum / n;
+        sum = 0;
+        foreach (GridRecord gr in this.WebDataGrid1.Rows)
+        {
+            sum += Math.Pow(mean - Convert.ToDouble(gr.Items[colNumber].Value), 2);
+        }
+        sum = sum / (n - 1);
+        return Math.Round(Math.Sqrt(sum), 2);
+    }
+----
+
+== WebHierarchicalDataGrid
+
+The Summary Row feature of WebDataGrid is available in WebHierarchicalDataGrid. The behavior allows adding standard summaries (Count; Sum; Average; Min; Max) as well as custom ones.
+
+Each band in WebHierarchicalDataGrid can be assigned a Summary Row behavior. You can set the EnableInheritance property of a band to enable child bands to inherit the setting. This allows you to customize summary row behavior in each band of data. For example, if you want summaries for all bands in WebHierarchicalDataGrid, just enable the SummaryRow behavior at the root level and set EnableInheritance to True. If you want to disable the behavior for a specific child band, disable the behavior for that specific band.
+
+When enabled, the behavior adds a summary button to each header. When the button is pressed, a drop-down with available summaries appears.
+
+==== Enabling Summary Row
+
+**In ASPX:**
+
+[source,html]
+----
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" DataSourceID="WebHierarchicalDataSource1" 
+       Height="400px" Width="750px" DataKeyFields="ProductID" >
+            <Bands>
+                <ig:Band Height="100" DataMember="AccessDataSource1_Orders" DataKeyFields="OrderID">
+                    <Behaviors>
+                        <ig:SummaryRow>
+                            <ColumnSummaries>
+                                <ig:ColumnSummaryInfo ColumnKey="Quantity">
+                                    <Summaries>
+                                        <ig:Summary SummaryType="Sum"></ig:Summary>
+                                    </Summaries>
+                                </ig:ColumnSummaryInfo>
+                            </ColumnSummaries>
+                        </ig:SummaryRow>
+                    </Behaviors>
+                </ig:Band>
+            </Bands>
+            <Behaviors>
+                <ig:SummaryRow EnableInheritance="true">
+                    <ColumnSummaries>
+                        <ig:ColumnSummaryInfo ColumnKey="UnitPrice">
+                            <Summaries>
+                                <ig:Summary SummaryType="Average"></ig:Summary>
+                            </Summaries>
+                        </ig:ColumnSummaryInfo>
+                    </ColumnSummaries>
+                </ig:SummaryRow>
+            </Behaviors>
+        </ig:WebHierarchicalDataGrid>
+----
+
+**In C#:**
+
+[source,csharp]
+----
+protected void WebHierarchicalDataGrid1_InitializeBand(object sender, BandEventArgs e)
+{
+    if (e.Band.Key == "Products")
+    {
+        e.Band.Behaviors.CreateBehavior<SummaryRow>();
+        e.Band.Behaviors.SummaryRow.EnableInheritance = true;
+        ColumnSummaryInfo unitPriceSummary = new ColumnSummaryInfo();
+        unitPriceSummary.ColumnKey = "UnitPrice";
+        unitPriceSummary.Summaries.Add(SummaryType.Average);
+        e.Band.Behaviors.SummaryRow.ColumnSummaries.Add(unitPriceSummary);
+        this.WebHierarchicalDataGrid1.RefreshBehaviors();
+    }
+    else if (e.Band.Key == "Orders")
+    {
+        e.Band.Behaviors.CreateBehavior<SummaryRow>();
+        e.Band.Behaviors.SummaryRow.EnableInheritance = true;
+        ColumnSummaryInfo quantitySummary = new ColumnSummaryInfo();
+        quantitySummary.ColumnKey = "Quantity";
+        quantitySummary.Summaries.Add(SummaryType.Sum);
+        quantitySummary.Summaries.Add(SummaryType.Max);
+        e.Band.Behaviors.SummaryRow.ColumnSummaries.Add(quantitySummary);
+        this.WebHierarchicalDataGrid1.RefreshBehaviors();
+    }
+}
+----
+
+== Interesting Tips:
+
+==== **Custom summary of templated columns in WebHierarchicalDataGrid**
+
+By default summaries are not supported by templated columns.
+
+http://help.infragistics.com/NetAdvantage/ASPNET/2010.3?page=WebHierarchicalDataGrid_About_Summary_Row.html[About Summary Row]
+
+This should be implemented by Custom Summary:
+
+http://help.infragistics.com/NetAdvantage/ASPNET/2010.3?page=WebDataGrid_Adding_Custom_Summary.html[Adding Custom Summary]
+
+link:++http://samples.infragistics.com/2010.3/WebFeatureBrowser/contents.aspx?showCode=true&amp;t=WebDataGrid/SummaryRow/WebDataGrid_CustomSummaries.aspx~srcview.aspx?path=~srcview.aspx?path=WebDataGrid/SummaryRow/WebDataGrid_CustomSummaries.src++[Custom Summaries Sample]
+
+**In ASPX:**
+
+[source,html]
+----
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" Height="350px" AutoGenerateColumns="false" 
+  Width="800px" AutoGenerateBands="false" AutoGenerateColumns="false" DataKeyFields="ID"
+        DataMember="SqlDataSource1_DefaultView" DataSourceID="WebHierarchicalDataSource1"
+        Key="SqlDataSource1_DefaultView" OnCalculateCustomSummary="WebHierarchicalDataGrid1_CalculateCustomSummary">
+            <Bands>
+               <ig:Band AutoGenerateColumns="False" DataMember="SqlDataSource2_DefaultView" Key="SqlDataSource2_DefaultView" 
+          OnCalculateCustomSummary="WebHierarchicalDataGrid1_CalculateCustomSummary" ShowFooter="true"> 
+                    <Columns>
+                        <ig:BoundDataField DataFieldName="ProductID" Key="ProductID">
+                            <Header Text="ProductID" />
+                        </ig:BoundDataField>
+                        <ig:BoundDataField DataFieldName="ProductName" Key="ProductName">
+                            <Header Text="ProductName" />
+                        </ig:BoundDataField>
+                        <ig:BoundDataField DataFieldName="CategoryID" Key="CategoryID">
+                            <Header Text="CategoryID" />
+                        </ig:BoundDataField>
+                        <ig:TemplateDataField Key="UnitPrice">
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" 
+                                Text='<%# DataBinder.Eval(((Infragistics.Web.UI.TemplateContainer)Container).DataItem, "UnitPrice")%'>                                
+                                </asp:Label>
+                            </ItemTemplate>
+                            <Footer Text="" />
+                            <Header Text="UnitPrice" />
+                        </ig:TemplateDataField>
+                    </Columns>
+                    <Behaviors>
+                        <ig:SummaryRow>
+                            <ColumnSettings>
+                                <ig:SummaryRowSetting ColumnKey="UnitPrice" EnableColumnSummaryOptions="true" Enabled="true"
+                                    ShowSummaryButton="true">
+                                    <SummarySettings>
+                                        <ig:SummarySetting SummaryType="Custom" CustomSummaryName="Sum of Unit Prices" ShowOptionInDropDown="true" />
+                                    </SummarySettings>
+                                </ig:SummaryRowSetting>
+                            </ColumnSettings>
+                        </ig:SummaryRow>
+                    </Behaviors>
+                </ig:Band>
+            </Bands>
+            <Behaviors>
+                <ig:SummaryRow EnableInheritance="True">
+                    <ColumnSettings>
+                        <ig:SummaryRowSetting ColumnKey="CategoryName">
+                            <SummarySettings>
+                                <ig:SummarySetting CustomSummaryName="Count of CategoryName" SummaryType="Custom" />
+                            </SummarySettings>
+                        </ig:SummaryRowSetting>
+                    </ColumnSettings>
+                </ig:SummaryRow>
+            </Behaviors>
+            <Columns>
+                <ig:BoundDataField DataFieldName="CategoryID" Key="CategoryID">
+                    <Header Text="CategoryID" />
+                </ig:BoundDataField>
+                <ig:TemplateDataField Key="CategoryName">
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# DataBinder.Eval(((Infragistics.Web.UI.TemplateContainer)Container).DataItem, "CategoryName") %>'
+                            CssClass="redCategories">
+  </asp:Label>
+                    </ItemTemplate>
+                    <Header Text="CategoryName" />
+                    <Footer />
+                </ig:TemplateDataField>
+                <ig:BoundDataField DataFieldName="Description" Key="Description">
+                    <Header Text="Description" />
+                </ig:BoundDataField>
+            </Columns>
+        </ig:WebHierarchicalDataGrid>
+----
+
+**In C#:**
+
+[source,csharp]
+----
+protected object WebHierarchicalDataGrid1_CalculateCustomSummary(object sender, Infragistics.Web.UI.GridControls.CustomSummaryEventArgs e)
+    {       
+        object summary = 0;    
+        if (e.ColumnSummaryInfo.ColumnKey == "UnitPrice")
+        {
+            //calculate the sum of all values
+            Decimal sum = Decimal.Parse(summary.ToString());
+            ContainerGrid childGrid = (ContainerGrid)sender;
+            foreach (GridRecord gr in childGrid.Rows)
+            {
+                Label label = (Label)gr.Items[3].FindControl("Label1");
+                sum += Decimal.Parse(label.Text);
+            }
+            summary = sum;
+        }
+        if (e.ColumnSummaryInfo.ColumnKey == "CategoryName")
+        {
+            int count = (int)summary;
+            //calculate the count of all values
+            ContainerGrid childGrid = (ContainerGrid)sender;
+            count = childGrid.Rows.Count;
+            summary = count;
+        }
+        return summary;
+    }
+----

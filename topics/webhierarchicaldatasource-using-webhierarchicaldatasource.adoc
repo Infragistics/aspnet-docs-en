@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatasource-using-webhierarchicaldatasource",
+    "controlName": ["WebHierarchicalDataSource"],
+    "tags": [],
+    "guid": "{7E914734-B71A-42D7-9F5B-559CCB5D67D0}",  
+    "buildFlags": [],
+    "createdOn": "2008-05-05T11:43:49Z"
+}
+|metadata|
+////
+
+= Using WebHierarchicalDataSource
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebHierarchicalDataSource™ control.
+
+link:webhierarchicaldatasource-webhierarchicaldatasource-smart-tag.html[WebHierarchicalDataSource Smart Tag]
+
+This topic introduces WebHierarchicalDataSource Smart Tag anchor and pop-up panel, which give the ability to see and set most of the control properties and settings.
+
+link:webhierarchicaldatasource-add-a-view-to-webhierarchicaldatasource.html[Add a View to WebHierarchicalDataSource]
+
+Here you can see how to add views to WebHierarchicalDataSource contol both at design and run time.
+
+link:webhierarchicaldatasource-crud-operations-with-webhierarchicaldatasource.html[CRUD Operations with WebHierarchicalDataSource]
+
+In this topic you can learn about CRUD operations of the WebHierarchicalDataSource contol and how the contol is compatible with other data source contols.
+
+link:webhierarchicaldatasource-add-a-single-parent-to-single-child-relationship.html[Add a Single Parent to Single Child Relationship]
+
+The purpose of this topic is to explain how to make hierarchical relationship between views within the WebHierarchicalDataSource contol.
+
+link:webhierarchicaldatasource-add-a-parent-to-multiple-child-relationship.html[Add a Parent to Multiple Child Relationship]
+
+Within WebHierarchicalDataSource contol it is possible to set relationship between parent record set and multiple child record sets. The topic expains how to do it both at design and run time.
+
+link:webhierarchicaldatasource-add-a-composite-key-relationship.html[Add a Composite Key Relationship]
+
+In this topic a composite key relationship is set both at design and run time.
+
+link:webhierarchicaldatasource-creating-a-self-related-data-relation.html[Creating a Self-Related Data Relation]
+
+In this example are presented in details how to represent a self-related model with WebHierarchicalDataSource.

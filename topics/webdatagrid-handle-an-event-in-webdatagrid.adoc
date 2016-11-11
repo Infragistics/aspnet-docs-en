@@ -1,0 +1,57 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-handle-an-event-in-webdatagrid",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Events","Grids"],
+    "guid": "{B1A335FC-9CAD-411C-9F28-12B721FD687B}",  
+    "buildFlags": [],
+    "createdOn": "2008-09-09T14:21:07Z"
+}
+|metadata|
+////
+
+= Handle an Event in WebDataGrid
+
+The client-side and server-side events are separated into categories based on the behaviors they correspond to in WebDataGrid™. For example, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~rowupdated_ev.html[RowUpdated]"]  event is found under the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior.
+
+At design time, you can find server-side events in the Events section of the property window once you add a behavior to WebDataGrid. You can find client-side events in the ClientEvents section under a particular behavior. For example, the RowUpdated client-side event is under the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~editingclientevents.html[EditingClientEvents]"]  property of the EditingCore behavior.
+
+The following code shows you how to add event handlers at runtime for the RowUpdated client-side and server-side events.
+
+.Note:
+[NOTE]
+====
+The parameters passed to WebDataGrid’s client-side events are the object that caused the event and the event arguments, in that order.
+====
+
+*In Visual Basic:*
+
+----
+AddHandler Me.WebDataGrid1.Behaviors.EditingCore.RowUpdated, AddressOf EditingCore_RowUpdated 
+' Assign to the property the name of your client-side function 
+Me.WebDataGrid1.Behaviors.EditingCore.EditingClientEvents.RowUpdated = "WebDataGrid1_RowUpdated"
+----
+
+*In C#:*
+
+----
+this.WebDataGrid1.Behaviors.EditingCore.RowUpdated += new RowUpdatedHandler(EditingCore_RowUpdated);
+// Assign to the property the name of your client-side function
+this.WebDataGrid1.Behaviors.EditingCore.EditingClientEvents.RowUpdated = "WebDataGrid1_RowUpdated";
+----
+
+*In JavaScript:*
+
+----
+function WebDataGrid1_RowUpdated(sender, e) {
+// sender is the object and e is the argument list
+}
+----
+
+== Related Topics
+
+link:webdatagrid-events.html[Events]
+
+link:webdatagrid-cancel-an-event-in-webdatagrid.html[Cancel an Event in WebDataGrid]

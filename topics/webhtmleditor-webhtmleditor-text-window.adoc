@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-webhtmleditor-text-window",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","Layouts"],
+    "guid": "{5540A50B-33AB-4776-AC50-C69B3A1FEEA6}",  
+    "buildFlags": [],
+    "createdOn": "2006-09-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebHtmlEditor Text Window
+
+Central to the WebHtmlEditor™ control is the text window in which end users edit and preview content in a user-friendly, enriched environment. The text window can display content in the following two ways:
+
+* Design View -- the end users see a rich preview of their content as they edit, and most features work intuitively in Design view to update the underlying HTML code.
+* HTML View -- the end users see their underlying markup, and can make content changes that are not supported in Design view.
+
+On postback to the Web server, your application can access the content of the WebHtmlEditor control through either its Text (plain text without markup) or TextXhtml (content with markup) properties.
+
+image::Images/WebHtmlEditor_Layout_of_the_WebHtmlEditor_3.PNG[]

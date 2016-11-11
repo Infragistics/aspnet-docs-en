@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-animations-for-expanding-and-collapsing-nodes",
+    "controlName": ["WebDataTree"],
+    "tags": [],
+    "guid": "{28F03FEE-47F8-4BD8-B939-4B003CADBC30}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Animations for Expanding and Collapsing Nodes
+
+WebDataTree™ supports different animation types for node expanding and collapsing. You can easily set the animation duration by setting the WebDataTree control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~animationduration.html[AnimationDuration]"]  property.The following are the different types of animation properties of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~animationequationtype.html[AnimationEquationType]"]  object that you can set for node expanding and collapsing:
+
+* *None* -- No animations on WebDataTree.
+* *Linear* -- Expanding/Collapsing of the nodes takes place with constant speed, based on the animation duration.
+* *EaseIn* -- Expanding/Collapsing of the nodes is slow at the beginning but accelerates afterwards based on the animation duration.
+* *EaseOut* -- Expanding/Collapsing of the nodes is fast at the beginning but decelerates afterwards based on the animation duration.
+* *EaseInOut* -- Expanding/Collapsing of the nodes is slow at the beginning but accelerates afterwards and then again decelerates at the end, based on the animation duration.
+* *Bounce* -- While expanding/collapsing, the nodes are first expanded/collapsed and then some nodes are collapsed/expanded and again expanded/collapsed like a ball bouncing.

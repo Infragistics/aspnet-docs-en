@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-refreshing-webdatagrid-when-autocrud-is-turned-off",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids"],
+    "guid": "{7E628050-CC73-4B81-8559-6251E47E8A69}",  
+    "buildFlags": [],
+    "createdOn": "2010-04-03T14:54:49Z"
+}
+|metadata|
+////
+
+= Refreshing WebDataGrid when AutoCRUD is Turned off
+
+There may be some scenarios where you might not want to perform the CRUD operations automatically in WebDataGrid™. In order to do this, you will set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~autocrud.html[AutoCRUD]"]  property to False. However in this case, WebDataGrid does not refresh automatically to reflect your CRUD changes. In order to achieve this you need to call the WebDataGrid control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~requestfullasyncrender.html[RequestFullAsyncRender]"]  method explicitly after the CRUD actions to force the update. Calling the RequestFullAsyncRender method during an async postback, enforces the control to update its HTML and reinitialize itself entirely as if the page was just loaded. 
+
+*In Visual Basic:*
+
+----
+Me.WebDataGrid1.RequestFullAsyncRender();
+----
+
+*In C#:*
+
+----
+this.WebDataGrid1.RequestFullAsyncRender();
+----

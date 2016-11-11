@@ -1,0 +1,46 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleoledbprovider-smart-tag",
+    "controlName": ["WebScheduleOleProvider"],
+    "tags": ["How Do I","Persistence"],
+    "guid": "{9BB3682D-89FF-4E61-8711-BA1AB85FA003}",  
+    "buildFlags": [],
+    "createdOn": "2007-04-02T21:31:40Z"
+}
+|metadata|
+////
+
+= WebScheduleOleDbProvider Smart Tag
+
+In Visual Studio 2005 (.NET Framework 2.0), each Infragistics ASP.NET control/component is equipped with a Smart Tag. By simply selecting the control/component, a Smart Tag anchor appears. When you click this anchor, a pop-up panel appears, providing you with quick and easy access to the most common properties and settings of the control/component.
+
+The WebScheduleOleDbProvider™ Smart Tag contains the following sections:
+
+* Actions -- Lets you perform common tasks (i.e., accessing the Quick Designer).
+* Properties -- Provides easy access to common properties such as Display Mode.
+
+See below for a description of the item (e.g., field, drop-down list, checkbox) in each section.
+
+image::images/WebScheduleOleDbProvider_The_WebScheduleOleDbProvider_Smart_Tag_01.png[]
+
+[options="header", cols="a,a,a"]
+|====
+|Actions|Description|CorrespondingProperty
+
+|Quick Design
+|Click Quick Design to access the WebScheduleOleDbProvider Designer. This is the same functionality as if you right-clicked on the control and selected Quick Design from the context menu.
+|n/a
+
+|====
+
+[options="header", cols="a,a,a"]
+|====
+|Properties|Description|CorrespondingProperty
+
+|WebScheduleInfoID
+|Use the drop-down box to select a WebScheduleInfo to associate with the WebScheduleOleDbProvider.
+| pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledataproviderbase~webscheduleinfoid.html[WebScheduleInfo]"] 
+
+|====

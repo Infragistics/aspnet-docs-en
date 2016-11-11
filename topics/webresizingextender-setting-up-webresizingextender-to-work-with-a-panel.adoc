@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-setting-up-webresizingextender-to-work-with-a-panel",
+    "controlName": ["WebResizingExtender"],
+    "tags": ["Extending","How Do I"],
+    "guid": "{A3D0927C-859B-46D1-AE1A-58D3F5F31676}",  
+    "buildFlags": [],
+    "createdOn": "2007-10-01T15:00:32Z"
+}
+|metadata|
+////
+
+= Setting Up WebResizingExtender to Work with a Panel
+
+WebResizingExtender™ is a new type of extender control that is based on the link:http://ajax.asp.net/default.aspx?tabid=47[Microsoft® ASP.NET 2.0 AJAX Extensions]. The control has no run-time visual presence by itself; it must be attached to either a panel or container element. This topic will guide you through the process of setting up WebResizingExtender to work with a panel.
+
+[start=1]
+. Create a new ASP.NET AJAX CTP-Enabled Web site. Alternatively, you can follow link:webresizingextender-set-up-an-aspnet-web-site-to-run-aspnet-ajax.html[Set Up an ASP.NET Web Site to Run ASP.NET AJAX] to add the ASP.NET AJAX functionality to an existing ASP.NET Web Site that you have.
+[start=2]
+. Switch to the Design view. You will notice the ScriptManager component already on the form. This component must not be moved around, for it must be the first element on the form in order for ASP.NET AJAX to work properly.
+[start=3]
+. From the toolbox, drag a Microsoft Panel, and place it below the ScriptManager component on the form.
+[start=4]
+. To make the panel display better at run time, in the Properties window, change the BorderColor property to Black, and set the BorderWidth property to 1px.
+[start=5]
+. From the toolbox, drag a WebResizingExtender component and place it below the panel that is on the form.
+[start=6]
+. Select the newly created WebResizingExtender. In the Properties window set the TargetControlID property to value of "Panel1". This is the name of the panel that was created in step 3.
+[start=7]
+. Build and run the Web form. You will see the panel and in the lower-right corner, you will see the resize handle. When you mouse over this handle, your cursor changes from a normal arrow into the resize arrow. If you click and drag the handle, the panel will resize itself.
+
+== Additional Information
+
+You can customize the resize handle by specifying a different color, or even placing an image in the handle. For more information, see link:webresizingextender-modify-the-resize-handle.html[Modify the Resize Handle].
+
+Also, you can add an effect where the border of the resizing control is highlighted by setting the  pick:[asp-net="link:infragistics4.webui.webresizingextender.v{ProductVersion}~infragistics.webui.webresizingextender~resizebordercolor.html[ResizeBorderColor]"]  property and specifying at minimum a value of 1 for the  pick:[asp-net="link:infragistics4.webui.webresizingextender.v{ProductVersion}~infragistics.webui.webresizingextender~resizeborderwidth.html[ResizeBorderWidth]"]  property.

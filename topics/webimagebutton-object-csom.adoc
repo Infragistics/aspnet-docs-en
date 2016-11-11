@@ -1,0 +1,307 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimagebutton-object-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{1308C5E1-0DE2-4DD6-89FF-061BF721453E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebImageButton Object
+
+== WebImageButton
+
+Object that contains functions and member variables related to the WebImageButton class on server. That object can be obtained by calling the ig_getWebControlById function and providing the ClientID or UniqueID as a parameter.
+
+=== WebImageButton Methods
+
+[cols="a,a"]
+|====
+|*getAutoSubmit* 
+|Checks if postback should be raised when click event occurs. 
+
+*Returns*
+
+Boolean. True - control raises postback to server on click event.
+
+|*getBackColorAt* 
+|Gets background color for a particular state of button. 
+
+*Parameters*
+
+_state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. 
+
+*Returns*
+
+String. Background color.
+
+|*getBorderColorAt* 
+|Gets border color for a particular state of button. 
+
+*Parameters*
+
+_state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. 
+
+*Returns*
+
+String. Border color.
+
+|*getClientID* 
+|Value of the ClientID property on server. 
+
+*Returns*
+
+String. Value of ClientID.
+
+|*getDisplay* 
+|Gets if display is inline or block. 
+
+*Returns*
+
+String. Value of the DisplayMode property on server.
+
+|*getElement* 
+|Object. Read only. Reference to the main html element that renders WebImageButton. 
+
+---- 
+// Example:  var button = ig_getWebControlById("WebImageButton1");
+if(button == null)  return;
+var realWidthOfButton = button.getElement().offsetWidth;
+---- 
+
+*Returns*
+
+Object. Reference to html element.
+
+|*getElementAt* 
+|Gets reference to the main html element that renders a particular part of WebImageButton. 
+
+---- 
+// Example:
+var button = ig_getWebControlById("WebImageButton1");
+if(button == null)  return;
+var span = button.getElementAt(3);
+var widthOfText = span ? span.offsetWidth : 0;
+var input = button.getElementAt(0);
+var accessKey = input.accessKey;
+---- 
+
+*Parameters*
+
+_flag_ 
+
+Numeric. Flag for a particular element. Possible values: 0 - INPUT, 1 - main TABLE, 2 - outer TABLE, 3 - SPAN for text, 4 - IMG for image, 5 - main TD, 6 - TD for top/right corner, 7 - TD for bottom/left corner, 8 - TD for bottom/right corner, 9 - inner TABLE, 11..30 - TDs of rouded corners built by table cells. 
+
+*Returns*
+
+Object. Reference to html element or null.
+
+|*getEnabled* 
+|Checks if control is enabed. 
+
+*Returns*
+
+Boolean. True - control is enabled.
+
+|*getFocusable* 
+|Checks if control can get input focus. 
+
+*Returns*
+
+Boolean. True - control can get focus.
+
+|*getForeColorAt* 
+|Gets foreground color for a particular state of button. 
+
+*Parameters*
+
+_state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. 
+
+*Returns*
+
+String. Foreground color.
+
+|*getID* 
+|Value of the internal ID used to identify this WebImageButton among other objects located in ig_all. 
+
+*Returns*
+
+String. Value of internal id.
+
+|*getImageAt* 
+|Gets name of url that contains image for a particular state of button. 
+
+*Parameters*
+
+_state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. 
+
+*Returns*
+
+String. Name of url which used for image.
+
+|*getRoundedImageAt* 
+|Gets name of url which used as background image for a particular state of button. 
+
+*Parameters*
+
+_state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. 
+
+*Returns*
+
+String. Background image.
+
+|*getState* 
+|Gets state of button. 
+
+*Returns*
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state.
+
+|*getText* 
+|Gets text of label. 
+
+*Returns*
+
+String. Text of label.
+
+|*getUniqueID* 
+|Value of the UniqueID property on server. 
+
+*Returns*
+
+String. Value of UniqueID.
+
+|*getVisible* 
+|Checks if control is visible. 
+
+*Returns*
+
+Boolean. True - control is visible.
+
+|*hasFocus* 
+|Checks if control has input focus. 
+
+*Returns*
+
+Boolean. True - control has focus.
+
+|*paint* 
+|Repaints button. 
+
+*Parameters*
+
+_value_ 
+
+Boolean. Optional. True - repaint button regardless to old state of button. False - repaint button only if state of button was changed.
+
+|*setBackColorAt* 
+|Sets background color for a particular state of button. 
+
+*Parameters*
+
+_value_ 
+
+String. New background color. _state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. _persist_ 
+
+Boolean. Optional. Request to persist new value to server. True - persist new value to server.
+
+|*setBorderColorAt* 
+|Sets border color for a particular state of button. 
+
+*Parameters*
+
+_value_ 
+
+String. New border color. _state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. _persist_ 
+
+Boolean. Optional. Request to persist new value to server. True - persist new value to server.
+
+|*setEnabled* 
+|Enables or disables control. New value persists to server. 
+
+*Parameters*
+
+_value_ 
+
+Boolean. True - enable control, false - disable.
+
+|*setFocus* 
+|Sets focus to control.
+
+|*setForeColorAt* 
+|Sets foreground color for a particular state of button. 
+
+*Parameters*
+
+_value_ 
+
+String. New foreground color. _state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. _persist_ 
+
+Boolean. Optional. Request to persist new value to server. True - persist new value to server.
+
+|*setImageAt* 
+|Sets image for a particular state of button. 
+
+*Parameters*
+
+_value_ 
+
+String. New url for image. _state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. _persist_ 
+
+Boolean. Optional. Request to persist new value to server. True - persist new value to server.
+
+|*setRoundedImageAt* 
+|Sets name of background image url for a particular state of button. That property may have effect only if RoundedCorners property on server is enabled. 
+
+*Parameters*
+
+_value_ 
+
+String. New background image. _state_ 
+
+Numeric. State of button. Possible values: 0 - normal state, 1 - no focus and mouse over, 2 - focus amd no mouse over, 3 - focus and mouse over, 4 - pressed state, 5 - disabled state. _persist_ 
+
+Boolean. Optional. Request to persist new value to server. True - persist new value to server.
+
+|*setText* 
+|Sets text label in control. New value persists to server. 
+
+*Parameters*
+
+_value_ 
+
+String. Text for label.
+
+|*setVisible* 
+|Shows or hides control. New value does not persist to server. 
+
+*Parameters*
+
+_value_ 
+
+Boolean. True - show control, false - hide control.
+
+|====

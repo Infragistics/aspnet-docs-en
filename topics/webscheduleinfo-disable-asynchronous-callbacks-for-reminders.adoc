@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-disable-asynchronous-callbacks-for-reminders",
+    "controlName": ["WebScheduleInfo"],
+    "tags": [],
+    "guid": "{07A959D2-8C32-41F8-8826-95E435AE59AB}",  
+    "buildFlags": [],
+    "createdOn": "2007-10-04T16:27:07Z"
+}
+|metadata|
+////
+
+= Disable Asynchronous Callbacks for Reminders
+
+WebScheduleInfo™ asynchronously retrieves reminders every two minutes from the server when EnableSmartCallbacks and EnableReminders properties are set to True. Regardless whether or not the user is working with the Web page, the page's load server side event fires every time an asynchronous request is made. Although the user doesn't see a full page postback, this action may interfere with any logic placed inside the page's load server side event.
+
+To disable asynchronous retrievals for the reminder, call the WebSchedulesInfo's setFetchReminderInterval function and pass 0 (zero) as its parameter on the client side.
+
+The code below demonstrates how you can accomplish this functionality.
+
+.Note:
+[NOTE]
+====
+This function needs to be called every time the Web page is loaded. Therefore, you can call it in the body's onload event.
+====
+
+*In JavaScript:*
+
+----
+function MyFunction()
+{
+    var oWebScheduleInfo = ig_getWebScheduleInfoById("WebScheduleInfo1");
+    oWebScheduleInfo.setFetchReminderInterval(0);     
+}
+----
+
+*In HTML:*
+
+----
+...
+<body onload="MyFunction()">
+...
+----
+
+== Related Topic
+
+link:webschedule-checking-for-reminders.html[Checking for Reminders]

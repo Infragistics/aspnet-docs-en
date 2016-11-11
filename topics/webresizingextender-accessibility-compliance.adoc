@@ -1,0 +1,32 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-accessibility-compliance",
+    "controlName": ["WebResizingExtender"],
+    "tags": ["Section 508"],
+    "guid": "{13F2D469-C4F3-4380-8CE2-81FCCC6F9E05}",  
+    "buildFlags": [],
+    "createdOn": "2007-12-02T19:18:34Z"
+}
+|metadata|
+////
+
+= WebResizingExtender Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|By enabling the control's Section508Compliant property, all non-text elements render a text equivalent. 
+
+.Note:
+[NOTE]
+====
+A text equivalent is supplied by default, but this can be customized to suit your needs. 
+====
+
+|====

@@ -1,0 +1,26 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webdayview",
+    "controlName": ["WebDayView"],
+    "tags": ["Getting Started"],
+    "guid": "{44055B6B-9FF8-443D-BD49-26F5C9BD54EF}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDayView
+
+Click the links below to find information specific to the WebDayView™ control.
+
+* link:webdayview-understanding-webdayview.html[Understanding WebDayView] -- In this section you'll find any information that will help you to better understand the functionalities of the WebDayView control, as well as why you would want to use it to as part of building your applications.
+* link:web-webdayview-using-webdayview.html[Using WebDayView] -- This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebDayView™ control.
+* link:webdayview-accessibility-compliance.html[WebDayView Accessibility Compliance] -- This topic outlines the way in which WebDayView meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebDayView control.
+* link:webdayview-api-overview.html[API Overview] -- This topic lists the namespaces and classes that you will be working with while programming with the WebDayView control. The namespaces and classes listed in this topic link conveniently into the link:web-api-reference-guide.html[API Reference Guide] section of the Infragistics ASP.NET help.
+
+The WebDayView control is part of the WebSchedule™ group of controls and components. If you're looking for a section that houses overview/task-based information common to multiple WebSchedule controls and components (e.g., WebDayView™, WebMonthView™, WebScheduleInfo™), click the link below:
+
+** link:web-webschedule.html[WebSchedule]

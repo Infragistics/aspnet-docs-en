@@ -1,0 +1,64 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-hide-a-column",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Design Environment","Editing","Grids"],
+    "guid": "{1E133DE0-6FDE-4211-A798-6043B98A1A09}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Hide a Column
+
+WebHierarchicalDataGrid™ allows you to hide columns from your end-users. For example, you may not want to show columns that are meaningless to your end-users. You can achieve this by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldatafield~hidden.html[Hidden]"]  property to true on any type of column. You can hide columns on parent and child levels.
+
+== To hide a column through the designer:
+
+[start=1]
+. Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource™ component retrieving data from the Categories and products table. For more information on this see the link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Binding to Hierarchical Data Source] topic.
+[start=2]
+. In the property window,locate the Bands property and click the ellipsis(...) button to launch the Edit WebHierarchicalDataGrid Bands dialog.
+
+image::Images/WebHierarchicalDataGrid_Hiding_a_Column_01.png[]
+
+[start=3]
+. For this topic locate the Columns property of the parent band and click the ellipsis(…) button to launch the Edit Grid Columns dialog.
+[start=4]
+. Select the column you want to hide from the Selected Fields (WebDataGrid.Columns) section, and set the Hidden property to true. For this example, select Description.
+
+image::Images/WebHierarchicalDataGrid_Hiding_a_Column_02.png[]
+
+[start=5]
+. Click Apply and OK to close the Edit Grid Columns dialog.
+[start=6]
+. Save and run your application. You will observe that the column Description is hidden.
+
+== To hide a column programmatically :
+
+*In Visual Basic:*
+
+----
+Me.WebHierarchicalDataGrid1.GridView.Columns(2).Hidden = True
+----
+
+*In C#:*
+
+----
+this.WebHierarchicalDataGrid1.GridView.Columns[2].Hidden = true;
+----
+
+*In Javascript:*
+
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var parentGrid = grid.get_gridView();
+// Hide a column in parent level
+parentGrid.get_columns().get_column(1).set_hidden(true);
+// Hide a column in child level
+var childGrid = grid.get_gridView().get_rows().get_row(0).get_rowIslands(0)[0];
+childGrid.get_columns().get_column(1).set_hidden(true);
+----

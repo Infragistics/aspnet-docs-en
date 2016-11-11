@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webdayview-using-webdayview",
+    "controlName": ["WebDayView"],
+    "tags": ["How Do I"],
+    "guid": "{66B5FB09-2937-440A-962D-8CAC82CB98DB}",  
+    "buildFlags": [],
+    "createdOn": "2007-05-11T14:06:11Z"
+}
+|metadata|
+////
+
+= Using WebDayView
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebDayView™ control.
+
+* link:webdayview-client-side-programming.html[Client Side Programming]
+* link:webdayview-display-multiple-days-in-a-webdayview.html[Display Multiple Days in WebDayView]
+* link:webschedule-styling-webdayviews-alldayeventarea.html[Styling WebDayViews AllDayEventArea]
+* link:webschedule-using-webdayviews-designer.html[Using WebDayViews Designer]

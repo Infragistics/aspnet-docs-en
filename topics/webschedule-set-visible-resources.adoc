@@ -1,0 +1,66 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-set-visible-resources",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling","Styling"],
+    "guid": "{097F3D7A-51DE-42B1-B827-63133212D065}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Set Visible Resources
+
+You can control the number of resources displayed by the WebSchedule™ controls when multiple resource view is enabled. To do this, handle the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~resourcesfetched_ev.html[ResourcesFetched] event and remove the resources you do not want to show using the WebScheduleInfo™ component's link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResources] property.
+
+You can also pre-populate the VisibleResources collection by creating link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource] objects and adding them to the collection, preferably in the page's PreLoad event.
+
+The following code shows you how to handle the ResourcesFetched event to display the visible resources.
+
+*In HTML:*
+
+----
+<igsch:webscheduleinfo runat="server" ID="WebScheduleInfo1" EnableSmartCallbacks="   
+            EnableMultiResourceView="true"
+            onresourcesfetched="WebScheduleInfo1_ResourcesFetched">
+</igsch:webscheduleinfo>
+----
+
+*In Visual Basic:*
+
+----
+Protected Sub WebScheduleInfo1_ResourcesFetched(ByVal sender As Object, ByVal e As EventArgs)
+    ' Set active resource
+    Me.WebScheduleInfo1.ActiveResourceName = "Jen"
+    ' Find resource John
+    Dim john As Resource = Me.WebScheduleInfo1.VisibleResources.GetResourceFromName("John")
+    ' Remove John from visible resources
+    If john IsNot Nothing Then
+        Me.WebScheduleInfo1.VisibleResources.Remove(john)
+    End If
+End Sub
+----
+
+*In C#:*
+
+----
+protected void WebScheduleInfo1_ResourcesFetched(object sender, EventArgs e)
+{
+   // Set active resource
+   this.WebScheduleInfo1.ActiveResourceName = "Jen";
+   // Find resource John
+   Resource john = this.WebScheduleInfo1.VisibleResources.GetResourceFromName("John");
+   // Remove John from visible resources
+   if (john != null)
+      this.WebScheduleInfo1.VisibleResources.Remove(john);
+ }
+----
+
+== Related Topics
+
+link:webschedule-about-multi-resource-view.html[About Multi Resource View]
+
+link:webschedule-styling-active-and-inactive-resources.html[Styling Active and Inactive Resources]

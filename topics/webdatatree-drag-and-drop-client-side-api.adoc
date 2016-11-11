@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-drag-and-drop-client-side-api",
+    "controlName": ["WebDataTree"],
+    "tags": ["API"],
+    "guid": "adc2357d-989f-4be9-805a-d753f853e1fc",  
+    "buildFlags": [],
+    "createdOn": "2010-06-03T07:44:38.3161832Z"
+}
+|metadata|
+////
+
+= Drag and Drop Client Side API
+
+The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] control has many features that are available and easy to use on the Client-side. WebDataTree creates a client-side object with the ClientID of the control. To obtain a reference, use the following code:
+
+----
+var tree = $find('<%= WebDataTree1.ClientID %>');
+----
+
+Once you get the control client-side object you are free to operate with the object. As an example the code bellow will add a new node to the tree object with node name “NewNode”:
+
+----
+var tree = $find('<%= WebDataTree1.ClientID %>');
+
+tree.addText(”NewNode”);
+----
+
+Here is a list of the functions you can use:
+
+* *link:webdatatree~infragistics.web.ui.nodecollection~add.html[add]* (node) - Appends the node to the nodes collection.
+
+* *link:webdatatree~infragistics.web.ui.nodecollection~addtext.html[addText]* (text) – Creates a new node with the specified text and appends it to the nodes collection. Returns the newly added node.
+
+* *link:webdatatree~infragistics.web.ui.nodecollection~addtext.html[addText]* (text, navigateUrl) – Creates a new node with the specified text, navigates to the URL and appends the node to the nodes collection. Returns the newly added node.
+
+* *link:webdatatree~infragistics.web.ui.nodecollection~addrange.html[addRange]* (nodeArray, index) - Adds an array of nodes to the specified index in the nodes collection.
+
+* *link:webdatatree~infragistics.web.ui.nodecollection~remove.html[remove]* (node) - Removes an already added node from the collection
+
+* *link:webdatatree~infragistics.web.ui.nodecollection~removeat.html[removeAt]* (index) – Removes the node at the specified index from the collection, if found.
+
+* *link:webdatatree~infragistics.web.ui.nodecollection~insert.html[insert]* (node, index) - Inserts the node at the specified index in the nodes collection. If index is -1 the node is appended last.
+
+All these functions are available for whole tree and each collection of nodes. The difference is that when They are called on the tree we can pass level as argument, but calling them on node collection doesn’t support option to pass level.
+
+== Related Topics
+
+link:webdatatree-drag-and-drop-client-side-events.html[Client-side events]
+
+link:webdatatree-drag-and-drop-modes.html[Drag and Drop modes]
+
+link:webdatatree-drag-and-drop-handle-server-side-event.html[Server-side events]

@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webgauge",
+    "controlName": ["WebGauge"],
+    "tags": [],
+    "guid": "{A0675600-BAC0-40EE-9391-6238D7A3ED23}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebGauge
+
+If you're looking for an area that houses all of the overview/task-based information related to the WebGauge™ control, you've come to the right place. This section contains valuable information about WebGauge, ranging from what the control does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to access important information about the WebGauge control.
+
+== link:webgauge-webgauge-types.html[WebGauge Types]
+
+This key section contains a comprehensive listing of all the gauge types, along with a brief overview of the gauge type, information on the type of data that is required to generate the gauge type, and a list of properties specific to the gauge type.
+
+== link:webgauge-webgauge-designer.html[WebGauge Designer]
+
+This section contains information on the key features and functionalities provided by the Gauge Designer.
+
+== link:webgauge-getting-started-with-webgauge.html[Getting Started with WebGauge]
+
+In order to get you up and running as quickly as possible with the WebGauge control, we've provided you with information on how to get started using the control (e.g., adding WebGauge to your form).
+
+== link:webgauge-using-webgauge.html[Using WebGauge]
+
+This section contains information on the key features and functionalities provided by the WebGauge control.
+
+== link:webgauge-deploying-webgauge.html[Deploying WebGauge]
+
+If your application uses the WebGauge control, refer to this topic for a list of the Infragistics .NET assemblies that you need to redistribute as part of your application.
+
+== link:webgauge-webgauge-accessibility-compliance.html[WebGauge Accessibility Compliance]
+
+This topic outlines the way in which WebGauge meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebGauge control.
+
+== link:webgauge-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebGauge control. The namespaces and classes listed in this topic link conveniently into the link:web-api-reference-guide.html[API Reference Guide] section of the Infragistics ASP.NET help.

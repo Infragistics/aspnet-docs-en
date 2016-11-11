@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-customizing-insert-(greeting-and-signature)-toolbar",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{0E709F09-909B-4B56-B3A2-8BF3D9CECDFD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Customizing Insert (Greeting and Signature) Toolbar
+
+The Insert Toolbar of the WebHtmlEditor™ allows you to Insert Greetings and Signatures in the text area. The following code shows how to gain access to the Insert Toolbar and customize the Greeting and Signature.
+
+*In Visual Basic:*
+
+----
+'Access the Insert Toolbar 
+Dim d As ToolbarDropDown = DirectCast(Me.WebHtmlEditor1.Toolbar.Items.GetByType(ToolbarItemType.Insert), ToolbarDropDown)
+'Item 0 is the Greeting 
+DirectCast(d.Items(0), ToolbarDropDownItem).Text = "Custom Greeting" 
+DirectCast(d.Items(0), ToolbarDropDownItem).Value = "Hello there..." 
+'Item 1 is the Signature 
+DirectCast(d.Items(1), ToolbarDropDownItem).Text = "Custom Signature" 
+DirectCast(d.Items(1), ToolbarDropDownItem).Value = "Yours Truly,Christopher Lukas" 
+'Add a custom Item 
+d.Items.Add(New ToolbarDropDownItem("Coolness", "<H3>Coolness</H3>"))
+‘ d.Items.Clear (); totally clear ALL items from the Insert Toolbar and start from scratch
+----
+
+*In C#:*
+
+----
+//Access the Insert Toolbar
+ToolbarDropDown d = (ToolbarDropDown)this.WebHtmlEditor1.Toolbar.Items.GetByType(ToolbarItemType.Insert);
+//Item 0 is the Greeting
+((ToolbarDropDownItem)d.Items[0]).Text = "Custom Greeting";
+((ToolbarDropDownItem)d.Items[0]).Value = "Hello there...";
+//Item 1 is the Signature
+((ToolbarDropDownItem)d.Items[1]).Text = "Custom Signature";
+((ToolbarDropDownItem)d.Items[1]).Value = "Yours Truly, Michael";
+//Add a custom Item
+d.Items.Add(new ToolbarDropDownItem("Coolness", "<H3>Coolness</H3>");
+// d.Items.Clear (); totally clear ALL items from the Insert Toolbar and start from scratch
+----

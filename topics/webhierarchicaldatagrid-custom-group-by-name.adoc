@@ -1,0 +1,90 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-custom-group-by-name",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids","Grouping"],
+    "guid": "{B8696B18-B3B9-4D52-BA11-2C830ADCABF1}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Custom Group by Name
+
+When you group a column in WebHierarchicalDataGrid™, the rows are grouped based on the cell's value in that column. You can change this default behavior and group rows according to a custom comparison. To perform custom grouping functionality, you must implement the generic link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupequalitycomparer`1.html[GroupEqualityComparer] abstract class. After doing so, assign an instance of your custom comparer class to the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columngroupingsetting~groupcomparer.html[GroupComparer] property of a link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columngroupingsetting.html[ColumnGroupingSetting] object.
+
+The GroupEqualityComparer class requires you to implement two methods: link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupequalitycomparer`1~equals.html[Equals] and link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupequalitycomparer`1~groupname.html[GroupName]. The Equals method is where you provide your custom logic for comparison, whereas the GroupName method returns a string for the group row.
+
+The following code shows you how to group by only the first letter of an Employee's last name.
+
+*In Visual Basic:*
+
+----
+Protected Sub Page_Init(ByVal sender As Object, ByVal e As EventArgs)
+    Me.WebHierarchicalDataGrid1.GroupingSettings.GroupedColumns.Add("LastName")
+    Dim setting As New ColumnGroupingSetting()
+    setting.ColumnKey = "LastName"
+    setting.GroupComparer = New AlphabetGroupComparer()
+    Me.WebHierarchicalDataGrid1.GroupingSettings.ColumnSettings.Add(setting)
+End Sub
+Public Class AlphabetGroupComparer
+    Inherits GroupEqualityComparer(Of String)
+    Public Overloads Overrides Function Equals(ByVal x As String, ByVal y As String) As Boolean
+        If x.Substring(0, 1).ToLower() = y.Substring(0, 1).ToLower() Then
+            Return True
+        End If
+        Return False
+    End Function
+    Public Overloads Overrides Function GroupName(ByVal value As String) As String
+        If value.Length = 0 Then
+            Return String.Empty
+        End If
+        Return value.Substring(0, 1).ToUpper()
+    End Function
+End Class
+----
+
+*In C#:*
+
+----
+protected void Page_Init(object sender, EventArgs e)
+{
+    this.WebHierarchicalDataGrid1.GroupingSettings.GroupedColumns.Add("LastName");
+    ColumnGroupingSetting setting = new ColumnGroupingSetting();
+    setting.ColumnKey = "LastName";
+    setting.GroupComparer = new AlphabetGroupComparer();
+    this.WebHierarchicalDataGrid1.GroupingSettings.ColumnSettings.Add(setting);
+}
+public class AlphabetGroupComparer : GroupEqualityComparer<string>
+{
+    public override bool Equals(string x, string y)
+    {
+        if (x.Substring(0, 1).ToLower() == y.Substring(0, 1).ToLower())
+            return true;
+        return false;
+    }
+    public override string GroupName(string value)
+    {
+        if (value.Length == 0)
+            return string.Empty;
+        return value.Substring(0, 1).ToUpper();
+    }
+}
+----
+
+image::images/WebHierarchcialDataGrid_CustomGroupByName_01.png[]
+
+== Related Topics
+
+link:webhierarchicaldatagrid-about-outlook-groupby.html[About Outlook GroupBy]
+
+link:webhierarchicaldatagrid-custom-text-in-group-row.html[Custom Text in Group Row]
+
+link:webhierarchicaldatagrid-group-columns-from-code-behind.html[Group Columns from Code Behind]
+
+link:webhierarchicaldatagrid-outlook-groupby-with-behaviors.html[Outlook GroupBy with Behaviors]
+
+link:webhierarchicaldatagrid-referencing-rows-when-using-outlook-groupby.html[Referencing Rows When Using Outlook GroupBy]

@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-excelstylefiltering-landingpage",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Filtering","Grids"],
+    "guid": "1ff4cae0-eb31-4028-ac4d-c807abc04ad3",  
+    "buildFlags": [],
+    "createdOn": "2012-07-16T12:45:19.473571Z"
+}
+|metadata|
+////
+
+= Excel Style Filtering
+
+== In This Group of Topics
+
+=== Introduction
+
+This section contains topics covering the Excel-Style Filtering feature of the  _WebDataGrid_™
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webdatagrid-excelstylefiltering-overview.html[Excel-Style Filtering Overview (WebDataGrid)]
+|This topic introduces the Excel-Style Filtering feature of the _WebDataGrid_ control.
+
+| link:webdatagrid-excelstylefiltering-enabling.html[Enabling Excel-Style Filtering (WebDataGrid)]
+|This topic provides reference about the properties that are specific to the Excel-Style Filtering feature of the _WebDataGrid_ control.
+
+| link:webdatagrid-excelstylefiltering-configuring.html[Configuring Excel-Style Filtering (WebDataGrid)]
+|This topic explains how to configure the Excel-Style Filtering options of the _WebDataGrid_ control.
+
+| link:webdatagrid-excelstylefiltering-propertyreference.html[Excel-Style Filtering Property Reference (WebDataGrid)]
+|This topic provides reference information about the properties that are specific to the Excel-Style Filtering feature of the _WebDataGrid_ control.
+
+|====

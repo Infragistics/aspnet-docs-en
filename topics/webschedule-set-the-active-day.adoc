@@ -1,0 +1,59 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-set-the-active-day",
+    "controlName": ["WebSchedule"],
+    "tags": ["Design Environment","How Do I","Scheduling"],
+    "guid": "{3A7A0BEC-5D49-41B1-9BC1-662AABC876F2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Set the Active Day
+
+The WebScheduleInfo™ control's  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activedayutc.html[ActiveDayUtc]"]  property represents a single date used as a point of reference and focus within the user interface. As such, the ActiveDayUtc is rendered by WebCalendarView™ and WebMonthView™ using a specific style that highlights that date and makes it more noticeable to the user.
+
+As different dates are clicked within WebCalendarView and WebMonthView, the ActiveDayUtc property is changed accordingly.
+
+On the other hand, WebDayView does not reflect changes to the ActiveDayUtc within its user interface and also does not effect changes to the ActiveDayUtc as different day areas are clicked.
+
+The code below sets the WebSchedule controls to load with October 3, 2005 as the active day.
+
+.Note:
+[NOTE]
+====
+If you are creating a new  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.smartdate.html[SmartDate]"]  and are not assigning a time to it you need to use the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~converttimezonetimetoutc.html[ConvertTimeZoneTimeToUtc]"]  method off the WebScheduleInfo.
+====
+
+image::images\WebSchedule_How_to_Set_the_ActiveDay_01.png[]
+
+image::images\WebSchedule_How_to_Set_the_ActiveDay_02.png[]
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.Shared
+...
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e _
+ As System.EventArgs) Handles MyBase.Load
+	' Create a new SmartDate as the day you want to be the active day
+	' and assign the WebScheduleInfo's ActiveDay property to that new date
+	Me.WebScheduleInfo1.ActiveDayUtc = New SmartDate(2005, 10, 3, 10, 11, 11)
+End Sub
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.Shared;
+...
+private void Page_Load(object sender, System.EventArgs e)
+{
+	// Create a new SmartDate as the day you want to be the active day
+	// and assign the WebScheduleInfo's ActiveDay property to that new date
+	this.WebScheduleInfo1.ActiveDayUtc = new SmartDate(2005,10,3,10,11,11);
+}
+----

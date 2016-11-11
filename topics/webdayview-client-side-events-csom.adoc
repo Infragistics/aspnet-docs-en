@@ -1,0 +1,111 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdayview-client-side-events-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{A859B70B-2519-4DE5-9B93-098CFCC93864}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDayView Client-Side Events
+
+== Client Events
+
+=== Client Events Methods
+
+[cols="a,a"]
+|====
+|*Click* 
+|This event fires when any element of the DayView is clicked. 
+
+*Parameters*
+
+_oDayView_ 
+
+The DayView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to what was clicked.
+
+|*DblClick* 
+|This event fires when any element of the DayView is double clicked. 
+
+*Parameters*
+
+_oDayView_ 
+
+The DayView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to what was double clicked.
+
+|*Initialize* 
+|This event fires when the DayView initializes. 
+
+*Parameters*
+
+_oDayView_ 
+
+The DayView client-side object.
+
+|*MouseDown* 
+|This event fires when a mouse down occurs on any element in the DayView. 
+
+*Parameters*
+
+_oDayView_ 
+
+The DayView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to where the mouse button was pressed down.
+
+|*MouseUp* 
+|This event fires when a mouse up occurs on any element in the DayView. 
+
+*Parameters*
+
+_oDayView_ 
+
+The DayView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to where the mouse button was released.
+
+|*NavigateNext* 
+|This event fires after the next button on the DayView is pressed. 
+
+*Parameters*
+
+_oDayView_ 
+
+The WebDayView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _numberOfDays_ 
+
+The number of days that will be navigated.
+
+|*NavigatePrevious* 
+|This event fires after the previous button on the DayView is pressed. 
+
+*Parameters*
+
+_oDayView_ 
+
+The WebDayView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _numberOfDays_ 
+
+The number of days that will be navigated.
+
+|====
+

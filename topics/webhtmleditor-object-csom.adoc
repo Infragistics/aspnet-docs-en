@@ -1,0 +1,68 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-object-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{127712A8-29C5-4B60-B711-1A3A05B91BB1}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebHtmlEditor Object
+
+== WebHtmlEditor
+
+The WebHtmlEditor object provides access to the control-level features of the WebHtmlEditor control.
+
+=== WebHtmlEditor Methods
+
+[cols="a,a"]
+|====
+|*focus* 
+|Member function of WebHtmlEditor on client which is allows to set input focus to editor. 
+
+---- 
+Example: var editor = iged_getById("WebHtmlEditor"); if(editor) 	editor.focus();
+----
+
+|*getText* 
+|Returns the Text of the WebHtmlEditor in HTML format.
+
+|*hasFocus* 
+|Member function of WebHtmlEditor on client which returns boolean value and allows to check if editor has input focus. 
+
+---- 
+Example: var editor = iged_getById("WebHtmlEditor"); if(editor) 	alert("Editor has focus:" + editor.hasFocus());
+----
+
+|*insertAtCaret* 
+|This function accepts one parameter which can be a string or reference to an HTML element. The string or object is inserted into WebHtmlEditor's content at the current selection (where the caret appears). 
+
+If insertAtCaret is called while a drop-down dialog or list is open, the drop-down is closed automatically. 
+
+---- 
+Example: // Insert text into content of WebHtmlEditor // while processing ClientSideEvent.BeforeAction // for a custom toolbar button MyCustomAct:  
+function WebHtmlEditor1_BeforeAction(oEditor, actID, oEvent, p4, p5, p6, p7, p8, act) {  // if it is our custom MyCustomAct toolbar button,  // then insert text at the current selection in editor  if(actID == "MyCustomAct")  {  oEditor.insertAtCaret("My Custom Action");  } }
+----
+
+|*print* 
+|Member function of WebHtmlEditor on client which is called when the "Print" toolbar button is clicked. That function allows to print content of editor. 
+
+---- 
+Example: var editor = iged_getById("WebHtmlEditor"); if(editor) 	editor.print();
+----
+
+|*setText* 
+|Sets the Text of the WebHtmlEditor. The text can be in HTML Format.
+
+|====
+
+=== WebHtmlEditor Properties
+
+==== ID
+
+The ClientId of the WebHtmlEditor. This property should not be modified and treated as read-only.

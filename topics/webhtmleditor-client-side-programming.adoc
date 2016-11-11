@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-client-side-programming",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["API","Editing"],
+    "guid": "{1384DC14-ACC0-4426-8CBF-A9A62091A4C2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Client Side Programming
+
+This section gives information on the client-side features and functionalities of WebHtmlEditor™.
+
+Click the links below to find out more.
+
+* link:webhtmleditor-csom-overview.html[CSOM Overview]
+* link:webhtmleditor-change-the-default-action-of-a-button.html[Change the Default Action of a Button]
+* link:webhtmleditor-insert-objects-into-webhtmleditor.html[Insert Objects into WebHtmlEditor]

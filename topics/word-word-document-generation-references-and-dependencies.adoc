@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "word-word-document-generation-references-and-dependencies",
+    "controlName": ["Infragistics Word Library"],
+    "tags": ["Application Scenarios","Editing"],
+    "guid": "59f78d60-b7d6-4563-ba41-a6a69e700263",  
+    "buildFlags": [],
+    "createdOn": "2011-06-15T13:28:39.9798214Z"
+}
+|metadata|
+////
+
+= Document Generation References and Dependencies
+
+Using .NET CLR 4.0 or greater
+
+When using the Infragistics®Word library and exporters to generate a Microsoft® Word®document, the .NET Framework CLR version 4.0 or greater is required. In this scenario, you will reference the Infragistics.WebUI.Documents.IO assembly. The compression and packaging functionality that is built into the Word document creation logic relies on the .NET Framework CLR4.0.
+
+[[RelatedTopics]]
+== Related Topics
+
+* link:word-using-the-infragistics-word-library.html[Using the Infragistics Word Library]
+* link:word-about-infragistics-word-library.html[About Infragistics Word Library]

@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-international-support",
+    "controlName": ["WebSchedule"],
+    "tags": ["Localization"],
+    "guid": "{B9143F0F-2ED4-4BD4-B0E3-9BC063B0FCEC}",  
+    "buildFlags": [],
+    "createdOn": "2005-01-08T00:00:00Z"
+}
+|metadata|
+////
+
+= International Support
+
+The WebScheduleInfo™ control supports the property, which is responsible for driving the culture applied when formatting dates and times. Web applications detect the preferred culture of their end user and can customize all WebSchedule™ views to adapt their display.
+
+All WebSchedule views provide custom format string properties for dates and times. These format strings accept standard .NET Framework format specifiers (e.g _._, "HH:mm" or "MMM dd").
+
+* link:webschedule-format-the-first-day-of-the-month-in-webmonthview.html[Format the First Day of the Month in WebMonthView]
+* link:webschedule-localize-the-webschedule-forms-project.html[Localize the WebSchedule Forms Project]
+* link:webschedulegenericdataprovider-localize-multi-day-event-banner-caption.html[Localize Multi Day Event Banner Caption]

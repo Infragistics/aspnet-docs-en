@@ -1,0 +1,69 @@
+﻿////
+
+|metadata|
+{
+    "name": "known-isues-and-limitations-asp.net-12.1",
+    "controlName": [],
+    "tags": ["Known Issues"],
+    "guid": "c78cfc3c-0f12-4e42-9492-552c68c7c171",  
+    "buildFlags": [],
+    "createdOn": "2012-04-12T18:10:02.2775624Z"
+}
+|metadata|
+////
+
+= Known Issues and Limitations ASP.NET 12.1
+
+== Known Issues and Limitations
+
+=== Overview
+
+The following table summarizes the known issues and limitations of the Infragistics ASP.NET 12.1 release. Detailed explanations of known issues and the possible workarounds are provided for some of the issues follow the summary table.
+
+=== Legend
+
+- image:images\workaround.png[alt="Workaround"] - Workaround available
+- image:images\noworkaround.png[alt="No Workaround"] - No known workaround
+- image:images\fix.png[alt="Fix Planned"] - Fix planned
+
+[options="header", cols="a,a,a"]
+|====
+|Feature|Description|Status
+
+|<<_Ref320810435,Grids accessibility compliance section 508>>
+|Grids don't support (g) rule from Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973
+|image::images/Known_Issues_and_Limitations_ASP.NET_12.1_3.png[]
+
+|<<_Ref321744863,Windows Server 2008 SP2 with IIS 7 issue with images>>
+|When installed on Windows Server 2008 SP2 with IIS 7 in `C:\Inetpub\wwwroot\aspnet_client\Infragistics\Images` a web.config file is automatically generated that blocks access to the images.
+|image::images/Known_Issues_and_Limitations_ASP.NET_12.1_1.png[] 
+
+image::images/Known_Issues_and_Limitations_ASP.NET_12.1_3.png[]
+
+|====
+
+[[_Ref320810435]]
+
+=== Grids accessibility compliance section 508
+
+Grids don't support (g) rule from Section 508, Subpart 1194.22 of the Rehabilitation Act of 1973
+
+(g) Row and column headers shall be identified for data tables
+
+==== Related Topics:
+
+* link:web-accessibility-overview.html[Accessibility Overview]
+
+=== Grids accessibility compliance section 508
+
+A new property will be created for this purpose and will be included in a future release.
+
+[[_Ref321744863]]
+
+=== Windows Server 2008 SP2 with IIS 7 issue with images
+
+Images are not shown when Infragistics ASP.NET is installed on Windows Server 2008 SP2 with IIS 7. In folder `C:\Inetpub\wwwroot\aspnet_client\Infragistics\Images` a web.config file is automatically generated that blocks access to them.
+
+=== Windows Server 2008 SP2 with IIS 7 issue with images
+
+Delete the automatically generated web.config file in the images folder to resolve the issue during development.

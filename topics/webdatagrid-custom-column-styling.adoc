@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-custom-column-styling",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids","Styling"],
+    "guid": "027edd9d-7445-4ef8-b83c-e6086801f650",  
+    "buildFlags": [],
+    "createdOn": "2010-10-06T12:52:20.4610559Z"
+}
+|metadata|
+////
+
+= Custom Column Styling
+
+This topic contains example code on how to style WebDataGrid columns. By default, css classes are applied to all WebDataGrid elements based on the style that you select through Application Styling. However you may want to have custom styles assigned to each column; for this case, the BoundDataField and UnboundDataField object’s CssClass property can be used to set your custom CSS class. The CssClass property is designed to accept a standard CSS class along with all of the supported CSS properties. The following code example provides an alternating style to each WebDataGrid column; CSS is used to right-align and left-align the text.
+
+*In HTML:*
+
+----
+<style type="text/css"> .Left    {        
+     text-align:left;} 
+.Right     {      text-align:right;}
+</style>
+…
+<ig:BoundDataField DataFieldName="CustomerID" CssClass="Left" Key="CustomerID">
+     <Header Text="" />
+</ig:BoundDataField>
+<ig:BoundDataField DataFieldName="CompanyName" CssClass="Right" Key="CompanyName">
+     <Header Text="Company" />
+</ig:BoundDataField>
+<ig:BoundDataField DataFieldName="ContactName" CssClass="Left" Key="Contact">
+     <Header Text="Contact" />
+</ig:BoundDataField>
+<ig:BoundDataField DataFieldName="Address" CssClass="Right" Key="Address">
+     <Header Text="Address" />
+</ig:BoundDataField>
+----

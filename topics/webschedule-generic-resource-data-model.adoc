@@ -1,0 +1,68 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-generic-resource-data-model",
+    "controlName": ["WebSchedule"],
+    "tags": ["Scheduling"],
+    "guid": "{B435040C-1C22-4186-8C88-9709490634AD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Generic Resource Data Model
+
+The Resource table shown here represents a sample data source for a WebSchedule™ Resource object, which is any person, place, or thing, for which Activities may be scheduled. All columns correspond with .NET properties that have the same name on a Resource object, unless otherwise noted. If your custom data source publicly exposes property names matching the column name shown here, the field bindings will automatically occur. If you have different names, use the binding objects to specify the field bindings. For more information on data binding, see link:webschedule-data-bindings.html[Data Binding].
+
+The following shows the required fields for the Resource table:
+
+* ID
+* ResourceName
+
+[options="header", cols="a,a,a,a"]
+|====
+|Column Name|Data Type|Null Allowed?|Remarks
+
+|ID
+|int
+|No
+|Primary Key. A numeric value uniquely identifying this Resource.
+
+|ResourceName
+|nvarchar(64)
+|No
+|Name that uniquely identifies the resource it is meant to be a more user-friendly key.
+
+|ResourceDescription
+|ntext
+|Yes
+|Free-form text that describes this Resource.
+
+|EmailAddress
+|nvarchar(64)
+|Yes
+|Free-form text that contains the Resource's e-mail address.
+
+|EnableEmailReminders
+|bit
+|Yes
+|Enable email reminders for appointments.
+
+|_ts
+|timestamp
+|Yes
+|Timestamp that is used to detect concurrency conflicts.
+
+|====
+
+.Note:
+[NOTE]
+====
+WebSchedule assumes the existence of an "Unassigned Resource". This data model avoids having null values in relationships between tables by requiring the presence of one row in the Resource table that must be pre-populated with a resource ID of -999.
+====
+
+== Related Topic
+
+link:webschedule-generic-activityvariance-data-model.html[Generic Activity/Variance Data Model]

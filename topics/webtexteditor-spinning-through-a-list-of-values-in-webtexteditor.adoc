@@ -1,0 +1,75 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtexteditor-spinning-through-a-list-of-values-in-webtexteditor",
+    "controlName": ["WebTextEditor"],
+    "tags": ["Editing","How Do I","Styling"],
+    "guid": "{15E38553-81B8-467F-93C8-C7943A094B05}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Spinning through a list of values in WebTextEditor
+
+WebTextEditor™ provides the option to spin through a list of values using spin buttons. You can display the spin buttons by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~spinbuttonsdisplay.html[SpinButtonsDisplay]"]  property to either OnRight or OnLeft. By default, this property is set to None. The spin buttons have two buttons: lower and upper so that your end users can move to the next and previous values. You can customize the lower and upper buttons by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~lowerspinbutton.html[LowerSpinButton]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~upperspinbutton.html[UpperSpinButton]"]  properties respectively.
+
+You can set the SpinButtonsDisplay property either using Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+'Display the spin buttons on the right
+WebTextEditor1.Buttons.SpinButtonsDisplay = Infragistics.Web.UI.EditorControls.ButtonDisplay.OnRight
+----
+
+*In C#:*
+
+----
+//Display the spin buttons on the right
+WebTextEditor1.Buttons.SpinButtonsDisplay = Infragistics.Web.UI.EditorControls.ButtonDisplay.OnRight;
+----
+
+WebTextEditor allows you to add a list of values that you want to iterate through using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webtexteditor~buttons.html[Buttons]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~listofvalues.html[ListOfValues]"]  property. You can set the ListOfValues property either using Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebTextEditor1.Buttons.ListOfValues = "ASP.NET Controls|Windows Forms Controls|WPF Controls|Silverlight"
+----
+
+*In C#:*
+
+----
+WebTextEditor1.Buttons.ListOfValues = "ASP.NET Controls|Windows Forms Controls|WPF Controls|Silverlight";
+----
+
+.Note:
+[NOTE]
+====
+Items in the list must be separated by the "|" character when using the ListOfValues property.
+====
+
+However you can also insert values into the list using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~insertlistvalueatindex.html[InsertListValueAtIndex]"]  method of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons.html[TextEditorButtons]"]  object.
+
+*In Visual Basic:*
+
+----
+'Insert the values into the list at a particular index     
+WebTextEditor1.Buttons.InsertListValueAtIndex(0, "ASP.NET Controls")
+WebTextEditor1.Buttons.InsertListValueAtIndex(1, "Windows Forms Controls")
+WebTextEditor1.Buttons.InsertListValueAtIndex(2, "WPF Controls")
+WebTextEditor1.Buttons.InsertListValueAtIndex(3, "Silverlight")
+----
+
+*In C#:*
+
+----
+//Insert the values into the list at a particular index
+WebTextEditor1.Buttons.InsertListValueAtIndex(0, "ASP.NET Controls");
+WebTextEditor1.Buttons.InsertListValueAtIndex(1, "Windows Forms Controls");
+WebTextEditor1.Buttons.InsertListValueAtIndex(2, "WPF Controls");
+WebTextEditor1.Buttons.InsertListValueAtIndex(3, "Silverlight");
+----

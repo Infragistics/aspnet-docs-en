@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-about-webschedule-controls-and-components",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{6197D6FF-021D-4429-AD00-88D31EEFCDFE}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= About WebSchedule Controls and Components
+
+The WebSchedule™ control allows you to set up schedules and appointments for various users / resources. WebSchedule consists of multiple controls and components. This group of controls has a similar look and feel as Microsoft® Outlook's calendar. The following is a list of features and associated controls and components.
+
+Appointment and Reminder - Dialogs are built in and can be invoked automatically.
+
+Recurring Appointments - Outlook style recurring appointments.
+
+Multiple Resource View – Multiple resources can be viewed together to check and compare activities. AJAX Support - All UI interaction can be performed using AJAX callbacks through a simple property setting.
+
+Cascading Style Sheets (CSS) Support - As well as a full set of style properties, which can be used to customize the appearance of the views.
+
+The group of WebSchedule™ controls is comprised of four controls and three components.
+
+* link:web-webcalendarview.html[WebCalendarView]™ -- This control can be used to show appointments over a one month time span. With this view you can display any day with appointments in a highlighted style. As with all of the WebSchedule views, WebCalendarView provides you with complete styling support through CSS style files, presets, and runtime style objects.
+* link:web-webdayview.html[WebDayView]™ -- This control displays scheduling and calendar information in one day increments. Each day is subdivided into time-slots of some interval where appointments are displayed. Add or edit appointments with the automatically displayed built-in appointment dialog. Appointments can be all day and extended into multiple days. Appointments can also overlap just like in Microsoft Outlook.
+* link:web-webmonthview.html[WebMonthView]™ -- Display scheduling and calendar information in one month increments. Each month is subdivided into the days, and displayed inside of each day, is the relevant calendar and appointment information. The user can navigate through the months, using the Navigation arrows in the MonthView Header area.
+* link:web-webscheduleinfo.html[WebScheduleInfo]™ -- Provides all scheduling information to the various View elements with this component. Multiple WebSchedule UI controls can be connected to a single instance of WebScheduleInfo. With this design, the data and navigation position are synchronized across all WebSchedule controls automatically.
+* link:web-webscheduleoledbprovider.html[WebScheduleOleDbProvider]™ -- Responsible for binding Activity and Resource objects in WebScheduleInfo to tables and rows in your data store using OLEDB.
+* link:web-webschedulesqlclientprovider.html[WebScheduleSqlProvider]™ -- Responsible for binding Activity and Resource objects in the WebScheduleInfo to tables and rows in your data store using SQL.
+* link:webschedulegenericdataprovider-webschedulegenericdataprovider.html[WebScheduleGenericDataProvider]™ -- Enable binding to activity and resource information from any data source.
+
+== Related Topics
+
+link:webschedule-getting-started-with-webschedule-controls-and-components.html[Getting Started with WebSchedule Controls and Components]
+
+link:webschedule-using-the-webschedule-controls-and-components.html[Using WebSchedule Controls and Components]
+
+link:web-deploying-webschedule-controls-and-components-landing.html[Deploying WebSchedule Controls and Components]

@@ -1,0 +1,88 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-how-recurrence-logic-is-executed",
+    "controlName": ["WebSchedule"],
+    "tags": ["Design Environment","Scheduling","Tips and Tricks"],
+    "guid": "{8ACE6D47-0A55-47BE-9B54-57BCEF80847A}",  
+    "buildFlags": [],
+    "createdOn": "2006-10-04T00:00:00Z"
+}
+|metadata|
+////
+
+= How Recurrence Logic is Executed
+
+In this topic you will learn about the capabilities recurring activities bring to your WebSchedule™ application. When you're finished with this topic you'll understand on what recurring patterns activities can be scheduled automatically and how the exceptions to a recurrence pattern are handled. Read how the WebSchedule controls let you manage common scheduling scenarios by applying recurrences.
+
+== What is a Recurrence?
+
+Recurrences are all about the patterns that surround us in our daily lives. We commute to and from work at the same time every weekday morning, we attend weekly staff meetings every Monday at 9 o' clock, we listen regularly to the quarterly conference call of a company in our investment portfolio on the last Wednesday of every January, April, July, and October, and on the first Sunday of February each year at 6:15 in the evening we all watch the kick-off of a football championship.
+
+== Recurring Patterns
+
+Instead of entering an activity every Monday at 9 o' clock for your regular weekly staff meeting, you can schedule a weekly activity every Monday. WebSchedule automatically generates copies of your recurring activity (which are called occurrences) at regular intervals over the date range of the recurrence. These regular intervals are called the period of the recurrence. Recurrences also allow for periods to be skipped, so you can have daily activities, bi-weekly appointments, or quarterly events that take place every third month.
+
+== Daily Activities
+
+Think for a moment how many activities recur in your life every day, every week day, or every other day. An empty schedule is probably just a schedule without the repetitive daily routine we take for granted. Without daily recurrences, users would seldom enter daily activities that are part of their routine, like Lunch Break, but with a daily recurrence they only have to enter it once.
+
+image::images/WebSchedule_How_Recurrence_Logic_is_Executed_01.png[]
+
+A recurring activity with a daily period can be seven days a week or it can be on the five weekdays each week. Daily recurrences may also skip the same number of days between each activity, for example an interest payment which accrues every thirtieth day.
+
+== Weekly Activities
+
+Weekly activities are those that happen every week, or sometimes on several days of the week whose daily recurrences would prove too complex. For example, many universities teach courses on an every other day schedule – where every other day means Monday, Wednesday, and Friday. A weekly recurrence is the best solution for this schedule.
+
+image::images/WebSchedule_How_Recurrence_Logic_is_Executed_02.png[]
+
+A weekly activity can take place on one day or as many as seven (although in the latter case there would be no difference from an everyday daily recurrence), where occurrences take place only on the days of the week indicated. Several other frequencies such as bi-weekly are also possible by specifying a period multiple greater than one.
+
+== Monthly Activities
+
+Monthly activities can represent invoicing dates, payment dates, or interest group meeting dates. Many of these activities take place at points in a month that can be described either by a specific date (invoicing subscribers on the twentieth of every month) or by a particular occurrence of a day in the month (municipal zoning board meetings on the second Thursday of every month.)
+
+image::images/WebSchedule_How_Recurrence_Logic_is_Executed_03.png[]
+
+Monthly activities also double for several other periods commonly found in scheduling applications such as bi-monthly, quarterly, and semi-annually, when you assign a period multiple greater than one.
+
+== Yearly Activities
+
+Some activities seem to come just once a year like the company picnic, tax filing deadline, or a marriage anniversary. If your users enter any activities like these one year – don't let them forget about it in subsequent years – use a yearly recurrence.
+
+image::images/WebSchedule_How_Recurrence_Logic_is_Executed_04.png[]
+
+Similar to a monthly recurrence, a yearly recurrence can be set to take place on a specific date or on a date based on the relative occurrence of a particular day in a specific month (last Sunday of September, or third Friday in May).
+
+== Range of Recurrence
+
+A recurrence must always start at precisely the same date and time of it's first activity (which is referred to as it's root activity.) The end of a recurrence can come in three ways:
+
+* It may end after a pre-determined, maximum number of occurrences.
+* An explicit end date may be given to the recurrence.
+* Recurrences may continue until the end of time.
+
+Whether a recurrence ends after a number of occurrences or on a specific end date is interchangeable. When an end user modifies one, the other will be automatically recalculated.
+
+== Exceptions to the Rule – Variances
+
+Like modern life, not everything about a recurrence is set rigidly in stone. Perhaps we will take one weekday morning off for a dental appointment, or our staff meeting falls on a Tuesday when that Monday is an observed holiday. For these exceptions in the regularity of recurring activities the WebSchedule provides variances. A variance is a copy of the recurring activity with changes, for example, a different starting time than usual or perhaps a one-time change in location for the activity.
+
+The following illustration shows how a variance might be used to alter the day on which a recurring activity takes place. It shows a monthly calendar containing an appointment every Monday (December 26, and January 2, 16, 23, and 30) in light blue, except for one (January 10) on a Tuesday in yellow. Users can modify the occurrence which would have originally been scheduled on Monday, January 9, to move it to occur on the next day.
+
+image::images/WebSchedule_How_Recurrence_Logic_is_Executed_05.png[]
+
+At the same time variances have their limits. Variances must remain within their period. What this means is users cannot schedule an occurrence to vary so much that it comes before an earlier occurrence, or after a later occurrence. For example, moving a Monday appointment to another day in the same week would be a permitted variance, but moving it to any of these dates would be disallowed:
+
+* Any date on or before a preceding occurrence (including any dates before the start of the recurrence).
+* Any date which would overlap or start after the next occurrence (including any dates after the end of the recurrence).
+
+These constraints keep variances – and the manner they were arrived at – unambiguous, and simplifies your user's dealings with them.
+
+Another special property of a variance is that they mark an occurrence that has been removed. Since these activities would continue to be generated on-demand by WebSchedule, special marker variances signify to WebSchedule which occurrences a user may have deleted. Technically, the presence of this information continues to be retained as a variance marked as deleted so that "holes" may appear in a recurring series when needed.
+
+== Conclusion
+
+As you grow comfortable with these recurrence fundamentals, you will find more and more applications for them come to mind. Evaluate how your users are scheduling their activities today. By looking at the frequency of repeated or very similar activities in their schedules, you can identify places where your WebSchedule applications can take advantage of recurrences to enhance their experience.

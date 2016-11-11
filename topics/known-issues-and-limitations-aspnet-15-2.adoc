@@ -1,0 +1,234 @@
+﻿////
+
+|metadata|
+{
+    "name": "known-issues-and-limitations-aspnet-15-2",
+    "controlName": [],
+    "tags": [],
+    "guid": "08fd43d0-5c58-4399-9595-4ddb660f2c6e",  
+    "buildFlags": [],
+    "createdOn": "2015-09-29T15:38:38.7031971Z"
+}
+|metadata|
+////
+
+= Known Issues and Limitations ASP.NET 15.2
+
+Known Issues and Limitations Summary
+
+=== Known issues and limitations summary chart
+
+The following table summarizes the known issues and limitations of the Infragistics® ASP.NET 2015.2 release. Detailed explanations of all of the issues and the existing workarounds are provided after the summary table.
+
+=== Legend
+
+- image:images\workaround.png[alt="Workaround"] - Workaround available
+- image:images\noworkaround.png[alt="No Workaround"] - No known workaround
+- image:images\fix.png[alt="Fix Planned"] - Fix planned
+
+==== _WebDataGrid_
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+|<<drop-down-editor-donot-support-multiselection,Drop-down editor provider of WebDataGrid does not support multiselection>>
+|_WebDataGrid_ ’s drop-down provider does not support multiselection.
+|image::images/noworkaround.png[]
+
+|<<unbound_column_event_handler,Unbound column and OnInitializeRow event handler>>
+|When there is an unbound column and OnInitializeRow event is handled, _Paging and Sorting features don’t work as expected._ 
+|image::images/noworkaround.png[]
+
+|<<_Ref398735988,Drop-down item text is not correctly retrieved by WebDataGrid DropDownProvider when paging is enabled>>
+|Value of drop down item is displayed if thecell value isn't on current pageof the DropDownProvider even though the text is known from the grid cell. The feature is supposed to work like this because the _WebDataGrid_ is databound to values that are different from what is expected to be displayed in the cells as content.
+|image::images/workaround.png[]
+
+|<<_Ref39873598813,When programmatically opening the RowEditTemplate for the adding row, the values of the WebTextEditors used in the template will be persisted>>
+|In scenarios where the _RowEditTemplate_ contains _WebTextEditors_ and is manually opened for the adding row the values of the _WebTextEditors_ are not cleared after editing finishes. As a result when entering edit mode again the previous values are retained.
+|image::images/workaround.png[]
+
+|====
+
+==== _WebHierarchcialDataGrid_
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+|<<expanded-rows,Expanded rows of HierarchicalDataGrid do not render past a certain depth in Firefox>>
+|_ _HierarchicalDataGrid’s_ _ rows does not render past depth bigger than 200 in Firefox
+|image::images/noworkaround.png[]
+
+|====
+
+==== _WebTab_
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+|ViewState is corrupted when you use WebDataTree inside a WebTab
+|When you use the _WebDataTree_ control inside a WebTab the ViewState is corrupted. 
+
+*Workaround**:* In order for this scenario to work you should call InstantiateTemplates() method of the _WebTab_ at the Page_Init(). 
+
+|image::images/workaround.png[]
+
+|Cannot access templated controls on postback before the InstantiateTemplates() methods is called.
+|Controls that are instantiated inside a template cannot be accessed before the InstantiateTemplates() method of the WebTab is called. 
+
+[NOTE]
+====
+*Workaround:* In order for this scenario to work you should call InstantiateTemplates() method of the _WebTab_ before attempting to access a control from the template. 
+====
+
+|image::images/workaround.png[]
+
+|====
+
+==== _WebUpload / WebCaptcha_
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+|<<http-error,HTTP error 500.22 is thrown when you add the WebUpload/WebCaptcha from the toolbox for IIS7 and above>>
+|When you drop the _WebUpload_ _/WebCaptcha_ control into the design pane it will automatically add the control’s httpModules and httpHandlers in the system.web section. That configuration is not valid for IIS7 and newer running in integrated mode.
+|image::images/workaround.png[]
+
+|====
+
+==== _Infragistics Excel Engine_
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+|Breaking Change
+|As part of the 14.2 release we implemented the _INotifyPropertyChanged_ and _INotifyCollectionChanged_ interfaces in several Excel classes including _Workbook_, _Worksheet_, the settings classes and _WorksheetCollection_ on all platforms. 
+
+This was done as part of the notification and undo infrastructure needed for WPF platform, however, it may affect ASP.NET platform temporarily, and will be removed in the October 2014 service release as an optimization.
+|image::images/fix.png[]
+
+|====
+
+[[_Ref367305781]]
+
+== _WebDataGrid_
+
+[[drop-down-editor-donot-support-multiselection]]
+
+=== Drop-down editor provider of WebDataGrid does not support multiselection
+
+_WebDataGrid_  ’s drop-down provider does not support multiselection, because all get/set value operations while exchange values between WebDropDown editor and grid, do target only single selection. If editor somehow got multiple selected items, then that will corrupt editor provider and result will be unpredictable.
+
+[[unbound_column_event_handler]]
+
+=== Unbound column and OnInitializeRow event handler
+
+__UnboundColumn + OnInitializeRow__  event handled, does not work well with Paging and Sorting features enabled. Unexpected behavior may occur when using those in combination, such as the Rows collection being sorted before an unbound record is being updated, thus resulting in an exception.
+
+[[_Ref398735988]]
+
+=== Drop-down item text is not correctly retrieved by WebDataGrid DropDownProvider when paging is enabled
+
+Value of drop down item is displayed if the cell value isn't on current page of the DropDownProvider even though the text is known from the grid cell. The feature is supposed to work like this because the  _WebDataGrid_   is data bound to values that are different from what is expected to be displayed in the cells as content.
+
+The workaround for that issue is to implement a custom logic on initial load which handles the rows initializing and fills the Text property of the cells in the specified column by querying the web drop-down data source by the specified value. In the following code you can see an example how to accomplish that.
+
+*In ASPX:*
+
+[source,html]
+----
+<EditorProviders>
+      <ig:DropDownProvider ID="ddp1">
+            <EditorControl
+                  ClientIDMode="Predictable"
+                  EnableAutoFiltering="Server"
+                  AutoFilterResultSize="2"
+                  AutoFilterTimeoutMs="1000"
+                  EnableAnimations="
+                  EnablePaging="true"
+                  PageSize="4"
+                  AutoFilterQueryType="Contains"
+                  DataSourceID="SqlDataSource2"
+                  DropDownContainerMaxHeight="200px">
+                  <DropDownItemBinding TextField="CAtegoryName" ValueField="CategoryID" />
+            </EditorControl>
+      </ig:DropDownProvider>
+</EditorProviders>
+----
+
+__The workaround:__ 
+
+*In ASPX:*
+
+[source,html]
+----
+<ig:WebDataGrid AutoGenerateColumns=" ID="WebDataGrid1" runat="server"  OnInitializeRow="WebDataGrid1_InitializeRow">
+----
+
+*In C#:*
+
+[source,csharp]
+----
+ protected void WebDataGrid1_InitializeRow(object sender, RowEventArgs e)
+    {
+        if (!this.Page.IsPostBack)
+        {
+            if (e.Row.Index < 8)
+            {
+                e.Row.Items[3].Text = texts[e.Row.Index];
+            }
+        }
+    }
+      // This is only an example. Actual usage would have to extract these from a data source provider.
+    string[] texts = new string[] {
+        "Beverages",
+        "Condiments",
+        "Confections",
+        "Dairy Products",
+        "Grains/Cereals",
+        "Meat/Poultry",
+        "Produce",
+        "Seafood"
+    };
+----
+
+[[#_Ref39873598813]]
+
+=== When programmatically opening the RowEditTemplate for the adding row, the values of the WebTextEditors used in the template will be persisted
+
+In scenarios where the  _RowEditTemplate_   contains  _WebTextEditors_   and is manually opened for the adding row the values of the  _WebTextEditors_   are not cleared after editing finishes. As a result when entering edit mode again the previous values are retained.
+
+*In C#:*
+
+[source,csharp]
+----
+ protected void Page_PreRender(object sender, EventArgs e)
+    {
+        var templateContainer=  this.WebDataGrid.Behaviors.EditingCore.Behaviors.RowEditTemplate.TemplateContainer;
+                WebTextEditor editor =(WebTextEditor)templateContainer.FindControl( "control_Item");
+                   editor.Value = null;        
+                                }
+                              
+----
+
+== _HierarchicalDataGrid_
+
+[[expanded-rows]]
+
+=== Expanded rows of HierarchicalDataGrid do not render past a certain depth in Firefox
+
+HierarchicalDataGrid’s rows does not render past depth bigger than 200 in Firefox caused by limitation in DOM Depth in this particular browser. This limitation is also documented by the Firefox link:https://bugzilla.mozilla.org/show_bug.cgi?id=354161#c3[here].
+
+== _WebUpload/ WebCaptcha_
+
+[[http-error]]
+
+=== HTTP error 500.22 is thrown when you add the WebUpload/WebCaptcha from the toolbox for IIS7 and above
+
+There are few ways to handle this issue. First you can just add the control without using the toolbox and add manually the link:webupload-http-module-and-handler.html[HTTP Modules and Handlers]. If you prefer dropping the control to the designer, you can either, go and manually change the modules to the system.webServer/modules section or you can use the AppCmd from the command line to migrate your application following the instructions in the error message.
+
+Same goes for the link:webcaptcha-getting-started-with-webcaptcha.html[HTTP Handler of the WebCaptcha] control.

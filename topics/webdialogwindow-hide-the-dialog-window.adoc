@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdialogwindow-hide-the-dialog-window",
+    "controlName": ["WebDialogWindow"],
+    "tags": ["How Do I"],
+    "guid": "{B3EBFAE5-0D2F-41FD-A9BF-F241F57F84B2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Hide the Dialog Window
+
+By default, the WebDialogWindow™ control's dialog window is visible. If you're using the dialog window as a prompt, or dialog box requiring user interaction, you may not want it visible all the time, but only when necessary. Therefore, you'll want to hide the dialog window either in the properties window during design time, or in the page's Load event at run time. Hiding the dialog window is as simple as setting the link:http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(System.Web.UI.Control.Visible)&rd=true[Visible] property to False. Once you are ready to accept the end user's input, through a button click or some other event, you can *show the dialog window* by setting the Visible property back to True.
+
+The following code demonstrates how to hide WebDialogWindow's dialog window.
+
+*In Visual Basic:*
+
+----
+' Hide the dialog window.
+Me.WebDialogWindow1.WindowState = _
+        Infragistics.Web.UI.LayoutControls.DialogWindowState.Hidden
+----
+
+*In C#:*
+
+----
+// Hide the dialog window.
+this.WebDialogWindow1.WindowState = 
+        Infragistics.Web.UI.LayoutControls.DialogWindowState.Hidden;
+----

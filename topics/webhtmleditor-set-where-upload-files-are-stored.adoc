@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-set-where-upload-files-are-stored",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{D18D8468-CB31-4D17-AA00-83AF1D2E7BB6}",  
+    "buildFlags": [],
+    "createdOn": "2006-11-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Set Where Upload Files Are Stored
+
+Your Web server is responsible for storing uploaded files (e.g., images, and streaming media files) that are attached to documents previewed or edited with WebHtmlEditor™. By default, the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~uploadedfilesdirectory.html[UploadedFilesDirectory]"]  property assumes all uploaded files will be stored in a subfolder of "ig_common" named "upload". If you would like the uploaded files to be stored in a different location then you must modify this property. You can set the UploadedFilesDirectory property at design time for your Web application, however one common usage scenario for uploaded files is for each user to receive their own UploadedFilesDirectory. In order to accomplish this, you must set the UploadedFilesDirectory property at run time to a path associated with each user. The following example illustrates using code to set the UploadedFilesDirectory property.
+
+[start=1]
+. In the Microsoft® Visual Studio® .NET Solution Explorer view of your project, right-click your Web project and select New Folder. The uploaded files directory must be a virtual directory, or underneath a virtual directory. Name this folder "uploads". For the purpose of this example, it is assumed your Web application is in a virtual directory and when you deploy the application you will create this subfolder.
+
+image::images/WebHtmlEditor_How_Do_I_Set_Where_Uploaded_Files_are_Stored_01.PNG[]
+
+[start=2]
+. Next, in code-behind (for example, within your Page_Load event handler), initialize the UploadedFilesDirectory property with the following statement.
+
+*In Visual Basic:*
+
+----
+' Store uploads in this subfolder of my Web app.
+Me.WebHtmlEditor1.UploadedFilesDirectory = "./uploads"
+----
+
+*In C#:*
+
+----
+// Store uploads in this subfolder of my Web app.
+this.WebHtmlEditor1.UploadedFilesDirectory = "./uploads";
+----
+
+.Note:
+[NOTE]
+====
+In addition to specifying where uploaded files belong, you must configure your Web site to receive uploaded files (i.e., grant write access to the folder, etc). See link:webhtmleditor-configuring-the-upload-area-in-iis.html[Configure the Upload Area in IIS] for further details.
+====

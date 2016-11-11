@@ -1,0 +1,175 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-batch-updating-events",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Editing","Events","Grids","Performance"],
+    "guid": "1fe6fe55-c53b-412e-b93e-63611220e434",  
+    "buildFlags": [],
+    "createdOn": "2011-10-26T07:53:31.3253328Z"
+}
+|metadata|
+////
+
+= Events
+
+This topic explains the client and server events related to batch updating in the WebHierarchicalDataGrid™.
+
+Batch Update Client Events
+
+The activation of the batch updating functionality fires two client events that you can use when undoing modified rows:
+
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingclientevents~batchupdateundone.html[batchUndone]"]  - fired upon recovering a deleted row (the user has clicked the Undo button)
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingclientevents~batchupdateundoing.html[batchUndoing]"]  - fired upon restoring a change made to a row (the user has pressed Ctrl+Z)
+
+The following markup code snippet demonstrates how to attach to these events..
+
+*In ASPX:*
+
+----
+<ig:WebHierarhcialDataGrid ID="wdg1" runat="server">
+    <Behaviors>
+        <ig:Activation/>                 
+        <ig:EditingCore BatchUpdating="true">
+            <EditingClientEvents
+                BatchUpdateUndoing="batchUndoingParent" 
+                BatchUpdateUndone="batchUndoneParent"/>
+            <Behaviors>
+                <ig:RowAdding/>
+                <ig:RowDeleting/>
+                <ig:CellEditing/>
+            </Behaviors>
+        </ig:EditingCore>
+    </Behaviors>
+    <Bands>
+        <ig:Band>
+            <Behaviors>
+                <ig:EditingCore BatchUpdating="true">
+                    <EditingClientEvents
+                        BatchUpdateUndoing="batchUndoingChild" 
+                        BatchUpdateUndone="batchUndoneChild"/>
+                    <Behaviors>
+                        <ig:RowAdding/>
+                        <ig:RowDeleting/>
+                        <ig:CellEditing/>
+                    </Behaviors>
+                </ig:EditingCore>
+            </Behaviors>
+        </ig:Band>
+</ig:WebHierarhcialDataGrid >
+----
+
+The following markup code snippet demonstrates how to define handlers using Javascript:
+
+*In Javascript:*
+
+----
+function batchUndoingParent(sender, eventArgs) {
+}
+function batchUndoneParent(sender, eventArgs) {
+}
+function batchUndoingChild(sender, eventArgs) {
+}
+function batchUndoneChild(sender, eventArgs) {
+}
+----
+
+The arguments events store information about the row that is being undone. You can cancel the undo process and leave modifications made the data inside the BatchUpdateUndoing event handler.
+
+For further details, refer to the Batch Update Events sample.
+
+For more detailed information for the events’ arguments, refer to the Batch Update API.
+
+*Table 1* : Reference table for the client event arguments
+
+[options="header", cols="a,a"]
+|====
+|Arguments|Descripton
+
+| pick:[asp-net="link:webhierarchicaldatagrid~infragistics.web.ui.webhierarchicaldatagrid_members.html[sender]"] 
+|Pointer to the WebHierarchicalDataGrid client side DOM object.
+
+| pick:[asp-net="link:webhierarchicaldatagrid~infragistics.web.ui.batchupdateundoneeventargs_members.html[eventArgs]"] 
+|Object that contains information for the client event and current context.
+
+|====
+
+Batch Update Server Events
+
+In batch updating, the same server events are fired as when batch updating is disabled, but the events are called all in one pass when the postback takes place.
+
+The following snippet demonstrates how to attach handlers to server CRUD events in ASPX and in the code-behind:
+
+*In ASPX:*
+
+----
+<ig:WebHierarchicalDataGrid ID="wdg1" runat="server"
+    OnRowUpdating="wdg1_RowUpdating" OnRowUpdated="wdg1_RowUpdated"
+    OnRowAdding="wdg1_RowAdding" OnRowAdded="wdg1_RowAdded"
+    OnRowsDeleting="wdg1_RowsDeleting" OnRowDeleted="wdg1_RowDeleted">
+    <Behaviors>
+        <ig:Activation/>
+        <ig:Paging PageSize="7"/>
+        <ig:EditingCore BatchUpdating="true">
+            <Behaviors>
+                <ig:RowAdding/>
+                <ig:RowDeleting/>
+                <ig:CellEditing/>
+            </Behaviors>
+        </ig:EditingCore>
+    </Behaviors> 
+</ig:WebHierarchicalDataGrid>
+----
+
+*In C#:*
+
+----
+void wdg1_RowUpdating(object sender, 
+                      Infragistics.Web.UI.GridControls.RowUpdatingEventArgs e) {}
+void wdg1_RowUpdated(object sender, 
+                     Infragistics.Web.UI.GridControls.RowUpdatedEventArgs e) {}
+void wdg1_RowAdding(object sender, 
+                    Infragistics.Web.UI.GridControls.RowAddingEventArgs e) {}
+void wdg1_RowAdded(object sender, 
+                   Infragistics.Web.UI.GridControls.RowAddedEventArgs e) {}
+void wdg1_RowsDeleting(object sender, 
+                       Infragistics.Web.UI.GridControls.RowDeletingEventArgs e) {}
+void wdg1_RowDeleted(object sender, 
+                     Infragistics.Web.UI.GridControls.RowDeletedEventArgs e) {}
+----
+
+.Note:
+[NOTE]
+====
+If you want to attach to the child band you need to do the same in each band.
+====
+
+*Table 2* : Reference table for the server event arguments
+
+[options="header", cols="a,a"]
+|====
+|Arguments|Descripton
+
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid_members.html[sender]"] 
+|Pointer to the WebHierarchicalDataGrid server instance.
+
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowupdatingeventargs_members.html[RowUpdatingEventArgs]"] 
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowupdatedeventargs_members.html[RowUpdatedEventArgs]"] 
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowaddingeventargs_members.html[RowAddingEventArgs]"] 
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowaddedeventargs_members.html[RowAddedEventArgs]"] 
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeletingeventargs.html[RowDeletingEventArgs]"] 
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeletedeventargs_members.html[RowDeletedEventArgs]"] 
+|Object that contains information for the server event and current context.
+
+|====
+
+== Related Topics
+
+link:webhierarchicaldatagrid-batch-updating-overview.html[WebHierarchicalDataGrid Batch Updating Overview]
+
+link:webhierarchicaldatagrid-batch-updating-enabling.html#_enabling_batch_updating[Enabling Batch Updating in the WebHierarchicalDataGrid]
+
+link:webhierarchicaldatagrid-batch-updating-summaries.html[WebHierarchicalDataGrid Batch Updating Summaries]
+
+link:known-issues-known-issues-and-breaking-changes-revision-history.html[Known Issues and Breaking Changes]

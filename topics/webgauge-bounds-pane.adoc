@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-bounds-pane",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{67B2415B-819D-4B9F-A752-A2896C87DC2B}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Bounds Pane
+
+The Bounds pane determines the size and the location of your gauge on the WebGauge control.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gauge~bounds.html[X]"]  -- This value determines the distance of your gauge from the left of the Gauge control. If you set the x value to exceed the width of the Gauge control or to be less than 0, your gauge may not appear on the Gauge control.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gauge~bounds.html[Y]"]  -- The value determines the distance of the your gauge from the top of the Gauge control. If you set the y value to exceed the height of the Gauge control or to be less than 0, your gauge may not appear on the Gauge control.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gauge~bounds.html[Width]"]  -- The width value can be set from 0 to 100. This value determines the width of your gauge.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gauge~bounds.html[Height]"]  -- The height value can be set from 0 to 100. This value determines the height of your gauge.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gauge~boundsmeasure.html[Units]"]  -- This value specifies the unit of measurement for your gauge. Your gauge can be measured in pixels or as a percentage of the Gauge control.
+
+image::images/Bounds_Pane_01.png[The bounds pane in the gauge designer.]
+
+== Related Topics
+
+link:webgauge-digital-gauge.html[Digital Gauge]
+
+link:webgauge-linear-gauge.html[Linear Gauge]
+
+link:webgauge-radial-gauge.html[Radial Gauge]

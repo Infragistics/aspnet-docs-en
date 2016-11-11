@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-changing-the-appearance-of-your-webgauge",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I","Styling"],
+    "guid": "ead841d3-655b-4872-8ab1-038f82aa3c82",  
+    "buildFlags": [],
+    "createdOn": "2012-04-23T10:57:01.9176472Z"
+}
+|metadata|
+////
+
+= Changing the Appearance of Your WebGauge
+
+There are a number of Appearance tabs available in the Properties panel that allow you to customize the appearance of each property. For example, you can specify the color of the font on your labels using the Labels Appearance tab.
+
+Click the following links for information about each appearance tab available in the Properties panel:
+
+* link:webgauge-appearance-tab.html[Appearance Tab]
+* link:webgauge-digit-appearance-tab.html[Digit Appearance Tab]
+* link:webgauge-labels-appearance-tab.html[Labels Appearance Tab]

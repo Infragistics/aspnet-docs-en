@@ -1,0 +1,64 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatasource-add-a-composite-key-relationship",
+    "controlName": ["WebHierarchicalDataSource"],
+    "tags": ["Data Presentation","Sample Data Source"],
+    "guid": "{B3152811-64D1-4EF5-A489-BA053C71F5B3}",  
+    "buildFlags": [],
+    "createdOn": "2008-05-05T17:06:26Z"
+}
+|metadata|
+////
+
+= Add a Composite Key Relationship
+
+A data relation can consist of multiple key columns. You can create this type of relationship with WebHierarchicalDataSource™ at design time or run time. At design time, you can add multiple columns for the Parent Columns and Child Columns fields in the configuration wizard when configuring a child data source. At run time, you can add the column names as a string array to the Parent Columns and Child Columns collection.
+
+.Note:
+[NOTE]
+====
+When adding data relations, make sure that the data sources obey rules of referential integrity. The WebHierarchicalDataSource component does not enforce these rules and you will not be notified when a rule is broken. For example, if the records in your child data set are not all related to the parent data, this is simply ignored and the data that are related are shown. Also, if the data type of your primary key and foreign key columns do not match, only the parent records are shown.
+====
+
+*In Visual Basic:*
+
+----
+Dim dr As New Infragistics.Web.UI.DataSourceControls.DataRelation() 
+' Specify the parent view in the relation 
+dr.ParentDataViewID = "SqlDataSource_View1" 
+' Specify the composite key using two columns 
+dr.ParentColumns = New String() {"FirstName", "LastName"} 
+' Specify the child view in the relation 
+dr.ChildDataViewID = "SqlDataSource_View2" 
+'Specify the composite key in the child data source 
+dr.ChildColumns = New String() {"FirstName", "LastName"} 
+' Add the relation to WebHierarchicalDataSource 
+Me.WebHierarchicalDataSource1.DataRelations.Add(dr)
+----
+
+*In C#:*
+
+----
+Infragistics.Web.UI.DataSourceControls.DataRelation dr = 
+new Infragistics.Web.UI.DataSourceControls.DataRelation();
+// Specify the parent view in the relation
+dr.ParentDataViewID = "SqlDataSource_View1";
+// Specify the composite key using two columns
+dr.ParentColumns = new string[] { "FirstName", "LastName"};
+// Specify the child view in the relation
+dr.ChildDataViewID = "SqlDataSource_View2";
+//Specify the composite key in the child data source
+dr.ChildColumns = new string[] { "FirstName", "LastName"};
+// Add the relation to WebHierarchicalDataSource
+this.WebHierarchicalDataSource1.DataRelations.Add(dr);
+----
+
+== Related Topics
+
+link:webhierarchicaldatasource-add-a-parent-to-multiple-child-relationship.html[Add a Parent to Multiple Child Relationship]
+
+link:webhierarchicaldatasource-add-a-single-parent-to-single-child-relationship.html[Add a Single Parent to Single Child Relationship]
+
+link:webhierarchicaldatasource-creating-a-self-related-data-relation.html[Creating a Self-Related Data Relation]

@@ -1,0 +1,48 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-editting",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Editing","Grids"],
+    "guid": "{7B88CDCA-60BE-44C5-887B-E0EF69EC9D8E}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-08T14:11:57Z"
+}
+|metadata|
+////
+
+= Editing Behavior Overview (WebDataGrid)
+
+WebDataGrid™ is read-only by default. You must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior to allow interaction with the control. After EditingCore is enabled you can edit WebDataGrid in code; however, if you want to allow your end-users to edit, delete, and add data using WebDataGrid's UI, you must enable additional behaviors. These are all considered dependent behaviors specific to the user interaction. Once editing is enabled, data updates commit immediately to the data source.
+
+.Note:
+[NOTE]
+====
+Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to the name of the primary key column in your data source to ensure that changes in WebDataGrid can be updated in data source.
+====
+
+== Dependent Behaviors
+
+* *Cell Editing* - Allows data manipulation in the cells of WebDataGrid. End-users are allowed to edit data when this behavior is enabled.
+* *Row Editing* - An editing experience that places the entire row in edit mode. Changes are saved and rejected using Done and Cancel buttons respectively.
+* *Row Adding* - Enabling this behavior creates an interface in which users can add new rows to WebDataGrid: A blank row is placed at the bottom or top of the control.
+* *Row Deleting* - Allows data deletion. To delete, end-users can select the row(s) and hit the Delete key.
+* *Row Editing Template* - Allows data manipulation of a row through a template that you create.
+
+.Note:
+[NOTE]
+====
+These behaviors are all dependent on the EditCore behavior; when you remove the EditCore behavior, these behaviors will also get removed.
+====
+
+For more information on editing in WebDataGrid, click the links below.
+
+* link:webdatagrid-cell-editing.html[Cell Editing (WebDataGrid)]
+* link:webdatagrid-row-editing.html[Row Editing (WebDataGrid)]
+* link:webdatagrid-batch-updating.html[Batch Updating (WebDataGrid)]
+* link:webdatagrid-row-editing-template.html[Row Editing Template (WebDataGrid)] link:webdatagrid-row-editing-template.html[Row Editing Template (WebDataGrid)]
+* link:webdatagrid-enabling-row-deleting.html[Enabling Row Deleting (WebDataGrid)]
+* link:webdatagrid-row-adding.html[Row Adding (WebDataGrid)]
+* link:webdatagrid-refreshing-webdatagrid-when-autocrud-is-turned-off.html[Refreshing WebDataGrid when AutoCRUD is Turned off]
+* link:webdatagrid-conditional-batch-updating-in-webdatagrid.html[Conditional Batch Updating in WebDataGrid]

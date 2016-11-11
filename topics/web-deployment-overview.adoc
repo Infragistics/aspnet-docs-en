@@ -1,0 +1,652 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-deployment-overview",
+    "controlName": [],
+    "tags": ["Deployment","FAQ","Getting Started","How Do I"],
+    "guid": "{FCF74818-0662-44A0-B545-44C5477B6407}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Deployment Overview
+
+The first step in deploying applications that include tools from the Infragistics ASP.NET toolset is to determine what resources you will need to include as part of your deployment package. Click on the links to learn what resources each of the elements requires as part of deployment.
+
+When deploying a .NET application, you must distribute certain files in addition to your executable. If your application contains one or more Infragistics elements, you will have to distribute or deploy one or more Infragistics assembly files as part of your application. This topic outlines the files that you must re-distribute.
+
+.Note:
+[NOTE]
+====
+Any files not specifically covered by this topic should be considered  _non-redistributable_ . Files that are included with your Infragistics product but not listed here are not licensed for distribution, and should not be copied to, moved to or shared with any machine other than the one on which the licensed Infragistics product is installed.
+====
+
+== Required Assemblies for All Controls/Components
+
+In addition to individual assembly files listed for each control/component, the deployment of any Infragistics ASP.NET control/component also requires the re-distribution of the following files:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.Shared.v{ProductVersion}.dll
+|Infragistics Web Application Shared support assembly for .NET
+
+|====
+
+The following controls and components do not require the Shared assembly.
+
+* Infragistics Document Engine
+* Infragistics Excel Engine
+* Infragistics Word Library
+* WebDataGrid™
+* WebDataMenu™
+* WebDataTree™
+* WebDropDown™
+* WebProgressBar™
+* WebDialogWindow™
+* WebHierarchicalDataGrid™
+* WebHierarchicalDataSource™
+* WebImageViewer™
+* WebResizingExtender™
+* WebSlider™
+* WebSplitter™
+* WebTab™
+* WebUpload™
+* WebVideoPlayer™
+
+== Deployment Options
+
+Once you determine which resources you need to include in your deployment, you can learn how to deploy them using the following deployment option.
+
+* link:web-using-global-assembly-cache-gac-deployment.html[Deployment using the GAC]
+
+== Required Assemblies for Individual Controls/Components
+
+The following tables identify which assemblies, javascript files and images are required when deploying each individual control or component.
+
+.Note:
+[NOTE]
+====
+Installing the product on a development machine deploys these elements to their correct locations based on the development machine's local web server. The files in these locations will work with the control's default settings. You can mirror the development machine's configuration to the production server, and the controls will then work with their default settings on the production server. If the configuration of the production server will differ from that of the development machine, you will need to make corresponding changes to the default values of the Infragistics Web controls in your application.
+====
+
+== WebCalcManager™
+
+ 
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.UltraWebCalcManager.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCalcManager™ CalcEngine.
+
+|====
+
+ 
+
+== WebCurrencyEditor™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebDatePicker™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow,WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebDateTimeEditor™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebMaskEditor™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow,WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebMonthCalendar™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebNumericEditor™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebPercentEditor™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebTextEditor,WebDialogWindow, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebTextEditor™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor, WebDialogWindow,WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, and WebSplitter controls.
+
+|====
+
+== WebCalendarView™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.WebSchedule.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCalendarView™ control.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|`ig_webcalendarview.js`
+|JavaScript support file for WebCalendarView
+
+| _(multiple images)_ 
+|Various images required to support the control are installed on your development machine, and must be deployed to the server in order for the control to function.
+
+|====
+
+== WebChart™
+
+ 
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.UltraWebChart.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebChart control.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|`ig_webchart.js`
+|JavaScript master chart element file for the UltraWebChart element.
+
+|chart images
+|The ChartImages folder must be created on the server to store chart images in file system image deployment. Additionally, this folder contains images needed to display the scrollbar if the EnableScrollbar property is set to True.
+
+|====
+
+ 
+
+== WebDataGrid™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor, WebDataGrid,WebDataMenu, WebDataTree, WebDialogWindow, WebDropDown, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebImageViewer, WebProgressBar, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebDataMenu™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebDataMenu, WebDataTree, WebDropDown, WebProgressBar, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebDataTree™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebDataMenu, WebDataTree, WebDropDown, WebProgressBar, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebDropDown™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebDataMenu, WebDataTree, WebDropDown, WebProgressBar, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+== WebProgressBar™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebDataMenu, WebDataTree, WebDropDown, WebProgressBar, WebImageViewer, WebSlider, and WebSplitter controls.
+
+|====
+
+== WebDayView™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.WebSchedule.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebDayView™ control.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|`ig_webdayview.js`
+|JavaScript support file for WebDayView
+
+| _(multiple images)_ 
+|Various images required to support the control are installed on your development machine, and must be deployed to the server in order for the control to function.
+
+|====
+
+== WebDialogWindow™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebDataMenu, WebDataTree, WebDropDown, WebProgressBar, WebImageViewer, WebSlider, WebSplitter, and WebTab control.
+
+|====
+
+== WebGauge™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.UltraWebGauge.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebGauge control.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+| _(gauge images)_ 
+|The GaugeImages folder must be created on the server to store chart images in file system image deployment. Additionally, this folder contains images needed to display the scroll bar if the EnableScrollbar property is set to True.
+
+|====
+
+ 
+
+== WebGroupBox™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.Misc.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebGroupBox and WebPanel controls.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|`ig_webpanel.js`
+|JavaScript support file for the WebPanel control.
+
+|====
+
+ 
+
+== WebHierarchicalDataGrid™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab control.
+
+|====
+
+== WebHierarchicalDataSource™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebDataMenu, WebDataTree, WebDropDown, WebProgressBar, WebImageViewer, WebSlider, WebSplitter, and WebTab controls.
+
+|====
+
+ 
+
+== WebHtmlEditor™
+
+ 
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.WebHtmlEditor.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebHtmlEditor™ control.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|`ig_htmleditor.js`
+|JavaScript Support File for WebHtmlEditor
+
+|`ig_htmleditor_ie.js`
+|JavaScript Support File for WebHtmlEditor (Internet Explorer support)
+
+|`ig_htmleditor_moz.js`
+|JavaScript Support File for WebHtmlEditor (Mozilla support)
+
+|`ig_htmleditor_upload.js`
+|JavaScript Support File for WebHtmlEditor uploading files functionality
+
+|localization-de-DE.xml 
+
+localization-es-ES.xml 
+
+localization-fr-FR.xml 
+
+localization.xml (US English)
+|The language localization files used when changing the LocalizationType. This files deploy alongside the JavaScript files.
+
+| _(multiple images)_ 
+|Various images required to support the control are installed on your development machine, and must be deployed to the server in order for the control to function.
+
+|====
+
+ 
+
+== WebImageButton™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.WebDataInput.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebEditor's controls and WebImageButton™.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|`ig_shared.js`
+|Standard JavaScript file used by all Infragistics ASP.NET controls, with client-side functionality.
+
+|`ig_button.js`
+|JavaScript Support File for Client Side WebDataInput functionality.
+
+|====
+
+ 
+
+== WebImageViewer™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebDataMenu, WebDataTree, WebDropDown, WebProgressBar, WebImageViewer, WebSlider, WebSplitter, and WebTab control.
+
+|====
+
+ 
+
+== WebPageStyler™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.Misc.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebPageStyler™ component.
+
+|====
+
+== WebResizingExtender™
+
+ 
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebResizingExtender™ control.
+
+|====
+
+ 
+
+== WebSchedule™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.WebUI.WebSchedule.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebDayView™, WebCalendarView™, WebScheduleInfo™, and WebMonthView™ controls.
+
+|Infragistics4.WebUI.WebScheduleDataProvider.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebScheduleOleDbProvider™ and WebScheduleSqlClientProvider™.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|`ig_webcalendarview.js`
+|JavaScript support file for WebCalendarView
+
+|`ig_webdayview.js`
+|JavaScript support file for WebDayView
+
+|`ig_webmonthview.js`
+|JavaScript support file for WebMonthView
+
+|`ig_webscheduleinfo.js`
+|JavaScript support file for WebScheduleInfo
+
+|`C:\Inetpub\wwwroot\aspnet_client\infragistics\{ProductVersion}\Styles`
+|Location of all the style sheets used by the WebSchedule controls. Make sure you copy the folder for the style you are using up to your server. These folders contain the Cascading Style Sheets used by the controls.
+
+|`C:\Inetpub\wwwroot\aspnet_client\infragistics\{ProductVersion}\Forms`
+|Location of the forms used by the forms project, which is displayed when you edit an activity/appointment. Make sure you copy this entire folder and its contents up to your server. 
+
+You must modify the properties on Forms\WebSchedule to make it an application in IIS by clicking the Create Application button on it's properties page. Failure to mark the Forms\WebSchedule virtual directory an application leads to an obscure ASP.NET parser error message about using a section registered as allowDefinition='MachineToApplication' beyond the application level.
+
+| _(multiple images)_ 
+|Various images required to support the control are installed on your development machine, and must be deployed to the server in order for the control to function.
+
+|====
+
+In addition, you will also need to deploy your database.
+
+* If you are using WebScheduleOleDbProvider, you must deploy an .mdb. A blank .mdb database file is provided for you in the following folder, depending on your operating system:
+
+** XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
+** Vista -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+
+* If you are using WebScheduleSqlClientProvider you must run the SQL installation script, WebSchedule2.sql to create a blank database. This script is provided in the following folder, depending on your operating system:
+
+** XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
+** Vista -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+
+Additionally, see link:webschedule-deploying-to-microsoft-sql-server.html[Deploying on SQL Server] for more information.
+
+== WebSlider™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, and WebSplitter control.
+
+|====
+
+ 
+
+== WebSplitter™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab control.
+
+|====
+
+== WebTab™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebCurrencyEditor,WebDatePicker, WebDateTimeEditor,WebMaskEditor, WebMonthCalendar, WebNumericEditor, WebPercentEditor,WebTextEditor,WebDialogWindow, WebHierarchicalDataGrid, WebHierarchicalDataSource, WebDataGrid, WebImageViewer, WebSlider, WebSplitter, and WebTab control.
+
+|====
+
+== WebUpload™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.jQuery.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebUpload and WebVideoPlayer control.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|ig.ui.upload.min.js
+|JavaScript File for the WebUpload control.
+
+| _(multiple images)_ 
+|Various images required to support the control are installed on your development machine, and must be deployed to the server in order for the control to function.
+
+|====
+
+== WebVideoPlayer™
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|Infragistics4.Web.jQuery.v{ProductVersion}.dll
+|$$.NET$$ Assembly containing the WebUpload and WebVideoPlayer control.
+
+|====
+
+The following files are required to support the product in an ASP.NET application:
+
+[options="header", cols="a,a"]
+|====
+|File Name|Description
+
+|ig.ui.videoplayer.min.js
+|JavaScript File for the WebVideoPlayer control.
+
+| _(multiple images)_ 
+|Various images required to support the control are installed on your development machine, and must be deployed to the server in order for the control to function.
+
+|====

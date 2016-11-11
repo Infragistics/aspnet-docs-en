@@ -1,0 +1,26 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-data-providers",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{88144478-C795-426C-BF04-40A5113B3C52}",  
+    "buildFlags": [],
+    "createdOn": "2005-08-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Data Providers
+
+Situated in the data access layer, the WebSchedule™ data provider is responsible for binding and objects in the WebScheduleInfo™ to tables and rows in your data store.
+
+The data provider class model was also created with extensibility in mind. You can extend the data provider to work with other data sources or enhanced object models.
+
+* link:webschedule-about-webdataproviders.html[About WebDataProviders]
+* link:webschedule-storing-snooze-values.html[Storing Snooze Values]
+* link:webschedule-add-an-activity-to-the-database.html[Add an Activity to the Database]
+* link:webschedule-handle-concurrency-conflicts.html[Handle Concurrency Conflicts]
+* link:webschedule-remove-an-activity-from-the-database.html[Remove an Activity from the Database]
+* link:webschedule-creating-a-custom-data-provider.html[Creating a Custom Data Provider]

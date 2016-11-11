@@ -1,0 +1,54 @@
+﻿////
+
+|metadata|
+{
+    "name": "whats-new-in-2016-volume-1",
+    "controlName": [],
+    "tags": [],
+    "guid": "69ad0921-6a3b-4035-808d-fee0d0c6666c",  
+    "buildFlags": [],
+    "createdOn": "2016-01-25T13:26:10.292549Z"
+}
+|metadata|
+////
+
+= What's New in 2016 Volume 1
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides an overview of the new things and new and enhanced features for the Infragistics® ASP.NET 2016 Volume 1 release.
+
+== What’s New Summary
+
+=== What’s new summary chart
+
+The following table summarizes what’s new in 2016 Volume 1 release. Additional details follow the summary table.
+
+==== <<_Ref367305754,General>>
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|<<AppStyling,Application Styling Configuration Add-in for Visual Studio is replaced by Infragistics AppStyling Extension in Visual Studio 2015>>
+|Add-ins are deprecated since Visual Studio 2015. We have created a new extension for Visual Studio 2015 which preserves the whole functionality from the Add-In.
+
+|====
+
+[[_Ref367305754]]
+
+== General
+
+[[AppStyling]]
+
+=== Application Styling Configuration Add-in for Visual Studio is replaced by Infragistics AppStyling Extension in Visual Studio 2015
+
+Add-ins are deprecated since Visual Studio 2015. If you want to style your projects directly from within Microsoft® Visual Studio® 2015 you can use Infragistics AppStyling Extension. The whole functionality from the add-in is preserved. To run the extension, open the Tools menu and select ‘Infragistics AppStyling Extension {ProductVersion}’. If you use previous version of Microsoft® Visual Studio®, you can still use the add-in.
+
+.Note:
+[NOTE]
+====
+Separate .vsix installer is provided for 2015.2 and 2015.1.
+====

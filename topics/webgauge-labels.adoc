@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-labels",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{639C7926-5698-40AF-B768-AC16C3469CAF}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Labels
+
+This section provides you with useful information about the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.labelappearance.html[Labels]"]  property of the WebGauge control, as well as a task-based procedure on how to add labels to your scale:
+
+* link:webgauge-about-gauge-labels.html[About Gauge Labels]
+* link:webgauge-add-labels-to-a-gauge.html[Add Labels to a Gauge]

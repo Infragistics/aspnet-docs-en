@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-websplitter",
+    "controlName": ["WebSplitter"],
+    "tags": [],
+    "guid": "{3FC9E674-AD1C-4CAE-94FA-B6FF55C6990A}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-01T20:41:56Z"
+}
+|metadata|
+////
+
+= WebSplitter
+
+If you're looking for an area that houses all of the overview/task-based information related to the WebSplitter™ control, you've come to the right place. This section contains valuable information about WebSplitter, ranging from what the control does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to access important information about the WebSplitter control.
+
+== link:websplitter-about-websplitter.html[About WebSplitter]
+
+In this section you'll find any information that will help you to better understand the functionalities of the WebSplitter control, as well as why you would want to use it to as part of building your applications.
+
+== link:websplitter-getting-started-with-the-websplitter.html[Getting Started with the WebSplitter]
+
+In order to get you up and running as quickly as possible with the WebSplitter control, we've provided you with information on how to get started using the control (i.e., adding WebSplitter to a form).
+
+== link:websplitter-using-websplitter.html[Using WebSplitter]
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by the WebSplitter control.
+
+== link:websplitter-websplitter-accessibility-compliance.html[WebSplitter Accessibility Compliance]
+
+This topic outlines the way in which WebSplitter meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebSplitter control.
+
+== link:websplitter-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebSplitter control. The namespaces and classes listed in this topic link conveniently into the link:web-api-reference-guide.html[API Reference Guide] section of the Infragistics ASP.NET help.
+
+== link:websplitter~infragistics.web.ui_namespace.html[Client-Side Object Model (CSOM) Overview]
+
+The WebSplitter™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the splitter without the need for server-side post-backs.

@@ -1,0 +1,130 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-enabling-row-deleting",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Editing","Grids"],
+    "guid": "{A11EB4D4-6625-4AED-979C-823DD50DA1B6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Enabling Row Deleting (WebHierarchicalDataGrid)
+
+== Before You Begin
+
+To delete data in WebHierarchicalDataGrid™, add the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]  behavior to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors]"]  collection. This behavior allows your end-users to delete rows in WebHierarchicalDataGrid. You also need the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection.html[Selection]"]  behavior enabled for deleting to function in the UI. When enabling RowDeleting in the designer you will be prompted to add the Selection behavior as well.
+
+A row can be deleted by selecting the row and pressing the delete key.
+
+.Note:
+[NOTE]
+====
+WebHierarchicalDataGrid commits row deleting operations immediately; a row delete causes an immediate postback, persisting the change to the data source.
+====
+
+.Note:
+[NOTE]
+====
+You must have a supported data source for this type of automatic update to occur. If your data source cannot be automatically updated by WebHierarchicalDataGrid, you must handle the update events and update the data manually.
+====
+
+== What You Will Accomplish
+
+You will learn to enable row deletion behavior in the WebHierarchicalDataGrid control.
+
+== Follow these Steps
+
+[start=1]
+. Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource™ component retrieving data from the Categories and Products table. For more information on doing this, see the link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Using WebHierarchicalDataSource] topic. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datakeyfields.html[DataKeyFields]"]  property for each Data source that you bind to the HierarchicalDataGrid so that changes can be updated to the data source.
+[start=2]
+. In the Microsoft® Visual Studio property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (…) button to launch the Behaviors Editor dialog.
+[start=3]
+. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property of the EditingCore and Row Deleting Behaviors to True. This enables all the child levels to automatically inherit row deleting behavior. The property’s default value is False.
+[start=4]
+. Check the checkbox next to Row Deleting from the list of behaviors on the left to enable the behavior. You are prompted to add Selection as well. Notice that the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]  behavior is also added.
+[start=5]
+. Click Yes to confirm the prompt. The Selection behavior with the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~rowselecttype.html[RowSelectType]"]  properties set to Row and Single respectively is added to WebHierarchicalDataGrid.
+[start=6]
+. Click Apply then Ok.
+[start=7]
+. Set the WebHierarchicalDataGrid  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~enableajax.html[EnableAjax]"]  property to True. Now when you select a row in WebHierarchicalDataGrid and press the DELETE key, the row is deleted from the control as well as the underlying data source.
+
+You can also use the following code to enable row deleting.
+
+*In HTML:*
+
+----
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" 
+    Height="350px" Width="400px">
+    <Behaviors>
+        <ig:EditingCore EnableInheritance="True">
+            <Behaviors>
+                <ig:RowDeleting EnableInheritance="True" />
+            </Behaviors>
+        </ig:EditingCore>
+        <ig:Selection CellClickAction="Row" RowSelectType="Single">
+        </ig:Selection>
+        <ig:RowSelectors>
+        </ig:RowSelectors>
+    </Behaviors>
+</ig:WebHierarchicalDataGrid>
+----
+
+*In Visual Basic:*
+
+----
+Me.WebHierarchicalDataGrid1.Behaviors.EditingCore.EnableInheritance = True
+Me.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowDeleting.Enabled = True
+Me.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowDeleting.EnableInheritance = True
+Me.WebHierarchicalDataGrid1.Behaviors.Selection.Enabled = True
+Me.WebHierarchicalDataGrid1.Behaviors.Selection.CellClickAction = CellClickAction.Row
+Me.WebHierarchicalDataGrid1.Behaviors.Selection.RowSelectType = SelectType.Single
+Me.WebHierarchicalDataGrid1.Behaviors.RowSelectors.Enabled = True
+----
+
+*In C#:*
+
+----
+this.WebHierarchicalDataGrid1.Behaviors.EditingCore.EnableInheritance = true;
+this.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowDeleting.Enabled = true;
+this.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowDeleting.EnableInheritance = true;
+this.WebHierarchicalDataGrid1.Behaviors.Selection.Enabled = true;
+this.WebHierarchicalDataGrid1.Behaviors.Selection.CellClickAction = CellClickAction.Row;
+this.WebHierarchicalDataGrid1.Behaviors.Selection.RowSelectType = SelectType.Single;
+this.WebHierarchicalDataGrid1.Behaviors.RowSelectors.Enabled = true;
+----
+
+You can also delete a row programmatically on the client by using the following code:
+
+*In Javascript:*
+
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var parentGrid = grid.get_gridView();
+----
+
+----
+// Remove first PARENT row
+parentGrid.get_rows().remove(parentGrid.get_rows().get_row(0));
+var childGrid = grid.get_gridView().get_rows().get_row(0).get_rowIslands(0)[0];
+// Remove first CHILD row 
+childGrid.get_rows().remove(childGrid.get_rows().get_row(0));
+----
+
+== Related Topics
+
+link:webhierarchicaldatagrid-activation.html[Activation]
+
+link:webhierarchicaldatagrid-cell-editing.html[Cell Editing]
+
+link:webhierarchicaldatagrid-enabling-paging.html[Enabling Paging]
+
+link:webhierarchicaldatagrid-enabling-row-adding.html[Enabling Row Adding]
+
+link:webhierachicaldatagrid-selection.html[Selection]
+
+link:webhierarchicaldatagrid-sorting.html[Sorting]

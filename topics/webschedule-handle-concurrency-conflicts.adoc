@@ -1,0 +1,103 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-handle-concurrency-conflicts",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{6CACCBAA-DC9D-407B-B098-AC12A4DF9DFF}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Handle Concurrency Conflicts
+
+In multi-user WebSchedule™ applications, a concurrency conflict occurs when two users simultaneously update an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"] . Only changes made by the first user are accepted.
+
+For example, Adam and Becky are looking at the same appointment and they each open the "Edit Appointment" dialog at 9:30. If Adam commits his changes at 9:35, and Becky commits her changes at 9:40 based on looking at appointment information as it had existed prior to Adam's change, then Becky has caused a concurrency conflict.
+
+The routine manner for dealing with concurrency conflicts is to notify Becky that someone else has already modified the appointment since the last time she opened it, abandon her change and give her refreshed information about the appointment.
+
+This example shows you how to do this in your WebSchedule application by handling the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider~dataprovidererror_ev.html[DataProviderError]"]  event. You will check whether the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.dataprovidererroreventargs~condition.html[ErrorCondition]"]  property indicates a concurrency conflict has occurred, and if so, cause a pop-up message box to explain the situation to users that have submitted a change based on old information.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.Shared
+Imports Infragistics.WebUI.WebSchedule
+...
+Private Sub WebScheduleOleDbProvider1_OnError(ByVal sender As Object, _
+	ByVal args As DataProviderErrorEventArgs) _
+	Handles WebScheduleOleDbProvider1.DataProviderError
+	' Check that the cause of the error is a Concurrency Conflict,
+	' and not another data provider error.
+	If ( args.Condition = ErrorCondition.ConcurrencyConflict ) Then
+		' Create a StringBuilder to add some Javascript code.
+		Dim jsAlertBuf As New StringBuilder()
+		' Build a Javascript block that will pop-up an explanatory
+		' message for the user.
+		jsAlertBuf.Append("<script language='Javascript'><!--" + vbCrLf)
+		jsAlertBuf.Append("alert(""Another user has already modified")
+		jsAlertBuf.Append(" the appointment you requested to change,")
+		jsAlertBuf.Append(" therefore your changes could not be made")
+		jsAlertBuf.Append(" to the database."");" + vbCrLf)
+		jsAlertBuf.Append("-$$->$$</script>")
+		' Register that Javascript block with ASP.NET so it gets
+		' rendered to the client and the message box appears.
+		Page.RegisterStartupScript("wsAlert", jsAlertBuf.ToString()) 
+	ElseIf ( args.Condition <> ErrorCondition.OK ) Then 
+		' When the cause of a data provider error is not a
+		' concurrency conflict, it is a good idea to re-throw 
+		' the underlying Exception.
+		Throw args.Exception 
+	End If 
+End Sub
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.Shared;
+using Infragistics.WebUI.WebSchedule;
+...
+private void WebScheduleOleDbProvider1_OnError(object sender,
+	DataProviderErrorEventArgs args)
+{
+	// Check that the cause of the error is a Concurrency Conflict,
+	// and not another data provider error.
+	if( args.Condition == ErrorCondition.ConcurrencyConflict )
+	{
+		// Create a StringBuilder to add some Javascript code.
+		StringBuilder jsAlertBuf = new StringBuilder();
+		// Build a Javascript block that will pop-up an explanatory
+		// message for the user.
+		jsAlertBuf.Append("<script language=Javascript><!--\r\n");
+		jsAlertBuf.Append("alert(\"Another user has already modified");
+		jsAlertBuf.Append(" the appointment you requested to change,");
+		jsAlertBuf.Append(" therefore your changes could not be made");
+		jsAlertBuf.Append(" to the database.\");\r\n-$$->$$</script>");
+		// Register that Javascript block with ASP.NET so it gets
+		// rendered to the client and the message box appears.
+		Page.RegisterStartupScript("wsAlert", jsAlertBuf.ToString());
+	}
+	else if( args.Condition != ErrorCondition.OK )
+	{
+		// When the cause of a data provider error is not a
+		// concurrency conflict, it is a good idea to re-throw
+		// the underlying Exception.
+		throw args.Exception;
+	}
+}
+----
+
+== Related Topics
+
+link:webschedule-connecting-webschedule-to-a-database-in-visual-studio-2005.html[Connecting WebSchedule to a Database in Visual Studio 2005]
+
+link:webschedule-binding-to-access-data-source-using-webschedulegenericdataprovider.html[Binding to Access Data Source Control Using WebScheduleGenericDataSource]
+
+link:webschedule-binding-to-a-data-set-with-webschedulegenericdataprovider.html[WebSchedule Binding to a Data Set with WebScheduleGenericDataProvider]
+
+link:webschedule-webschedulegenericdataprovider-crud-statements-for-sql-data-source.html[WebScheduleGenericDataProvider CRUD Statements for SQL Data Source]

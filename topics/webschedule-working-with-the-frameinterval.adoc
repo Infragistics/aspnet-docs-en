@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-working-with-the-frameinterval",
+    "controlName": ["WebSchedule"],
+    "tags": ["Scheduling","Tips and Tricks"],
+    "guid": "{4FFB8A50-E2CB-42D6-B4CA-81CDB7ADB350}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Working with the Frame Interval
+
+WebSchedule™ uses the concept of a Frame Interval to control and limit the number and range of database  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  records that are read during each web page life cycle. The  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.frameinterval.html[FrameInterval]"]  object itself exposes four primary properties:  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.frameinterval~startdateutc.html[StartDateUTC]"] ,  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.frameinterval~enddateutc.html[EndDateUTC]"] ,  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.frameinterval~startdate.html[StartDate]"] , and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.frameinterval~enddate.html[EndDate]"] .
+
+.Note:
+[NOTE]
+====
+All date and time calculations for WebSchedule are carried out using Universal Coordinated Time, (UTC) on the server. The UTC values are then converted to the appropriate local time zone for rendering down to the client browser. In addition, all date/time values in the data source are treated as UTC values. This means that all queries occur using UTC values as parameters in order to select the appropriate activities from the data source.
+====
+
+By default, the FrameInterval within WebSchedule is initialized and expanded as necessary by the particular view controls that are attached to WebScheduleInfo for the purpose of displaying Activities to the user on the client. The initialization and sizing of the FrameInterval occurs within the DataBind process and is exposed through the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~frameintervalchanging_ev.html[FrameIntervalChanging]"]  event to any listeners that are interested in ensuring that the FrameInterval is large enough to meet their needs. View elements like WebDayView™ and WebMonthView™ each reference the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.smartdate~utcnow.html[ActiveDayUtc]"]  property to determine the particular interval of time that is appropriate for each.
+
+By setting the FrameInterval.StartDateUTC and FrameInterval.EndDateUTC properties, the FrameInterval is expanded to the necessary size for all elements. The FrameInterval size cannot be reduced by setting either the StartDateUTC or EndDateUTC values. Smaller values are simply ignored. In other words, the FrameInterval starts with the ActiveDay value and expands forwards and backwards as needed.
+
+So for example, if the ActiveDayUtc property is set to May 15th, 2000, the WebDayView showing three days will set the FrameInterval.StartDateUTC to 5/15/2000 and the FrameInterval.EndDateUTC to 5/17/2000. The WebMonthView, if attached to the same WebScheduleInfo, will set the FrameInterval.StartDateUTC to 4/30/2000 and the FrameInterval.EndDateUTC to 6/3/2000. This allows WebMonthView to display Activities for leading and trailing days of the month containing the ActiveDayUtc. Normally, WebSchedule applications do not concern themselves with setting or interrogating the FrameInterval. It is managed internally by WebScheduleInfo and the specific view elements that are attached to it.

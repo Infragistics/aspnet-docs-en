@@ -1,0 +1,57 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-drag-and-drop-handle-server-side-event",
+    "controlName": ["WebDataTree"],
+    "tags": ["Events"],
+    "guid": "7b57bd4d-0abf-4940-be51-48b1ce263c3a",  
+    "buildFlags": [],
+    "createdOn": "2010-06-03T08:48:06.370581Z"
+}
+|metadata|
+////
+
+= Handle Server Side Event
+
+When using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] drag and drop functionality, there are several server-side events that you can handle to perform your logic. The following code shows how you can handle the WebDataTree control’s serverNodeDropped event and access the event args:
+
+*In HTML:*
+
+----
+        <ig:WebDataTree ID="WebDataTree1" runat="server"
+        OnNodeDropped = "serverNodeDropped"
+         >
+            <Nodes>
+                <ig:DataTreeNode Text="Node1">
+                </ig:DataTreeNode>
+                <ig:DataTreeNode Text="Node2">
+                </ig:DataTreeNode>
+            </Nodes>
+        </ig:WebDataTree>
+             <asp:TextBox ID="resultTextBox" runat="server" />
+----
+
+*In C#:*
+
+----
+    protected void serverNodeDropped(object sender, DataTreeNodeDroppedEventArgs e)
+    {
+        this.resultTextBox.Text += string.Format("Node Dropped: {0} <br>", e.SourceNodes[0].Text);
+    }
+----
+
+
+WebDataTree drag and drop has the following new server-side events:
+
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~nodeadded_ev.html[NodeAdded]* – occurs after add/insert, whenever node has been successfully added to the collection.
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~noderemoved_ev.html[NodeRemoved]* – occurs after removale, whenever node has been successfully removed from the collection.
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~nodedropped_ev.html[NodeDropped]* – occurs just after node has been successfully dropped
+
+== Related Topics
+
+link:webdatatree-drag-and-drop-client-side-api.html[Client-side API]
+
+link:webdatatree-drag-and-drop-client-side-events.html[Client-side events]
+
+link:webdatatree-drag-and-drop-modes.html[Drag and Drop modes]

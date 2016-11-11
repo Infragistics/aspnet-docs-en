@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcurrencyeditor-styling-negative-text-in-webcurrencyeditor",
+    "controlName": ["WebCurrencyEditor"],
+    "tags": ["Editing","Styling","Tips and Tricks"],
+    "guid": "{92D03E77-0669-499C-8F6A-6A7E2B084536}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T10:39:59Z"
+}
+|metadata|
+////
+
+= Styling negative text in WebCurrencyEditor
+
+WebCurrencyEditor™ allows you to style negative currency values by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~negativecssclass.html[NegativeCssClass]"]  property. This will make negative values in the WebCurrencyEditor control apparent.
+
+== To style negative text in WebCurrencyEditor:
+
+[start=1]
+. Place a ScriptManager component and a WebCurrencyEditor control on the WebForm.
+[start=2]
+. Include the following code in your ASPX source to define the negative text CSS class. Once this CSS class is associated to the WebCurrencyEditor control, the text will change to the color red as soon as a negative value is typed into the control.
+
+*In HTML:*
+
+----
+<style type="text/css">
+     .NegativeText
+     {
+        color : Red;
+     } 
+    </style>
+----
+
+[start=3]
+. Set the NegativeCssClass property either using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebCurrencyEditor1.NegativeCssClass = "NegativeText"
+----
+
+*In C#:*
+
+----
+WebCurrencyEditor1.NegativeCssClass = "NegativeText";
+----
+
+[start=4]
+. Save and run your application. Type a negative value in the editor and as soon as the control loses focus you will observe that the CSS class gets applied to the editor similar to the following image:
+
+image::images\WebCurencyEditor_Styling_negative_text_in_WebCurrencyEditor_01.png[]

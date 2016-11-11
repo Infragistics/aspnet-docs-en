@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdayview-csom",
+    "controlName": [],
+    "tags": ["API","Events","Getting Started"],
+    "guid": "{46F714DB-CE28-4E8F-9CAA-3E28E5CC3062}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDayView CSOM
+
+WebDayView™ exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledge JavaScript objects, events, and utility functions that enable developers to program significant units of functionality pertaining to the WebDayView control without the need for server-side post-backs.
+
+In general, the object model is derived directly from the object model as it exists on the server. The property names, events, parameters and return values have very similar meanings to their counterparts on the server. However, where noted, properties are sometimes read-only on the client. These properties are only for informational purposes and must not be altered.
+
+Client-Side Object Model reference for the WebDayView control:
+
+link:webdayview-utility-functions-csom.html[WebDayView Utility Functions]
+
+link:webdayview-object-csom.html[WebDayView Object]
+
+____
+link:webdayview-client-side-events-csom.html[Client-Side Events]
+____

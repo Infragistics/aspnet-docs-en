@@ -1,0 +1,156 @@
+﻿////
+|metadata|
+{
+    "name": "webhtmleditor-populating-custom-list-objects-into-webhtmleditors-drop-down-lists",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","Templating"],
+    "guid": "{B42A4F92-176F-44EF-99A5-DB42889626CE}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Populating Custom List Objects into WebHtmlEditor's Drop-Down Lists
+
+WebHtmlEditor™ features several drop-down list boxes on its standard toolbar. These drop-down lists support being populated with custom list items. See the topic, link:webhtmleditor-drop-down-lists-of-webhtmleditor-toolbar.html[Toolbar Drop-Downs Lists] for a list of these drop-down lists. This topic also describes common approaches to how you can populate different types of drop-down lists with your own items. The information in this topic applies fairly evenly to all drop-down and custom lists.
+
+WebHtmlEditor provides list-typed properties for several of the toolbar drop-down lists (as shown below).
+
+[cols="a,a"]
+|====
+
+|image::images/WebHtmlEditor_Overview_Populating_Custom_List_Objects_1.PNG[] 
+
+FontNameList
+|image::images/WebHtmlEditor_Overview_Populating_Custom_List_Objects_2.PNG[] 
+
+FontSizeList
+
+|image::images/WebHtmlEditor_Overview_Populating_Custom_List_Objects_3.PNG[] 
+
+FontFormattingList
+|image::images/WebHtmlEditor_Overview_Populating_Custom_List_Objects_4.PNG[] 
+
+FontStyleList
+
+|====
+
+In the walkthrough, link:webhtmleditor-using-the-webhtmleditor-designer.html[Using the WebHtmlEditor Designer], you learned how to use the properties dialog box when adding fixed items to the FontStyleList (or any of the other list objects) at design time. However, if you need items that respond to more dynamic circumstances (such as a list of the current user's favorite styles), then you must populate items into the lists at run time, as in the following example.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.WebHtmlEditor
+...
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e As _ 
+  System.EventArgs) Handles MyBase.Load
+	If( Not Page.IsPostBack ) Then
+		' Add a custom style to FontStyleList using a CSS style definition.
+		Me.WebHtmlEditor1.FontStyleList.Add( "strikeout", _
+		  "color: red; text-decoration: line-through;")
+	End If
+End Sub
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.WebHtmlEditor;
+...
+private void Page_Load( object sender, System.EventArgs e)
+{
+	if( !Page.IsPostBack)
+	{
+		// Add a custom style to FontStyleList using a CSS style definition.
+		this.WebHtmlEditor1.FontStyleList.Add( "strikeout", 
+		  "color:red; text-decoration:line-through;");
+	}
+}
+----
+
+.Note:
+[NOTE]
+====
+After the Load event fires, WebHtmlEditor populates its Toolbar drop-down lists with the items it finds in these special list objects. When adding items through WebHtmlEditor's list properties, remember to add the items during the Load event (or earlier in the ASP.NET Page lifecycle). Items added after the Load event may not display as expected in the Toolbar drop-down list.
+====
+
+
+Another example of a custom list with a toolbar drop-down list is the Insert list, which contains several items (e.g., "Greeting" and "Signature"). When the user selects one of these items, text is inserted at the current caret position within the document.
+
+Suppose your Web application let users create content for regulatory documents and you want to make a library of boilerplate text passages available (such as the customary disclaimer of forward-looking statements commonly found in the press releases of public companies.) Users should be able to select these predefined text passages by a short, descriptive name to save themselves some typing.
+
+Adding these custom items to the Insert Toolbar drop-down list requires you to create (name, value) pairs as  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbardropdownitem.html[ToolbarDropDownItem]"]  objects, and then add them to the Toolbar drop-down list during the PreRender event of the Page, as shown in the example below.
+
+*In Visual Basic:*
+
+----
+Private Sub Page_PreRender(ByVal sender As System.Object, ByVal e As _ 
+  System.EventArgs) Handles MyBase.PreRender
+	If( Not Page.IsPostBack ) Then
+	Dim dropDown As ToolbarDropDown
+	' Find the Insert drop down item in the Toolbar.Items collection.
+	dropDown = CType( _
+	  Me.WebHtmlEditor1.Toolbar.Items.GetByType(ToolbarItemType.Insert), ToolbarDropDown)
+	' Add standard disclaimer for correspondence to Insert drop down.
+	dropDown.Items.Add( New ToolbarDropDownItem( _
+	  "Disclaimer", _
+	  "THIS MESSAGE IS PROVIDED AS IS WITHOUT" + _
+	  " WARRANTY OR GUARANTEE FOR ANY PURPOSE." ) )
+	End If
+End Sub
+----
+
+*In C#:*
+
+----
+private void Page_PreRender( object sender, System.EventArgs e)
+{
+	if ( !Page.IsPostBack)
+	{
+		// Find the Insert drop down item in the Toolbar.Items collection.
+		ToolbarDropDown dropDown = (ToolbarDropDown)
+		this.WebHtmlEditor1.Toolbar.Items.GetByType(
+		  ToolbarItemType.Insert);
+		// Add standard disclaimer for correspondence to Insert drop down.
+		dropDown.Items.Add( new ToolbarDropDownItem( "Disclaimer",
+		  "THIS MESSAGE IS PROVIDED AS IS WITHOUT " + 
+		  "WARRANTY OR GUARANTEE FOR ANY PURPOSE." ) );
+	}
+}
+. . .
+private void InitializeComponent()
+{    
+	// Handle the Page.PreRender event.
+	this.PreRender += new System.EventHandler(this.Page_PreRender);
+}
+----
+
+
+
+.Note:
+[NOTE]
+====
+Whenever you add content to a Toolbar drop-down list as in the above example, it is important to do so within the PreRender event of the Page because the drop-down lists are initially filled with their default values during the Load event. If you had instead attempted to add content to a Toolbar drop-down list during Load, they would be overwritten and your custom items may not display as expected.
+====
+
+
+The following table summarizes the conditions when it is best to use each practice.
+
+[options="header", cols="a,a"]
+|====
+|Condition|Best Practice
+
+|All items are known in advance, and WebHtmlEditor exposes a corresponding list-typed property.
+|Use the WebHtmlEditor properties dialog box (General tab).
+
+|List items may change dynamically, and WebHtmlEditor exposes a corresponding list-typed property.
+|During the Page.Load event handler use the Add, Clear, and/or Remove methods of the list-typed property corresponding to the drop-down list.
+
+|List items may change dynamically, and WebHtmlEditor does not expose a corresponding list-typed property.
+|During the Page.PreRender event handler, get the ToolbarItemType of the drop-down list corresponding to the list-typed property. Call the Add, Clear, and/or Remove methods on it to populate the drop-down list with any (name, value) pairs you want.
+
+|List items may change dynamically, and WebHtmlEditor exposes a corresponding list-typed property, but it doesn't let you differentiate between the name shown to the user and the value applied.
+|Same as above; see link:webhtmleditor-make-the-fontsize-drop-down-list-render-previews.html[Make the FontSize Drop-Down List Render Previews].
+
+|====

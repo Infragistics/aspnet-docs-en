@@ -1,0 +1,86 @@
+﻿////
+|metadata|
+{
+    "name": "webtab-tab-moving",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I"],
+    "guid": "{2638292F-4A81-4BAD-9CF8-F40946F34B33}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Tab Moving
+
+WebTab™ supports tab moving by your end users with a mouse drag. You can enable this feature by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~tabmoving.html[TabMoving]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabmoving~enabled.html[Enabled]"]  property to True.
+
+.Note:
+[NOTE]
+====
+It is not recommended to use this feature when multi-row tabs are enabled because of the limited support.
+====
+
+You can also apply your own Css classes for the main html element and the mark-up copy of the tab item by using the TabMoving object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabmoving~cssclass.html[CssClass]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabmoving~markupcssclass.html[MarkUpCssClass]"]  properties respectively.
+
+*In HTML:*
+
+----
+<TabMoving Enabled="True" CssClass="mainCss" MarkUpCssClass="copyCss" />
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.TabMoving.Enabled = true
+'Assuming mainCss and copyCss as your Css classes
+WebTab1.TabMoving.CssClass = "mainCss"
+WebTab1.TabMoving.MarkUpCssClass = "copyCss"
+----
+
+*In C#:*
+
+----
+WebTab1.TabMoving.Enabled = true;
+//Assuming mainCss and copyCss as your Css classes
+WebTab1.TabMoving.CssClass = "mainCss";
+WebTab1.TabMoving.MarkUpCssClass = "copyCss";
+----
+
+.Note:
+[NOTE]
+====
+TabMoving feature affects the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~visibleindex.html[VisibleIndex]"]  property of the tab item. This property can be set both on the server and on the client.
+====
+
+== Related Topics
+
+link:webtab-about-webtab.html[Understanding WebTab]
+
+link:webtab-getting-started-with-webtab.html[Getting Started with WebTab]
+
+link:webtab-header-and-content-panes.html[Header and Content Panes]
+
+link:webtab-tab-states.html[Tab States]
+
+link:webtab-ajax-indicator-support-for-webtab.html[Ajax Indicator Support for WebTab]
+
+link:webtab-display-modes.html[Display Modes]
+
+link:webtab-animations.html[Animations]
+
+link:webtab-handling-overflow-in-webtab.html[Handling Overflow in WebTab]
+
+link:webtab-load-on-demand.html[Load on Demand]
+
+link:webtab-orientation-and-alignment.html[Orientation and Alignment]
+
+link:webtab-overlapping-tabs.html[Overlapping Tabs]
+
+link:webtab-scrolling.html[Scrolling]
+
+link:webtab-validation-in-webtab.html[Validation in WebTab]
+
+link:webtab-api-overview.html[API Overview]
+
+link:webtab-client-side-object-model.html[Client-Side Object Model(CSOM) Overview]

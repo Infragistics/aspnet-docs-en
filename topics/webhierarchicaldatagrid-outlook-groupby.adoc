@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-outlook-groupby",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids","Grouping","How Do I"],
+    "guid": "{3900EC0F-8EF7-4B12-8DD9-ADEB173A0757}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Outlook GroupBy
+
+The WebHierarchicalDataGrid™ control's Outlook GroupBy feature allows end-users to group their data based on common values in a column. Click the following links to find out more about Outlook GroupBy.
+
+link:webhierarchicaldatagrid-about-outlook-groupby.html[About Outlook GroupBy]
+
+In this section you can learn more about the outlook groupby functionality of the WebHierarchicalDataGrid control, how to enable and customize it.
+
+link:webhierarchicaldatagrid-custom-group-by-name.html[Custom Group by Name]
+
+In this section you can learn how to override the default groupby behavior and implement a custom one.
+
+link:webhierarchicaldatagrid-custom-text-in-group-row.html[Custom Text in Group Row]
+
+You can learn how to change the text in the group row in this section.
+
+link:webhierarchicaldatagrid-group-columns-from-code-behind.html[Group Columns from Code Behind]
+
+This section explains how to group columns from the code behind.
+
+link:webhierarchicaldatagrid-outlook-groupby-with-behaviors.html[Outlook GroupBy with Behaviors]
+
+In this section you can learn how the various supported behaviours work when groupby is enabled.
+
+link:webhierarchicaldatagrid-referencing-rows-when-using-outlook-groupby.html[Referencing Rows When Using Outlook GroupBy]
+
+In this section you can learn how to reference rows when outlook groupby is enabled.

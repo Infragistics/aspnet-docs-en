@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcurrencyeditor-setting-the-culture-of-webcurrencyeditor",
+    "controlName": ["WebCurrencyEditor"],
+    "tags": ["Editing","How Do I","Localization"],
+    "guid": "{9CBC24B3-B3A6-4CCC-8EE2-7A3A1A3555C4}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T17:16:12Z"
+}
+|metadata|
+////
+
+= Setting the Culture of WebCurrencyEditor
+
+WebCurrencyEditor™ allows you set a specific culture on how to display the currency by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~culture.html[Culture]"]  property. WebCurrencyEditor relies on the CultureInfo class in order to format its data. By default it will use the current culture that is set on your system.
+
+You can set the Culture property either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+'Specify the culture or locale you want to use
+ Dim c As New System.Globalization.CultureInfo("en-GB")
+'Assign the CultureInfo object to the WebCurrencyEditor's culture
+ WebCurrencyEditor1.Culture = c
+----
+
+*In C#:*
+
+----
+//Specify the culture or locale you want to use
+System.Globalization.CultureInfo c = new System.Globalization.CultureInfo("en-GB");
+//Assign the CultureInfo object to the WebCurrencyEditor's Culture
+WebCurrencyEditor1.Culture = c;
+----
+
+image::images\WebCurrencyEditor_Setting_the_culture_of_WebCurrencyEditor_01.png[]

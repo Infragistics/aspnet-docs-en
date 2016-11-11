@@ -1,0 +1,63 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-add-an-activity-on-the-server",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{F7EB1E36-D604-4128-80CF-F489FCB393D3}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Add an Activity on the Server
+
+In server-side code, you can add a new  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  to the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activitiescollection.html[Activities]"]  collection of the WebScheduleInfo™ after data binding to render that appointment for the current page request. Because your intention is only to render this activity, the PreRender event of the Page class is the best place to put it.
+
+.Note:
+[NOTE]
+====
+The Activities collection is never preserved in ViewState (even when ViewState is enabled) by design because of its redundancy with the data store. On each page request, the WebScheduleInfo re-binds to that data store. If you want to add this activity programmatically to the data store, see link:webschedule-add-an-activity-to-the-database.html[How to Add an Activity to the Database].
+====
+
+If you do not see the Activity you have added, verify that you have called the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~databind.html[DataBind]"]  method on WebScheduleInfo before adding the Activity. Data binding clears the Activities collection in order to fill it with current scheduling information from the data store.
+
+For information on creating the activity, see link:webschedule-create-an-activity-using-code.html[How to Create an Activity in Code].
+
+To add an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"] , you must call the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activitiescollection~add.html[Add]"]  method on the Activities collection with this newly initialized Activity after data binding.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.Shared
+Imports Infragistics.WebUI.WebSchedule
+...
+Private Sub Page_PreRender(ByVal sender As Object, _
+	ByVal e As EventArgs) Handles MyBase.PreRender
+	'Data-bind manually before adding Activities to the collection.
+	Me.WebScheduleInfo1.DataBind()
+	'Create and initialize an Activity through my helper function.
+	Dim appt As Appointment = Me.CreateAppointment()
+	'Add Activity to the Activities collection on WebScheduleInfo1.
+	Me.WebScheduleInfo1.Activities.Add(appt)
+End Sub
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.Shared;
+using Infragistics.WebUI.WebSchedule;
+...
+private void Page_PreRender(object sender, EventArgs e)
+{
+	// Data-bind manually before adding Activities to the collection.
+	this.WebScheduleInfo1.DataBind();
+	// Create and initialize an Activity through my helper function.
+	Appointment appt = this.CreateAppointment();
+	// Add Activity to the Activities collection on WebScheduleInfo1.
+	this.WebScheduleInfo1.Activities.Add(appt);
+}
+----

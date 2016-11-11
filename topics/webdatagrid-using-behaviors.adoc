@@ -1,0 +1,54 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-using-behaviors",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids","Sorting"],
+    "guid": "{B665FB6E-6E5F-414E-9186-2907C03B2FE8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Adding a Behavior at Design Time
+
+== Before You Begin
+
+To enable features and functionality in WebDataGrid™ use the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. You can add behaviors to this collection in order to enable WebDataGrid’s various features, such as sorting and paging. Behaviors are automatically enabled as you add them to the collection. You can disable a behavior without removing it from the collection by setting its Enabled property to False. Any added behaviors are displayed and accessible through the Microsoft® Visual Studio™ property window under WebDataGrid’s behaviors collection.
+
+Properties and client-side events that apply to a behavior can be adjusted when adding the behavior or in the property window after adding the behavior.
+
+== What You Will Accomplish
+
+You will learn how to enable sorting for WebDataGrid using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting.html[Sorting]"]  Behavior.
+
+== Follow these Steps
+
+[start=1]
+. Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Binding WebDataGrid to a SQL Data Source].
+[start=2]
+. In the property window, locate the Behaviors property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+[start=3]
+. Check the CheckBox next to Sorting from the list of behaviors on the left to enable the behavior.
+[start=4]
+. Leave  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~sortingmode.html[SortingMode]"]  as Single in the properties.
+
+image::images\WebDataGrid_Using_Behaviors_01.png[]
+
+[start=5]
+. Click Ok to close the dialog window.
+[start=6]
+. Expand the Behaviors collection in the properties grid to see that Sorting has been added.
+
+image::images\WebDataGrid_Using_Behaviors_02.png[]
+
+[start=7]
+. Run the application. You can sort one column at a time in WebDataGrid.
+
+image::images\WebDataGrid_Sort_Columns_in_Code_01.png[]
+
+== Related Topic
+
+link:webdatagrid-adding-a-behavior-at-runtime.html[Adding a Behavior at Runtime]

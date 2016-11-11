@@ -1,0 +1,57 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdayview-about-webdayview",
+    "controlName": ["WebSchedule"],
+    "tags": ["Getting Started","Scheduling"],
+    "guid": "{4BF32CDA-04CD-4534-8101-C974B4A46068}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= About WebDayView
+
+== The WebDayView
+
+The WebDayView™ control is a time segment-oriented view on the WebSchedule. End users may view, add, update, and remove activities covering one or more days. Up to fourteen days can be displayed side-by-side. The granularity of the WebDayView isolates differences in activity with a granularity that can go down to minutes, and identifies time periods having conflicting, multi-tasking, or no activity. It provides the end user with a rich and intuitive means of manipulating aspects of an activity's timing and length.
+
+link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]  are shown for an individual link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource] over the course of a week. When the resource name matches the name of the logged on end user (as authenticated by the application) the end user can receive reminder notifications of pending or overdue activities. Otherwise the end user is assumed to be reviewing the schedule information for the resource.
+
+image::images\WebSchedule_Features_WebDayView_01.png[]
+
+== Navigation
+
+Navigate from day to day by clicking on one of the navigation arrows shown in the title bar area. When multiple WebSchedule views are connected to the same WebScheduleInfo, a change in active day on one view reflects immediately on the others.
+
+== Adding Activities
+
+End users add an activity by double-clicking within a time slot to launch the Add Appointment dialog. Adjust the duration of an activity by selecting the activity and dragging it to be taller or shorter. Change the start time of an activity by selecting it and moving it to another time slot. As with other WebSchedule views, end users can also update the other properties of an existing activity like it's location by double-clicking on the activity listed in the WebDayView to launch the Edit Appointment dialog. From within the Edit Appointment dialog, end users may remove an activity by clicking the Delete button on the tool bar.
+
+== All Day Event Area
+
+At the top of the WebDayView there appears an area for all-day events and multi-day events encompassing the day being displayed (multi-day events that start or end on the day being displayed are presented as ordinary activities starting at midnight, or ending at midnight, respectively.)
+
+Along the lefthand side of each activity is a bar indicating how time is shown (for example, free time, busy time, or out of office.)
+
+== Styling WebDayView
+
+When designing your WebDayView application you use standard Cascading Style Sheets (CSS), or go through one of the predefined Presets within the Quick Designer in the Microsoft Visual Studio .NET environment. Complete styling is achieved at design-time and run-time to give your application the appearance you want.
+
+Some facets of the WebDayView's appearance that can be customized include:
+
+* Caption and title bar area font, color, background, padding and borders.
+* Border style, color and spacing of time slots.
+* Coloration and border of the bar indicating how the time usage is classified (free, busy, out of office, etc.)
+* Navigation arrow look and feel, including whether to display them at all.
+* Display and formatting (12-hour or 24-hour) of hourly labels alongside the activity area.
+* Background color, rule style, width and color, for working hours versus non-working hours.
+* Appearance of activities, including only the selected activity, an individual activity or an all-day (or multi-day) activity.
+
+== Client-Side Object Model
+
+A rich client-side object model accompanies the WebDayView enabling you to hook into several established Javascript event handlers. Prominent applications for these event handlers include managing navigation and activity selection.
+
+The detail afforded by the WebDayView representation limits its applicability when comparing scheduling information across a large number of days. Support is possible for up to fourteen days in vertical stripes that facilitate making hour-by-hour comparisons, although the application should plan to make a wide region of the screen (perhaps a scrollable region, horizontally) for such applications. Tool tips display by default to present information about an activity's subject and location if a day is too narrow. When the confines of WebDayView's vertical, time slot-based orientation restrict the application, you may wish to consider an alternative view to display activities across broader date ranges in a day-oriented fashion (see the WebMonthView control). For efficient navigation without activity information, see the WebCalendarView control.

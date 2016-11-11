@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-using-webgauge",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{5F0CE379-0230-464B-8ED9-22EE9E892F5F}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebGauge
+
+This section is your gateway to important conceptual and task-based information that will help you to use the various features and functionalities provided by the WebGauge control.
+
+* link:webgauge-appearance.html[Appearance]
+* link:webgauge-client-side-programming.html[Client Side Programming]
+* link:webgauge-webgauge-elements.html[WebGauge Elements]
+* link:webgauge-interaction-with-webgauge.html[Interaction with WebGauge]

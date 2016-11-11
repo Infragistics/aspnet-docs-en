@@ -1,0 +1,31 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-api-overview",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{08441405-2093-4A34-B928-A0CC83192AF1}",  
+    "buildFlags": [],
+    "createdOn": "2006-03-01T00:00:00Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+=== WebHtmlEditor Namespace:
+
+link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor_namespace.html[Infragistics.WebUI.WebHtmlEditor]
+
+=== Key Classes:
+
+link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor.html[WebHtmlEditor]
+
+link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbar.html[Toolbar]
+
+link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbarbutton.html[ToolbarButton]
+
+link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection.html[ToolbarItemCollection]

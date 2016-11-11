@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webgroupbox",
+    "controlName": ["WebGroupBox"],
+    "tags": ["Getting Started","How Do I","Layouts"],
+    "guid": "{6132A7EA-A37A-4369-AA33-642F1DBA5CC5}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebGroupBox
+
+If you're looking for an area that houses all of the overview/task-based information related to the WebGroupBox™ control, you've come to the right place. This section contains valuable information about WebGroupBox, ranging from what the control does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to access important information about the WebGroupBox control.
+
+== link:webgroupbox-understanding-webgroupbox.html[Understanding WebGroupBox]
+
+In this section you'll find any information that will help you to better understand the functionalities of the WebGroupBox control, as well as why you would want to use it to as part of building your applications.
+
+== link:webgroupbox-getting-started-with-webgroupbox.html[Getting Started with WebGroupBox]
+
+In order to get you up and running as quickly as possible with the WebGroupBox control, we've provided you with information on how to get started using the control (i.e., adding WebGroupBox to a form).
+
+== link:webgroupbox-using-editable-designer-regions-in-webgroupbox.html[Using Editable Designer Regions in WebGroupBox]
+
+This topic explains how to use the editable designer regions of the WebGroupBox.
+
+== link:webgroupbox-accessibility-compliance.html[WebGroupBox Accessibility Compliance]
+
+This topic outlines the way in which WebGroupBox meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebGroupBox control.
+
+== link:webgroupbox-and-webpanel-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebGroupBox control. The namespaces and classes listed in this topic link conveniently into the link:web-api-reference-guide.html[API Reference Guide] section of the Infragistics ASP.NET ASP.NET help.

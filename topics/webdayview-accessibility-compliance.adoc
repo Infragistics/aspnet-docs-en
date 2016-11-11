@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdayview-accessibility-compliance",
+    "controlName": ["WebDayView"],
+    "tags": ["Section 508"],
+    "guid": "{958511BF-7CBA-435A-A51A-F5DE71ACFD97}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDayView Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|By enabling the control's pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~section508compliant.html[Section508Compliant]"] property, all non-text elements render a text equivalent. 
+
+.Note:
+[NOTE]
+====
+A text equivalent is supplied by default, but this can be customized to suit your needs. 
+====
+
+|(d)
+|There is nothing to enable to get this behavior. If you assign the pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~stylesheetfilename.html[StyleSheetFileName]"] property to non-existent style sheet file name, the view still renders and functions.
+
+|(h)
+|By enabling the control's Section508Compliant property, scope attributes are rendered to identify DayOfWeek headers as column headers, and WeekNumbers as row headers.
+
+|(n)
+|By setting the pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~enablekeyboardnavigation.html[EnableKeyboardNavigation]"] and TabIndex properties, you can use the keyboard to navigate the control and its elements. 
+
+You can navigate the control as follows: 
+
+* Pressing the Tab key lets you traverses to the control as a whole, then the control's navigation buttons, then on to the next control. Using the arrow keys allows you to navigate each day of the control. 
+
+* When the focus is on a day header: 
+
+** If no appointment is present for the day, pressing the ENTER key launches the Add Appointment dialog box. 
+
+** If there are appointments available, pressing the ENTER key lets you traverse down through the list of appointments. You can then use the arrow keys to navigate the focus through the elements of the appointment. 
+
+** Pressing the spacebar launches the Add Appointment dialog box regardless of whether or not there are appointments in that day 
+
+* When the focus is on an appointment, pressing the spacebar or ENTER key launches the Edit Appointment dialog box corresponding to that appointment. 
+
+|====

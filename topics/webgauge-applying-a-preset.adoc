@@ -1,0 +1,36 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-applying-a-preset",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{5D6D99B2-36EE-45C7-B601-6AE7CC12D855}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Applying a Preset
+
+When you apply a preset from the Gauge Designer, it is added to your form. You can then create visually impressive applications that use gauges.
+
+*To apply a preset to the WebGauge control:*
+
+[start=1]
+. From the toolbox, drag the UltraGauge control to your form. The Gauge Designer opens.
+
+image::images/Gauge_Creating_a_Radial_Gauge_Using_the_Gauge_Designer_01.png[The gauge designer.]
+
+[start=2]
+. On the toolbar, click Open Presets. The Gauge Presets dialog box opens with the Radial tab selected by default.
+
+image::images/Gauge_Creating_a_Radial_Gauge_Using_the_Gauge_Designer_02.png[The gauge designer the radial presets area selected.]
+[start=3]
+. Select a predefined Radial gauge. When you select a gauge it appears in the interactive preview area.
+
+image::images/Gauge_Creating_a_Radial_Gauge_Using_the_Gauge_Designer_03.png[The gauge designer with the radial gauge showing in the preview area with a preset applied.]
+
+[start=4]
+. To create a Radial gauge using the selected preset without closing the Gauge Designer, click Apply. To create a Radial gauge using the selected preset and automatically close the designer, click Apply and Close.

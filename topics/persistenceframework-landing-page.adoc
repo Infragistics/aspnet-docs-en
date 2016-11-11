@@ -1,0 +1,51 @@
+﻿////
+
+|metadata|
+{
+    "name": "persistenceframework-landing-page",
+    "controlName": ["PersistenceFramework"],
+    "tags": ["Getting Started","Persistence"],
+    "guid": "c81280f3-2665-4d77-9d28-d4321f81add9",  
+    "buildFlags": [],
+    "createdOn": "2011-03-31T07:59:32.9136453Z"
+}
+|metadata|
+////
+
+= Persistence Framework
+
+This page contains all of the overview/task-based information related to the Persistence Framework.
+
+Click the links below to access important information about the Persistence Framework.
+
+== link:persistenceframework-about-persistence-framework.html[About Persistence Framework]
+
+In this topic you'll find information that will help you to better understand the functionalities of the Persistence Framework, as well as why you would want to use it.
+
+== link:persistenceframework-getting-started-with-persistence-framework.html[Getting Started with Persistence Framework]
+
+In order to get you up and running as quickly as possible using the Persistence Framework, we've provided you with information on how to get started.
+
+== link:persistenceframework-handling-persistence-events.html[Handling Persistence Events]
+
+Learn about which events during the page lifecycle and their feature specific arguments.
+
+== link:persistenceframework-saving-data-in-application-session-and-in-a-file.html[Saving Data in Application, Session and in a File]
+
+In this topic you'll learn have to save persistent data.
+
+== link:persistenceframework-exclude-control.html[Exclude Control]
+
+Learn how to exclude a control from persisting data.
+
+== link:persistenceframework-exclude-control-properties.html[Exclude Control Properties]
+
+This topic will show you how to persist the properties of a control that are important to you.
+
+== link:persistenceframework-persist-control.html[Persist Control]
+
+Learn how to manually persist controls on individual pages.
+
+== link:persistenceframework-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the Persistence Framework. The namespaces and classes listed in this topic link conveniently into the API Reference Guide section of the Infragistics ASP.NET help.

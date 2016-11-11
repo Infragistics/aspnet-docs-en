@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimagebutton-understanding-webimagebutton",
+    "controlName": ["WebImageButton"],
+    "tags": ["How Do I","Layouts","Styling"],
+    "guid": "{518F47D7-B9EA-4A3F-83D0-7A6BC7F38F0F}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= Understanding WebImageButton
+
+This is a great place for you to start learning about the WebImageButton™ control, and its key features and functionalities. The topics in this section will give you a better idea of why you would want to use WebImageButton in your applications.
+
+Click the links below to gain an overview of the WebImageButton control.
+
+* link:webimagebutton-about-webimagebutton.html[About WebImageButton] -- Provides an introduction to the WebImageButton control.
+* link:webimagebutton-smart-tag.html[WebImageButton Smart Tag] -- Explains the functionality available on the WebImageButton smart tag.

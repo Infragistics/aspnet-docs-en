@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcurrencyeditor-api-overview",
+    "controlName": ["WebCurrencyEditor"],
+    "tags": ["API"],
+    "guid": "{2DFD19E3-C5F2-4813-9375-F2884296A83A}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T16:26:49Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+=== WebCurrencyEditor Namespace:
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols_namespace.html[Infragistics.Web.UI.EditorContols]
+
+=== Key Classes:
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcurrencyeditor.html[WebCurrencyEditor]
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons.html[TextEditorButtons]

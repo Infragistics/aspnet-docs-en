@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatetimeeditor-csom-overview",
+    "controlName": ["WebDateTimeEditor"],
+    "tags": ["API"],
+    "guid": "{43DD3539-6B1E-4F73-8521-022433351532}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T17:03:41Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebDateTimeEditor™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webtexteditor~infragistics.web.ui_namespace.html[WebDateTimeEditor CSOM Overview]

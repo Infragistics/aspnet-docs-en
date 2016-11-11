@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-csom-overview",
+    "controlName": ["WebGauge"],
+    "tags": ["Events"],
+    "guid": "{3D213DCB-1CAD-44A0-8F89-A0900771DC5E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+WebGauge™ exposes a robust object model within the client-side JavaScript programming environment. The client-side object model (CSOM) consists of full-fledged JavaScript objects, events, and utility functions that enable developers to program significant units of functionality pertaining to the WebGauge control without the need for server-side postbacks.
+
+In general, the object model is derived directly from the object model as it exists on the server. The property names, events, parameters and return values have very similar meanings to their counterparts on the server. However, where noted, properties are sometimes read-only on the client. These properties are only for informational purposes you should not modify them.
+
+The following are links to the CSOM reference information for the WebGauge control:
+
+link:webgauge-utility-functions.html[WebGauge Utility Functions]
+
+link:webgauge-object.html[WebGauge Object]

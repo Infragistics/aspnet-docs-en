@@ -1,0 +1,72 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-creating-a-complex-webgauge-using-the-webgauge-designer-part-2-of-5",
+    "controlName": ["WebGauge"],
+    "tags": ["Design Environment","How Do I"],
+    "guid": "{493CC69D-048A-42C2-B22A-7CD04C9C773B}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Creating a Complex WebGauge Using the WebGauge Designer (Part 2 of 5)
+
+This topic is a continuation of link:webgauge-creating-a-complex-webgauge-using-the-webgauge-designer-part-1-of-5.html[Creating a Complex WebGauge Using the WebGauge Designer (Part 1 of 5)]. This procedure guides you through the process of adding a new scale and range to the existing Radial gauge.
+
+[start=1]
+. In the Gauge Explorer, expand Scales.
+[start=2]
+. Click Add Scale... and select New Scale.
+[start=3]
+. In the Properties panel, click the link:webgauge-scale-layout-tab.html[Scale Layout tab]. In the link:webgauge-sweep-angle-pane.html[Sweep Angle pane], set the following properties:
+
+** Start -- 160
+** End -- 380
+
+[start=4]
+. In the link:webgauge-axis-pane.html[Axis pane] of the Scale Layout tab, set the following properties:
+
+** End Value -- 300.00
+** Start Value -- 30.00
+** Tickmark Interval -- 1.0
+
+[start=5]
+. In the Gauge Explorer, expand Ranges.
+[start=6]
+. Click Add Range... and select New Range.
+[start=7]
+. In the Value pane of the Range Layout tab, set the following properties:
+
+** Start -- 30.00
+** End -- 180.00
+
+[start=8]
+. In the Extent pane of the Range Layout tab, set the following properties:
+
+** Inner Start -- 68
+** Inner End -- 68
+** Outer -- 78
+
+[start=9]
+. In the Properties panel, click the Appearance tab. In the Brush pane, add the following brush element with the specified properties:
+
+** Simple Gradient brush element
+
+*** StartColor -- Color = Color.FromArgb(212, 254, 0)
+*** EndColor -- Color = Transparent
+*** Gradient Style -- BackwardDiagonal
+
+[start=10]
+. In the Stroke pane of the Appearance tab, set the following properties:
+
+** Type -- Solid
+** Color -- Color.FromArgb(79, 185, 255, 45)
+
+image::images/Gauge_Creating_a_Complex_Gauge_Walkthrough_Using_the_Gauge_Designer_06.png[The gauge designer with a radial gauge with a second range specified.]
+
+== Related Topic
+
+link:webgauge-creating-a-complex-webgauge-using-the-webgauge-designer-part-3-of-5.html[Creating a Complex WebGauge Using the WebGauge Designer (Part 3 of 5)]

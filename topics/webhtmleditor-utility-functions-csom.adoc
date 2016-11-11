@@ -1,0 +1,33 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-utility-functions-csom",
+    "controlName": [],
+    "tags": ["API"],
+    "guid": "{82394210-BAA6-464C-BEE2-11D4B403C067}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebHtmlEditor Utility Functions
+
+The utility function described here is used by the JavaScript code of the WebHtmlEditor™ control. The purpose of exposing and documenting it is to allow developers to put as much logic as possible on the client machine in order to obtain gains in both performance and functionality.
+
+*[source]
+----
+function
+----
+
+ iged_getById(id)*
+
+This works with the WebHtmlEditor control.
+
+[source]
+----
+var
+----
+
+ editor = iged_getById().

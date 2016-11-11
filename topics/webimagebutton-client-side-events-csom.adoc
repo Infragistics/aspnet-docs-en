@@ -1,0 +1,286 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimagebutton-client-side-events-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{4C91CDC7-C054-466B-AC2D-35010D1DB1C7}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebImageButton Client-Side Events
+
+== Client Side Events
+
+The following are client-side events supported by the WebImageButton control.
+
+=== Client Side Events Properties
+
+[cols="a,a"]
+|====
+|*Initialize* 
+|Fires when the WebImageButton is initialized. It can be used to customize its appearance and behavior and cannot be canceled. 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function initializeInEdit(Button) { 	alert("Init Button: " + Button.getUniqueID()); }
+----
+
+|*Click* 
+|Fires before the control is clicked by the mouse or a key (this event can be canceled). 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object _Event.action_ 
+
+action that triggered click. Possible values. 
+
+0 - Mouse button 
+
+1 - Space key 
+
+2 - Enter key 
+
+3 - AccessKey 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function clickWebImageButton(Button, Event) {
+// cancel click if it was triggered by Space key 	
+    if(Event.action == 1) 	
+    Event.cancel = true; 
+}
+----
+
+|*Paint* 
+|Fires after the control is repainted (can be used to customize the appearance of a button dynamically). 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function paintWebImageButton(oButton, Event) { 	
+// make italic text for pressed button 	var italic = "";
+    if(Button.getState() == 4)
+    italic = "italic"; 	
+    var span = Button.getElementAt(3); 	
+    span.style.fontStyle = italic; 
+}
+----
+
+|*KeyDown* 
+|Fires when the control receives the keydown event of a browser (this event can be canceled). 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function keyDownWebImageButton(Button, Event) { 	
+    window.status = "KeyDown for " + 	 Button.getClientID() + " " + Event.event.keyCode;
+}
+----
+
+|*KeyUp* 
+|Fires when the control receives the keyup event of a browser. 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function keyUpWebImageButton(Button, Event) {
+    window.status = "KeyUp for " + 	 Button.getClientID() + " " + Event.event.keyCode; 
+}
+----
+
+|*Focus* 
+|Fires when the control receives the focus event of a browser. 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function focusWebImageButton(Button, Event) { 
+    window.status = "Focus for " + Button.getClientID();
+}
+----
+
+|*Blur* 
+|Fires when the control receives the blur event of a browser. 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object
+
+|*MouseDown* 
+|Fires when the control receives the mousedown event of a browser. 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function mouseDownWebImageButton(Button, Event) {
+    window.status = "MouseDown for " + Button.getClientID();
+}
+----
+
+|*MouseUp* 
+|Fires when the control receives the mouseup event of a browser. 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function mouseUpWebImageButton(Button, Event) { 
+    window.status = "MouseUp for " + Button.getClientID(); 
+}
+----
+
+|*MouseMove* 
+|Fires when the control receives the mousemove event of a browser. 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function mouseMoveWebImageButton(Button, Event) {
+    window.status = "MouseMove for " + Button.getClientID(); 
+}
+----
+
+|*MouseOut* 
+|Fires when the mouse is moved outside the bounds of a control (event may not match with events of a browser). 
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function mouseOutWebImageButton(Button, Event) {
+    window.status = "MouseOut for " + Button.getClientID();
+}
+----
+
+|*MouseOver* 
+|Fires when the mouse is moved inside the bounds of a control. 
+
+.Note:
+[NOTE]
+====
+That event may not match with events of a browser. 
+====
+
+
+*Parameters*
+
+_Button_ 
+
+Reference to the JavaScript object that represents WebImageButton. _Event_ 
+
+Reference to the ig_EventObject object 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+function mouseOverWebImageButton(Button, Event) {
+    window.status = "MouseOver for " + Button.getClientID(); 
+}
+----
+
+|====

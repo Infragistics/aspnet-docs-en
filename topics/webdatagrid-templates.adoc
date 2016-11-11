@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-templates",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids","Templating"],
+    "guid": "{E7DD9E0F-C757-4C97-86BE-F289601F875E}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-08T12:26:31Z"
+}
+|metadata|
+////
+
+= Templates
+
+You can use templates to provide custom user interface for certain features of WebDataGrid™. You can use custom templates for paging and editing. There is a template to display a message for controls with no data as well as an error template for exception notification. Further, you can customize every aspect of a column (cells, headers, and footers) using templates. Creating a template is quick and simple through the designer. At runtime, you can implement the ITemplate interface to create custom templates.
+
+For more information on the specific templates available and how to use them, click the links below.
+
+link:webdatagrid-column-templates.html[Column Templates]
+
+WebDataGrid has 4 types of templates for its columns: header, footer, item, and alternating item templates. As the name implies, these templates take the place of the header, footer, and individual items of a column.
+
+link:webdatagrid-enable-empty-template.html[Empty Template]
+
+This section describes how to apply empty row template whenever there are no rows in the data source.
+
+link:webdatagrid-enable-error-template.html[Error Template]
+
+This topic describes how to apply error template to display custom messages for exceptions that occur within the control.
+
+link:webdatagrid-using-custom-paging-template.html[Using Custom Paging Template]
+
+This topic describes how to set up and use custom paging template.
+
+link:webdatagrid-row-editing-template.html[Row Editing Template]
+
+This section describes how to set up row editing template.
+
+link:webdatagrid-template-control-bindings.html[Template Control Bindings]
+
+This topic describes how to bind the controls used in a template to any fields of WebDataGrid.
+
+link:webdatagrid-using-the-template-collection.html[Using the Template Collection]
+
+This topic describes how to store and use your common templates.

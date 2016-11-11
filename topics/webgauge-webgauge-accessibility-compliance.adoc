@@ -1,0 +1,26 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-webgauge-accessibility-compliance",
+    "controlName": ["WebGauge"],
+    "tags": ["Section 508"],
+    "guid": "{5E7E6CAB-26E9-4DE5-872C-602494A6C923}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebGauge Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the 16 rules of subpart 1194.22 and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|By enabling the control's Section508Compliant property, all non-text elements render a text equivalent.
+
+|====

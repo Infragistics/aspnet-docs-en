@@ -1,0 +1,58 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-windows-authentication-in-microsoft-sql-server",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Patterns and Practices","Scheduling"],
+    "guid": "{332985D0-B5C6-4DFB-A5B9-CBC184119FED}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Windows Authentication in Microsoft SQL Server
+
+In this article you'll learn additional information about deploying your WebSchedule™ application to use Microsoft SQL Server in an environment where Windows authentication is used.
+
+Windows authentication is one of the two modes in which Microsoft SQL Server authenticates users attempting to connect to it. It bases it's authentication on Windows' own security access manager (SAM), a database of user logons maintained by the operating system. This database may reside on the host machine or on another machine in the domain ( _i.e._, the primary domain controller). In order for a user to be authenticated, the user must logon by providing their credentials to Windows. Once a user proves his/her identity to Windows, they are allowed to access resources on the host machine to which they have remotely connected, with Windows granting them the same rights as if they were physically logged into the host machine.
+
+Web applications hosted by Internet Information Services (IIS) typically execute under a limited user logon named ASPNET (although this name has changed in later versions) that was designed to allow anonymous Internet users to access published resources on the host machine via HTTP. It is generally inadvisable to grant this account privileges to access additional resources.
+
+Many Web applications will impersonate a specific user logon (in this example we will name this logon WWWUSER) for specific applications. You set-up a limited logon named WWWUSER as a user account on the host machine or domain, but grant it the minimum set of rights it needs, and add XML to the web.config file indicating something like:
+
+[source]
+----
+<identity impersonate="true" userName="DOMAIN\WWWUSER" password="guess"/>.
+----
+
+When this is done, requests for resources (such as connecting to Microsoft SQL Server) by IIS when it runs your WebSchedule application are performed as if WWWUSER were logged onto the host machine. There's one more step necessary to tell Microsoft SQL Server about this user logon.
+
+Within SQL Server Enterprise Manager you must go to your database server ( _i.e._  "(local)"), expand "Security" and then open "Logins" to add a new login by right-clicking Logins and selecting "New Login..." which presents the dialog shown below.
+
+image::Images/WebSchedule_Related_Topics_Windows_Authentication_in_Microsoft_SQL_Server_01.PNG[]
+
+After adding a database login for the Windows user logon, WWWUSER, you must go to the database where the login was added (in this example, that was the database named "WebSchedule1" as selected from the drop-down in the dialog above). Select "Users" from beneath the database, right-click and choose "New Database User..." From this dialog shown below you just want to associate the login with a database role (in this case, the "public" role is used although frequently you would create a custom role for your application and assign the database login to it.)
+
+image::Images/WebSchedule_Related_Topics_Windows_Authentication_in_Microsoft_SQL_Server_02.PNG[]
+
+You've now done enough to allow the Web user, through impersonating WWWUSER, a user account you set-up on your domain with the least privileges necessary to run your WebSchedule application to connect to Microsoft SQL Server. However, the next step is important, and that involves granting to this login's role the execute privileges to the stored procedures. In this way, when the WebSchedule application connects to the database it can only connect to the database and access it through a set of canned transactions that you know to be safe. If the WWWUSER database login attempted to read or update tables in the WebSchedule data model through ad-hoc SQL statements, it should fail because at this point you would not have granted it the rights to perform SELECT, INSERT, UPDATE or DELETE statements. This greatly enhances your application's resilience to SQL injection attacks.
+
+While the role is selected in the "Database Role Properties" dialog above, click the "Properties.." button. This takes you to another dialog where you will need to click the "Permissions.." button to bring up the grid of stored procedures, tables, and system tables to which you can grant or deny access to on an individual basis. For each of the WebSchedule stored procedures, place a green check in the box to grant execute permission to the WWWUSER login as shown in the following illustration and then click the "Apply" button.
+
+image::Images/WebSchedule_Related_Topics_Windows_Authentication_in_Microsoft_SQL_Server_03.PNG[]
+
+After completing the steps described above your WebSchedule application should be able to connect successfully to Microsoft SQL Server when IIS and SQL Server are running on the same host machine. If it does not, ensure that any ConnectionString property value you have specified on the SqlConnection component connected to by  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulesqlclientprovider.html[WebScheduleSqlClientProvider]"]  is valid and refers to the (local) server and has a trusted connection turned on. The default connection for WebScheduleSqlClientDataProvider uses SQL authentication by default, so you must always explicitly connect when using Windows authentication.
+
+When it comes to Windows authentication, there are really two separate situations that can exist in your deployment environment and to this point the article has only discussed the simple situation: IIS and SQL Server residing on the same host machine as shown in the illustration below of single-hop Authentication.
+
+image::Images/WebSchedule_Related_Topics_Windows_Authentication_in_Microsoft_SQL_Server_04.PNG[]
+
+There is another kind of Windows authentication commonly encountered when your services for IIS and Microsoft SQL Server are deployed on separate host machines. In this situation, known as Multi-hop authentication, simple impersonation is insufficient. This is because the host machine running IIS has accepted the credentials of WWWUSER as being valid. However, when Microsoft SQL Server is running on another host machine in this network, it cannot take the Web server's word for it that WWWUSER is valid. How does the host machine running SQL Server know that the Web server has not been compromised? This situation is depicted by the following illustration.
+
+image::Images/WebSchedule_Related_Topics_Windows_Authentication_in_Microsoft_SQL_Server_05.PNG[]
+
+This second situation requires Kerberos delegation to take place on the network hop between IIS and Microsoft SQL Server's host machines. For this purpose, the figure above shows an account, DBUSER, acting as the delegate. The database host machine will only trust a domain account for delegation (an ordinary local account from another host is no more trustworthy than the original WWWUSER request), and the database host machine must be configured to allow delegation. Thereafter, DBUSER is configured within Microsoft SQL Server just like WWWUSER was set-up in the preceding discussion.
+
+The steps necessary to correctly configure Kerberos delegation between two hosts in your domain go beyond what is described here, and vary depending on whether you use the Microsoft Windows 2000 Server or Microsoft Windows 2003 Server operating systems. Please consult your server's documentation or a System Administrator for more information on setting-up delegation, and take advantage of any facilities that your operating system may offer you to constrain or limit the scope of delegation requests that can be accepted to be no more accommodative than necessary.

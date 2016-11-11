@@ -1,0 +1,141 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-styling-specific-components-webdayview",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Scheduling","Styling","Theming"],
+    "guid": "{0E560794-CAB5-4C14-94E8-B34E5F1A712F}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDayView
+
+This topic will help you understand the differences and similarities between each of WebDayView's roles and how they are affected by the CSS cascade. The Role Description Table defines each of WebDayView's roles and the Role Inheritance Tree shows how certain styles are inherited from others.
+
+== Role Description Table
+
+Below is a list of Roles that you can use to style WebDayView. Each Role is matched by a class in a cascading style sheet (CSS). These classes, and therefore Roles, are governed by CSS rules. If this is not the case, the exception to the rule will be explained in the table below. This table will help you understand which Roles are inherited from which and how some Roles are unaffected by others.
+
+[options="header", cols="a,a"]
+|====
+|Role|Description
+
+|*CaptionHeader*
+|This role defines style rules applied to the area which shows the very top part of control with custom label and navigation buttons.
+
+|*DayHeader*
+|This role defines style rules applied to the areas which contain day-labels (show dates) located above every day.
+
+|*TodayHeader*
+|This role defines style rules applied to the area which contains day-label (shows date) located above today day. That is merged with the igdv_DayHeader style.
+
+|*TimeSlotLabel*
+|This role defines style rules applied to the areas which show labels for every time slot.
+
+|*TimeSlotLabelMinutes*
+|This role defines style rules applied to areas of the time slot-labels which contain number of minutes or AM/PM strings.
+
+|*AllDayEvent*
+|This role defines style rules applied to the areas which render all-day events.
+
+|*AllDayEventArea*
+|This role defines style rules applied to the areas which contain all-day events.
+
+|*AllDayEventSelected*
+|This role defines style rules applied to the areas which render selected all-day event.
+
+|*AllDayEventAreaSelected*
+|This role defines style rules applied to the areas which contain selected all-day events.
+
+|*WorkingTimeSlot*
+|This role defines style rules applied to the areas which represent time-slots located on the right side of time slot-labels which belong to the working hours (from 8:00 to 17:00).
+
+|*NonWorkingTimeSlot*
+|This role defines style rules applied to the areas which represent time-slots located on the right side of time slot-labels which belong to the non-working hours (before 8:00 and after 17:00).
+
+|*Appointment*
+|This role defines style rules applied to the areas which represent appointments.
+
+|*ActivityHover*
+|This role defines style rules applied to the areas which represent appointments when mouse is moved over that areas. That is merged with igdv_Appointment style.
+
+|*SelectedAppointment*
+|This role defines style rules applied to the areas which represent selected appointment. That is merged with igdv_Appointment style
+
+|*ActivityEdge*
+|This role defines style rules applied to areas located at the top and at the bottom edges of appointments.
+
+|*EdgeBusy*
+|This role defines style rules applied to areas located at the top, left and bottom edges of appointments when type of appointment is Busy. That is merged with igdv_ActivityEdgeLeft and igdv_ActivityEdge styles.
+
+|*ActivityEdgeLeft*
+|This role defines style rules applied to areas located at left edges of appointments.
+
+|*EdgeTentative*
+|This role defines style rules applied to areas located at the top, left and bottom edges of appointments when type of appointment is Tentative. That is merged with igdv_ActivityEdgeLeft and igdv_ActivityEdge styles.
+
+|*EdgeOutofOffice*
+|This role defines style rules applied to areas located at the top, left and bottom edges of appointments when type of appointment is OutofOffice. That is merged with igdv_ActivityEdgeLeft and igdv_ActivityEdge styles.
+
+|*EdgeFree*
+|This role defines style rules applied to areas located at the top, left and bottom edges of appointments when type of appointment is Free. That is merged with igdv_ActivityEdgeLeft and igdv_ActivityEdge styles.
+
+|*NavigationButton*
+|This role defines style rules applied to the areas which represent navigation buttons: allow to move to next or previous days.
+
+|*Control*
+|This role defines style rules applied to the whole area of control.
+
+|====
+
+== Role Inheritance Tree
+
+The following tree will give you a visual idea of how the roles mentioned above are inherited from each other. If a specific role is inherited from Shared, it is noted in parentheses next to the role.
+
+* Control (Control)
+
+** CaptionHeader (Header)
+** DayHeader (Header)
+
+*** TodayHeader
+
+** NonWorkingTimeSlot
+
+*** Appointment
+
+**** ActivityEdge
+**** ActivityEdgeLeft
+
+** WorkingTimeSlot
+
+*** Appointment
+
+**** ActivityEdge
+
+***** ActivityEdgeBusy
+***** ActivityEdgeTentative
+***** ActivityEdgeOutofOffice
+***** ActivityEdgeFree
+
+**** ActivityEdgeLeft
+**** ActivityHover
+
+***** SelectedAppointment (Selected)
+
+** AllDayEventArea
+
+*** AllDayEventAreaSelected
+
+** AllDayEvent
+
+*** AllDayEventSelected (Selected)
+
+** TimeSlotLabel
+
+*** TimeSlotLabelMinutes
+
+* NavigationButton (Button)

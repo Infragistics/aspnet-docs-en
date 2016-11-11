@@ -1,0 +1,116 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexplorerbar-clientside-api",
+    "controlName": ["WebExplorerBar"],
+    "tags": ["API","Events","How Do I"],
+    "guid": "{EB50FE39-EEE8-4F1A-A33F-EDD39000C147}",  
+    "buildFlags": [],
+    "createdOn": "2010-01-03T22:51:56Z"
+}
+|metadata|
+////
+
+= ClientSide API
+
+The purpose of this topic is to explain the usage of basic client-side methods of WebExplorerBar™.
+
+== Follow this steps
+
+[start=1]
+. As all Infragistics ASP.NET AJAX controls, WebExplorerBar creates a client-side object with the ClientID of the control. To obtain a reference, use the following code:
+
+*In Javascript:*
+
+----
+var explorerBar = $find('<%= WebExplorerBar1.ClientID %>');
+----
+
+[start=2]
+. Once you get the control client-side object, you can use link:webexplorerbar~infragistics.web.ui.webexplorerbar~selectgroup.html[selectGroup] to select and/or toggle a group or item. This method takes three arguments:
+
+** Index of the specified group.
+** Boolean value. States whether the item will be selected or deselected.
+** Optional boolean value. Specifies whether to expand or collapse the group.
+
+*In Javascript:*
+
+----
+var explorerBar = $find('<%= WebExplorerBar1.ClientID %>');
+explorerBar.selectGroup(0, true, true);
+----
+
+[start=3]
+. To get an instance of any particular group or item, you’ll need to get a reference of WebExplorerBar Groups and Items object collection first. This is done using the link:webexplorerbar~infragistics.web.ui.webexplorerbar~getexplorerbaritems.html[getExplorerBarItems] method. After that, you’ll be able to get a group or item using the link:webexplorerbar~infragistics.web.ui.explorerbaritemcollection~getitem.html[getItem] method, which takes the index as argument.
+
+*In Javascript:*
+
+----
+var explorerBar = $find('<%= WebExplorerBar1.ClientID %>');
+var groupCollection = explorerBar.getExplorerBarItems();
+var group = groupCollection.getItem(0);
+----
+
+[start=4]
+. Now you are able to select, deselect, expand, collapse or change the text of the group that you have referenced.
+
+** To select or deselect use the set_selected method, choosing True for select or False for deselect.
+
+*In Javascript:*
+
+----
+group.set_selected(true);
+----
+
+** To expand or collapse use the toggle method.
+
+*In Javascript:*
+
+----
+group.toggle();
+----
+
+** To change the text use the set_text method.
+
+*In Javascript:*
+
+----
+group.set_text();
+----
+
+[start=5]
+. Once you have reference to a group, you can get an instance of any specific item that belongs to this group by using get_childItem. This takes the index of the item as argument. The following example shows how to instantiate the first item of the first group.
+
+*In Javascript:*
+
+----
+var explorerBar = $find('<%= WebExplorerBar1.ClientID %>');
+var groupCollection = explorerBar.getExplorerBarItems();
+var firstGroup = groupCollection.getItem(0);
+var firstItem = firstGroup.get_childItem(0);
+----
+
+== Related Topics
+
+link:webexplorerbar-smart-tag.html[WebExplorerBar Smart Tag]
+
+link:webexplorerbar-keyboard-navigation.html[Keyboard Navigation]
+
+link:webexplorerbar-display-modes.html[Display Modes]
+
+link:webexplorerbar-height-properties.html[WebExplorerBar Height Properties]
+
+link:webexplorerbar-setting-navigateurl-and-target-properties.html[Setting NavigateURL and Target Properties]
+
+link:webexplorerbar-binding-to-an-xml-data-source.html[Binding to an XML Data Source]
+
+link:webexplorerbar-binding-to-webhierarchcialdatasource.html[Binding to WebHierarchcialDataSource]
+
+link:webexplorerbar-serverevents.html[Server-Side Events]
+
+link:webexplorerbar-clientside-api.html[ClientSide API]
+
+link:webexplorerbar-clientevents.html[Client-Side Events]
+
+link:webexplorerbar-styling.html[CSS Class Properties]

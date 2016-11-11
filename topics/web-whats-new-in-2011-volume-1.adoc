@@ -1,0 +1,108 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-whats-new-in-2011-volume-1",
+    "controlName": [],
+    "tags": ["FAQ","Getting Started"],
+    "guid": "9f4f86f0-238c-4fb2-8cff-b01e340dc572",  
+    "buildFlags": [],
+    "createdOn": "2011-06-02T11:57:06.0944528Z"
+}
+|metadata|
+////
+
+= What's New in 2011 Volume 1
+
+The Infragistics ASP.NET 2011 Volume 1 release introduces the following new features:
+
+== New Microsoft Word Library
+
+The Microsoft® Word® Library allows you to programmatically create basic Word Documents. It is cross-platform and is easily integrated into any Infragistics product.
+
+=== Supported Word Features
+
+The most important word features supported by the library are:
+
+*Formatting Features*
+
+** Font styles
+** Hyperlinks
+** Images
+** Tables
+** Lists
+** Shapes
+
+*Document Layout Features*
+
+** Page size
+** Margins
+** Page break
+** Header/footer
+
+== New IG Theme
+
+The IG Theme was created to provide application developers with a complete visual theme that enhances applications with modern look and feel.
+
+== New WebDataGrid/WebHierarchicalDataGrid Column Types
+
+In Infragistics ASP.NET 2011 Volume 1, some of the new capabilities of the WebDataGrid™ and WebHierarchicalDataGrid™ controls are related the new column types of these controls:
+
+*CheckBox Column type*
+
+Supports the ability to render a checkbox for Boolean (True/False) values, as well as, depending on the converter supplied, any other type of data.
+* *Unbound Column type*
+
+Supports unbound columns in the grid. This enables you to have columns with additional data, calculated at runtime.
+
+== Related Topics
+
+link:webdatagrid-columns.html[Columns]
+
+== New WebDataGrid/WebHierarchicalDataGrid Custom Data Binding
+
+The Custom Data Binding feature enables the WebDataGrid/WebHierarchicalDataGrid to work like pure User Interface (UI) controls. You can now handle in code common features like sorting, filtering, and paging and then the grid will just render at run-time whatever custom data is given to it while maintaining the UI state.
+
+== New WebHierarchicalDataGrid Row Edit Template
+
+The WebHierarchicalDataGrid now supports custom editing scenarios through the Row Edit Template. This feature enables you to programmatically show limited columns in the main interface, but allow the user to drill down additional information at run-time if required.
+
+== New WebHierarchicalDataGrid Column Moving and Resizing
+
+The WebHierarchicalDataGrid now supports movable columns, as well as resizing columns. The functionality is similar to the one already available in the WebDataGrid. Column moving and resizing can be enabled for both parent and child bands.
+
+== Related Topics
+
+link:webhierarchicaldatagrid-column-moving.html[Column Moving]
+
+link:webhierarchicaldatagrid-column-resizing.html[Column Resizing]
+
+== New WebDropDown Client Binding
+
+The WebDropDown™ now supports rendering of JSON data on the client without expecting any HTML markup from the server. All of the WebDropDown features are supported with the new functionality - suggest, virtual scrolling, filtering, etc.
+
+== Persistence Framework
+
+The new Persistence Framework makes serializing end-user settings across controls easy. The WebDataGrid/WebHierarchicalDataGrid controls use special implementation which is also included in the release. Developers can also extend the framework to allow better integration into any ASP.NET control.
+
+== Related Topics
+
+link:persistenceframework-about-persistence-framework.html[About Persistence Framework]
+
+link:persistenceframework-getting-started-with-persistence-framework.html[Getting Started with Persistence Framework]
+
+== New WebVideoPlayer HTML5-only Control
+
+As open standards continue to play a larger part in web development, Infragistics has released another HTML 5 control, the WebVideoPlayer™. The WebVideoPlayer supports bookmarking, banner and embedded advertisements, display of related videos, custom styling and more.
+
+== Related Topics
+
+link:webvideoplayer-overview.html[WebVideoPlayer Overview]
+
+== New WebUpload Control
+
+The WebUpload™ control is a popularly requested control that enables users to upload single or multiple files simultaneously. The control also provides users with an interface for canceling each upload.
+
+== Related Topics
+
+link:webupload-overview.html[WebUpload Overview]

@@ -1,0 +1,67 @@
+﻿////
+
+|metadata|
+{
+    "name": "whats-new-in-2015-volume-2",
+    "controlName": [],
+    "tags": [],
+    "guid": "9c3f975a-9856-4e9b-8fb3-04803e5d8a1d",  
+    "buildFlags": [],
+    "createdOn": "2015-09-29T12:46:54.013962Z"
+}
+|metadata|
+////
+
+= What's New in 2015 Volume 2
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides an overview of the new things and new and enhanced features for the Infragistics® ASP.NET 2015 Volume 2 release.
+
+== What’s New Summary
+
+=== What’s new summary chart
+
+The following table summarizes what’s new in 2015 Volume 2 release. Additional details follow the summary table.
+
+==== <<_Ref367305754,General>>
+
+ 
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|<<webupload,WebUpload allows sending data between the client and the server>>
+|The WebUpload control now allows sending of additional data between the client and server as part of the upload request.
+
+|<<aria,WebDataGrid/WebHierarchicalDataGrid ARIA support>>
+|[[aria]] 
+
+ARIA support has been added for the WebDataGrid and WebHierarchicalDataGrid controls.
+
+|====
+
+[[_Ref367305754]]
+
+== General
+
+[[webupload]]
+
+=== WebUpload allows sending data between the client and the server
+
+The WebUpload control now allows sending of additional data between the client and server as part of the upload request.
+
+Additional data can be send from the client to the server in the form of parameters, which can be added to the form data.A custom server message can be send from the server to the client as well.
+
+For additional information and examples refer the following topic: link:webupload-using-server-side-events.html#sendingData[WebUpload Using Server Side Events]
+
+[[aria]]
+
+=== WebDataGrid/WebHierarchicalDataGrid ARIA support
+
+In 2014 the W3C finalized their link:http://www.w3.org/TR/wai-aria/[WAI-ARIA] specification which defined how to design Web content and Web applications to be more accessible to users with disabilities. The WebDataGrid and WebHierarchicalDataGrid now follow these guidelines.
+
+For additional information on the exact improvements please refer to the following topic: link:web-accessibility-overview.html[Accessibility Overview]

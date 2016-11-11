@@ -1,0 +1,88 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-styling-specific-components-webcalendarview",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Scheduling","Styling","Theming"],
+    "guid": "{1D51953A-E65A-4BF3-A2E0-83B2BE12B793}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebCalendarView
+
+This topic will help you understand the differences and similarities between each of WebCalendarView's roles and how they are affected by the CSS cascade. The Role Description Table defines each of WebCalendarView's roles and the Role Inheritance Tree shows how certain styles are inherited from others.
+
+== Role Description Table
+
+Below is a list of Roles that you can use to style WebCalendarView. Each Role is matched by a class in a cascading style sheet (CSS). These classes, and therefore Roles, are governed by CSS rules. If this is not the case, the exception to the rule will be explained in the table below. This table will help you understand which Roles are inherited from which and how some Roles are unaffected by others.
+
+[options="header", cols="a,a"]
+|====
+|Role|Description
+
+|*Control*
+|This role defines style rules applied to the whole area of control.
+
+|*CaptionHeader*
+|This role defines style rules applied to the rectangle area where Month-Year string appears and to the rectangle area which contains drop-down lists of Month and Year.
+
+|*DayHeader*
+|This role defines style rules applied to the areas which represent every day of the week.
+
+|*Day*
+|This role defines style rules applied to areas which represent every day of the month.
+
+|*Footer*
+|his role defines style rules applied to the area at the bottom of calendar which shows selected day label or contains a custom template.
+
+|*DropDown*
+|This role defines style rules applied to the month and year drop-down lists.
+
+|*OtherMonthDay*
+|This role defines style rules applied to the areas which represent every day of the month which belongs to the months other than the currently visible month: previous and next months. That style is merged with the igcv_Day style.
+
+|*WeekendDay*
+|This role defines style rules applied to the areas which represent every day of the month which belongs to the end of the week: Sundays and Saturdays. That style is merged with the igcv_Day style.
+
+|*NavigationButton*
+|This role defines style rules applied to the areas which represent navigations buttons which allow to move to next or previous months.
+
+|*TodayDay*
+|This role defines style rules applied to the area which represents today day of the month. That style is merged with the igcv_Day style and with any other possible "Day" style..
+
+|*ActivityDay*
+|This role defines style rules applied to the areas which represent days of months with activities (appointments). That style is merged with the igcv_Day style and with any other possible "Day" style.
+
+|*ActiveDay*
+|This role defines style rules applied to the area which represents the active day of the month (selected day in schedule). That style is merged with the igcv_Day style and with any other possible "Day" style.
+
+|====
+
+== Role Inheritance Tree
+
+The following tree will give you a visual idea of how the roles mentioned above are inherited from each other. If a specific role is inherited from Shared, it is noted in parentheses next to the role.
+
+* Control (Control)
+
+** CaptionHeader (Header)
+** DayHeader (Header)
+** Day
+
+*** WeekendDay
+
+**** OtherMonthDay
+
+***** Today
+
+****** ActivityDay (Selected)
+
+******* ActiveDay
+
+** Footer (Footer)
+** NavigationButton (Button)
+
+* DropDown (DropDown)

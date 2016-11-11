@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatepicker-csom-overview",
+    "controlName": ["WebDatePicker"],
+    "tags": ["API"],
+    "guid": "{825DC4BC-3A81-42F2-9345-28F91838A4A2}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T11:25:50Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebDatePicker™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webtexteditor~infragistics.web.ui_namespace.html[WebDatePicker CSOM Overview]

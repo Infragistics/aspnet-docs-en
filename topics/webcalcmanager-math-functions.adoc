@@ -1,0 +1,65 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalcmanager-math-functions",
+    "controlName": ["WebCalcManager"],
+    "tags": ["How Do I"],
+    "guid": "{3B7245C3-01F3-4F3B-A790-3EB8A46FCA7D}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Math Functions
+
+Below is a list of all Microsoft® Excel®-style math functions provided by the WebCalcManager™ control. Visit Microsoft's website for more information on these link:https://support.office.com/en-us/article/Excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188[Math Functions].
+
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionabs.html[ABS]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionacos.html[ACOS]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionacosh.html[ACOSH]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionasin.html[ASIN]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionasinh.html[ASINH]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionatan.html[ATAN]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionatan2.html[ATAN2]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionatanh.html[ATANH]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionceiling.html[CEILING]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctioncos.html[COS]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctioncosh.html[COSH]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctioneven.html[EVEN]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionodd.html[ODD]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionexp.html[EXP]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionand.html[FLOOR]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionint.html[INT]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionln.html[LN]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionlog.html[LOG]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionlog10.html[LOG10]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionmod.html[MOD]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionpi.html[PI]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionpower.html[POWER]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionproduct.html[PRODUCT]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionquotient.html[QUOTIENT]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionrand.html[RAND]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionround.html[ROUND]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionsqrt.html[SQRT]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionsin.html[SIN]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionsinh.html[SINH]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionsum.html[SUM]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctiontan.html[TAN]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctiontanh.html[TANH]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctiontrunc.html[TRUNC]"] 
+
+== Related Topics
+
+link:webcalcmanager-date-and-time-functions.html[Date and Time Functions]
+
+link:webcalcmanager-financial-functions.html[Financial Functions]
+
+link:webcalcmanager-information-functions.html[Information Functions]
+
+link:webcalcmanager-logical-functions.html[Logical Functions]
+
+link:webcalcmanager-statistical-functions.html[Statistical Functions]
+
+link:webcalcmanager-text-and-data-functions.html[Text and Data Functions]

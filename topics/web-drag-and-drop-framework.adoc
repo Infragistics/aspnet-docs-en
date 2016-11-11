@@ -1,0 +1,34 @@
+﻿////
+|metadata|
+{
+    "name": "web-drag-and-drop-framework",
+    "controlName": ["WebDragandDropFramework"],
+    "tags": ["Application Scenarios"],
+    "guid": "{3CDFF9B3-CEB1-42BF-BC01-620C5F3EFEE1}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Drag and Drop Framework
+
+This page contains all of the overview/task-based information related to the Drag and Drop Framework.
+
+Click the links below to access important information about the Drag and Drop Framework.
+
+== link:draganddropframework-about-drag-and-drop-framework.html[About Drag and Drop Framework]
+
+In this topic you'll find information that will help you to better understand the functionalities of the Drag and Drop Framework, as well as why you would want to use it.
+
+== link:draganddropframework-getting-started-with-drag-and-drop.html[Getting Started with Drag and Drop]
+
+In order to get you up and running as quickly as possible using the Drag and Drop Framework, we've provided you with information on how to get started.
+
+== link:draganddropframework-using-drag-and-drop-framework.html[Using Drag and Drop Framework]
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by the Drag and Drop Framework.
+
+== link:drag%20and%20drop~infragistics.web.ui_namespace.html[CSOM Overview]
+
+The Drag and Drop Framework exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.

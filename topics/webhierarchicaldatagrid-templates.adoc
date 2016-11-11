@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-templates",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids","How Do I","Templating"],
+    "guid": "{5FDCDD59-3881-4BBE-9F7A-C973E7D3E385}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Templates
+
+You can use templates to provide custom user interface for certain features of WebHierarchicalDataGrid™. You can use custom templates for paging and editing. There is a template to display a message for controls with no data as well as an error template for exception notification. Further, you can customize every aspect of a column (cells, headers, and footers) using templates. Creating a template is quick and simple through the designer. At runtime, you can implement the ITemplate interface to create custom templates.
+
+For more information on the specific templates available and how to use them, click the links below.
+
+link:webhierarchicladatagrid-column-templates.html[Column Templates]
+
+In this section you can learn about the column templates supported by the WebHierarchicalDataGrid control.
+
+link:webhierarchicaldatagrid-paging-template.html[Paging Template]
+
+The paging behaviour of the WebHierarchicalDataGrid control allows you to customize the appearance of the pager area. In this section you can learn how to accomplish this.
+
+link:webhierarchicaldatagrid-enable-empty-rows-template.html[Enable Empty Rows Template]
+
+In this section you can learn how to customize the appearance of the WebHierarchicalDataGrid control when there are no rows to be displayed.
+
+link:webhierarchicaldatagrid-enable-error-template.html[Enable Error Template]
+
+You can display custom messages for errors using the error template functionality of the WebHierarchicalDataGrid control. This section explains how to accomplish this.

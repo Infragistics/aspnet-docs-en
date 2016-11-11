@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatepicker-using-the-last-valid-date-in-webdatepicker",
+    "controlName": ["WebDatePicker"],
+    "tags": ["Selection","Tips and Tricks"],
+    "guid": "{74D4D6D7-3210-4828-9C47-D422BA870AF2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using the Last Valid Date in WebDatePicker
+
+WebDatePicker™ provides you with an option to set the last valid date as soon as the control loses focus if the end-user enters an invalid date. You can achieve this by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~uselastgooddate.html[UseLastGoodDate]"]  to True. By default, this property is set to False.
+
+You can set the UseLastGoodDate property either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebDatePicker1.UseLastGoodDate = true
+----
+
+*In C#:*
+
+----
+WebDatePicker1.UseLastGoodDate = true;
+----
+
+*In JavaScript:*
+
+----
+$find("WebDatePicker1").set_useLastGoodDate(true);
+----

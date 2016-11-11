@@ -1,0 +1,111 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmonthview-client-side-events-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{2B6E303F-0BC3-4FB6-9F80-D98AAEA452E6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebMonthView Client-Side Events
+
+== Client Events
+
+=== Client Events Methods
+
+[cols="a,a"]
+|====
+|*Click* 
+|This event fires when any element of the MonthView is clicked. 
+
+*Parameters*
+
+_oWebMonthView_ 
+
+The WebMonthView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to what was clicked.
+
+|*DblClick* 
+|This event fires when any element of the MonthView is double clicked. 
+
+*Parameters*
+
+_oWebMonthView_ 
+
+The WebMonthView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to what was double clicked.
+
+|*Initialize* 
+|This event fires when the MonthView initializes. 
+
+*Parameters*
+
+_oWebMonthView_ 
+
+The WebMonthView client-side object.
+
+|*MouseDown* 
+|This event fires when a mouse down occurs on any element in the MonthView. 
+
+*Parameters*
+
+_oWebMonthView_ 
+
+The WebMonthView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to where the mouse button was pressed down.
+
+|*MouseUp* 
+|This event fires when a mouse up occurs on any element in the MonthView. 
+
+*Parameters*
+
+_oWebMonthView_ 
+
+The WebMonthView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to where the mouse button was released.
+
+|*NavigateNext* 
+|This event fires after the next button on the MonthView is pressed. 
+
+*Parameters*
+
+_oWebMonthView_ 
+
+The WebMonthView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _numberOfDays_ 
+
+The number of days that will be navigated.
+
+|*NavigatePrevious* 
+|This event fires after the previous button on the MonthView is pressed. 
+
+*Parameters*
+
+_oMonthView_ 
+
+The WebMonthView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _numberOfDays_ 
+
+The number of days that will be navigated.
+
+|====
+

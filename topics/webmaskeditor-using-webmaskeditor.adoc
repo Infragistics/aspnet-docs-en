@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmaskeditor-using-webmaskeditor",
+    "controlName": ["WebMaskEditor"],
+    "tags": ["Editing","Getting Started"],
+    "guid": "{E00F5E70-6BD0-41DD-B356-EEA461F2B346}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T14:39:37Z"
+}
+|metadata|
+////
+
+= Using WebMaskEditor
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebMaskEditor™.
+
+link:webmaskeditor-data-modes-in-webmaskeditor.html[Data Modes in WebMaskEditor]
+
+You can learn about the data modes supported by the WebMaskEditor control.
+
+link:webmaskeditor-display-modes-in-webmaskeditor.html[Display Modes in WebMaskEditor]
+
+In this section you can learn about the display modes that you can use with your WebMaskEditor control.
+
+link:webmaskeditor-overview-of-masks.html[Masks Overview]
+
+This section contains an overview of the masks.
+
+link:configuring-and-retrieving-input-masks-dynamically.html[Configuring and Retrieving Input Masks Dynamically]
+
+This topic demonstrates how to get and set the WebMaskEditor input masks dynamically.
+
+link:webmaskeditor-spinning-through-a-list-of-values-in-webmaskeditor.html[Spinning through a list of values in WebMaskEditor]
+
+In this section you can learn how to use spin buttons in the control to spin through a list of values.
+
+link:webmaskeditor-using-custom-button-in-webmaskeditor.html[Using Custom Button in WebMaskEditor]
+
+In this section you can learn how to implement a customized button and use it to perform custom actions.
+
+link:webmaskeditor-webmaskeditor-smart-tag.html[WebMaskEditor Smart Tag]
+
+In this section you can learn about the WebMaskEditor Smart Tag.

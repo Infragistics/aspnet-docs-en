@@ -1,0 +1,75 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalcmanager-using-formula-builder-to-generate-calculations",
+    "controlName": ["WebCalcManager"],
+    "tags": ["Application Scenarios","How Do I"],
+    "guid": "{F0B4C108-BFB7-4606-926F-746E3F8A7741}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using Formula Builder to Generate Calculations
+
+== Before You Begin:
+
+The WebCalcManager™ is a non-visual component that extends the capabilities of all Infragistics elements on a form. To implement formulas on your form, drag the UltraWebCalcManager component from the Toolbox onto your form. Once this is done, all of the Infragistics elements on the form will have the following additional properties:
+
+[options="header", cols="a,a"]
+|====
+|Property Name|Description
+
+| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~alias.html[Alias]"] 
+|Gets or sets the alias name of the control.
+
+| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~errorvalue.html[ErrorValue]"] 
+|Gets or sets the value displayed in the element when an error occurs in the formula.
+
+| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~formula.html[Formula]"] 
+|Gets or sets which property (Text, Tag, Value, etc., based on the element) is used as either the source or target of any calculations involving the control. 
+
+.Note:
+[NOTE]
+====
+that in order for a control to function properly as the Source value of a calculation, the property must also have a changed event. For example, if using the Text property, the control must have a TextChanged event. Otherwise, the CalcManager cannot detect changes in the property.
+====
+
+| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~propertyname.html[PropertyName]"] 
+|Gets or sets the name of the property that is used as either the source or target (or both) of any calculations involving the control. If no PropertyName is set, or if the PropertyName is invalid, then the control will not participate in any calculations and a Reference Error may be generated. 
+
+In order for the CalcManager to properly use a control's property as the source value in a calculation the property must follow the same guidelines as a Bindable property. That is, the control must expose the property publicly and also expose a PropertyChanged event. For Example, if The Text property is being used, then the control must also have a TextChanged event. If there is no such event, the calculation will not function correctly. This applies only to source properties. If the control is only being used at the target for the calculated value of a formula, the event is not required.
+
+|====
+
+== Follow These Steps:
+
+[start=1]
+. The following image demonstrates the WebTextEdit control on a form with its properties extended by the WebCalcManager component.
+
+image::Images/WebCalcManager_Using_CalcManager_and_Formulas_01.png[]
+
+[start=2]
+. To add formulas to an element, simply click the ellipses button on the Formula property to invoke the Formula Builder.
+
+image::Images/WebCalcManager_Using_CalcManager_and_Formulas_02.png[]
+
+[start=3]
+. Once the Formula Builder is displayed, the left column displays 2 tabs. The first tab lists the elements on the form that can be used in a formula, along with any custom NamedReferences. The second tab lists all of the formulas that can be used.
+
+.Note:
+[NOTE]
+====
+If a control on your form doesn't show up under the controls tab list, find that control on your form and expand the CalcSettings and select the PropertyName for it.
+====
+
+image::Images/WebCalcManager_Using_CalcManager_and_Formulas_03.png[]
+
+[start=4]
+. To create a formula, simply double-click the name of an element on the first tab, or drag-and-drop the element name in the list to the formula editor. Use the formula editor's toolbar to add basic math symbols to your calculation. As you modify the formula in the formula editor, the formula is being checked for syntax errors in the background. If a formula entered is invalid, then you will be notified of the column and line number where you need to make the change.
+
+== What You Accomplished:
+
+This walk through was designed to guide you through using the Formula Builder to generate a calculation of two textboxes.

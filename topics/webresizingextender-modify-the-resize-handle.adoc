@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-modify-the-resize-handle",
+    "controlName": ["WebResizingExtender"],
+    "tags": [],
+    "guid": "{A02A1821-55F5-4188-9F31-93D4E00B3293}",  
+    "buildFlags": [],
+    "createdOn": "2007-10-01T14:54:54Z"
+}
+|metadata|
+////
+
+= Modify the Resize Handle
+
+A customization request that your end users may ask from you is to change the style of the resize handle that appears in the lower-right corner of the resizing control. The resize handle is controlled by Cascading Style Sheets (CSS). Therefore the easiest way to modify the resize handle is to create a CSS class in your form, and then assign the class name to the  pick:[asp-net="link:infragistics4.webui.webresizingextender.v{ProductVersion}~infragistics.webui.webresizingextender~handleclass.html[HandleClass]"]  property of WebResizingExtender™. This topic will show you how to create an in-line CSS class, and then assign it to the HandleClass property.
+
+[start=1]
+. To create a CSS class, inside your page's <head> tags, after the closing <title> tags, create a <style> tag of type "text/css".
+[start=2]
+. Assign the class a name by inserting '.' followed by the name you want to assign to the class.
+[start=3]
+. Open the class by typing a '{' character. Close the class by typing a '}' character.
+[start=4]
+. Close your <style> tag.
+[start=5]
+. With that done, youcan now makethe style changes that you want. The resize handle follows and understands all standard CSS. So you can change the border, the background, set an image to appear, etc. The following example code sets the border, background, width, and height of the resize handle.
+
+*In CSS:*
+
+----
+<style type="text/css">
+	.hand0
+	{
+		border:1px solid red;
+		background:orange;
+		width:14px;
+		height:14px;
+	}
+</style>
+----
+
+[start=6]
+. To use the CSS class, select the WebResizingExtender control on the design surface.In the Properties window, set the HandleClass property, to a value of "hand0". This is the name given to the CSS class we created.
+[start=7]
+. Build and run the Web form. You will see that the resize handle is now a little orange square with a red outline.

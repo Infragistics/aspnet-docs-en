@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-add-a-recurring-appointment-client-side",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{866F37B4-D320-47B4-8634-FDEF7F91C92A}",  
+    "buildFlags": [],
+    "createdOn": "2006-10-04T00:00:00Z"
+}
+|metadata|
+////
+
+= Add a Recurring Appointment Client Side
+
+Using WebSchedule's™ client-side object model (CSOM), you can create a recurring appointment client side. To do so, you will need to obtain an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  object. This can be done either by creating a new appointment or retrieving one from the Activities collection. Once you have a reference to an appointment, you can create a recurrence object from it with the CreateRecurrence function. Once you set up the recurrence object, set the recurrence of the appointment to the recurrence object created with the setRecurrence function. Finally, add the activity to the Activities collection.
+
+*In JavaScript:*
+
+----
+// Create an appointment and set the subject and start date.
+var appointment = oWebScheduleInfo1.getActivities().createActivity();
+appointment.setStartDateTime(new Date());
+appointment.setSubject("My Recurring Appointment");
+// Create the recurrence object from the appointment.
+var recurrence = appointment.createRecurrence();
+// Set up your recurrence object. This recurring appointment will
+// occur daily for three days.
+recurrence.setPeriod(0); 		
+recurrence.setPeriodMultiple(1);
+recurrence.setMaxOccurrences(3);
+// Set the Recurrence object of your activity to the recurrence you've just created. 
+appointment.setRecurrence(recurrence);
+// Add the appointment to the Activities collection.
+oWebScheduleInfo1.addActivity(appointment,"");
+----
+
+== Related Topics
+
+link:webschedule-update-a-recurring-appointment-client-side.html[Update a Recurring Appointment Client Side]
+
+link:webschedule-delete-a-recurring-appointment-client-side.html[Delete a Recurring Appointment Client Side]

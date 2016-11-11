@@ -1,0 +1,256 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridmigrationrowadding",
+    "controlName": [],
+    "tags": [],
+    "guid": "12ab51c7-138c-4a07-9e56-4f7308ed87bc",  
+    "buildFlags": [],
+    "createdOn": "2016-03-01T12:49:14.5276456Z"
+}
+|metadata|
+////
+
+= Grid Migration - Row Adding
+
+The RowAdding allows the end user to add rows to the grid through the UI, as well as programmatically with javascript. RowAdding behavior is a child behavior of EditingCore and both need to be enabled in order to add rows for WebDataGrid (WDG) or WebHierarchicalDataGrid (WHDG).
+
+[[_Toc291511353]]
+== Enabling the Behavior
+
+The behavior can be enabled through the property window of of WDG or WHDG.
+
+[start=1]
+. In the Microsoft® Visual Studio™ property window, locate the Behaviors property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+[start=2]
+. Select the CheckBox next to RowAdding on the left side to enable the behavior (the Editing Core behavior’s checkbox will automatically be selected)
+
+.Note:
+[NOTE]
+====
+At this point you can configure additional Row Adding related properties
+====
+
+[start=2]
+. Click Ok to close the dialog.
+
+.Note:
+[NOTE]
+====
+In order for any CRUD operation to function for the WDG/WHDG the DataKeyFields property must be set
+====
+
+The “Row Adding” behavior can also be enabled at design time
+
+*In ASPX:*
+
+[source,html]
+----
+<Behaviors>               
+      <ig:EditingCore>
+          <Behaviors>
+               <ig:RowAdding>
+               </ig:RowAdding>
+          </Behaviors>
+      </ig:EditingCore>
+</Behaviors>
+----
+
+[[_Toc291511354]]
+== Row Adding Placement and Visibility
+
+The add new row for the Row Adding behavior is always visible and fixed to either the top or bottom of the grid, this is controlled by the Alignment property value, which defaults to Bottom.
+
+In order to add new rows programmatically with JavaScript, you only need the EditingCore behavior enabled.
+
+== WDG Adding Rows through JavaScript:
+
+*In JavaScript:*
+
+[source,js]
+----
+/* Get the grid object * /
+var grid = $find("WebDataGrid1");
+/* Define an array of cell values * /
+var cellValues = ["1", "Bob", "Green", "1/2/1983"];
+/* Add a new row, which will have the cell values defined above * /
+grid.get_rows().add(cellValues);
+----
+
+[[_Toc291511356]]
+== WHDG Adding Rows through JavaScript:
+
+*In JavaScript:*
+
+[source,js]
+----
+/* Find the control * /
+var grid = $find("WebHierarchicalDataGrid1");
+/* Adding rows for the top row island * /
+var topRowIsland = grid.get_gridView();
+/* Define an array of cell values * /
+var cellValues = ["1", "Bob", "Green", "1/2/1983"];
+/* Add a new row, which will have the cell values defined above * /
+topRowIsland.get_rows().add(cellValues);
+/* Adding rows for a 2nd level row island * /
+var childGrid = topRowIsland.get_rows().get_row(3).get_rowIslands()[0];
+cellValues = ["1", "25 Main Road", "New York", "NY", "19234"];
+/* Add a new row, which will have the cell values defined above * /
+childGrid.get_rows().add(cellValues);
+----
+
+[[_Toc291511357]]
+== Customizing the Row Adding Behavior
+
+The Row Adding behavior can be customized per column basis by creating RowAddingColumnSetting object and adding it to the ColumnSettings of the Row Adding behavior. You can do this through the Behaviors Editor Dialog, in design time or run time.
+
+[[_Toc291511358]]
+== ASPX
+
+In the aspx it would look like this:
+
+*In ASPX:*
+
+[source,html]
+----
+<Behaviors>               
+    <ig:EditingCore>
+        <Behaviors>
+            <ig:RowAdding>
+                <ColumnSettings>
+                    <%-- setting a default value for the new data for 
+                    the "Size" column --%>
+                    <ig:RowAddingColumnSetting ColumnKey="Size" DefaultValueAsString="3"
+                    />                    
+                    <%--indicating that the “Id” column is read only and a 
+                    value cannot be provided for it--%> 
+                    <ig:RowAddingColumnSetting ColumnKey="Id" ReadOnly="true" />
+                    <%--setting up an editor and validator for a column--%>
+                    <ig:RowAddingColumnSetting ColumnKey="OrderDate" 
+                    EditorID="DateTimePicker1" ValidatorID="myValidator1" />                                
+                </ColumnSettings>
+            </ig:RowAdding>
+        </Behaviors>
+    </ig:EditingCore>
+</Behaviors>
+----
+
+[[_Toc291511359]]
+== WDG Code Behind
+
+For WDG this should be done in the Page Load event.
+
+*In C#:*
+
+[source,csharp]
+----
+/* Save of the Row Adding behavior for ease of use * /            
+RowAdding rowAddingBehavior = this.WebDataGrid1.Behaviors.EditingCore.Behaviors.RowAdding;
+/* Setting a default value for the new data for the "Size" column * /
+RowAddingColumnSetting sizeSetting = new RowAddingColumnSetting();
+sizeSetting.ColumnKey = "Size";
+sizeSetting.DefaultValueAsString = "3";
+rowAddingBehavior.ColumnSettings.Add(sizeSetting);
+/* Indicating that the “Id” column is read only and a value cannot be provided for it * /
+RowAddingColumnSetting idSetting = new RowAddingColumnSetting();
+idSetting.ColumnKey = "Id";
+idSetting.ReadOnly = true;
+rowAddingBehavior.ColumnSettings.Add(idSetting);
+/* Setting up an editor and validator for a column * /
+RowAddingColumnSetting orderDateSetting = new RowAddingColumnSetting();
+orderDateSetting.ColumnKey = "OrderDate";
+orderDateSetting.EditorID ="DateTimePicker1";
+orderDateSetting.ValidatorID = "myValidator1";
+rowAddingBehavior.ColumnSettings.Add(orderDateSetting);
+----
+
+[[_Toc291511360]]
+== WHDG Code Behind
+
+For WHDG this should be done in the InitializeBand event for WHDG.
+
+*In C#:*
+
+[source,csharp]
+----
+protected void Page_Load(object sender, EventArgs e)
+{
+      this.WebHierarchicalDataGrid1.InitializeBand += new InitializeBandEventHandler(WebHierarchicalDataGrid1_InitializeBand);
+}
+void WebHierarchicalDataGrid1_InitializeBand(object sender, BandEventArgs e)
+{
+      if (e.Band.DataMember == "Root")
+      {
+            /* Save of the Row Adding behavior for ease of use * /            
+            RowAdding rowAddingBehavior = e.Band.Behaviors.EditingCore.Behaviors.RowAdding;
+            /* Setting a default value for the new data for the "Size" column * /
+            RowAddingColumnSetting sizeSetting = new RowAddingColumnSetting();
+            sizeSetting.ColumnKey = "Size";
+            sizeSetting.DefaultValueAsString = "3";
+            rowAddingBehavior.ColumnSettings.Add(sizeSetting);
+            /* Indicating that the “Id” column is read only and a value cannot be provided for it * /
+            RowAddingColumnSetting idSetting = new RowAddingColumnSetting();
+            idSetting.ColumnKey = "Id";
+            idSetting.ReadOnly = true;
+            rowAddingBehavior.ColumnSettings.Add(idSetting);
+            /* Setting up an editor and validator for a column * /
+            RowAddingColumnSetting orderDateSetting = new RowAddingColumnSetting();
+            orderDateSetting.ColumnKey = "OrderDate";
+            orderDateSetting.EditorID = "DateTimePicker1";
+            orderDateSetting.ValidatorID = "myValidator1";
+            rowAddingBehavior.ColumnSettings.Add(orderDateSetting);
+      }
+      else if (e.Band.DataMember == "SecondLevel")
+      {
+            RowAdding rowAddingBehavior = e.Band.Behaviors.EditingCore.Behaviors.RowAdding;
+/* The rest of the code is the same as for the Root level
+                   only the Column keys and setting would be different as this
+                   level would have a different data structure */                
+      }
+}
+----
+
+[[_Toc291511361]]
+== Accessing Row Adding On Client
+
+[[_Toc291511362]]
+==== WebDataGrid
+
+*In JavaScript:*
+
+[source,js]
+----
+/* Get the grid object * /
+var grid = $find("WebDataGrid1");
+/* Get the Row Adding Behavior * /
+var rowAdding = grid.get_behaviors().get_editingCore().get_behaviors().get_rowAdding();
+/* Clear the values that the user put into the add new row
+The true here indicates that the default values for the cells should be restored */ 
+rowAdding.clearAddNewRow(true);
+----
+
+[[_Toc291511363]]
+==== WebHierarchicalDataGrid
+
+*In JavaScript:*
+
+[source,js]
+----
+/* Find the control * /
+var grid = $find("WebHierarchicalDataGrid1");
+/* Get the Row Adding Behavior for the Top Level Grid * /
+var topRowIsland = grid.get_gridView();
+/* Get the Row Adding Behavior * /
+var rowAdding = topRowIsland.get_behaviors().get_editingCore().get_behaviors().get_rowAdding();
+/* Clear the values that the user put into the add new row
+The true here indicates that the default values for the cells should be restored */ 
+rowAdding.clearAddNewRow(true);
+/* Get the Row Adding Behavior for a 2nd level row island * /
+var childGrid = topRowIsland.get_rows().get_row(3).get_rowIslands()[0];
+/* Get the Row Adding Behavior * /
+var rowAdding = childGrid.get_behaviors().get_editingCore().get_behaviors().get_rowAdding();
+/* Clear the values that the user put into the add new row
+The true here indicates that the default values for the cells should be restored */
+rowAdding.clearAddNewRow(true);
+----

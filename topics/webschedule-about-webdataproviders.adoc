@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-about-webdataproviders",
+    "controlName": ["WebSchedule"],
+    "tags": ["Data Binding","Getting Started","Scheduling"],
+    "guid": "{903797C3-E8AF-4127-84A8-E5E29CC9AF06}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= About WebDataProviders
+
+Situated in the data access layer, the WebSchedule data provider is responsible for binding  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource]"]  objects in the WebScheduleInfo™ to tables and rows in your data store.
+
+The data provider class model was also created with extensibility in mind. You can extend the data provider to work with other data sources or enhanced object models.

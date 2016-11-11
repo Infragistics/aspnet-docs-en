@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-storing-snooze-values",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Persistence","Scheduling"],
+    "guid": "{236C10C1-E781-4BAE-A80A-5572ADD201E4}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Storing Snooze Values
+
+link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledataproviderbase~snoozepersistencetype.html[SnoozePersistenceType]  is a property located on the WebScheduleDataProviders. It determines how snooze values will be stored when a user chooses to snooze an  link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]  using the Reminder Dialog. There are two enumerated values that it can be set to, ControlState and Cookie.
+
+== ControlState
+
+When SnoozePersistenceType is set to ControlState, Activities that are snoozed are passed back and forth from the client and server, every post-back. When the user navigates away from the page, or closes the application, all snooze values are lost. So, when you open the application, a reminder will display immediately, even if the snooze time has come due.
+
+== Cookie
+
+When SnoozePersistenceType is set to Cookie, Activities that are snoozed are stored in a cookie. This means that no additional data is passed back and forth from the client and server. Also, snooze values will persist longer than the session. So, when you close the web application, the next time you open it up, the activity that was snoozed will be still snoozed if it hasn't come due yet. However, if the end users have cookies disabled, snooze will be disabled.

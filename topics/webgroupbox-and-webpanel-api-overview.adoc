@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgroupbox-and-webpanel-api-overview",
+    "controlName": ["WebGroupBox"],
+    "tags": ["API","Layouts"],
+    "guid": "{D5D44B5E-4E2B-4CCA-BBBA-631F8975CF8D}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+=== WebPanel and WebGroupBox Namespace:
+
+link:infragistics4.webui.misc.v{ProductVersion}~infragistics.webui.misc_namespace.html[Infragistics.WebUI.Misc]
+
+=== Key Classes:
+
+link:infragistics4.webui.misc.v{ProductVersion}~infragistics.webui.misc.webgroupbox.html[WebGroupBox]
+
+link:infragistics4.webui.misc.v{ProductVersion}~infragistics.webui.misc.miscrenderbase.html[MiscRenderBase]

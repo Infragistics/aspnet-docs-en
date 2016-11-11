@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-webexplorerbar",
+    "controlName": [],
+    "tags": ["Styling","Theming"],
+    "guid": "{24AD8FD9-A7F1-448B-8295-19BCA4D9EA2C}",  
+    "buildFlags": [],
+    "createdOn": "2010-04-03T14:44:09Z"
+}
+|metadata|
+////
+
+= WebExplorerBar
+
+View all of your styling modifications that involve the WebExplorerBar control in the WebExplorerBar canvas. You will find the following control on the WebExplorerBar canvas:
+
+* WebExplorerBar
+
+image::images/AppStylist_WebExplorerBar_Canvas_01.png[The canvas for the WebExplorerBar control.]

@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimagebuton-create-rounded-images",
+    "controlName": ["WebImageButton"],
+    "tags": ["Layouts","Styling"],
+    "guid": "{6EC5F21C-A624-4C1C-8B62-38681BF09812}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Create Rounded Images
+
+=== WebImageButton: Using Rounded Images
+
+One way to give a unique look to a WebImageButton™ is to create custom "rounded" images. The most common format for such images is GIF, due to the transparency support. PNG images are also popular, however support for displaying PNG files in Microsoft Internet Explorer 6.0 is limited.
+
+Whatever format is used, a few properties must be set on the WebImageButton control to match the specifications of the Image. These settings are illustrated in the following diagram:
+
+image::Images\WebImageButon_Using_Rounded_Images_01.png[]
+
+Each of these properties reside under  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.webimagebutton~roundedcorners.html[WebImageButton.RoundedCorners]"] .
+
+*  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.buttonroundedcorners~heightofbottomedge.html[HeightOfBottomEdge]"] :
+
+The height, from the bottom up, of the portion of the image which must remain static for the button to keep its vertical shape. For buttons which are rounded on the sides and not the bottom, the button will not be able to adjust in height, so this property should be set to 0.
+
+Setting the HeightOfBottomEdge property to 0 prevents the WebImageButton from being reduced beneath its MaxHeight.
+*  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.buttonroundedcorners~widthofrightedge.html[WidthOfRightEdge]"] :
+
+The height, from the right side of the button, of the portion of the image which must remain static for the button to keep its horizontal shape.
+
+Setting the WidthOfRightEdge property to 0 prevents the WebImageButton from being reduced beneath its MaxWidth.
+*  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.buttonroundedcorners~maxheight.html[MaxHeight]"] :
+
+The maximum height which the WebImageButton can support. In most cases, this will be the actual height of the image.
+*  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.buttonroundedcorners~maxwidth.html[MaxWidth]"] :
+
+The maximum width which the WebImageButton can support. In most cases, this will be the actual width of the image.
+
+The button image in the above diagram uses:
+
+* HeightOfBottomEdge: 0px
+* WidthOfRightEdge: 35px
+* MaxHeight: 150
+* MaxWidth: 600

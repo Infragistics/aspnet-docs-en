@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-box-annotations",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{9EBD2616-7E0E-4A84-9BAE-8C7821E4B9EC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Box Annotations
+
+Annotations are used to add extra information or to provide a visual cue to your gauge. Box annotations are rectangles, sometimes with rounded edges, with optional text displayed inside.
+
+For example, if you created a Linear gauge to represent a thermometer, you could create an annotation with the text set to Celsius, to show the unit of measurement.
+
+The following screen shot shows an example of a Radial gauge with a box annotation.
+
+image::images/Gauge_Box_Annotations_01.png[Radial gauge with a box annotation shown on it.]
+
+== Related Topic
+
+link:webgauge-create-a-box-annotation-on-a-gauge.html[Create a Box Annotation on a Gauge]

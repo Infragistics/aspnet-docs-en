@@ -1,0 +1,50 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalcmanager-information-functions",
+    "controlName": ["WebCalcManager"],
+    "tags": ["How Do I"],
+    "guid": "{AF1E71B7-F042-40E8-9910-E4C71817BE1D}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Information Functions
+
+Below is a list of all Microsoft® Excel®-style information functions provided by the WebCalcManager™ control. Visit Microsoft's website for more information on these link:https://support.office.com/en-us/article/Excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb#__toc309306712[Information Functions].
+
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionerrortype.html[ERRORTYPE]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctiondbnull.html[DBNULL]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionnull.html[NULL]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionisblank.html[ISBLANK]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionisdbnull.html[ISDBNULL]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctioniserr.html[ISERR]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctioniserror.html[ISERROR]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionislogical.html[ISLOGICAL]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctioniseven.html[ISEVEN]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionisna.html[ISNA]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionisnontext.html[ISNONTEXT]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionisnull.html[ISNULL]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionisnumber.html[ISNUMBER]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionisodd.html[ISODD]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionisref.html[ISREF]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionistext.html[ISTEXT]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionna.html[NA]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctiontype.html[TYPE]"] 
+
+== Related Topics
+
+link:webcalcmanager-date-and-time-functions.html[Date and Time Functions]
+
+link:webcalcmanager-financial-functions.html[Financial Functions]
+
+link:webcalcmanager-logical-functions.html[Logical Functions]
+
+link:webcalcmanager-math-functions.html[Math Functions]
+
+link:webcalcmanager-statistical-functions.html[Statistical Functions]
+
+link:webcalcmanager-text-and-data-functions.html[Text and Data Functions]

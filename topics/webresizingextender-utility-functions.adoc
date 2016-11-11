@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-utility-functions",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{A411CB14-148B-4FC1-A6C0-7CD686E80D56}",  
+    "buildFlags": [],
+    "createdOn": "2007-08-02T08:02:08Z"
+}
+|metadata|
+////
+
+= WebResizingExtender Utility Functions
+
+== Utility Functions
+
+=== Introduction
+
+The utility functions described here are used by the JavaScript code of the WebResizingExtender™ controls. The purpose of exposing and documenting them is to allow developers to put as much logic as possible on the client machine in order to obtain gains in both performance and functionality.
+
+*Sys.Application.findComponent(id)*
+
+Gets access to the WebResizingExtender that's id is passed into the findComponent method.

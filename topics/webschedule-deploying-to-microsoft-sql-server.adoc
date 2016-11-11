@@ -1,0 +1,120 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-deploying-to-microsoft-sql-server",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Patterns and Practices","Scheduling"],
+    "guid": "{8156CD95-0D39-4AB8-B384-D0C1FB96EBDB}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Deploying to Microsoft SQL Server
+
+In this article you are going to learn answers to frequently asked questions regarding deployment to Microsoft SQL Server 2000. This topic is intended for the Web developer who has to deploy a WebSchedule™ application using the included SQL Server data provider and SQL install script. It also offers practical advice for planning security and reliability in your data-driven scheduling application.
+
+Please recognize that advanced customization of the installation is beyond the scope of this article, and may require the services of a Database Administrator (DBA). With the answers included here as background information, you should be equipped to consult with your DBA and address the requirements of your scheduling application.
+
+== What are the requirements for installing to Microsoft SQL Server?
+
+Before you deploy a WebSchedule application to Microsoft SQL Server, please ensure your server host machine meets the minimum system requirements. You should have the latest service pack of Microsoft SQL Server 2000 (or later) or the Microsoft Database Engine (MSDE) installed to use the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulesqlclientprovider.html[WebScheduleSqlClientProvider]"]  control.
+
+== Where is the SQL install script for Microsoft SQL Server?
+
+WebSchedule installs an SQL install script for you to create the required tables, relationships, stored procedures, indexes and default data expected by the WebSchedule data model. The path where this script can be found is in the following default installation folder, depending on your operating system:
+
+* XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
+* Vista -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+
+The name of this script file starts with WebSchedule, followed by a number identifying the data model schema version, and it has an ".sql" file extension.
+
+== Can I rename the database that gets created?
+
+By default, the install script names your database after the file name ( _i.e._, WebSchedule followed by a number identifying the data model schema version.) You can modify the default name of the database that gets created by loading the install script into any Unicode text editor (like Windows' Notepad accessory) and replacing instances of the default name with your own.
+
+== Where do the database files get created by default in this script? and can I change that location?
+
+When you execute the SQL install script to create your database, it will create the data ($$*$$.MDF) and transaction log ($$* $$.LDF) files in the default location of the SQL Server default instance.
+
+You configure this default location on your SQL Server by right-clicking your Server within SQL Server Enterprise Manager. Select "Properties" from the context menu to show the SQL Server Properties dialog. On the "Database Settings" tab there is a panel labeled "New database default location" where you can specify the initial data and transaction log directories.
+
+image::Images/WebSchedule_Related_Topics_Deploying_to_Microsoft_SQL_Server_01.PNG[]
+
+Database administrators more comfortable with Data Definition Language (DDL) can modify the SQL install script to specify more sophisticated deployments, including file groups, growth factors, and specific placement of data and transaction log files on RAID disk arrays. The statement to change is the CREATE DATABASE line within the SQL install script. The wide range of options available to you in customizing the CREATE DATABASE statement are beyond the scope of this topic, but you can find more information in the SQL Server Books Online.
+
+== How do I run the SQL install script from the command line?
+
+You run the SQL install script to create your database from the command shell, or it can be done through the SQL Query Analyzer (graphical interface) supplied with SQL Server Enterprise Manager. Please note the graphical interface is not included in MSDE, and you must use the command shell if you are deploying to MSDE.
+
+From the command shell (Start menu | Run... | "cmd") in the working directory where the SQL install script is located, you would type the following when using SQL authentication mode with the common sa account:
+
+[source]
+----
+osql -i WebSchedule1.sql -U sa -P password
+----
+
+or for Windows authentication mode:
+
+[source]
+----
+osql -i WebSchedule1.sql -E
+----
+
+These instructions are for the default SQL Server instance on the machine. If you have multiple SQL Server instances, you can add the -S [ _serverName_ \ _instanceName_ ] argument to specify a non-default instance. For example,
+
+[source]
+----
+osql -i WebSchedule1.sql -E -S "MACHINE\VSdotNET"
+----
+
+Within the SQL Query Analyzer environment, you would first connect to the SQL Server instance on which you want to install the WebSchedule data model through the logon dialog which looks like this:
+
+image::Images/WebSchedule_Related_Topics_Deploying_to_Microsoft_SQL_Server_02.PNG[]
+
+Specify the correct authentication mode (SQL or Windows) and server name. You can leave the server name "." to refer to the default server on the local machine. If you are selecting a non-default SQL Server instance, you must specify both server name and instance name separated by a slash (\). Click the OK button to log on.
+
+You should now be brought to the Query Window. From the File menu, select Open and then choose the SQL install script installed with Infragistics ASP.NET. This install script loads and you can make changes to it in the Query Window before pressing F5 to Execute the batch commands in the SQL install script.
+
+The SQL install script may take between 15 and 30 seconds to execute, and any errors will appear on standard output (when using the command shell) or in the Result Window (when using SQL Query Analyzer). It may be necessary to refresh the docked Objects pane in SQL Query Analyzer to see the new WebSchedule database that was created.
+
+== What differences can I expect if deploying to a SQL authentication database versus a Windows authentication database?
+
+To find out whether Microsoft SQL Server is configured to use SQL authentication mode or Windows authentication mode, select the server in SQL Server Enterprise Manager. Right-click and select "Properties" from the context menu. Select the "Security" tab and check the active Authentication mode.
+
+image::Images/WebSchedule_Related_Topics_Deploying_to_Microsoft_SQL_Server_03.PNG[]
+
+For more information on the differences you need to know about between SQL and Windows authentication modes when using WebSchedule please see the 
+
+== related topics
+" link:webschedule-sql-authentication-in-microsoft-sql-server.html[SQL Authentication in Microsoft SQL Server]," or " link:webschedule-windows-authentication-in-microsoft-sql-server.html[Windows Authentication in Microsoft SQL Server]."
+
+== How should I configure the Connection String to use the Database at run-time?
+
+When running a WebSchedule application using the WebScheduleSqlClientProvider in a production environment, you must define the connection parameters to your deployed Microsoft SQL Server on the ConnectionString property of an ADO.NET SqlConnection component that you drop on the form. Please be aware that your ConnectionString contains sensitive data that must not appear in view state.
+
+You should set the ConnectionString on this ADO.NET SqlConnection component that gets attached to the WebScheduleSqlClientProvider control for each page request (or in a connection pooling situation, when the SqlConnection gets initialized.) Always safeguard logon credentials in your ConnectionString by using best practices for securing this information, such as storing them in your application's "web.config" file or in encrypted form.
+
+== Can I use the WebScheduleSqlClientProvider default connection in production environments?
+
+WebScheduleSqlClientProvider will only maintain the name of your SqlConnection component ( _i.e._, SqlConnection1) and use this to re-establish contact with the Microsoft SQL Server on each request without needing any sensitive information. You can also assign a dynamically created SqlConnection component to the Connection property of the data provider at run-time, so you don't require knowledge of the name of the SqlConnection component at design-time if that's unavailable to you.
+
+Although the data provider works with a default connection (based on a database named "WebSchedule" followed by the schema version number on the local machine using the standard SQL authentication logon "sa" with a blank password), this connection should never be relied on in production environments. It is only included as a convenience for you as you develop an application on your local machine. If you deploy without properly connecting the WebSchedule data provider to your database as described above, and you have no database server for the data provider to connect to using "sa" and the blank password then when the data provider will alert you to this fact when it fires an error for having no connection.
+
+== What do I need to consider to ensure reliable backup of my scheduling data?
+
+Before your scheduling application has been deployed, prudent planning of your application's backup and restore processes should be done in consultation with your DBA. Consider building a down-time user interface into your Web application if your process includes taking a database server off-line for any period of time.
+
+WebSchedule does not perform any bulk operations. Therefore, if your Web application does not do it's own bulk operations (for example, nightly imports of scheduling information from off-site) you can use the bulk-logged recovery model.
+
+By default, WebSchedule creates a transaction log. You can modify the CREATE DATABASE statement in the SQL install script, or execute an ALTER DATABASE statement after deployment, to change the characteristics of transaction logging. If you turn off transaction logging, then only simple recovery is possible and any data modifications made since your last full database backup will have to be re-done or lost.
+
+== How will future database schema changes affect my deployed application?
+
+Future releases of WebSchedule (and plausibly hot fix releases) may make changes to the WebSchedule data model in order to support new features (or fix problems). The data model has been designed with this kind of extensibility in mind. When a new schema version of the data model gets released, it's schema version number shall increase, and for each incremental change in schema version an SQL script will be provided that converts databases conforming to the earlier schema into the updated schema (for example, 1 to 2, 2 to 3,  _etc_ .) New columns and relationships will be filled with sensible default data to maximize backward compatibility.
+
+Some developers may have made customizations to their data model by adding columns or modifying stored procedures to add their own enhancements. To avoid column naming collisions, developers may use lowercase when naming columns added by their applications (all columns in the released WebSchedule data model will continue to use an uppercase naming convention, or mark reserved columns with a leading underscore). Updates to the released WebSchedule data model cannot be guaranteed to be compatible with such customizations. It is likely that customizations to stored procedures will need to be re-performed if the definition of a stored procedure changes, or the incremental upgrade scripts must be adapted to fit your custom data model.
+
+Before applying an upgrade SQL script, it is strongly recommended that you perform a full backup of your database, so that you may restore the original database if any errors occur during the upgrade.

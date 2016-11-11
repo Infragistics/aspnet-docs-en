@@ -1,0 +1,40 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimagebutton-about-webimagebutton",
+    "controlName": ["WebImageButton"],
+    "tags": ["Getting Started","Layouts","Styling"],
+    "guid": "{D172D1D2-8EAB-4D0C-A09E-0660FA65A8D0}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= About WebImageButton
+
+WebImageButton™ is a button control, which is simple in nature, but can be customized to add a number of capabilities not available for the standard ASP.NET Button or the HTML<INPUT type="button"/> element. Following is a list of some of these capabilities:
+
+*Rounded Corners*
+
+Buttons with rounded corners are popular in user interfaces; however in HTML there is no simple way to do this, without creating separate images for each button. WebImageButton can create a variety of rounded-corner buttons using a single image, or using a composite of table cells which appear as rounded corners around buttons.
+* *Multiple Appearances*
+
+WebImageButton provides multiple appearances which are easily customizable by setting properties. Properties are provided for:  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~appearance.html[Appearance]"] ,  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~disabledappearance.html[DisabledAppearance]"] ,  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~focusappearance.html[FocusAppearance]"] ,  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~hoverappearance.html[HoverAppearance]"] , and  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~pressedappearance.html[PressedAppearance]"] . The result of using each of these appearances is a responsive UI which is pleasing to the end user.
+* *Client and Server-Side Events*
+
+Both client and server-side events are supported by WebImageButton. Any WebImageButton can be configured to trigger and respond to events on either the client or the server, or both.
+
+Additionally, Infragistics enhanced client-side object model enables the developer to set up client-side behavior to trigger and respond to events, or to change the appearance of the button on the client, without causing a PostBack. Reducing PostBacks enhances web applications by providing a more responsive interface to the end user, and by reducing the load on the server.
+* *Style Presets*
+
+Like all Infragistics Web Controls, WebImageButton supports XML style presets. Infragistics provides presets for popular styles like Windows XP and MacOS X. The developer can also create custom presets, and save and load them to achieve a consistent look throughout all instances of the WebImageButton in a web application.
+* *Uniform, Cross-browser Appearance*
+
+On the web, there is a variety of web browsers running on a variety of operating systems. Most browsers and operating systems are themed and styled in their own unique way, and so it becomes difficult to achieve the same look for all the end users. WebImageButton can be used to create an appearance that is not prone to browser/OS styling.
+* *Other Customizations*
+
+Many other appearance and behavior settings can be customized on WebImageButton. Some of these include: text wrapping and alignment, hotkey support, and tooltips.
+
+So, for a straightforward button control, even a high-level overview of WebImageButton provides a long list of features to explore. For more information on any of the aforementioned topics, please refer to the appropriate section of the WebImageButton/WebDataInput documentation.

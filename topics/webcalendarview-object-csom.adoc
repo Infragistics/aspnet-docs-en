@@ -1,0 +1,73 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalendarview-object-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{2091B318-0757-4E4E-B989-FEACA8B577FB}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= WebCalendarView Object
+
+== WebCalendarView
+
+The WebCalendarView object provides access to the control-level features of the WebCalendarView control.
+
+=== WebCalendarView Methods
+
+[cols="a,a"]
+|====
+|*getClientID* 
+|Returns the ClientID of the WebCalendarView.
+
+|*getElement* 
+|Returns the underlying HTML Element of the WebCalendarView.
+
+|*getNavigationAnimation* 
+|Returns the type of Animation that will be used when the View control is navigated. 
+
+*Remarks*
+
+0 - None 
+
+1 - Accelerate 
+
+2 - Decelerate 
+
+3 - AccelDecel 
+
+4 - Linear
+
+|*getUniqueID* 
+|Returns the UnquieID of the WebCalendarView.
+
+|*isSelected* 
+|Checks to see if the day passed in is Selected. 
+
+*Parameters*
+
+_year_ 
+
+The year of the date to check. _month_ 
+
+The month of the date to check. _day_ 
+
+The day of the date to check. 
+
+*Returns*
+
+True if the date passed in is selected.
+
+|====
+
+=== WebCalendarView Properties
+
+==== Days
+
+Array with a length of 42 that contains objects that represent days in calendar. This member variable and all its elements are read-only and they should not be modified.
+

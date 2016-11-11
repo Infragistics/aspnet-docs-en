@@ -1,0 +1,60 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-remove-toolbar-buttons-of-webhtmleditor",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{FAB58B7A-FEF3-40ED-9655-8DC834DCDE75}",  
+    "buildFlags": [],
+    "createdOn": "2006-04-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Remove Toolbar Buttons of WebHtmlEditor
+
+By default, the WebHtmlEditor™ control displays all toolbar buttons (and drop-down lists) in the toolbar region. You should remove any toolbar buttons which your editor application does not require. You can easily accomplish this programmatically in the code-behind file.
+
+[start=1]
+. Before you start writing any code, you should place using/imports directives in your code-behind so you don't need to always type out a member's fully qualified name.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.WebHtmlEditor
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.WebHtmlEditor;
+----
+
+[start=2]
+. Look up the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemtype.html[ToolbarItemType]"]  enumeration values corresponding to the buttons not required by your Web application.
+
+For example, if you do not want your Web application to support uploading and attaching media files, you can remove your end users' access to the following buttons:
+
+** InsertFlash
+** InsertWindowsMedia
+** InsertImage
+
+[start=3]
+. In the code-behind file, add code to an event handler (for example, the Page_Load handler) occuring before render to remove these buttons if they exist in the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection.html[ToolbarItemCollection]"]  class using its  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection~remove.html[Remove]"]  method which takes a ToolbarItemType as its argument.
+
+*In Visual Basic:*
+
+----
+Me.WebHtmlEditor1.Toolbar.Items.Remove(ToolbarItemType.InsertFlash)
+Me.WebHtmlEditor1.Toolbar.Items.Remove(ToolbarItemType.InsertWindowsMedia)
+Me.WebHtmlEditor1.Toolbar.Items.Remove(ToolbarItemType.InsertImage)
+----
+
+*In C#:*
+
+----
+this.WebHtmlEditor1.Toolbar.Items.Remove(ToolbarItemType.InsertFlash);
+this.WebHtmlEditor1.Toolbar.Items.Remove(ToolbarItemType.InsertWindowsMedia);
+this.WebHtmlEditor1.Toolbar.Items.Remove(ToolbarItemType.InsertImage);
+----

@@ -1,0 +1,33 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-data-model-for-the-activityresource-table",
+    "controlName": ["WebSchedule"],
+    "tags": ["Getting Started","Scheduling"],
+    "guid": "{E7126928-7CEE-447C-8B94-058BF60FEE0D}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Data Model for the ActivityResource Table
+
+The ActivityResource table relates one or more Activity rows to their primary Resource row. This table has no analogous object in the WebSchedule™ object model. Instead, this relationship supports SQL joins that allows WebSchedule to work in terms of the Activities belonging to the application's active Resource.
+
+[options="header", cols="a,a,a,a"]
+|====
+|Column Name|Data Type|Null Value Allowed|Remarks
+
+|ActivityID
+|int
+|No
+|*Composite Primary Key* (part 1)*.* A numeric value that uniquely identifies one of potentially many Activities tied to the Resource identified by ResourceID.
+
+|ResourceID
+|int
+|No
+|*Composite Primary Key* (part 2)*.* A numeric that value uniquely identifies the primary Resource associated with the Activity identified by ActivityID.
+
+|====

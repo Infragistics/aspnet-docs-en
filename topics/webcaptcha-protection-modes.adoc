@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcaptcha-protection-modes",
+    "controlName": ["WebCaptcha"],
+    "tags": ["Validation"],
+    "guid": "cb4b3b45-a16e-41d4-8785-d5939b1ed284",  
+    "buildFlags": [],
+    "createdOn": "2010-05-31T12:54:49.0672229Z"
+}
+|metadata|
+////
+
+= Protection Modes
+
+The WebCaptcha™ control provides three basic types of protection against automated form submissions:
+
+[start=1]
+. Captcha link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~protectionmode.html[ProtectionMode] – this is the default mode. In this mode the enduser has to input randomly generated characters, word/s or an answer to a predefined question. To see how to specify one of these, see the link:webcaptcha-dictionary-modes.html[Dictionary Modes] topic.
+[start=2]
+. Invisible Input Field link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~protectionmode.html[ProtectionMode] – in this mode the control renders an additional input element, which is invisible to the enduser. So if any editing is performed to this field, it is assumed this has been done by a bot and the validation will fail.
+[start=3]
+. Form Submission Timeout link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~protectionmode.html[ProtectionMode] – in this mode the control will count the seconds defined by the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~formsubmissiontimeoutseconds.html[FormSubmissionTimeoutSeconds] property. If the form is submitted before these seconds pass, the validation will fail.
+
+.Note:
+[NOTE]
+====
+Both in Invisible Input Field and Form Submission Timeout protection modes no visible UI elements are rendered.
+====
+
+
+== Related Topics
+
+link:webcaptcha-dictionary-modes.html[Dictionary Modes]
+
+link:webcaptcha-captcha-validation.html[Captcha Validation]
+
+link:webcaptcha-configuring-captcha-buttons.html[Configuring Captcha Buttons]
+
+link:webcaptcha-configuring-captcha-image-properties.html[Configuring Captcha Image Properties]
+
+link:webcaptcha-configuring-captcha-input-field.html[Configuring Captcha Input Field]
+
+link:webcaptcha-configuring-captcha-audio.html[Configuring Captcha Audio]

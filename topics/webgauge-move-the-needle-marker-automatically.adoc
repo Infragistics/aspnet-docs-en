@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-move-the-needle-marker-automatically",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{0F36EEFE-6395-4DAA-94FE-0CD4EA30DDD0}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Move the Needle Marker Automatically
+
+This topic explains how you can configure the needle on your Radial gauge to move automatically. For example, if you created a Radial gauge to represent a clock, you could configure the hands of the clock to move automatically, giving the impression of a real-time clock.
+
+This topic assumes that you have a Radial gauge already created. For information on how to create a gauge, see link:webgauge-creating-a-radial-webgauge-in-design-view.html[Creating a Radial WebGauge in Design View].
+
+*To move the needle marker automatically on your gauge:*
+
+[start=1]
+. In the Properties window, set the RefreshInterval property to 10 seconds. This fires AsyncRefresh event on the server at each of these intervals.
+[start=2]
+. The following example code accesses the needle marker on your Radial gauge and increases the value by 5.
+
+*In Visual Basic:*
+
+----
+Protected Sub UltraGauge1_AsyncRefresh(ByVal sender As Object, _
+  ByVal e As Infragistics.WebUI.UltraWebGauge.RefreshEventArgs) _
+  Handles UltraGauge1.AsyncRefresh
+	Dim gauge As RadialGauge = Me.UltraGauge1.Gauges(0)
+	Dim marker As RadialGaugeMarker = gauge.Scales(0).Markers(0)
+	Dim value As Integer = Convert.ToInt32(marker.Value)
+	marker.Value = value + 5
+End Sub
+----
+
+*In C#:*
+
+----
+protected void UltraGauge1_AsyncRefresh(object sender, 
+  Infragistics.WebUI.UltraWebGauge.RefreshEventArgs e)
+{
+	RadialGauge gauge = this.UltraGauge1.Gauges[0] as RadialGauge;
+	RadialGaugeMarker marker = gauge.Scales[0].Markers[0];
+	int value = Convert.ToInt32(marker.Value);
+	marker.Value = value+5;
+}
+----
+
+[start=3]
+. Save and run the application.

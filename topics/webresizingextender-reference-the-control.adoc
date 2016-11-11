@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-reference-the-control",
+    "controlName": ["WebResizingExtender"],
+    "tags": ["Extending","How Do I"],
+    "guid": "{64D17C27-33C6-4EFE-AC1E-A40CF1E49626}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Reference the Control
+
+The following code shows you how to reference WebResizingExtender™ control.
+
+*In Javascript:*
+
+----
+var extender = Sys.Application.findComponent("WebDataGrid1_WebResizingExtender1");
+----

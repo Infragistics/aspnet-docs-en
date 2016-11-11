@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webhierarchicaldatagrid",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids"],
+    "guid": "{BB9379D2-6925-4818-835A-45A926C6D742}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebHierarchicalDataGrid
+
+This page contains all of the overview/task-based information related to the WebHierarchicalDataGrid™ control. This section contains valuable information about WebHierarchicalDataGrid, ranging from what the control does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to access important information about the WebHierarchicalDataGrid control.
+
+== link:webhierarchicaldatagrid-about-webhierarchicaldatagrid.html[About WebHierarchicalDataGrid]
+
+In this section you'll find any information that will help you to better understand the functionalities of the WebHierarchicalDataGrid control, as well as why you would want to use it to as part of building your applications.
+
+== link:webhierarchicaldatagrid-getting-started-with-webhierarchicaldatagrid.html[Getting Started with WebHierarchicalDataGrid]
+
+In order to get you up and running as quickly as possible with the WebHierarchicalDataGrid control, we've provided you with information on how to get started using the control.
+
+== link:webhierarchicaldatagrid-using-webhierarchicaldatagrid.html[Using WebHierarchicalDataGrid]
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by the WebHierarchicalDataGrid control.
+
+== link:webhierarchicaldatagrid-accessibility-compliance.html[WebHierarchicalDataGrid Accessibility Compliance]
+
+This topic outlines the way in which WebHierarchicalDataGrid meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebHierarchicalDataGrid control.
+
+== link:webhierarchicaldatagrid-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebHierarchicalDataGrid control. The namespaces and classes listed in this topic link conveniently into the API Reference Guide section of the Infragistics ASP.NET help.
+
+== link:webhierarchicaldatagrid~infragistics.web.ui_namespace.html[Client-Side Object Model (CSOM) Overview]
+
+The WebHierarchicalDataGrid™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.

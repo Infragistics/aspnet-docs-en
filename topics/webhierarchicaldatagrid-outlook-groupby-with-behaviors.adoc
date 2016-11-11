@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-outlook-groupby-with-behaviors",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Editing","Getting Started","Grouping","Paging","Selection"],
+    "guid": "{2033CDAE-ED5B-403A-BC87-C645068BB0DA}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Outlook GroupBy with Behaviors
+
+The Outlook GroupBy feature works with all of the WebHierarchicalDataGrid™ control's behaviors. There are certain behaviors that behave uniquely when you have grouped rows. The following list describes WebHierarchicalDataGrid's behaviors and how they work with the GroupBy feature.
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.activation.html[Activation] – All cells and group rows can be activated. When a cell is activated, your end-users can press CTRL+ALT+g to group by that column's cell values.
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection.html[Selection] – All grouped data rows can be selected; however, a link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecord.html[GroupedRecord] object (the row that contains the data rows) cannot be selected.
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing] – If the grouped cell is edited and receives a value that puts it in another grouped row, WebHierarchicalDataGrid updates the view on the next postback.
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding.html[RowAdding] – WebHierarchcialDataGrid updates the view, placing the row in a grouped row that matches the grouped cell's value.
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting] – Removes the row.
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting.html[Sorting] – Grouping a column automatically sorts the data for that column; however, it does not add the column to the sorted columns collection. Further, if you have a column sorted, grouping the column removes the column from the sorted columns collection. You can define the default sort direction for the GroupBy feature by adding a link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columngroupingsetting.html[ColumnGroupingSetting] object to the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columngroupingsettings.html[ColumnGroupingSettings] using a specific band's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband~groupingsettings.html[GroupingSettings] property. Set ColumnGroupingSetting object's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columngroupingsetting~defaultsortdirection.html[DefaultSortDirection] property to the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupingsortdirection.html[GroupingSortDirection] enum with the following values: Ascending or Descending.
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging] – Page size is based on data rows, not group rows.
+
+== Related Topics
+
+link:webhierarchicaldatagrid-about-outlook-groupby.html[About Outlook GroupBy]
+
+link:webhierarchicaldatagrid-custom-group-by-name.html[Custom Group by Name]
+
+link:webhierarchicaldatagrid-custom-text-in-group-row.html[Custom Text in Group Row]
+
+link:webhierarchicaldatagrid-group-columns-from-code-behind.html[Group Columns from Code Behind]
+
+link:webhierarchicaldatagrid-referencing-rows-when-using-outlook-groupby.html[Referencing Rows When Using Outlook GroupBy]

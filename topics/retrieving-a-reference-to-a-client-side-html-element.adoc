@@ -1,0 +1,42 @@
+﻿////
+
+|metadata|
+{
+    "name": "retrieving-a-reference-to-a-client-side-html-element",
+    "controlName": ["WebDialogWindow"],
+    "tags": ["Events"],
+    "guid": "{390A1567-7DE4-4473-B9D0-8950385DC5DE}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Retrieving a Reference to a Client Side HTML Element
+
+In the client side, you may need to retrieve a reference to an HTML element on the page. Most Infragistics ASP.NET controls expose client-side events which pass in a reference to the HTML element that fired the event; however, what if you needed a reference to another HTML element on the page?
+
+Using ASP.NET AJAX's built-in $find shortcut method, you can easily retrieve a reference to any client-side object by passing the object's ID to the method as a parameter. Once the component is found, you can interact with it as you would a normal client-side object.
+
+.Note:
+[NOTE]
+====
+Even though this example uses the WebSplitter control, you can still apply this logic to any control or element.
+====
+
+*Assumptions for the following code example:*
+
+* You have already created a new ASP.NET AJAX-Enabled Web Site.
+* You have an instance of the ASP.NET AJAX ScriptManager on the WebForm.
+* You have enabled Infragistics Application Styling for the application and you are using the Default Style. For more information, see link:web-enabling-application-styling-using-the-web-config-file.html[Enabling Application Styling Using the web.config File].
+* You have instances of WebSplitter™ controls on the form.
+
+The following code will retrieve a reference to the WebSplitter control whose ID is WebSplitter1.
+
+*In JavaScript:*
+
+----
+var splitter = $find("WebSplitter1");
+        if(splitter != null)
+                                ...
+----

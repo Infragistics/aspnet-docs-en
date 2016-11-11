@@ -1,0 +1,211 @@
+﻿////
+
+|metadata|
+{
+    "name": "persistenceframework-handling-persistence-events",
+    "controlName": ["PersistenceFramework"],
+    "tags": ["Persistence"],
+    "guid": "ed3a3291-b9eb-4224-a833-9bf0dba6af79",  
+    "buildFlags": [],
+    "createdOn": "2011-03-31T07:48:45.355896Z"
+}
+|metadata|
+////
+
+= Handling Persistence Events
+
+The Infragistics ASP.NET Persistence Framework component has four types of events which occur at a different time during the page lifecycle and feature specific arguments. Two of the events are fired during the process of saving persisted data while the other events are fired during data loading.
+
+== PersistenceLoading Event
+
+The pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistenceloading_ev.html[PersistenceLoading]*"] event is fired after the Page’s *PageLoad* event. During PageLoad, persisted data is reliably available to the Persistence Framework. In the event of post back, the controls’ state is restored from ViewState, but if the page is requested for first time, then Persistence Framework steps in to restore state - simulating the behavior of the ViewState.
+
+The *PersistenceLoading* event is fired on the first request to the page depending on the value of the attribute *persistenceIgnoreLoadingOnPostBack* in the Web.config file. If the value is *false*, the event is fired on every request to the page including postbacks. In some cases when you use ViewState it saves the state of the controls during the postbacks. That’s why setting the *persistenceIgnoreLoadingOnPostBack* to *true* increases performance because the Persistence Loading event fires only on the first request.
+
+*Listing 1: Create LoadingHandlers in code behind*
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected void LoadingHandler(object sender, PersistenceLoadingEventArgs e) {}
+----
+
+|====
+
+[cols="a"]
+|====
+|*In Visual Basic:*
+
+|---- 
+Protected Sub LoadingHandler(sender As Object, e As PersistenceLoadingEventArgs)End Sub
+----
+
+|====
+
+The following items describe the values expected in LoadingHandler method arguments as shown in *Listing 1* :
+
+*  _sender_  - references the current page
+*  _e_  – The type of the event is pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.persistenceloadingeventargs.html[PersistenceLoadingEventArgs]*"]. It inherits .NET *CancelEventArgs* object. One general purpose is to use this event to cancel the process of loading the data for your particular needs. *PersistenceLoadingEventArgs* also wraps the persisted data that needs to be loaded.
+
+*Listing 2* displays the *PersistenceLoadingEventArgs* properties used to access data to persist as well as exposing an option to cancel the event.
+
+*Listing 2: PersistenceLoadingEventArgs*properties*
+
+[cols="a"]
+|====
+|*In C# and Visual Basic:*
+
+|---- 
+e.Cancel e.PersistenceData
+----
+
+|====
+
+== Persistence Loaded Event
+
+The pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistenceloaded_ev.html[PersistenceLoaded]*"] event is fired after the *PersistenceLoading* event. At this stage of the cycle, the Persistence Framework has restored the persisted data with all the controls’ state. If the restore fails due to an exception, inside the *PersistenceLoaded* handler you can process that error.
+
+*Listing 3: Create LoadedHandler in code behind*
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected void LoadedHandler (object sender, PersistenceEventArgs e) {}
+----
+
+|====
+
+[cols="a"]
+|====
+|*In Visual Basic:*
+
+|---- 
+Protected Sub LoadedHandler (sender As Object, e As PersistenceEventArgs)End Sub
+----
+
+|====
+
+The following items describe the values expected in LoadedHandler method arguments as shown in *Listing 3* :
+
+*  _sender_  - references the current page
+*  _e_  – The type of the event is pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.persistenceeventargs.html[PersistenceEventArgs]*"] . The persistence data it carries is an exception, which may occur during the loading of the persisted data.
+
+*Listing 4* displays the *PersistenceEventArgs* properties used to access data to persist as well as exposing access to any exceptions that may have occurred while raising the event.
+
+*Listing 4: PersistenceEventArgs properties*
+
+[cols="a"]
+|====
+|*In C# and Visual Basic:*
+
+|---- 
+e.Exception e.PersistenceData
+----
+
+|====
+
+.Note:
+[NOTE]
+====
+If during the Persistence Loading event there is no persisted data to retrieve, the Persistence Loaded event does not fire at all.
+====
+
+== Persistence Saving Event
+
+The pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaving_ev.html[PersistenceSaving]*"] event is fired after the *SaveStateComplete* event completes. Both events, including the *PersistenceSaved* event, are fired every time the page is requested. At this stage, the Persistence Framework is preserving the state of all the controls. As the event’s *EventArgs* parameter inherits .NET *CancelEventArgs* object, you can cancel the process of saving for your particular needs.
+
+*Listing 5: Create the SavingHandler in code behind*
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected void SavingHandler(object sender, PersistenceSavingEventArgs e) {}
+----
+
+|====
+
+[cols="a"]
+|====
+|*In Visual Basic:*
+
+|---- 
+Protected Sub SavingHandler(sender As Object, e As PersistenceSavingEventArgs)End Sub
+----
+
+|====
+
+The following items describe the values expected in SavingHandler method arguments as shown in *Listing 5* :
+
+*  _sender_  - references the current page
+*  _e_  – The type of the event is pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.persistencesavingeventargs.html[PersistenceSavingEventArgs]*"] . It inherits .NET CancelEventArgs object. This means you can cancel the process of saving data if you have cases where you don’t want to persist with the page.
+
+*Listing 6* displays the PersistenceSavingEventArgs property to expose an option to cancel the event.
+
+*Listing 6: PersistenceSavingEventArgs properties*
+
+[cols="a"]
+|====
+|*In C# and Visual Basic:*
+
+|---- 
+e.Cancel
+----
+
+|====
+
+== Persistence Saved Event
+
+The pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaved_ev.html[PersistenceSaved]*"] event fires after the *PersistenceSaving* one. Again, as in the *PersistenceLoaded* event, if an exception occurs during the persisting of the data, it can be handled. Listing 7 shows the structure for where you can save persisted data to a stable source (file, Session, Application, or SQL). Before ultimately saving the data, you can modify it or remove or add controls and properties.
+
+*Listing 7: Create SavedHandler in code behind*
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected void SavedHandler(object sender, PersistenceEventArgs e) {}
+----
+
+|====
+
+[cols="a"]
+|====
+|*In Visual Basic:*
+
+|---- 
+Protected Sub SavedHandler(sender As Object, e As PersistenceEventArgs)End Sub
+----
+
+|====
+
+The following items describe the values expected in SavedHandler method arguments as shown in *Listing 5* :
+
+*  _sender_  - references the current page
+*  _e_  – The type of the event is pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.persistenceeventargs.html[PersistenceEventArgs]*"]. Except the persistence data it carries may be an exception, which may occur during the saving of the persisted data. During the *PersistenceSaved* event you can retrieve the persisted data into a collection or to exclude or include some data in it.
+
+*Listing 8* displays the PersistenceEventArgs properties used to access data to persist as well as exposing access to any exceptions that may have occurred while raising the event.
+
+*Listing 8: PersistenceEventArgs properties*
+
+[cols="a"]
+|====
+|*In C# and Visual Basic:*
+
+|---- 
+e.Exception e.PersistenceData
+----
+
+|====
+
+== Related Links
+
+link:{SamplesURL}/samples/persistenceframework/data/persistenceevents/default.aspx?cn=persistence-framework&sid=43cfafc5-4390-4a81-b487-ce8f14b24505[Persistence Events Samples]
+
+link:persistenceframework-getting-started-with-persistence-framework.html[Getting Started with Persistence Framework]

@@ -1,0 +1,64 @@
+﻿////
+
+|metadata|
+{
+    "name": "webprogressbar-tooltip-format",
+    "controlName": ["WebProgressBar"],
+    "tags": [],
+    "guid": "{834165F5-2C35-405B-A62C-2258B4B53E3F}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= ToolTip Format
+
+WebProgressBar™ supports tooltips that help relay progress information when the mouse is hovered over the control. The tooltip can be formatted to leverage six different values by using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~tooltip.html[ToolTip]"]  property of WebProgressBar along with any of the custom format strings that represent various progress information. The following is the list of intrinsic string values that you can insert into the tooltip format string so that you can customize the information that is displayed in your tooltip:
+
+* {0} or {ProgressValue} : Shows the current progress value
+* {1} or {PercentProgress} : Shows the current progress in percentage
+* {2} or {RemainingProgress} : Shows the remaining progress value to be completed
+* {3} or {PercentageRemaining} : Shows the remaining progress in percentage
+* {4} or {Min} : Shows the minimum value
+* {5} or {Max} : Shows the maximum value
+
+*To show the remaining progress in the tooltip of WebProgressBar :*
+
+[start=1]
+. Place WebProgressBar control on the form and set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~minimum.html[Minimum]"]  ,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~maximum.html[Maximum]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  properties as show in the following code:
+
+*In Visual Basic:*
+
+[source]
+----
+WebProgressBar1.Minimum = 0WebProgressBar1.Maximum = 200WebProgressBar1.Value = 45
+----
+
+*In C#:*
+
+----
+WebProgressBar1.Minimum = 0;
+WebProgressBar1.Maximum = 200;
+WebProgressBar1.Value = 45;
+----
+
+[start=4]
+. Format the ToolTip property so that it shows the remaining progress value.
+
+*In Visual Basic:*
+
+----
+WebProgressBar1.ToolTip = "Remaining Progress : {2} "
+----
+
+*In C#:*
+
+----
+WebProgressBar1.ToolTip = "Remaining Progress : {2} ";
+----
+
+[start=7]
+. Save and run the application. Once you hover your mouse pointer over WebProgressBar, it should look similar to the following image :
+
+image::images\WebProgressBar_ToolTip_Format_01.png[]

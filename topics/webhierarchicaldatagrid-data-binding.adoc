@@ -1,0 +1,219 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-data-binding",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Data Binding","Grids"],
+    "guid": "{97B1A020-9570-4674-A24B-28F000F6AE15}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Data Binding
+
+The WebHierarchicalDataGrid™ control can bind to any supported hierarchical data source and display the data in a hierarchical grid view. Use the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.hierarchicaldataboundcontrolmain~datasource.html[DataSource] or link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datasourceid.html[DataSourceID] properties to set the data source. Set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datakeyfields.html[DataKeyFields] property to define the field which identifies unique records in the data source.
+
+The WebHierarchicalDataGrid control automatically creates bands and columns when bound to data. The control walks the hierarchy creating link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid] objects and binds them to each data island in the data source. The result is a hierarchical view in WebHierarchcialDataGrid using nested ContainerGrid objects. To control the generation of bands and columns, use the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~autogeneratebands.html[AutoGenerateBands] and link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~autogeneratecolumns.html[AutoGenerateColumns] properties.
+
+===== Supported Data Sources
+
+WebHierarchicalDataGrid supports the following data sources:
+
+* Hierarchical Data Source Controls
+
+** WebHierarchicalDataSource
+** XmlDataSource
+** SiteMapDataSource
+
+* DataSet
+* IEnumerable
+
+===== DataSource/DataSourceID
+
+At design time, set the DataSourceID link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datasourceid.html[]property to the ID of the data source that you want to bind to. At runtime, you can either set the DataSource or the DataSourceID property to specify the data source. If you have load on demand enabled and getting data at runtime using the DataSource or DataSourceID property, you need to set the property on every postback. The reason is that the entire data source is not stored in ViewState and WebHierarchicalDataGrid needs the data source on every postback to know which level of data to bind to.
+
+===== DataKeyFields
+
+As mentioned, you can use the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datakeyfields.html[DataKeyFields] property to specify one or more fields that uniquely identify the records in your data source. Multiple fields are comma separated. The DataKeyFields property exists for each band in the hierarchy.
+
+This property is very important for proper functioning of WebHierarchicalDataGrid. You may not need it for simple data viewing; however, for data manipulations the property plays a vital role. When the DataKeyFields property has no value, a row object’s Index property is used to identify it. This is an unreliable way to identify a row since simple paging or sorting can change the index.
+
+At design time, if you set a data source and enable link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging], link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting.html[Sorting], or link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore.html[Editing] behaviors without setting the DataKeyFields property, the following message dialog displays: “For proper functioning of the WebHierarchicalDataGrid please specify the data key fields in the DataKeyFields property on all levels of the hierarchy: top level and the child bands”. At runtime, the following exception is thrown: “The DataKeyFields property must be set for the {0} band to perform the {1} operation”. Where {0} is the data member of the band and {1} is the name of the operation.
+
+At design time, for certain data sources WebHierarchicalDataGrid will try to extract the information about data key fields from the data source and automatically apply the setting.
+
+===== AutoGenerateBands
+
+WebHierarchicalDataGrid exposes the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~autogeneratebands.html[AutoGenerateBands] property to control displaying bands in the control. By default this property is set to True. This means that WebHierarchicalDataGrid generates all bands from the data source automatically. When binding at design time, the control creates the band definition in the markup and sets AutoGenerateBands to False.
+
+To control band generation in WebHierarchicalDataGrid, set AutoGenerateBands to False and define your bands in the control.
+
+===== AutoGenerateColumns
+
+Similar to the AutoGenerateBands property, link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~autogeneratecolumns.html[AutoGenerateColumns] controls the generation of columns for each band in WebHierarchicalDataGrid. The property is provided by an object that implements the IBand property, hence every link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band.html[Band] object as well as link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid] object will have access to this property; however, the property setting does not propagate to child levels.
+
+AutoGenerateColumns is True by default. When data binding at design time, WebHierarchicalDataGrid creates a column definition in the markup and sets this property to False. If set back to True, you will see duplicate columns when the control is rendered.
+
+To control generating columns in each band, set a Band object’s AutoGenerateColumns property to False and define your column schema for that band.
+
+The following code shows you how to define a band and column schema.
+
+*In HTML:*
+
+----
+<%-- Set the AutoGenerateBands and AutoGenerateColumns properties to False --%>
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" 
+   AutoGenerateBands=" AutoGenerateColumns=" 
+   DataMember="SqlDataSource1_DefaultView" 
+   DataSourceID="WebHierarchicalDataSource1" DefaultColumnWidth="" 
+   Key="SqlDataSource1_DefaultView" DataKeyFields="CategoryID">
+   <%-- Define the Columns for the root band --%>
+   <Columns>
+      <ig:BoundDataField DataFieldName="CategoryName" Key="CategoryName">
+         <Header Text="CategoryName" />
+      </ig:BoundDataField>
+      <ig:BoundDataField DataFieldName="Description" Key="Description">
+         <Header Text="Description" />
+      </ig:BoundDataField>
+   </Columns>
+   <%-- Define the child band and its column --%>
+   <Bands>
+      <ig:Band DataMember="SqlDataSource2_DefaultView" DefaultColumnWidth="" 
+               Height="" Key="SqlDataSource2_DefaultView" DataKeyFields="ProductID" Width="">
+         <Columns>
+            <ig:BoundDataField DataFieldName="ProductID" Key="ProductID">
+               <Header Text="ProductID" />
+            </ig:BoundDataField>
+            <ig:BoundDataField DataFieldName="ProductName" Key="ProductName">
+               <Header Text="ProductName" />
+            </ig:BoundDataField>
+            <ig:BoundDataField DataFieldName="QuantityPerUnit" Key="QuantityPerUnit">
+               <Header Text="QuantityPerUnit" />
+            </ig:BoundDataField>
+            <ig:BoundDataField DataFieldName="UnitPrice" Key="UnitPrice">
+               <Header Text="UnitPrice" />
+            </ig:BoundDataField>
+         </Columns>
+      </ig:Band>
+   </Bands>
+</ig:WebHierarchicalDataGrid>
+----
+
+*In Visual Basic:*
+
+----
+' Define Columns 
+Dim boundField As New BoundDataField(True)
+boundField.Key = "CategoryName" 
+boundField.Header.Text = "Category Name" 
+'Bind to CategoryName field in data source 
+boundField.DataFieldName = "CategoryName" 
+Me.WebHierarchicalDataGrid1.Columns.Add(boundField) 
+boundField = New BoundDataField(True) 
+boundField.Key = "Description" 
+boundField.Header.Text = "Description" 
+'Bind to Description field in data source 
+boundField.DataFieldName = "Description" 
+Me.WebHierarchicalDataGrid1.Columns.Add(boundField) 
+' Create band 
+Dim childBand As New Band()
+childBand.DataKeyFields = "ProductID" 
+' Set the key from the data source 
+childBand.Key = "SqlDataSource2_DefaultView" 
+' Set the data member from the data source to bind to 
+childBand.DataMember = "SqlDataSource2_DefaultView" 
+Me.WebHierarchicalDataGrid1.Bands.Add(childBand) 
+' Define column for the child band 
+boundField = New BoundDataField(True) 
+boundField.Key = "ProductID" 
+boundField.Header.Text = "Product ID" 
+'Bind to Product ID field in data source 
+boundField.DataFieldName = "ProductID" 
+Me.WebHierarchicalDataGrid1.Bands("SqlDataSource2_DefaultView").Columns.Add(boundField) 
+' Define column for the child band 
+boundField = New BoundDataField(True) 
+boundField.Key = "ProductName" 
+boundField.Header.Text = "Product Name" 
+'Bind to Product Name field in data source 
+boundField.DataFieldName = "ProductName" 
+Me.WebHierarchicalDataGrid1.Bands("SqlDataSource2_DefaultView").Columns.Add(boundField) 
+' Define column for the child band 
+boundField = New BoundDataField(True) 
+boundField.Key = "QuantityPerUnit" 
+boundField.Header.Text = "Quantity Per Unit" 
+'Bind to QuantityPerUnit field in data source 
+boundField.DataFieldName = "QuantityPerUnit" 
+Me.WebHierarchicalDataGrid1.Bands("SqlDataSource2_DefaultView").Columns.Add(boundField) 
+' Define column for the child band 
+boundField = New BoundDataField(True) 
+boundField.Key = "UnitPrice" 
+boundField.Header.Text = "Unit Price" 
+'Bind to UnitPrice field in data source 
+boundField.DataFieldName = "UnitPrice" 
+Me.WebHierarchicalDataGrid1.Bands("SqlDataSource2_DefaultView").Columns.Add(boundField)
+----
+
+*In C#:*
+
+----
+// Define Columns
+BoundDataField boundField = new BoundDataField(true);
+boundField.Key = "CategoryName";
+boundField.Header.Text = "Category Name";
+//Bind to CategoryName field in data source
+boundField.DataFieldName = "CategoryName";
+this.WebHierarchicalDataGrid1.Columns.Add(boundField);
+boundField = new BoundDataField(true);
+boundField.Key = "Description";
+boundField.Header.Text = "Description";
+//Bind to Description field in data source
+boundField.DataFieldName = "Description";
+this.WebHierarchicalDataGrid1.Columns.Add(boundField);
+// Create band
+Band childBand = new Band();
+childBand.DataKeyFields = "ProductID";
+// Set the key from the data source
+childBand.Key = "SqlDataSource2_DefaultView";
+// Set the data member from the data source to bind to
+childBand.DataMember = "SqlDataSource2_DefaultView";
+this.WebHierarchicalDataGrid1.Bands.Add(childBand);
+// Define column for the child band
+boundField = new BoundDataField(true);
+boundField.Key = "ProductID";
+boundField.Header.Text = "Product ID";
+// Bind to Product ID field in data source
+boundField.DataFieldName = "ProductID";
+this.WebHierarchicalDataGrid1.Bands["SqlDataSource2_DefaultView"].Columns.Add(boundField);
+// Define column for the child band
+boundField = new BoundDataField(true);
+boundField.Key = "ProductName";
+boundField.Header.Text = "Product Name";
+// Bind to Product Name field in data source
+boundField.DataFieldName = "ProductName";
+this.WebHierarchicalDataGrid1.Bands["SqlDataSource2_DefaultView"].Columns.Add(boundField);
+// Define column for the child band
+boundField = new BoundDataField(true);
+boundField.Key = "QuantityPerUnit";
+boundField.Header.Text = "Quantity Per Unit";
+//Bind to QuantityPerUnit field in data source
+boundField.DataFieldName = "QuantityPerUnit";
+this.WebHierarchicalDataGrid1.Bands["SqlDataSource2_DefaultView"].Columns.Add(boundField);
+// Define column for the child band
+boundField = new BoundDataField(true);
+boundField.Key = "UnitPrice";
+boundField.Header.Text = "Unit Price";
+//Bind to UnitPrice field in data source
+boundField.DataFieldName = "UnitPrice";
+this.WebHierarchicalDataGrid1.Bands["SqlDataSource2_DefaultView"].Columns.Add(boundField);
+----
+
+== Related Topics
+
+link:webhierarchicaldatagrid-getting-started-with-webhierarchicaldatagrid.html[asd]
+
+link:webhierarchicaldatagrid-binding-to-xml-data-source.html[Binding to Xml Data Source]
+
+link:webhierarchicaldatagrid-binding-to-self-related-data.html[Binding to Self-Related Data]

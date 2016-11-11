@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-deploying-webgauge",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{6953F8B5-F6FE-45C9-9DCD-11BE201ED01B}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Deploying WebGauge
+
+This section provides you with information on the two methods of deploying your WebGauge images.
+
+* link:webgauge-image-deployment-in-webgauge.html[Image Deployment in WebGauge]
+* link:webgauge-setting-up-the-image-deployment.html[Setting Up the Image Deployment]

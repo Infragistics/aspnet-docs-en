@@ -1,0 +1,117 @@
+﻿////
+|metadata|
+{
+    "name": "webschedule-data-model-for-the-recurrence-table",
+    "controlName": ["WebSchedule"],
+    "tags": ["Scheduling"],
+    "guid": "{30B0C25D-1A45-4777-BF1A-C91745BF6C42}",
+    "buildFlags": [],
+    "createdOn": "2007-05-11T11:01:35Z"
+}
+|metadata|
+////
+
+= Data Model for the Recurrence Table
+
+The Recurrence table describes the recurrence pattern applied to a WebSchedule Activity, which has been set-up to periodically recur. All columns correspond with .NET properties having the same name on a Recurrence object, unless otherwise noted.
+
+The Recurrence table is new in the WebSchedule Data Model for Infragistics ASP.NET 2006 Volume 2 and later.
+
+[options="header", cols="a,a,a,a"]
+|====
+|Column Name|Data Type|Null Allowed?|Remarks
+
+|RecurrenceID
+|int
+|No
+|*Primary Key* . A numeric value uniquely identifying this Recurrence.
+
+|EndDateUtc
+|DateTime
+|No
+|Date with Midnight time (and adjusted for UTC) on which Recurrence pattern expires. 
+
+May be 12/31/9999 to represent a Recurrence that is supposed to go on forever.
+
+|DayOfWeekMaskUtc
+|int
+|No
+|Specifies which day or days of the week an Activity falls on as a binary bit mask. 
+
+For more information, see the Flags enumeration "RecurrencePatternDaysOfWeek."
+
+|UtcOffset
+|int
+|No
+|This is the timezone offset from UTC of the last person to create or modify this Recurrence. It is measured as a (signed) number of seconds. 
+
+The offset is used to clarify other explicit values when this recurrence is seen by users in other time zones.
+
+|DayOfMonth
+|int
+|No
+|When DayOfMonth > 0 it represents a date in the calendar month, and is stored in the DayOfMonth property of the Recurrence object. 
+
+When DayOfMonth < 0 it represents an ordinal occurrence within the month as follows: 
+
+-1 - RecurrenceDayOfMonth.First 
+
+-2 - RecurrenceDayOfMonth.Second 
+
+-3 - RecurrenceDayOfMonth.Third
+
+-4 - RecurrenceDayOfMonth.Fourth
+
+-5 - RecurrenceDayOfMonth.Last
+
+When used in this way, the value is stored in the RecurrenceDayOfMonth property of the Recurrence. 
+
+RecurrenceDayOfMonth may be combined with a DayOfWeekMask value to represent a recurrence pattern such as "Third Wednesday of the Month."
+
+|MonthOfYear
+|int
+|No
+|Specifies the calendar month of the year as a number from 1 to 12. 
+
+This column only applies when Period is 'Y' (Yearly). When not applicable, it should have the value 0.
+
+|PeriodMultiple
+|int
+|No
+|Specifies how many intervals of Period-length are between occurrences (i.e., every 4 days, every 3 weeks, or every 6 months).
+
+|Period
+|nchar(1)
+|No
+|Specifies the most appropriate Period for use as an interval between occurrences. 
+
+'D' - Daily 
+
+'W' - Weekly 
+
+'M' - Monthly 
+
+'Y' - Yearly 
+
+|EditType
+|int
+|No
+|Specifies whether users edit an occurrence, the series, or are prompted to make a choice, when they attempt to edit an occurrence of a recurring Activity. 
+
+0 - Prompt user for their choice (default). 
+
+1 - User always edits the series. 
+
+2 - User always edits the occurrence. 
+
+|LastReminderDateTimeUtc
+|DateTime
+|Yes
+|Start date/time UTC of the last occurrence for which a Reminder was given.
+
+|_ts
+|timestamp
+|Yes
+|Timestamp used to detect concurrency conflicts.
+
+|====

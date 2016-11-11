@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-css-directory-structure",
+    "controlName": [],
+    "tags": ["FAQ","How Do I","Styling"],
+    "guid": "{564C0901-6B6E-45B2-9698-92710B857F8A}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:35:57Z"
+}
+|metadata|
+////
+
+= CSS Directory Structure
+
+One of the key pieces of the Application Styling Framework™ (ASF), is the directory structure that contains all the necessary files for styling. This structure is strictly enforced, as the controls expect it to be there in order to function; without this structure, ASF will fail to work properly, and will result in your controls not rendering their look or feel properly.
+
+The structure must be present in your project, and is created for you if you enable ASF at design time. If you enable Application Styling at run time, you must create the necessary folders, and place the required files in them.
+
+The default directory structure utilized by ASF is as follows:
+
+~/ig_res/default/images
+
+The folder /ig_res is the StyleSetPath used by Application Styling, and is sometimes referred to as the style library. The folder's name is based on the name of your style library. If you enable Application Styling using the the link:web-netadvantage-application-styling-configuration-tool.html[Infragistics Application Styling Configuration Tool], the /ig_res folder is the StyleSetPath.
+
+Each folder directly under the style library is a StyleSet, and contains the files and image folder related to that style. For every StyleSet that you add to a style library, an appropriate directory structure is created for that style. The structure will follow the StyleSet's structure, however the difference is that the /default folder will be changed to the name of the StyleSet (i.e., /aqua, /onyx). The StyleSet is automatically used when you enable Application Styling. For more information on how to change the StyleSet being used, see link:web-netadvantage-application-styling-configuration-tool.html[Infragistics Application Styling Configuration Tool] or link:web-changing-stylesets-at-run-time.html[Changing StyleSets at Run Time].
+
+If Application Styling is enabled on a new project, no further effort is required. If Application Styling is enabled on projects later in your development cycle, you may need to perform additional steps to get the controls to render properly, depending upon style changes made at the control level. These control-level style changes take precedence over Application Styling settings.
+
+== Related Topics
+
+link:web-css-file-structure.html[CSS File Structure]
+
+link:web-ui-roles.html[UI Roles]

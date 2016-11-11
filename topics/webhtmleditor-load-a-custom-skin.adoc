@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-load-a-custom-skin",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","Styling","Theming"],
+    "guid": "{47CC2E6C-03F4-4298-B457-9A34DA40077A}",  
+    "buildFlags": [],
+    "createdOn": "2006-09-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Load a Custom Skin
+
+WebHtmlEditor™ control furnishes developers with the capability of loading a predefined appearance from an external .xml file called a skin. After reading this topic you will understand how to apply a skin based on it's external .xml file name programmatically at run-time.
+
+For example, your application may feature several different appearances such as Aqua, Windows XP and Office 2003. Perhaps your application lets end users choose one appearance as their preferred look-and-feel. WebHtmlEditor control makes it easy for you to apply the look-and-feel that each end user wants if you associate a preferred skin file name to each user.
+
+In your Page_Load event handler add the following statement which loads and applies your custom skin (from a sub-folder of your Web application project named "skins") to the WebHtmlEditor control.
+
+*In Visual Basic:*
+
+----
+Me.WebHtmlEditor1.LoadSkin(Server.MapPath("./skins/Aqua.xml"))
+----
+
+*In C#:*
+
+----
+this.WebHtmlEditor1.LoadSkin(Server.MapPath("./skins/Aqua.xml"));
+----
+
+For more information on creating a custom skin such as Aqua.xml, see link:webhtmleditor-creating-custom-skins-for-webhtmleditor.html[Creating Custom Skins].

@@ -1,0 +1,85 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-deploying-a-web-application-that-uses-netadvantage-for-asp-net-controls",
+    "controlName": [],
+    "tags": ["Deployment","How Do I"],
+    "guid": "{30ED1F30-C66A-4385-9E86-4E94DB6F82B6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Deploying a Web Application that Uses Infragistics ASP.NET Controls
+
+== Before You Begin
+
+Deploying Web applications that use one or more Infragistics ASP.NET controls/components is very similar to deploying any other assembly. The Infragistics ASP.NET controls' assemblies are installed in the Global Assembly Cache (GAC) by default. However, the Infragistics ASP.NET controls use other folders that you should be aware to ensure successful deployment. In .NET Framework 2.0, it's relatively simple to deploy the Infragistics ASP.NET control assemblies.
+
+== What You Will Accomplish
+
+In this walkthrough, you will learn how to deploy Infragistics ASP.NET controls/components to a Web server that hosts your Web application.
+
+== Follow these Steps
+
+[start=1]
+. Locate and deploy the correct assemblies.
+
+.. Navigate to the following folder where the Infragistics ASP.NET assemblies are installed by default:
+
+{InstallPath}\ASP.NET\bin.
+
+.. 
+
+Copy the necessary assemblies from this directory and paste them into your Web application's bin directory on the production server. Alternatively, you can place the Infragistics assemblies into the production server's GAC, assuming you have the proper permissions.
+
+At minimum, all Infragistics ASP.NET controls/components require the Infragistics4.WebUI.Shared.v{ProductVersion} assembly for deployment. For more information on which assemblies need to be deployed for which control, see link:web-deployment-overview.html[Deployment Overview].
+
+[start=2]
+. In certain cases, you may need to deploy the Forms, Scripts, Styles, and Images directories (see the list below for the scenarios). By default, the Infragistics ASP.NET controls/components look for a virtual directory called `ig_common`, which points to the physical path of the Forms, Scripts, Styles, and Images directories. (Alternatively, you can locate these directories in the following folder where the Infragistics ASP.NET product is installed by default: {InstallPath}\ASP.NET\):
+
+** If you used the WebSchedule™ control in your application, locate the following directory
+
+`C:\Inetpub\wwwroot\aspnet_client\Infragistics\{ProductVersion}CLR4\Forms`
+** If you modified JavaScript files (not recommended), locate the following directory:
+
+`C:\Inetpub\wwwroot\aspnet_client\Infragistics\{ProductVersion}CLR4\Scripts`
+
+.Note:
+[NOTE]
+====
+Starting in .NET Framework 2.0, the Infragistics ASP.NET controls' JavaScript files and some images are included in each control's assembly (e.g., Infragistics4.webUI.UltraWebGrid.{ProductVersion}) as embedded resources. Therefore, unless you modified the JavaScript files, it's not necessary to deploy the JavaScript files found in the Scripts directory to the production server.
+====
+
+** If you used the WebSchedule control in your application, or you applied presets (i.e., Aero, Aqua, Default, ElectricBlue, Onyx, Royale, XpBlue, XpOlive, or XpSilver), located the following directory:
+
+`C:\Inetpub\wwwroot\aspnet_client\Infragistics\{ProductVersion}CLR4\Styles`
+
+.Note:
+[NOTE]
+====
+If you are using the WebSchedule, you must deploy Forms and Style directories. In addition, certain presets (e.g., Aero, Aqua presets) also require you to deploy the Style directory.
+====
+
+** If you are using your own custom images in your application, as opposed to Infragistics' predefined images, locate the following directory:
+
+`C:\Inetpub\wwwroot\aspnet_client\Infragistics\Images`
+
+[start=3]
+. Deploy the Forms, Scripts, Styles, and Images directories that you located in step 2, as necessary.
+
+.. On the production server, create a parent directory.
+.. Place the "{ProductVersion}CLR4" and "Images" directories in the parent folder that you created in step 3a.
+.. Create the `ig_common` virtual directory and point to the parent folder that you created. For example, if you create a parent folder named "Infragistics" anywhere on the production server, place the {ProductVersion}CLR4 and "Images" directories under the "Infragistics" directory. Then create the `ig_common` virtual directory and point to that "Infragistics" folder.
+
+== Related Topics
+
+link:deploying-common-assets.html[Deploying Common Assets]
+
+link:web-deploying-an-application-to-a-hosted-server-environment.html[Deploying an Application to a Hosted Server Environment]
+
+link:web-deploying-an-application-to-a-partial-trust-environment.html[Deploying an Application to a Partial-Trust Environment]
+
+link:web-using-global-assembly-cache-gac-deployment.html[Using Global Assembly Cache (GAC) Deployment]

@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgroupbox-understanding-webgroupbox",
+    "controlName": ["WebGroupBox"],
+    "tags": ["Getting Started","Layouts"],
+    "guid": "{28F34827-A675-431B-968D-44AA21E17E3C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Understanding WebGroupBox
+
+This is a great place for you to start learning about the WebGroupBox™ control, and its key features and functionalities. The topics in this section will give you a better idea of why you would want to use WebGroupBox in your applications.
+
+Click the links below to gain an overview of the WebGroupBox control.
+
+* link:webgroupbox-about-webgroupbox.html[About WebGroupBox] -- Provides an introduction to the WebGroupBox control.
+* link:webgroupbox-smart-tag.html[WebGroupBox Smart Tag] -- Explains the functionality available on the WebGroupBox smart tag.

@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-api-overview",
+    "controlName": ["WebGauge"],
+    "tags": ["API"],
+    "guid": "{F13F9B41-9A17-4387-B8C7-D8B4F74B89B7}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the WebGauge™ control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into the "API Reference Guide" section of the help.
+
+[cols="a,a"]
+|====
+|*WebGauge Namespace:* 
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge_namespace.html[Infragistics.WebUI.UltraWebGauge]"]
+|*Key Classes:* 
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.ultragauge.html[UltraGauge]"] 
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.gaugeimagepipe.html[GaugeImagePipe]"]
+
+|*Resources Namespace:* 
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources_namespace.html[Infragistics.UltraGauge.Resources]"]
+|*Key Classes and Interface:* 
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.igaugecomponent.html[IGaugeComponent]"] 
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.digitalgauge.html[DigitalGauge]"] 
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.lineargauge.html[LinearGauge]"] 
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgauge.html[RadialGauge]"]
+
+|====

@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-data-model-for-webschedule-generic-data-provider",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{B90E5A2E-0BA7-4911-AAA8-04D1C32B74F9}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Data Model for WebSchedule Generic Data Provider
+
+The WebScheduleGenericDataProvider™ component allows you to bind to any data source you choose; however, for all features to work correctly, your data source must contain certain required fields. Also, for automatic data binding to occur, the data fields must have specific names.
+
+Click on the following links to find out about the data schema for activities, variances, and resources.
+
+* link:webschedule-generic-activityvariance-data-model.html[Generic Activity/Variance Data Model]
+* link:webschedule-generic-resource-data-model.html[Generic Resource Data Model]

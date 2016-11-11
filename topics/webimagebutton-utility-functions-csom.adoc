@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimagebutton-utility-functions-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{A1EBEB04-F90F-46A3-96B2-7C636FF2B5D2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebImageButton Utility Functions
+
+The client-side object model for the WebImageButton™ control is accessed in HTML using the JavaScript Client Side Object Model (CSOM). The server object model can be accessed in the ASP.NET code-behind class or inline code in the ASPX file.
+
+=== Using JavaScript, you can:
+
+* process events that occur on WebImageButton controls
+* obtain references to JavaScript Objects related to WebImageButton controls located on a page at any time. This allows the developer to get and modify values of their properties and behavior
+* obtain references to the html elements that are used to render WebImageButton objects. This also allows the developer to get and modify values of their properties
+
+=== Accessing the WebImageButton Client-Side Object (three ways):
+
+[start=1]
+. Access the WebImageButton client-side object while processing the ClientSideEvents of WebImageButton (the first parameter in handler function contains reference to the WebImageButton).
+
+----
+function myMouseDownHandler(Button, Event)
+{
+	window.status = "Mouse down:" + Button.getText() + 
+	  " button with id:" + Button.getClientID();
+}
+----
+
+[start=2]
+. Access the WebImageButton client-side object within the page using the global ig_getWebControlById utility function.
+
+----
+var button = ig_getWebControlById("WebImageButton1");
+window.status = "WebImageButton1 has text: " + button.getText;
+----
+
+[start=3]
+. Access the WebImageButton client-side object from a reference to a child HTML element that belongs to WebImageButton using the global igbut_fromElem utility function.
+
+----
+// childTD - reference to one of 
+// TD/IMG/SPAN/INPUT-html-element used by WebImageButton
+var button = igbut_fromElem(childTD);
+if(button != null)
+	window.status = "childTD belongs to: " + button.getClientID();
+----

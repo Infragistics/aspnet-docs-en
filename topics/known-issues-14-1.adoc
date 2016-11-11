@@ -1,0 +1,184 @@
+﻿////
+
+|metadata|
+{
+    "name": "known-issues-14-1",
+    "controlName": [],
+    "tags": [],
+    "guid": "754fa254-644c-4cb1-8ebd-142bb8e690f5",  
+    "buildFlags": [],
+    "createdOn": "2014-03-11T14:45:23.8634277Z"
+}
+|metadata|
+////
+
+= Known Issues and Limitations ASP.NET 14.1
+
+== Known Issues and Limitations Summary
+
+=== Known issues and limitations summary chart
+
+The following table summarizes the known issues and limitations of the Infragistics® ASP.NET 2014.1 release. Detailed explanations of all of the issues and the existing workarounds are provided after the summary table.
+
+=== Legend
+
+- image:images\workaround.png[alt="Workaround"] - Workaround available
+- image:images\noworkaround.png[alt="No Workaround"] - No known workaround
+- image:images\fix.png[alt="Fix Planned"] - Fix planned
+
+==== _WebDataGrid_
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+|<<_Ref381785860,Row Editing Done/Cancel buttons missing at small grid height>>
+|When the _WebDataGrid_™, _WebHierarchicalDataGrid_™, or a child grid within the _WebHierarchicalDataGrid_ have a height that supports displaying two or fewer rows, the Done/Cancel button dialog may not show completely because it is clipped by the bounds of the row container.
+|image::images/workaround.png[]
+
+|<<_Ref381886973,Edited row not scrolling correctly in IE 7>>
+|Because of the way that Internet Explorer® 7 renders relatively positioned elements inside parent containers without relative positioning, child elements overflow the bounds of the parent container when overflow scrolls providing a broken visual experience.
+|image::images/workaround.png[]
+
+|<<_Ref38188697311,It is not possible to move columns when the Row Editing Template is opened>>
+|When the _WebDataGrid_™ has Row Editing Template enabled the columns in the grid cannot be moved
+|image::images/noworkaround.png[]
+
+|====
+
+==== _WebDataTree_
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+|<<_Ref381785829,No auto-scrolling when dragging a node outside container>>
+|When using _WebDataTree_ and connector lines are enabled, automating scrolling while a node is being dragged is not supported.
+|image::images/fix.png[] 
+
+image::images/workaround.png[]
+
+|====
+
+==== _WebHierarchicalDataGrid_
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+|<<_Ref381785860,Row Editing Done/Cancel buttons missing at small grid height>>
+|When the _WebDataGrid_™, _WebHierarchicalDataGrid_™, or a child grid within the _WebHierarchicalDataGrid_ have a height that supports displaying two or fewer rows, the Done/Cancel button dialog may not show completely because it is clipped by the bounds of the row container.
+|image::images/workaround.png[]
+
+|<<_Ref382597340,Edited row not scrolling correctly in IE 7>>
+|Because of the way that Internet Explorer 7 renders relatively positioned elements inside parent containers without relative positioning, child elements overflow the bounds of the parent container when overflow scrolls providing a broken visual experience.
+|image::images/noworkaround.png[]
+
+|====
+
+==== _WebScriptManager_
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+| _WebScriptManager_ Intellisense is not supported by Visual Studio 2012 and above
+|Displaying Intellisense with WebScriptManager in not supported with Visual Studio 2012 and above. This limitation is due to the handling in VisualStudio 2012 designer's Source View.
+|image::images/noworkaround.png[]
+
+|====
+
+[[_Ref367305781]]
+
+== _WebDataGrid_
+
+[[_Ref381785860]]
+
+=== Row Editing Done/Cancel buttons missing at small grid heights
+
+When the  _WebDataGrid_  ,  _WebHierarchicalDataGrid_  , or a child grid within the  _WebHierarchicalDataGrid_   have a height that supports displaying two or fewer rows, the Done/Cancel button dialog may not show completely because it is clipped by the bounds of the row container.
+
+Workaround
+
+.Note:
+[NOTE]
+====
+You can configure the grid to have a larger height so that the dialog can display fully or you can use the Cell Editing behavior instead of the Row Editing behavior. You also have the option to always hide the Done/Cancel buttons using the Row Editing behavior’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property to keep the experience consistent.
+====
+
+[[_Ref381886973]]
+
+=== Edited row not scrolling correctly in IE 7
+
+Because of the way that Internet Explorer 7 renders relatively positioned elements inside parent containers without relative positioning, child elements overflow the bounds of the parent container when overflow scrolls providing a broken visual experience. Specifically, when a row is in Edit mode, scrolling the container will make the edited row overflow its parent container. This issue affects the  _WebDataGrid_   when nested inside a scrollable parent container without relative positioning.
+
+Workaround
+
+.Note:
+[NOTE]
+====
+If the  _WebDataGrid_   is within a scrollable parent container, you should ensure that the parent container is configured with relative positioning.
+====
+
+[[_Ref38188697311]]
+
+=== It is not possible to move columns when the Row Editing Template is opened
+
+When the  _WebDataGrid_™,  _WebHierarchicalDataGrid_™, or a child grid within the  _WebHierarchicalDataGrid_   have a height that supports displaying two or fewer rows, the Done/Cancel button dialog may not show completely because it is clipped by the bounds of the row container.
+
+== _WebDataTree_
+
+[[_Ref381785829]]
+
+=== No auto-scrolling when dragging a node outside container
+
+When using the  _WebDataTree_   component with the Drag-and-Drop and Connector Lines features enabled, there are limitations with automatic scrolling. When a node has been dragged and you move the mouse outside of the tree container the expected automatic scrolling is not supported.
+
+Workaround
+
+.Note:
+[NOTE]
+====
+If automatic scrolling is really important for the project, a possible solution is to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~enableconnectorlines.html[EnableConnectorLines] property to  _false_  . This will disable connector lines, but in that case auto-scrolling while a node is dragged out of the container, is supported.
+====
+
+== _WebHierarchicalDataGrid_
+
+=== Row Editing Done/Cancel buttons missing at small grid heights
+
+When the  _WebDataGrid_  ,  _WebHierarchicalDataGrid_  , or a child grid within the  _WebHierarchicalDataGrid_   have a height that supports displaying two or fewer rows, the Done/Cancel button dialog may not show completely because it is clipped by the bounds of the row container.
+
+Workaround
+
+.Note:
+[NOTE]
+====
+You can configure the grid to have a larger height so that the dialog can display fully or you can use the Cell Editing behavior instead of the Row Editing behavior. You also have the option to always hide the Done/Cancel buttons using the Row Editing behavior’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property to keep the experience consistent.
+====
+
+[[_Ref382597340]]
+
+=== Edited row not scrolling correctly in IE 7
+
+Because of the way that Internet Explorer 7 renders relatively positioned elements inside parent containers without relative positioning, child elements overflow the bounds of the parent container when overflow scrolls providing a broken visual experience. Specifically, when a row is in Edit mode, scrolling the container will make the edited row overflow its parent container.
+
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+|_ link:web-webdatagrid-webdatagrid.html[WebDataGrid]_
+|This is a group of topics explaining the _WebDataGrid_ control.
+
+| _link:web-webhierarchicaldatagrid.html[WebHierarchicalDataGrid]_ 
+|This is a group of topics explaining the _WebHierarchicalDataGrid_ control.
+
+| _link:web-webdatatree.html[WebDataTree]_ 
+|This is a group of topics explaining the _WebDataTree_ control.
+
+|====

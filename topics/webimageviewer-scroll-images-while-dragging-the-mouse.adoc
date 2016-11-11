@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimageviewer-scroll-images-while-dragging-the-mouse",
+    "controlName": ["WebImageViewer"],
+    "tags": ["Editing","Layouts","Selection","Styling"],
+    "guid": "{1FE9495A-6D48-41CE-A76A-146E0E22FC3C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Scroll Images While Dragging the Mouse
+
+The WebImageViewer™ control allows the end user to scroll through the images while dragging the mouse. The images are scrolled through using the Continuous scroll animation.
+
+By default, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~enabledragscrolling.html[EnableDragScrolling]"]  property is set to True.
+
+The following code snippet sets EnableDragScrolling to False
+
+image::images/WebImageViewer_Scroll_Images_While_Dragging_the_Mouse_01.png[WebImageViewer_Scroll_Images_While_Dragging_the_Mouse_01]
+
+*In Visual Basic:*
+
+----
+' Sets EnableDragScrolling to False
+Me.WebImageViewer1.EnableDragScrolling = false
+----
+
+*In C#:*
+
+----
+// Sets EnableDragScrolling to False
+this.WebImageViewer1.EnableDragScrolling = false;
+----

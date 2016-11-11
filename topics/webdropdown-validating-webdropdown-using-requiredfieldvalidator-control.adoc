@@ -1,0 +1,48 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-validating-webdropdown-using-requiredfieldvalidator-control",
+    "controlName": ["WebDropDown"],
+    "tags": ["Validation"],
+    "guid": "{E0283648-D6D3-401C-B388-9C995C29E649}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Validating WebDropDown using RequiredFieldValidator Control
+
+== Before You Begin
+
+WebDropDown™ can easily be validated using the RequiredFieldValidator control to ensure that the end-user selects at least one item from the drop-down list.
+
+In this walkthrough, you will validate a WebDropDown control with the click of a button.
+
+== What You Will Accomplish
+
+You will learn how to validate WebDropDown using the RequiredFieldValidator.
+
+== Follow these Steps
+
+[start=1]
+. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component, a WebDropDown control, a standard Button control and a RequiredFieldValidator validation control.
+[start=2]
+. Add items to the WebDropDown as shown in the link:webdropdown-getting-started-with-webdropdown.html[Adding Items to WebDropDown using the Designer] topic.
+[start=3]
+. Set the following properties of the RequiredFieldValidator control in the property window:
+
+[options="header", cols="a,a"]
+|====
+|ControlToValidate|ErrorMessage
+
+|WebDropDown1
+|$$*$$Please select an item from the drop-down.
+
+|====
+
+[start=4]
+. Save and run your application. Delete the item in the value display of the WebDropDown and click the button. You will observe an error message displayed similar to the following image:
+
+image::images/WebDropDown_Validating_WebDropDown_using%20_the_RequiredFieldValidator_Control_01.png[]

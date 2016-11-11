@@ -1,0 +1,73 @@
+﻿////
+
+|metadata|
+{
+    "name": "webrating-adding-webrating-items",
+    "controlName": ["WebRating"],
+    "tags": ["Selection","Styling","Templating"],
+    "guid": "3abce672-c635-4161-9604-0991fc7e1826",  
+    "buildFlags": [],
+    "createdOn": "2010-06-01T05:39:38.8221736Z"
+}
+|metadata|
+////
+
+= Adding WebRating Items
+
+The WebRating™ control allows you to record values based on user interaction. By default, the control displays 5 stars with a value of 1 through 5 for each. When a user clicks on a star the average value and number of clicks is recorded for that user.
+
+You can customize the behavior of WebRating by adding your own rating items and setting your own values. The WebRating control exposes a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~customimages.html[CustomImages]"]  property of type  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webratingimagecollection.html[WebRatingImageCollection]"]  which you can use to add  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.ratingimageitem.html[RatingImageItem]"]  objects. You can use these objects to customize the image displayed by setting custom CSS classes. Similarly, you can use them to set the value that corresponds to each image by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.ratingimageitem~value.html[Value]"]  property.
+
+You do not have to specify a value on any rating items. By default, the control will increment the value by 1 for each rating item starting with the minimum value. You can use the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~minimumvalue.html[MinimumValue]"]  property to assign a minimum value, which is 0 by default. The WebRating control will also infer what values to assign to individual items if you have at least one value specified. For example if you have 3 items and you specify 100 on the last item, the range of values for the items will be from 0 to 100, with 100 being the right edge of the last item.
+
+.Note:
+[NOTE]
+====
+The MinimumValue property determines the left-edge value. As mentioned above, the right-edge value is determined by the value for the last item; if no value is specified, the item gets an increment of 1 from the previous item.
+====
+
+You can also set a custom tooltip for a RatingImageItem object by setting its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.ratingbaseimage~tooltipformat.html[ToolTipFormat]"]  property. This property allows you to set a string with the following placeholders:
+
+* {0} – The value, selected or hovered.
+* {1} – The average value.
+* {2} – The vote count.
+* {3} – The minimum value.
+* {4} – The maximum value.
+* {5} – The number of items.
+
+The following code shows you how to add 3 RatingImageItem objects and set the values to be between 0-10. The tooltip is also set to display the selected value out of the maximum value with a rating caption for each rating item.
+
+*In HTML:*
+
+----
+<style>
+        .badRating
+        {
+            background: url('images/Splat.png');
+        }
+        .mediumRating
+        {
+            background: url('images/Rotten.png');
+        }
+        .goodRating 
+        {
+            background: url('images/Fresh.png');
+        }
+        .noImage 
+        {
+            cursor: pointer;
+        }
+    </style>
+<ig:webrating ID="WebRating1" runat="server"     
+            Precision="Exact"  
+            ImageHeight="31"
+            ImageWidth="31"
+            MinimumValue="0"          
+             >
+                <CustomImages>
+                    <ig:ratingimageitem ToolTipFormat="{0} out of {4}: Splat" ImageCssClass="badRating" HoveredImageCssClass="noImage" SelectedImageCssClass="noImage" />
+                    <ig:ratingimageitem ToolTipFormat="{0} out of {4}: Rotten" ImageCssClass="mediumRating" HoveredImageCssClass="noImage" SelectedImageCssClass="noImage" />
+                    <ig:ratingimageitem Value="10" ToolTipFormat="{0} out of {4}: Fresh" ImageCssClass="goodRating" HoveredImageCssClass="noImage" SelectedImageCssClass="noImage" />
+                </CustomImages>
+        </ig:webrating>
+----

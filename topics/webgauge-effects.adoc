@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-effects",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{6BD1E3CF-1E47-41D7-B0A0-56C31F640671}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Effects
+
+This section provides you with useful information about the effects available within the WebGauge control, as well as a task-based procedure on how to apply effects to your gauge:
+
+* link:webgauge-shadow-effects.html[Shadow Effects]
+* link:webgauge-apply-shadow-effects.html[Apply Shadow Effects]

@@ -1,0 +1,27 @@
+﻿////
+|metadata|
+{
+    "name": "web-how-do-i-test-my-web-application-under-medium-trust-during-development",
+    "controlName": [],
+    "tags": ["Application Scenarios","FAQ"],
+    "guid": "{43266A28-D4B8-41B1-89CB-31299C1E2A13}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= How Do I Test My Web Application Under Medium Trust During Development?
+
+You can target your hosting provider's trust level in development by modifying the <trust> element in your Web application project's Web.config file, as shown in the following XML excerpt.
+
+[source]
+----
+...
+<system.web>
+...
+      <authentication mode="Windows" />
+       <trust level="Medium" />
+</system.web>
+...
+----

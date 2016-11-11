@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-getting-started-with-webgauge",
+    "controlName": ["WebGauge"],
+    "tags": ["Getting Started"],
+    "guid": "{21B71CD2-2E9A-4D1F-9E21-155F0A9E9E88}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Getting Started with WebGauge
+
+This multi-part tutorial helps you get up and running with the WebGauge™ control.
+
+* link:webgauge-creating-a-webgauge-in-design-view.html[Creating a WebGauge in Design View]
+* link:webgauge-creating-a-webgauge-using-code.html[Creating a WebGauge Using Code]
+* link:webgauge-creating-a-webgauge-using-a-preset.html[Creating a WebGauge Using a Preset]

@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtexteditor-using-webtexteditor",
+    "controlName": ["WebTextEditor"],
+    "tags": ["Editing","Getting Started"],
+    "guid": "{12E7DF14-8911-489E-BD73-F47AC389449E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebTextEditor
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebTextEditor™.
+
+link:webtexteditor-using-webtexteditor-in-password-mode.html[Using WebTextEditor in password mode]
+
+The WebTextEditor control can work in password mode and this section explains how.
+
+link:webtexteditor-using-webtexteditor-in-multiline-mode.html[Using WebTextEditor in MultiLine mode]
+
+If you need the WebTextEditor control to work in a multiline mode you can get information on how to accomplish it in this section.
+
+link:webtexteditor-spinning-through-a-list-of-values-in-webtexteditor.html[Spinning through a list of values in WebTextEditor]
+
+In this section you can learn how to use spin buttons in the control to spin through a list of values.
+
+link:webtexteditor-using-custom-button-in-webtexteditor.html[Using Custom Button in WebTextEditor]
+
+In this section you can learn how to implement a customized button and use it to perform custom actions.
+
+link:webtexteditor-webtexteditor-smart-tag.html[WebTextEditor Smart Tag]
+
+You can learn about the WebTextEditor Smart Tag in this section.

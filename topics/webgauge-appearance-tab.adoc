@@ -1,0 +1,28 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-appearance-tab",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{F4C249D8-B2F4-4213-8D05-68AC730C3FC8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Appearance Tab
+
+The Appearance tab allows you to customize the appearance of each property. You can access this tab by either clicking on any item in the Gauge Explorer or clicking any item on your gauge in the interactive preview area.
+
+The tab is divided into two panes:
+
+* link:webgauge-brush-pane.html[Brush]
+* link:webgauge-stroke-pane.html[Stroke]
+
+image::images/Appearance_Tab_01.png[Appearance tab in the gauge designer.]
+
+The following screen shot shows a Linear gauge that was created according to the appearance settings specified in the above screen shot.
+
+image::images/Appearance_Tab_02.png[Linear gauge with settings applied based on the appearance tab shown in screen shot above.]

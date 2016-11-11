@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-excelstylefiltering-propertyreference",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Filtering","Grids"],
+    "guid": "b3c7c1de-cf50-42ab-a72f-a9639b9ffb3d",  
+    "buildFlags": [],
+    "createdOn": "2012-07-16T12:21:20.6230192Z"
+}
+|metadata|
+////
+
+= Excel Style Filtering Property Reference
+
+== Property Reference
+
+=== Introduction
+
+This topic provides reference information about the properties that are specific to the link:webhierarchicaldatagrid-excelstylefiltering-landingpage.html[Excel-Style Filtering] feature of the  _WebHierarchicalDataGrid_™ control.
+
+=== Property reference chart
+
+The following table summarizes the purpose and functionality of properties of the Excel-Style Filtering of the  _WebHierarchicalDataGrid_   control.
+
+[options="header", cols="a,a"]
+|====
+|Property|Description
+
+| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]
+|Configures the capitalization of the individual items in the filtering drop-down list.The allowed values are: 
+
+* _Lower_ (Default) – the items appear in lowercase letters 
+
+* _Upper_ – the items appear in uppercase letters (all caps) 
+
+* _Camel_ – the items appear with sentence capitalization (Only the first letter of the item is capitalized.) 
+
+__This property__ __can__ __be set on both__ __the__ __parent and child layouts as well as on column level.__ __The column__ __setting__ __has__ __higher priority.__
+
+| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]
+|Configures the value for the items in the filtering drop-down for a column with Null values in the data source. It can be set on both the parent and child layouts.
+
+|====

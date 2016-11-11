@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-keyboard-navigation",
+    "controlName": ["WebDataTree"],
+    "tags": [],
+    "guid": "{F8FE5A0A-738E-43C0-AE5B-5F2F4BEE5FC4}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Keyboard Navigation
+
+WebDataTree™ supports navigation through the nodes with the keyboard very easily.
+
+* *UP,DOWN,LEFT & RIGHT* -- UP and DOWN ARROW keys advance the active node by one; LEFT and RIGHT ARROW keys toggle the display of child nodes (collapse or expand tree nodes).
+* *ENTER* -- Navigates to the Url, if any.
+* *SPACE* -- Selects a node without navigating.
+* *TAB* -- Moves focus to the next plain DOM element or control on the page.
+* *F2* -- Pressing the F2 key causes the node to enter into edit mode, if node editing is enabled. Pressing ESC cancels node editing, and pressing ENTER or TAB commits the new text.
+* *Home* -- Goes to the first node.
+* *End* -- Goes to the last node.
+* *SHIFT* -- Multiple selection (continuous nodes) is done by pressing and holding the SHIFT key while simultaneously selecting nodes with the ARROW keys.
+* *CTRL* -- Multiple selection (non-continuous nodes) is done by pressing and holding the CTRL key while simultaneously navigating the nodes using the ARROW keys and then selecting or unselecting a node by pressing the SPACE key.

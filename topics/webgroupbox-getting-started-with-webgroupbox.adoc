@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgroupbox-getting-started-with-webgroupbox",
+    "controlName": ["WebGroupBox"],
+    "tags": ["Getting Started","Layouts"],
+    "guid": "{B871CC79-DAD1-41A9-A7AC-16E943587C8F}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Getting Started with WebGroupBox
+
+Click the link below to find information on how to get up and running quickly with the WebGroupBox™ control.
+
+* link:webgroupbox-adding-the-webgroupbox-to-a-form.html[Adding the WebGroupBox to a Form] -- Shows you how to add a WebGroupBox to your form and add controls to it.

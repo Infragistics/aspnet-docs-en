@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-enabling-application-styling-using-the-webpagestyler-component",
+    "controlName": [],
+    "tags": ["Styling"],
+    "guid": "{BB4E6256-3E33-46E5-A0F4-02C5F19C3307}",  
+    "buildFlags": [],
+    "createdOn": "2006-07-12T11:48:52Z"
+}
+|metadata|
+////
+
+= Enabling Application Styling Using the WebPageStyler Component
+
+While using Application Styling, you may ask the following question: "What if I have an existing project that I want to use Application Styling in, but I don't want to turn on Application Styling on the entire project?". There is a solution to this scenario, and it is the link:web-webpagestyler.html[WebPageStyler] component. This component is quite simple in its functionality and properties. The component has the following four properties:
+
+*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.iprovideappstyling~enableappstyling.html[EnableAppStyling]"]  -- Enables/disables Application Styling for only the ASPX page that it is on. The default value is NotSet.
+*  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.htmlboxprogressbar~enableviewstate.html[EnableViewState]"]  -- Enables ViewState for the component, for use in page postback. The default value is True.
+*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.smartwebcontrol~stylesetname.html[StyleSetName]"]  -- The name of the StyleSet used for the ASPX page.
+*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.smartwebcontrol~stylesetpath.html[StyleSetPath]"]  -- The path to the StyleSet. The default value is Null.
+
+*To enable Application Styling using the WebPageStyler component:*
+
+.Note:
+[NOTE]
+====
+This procedure assumes the ASPX page already has a WebGrid on it, and it is data bound.
+====
+
+[start=1]
+. From the Toolbox, drag the WebPageStyler component to your form. The location of the component doesn't matter, as the component has no run-time appearance.
+[start=2]
+. In the Properties window for the WebPageStyler component, set the EnableAppStyling property to True.
+[start=3]
+. Select the StyleSetName property. You will see a drop-down list appear, showing your imported StyleSets. If you have not imported any StyleSets, select Import from the drop-down list, and a dialog box opens, allowing you to import your StyleSets. Once they are imported, specify the StyleSet by selecting it from the drop-down list.
+[start=4]
+. Your page is now set up to use Application Styling. Run the page to see your StyleSet take effect.
+
+.Note:
+[NOTE]
+====
+By default, the StyleSets are imported into a folder called ig_res. Also by default, this folder is not part of the project, but is visible if you select "Show All Files". You can then right-click the folder and select Include In Project to make the folder and its subfolders part of the project.
+====

@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-gauge-layout-tab",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{80878181-9D21-4FA2-8C9D-9B9D8FC60417}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Gauge Layout Tab
+
+Click on the following links for information on how to change the layout of the different gauge types using the Properties panel:
+
+* link:webgauge-digital-gauge.html[Digital Gauge]
+* link:webgauge-linear-gauge.html[Linear Gauge]
+* link:webgauge-radial-gauge.html[Radial Gauge]

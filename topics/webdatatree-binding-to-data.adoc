@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-binding-to-data",
+    "controlName": ["WebDataTree"],
+    "tags": ["Data Binding"],
+    "guid": "{C058A2BE-8C6B-4FEA-B1E8-AD4DCDF7C47C}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-03T14:54:30Z"
+}
+|metadata|
+////
+
+= Binding to Data
+
+WebDataTree™ supports a large range of bindable data sources including standard Microsoft data source controls.
+
+Click the following links to learn more about binding WebDataTree with data sources :
+
+* link:webdatatree-binding-webdatatree-to-an-xml-data-source.html[Binding WebDataTree to an Xml Data Source]
+* link:webdatatree-binding-webdatatree-to-webhierarchicaldatasource.html[Binding WebDataTree to HierarchicalDataSource]

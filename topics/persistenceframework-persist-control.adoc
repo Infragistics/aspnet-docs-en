@@ -1,0 +1,82 @@
+﻿////
+
+|metadata|
+{
+    "name": "persistenceframework-persist-control",
+    "controlName": ["PersistenceFramework"],
+    "tags": ["Persistence"],
+    "guid": "d91ae9bb-2d4b-449e-b2a6-961045199feb",  
+    "buildFlags": [],
+    "createdOn": "2011-03-31T07:54:25.5159086Z"
+}
+|metadata|
+////
+
+= Persist Control
+
+The Persistence framework automatically persists all the controls by default. To enable the framework for your application you must set in  _web.config_  the attribute  _enablePersistence_  to true.
+
+[cols="a"]
+|====
+|*In web.config:*
+
+|---- 
+<infragistics.web enablePersistence="true" />
+----
+
+|====
+
+This attribute could also be made false, which would turn off the automatic persistence. Even then, the persistence framework is available for use on individual pages. Using a targeted approach can be ideal when you want to save the state of only a small number of controls. Particularly when you have pages with many controls, restricting the number of persisted controls can improve the responsiveness of the page.
+
+Also, when you disable automatic persistence, Persistence events do not fire. For this reason you need to manually load and save the persisted data. The best way is to do so is to use the *InitComplete* event of the Page object for loading persisted data and to use *PreRenderComplete* to save.
+
+== Saving Control State
+
+To save the required controls, you need an instance of the Persistence Framework class,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.persistencemanager.html[*PersistenceManager* ]"] . This class is implemented as a singleton; therefore you are ensured to have only one instance working at any time.
+
+The Persistence manager allows for manual loading and saving of data for the controls. *Listing 1* demonstrates the persistence of three controls and then shows the retrieving of their state.
+
+*Listing 1: Persisting controls to the Persistence Manager*
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+private void ManualLoad() 
+{ 
+ // Get the singleton manager. 
+ PersistenceManager manager = PersistenceManager.GetInstance(); 
+ PersistenceData data = PersistenceData.FromJson(this.PersistedData); 
+ foreach (ControlData controlData in data.Controls) 
+ { 
+ if (!string.IsNullOrEmpty(controlData.ControlId)) 
+ { 
+ Control control = this.FindControl(controlData.ControlId); 
+ // Load the persisted data for the control 
+ manager.LoadControl(control, controlData); 
+ } 
+ } 
+} 
+private void ManualPersistence() 
+{ 
+ // Get the singleton manager. 
+ PersistenceManager manager = PersistenceManager.GetInstance(); 
+ PersistenceData data = new PersistenceData(); 
+ // Manually persist the required controls 
+ data.Controls.Add(manager.SaveControl(this.control1, this.control1.ID)); 
+ data.Controls.Add(manager.SaveControl(this.Control2, this.Control2.ID)); 
+ data.Controls.Add(manager.SaveControl(this.control3, this.Control3.ID)); 
+ this.PersistedData = data.ToJson(); 
+}
+----
+
+|====
+
+== Related Links
+
+link:{SamplesURL}/samples/persistenceframework/editingandselection/persistcontrolmanually/default.aspx?cn=persistence-framework&sid=99bb0e9c-157a-4a98-a090-19d436175c68[Persist Control Manually]
+
+link:persistenceframework-exclude-control.html[Exclude control]
+
+link:persistenceframework-exclude-control-properties.html[Exclude control properties]

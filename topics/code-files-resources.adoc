@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "code-files-resources",
+    "controlName": [],
+    "tags": ["Sample Data Source"],
+    "guid": "{27ECAB9D-6636-4E92-9E18-0D901E99DBF6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Resources
+
+The followling files are sample code files for your reference.
+
+* link:web-datautil.html[DataUtil]
+* link:code-files-categoriesandproducts.html[CategoriesandProducts]
+* link:code-files-schoolrecords.html[SchoolRecords]

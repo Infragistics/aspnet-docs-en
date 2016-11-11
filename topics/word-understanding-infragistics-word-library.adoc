@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "word-understanding-infragistics-word-library",
+    "controlName": ["Infragistics Word Library"],
+    "tags": ["Editing","Getting Started"],
+    "guid": "a5b0fb25-323b-4948-94f6-dc389552ffc5",  
+    "buildFlags": [],
+    "createdOn": "2011-06-15T13:27:52.4920731Z"
+}
+|metadata|
+////
+
+= Understanding Infragistics Word Library
+
+This is a great place for you to start learning about the Word Library, and its key features and functionalities. The topics in this section will give you a better idea of why you would want to use Word Library in your applications.
+
+Click the links below to gain an overview of the Word Library.
+
+* link:word-about-infragistics-word-library.html[About Infragistics Word Library]
+* link:word-word-document-generation-references-and-dependencies.html[Word Document Generation References and Dependencies]

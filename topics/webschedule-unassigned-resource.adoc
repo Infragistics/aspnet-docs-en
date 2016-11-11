@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-unassigned-resource",
+    "controlName": ["WebSchedule"],
+    "tags": ["Scheduling"],
+    "guid": "{343456F6-7029-4E97-88DE-1935C33100BE}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Unassigned Resource
+
+One special resource is the Unassigned resource. It exists to hold ownership of activities not related to any other resource in the data store. For example, when resources get deleted all of their activities become unassigned.
+
+If your WebSchedule™ application fails to specify the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcename.html[ActiveResourceName]"]  property on it's WebScheduleInfo™, then the activities associated with the Unassigned resource are shown.
+
+A reference to the Unassigned resource can be obtained from the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resourcescollection~unassignedresource.html[UnassignedResource]"]  property on the WebScheduleInfo's  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResources]"]  collection. It's properties cannot be changed.

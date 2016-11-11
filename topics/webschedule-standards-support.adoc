@@ -1,0 +1,17 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-standards-support",
+    "controlName": ["WebSchedule"],
+    "tags": ["Patterns and Practices","Section 508"],
+    "guid": "{229550D3-33BB-4E4A-8BA8-89E094D25BAF}",  
+    "buildFlags": [],
+    "createdOn": "2005-01-08T00:00:00Z"
+}
+|metadata|
+////
+
+= Standards Support
+
+The WebSchedule™ controls support several different standards, one of which is the Section 508 compliancy standard. The WebSchedule controls also make full use of Cascading Style Sheets and supports these standards for use in styling the controls. The WebSchedule controls are also HTML 4.01-compliant.

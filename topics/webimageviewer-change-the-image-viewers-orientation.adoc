@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimageviewer-change-the-image-viewers-orientation",
+    "controlName": ["WebImageViewer"],
+    "tags": ["Editing","Layouts","Styling"],
+    "guid": "{E0A7F67C-95A8-43AB-9CD5-0A10C04F4928}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Change the Image Viewer's Orientation
+
+The WebImageViewer™ control supports two orientation modes:
+
+* Horizontal
+* Vertical
+
+For more information, see link:webimageviewer-orientation-types.html[Orientation Types].
+
+When the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~orientation.html[Orientation]"]  property is set to Horizontal, the height of each image is set to 100% to fill the available vertical space.
+
+When the Orientation property is set to Vertical, the width of each image is set to 100% to fill the available horizontal space.
+
+The following example code sets the Orientation property to Vertical.
+
+image::images/WebImageViewer_Change_Orientation_01.png[WebImageViewer_Change_Orientaion_01]
+
+*In Visual Basic:*
+
+----
+' Sets Orientation to Vertical
+Me.WebImageViewer1.Orientation = Orientation.Vertical
+----
+
+*In C#:*
+
+----
+// Sets Orientation to Vertical
+this.WebImageViewer1.Orientation = Orientation.Vertical;
+----

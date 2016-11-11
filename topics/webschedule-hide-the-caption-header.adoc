@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-hide-the-caption-header",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling","Styling"],
+    "guid": "{029316A5-6E3B-4862-BE27-70B421355277}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Hide the Caption Header
+
+All of the WebSchedule™ UI elements have a caption that displays across the top. Each view has displays different information in this area and what is displayed in this area can be specified as well.
+
+Sometimes you may not want this Header to be visible for this reason all the controls have a property called  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionHeaderVisible]"] , which is a boolean that will show or hide the caption header.
+
+The code snippet below shows how you would set this property on all the controls.
+
+image::images\WebSchedule_How_to_Hide_the_Caption_Header_01.png[]
+
+image::images\WebSchedule_How_to_Hide_the_Caption_Header_02.png[]
+
+*In Visual Basic:*
+
+----
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e _
+  As System.EventArgs) Handles MyBase.Load
+	Me.WebCalendarView1.CaptionHeaderVisible = False
+	Me.WebDayView1.CaptionHeaderVisible = False
+	Me.WebMonthView1.CaptionHeaderVisible = False
+	Me.WebWeekView1.CaptionHeaderVisible = False
+End Sub
+----
+
+*In C#:*
+
+----
+private void Page_Load(object sender, System.EventArgs e)
+{
+	this.WebCalendarView1.CaptionHeaderVisible = false;
+	this.WebDayView1.CaptionHeaderVisible = false;
+	this.WebMonthView1.CaptionHeaderVisible = false;
+	this.WebWeekView1.CaptionHeaderVisible = false;
+}
+----

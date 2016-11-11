@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-drag-and-drop",
+    "controlName": ["WebDataTree"],
+    "tags": [],
+    "guid": "d338256b-548a-44ef-a077-252afd7a16fc",  
+    "buildFlags": [],
+    "createdOn": "2010-06-03T06:51:12.4035216Z"
+}
+|metadata|
+////
+
+= Drag and Drop
+
+The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] Drag and Drop feature provides functionality that allows your end user to drag a node or group of nodes and drop them on the same WebDataTree, or on another one.
+
+The behavior has three modes:
+
+* Copy – When a node is dropped onto its new location, a copy of the dragged node is dropped onto the destination target, while the existing node remains at the original location.
+* Move – When a node is dropped, it is essentially removed from its original location and placed into the new destination target.
+* Default - This mode combines both the Copy and Move modes; when the Control key is pressed during the drag and drop operation, it behaves like the Copy mode, if you do not press the Control key during the drag and drop operation, it behaves like the Move mode.
+
+*Tree Drop Locations*
+
+You can insert before, between or after nodes, as well as into a node. In this case the dropped node becomes a child of the node it is dropped onto. While the dragged node is being moved over the other nodes, tooltips appear at each potential drop location. If you move between two nodes, a line appears between them and next to the line appears the following text “Insert between Previous node and node.” These tooltips are similarly presented for “Insert before node” and “Insert after node.”
+
+*Events*
+
+WebDataTree provides both server-side and client-side events associated with drag and drop. You can read more about this in the link:webdatatree-drag-and-drop-client-side-events.html[ClientSideEvents] and link:webdatatree-drag-and-drop-handle-server-side-event.html[ServerSideEvents] topics.
+
+*Enable Drag and Drop*
+
+Enabling basic drag and drop is a simple as setting the WebDataTree control’s AllowDrop and EnableDragDrop properties to True. For more complex drag and drop scenarios and logic processing, you can handle the WebDataTree control’s drag and drop related server-side or client-side events.
+
+*Canceling Drag and Drop Operations*
+
+Note that you can cancel the drag and drop operation by pressing the Escape key, or by dropping the dragged node outside the WebDataTree area onto an area that is not designed to be a node drop target.
+
+Related Topics
+
+link:webdatatree-drag-and-drop-client-side-api.html[Client-side API]
+
+link:webdatatree-drag-and-drop-client-side-events.html[Client-side events]
+
+link:webdatatree-drag-and-drop-modes.html[Drag and Drop modes]
+
+link:webdatatree-drag-and-drop-handle-server-side-event.html[Server-side events]

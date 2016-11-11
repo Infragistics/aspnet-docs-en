@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-getting-started-with-webdatagrid-enabledataviewstate-property",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Getting Started","Grids"],
+    "guid": "{26C61EC5-6A1E-441A-8488-8150CB7CE26E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= EnableDataViewState Property
+
+*EnableDataViewState Property*
+
+The EnableDataViewState property gives you the option to store the WebDataGrid™ control's data in ViewState. This property is false by default meaning WebDataGrid's data is not stored; however, any other information such as styling and property settings for WebDataGrid is stored in ViewState.
+
+*WebDataGrid Functionality with EnableDataViewState False*
+
+Since data is not kept in ViewState, on postback, WebDataGrid makes a request to retrieve its data. This means that on certain operations such as data updates, there may be two requests made to the data source: one request for the original data to restore the old view and an additional request for the updated data to create the new view.
+
+*WebDataGrid Functionality with EnableDataViewState True*
+
+All of the data of the current view is kept in ViewState. This means that for paging, data in the current page is kept in ViewState. For filtering, data for the filtered in rows is kept in ViewState.
+
+On postback, WebDataGrid restores the old view from ViewState. There is only one request needed for updates.
+
+*Data Source*
+
+If you set the data source of WebDataGrid using the DataSource property, there are several things you must keep in mind.
+
+[start=1]
+. Setting the DataSource property in the page's load event on every postback initiates a request for data on every postback, regardless of the EnableDataViewState property. To avoid requesting data on every postback, set the DataSourceID property of WebDataGrid, preferably at design-time through the property window or in the ASPX markup.
+[start=2]
+. Setting the DataSource property in the page load event on initial load will disable AutoCRUD (Automatic Create, Read Update and Delete) functionality when EnableDataViewState is True. The reason for this is that all of WebDataGrid's data is put into ViewState but there is no actual connection with the data source, hence no data requests will be made on subsequent postbacks therefore eliminating the AutoCRUD functionality. Again, the way around this is to use the DataSourceID property.

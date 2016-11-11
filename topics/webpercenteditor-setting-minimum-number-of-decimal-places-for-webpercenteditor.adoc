@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webpercenteditor-setting-minimum-number-of-decimal-places-for-webpercenteditor",
+    "controlName": ["WebPercentEditor"],
+    "tags": ["Editing","How Do I","Styling"],
+    "guid": "{20AAE7D3-87C2-4E95-8CA5-E07895ACB155}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T13:49:51Z"
+}
+|metadata|
+////
+
+= Setting minimum number of decimal places for WebPercentEditor
+
+WebPercentEditor™ allows you to set the number of decimal places you want to display to your end-user by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webpercenteditor~mindecimalplaces.html[MinDecimalPlaces]"]  property. If an end-user types a number with more or less decimal numbers than the number of decimal places set on the editor, then the editor rounds to the number of decimal places set on the editor.
+
+You can set the MinDecimalPlaces property either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebPercentEditor1.MinDecimalPlaces = 3
+----
+
+*In C#:*
+
+----
+WebPercentEditor1.MinDecimalPlaces = 3;
+----
+
+*In JavaScript:*
+
+----
+$find("WebPercentEditor1").set_minDecimals(3);
+----

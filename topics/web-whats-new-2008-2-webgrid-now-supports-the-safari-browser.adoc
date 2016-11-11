@@ -1,0 +1,17 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-whats-new-2008-2-webgrid-now-supports-the-safari-browser",
+    "controlName": [],
+    "tags": ["FAQ","Getting Started","Grids"],
+    "guid": "{3E0A9BAD-2449-49A3-86BE-74CAF3123BD6}",  
+    "buildFlags": ["docx-online","docx-booklet"],
+    "createdOn": "2008-01-05T15:33:03Z"
+}
+|metadata|
+////
+
+= WebGrid Now Supports the Safari Browser
+
+Starting in Infragistics ASP.NET 2008 Volume 2, the WebGrid™ control supports the Apple® Safari™ Web Browser. WebGrid's rich features that were previously unavailable in Safari are now implemented for the web browser.

@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "webprogressbar-using-webprogressbar",
+    "controlName": ["WebProgressBar"],
+    "tags": [],
+    "guid": "{61AAAC0E-D8CC-46F7-A10C-7908B12CE170}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebProgressBar
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebProgressBar™.
+
+link:webprogressbar-webprogressbar-smart-tag.html[WebProgressBar Smart Tag]
+
+This topic introduces WebProgressBar Smart Tag anchor and pop-up panel, which give the ability to see and set most of the control properties and settings.
+
+link:webprogressbar-animations.html[Animations]
+
+In this topic are listed the different animations for indicating the progress in WebProgressBar control.
+
+link:webprogressbar-label-format-and-alignment.html[Label Format and Alignment]
+
+WebProgressBar contains a label, which can be formated. In this topic you can learn more about label functionallity.
+
+link:webprogressbar-orientation.html[Orientation]
+
+In this topic you will learn how to set WebProgressBar orientation either horizontally or vertically.
+
+link:webprogressbar-tooltip-format.html[ToolTip Format]
+
+This topic explains how to format WebProgressBar tooltip.
+
+link:webprogressbar-using-webprogressbar-as-an-ajax-progress-indicator.html[Using WebProgressBar as an AJAX Progress Indicator]
+
+In this topic there is a walkthrough, which presents how to take advantage of WebProgressBar contol during AJAX postback.
+
+link:webprogressbar-using-webprogressbar-events-to-display-a-custom-formatted-label.html[Using WebProgressBar Events to Display a Custom Formatted Label]
+
+In this topic there is example of how to use WebProgressBar control's client side object model.
+
+link:webprogressbar-using-webprogressbar-inside-webdatagrid-templates-to-display-the-values.html[Using WebProgressBar inside WebDataGrid templates to display the values]
+
+In this topic you can learn how to integrate WebProgressBar with WebDataGrid.

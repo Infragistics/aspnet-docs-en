@@ -1,0 +1,51 @@
+﻿////
+
+|metadata|
+{
+    "name": "webslider-edit-two-values",
+    "controlName": ["WebSlider"],
+    "tags": ["Editing","How Do I","Selection"],
+    "guid": "{41B6B6E7-441E-48E3-9FD5-507BADBEFF03}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-05T14:17:29Z"
+}
+|metadata|
+////
+
+= Edit Two Values
+
+WebSlider™ can edit two values, allowing you to edit multiple values or a range of values. To allow your end users to edit a second value, set the EnableSecondaryValue property to True. Once you allow your end user to edit a second value, set the SecondaryValue property to provide a default value.
+
+The example code shows you how to enable a secondary value.
+
+image::images/WebSlider_Edit_Two_Values_01.png[]
+
+*In Visual Basic:*
+
+----
+Me.WebSlider1.EnableSecondaryValue = True
+' Set primary value's default value
+Me.WebSlider1.Value = 50
+' Set secondary value
+Me.WebSlider1.SecondaryValue = 0
+----
+
+*In C#:*
+
+----
+this.WebSlider1.EnableSecondaryValue = true;
+// Set primary value's default value
+this.WebSlider1.Value = 50;
+// Set secondary value
+this.WebSlider1.SecondaryValue = 0;
+----
+
+== Related Topics
+
+link:webslider-change-websliders-increment-value.html[Change WebSlider's Increment Value]
+
+link:webslider-display-custom-formatted-values.html[Display Custom Formatted Values]
+
+link:webslider-set-min,-max,-and-starting-values.html[Set Min, Max, and Starting Values]
+
+link:webslider-set-the-values-type.html[Set the Value's Type]

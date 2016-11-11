@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-walkthroughs",
+    "controlName": ["WebAppStylist"],
+    "tags": [],
+    "guid": "{F7870732-831B-4D51-83E4-348A48A1B9AE}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Walkthroughs
+
+Below is a list of walkthroughs that will help you accomplish common tasks in Infragistics AppStylist for ASP.NET.
+
+* link:webappstylist-creating-a-gradient-background.html[Creating a Gradient Background]
+* link:webappstylist-personalizing-your-style-libraries.html[Personalizing Your Style Libraries]
+* link:webappstylist-styling-roles-through-inheritance.html[Styling Roles Through Inheritance]

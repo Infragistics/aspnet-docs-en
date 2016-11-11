@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdialogwindow-csom-overview",
+    "controlName": ["WebDialogWindow"],
+    "tags": ["Events"],
+    "guid": "{FF8F9F8C-6ABD-46D8-8057-E91D198A5131}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-01T20:59:37Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebDialogWindows™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the dialog window without the need for server-side post-backs.
+
+link:webdialogwindow~infragistics.web.ui_namespace.html[WebDialogWindow CSOM Overview]

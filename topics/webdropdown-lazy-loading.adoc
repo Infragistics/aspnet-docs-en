@@ -1,0 +1,88 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-lazy-loading",
+    "controlName": ["WebDropDown"],
+    "tags": ["Data Presentation"],
+    "guid": "{2503BA43-9E7A-4C0D-BDEF-4DE83C2D9E0A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Lazy Loading
+
+WebDropDown™ supports the lazy loading feature, which allows you to provide data to the WebDropDown control when the end-user tries to open the drop-down container or when they try to type into the value display. This feature greatly improves the performance of your application, especially when you have many WebDropDown controls on a page.
+
+== To use the lazy loading feature in WebDropDown:
+
+[start=1]
+. From the Visual Studio® Toolbox, drag and drop a ScriptManager component, a WebDropDown control and a SqlDataSource component onto the form.
+[start=2]
+. Configure the SqlDataSource to retrieve the Products table of the Northwind database.
+[start=3]
+. Add the following code to the WebDropDown control’s ItemsRequested server-side event so that WebDropDown binds to the SqlDataSource:
+
+*In Visual Basic:*
+
+----
+        WebDropDown1.DataSource = SqlDataSource1
+        WebDropDown1.TextField = "ProductName"
+        WebDropDown1.DataBind()
+----
+
+*In C#:*
+
+----
+        WebDropDown1.DataSource = SqlDataSource1;
+        WebDropDown1.TextField = "ProductName";
+        WebDropDown1.DataBind();
+----
+
+.Note:
+[NOTE]
+====
+TextField property must be set to the column name you wish to display in the WebDropDown control.
+====
+
+[start=5]
+. Add the following code to your Page Load event handler in order to implement the WebDropDown control’s ValueChanging and DropDownOpening client-side events:
+
+*In Visual Basic:*
+
+----
+        WebDropDown1.ClientEvents.DropDownOpening =  "WebDropDown_DropDownOpening"
+        WebDropDown1.ClientEvents.ValueChanging = "WebDropDown_ValueChanging"
+----
+
+*In C#:*
+
+----
+        WebDropDown1.ClientEvents.DropDownOpening = "WebDropDown_DropDownOpening";
+        WebDropDown1.ClientEvents.ValueChanging = "WebDropDown_ValueChanging";
+----
+
+*In JavaScript:*
+
+----
+      // The client event ‘DropDownOpening’ takes two parameters sender and e
+      // sender is the object which is raising the event
+      // e is the DropDownContainerEventArgs
+      function WebDropDown_DropDownOpening(sender, e) {
+            //Gets reference to the WebDropDown control
+            var wdd = $find("WebDropDown1");
+            wdd.loadItems();
+        }
+       // The client event ‘ValueChanging’ takes two parameters sender and e
+       // sender is the object which is raising the event
+       // e is the DropDownEditEventArgs
+       function WebDropDown_ValueChanging(sender, e) {
+            //Gets reference to the WebDropDown control
+            var wdd = $find("WebDropDown1");
+            wdd.loadItems();
+        }
+----
+
+In the above code, the loadItems method in the DropDownOpening client-side event fires the ItemsRequested server-side whenever the end-user clicks the drop-down button. Similarly, the loadItems method in the ValueChanging client-side event fires the ItemsRequested server-side event when the end-user starts typing in the value display. As soon as the ItemsRequested event fires the WebDropDown control binds to the Sql data source.

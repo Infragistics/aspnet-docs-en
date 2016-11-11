@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-smart-tag",
+    "controlName": ["WebScheduleInfo"],
+    "tags": [],
+    "guid": "{A267F335-A3A3-4C01-B02F-E29975D8E0B3}",  
+    "buildFlags": [],
+    "createdOn": "2007-04-02T21:36:03Z"
+}
+|metadata|
+////
+
+= WebScheduleInfo Smart Tag
+
+In Visual Studio 2005 (.NET Framework 2.0), each Infragistics ASP.NET control/component is equipped with a Smart Tag. By simply selecting the control/component, a Smart Tag anchor appears. When you click this anchor, a pop-up panel appears, providing you with quick and easy access to the most common properties and settings of the control/component.
+
+The WebScheduleInfo™ Smart Tag contains the following sections:
+
+* Actions -- Lets you perform common tasks (i.e., accessing the Quick Designer).
+
+See below for a description of the item (e.g., field, drop-down list, checkbox) in each section.
+
+image::images/WebScheduleInfo_The_WebScheduleInfo_Smart_Tag_01.png[]
+
+[options="header", cols="a,a,a"]
+|====
+|Actions|Description|CorrespondingProperty
+
+|Quick Design
+|Click Quick Design to access the WebScheduleInfo Designer. This is the same functionality as if you right-clicked on the control and selected Quick Design from the context menu.
+|n/a
+
+|====

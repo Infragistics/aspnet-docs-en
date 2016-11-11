@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-api-overview",
+    "controlName": ["WebResizingExtender"],
+    "tags": ["API"],
+    "guid": "{B45DDF1A-1395-4DFA-8EE8-3DD4DE765EB3}",  
+    "buildFlags": [],
+    "createdOn": "2006-08-12T14:14:25Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+=== WebResizingExtender Namespace:
+
+link:infragistics4.webui.webresizingextender.v{ProductVersion}~infragistics.webui_namespace.html[Infragistics.WebUI]
+
+=== Key Classes:
+
+link:infragistics4.webui.webresizingextender.v{ProductVersion}~infragistics.webui.webresizingextender.html[WebResizingExtender]
+
+link:infragistics4.webui.webresizingextender.v{ProductVersion}~infragistics.webui.extenderbase.html[ExtenderBase]

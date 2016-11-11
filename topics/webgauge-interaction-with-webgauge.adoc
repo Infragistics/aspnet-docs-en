@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-interaction-with-webgauge",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{86494285-525D-48B6-8B4F-EDB213B0B8BA}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Interaction with WebGauge
+
+Click the links below for information how you can interact with the WebGauge control.
+
+* link:webgauge-marker-movement.html[Marker Movement]
+* link:webgauge-move-the-needle-marker-automatically.html[Move the Needle Marker Automatically]
+* link:webgauge-move-the-bar-marker-automatically.html[Move the Bar Marker Automatically]

@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-should-i-use-the-aptca-assemblies-in-visual-studio",
+    "controlName": [],
+    "tags": ["Deployment","Design Environment","FAQ"],
+    "guid": "{85945996-82AF-4A21-BFCE-97E96103AFD8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Should I Use the APTCA Assemblies in Visual Studio?
+
+You should not use the AllowPartiallyTrustedCallersAttribute (APTCA) assemblies when developing in Microsoft® Visual Studio®. When working in Visual Studio, you should continue to run the installer that accompanies the release assemblies (non-APTCA) as you always have. The installer places the release assemblies into your development machines Global Assembly Cache (GAC), ensuring that they run with full trust. The enhanced design-time experience provided by our designers in Visual Studio currently depend on having full trust.
+
+Medium trust provides a security sandbox intended to aid systems administrators securely manage the resources of a Web server that can potentially be shared by multiple users. When you are designing your application on your own development machine, there is no analagous benefit to be gained b running Visual Studio under partial trust.

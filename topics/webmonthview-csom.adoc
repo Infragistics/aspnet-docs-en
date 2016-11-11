@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmonthview-csom",
+    "controlName": [],
+    "tags": ["API","Getting Started"],
+    "guid": "{EC997807-172E-443B-A57B-BEEB79DC61EF}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= WebMonthView CSOM
+
+WebMonthView™ exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledge JavaScript objects, events, and utility functions that enable developers to program significant units of functionality pertaining to the WebMonthView control without the need for server-side post-backs.
+
+In general, the object model is derived directly from the object model as it exists on the server. The property names, events, parameters and return values have very similar meanings to their counterparts on the server. However, where noted, properties are sometimes read-only on the client. These properties are only for informational purposes and must not be altered.
+
+Client-Side Object Model reference for the WebMonthView control:
+
+link:webmonthview-utility-functions-csom.html[WebMonthView Utility Functions]
+
+link:webmonthview-object-csom.html[WebMonthView Object]
+
+____
+link:webmonthview-client-side-events-csom.html[Client-Side Events]
+____

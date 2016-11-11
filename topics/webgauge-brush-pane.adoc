@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-brush-pane",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{D0CB4421-82AB-4757-8E31-0512DB5E46B2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Brush Pane
+
+The Brush pane lets you customize the brush type and color for your properties.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.labelappearance~brushelement.html[Brush Type]"]  -- This drop-down list lets you change the brush type of your property.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.labelappearance~brushelement.html[Brush Color]"]  -- Depending on which brush type you select, the brush color list will populate with the colors available for that brush type.
+
+Relative Bounds Editor -- This pop-up menu displays two bounds editors, link:webgauge-relative-bounds.html[Relative Bounds] and link:webgauge-relative-clip-bounds.html[Relative Clip Bounds],that allows you to determine the size and location of your brush element.
+
+image::images/Brush_Pane_01.png[The brush pane in the gauge designer.]
+
+== Related Topic
+
+link:webgauge-appearance-tab.html[Appearance Tab]

@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-webgauge-elements",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{E8C91E14-9764-4B1D-A887-5FD35D33E21F}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebGauge Elements
+
+This section provides useful information the elements available within the WebGauge control. Click the link below to learn about gauge elements, as well as to access task-based procedures related to gauge elements.
+
+* link:webgauge-annotations.html[Annotations]
+* link:webgauge-scales.html[Scales]
+* link:webgauge-tick-marks.html[Tick Marks]
+* link:webgauge-labels.html[Labels]
+* link:webgauge-markers.html[Markers]
+* link:webgauge-ranges.html[Ranges]

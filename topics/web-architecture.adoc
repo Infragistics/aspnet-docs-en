@@ -1,0 +1,84 @@
+﻿////
+|metadata|
+{
+    "name": "web-architecture",
+    "controlName": [],
+    "tags": ["API","Getting Started"],
+    "guid": "{74474E97-CE99-4B95-919C-B6039415480F}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Architecture
+
+The Infragistics ASP.NET controls and components are built on server-side and client-side architectural frameworks
+
+== Introducing the Web Architecture
+
+The architecture of the Infragistics web elements is manifested in two areas: A server-side architecture and a client-side architecture. Objects within these two areas communicate and interact using javascript objects and xml. Much of the framework logic for the server-side elements is located in a shared assembly called Infragistics.WebUI.Shared. This assembly is required by all of the Infragistics web controls for the common behaviors and functionality that it provides.
+
+The framework objects for the client-side object model are contained in a javascript file called ig_shared.js which gets loaded by the browser along with the object model of the control.
+
+== Server-Side Architectural Overview
+
+The server-side objects are designed and implemented to operate within the Microsoft ASP.NET framework and much of their behavior and functionality is derived from classes, structures and events within that framework.
+
+=== WebControlBase
+
+link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.webcontrolbase.html[WebControlBase]  is the class on which virtually all of the Infragistics controls are built. That class in turn inherits from the ASP.NET WebControl class. Some of the functionality contained in the WebControlBase class includes image directory resolution and client browser capabilities.
+
+Two interfaces implemented by WebControlBase are  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.iprovideimagedirectoryresolution.html[IProvideImageDirectoryResolution]"]  and  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.util.serialization.isupportpresetserialization.html[ISupportPresetSerialization]"] .
+
+IProvideImageDirectoryResolution allows control designers and control rendering logic to obtain image directory resolution for image tags that are being rendered to the page.
+
+ISupportPresetSerialization allows external objects such as designers to initiate control specific preset loading and saving.
+
+=== RendererBase
+
+The  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.rendererbase.html[RendererBase]"]  class provides common rendering logic and functionality that various controls use in rendering their contents to the browser. Tasks such as rendering styles and attributes to the html stream as well as formatting of the html for readability are handled here.
+
+=== Infragistics.WebUI.Shared.Style
+
+The Infragistics  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.style.html[Style]"]  class extends the System.Web.UI.Style class and provides additional CSS styling properties along with a CustomRules property that allows developers to specify any CSS style rule that is not already encompassed by the class.
+
+In addition to these basic common objects, Infragistics.WebUI.Shared also exposes many additional objects that are used by the internals of the WebControl elements. These include ViewState management classes, rendering classes and collection management classes.
+
+== Client-Side Architectural Overview
+
+The architecture for the client-side framework is implemented through a series of objects and utility methods located within the ig_shared.js source file as well as through the use of common rendering techniques and shared design patterns for the object models of the individual controls.
+
+The objects and methods available in ig_shared.js include browser sensing utility functions, objects used for implementing client-side events such as the Event object, and objects for managing the accumulation of client-side changes for communication back to the server.
+
+=== Client-side Object Models (CSOM)
+
+Each web control element within the Infragistics ASP.NET product exposes an object model within the client browser that allows developers to access and manipulate the capabilities and behaviors of the component at runtime using JavaScript. While the set of objects and events exposed varies from control to control they all have many characteristics in common.
+
+For each control on the client there is a top-level object created to represent that control object. Each control is created on the client as the page is loaded by the browser and after the html for the control has been parsed.
+
+Often, the objects and object collections are close parallels with the object model of the control on the server. For example, the WebTree™ CSOM contains a Node object and each Node object contains a getNodes() method, similar to the server side Node object and Node.Nodes collection.
+
+.Note:
+[NOTE]
+====
+Within the CSOM, collections are usually implemented as JavaScript arrays.
+====
+
+=== Client-side Events
+
+Client-side events are implemented as JavaScript functions on the page which are invoked at the time that each event occurs within the browser and within the object model of the web control. Beginning on the server, a method name is entered into the ClientEvents object of the Infragistics control and a corresponding method of that name is instantiated within the same page. Once the page has been loaded into the browser on the client and that event is raised, the method is called with appropriate context information so that the application can create a response or take action. Each client-side event signature contains a reference to the control object in the first parameter, followed by arguments specific to the event in question and lastly, an Event object is provided that allows the application to control cancellation of the event as well as forcing or preventing a page postback in response to the event.
+
+=== Extended Architecture
+
+In addition to the classes and structures discussed above, the more recent controls that are part of Infragistics ASP.NET beginning with volume 2005.3 include more advanced and comprehensive shared functionality built upon the previous foundation classes. The WebSchedule™ elements, for instance, incorporate a series of base classes which go by the class prefix of Smart in order to delineate their more advanced and self-sufficient architecture. For example SmartWebControl is the base class for the WebScheduleInfo™ control and WebControlBase is the base class for SmartWebControl. Similarly with rendering classes and others, more and more common functionality has been pushed down into the framework in order to keep the object models of derived classes small and consistent.
+
+In addition, client-side object models are continuously being strengthened and enriched using JavaScript inheritance to provide rich client-side behaviors using base class building blocks.
+
+=== UI Elements
+
+Beginning with the volume 2005.3 and the WebSchedule components, the UI rendering framework consists of UI elements that represent discreet areas and area types within the page canvas of the control. Beginning with a top-level UI Element representing the total area of the control, additional UI Elements are nested within the top-level element and within each other to sub-divide and cover each unique area of the rendered control. During the rendering phase of the control, the UI Element tree is traversed recursively to invoke the rendering method of each UI Element in turn.
+
+== Related Topics
+
+link:web-client-side-object-model-csom-reference-guide.html[Client-Side Object Model (CSOM) Reference Guide] – Lists all of the ASP.NET controls and components that expose a CSOM within the client-side JavaScript programming environment.

@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatamenu-closemenuonclick-property",
+    "controlName": ["WebDataMenu"],
+    "tags": [],
+    "guid": "2df98c3f-7bce-4b57-8dca-6175a5229528",  
+    "buildFlags": [],
+    "createdOn": "2010-10-07T11:13:25.520965Z"
+}
+|metadata|
+////
+
+= WebDataMenu CloseMenuOnClick Property
+
+* New CloseMenuOnClick property added:
+
+** CloseMenuOnClick is True (default) – the menu will close when a non-root item that does not have children is clicked.
+** CloseMenuOnClick is False – the menu will not close when a non-root item that does not have children is clicked.
+** When a root item that is expanded is clicked, it closes. If it is clicked again, it opens.

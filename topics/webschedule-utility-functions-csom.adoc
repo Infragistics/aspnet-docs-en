@@ -1,0 +1,53 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-utility-functions-csom",
+    "controlName": [],
+    "tags": ["API","How Do I","Scheduling"],
+    "guid": "{9C67080E-6705-4D7C-8EED-09E81D73AE69}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebSchedule Utility Functions
+
+== Utility Functions
+
+=== Introduction
+
+The utility functions described here are used by the JavaScript code of the WebSchedule controls. The purpose of exposing and documenting them is to allow developers to put as much logic as possible on the client machine in order to obtain gains in both performance and functionality.
+
+----
+function ig_getWebControlById(id)*
+----
+
+This works with all schedule controls (WebScheduleInfo™, WebDayView™, WebCalendarView™, WebMonthView™)
+
+
+----
+function ig_getWebCalendarViewById(id);*
+----
+
+Retrieves a WebCalendarView object based on the id of the main WebCalendarView element.
+
+----
+function ig_getWebScheduleInfoById(id);*
+----
+
+Retrieves a WebScheduleInfo object based on the id of the main WebScheduleInfo element.
+
+
+----
+function ig_getWebMonthViewById(id);*
+----
+
+Retrieves a WebMonthView object based on the id of the main WebMonthView element.
+
+----
+function ig_getWebDayViewById(id);*
+----
+
+Retrieves a WebDayView object based on the id of the main WebDayView element.

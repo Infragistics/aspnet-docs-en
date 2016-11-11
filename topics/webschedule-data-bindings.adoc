@@ -1,0 +1,30 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-data-bindings",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{73777479-DF5D-4F27-A6C0-D105159DF7BA}",  
+    "buildFlags": [],
+    "createdOn": "2005-08-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Data Binding
+
+WebSchedule™ data providers expose Data Binding properties allowing you to set column names of your choice corresponding to properties on WebSchedule objects like Activities and Resources. Use these binding member properties to change the column name a WebSchedule data provider looks for when accessing your custom data model.
+
+Since stored procedures get compiled beforehand, the data bindings feature only works in dynamic SQL.
+
+* link:webschedule-handle-concurrency-conflicts.html[Handle Concurrency Conflicts]
+
+* link:webschedule-connecting-webschedule-to-a-database-in-visual-studio-2005.html[Connecting WebSchedule to a Database in Visual Studio 2005]
+
+* link:webschedule-binding-to-access-data-source-using-webschedulegenericdataprovider.html[Binding to Access Data Source Control Using WebScheduleGenericDataSource]
+
+* link:webschedule-binding-to-a-data-set-with-webschedulegenericdataprovider.html[WebSchedule Binding to a Data Set with WebScheduleGenericDataProvider]
+
+* link:webschedule-webschedulegenericdataprovider-crud-statements-for-sql-data-source.html[WebScheduleGenericDataProvider CRUD Statements for SQL Data Source]
+

@@ -1,0 +1,46 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-events",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Events","Grids"],
+    "guid": "{90D6D027-0F03-4D19-B796-86DE7B083CE9}",  
+    "buildFlags": [],
+    "createdOn": "2008-09-09T14:05:01Z"
+}
+|metadata|
+////
+
+= Events
+
+== Server and Client Events
+
+The WebDataGrid™ control’s many behaviors have both server-side and client-side events. These events have the suffix "ing" or "ed" appended to them reflecting the order in which they occur. Depending on the behavior, there are usually two events on each side: an "ing" and an "ed" event.
+
+For example, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior has a RowUpdating and a RowUpdated event on both the server and client.
+
+== Order of Events
+
+The order in which these events get triggered depends on what is happening in WebDataGrid; however, there is a basic order to follow: “ing” events will occur before “ed” events, usually in the order of client to server and back to client.
+
+For example, when updating WebDataGrid with AJAX enabled, moving off a row to trigger the update results in the following order of events:
+
+[start=1]
+. Client-side RowUpdating
+[start=2]
+. Server-side RowUpdating
+[start=3]
+. Server-side RowUpdated
+[start=4]
+. Client-side RowUpdated
+
+This ordering of events allows you to do any type of custom operation before an event occurs on the client. It gives you another chance on the server if necessary. Then, you can do any type of operations after an event has occurred on the server or client.
+
+== Related Topics
+
+link:webdatagrid-cancel-an-event-in-webdatagrid.html[Cancel an Event in WebDataGrid]
+
+link:webdatagrid-handle-an-event-in-webdatagrid.html[Handle an Event in WebDataGrid]
+
+link:webdatagrid-using-itemcommand-event.html[WebDataGrid Using ItemCommand Event]

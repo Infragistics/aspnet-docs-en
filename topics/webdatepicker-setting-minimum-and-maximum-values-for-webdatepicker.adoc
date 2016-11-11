@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatepicker-setting-minimum-and-maximum-values-for-webdatepicker",
+    "controlName": ["WebDatePicker"],
+    "tags": ["How Do I","Selection","Styling"],
+    "guid": "{3D40D470-E7AD-4EDA-895A-A19F1B621B98}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T11:33:09Z"
+}
+|metadata|
+////
+
+= Setting minimum and maximum values for WebDatePicker
+
+WebDatePicker™ allows you to set a range of date/time values that your end-user can enter into the editor by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~minvalue.html[MinValue]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~maxvalue.html[MaxValue]"]  properties. If an end-user types a date/time more than the maximum date/time, then the editor sets the date/time to the maximum date/time value. Similarly, if an end-user types a date/time value that is less than the minimum date/time value then the editor sets the value back to the minimum value.
+
+You can set the MinValue and MaxValue properties either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+'Create the minimum datetime object
+Dim minDate As New DateTime(2009, 5, 1, 2, 30, 15)
+'Create the maximum datetime object
+Dim maxDate As New DateTime(2009, 10,1, 2, 30, 15)
+'Assign the minimum datetime object to the WebDateTimeEditor's MinValue
+WebDatePicker1.MinValue = minDate
+'Assign the maximum datetime object to the WebDateTimeEditor's MaxValue
+WebDatePicker1.MaxValue = maxDate
+----
+
+*In C#:*
+
+----
+//Create the minimum datetime object
+DateTime minDate = new DateTime(2009, 5, 1, 2, 30, 15);
+//Create the maximum datetime object
+DateTime maxDate = new DateTime(2009, 10,1, 2, 30, 15);
+//Assign the minimum datetime object to the WebDateTimeEditor's MinValue
+WebDatePicker1.MinValue = minDate;
+//Assign the maximum datetime object to the WebDateTimeEditor's MaxValue
+WebDatePicker1.MaxValue = maxDate;
+----

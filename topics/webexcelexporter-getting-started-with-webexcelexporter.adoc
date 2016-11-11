@@ -1,0 +1,106 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexcelexporter-getting-started-with-webexcelexporter",
+    "controlName": ["WebExcelExporter"],
+    "tags": ["Exporting","Getting Started","Grids"],
+    "guid": "d8c49235-d9f7-409f-91ff-52f31f66dd64",  
+    "buildFlags": [],
+    "createdOn": "2010-06-06T07:46:53.3786939Z"
+}
+|metadata|
+////
+
+= Getting Started with WebExcelExporter
+
+This is a great place for you to start learning about the WebTabExcelExporter™ component, and its key features and functionalities.
+
+== What You Will Accomplish
+
+You will learn how to set up and use WebExcelExporter to export WebDataGrid / WebHierarchicalDataGrid data into an Excel™ file format.
+
+== Before You Begin
+
+In order to compile and run the samples illustrated here, you will need to install Infragistics ASP.NET v. 10.2. You will also need a running instance of SQL Server (either Express or any other edition), and you will need to have the NorthWind data base attached to your SQL Server instance. You can either install the NorthWind data base following instructions at: link:http://msdn.microsoft.com/en-us/library/aa276825(SQL.80).aspx[http://msdn.microsoft.com/en-us/library/aa276825(SQL.80).aspx] or download the data base directly from: link:http://www.microsoft.com/downloads/details.aspx?familyid=06616212-0356-46a0-8da2-eebc53a68034&displaylang=en[http://www.microsoft.com/downloads/details.aspx?familyid=06616212-0356-46a0-8da2-eebc53a68034&displaylang=en]
+
+Follow these steps:
+
+[start=1]
+. Create a web page (ASP.NET Web Form) with WebDataGrid bound to some Data Source
+
+*In HTML:*
+
+----
+<ig:WebDataGrid runat="server" ID="wdgCustomers" 
+        DataSourceID="SqlDsCustomers" 
+        DataKeyFields="CustomerID" 
+        AutoGenerateColumns="
+        >
+            <Columns>
+                <ig:BoundDataField Key="Country" DataFieldName="Country" Header-Text="Country" />
+                <ig:BoundDataField Key="City" DataFieldName="City" Header-Text="City" />
+                <ig:BoundDataField Key="CompanyName" DataFieldName="CompanyName" Header-Text="Company" />
+                <ig:BoundDataField Key="ContactName" DataFieldName="ContactName" Header-Text="Contact" />
+                <ig:BoundDataField Key="Phone" DataFieldName="Phone" Header-Text="Phone" />
+            </Columns>
+        </ig:WebDataGrid>
+        <asp:SqlDataSource runat="server"ID="SqlDsCustomers"ConnectionString="<%$ ConnectionStrings:NorthwindConnectionString %>" SelectCommand="SELECT * FROM [Customers] ORDER BY [Country]">
+        </asp:SqlDataSource>
+----
+
+[start=2]
+. Drag a WebExcelExporter control from the Visual Studio Toolbox onto your page:
+
+.. Set the WebExcelExporter’s property ExportMode to Download
+.. Set the control’s ID property to WebExcelExporter
+.. Set the control’s DownloadName property to “ExportedData”
+
+*In HTML:*
+
+----
+<ig:WebExcelExporter runat="server" ID="WebExcelExporter" ExportMode ="Download" DownloadName="ExportedData" />
+----
+
+[start=3]
+. Drag a Button control from Visual Studio Toolbox onto your page:
+
+.. Set the button’s ID property to btnExport
+.. Set the control’s Text property to “Export Data”
+.. Set the control’s OnClick to “btnExport_Click”
+.. Define the “btnExport_Click” handler in the code-behind and call one of the WebExcelExporter Export() method overloads
+
+[cols="a"]
+|====
+|In Code Behind (C#):
+
+|protected void btnExport_Click(object sender, EventArgs e) 
+
+{ 
+
+this.WebExcelExporter.Export(this.wdgCustomers); 
+
+}
+
+|====
+
+*In HTML:*
+
+----
+<asp:Button runat="server" ID="btnExport" Text="Export Data" OnClick="btnExport_Click" />
+----
+
+[start=4]
+. Run the application.
+[start=5]
+. Click the “Export Data” button.
+
+After clicking the “Export Data” button, your browser will ask you whether you want to open or save file named “ExportedData.xls”:
+
+image::images/WebExcelExporter_Getting_Started_with_WebExcelExporter_01.png[]
+
+.Note:
+[NOTE]
+====
+The ExportedData.xlsx file will only contain the grid’s visible data. If you want to export all the data in the data source, please refer to Exporting All Data in Data Source.
+====

@@ -1,0 +1,131 @@
+﻿////
+
+|metadata|
+{
+    "name": "persistenceframework-about-persistence-framework",
+    "controlName": ["PersistenceFramework"],
+    "tags": ["Persistence"],
+    "guid": "08d37ac5-c5d4-452d-a029-5ac24eaf351a",  
+    "buildFlags": [],
+    "createdOn": "2011-03-31T07:43:50.0743708Z"
+}
+|metadata|
+////
+
+= About Persistence Framework
+
+The Infragistics ASP.NET product includes a new feature named Persistence Framework. This framework provides the functionality to save the state of the controls on your page and reload them later. The status of the page is persisted during navigation through the pages in a site, if the page is closed, and even if it is opened in a new browser. Persistence Framework allows saving all individual controls and control properties, except those listed below in the <<ignored_controls,Ignored Controls and Properties>> paragraph. You can adjust the framework to persist all the pages or save only certain ones.
+
+== How Persistence Framework Works
+
+The Persistence Framework uses reflection to save and load the persisted data. An object called pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.persistencemanager.html[PersistenceManager]*"] is responsible for operating with data in the framework. The manager object is implemented using the Singleton design pattern, which guarantees that we have only one instance that cares for the process.
+
+During every request to the server, the framework goes through certain steps. There are two stages of the persistence:
+
+* Loading the already persisted state of the controls
+* Persisting the current state of the controls
+
+The first stage occurs when the InitComplete event of the page object is fired, while the second one occurs when PreRenderComplete is handled. During this cycle, the developer can get the persisted data and has the ability to choose how (and where) to save it. The framework also includes a special implementation to handle the WebDataGrid and WebHierarchicalDataGrid controls and their complex properties.
+
+== Persistence Framework Configuration
+
+The framework is enabled using the Infragistics section in the web.config file, which is under the  _configuration_  tag.
+
+.Note:
+[NOTE]
+====
+When turned on by default it persists all the controls on the pages including the ones that are not Infragistics controls.
+====
+
+[cols="a"]
+|====
+|*In ASPX:*
+
+|---- 
+ <infragistics.web enablePersistence="true" 
+ persistenceIgnoreLoadingOnPostBack="true" 
+ persistenceIgnorePasswords="true"/>
+----
+
+|====
+
+There are three attributes in the Infragistics configuration settings, which allow modification of the Persistence Framework:
+
+*  _enablePeristence_  – If set to true - enables the framework. This means that the persistence mechanism automatically takes place when Page.InitComplete and Page.PreRenderComplete are fired.
+*  _persistenceIgnoreLoadingOnPostBack_  – If this attribute is false it is going to pass the normal cycle described above. On every request to the server first the Persistence Manager tries to load the persisted controls, then collects the new modified data in a collection. In some cases this causes a lot of unnecessary logic to be executed. That’s why when we set the persistenceIgnoreLoadingOnPostBack attribute to true we will load the persisted data only the first time the page is requested (when it’s not a postback). This can improve the performance of the page. When the page is postback, ViewState object handles saving the controls state. Despite that there will be cases when you will need to load the controls on every request. The framework gives you the flexibility to do so.
+*  _persistenceIgnorePasswords_  – When this attribute is false, by default the framework will save the data for controls that contain passwords which can be dangerous. The persistence component gives you the ability to ignore the password during the persistence process. Controls which can contain passwords are:
+
+* ASP.NET TextBox control
+* All Infragistics controls, which implement the IPasswordContainer interface
+
+== Serialization and Events
+
+The description in the previous paragraphs describes how the framework works and how it can be configured.
+
+What the developer should care about is how and where to save the persisted data on a permanent source. It can be saved in the session or application, in a file or in an SQL. What the Persistence Framework is giving you is that you can serialize and deserialize the data into different formats such as
+
+* XML
+* JSON
+* Stream
+
+The Persistence Framework module fires four events. Inside the handlers that you will attach to these events, you can serialize and deserialize, modify and save the persisted data:
+
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistenceloading_ev.html[PersistenceLoading]"] 
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistenceloaded_ev.html[PersistenceLoaded]"] 
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaving_ev.html[PersistenceSaving]"] 
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaved_ev.html[PersistenceSaved]"] 
+
+[[ignored_controls]]
+
+== Ignored Controls and Properties
+
+The Persistence Framework has certain rules - which controls and properties should be preserved and which of them should be skipped. The framework doesn’t persist:
+
+* Simple read-only properties (int, float, …).
+* Complex read-only properties (complex types) are persisted only if they are accompanied by a method with a prefix ShouldSerializeXYZ, where the XYZ is the name of the property. This is a standard method convention used by the .NET framework.
+* If the value of the property is the default value, it is set by using the .NET attribute DefaultValue.
+* Properties marked with PersistenceIgnoreAttribute
+* Properties from the following types (last two are Infragistics types): Page, ControlCollection, Version, ISite, ITemplate, IDataSource, UIObject, RendererBase
+* The following property names:
+
+* DataSource
+* DataSourceID
+* DataMemeber
+* EnableTheming
+* SkinID
+* EnableViewState
+* ViewStateMode
+* ID
+* ClientIDMode
+* TabIndex
+* AppRelativeTemplateSourceDirectory
+* Capacity
+* TemplateControl
+
+At the same time Persistence Framework skips the controls that inherit from the following types:
+
+* IValidator
+* IDataSource
+* IHeirarchicalDataSource
+* Literal
+* LiteralControl
+* Label
+* HiddenField
+* ScriptManager
+
+.Note:
+[NOTE]
+====
+If some of your control or control properties are not persisted, this means that they are skipped by the Persistence Framework.
+====
+
+== Limitations List
+
+Not all properties of a control should be saved through the persistence process. Here is the list that the framework is restricted to persist or load:
+
+* Properties that implement the ITemplate interface
+* ValueConverter property of BoundCheckBoxField
+
+== Related Topics
+
+link:persistenceframework-getting-started-with-persistence-framework.html[Getting Started topic]

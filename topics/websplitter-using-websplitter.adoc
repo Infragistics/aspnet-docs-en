@@ -1,0 +1,53 @@
+﻿////
+
+|metadata|
+{
+    "name": "websplitter-using-websplitter",
+    "controlName": ["WebSplitter"],
+    "tags": ["How Do I"],
+    "guid": "{7E540F91-1084-4163-BB2B-3D95AFFFAE0B}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-01T21:08:55Z"
+}
+|metadata|
+////
+
+= Using WebSplitter
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebSplitter™ control.
+
+link:websplitter-change-the-splitter-bars-orientation.html[Change the Splitter Bars' Orientation]
+
+This section explains how to use the property which determines the splitter bars orientation.
+
+link:websplitter-lock-a-panes-size.html[Lock a Pane's Size]
+
+In this section you can learn how to lock a pane preventing it from resizing.
+
+link:websplitter-nesting-the-splitter-bars-inside-panes.html[Nesting the Splitter Bars inside Panes]
+
+In this section you can find a comprehensive walkthrough on nesting splitter bars inside panes.
+
+link:websplitter-pane-collapsing.html[Pane Collapsing]
+
+The WebSplitter control supports pane collapsing and in this section you can learn how it works and how to use it in your application.
+
+link:websplitter-pane-resizing.html[Pane Resizing]
+
+You can learn about pane resizing in this section.
+
+link:retrieving-a-reference-to-a-client-side-html-element.html[Retrieving a Reference to a Client Side HTML Element]
+
+In this section you can learn about how the to get a reference to a client side HTML element with the WebSplitter control.
+
+link:websplitter-set-a-panes-size.html[Set a Pane's Size]
+
+In this section you can learn how to set a size for a pane in the WebSplitter control.
+
+link:setting-up-a-client-side-event.html[Setting Up a Client Side Event]
+
+You can learn how to set a client side event in this section.
+
+link:websplitter-websplitter-smart-tag.html[WebSplitter Smart Tag]
+
+In this section you can learn about the WebSplitter Smart Tag.

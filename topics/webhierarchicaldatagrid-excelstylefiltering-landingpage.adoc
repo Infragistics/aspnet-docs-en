@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-excelstylefiltering-landingpage",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Filtering","Grids"],
+    "guid": "e0bcd929-b657-47b2-93ac-98368c97ade3",  
+    "buildFlags": [],
+    "createdOn": "2012-07-16T12:10:18.2677903Z"
+}
+|metadata|
+////
+
+= Excel Style Filtering
+
+== In This Group of Topics
+
+=== Introduction
+
+This section contains topics covering the Excel-Style Filtering feature of the  _WebHierarchicalDataGrid_™
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webhierarchicaldatagrid-excelstylefiltering-overview.html[Excel-Style Filtering Overview _(WebHierarchicalDataGrid)_ ]
+|This topic introduces the Excel-Style Filtering feature of the _WebHierarchicalDataGrid_ control.
+
+| 
+
+link:webhierarchicaldatagrid-excelstylefiltering-enabling.html[Enabling Excel-Style Filtering _(WebHierarchicalDataGrid)_ ] 
+|This topic provides reference about the properties that are specific to the Excel-Style Filtering feature of the _WebHierarchicalDataGrid_ control.
+
+| 
+
+link:webhierarchicaldatagrid-excelstylefiltering-configuring.html[Configuring Excel-Style Filtering _(WebHierarchicalDataGrid)_ ] 
+
+|This topic explains how to configure the Excel-Style Filtering options of the _WebHierarchicalDataGrid_ control.
+
+| 
+
+link:webhierarchicaldatagrid-excelstylefiltering-propertyreference.html[Excel-Style Filtering Property Reference _(WebHierarchicalDataGrid)_ ] 
+
+|This topic provides reference information about the properties that are specific to the Excel-Style Filtering feature of the _WebHierarchicalDataGrid_ control.
+
+|====

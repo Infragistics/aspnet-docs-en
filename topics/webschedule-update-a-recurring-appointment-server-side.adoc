@@ -1,0 +1,86 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-update-a-recurring-appointment-server-side",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{4A032982-C4A0-4C53-8601-374D1AC26A11}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Update a Recurring Appointment Server Side
+
+Updating a recurring appointment involves three easy steps:
+
+[start=1]
+. Retrieve a recurring  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"] .
+[start=2]
+. Get the root activity of the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.recurrence.html[Recurrence]"] .
+[start=3]
+. Update the database with any changes.
+
+The first task in updating a recurring appointment is to retrieve the activity that contains the recurring appointment. For the purposes of this topic, we will assume that there is a recurring appointment that occurs today. After you've retrieved the activity, you need to access the RootActivity for that recurrence (because Recurrence objects are created from activities). Once you have a hold on the RootActivity, you can start updating the recurrence. Finish up by updating the database with your changes.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.Shared
+Imports Infragistics.WebUI.WebSchedule
+...
+' Use the GetActivitiesForDate method to find an appointment
+' that occurs today. 
+Me.WebScheduleInfo1.DataBind()
+Dim activities As ActivitiesSubsetCollection = _
+  Me.WebScheduleInfo1.GetActivitiesForDate(Me.WebScheduleInfo1.ActiveResource, _
+  New SmartDate(DateTime.Now))
+Dim appointment As Appointment = CType(activities(0), Appointment)
+' Get the root activity of the recurrence.
+appointment = CType(appointment.Recurrence.RootActivity, Appointment)
+' The recurring appointment you're updating.
+appointment.Recurrence.MaxOccurrences = 5
+' Update the database with the data provider's UpdateActivity method.
+Me.WebScheduleOleDbProvider1.UpdateActivity(appointment)
+' You need to call DataBind again to update the Activities collection. 
+' WebScheduleInfo will not automatically call it after you've already
+' called it once.
+Me.WebScheduleInfo1.DataBind()
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.Shared;
+using Infragistics.WebUI.WebSchedule;
+...
+// Use the following using directives so you don't have to
+// type out the fully qualified name every time. 
+using Infragistics.WebUI;
+using Infragistics.WebUI.WebSchedule;
+// Use the GetActivitiesForDate method to find an appointment
+// that occurs today. 
+this.WebScheduleInfo1.DataBind();
+ActivitiesSubsetCollection activities = 
+  this.WebScheduleInfo1.GetActivitiesForDate(this.WebScheduleInfo1.ActiveResource,
+  new SmartDate(DateTime.Now));
+Appointment appointment = (Appointment)activities[0];
+// Get the root activity of the recurrence.
+appointment = (Appointment)appointment.Recurrence.RootActivity;
+// The recurring appointment you're updating.
+appointment.Recurrence.MaxOccurrences = 5;
+// Update the database with the data provider's UpdateActivity method.
+this.WebScheduleOleDbProvider1.UpdateActivity(appointment);
+// You need to call DataBind again to update the Activities collection. 
+// WebScheduleInfo will not automatically call it after you've already
+// called it once.
+this.WebScheduleInfo1.DataBind();
+----
+
+== Related Topics
+
+link:webschedule-add-a-recurring-appointment-server-side.html[Add a Recurring Appointment Server Side]
+
+link:webschedule-delete-a-recurring-appointment-server-side.html[Delete a Recurring Appointment Server Side]

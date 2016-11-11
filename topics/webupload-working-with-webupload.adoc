@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "webupload-working-with-webupload",
+    "controlName": ["WebUpload"],
+    "tags": [],
+    "guid": "42067883-bec1-4be7-977c-b36ec74a201f",  
+    "buildFlags": [],
+    "createdOn": "2013-03-21T12:05:11.0710808Z"
+}
+|metadata|
+////
+
+= Working with WebUpload
+
+== In This Group of Topics
+
+=== Introduction
+
+This group of topics covers configuration and other tasks related to the  _WebUpload_™ control.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webupload-configuring-webupload.html[Configuring WebUpload]
+|This topic explains, with code examples, how to configure the _WebUpload_ control.
+
+| link:webupload-http-module-and-handler.html[Using the HTTP Handler and Module]
+|This topic explains how to configure the _WebUpload_ HTTP Module and Handler in the _web.config_ file.
+
+| link:webupload-using-client-side-events.html[Using Client-Side Events]
+|This topic explains how to handle the client-side events raised by the _WebUpload_ control. It also explains those events and lists the client-side and server-side error codes and upload statuses.
+
+| link:webupload-using-server-side-events.html[Using Server-Side Events]
+|This topic explains how to handle the server-side events raised by the _WebUpload_ control. It also explains the _WebUpload's_ `UploadProgressManager` class as well as `FileStatus` and `Error` enumerations.
+
+| link:webupload-saving-files-as-stream.html[Saving Files as Stream (WebUpload)]
+|This topic explains how to process and save upload files as either file or memory streams. A detailed procedure is provided on saving files as memory stream by individual processing of each uploaded file chunk.
+
+|====

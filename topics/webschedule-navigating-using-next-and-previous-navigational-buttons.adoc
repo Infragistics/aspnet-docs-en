@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-navigating-using-next-and-previous-navigational-buttons",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Navigation","Scheduling"],
+    "guid": "{9A430307-4DA0-4F13-8B18-3ABDC8B36E4C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Navigating Using the Next and Previous Navigational Buttons
+
+The WebSchedule™ Views have navigational arrows in the header area of the user interface. These navigational arrows are used to help you navigate between different months, weeks, or days, depending on the view you are using. The navigation of the controls differs slightly between some of them. The following is a list of each control and how it navigates when you click the Previous or Next navigational buttons.
+
+* link:web-webmonthview.html[WebMonthView] -- This control's navigational arrows are designed to navigate to the same row/column in the succeeding or preceding month when you click the Next or Previous button.
+* link:web-webcalendarview.html[WebCalendarView] -- Selects the same day each time you progress to another month. This functionality also works backwards for the WebCalendarView.
+* link:web-webdayview.html[WebDayView] -- Navigates to the next day only.
+
+.Note:
+[NOTE]
+====
+The navigation depends on which control you are clicking on to navigate. If you have several of the views on a web form, the control you are clicking to navigate determines how the other controls will behave.
+====
+
+For example, if you have all the controls on a form and navigate to a new month using the WebMonthView™, the WebCalendarView™ will update to show the newly selected date based on the day selected by the WebMonthView. This can be seen at run time if you have  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activedayclientsynchronization.html[ActiveDayClientSynchronization]"]  set to Always on the WebScheduleInfo™. If this property is set to None, the views won't synch until a post-back occurs.

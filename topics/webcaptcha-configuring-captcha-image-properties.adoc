@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcaptcha-configuring-captcha-image-properties",
+    "controlName": ["WebCaptcha"],
+    "tags": ["Styling","Validation"],
+    "guid": "5ac49f44-6018-4015-8355-24d883db97ab",  
+    "buildFlags": [],
+    "createdOn": "2010-05-31T13:05:47.1878633Z"
+}
+|metadata|
+////
+
+= Configuring Captcha Image Properties
+
+WebCaptcha control provides the following properties to configure the Captcha image:
+
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~linesnoise.html[LinesNoise] – applies random noise as lines to the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~fontwarping.html[FontWarping] – applies random warping to the characters on the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~backgroundnoise.html[BackgroundNoise] – applies random noise as dots to the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~rotationnoise.html[RotationNoise] – applies random rotation to the characters on the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~width.html[Width]/ link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~height.html[Height] – sets the size of the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~characterset.html[CharacterSet] – sets the characters that the captcha image is generated from. For example, if you set “0123456789” as the CharacterSet property, the generated captcha image will contain numbers only.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~enablerandomfonts.html[EnableRandomFonts] – applies random font styles to each character shown on the captcha image. These fonts are taken from a predefined list of fonts, and include: Arial, Verdana, Arial Narrow, Broadway, Calibri, Cambria, Comic Sans MS, Times New Roman, Courier New, Lucida Console, and Tahoma.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~textlength.html[TextLength] – sets the number of the characters shown on the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~enableuniquechars.html[EnableUniqueChars] – if set to True, every character generated from the captcha image is unique.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~enablecasesensitivity.html[EnableCaseSensitivity] – the text typed in the input box must match exactly the case of the letters on the image, otherwise validation will fail.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~backgroundcolor.html[BackgroundColor] – sets the background color of the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~textcolor.html[TextColor] – sets the color of the text shown on the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~fontstyle.html[FontStyle] – sets the font style of the characters shown on the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~fontsize.html[FontSize] – sets the size of the characters shown on the captcha image.
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagesettings~fontname.html[FontName] – sets the name of the font of the characters shown on the captcha image.
+
+== Related Topics
+
+link:webcaptcha-protection-modes.html[Protection Modes]
+
+link:webcaptcha-dictionary-modes.html[Dictionary Modes]
+
+link:webcaptcha-captcha-validation.html[Captcha Validation]
+
+link:webcaptcha-configuring-captcha-buttons.html[Configuring Captcha Buttons]
+
+link:webcaptcha-configuring-captcha-input-field.html[Configuring Captcha Input Field]
+
+link:webcaptcha-configuring-captcha-audio.html[Configuring Captcha Audio]

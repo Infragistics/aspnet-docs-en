@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-getting-started",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Getting Started"],
+    "guid": "{16BFC813-52A0-4DF2-84EF-9250F23F2767}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Getting Started
+
+This section offers short topics that will get you styling your application in no time. Use these topics as a quick reference, or step through them one by one to learn the basics of creating your very own Style Library.
+
+* link:webappstylist-creating-a-style-library.html[Creating a Style Library]
+* link:webappstylist-creating-a-styleset.html[Creating a StyleSet]
+* link:webappstylist-saving-your-work.html[Saving Your Work]
+* link:webappstylist-opening-a-saved-style-library.html[Opening a Saved Style Library]
+* link:webappstylist-netadvantage-appstylist-for-aspnet-options-dialog-box.html[Infragistics AppStylist for ASPNET Options Dialog Box]

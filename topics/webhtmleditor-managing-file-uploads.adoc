@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-managing-file-uploads",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","Selection"],
+    "guid": "{73BA8BB3-E5B5-4AA1-897E-D9794BA5CBD2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Managing File Uploads
+
+WebHtmlEditor™ lets end users upload attachments (including image files, Microsoft® Windows Media® Player streaming media files, and Macromedia® Flash® files) to their documents. Files are stored in an upload folder that you must configure on your application's Web server, as described in the link:webhtmleditor-set-where-upload-files-are-stored.html[How to Set Where Uploaded Files are Stored] and link:webhtmleditor-configuring-the-upload-area-in-iis.html[Configuring IIS for Uploads] topics.
+
+When designing a Web application that provides WebHtmlEditor's upload features, you must plan for the administration of this upload path, which may include instituting a security policy, protecting the privacy of users' uploaded files, scanning files for viruses, and handling any backup, recovery and housekeeping of files. You may need to consult with the administrators of your Web site to handle some of these system administration tasks.
+
+If you allow very large files to be uploaded (usually more then 2MB), you may need to relax the maxRequestLength of HTTP requests in IIS to allow users to post these files on your Web server. This is configured in the machine.config file's httpRuntime section. IIS is configured by default to reject HTTP requests larger than this limit as a security precaution. Relaxing this limit may make your Web application vulnerable to Denial-of-Service attacks.
+
+WebHtmlEditor allows users to embed uploaded files in their document. The control also provides the Upload dialog box which users can use to post files. However, WebHtmlEditor cannot assume responsibility for governing your server's resources along these lines.
+
+If you would like to prevent file uploads, you should remove the upload-related Toolbar buttons from WebHtmlEditor. The example presented in link:webhtmleditor-remove-toolbar-buttons-of-webhtmleditor.html[How to Remove Toolbar Buttons] describes what you can do in this situation.

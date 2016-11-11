@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-update-data-and-stored-procedures",
+    "controlName": ["WebSchedule"],
+    "tags": ["Data Binding","How Do I","Scheduling"],
+    "guid": "{584ECE23-ECF9-418F-A896-39185ABE983A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Update Data and Stored Procedures
+
+== Before You Begin
+
+In Infragistics ASP.NET 2009.2, the stored procedures for the SQL data base have changed. If you are using data from the WebSchedule2.sql data file prior to 2009.2, you need to update the stored procedures.
+
+Infragistics ASP.NET 2009.2 ships with the following 2 SQL scripts:
+
+* WebSchedule2.sql – data base creation file updated with new and modified stored procedures.
+* Upgrade2to9.2.sql – data base update file to update existing data base.
+
+== What You Will Accomplish
+
+You will learn how to update your existing data base to use the updated stored procedures.
+
+== Follow these Steps
+
+[start=1]
+. Locate the Upgrade2to9.2.sql file in the following paths:
+
+** Windows XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
+** Windows Vista or later-- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+
+[start=2]
+. Double-click the file to open it in SQL Server. If you are using SQL Server Express, you need SQL Server Management Studio Express to open the file.
+[start=3]
+. Execute the script.
+[start=4]
+. Verify that you do not encounter any errors from executing the script. Your existing SQL stored procedures are now updated.
+
+== Related Topic
+
+link:webschedule-overview-of-the-stored-procedures-used-by-the-webschedule-data-providers.html[Overview of the Stored Procedures Used by WebSchedule]

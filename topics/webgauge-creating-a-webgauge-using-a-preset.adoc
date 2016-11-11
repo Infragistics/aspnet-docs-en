@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-creating-a-webgauge-using-a-preset",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{F632C45C-455B-43DE-9B98-A22671B619D6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Creating a WebGauge Using a Preset
+
+This section describes how to create gauges using the presets:
+
+* link:webgauge-creating-a-digital-webgauge-using-the-webgauge-presets.html[Creating a Digital WebGauge Using the WebGauge Presets]
+* link:webgauge-creating-a-linear-webgauge-using-the-webgauge-presets.html[Creating a Linear WebGauge Using the WebGauge Presets]
+* link:webgauge-creating-a-radial-webgauge-using-the-webgauge-presets.html[Creating a Radial WebGauge Using the WebGauge Presets]

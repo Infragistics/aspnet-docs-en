@@ -1,0 +1,32 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-radial-gauge",
+    "controlName": ["WebGauge"],
+    "tags": [],
+    "guid": "{436F9651-6F9A-4BD2-98F7-5AE560FCCB6D}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Radial Gauge
+
+A Radial gauge displays information in a circular fashion. Although a Radial gauge can also be square, the needle markers rotate in a circular fashion. A clock is a popular example of a Radial gauge.
+
+To customize the display of your Radial gauge you can use the Gauge Layout tab of the Properties panel. You can display this tab by either clicking Radial Gauge in the Gauge Explorer or clicking the Radial gauge in the interactive preview area.
+
+The tab is divided into three panes:
+
+* link:webgauge-bounds-pane.html[Bounds]
+* link:webgauge-margin-pane.html[Margin]
+* link:webgauge-corners-pane.html[Corners]
+* link:webgauge-radial-misc-pane.html[Misc]
+
+image::images/Radial_Gauge_Layout_Tab_01.png[The gauge layout tab of the gauge designer.]
+
+The following screen shot shows a Radial gauge that was created according to the layout settings specified in the above screen shot.
+
+image::images/Radial_Gauge_Layout_Tab_02.png[Radial gauge that was create according to the layout setting specified in screen shot above.]

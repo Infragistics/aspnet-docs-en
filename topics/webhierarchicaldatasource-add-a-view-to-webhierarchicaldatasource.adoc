@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatasource-add-a-view-to-webhierarchicaldatasource",
+    "controlName": ["WebHierarchicalDataSource"],
+    "tags": ["Data Presentation","Editing","Sample Data Source"],
+    "guid": "{07E4026E-038C-4D05-A27B-5D353766EB7C}",  
+    "buildFlags": [],
+    "createdOn": "2008-05-05T14:21:31Z"
+}
+|metadata|
+////
+
+= Add a View to WebHierarchicalDataSource
+
+You can add a view to WebHierarchicalDataSource™ to use as the single data source or combine with other data views for use with data bound controls. You can add views to WebHierarchicalDataSources'  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.datasourcecontrols.dataviewcollection.html[DataViews]"]  collection both at design time and run time. At design time, open the Configuration Wizard and select Add View. At run time, you can use the following example code to add views to WebHierarchicalDataSource.
+
+*In Visual Basic:*
+
+----
+' Create the view 
+Dim view As New Infragistics.Web.UI.DataSourceControls.DataView() 
+' Set view to use a SQL data source 
+view.DataSourceID = Me.SqlDataSource1.ID 
+' Give the view an ID 
+view.ID = "SqlDataSource_View1" 
+' Add the view 
+Me.WebHierarchicalDataSource1.DataViews.Add(view)
+----
+
+*In C#:*
+
+----
+// Create the view
+Infragistics.Web.UI.DataSourceControls.DataView view = 
+new Infragistics.Web.UI.DataSourceControls.DataView();
+// Set view to use a SQL data source
+view.DataSourceID = this.SqlDataSource1.ID;
+// Give the view an ID
+view.ID = "SqlDataSource_View1";
+// Add the view
+this.WebHierarchicalDataSource1.DataViews.Add(view);
+----

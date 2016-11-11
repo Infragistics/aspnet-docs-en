@@ -1,0 +1,26 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgroupbox-accessibility-compliance",
+    "controlName": ["WebGroupBox"],
+    "tags": ["Layouts","Section 508"],
+    "guid": "{7051E4DA-030D-4995-A781-564FC5E80E9C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebGroupBox Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(n)
+|In order for WebGroupBox™ to meet this accessibility rule, you must set the TabIndex property on the control, and label any contents you put inside the group box. Also, you need to make sure the contents are Section 508-compliant. To "label the contents", you must put an HTML label next to each control that describes the control, or the action that occurs if it is activated.
+
+|====

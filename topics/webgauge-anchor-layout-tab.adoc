@@ -1,0 +1,31 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-anchor-layout-tab",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{4983E8A4-3CF3-4AB9-AE33-00B00B937398}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Anchor Layout Tab
+
+The  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedle~anchor.html[Anchor]"]  property of the WebGauge control is used in connection with the Needle  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugescale~markers.html[Marker]"]  property. An anchor is placed on the center of your Radial gauge so that you can use the anchor as the rotation point of the needle marker.
+
+You can style the anchor on your gauge using the Anchor Layout tab of the Properties panel. You can access this tab by either clicking Anchor in the Gauge Explorer (Radial Gauge > Scales > Markers > Needle > Anchor) or clicking the anchor of your Radial gauge in the interactive preview area.
+
+The tab is divided into three panes:
+
+* link:webgauge-extent-pane.html[Extent]
+* link:webgauge-radius-pane.html[Radius]
+* link:webgauge-spoke-pane.html[Spoke]
+
+image::images/Anchor_Layout_Tab_01.png[The anchor panel of the gauge designer.]
+
+The following screen shot shows an anchor that was created according to the layout settings specified in the above screen shot.
+
+image::images/Anchor_Layout_Tab_02.png[Radial gauge with anchor settings based on screen shot above.]

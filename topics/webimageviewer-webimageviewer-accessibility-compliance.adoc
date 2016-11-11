@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimageviewer-webimageviewer-accessibility-compliance",
+    "controlName": ["WebImageViewer"],
+    "tags": ["Layouts","Section 508","Styling"],
+    "guid": "{5E45663E-6AF8-4432-BE44-2155754955E0}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebImageViewer Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing only the rules of subpart 1194.22 that apply to this control and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|All non-text elements render a text equivalent. 
+
+.Note:
+[NOTE]
+====
+A text equivalent is supplied by default, but this can be customized to suit your needs. 
+====
+
+|(j)
+|End users can, under abnormal use by jiggling the mouse back and forth between two images, cause the hover effect to flash faster than 2 Hz. You can workaround this by using a custom Hover CSS class on the Image item to disable the possibility of any flashing.
+
+|(n)
+|By setting the control's TabIndex property to a value higher then 0, the control will participate in the tab sequence of the page, and receive focus.
+
+|====

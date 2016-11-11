@@ -1,0 +1,68 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-create-an-activity-using-code",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{5B6DF8D6-15F6-4DBE-8751-D0BDBF6A280E}",  
+    "buildFlags": [],
+    "createdOn": "2005-08-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Create an Activity Using Code
+
+You may need to create an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  server-side in code. The code below shows how to create an activity. For information on how to add the Activity to the WebScheduleInfo™, see link:webschedule-add-an-activity-on-the-server.html[How to Add an Activity Server-Side].
+
+.Note:
+[NOTE]
+====
+Ensure the Activity was affiliated with the active Resource whose scheduling information is currently being viewed. In this example, the Activity was linked to the Unassigned Resource which is always present. However, when you set the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcename.html[ActiveResourceName]"]  property on WebScheduleInfo to a different Resource, Activities belonging to the Unassigned Resource would not be shown.
+====
+
+The code below creates a new instance of the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  class and sets some of the initial properties on it, including which  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource]"]  organizes it.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.Shared
+Imports Infragistics.WebUI.WebSchedule
+...
+Private Function CreateAppointment() As Appointment
+        'Create an empty Activity owned by the WebScheduleInfo. 
+        Dim appt As New Appointment(Me.WebScheduleInfo1)
+        'Set pertinent properties on the Activity.
+        appt.Subject = "My Thirty-Minute Appointment"
+        appt.Duration = New TimeSpan(0, 30, 0)
+        ' Set Key property to a unique value on each appointment.
+        appt.Key = "100"
+        'Set ResourceKey property to link Activity with organizing Resource.
+        appt.ResourceKey = Me.WebScheduleInfo1.VisibleResources.UnassignedResource.Key
+        'Return the newly initialized Activity.
+        CreateAppointment = appt
+End Function
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.Shared;
+using Infragistics.WebUI.WebSchedule;
+...
+private Appointment CreateAppointment()
+{
+        // Create an empty Activity owned by the WebScheduleInfo.
+        Appointment appt = new Appointment(this.WebScheduleInfo1);
+        // Set pertinent properties on the Activity.
+        appt.Subject = "My Thirty-Minute Appointment";
+        appt.Duration = new TimeSpan(0, 30, 0);
+        // Set Key property to a unique value on each appointment.
+        appt.Key = "100";
+        // Set ResourceKey property to link Activity with organizing Resource.
+        appt.ResourceKey = this.WebScheduleInfo1.VisibleResources.UnassignedResource.Key;
+        // Return the newly initialized Activity.
+        return appt;
+}
+----

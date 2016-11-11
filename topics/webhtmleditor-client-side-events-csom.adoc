@@ -1,0 +1,208 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-client-side-events-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{80B151D3-40B0-48FA-A3CA-EF96B01AD9CC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebHtmlEditor Client-Side Events
+
+== Client Side Events
+
+The following are client-side events supported by the WebHtmlEditor control.
+
+.Note:
+[NOTE]
+====
+Most of these client-side events are cancelable. The most significant of which are the Before events. To cancel an event, return true in the event handler. For cases in which a Before event has a corresponding server-side event handled, returning true in the client-side event also cancels the postback to trigger the server-side event.
+====
+
+=== Client Side Events Properties
+
+[cols="a,a"]
+|====
+|*AfterAction* 
+|That event is fired after toolbar action occurred. 
+
+*Parameters*
+
+_oEditor_ 
+
+Reference to javascript object which represents WebHtmlEditor. _actID_ 
+
+The id of action. That can be Key of Toolbar item (if it is set) or the Type of Toolbar item. _oEvent_ 
+
+Event arguments. That can be used to cancel or raise postback. _p4_ 
+
+Parameter for advanced use only. It can be null or its content can be different for different events. There is no guarantee that parameter will be used same way in future versions of editor as it is used now. _p5_ 
+
+same as p4 _p6_ 
+
+same as p4 _p7_ 
+
+same as p4 _p8_ 
+
+same as p4 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+// Process ClientSideEvents.AfterAction. // Raise postback when the Cut tool bar button was clicked. function WebHtmlEditor1_AfterAction(oEditor, actID, oEvent) { 	if(actID == 'Cut') 		oEvent.needPostBack = true; }
+----
+
+|*BeforeAction* 
+|That event is fired before toolbar action occured. 
+
+*Parameters*
+
+_oEditor_ 
+
+Reference to javascript object which represents WebHtmlEditor. _actID_ 
+
+The id of action. That can be Key of Toolbar item (if it is set) or the Type of Toolbar item. _oEvent_ 
+
+Event arguments. That can be used to cancel action, raise postback, modify parameters. _p4_ 
+
+Parameter for advanced use only. It can be null or its content can be different for different events. There is no guarantee that parameter will be used same way in future versions of editor as it is used now. _p5_ 
+
+same as p4 _p6_ 
+
+same as p4 _p7_ 
+
+same as p4 _p8_ 
+
+same as p4 _act_ 
+
+The internal action used by WebHtmlEditor. This parameter defines the action which occurs for a particular event. 
+
+*Remarks*
+
+Example 1: 
+
+---- 
+// Process ClientSideEvents.BeforeAction // Assume that application added a custom toolbar button with Key // equal to MyCustomAct. // Insert "My text" at the current selection in editor, // when MyCustomAct was clicked. function WebHtmlEditor1_BeforeAction(oEditor, actID, oEvent,  p4, p5, p6, p7, p8) { 	if(actID == 'MyCustomAct') 		iged_insText('My text'); } ---- 
+
+Example 2: 
+
+---- 
+// Process ClientSideEvents.BeforeAction // Modify default action: // If Arial was selected from FontName-drop-down, // then set 'Arial Black' instead of 'Arial'. // If Greeting was selected from Insert-drop-down, // then use 'Hello' instead of default string. function WebHtmlEditor1_BeforeAction(oEditor, actID, oEvent,  p4, p5, p6, p7, p8) { 	if(p6 == 'select') 	{ 		if(actID == 'FontName' && p5 == 'Arial') 		{ 			oEvent.p4 = {id:'arial black'}; 		} 		if(actID == 'Insert' && p5.indexOf('Greeting') >= 0) 		{ 			oEvent.p4 = {id:'Hello'}; 		} 	} } ---- 
+
+Example 3: 
+
+---- 
+// If application added (second) Insert toolbar drop-down list // with Key equals to MyCustomInsert, then it may trigger // default "insert" action by following: function WebHtmlEditor1_BeforeAction(oEditor, actID, oEvent, p4, p5, p6, p7, p8, act) {  // Note:  // If it is final "Insert" action triggered by MyCustomInsert  // and MyCustomInsert has its Act type as "Insert", then it  // is safe to trigger default "insert" action below  if(actID == "MyCustomInsert" && act == actID.toLowerCase())  {  oEvent.act = "insert";  } }
+----
+
+|*Blur* 
+|That event is fired when editor loses focus. 
+
+*Parameters*
+
+_oEditor_ 
+
+Reference to javascript object which represents WebHtmlEditor. 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+// Process ClientSideEvents.Blur. // Set status text when editor loses focus. function WebHtmlEditor1_Blur(oEditor) { 	window.status = "blur:" + oEditor.ID; }
+----
+
+|*Focus* 
+|That event is fired when editor gets focus. 
+
+*Parameters*
+
+_oEditor_ 
+
+Reference to javascript object which represents WebHtmlEditor. 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+// Process ClientSideEvents.Focus. // Set status text when editor gets focus. function WebHtmlEditor1_Focus(oEditor) { 	window.status = "focus:" + oEditor.ID; }
+----
+
+|*Initialize* 
+|That event is fired after javascript object was created and initialized. That event can be used to modify/configure editor. 
+
+*Parameters*
+
+_oEditor_ 
+
+Reference to javascript object which represents WebHtmlEditor. 
+
+*Remarks*
+
+Example 1: 
+
+---- 
+// Process ClientSideEvents.Initialize. // Set initial text and modify outer border. function WebHtmlEditor1_Initialize(oEditor) { 	oEditor.setText('my client text'); 	document.getElementById(oEditor.ID).style.borderWidth = 	 '10px'; } ---- 
+
+Example 2: 
+
+---- 
+// Process ClientSideEvents.Initialize // Example below shows how a Custom Dialog can be used // within WebHtmlEditor. // That example contains full implementation within aspx // including all actions. // For simplicity it does not show any other custom items. // Similar custom-dialog button can be added to default // collection within cs/vb codes-behind. // Codes below create custom dialog, process events of // its children (buttons), get content of child-fields and // insert text or object into WebHtmlEditor at position of caret. // // Steps to implement are following: // 1. Add a custom dialog button and set its DialogContentID // to a particular value, like "MyDialogID" // 2. Write into aspx a DIV element which will // contains/implement desired dialog, // and set the id of that DIV to a particular value, // like "MyDialogContentID". // 3. Make that dialog invisible on start: // DIV_element.style.display='none'. // 4. Process ClientSideEvents.Initialize. // 5. Find html element which represents your custom // dialog (MyDialogContentID) // and element used by your Custom-Dialog-Button // (MiDialogID). // 6. Move your custom dialog element from its old // parent (document.body) // to the Dialog-Button-container and make your // dialog-element visible. // 7. At this point your dialog becomes completely operational, // but it remains invisible, because Dialog-Button-container // is invisible too. // 8. Process events of child controls in your dialog and // perform any desired // actions with WebHtmlEditor. // 9. In that example the myDialogButtonClick1/2 functions // are called // by buttons on dialogs and those functions insert // text/object into editor. <script type="text/javascript">  // That function is called when WebHtmlEditor1 was initialized.  // Initialize content of custom dialog,  // which is defined explicitly within aspx  function WebHtmlEditor1_Initialize(oEditor)  {  // Find reference to html-element  // container for MyDialogID.  // That value was set to  // ToolbarDialogButton.Dialog.DialogContentID  var dialog = document.getElementById("MyDialogID");  if(!dialog)  return;  // Find reference to html-element content for MyDialog.  // The html element with that id was created within aspx.  var content = document.getElementById("MyDialogContentID");  // Remove MyDialogContentID from its temporary container  // (body of asxp-page)  // and insert it into MyDialogID container,  // which is used by WebHtmlEditor.  content.parentNode.removeChild(content);  dialog.appendChild(content);  // Undo initial hidden state.  content.style.display = "";  content.style.visibility = "visible";  }  // That function is called by a button located  // in custom dialog MyDialogContentID.  // Build some object (here SPAN) and insert it  // into WebHtmlEditor at current selection.  function myDialogButtonClick2(message)  {  var object = document.createElement("SPAN");  var style = object.style;  style.border = "2px solid red";  style.background = "cyan";  style.fontFamily = "verdana";  style.fontStyle = "italic";  style.fontSize = "10pt";  style.padding = "5px";  object.innerHTML = "This is SPAN with message '"  + message + "' from MyDialog";  iged_closePop();  if(typeof iged_insNodeAtSel == "function")  iged_insNodeAtSel(object);  else  iged_insText(object.outerHTML);  }  // That function is called by a button located  // in custom dialog MyDialogContentID.  // Build some text and insert it into  // WebHtmlEditor at current selection.  function myDialogButtonClick1(message)  {  var field = document.getElementById("myDialogEditField");  var text = field ? field.value : "Error: Can not +  find myDialogEditField.";  text = "Message from dialog '" + message + "',  where value of field='" + text + "'";  iged_closePop();  iged_insText(text);  } </script> <div id="MyDialogContentID"  style="padding:10px;width:360px;height:220px;border:2px  solid #80A0C0;background:#E0F0F0;display:none;visibility:hidden;"> 	<span style="font-family:verdana;font-size:8pt;margin-top:13px; 	 margin-left:50px;">Enter text:</span> 	<input id="myDialogEditField" 	 value="default text" /> 	<br /><br /> 	<span > 	 Note: if you set focus to field, then old selection 	 in WebHtmlEditor can be lost (mostly under IE) and 	 text can be inserted at the beginning, rather than at 	 the last position of caret (selection)</span> 	<br /> 	<input type="button" 	 value="Click To Insert Text into WebHtmlEditor" 	 onclick="myDialogButtonClick1('MyDialog')" /> 	<br /> 	<input type="button" 	 value="Click To Insert Object (SPAN)" 	 onclick="myDialogButtonClick2('MyDialog')" /> </div> <ighedit:WebHtmlEditor id="WebHtmlEditor1" runat="server"> 	<Toolbar> 		<ighedit:ToolbarDialogButton runat="server" 		 type="Custom"> 			<Dialog DialogContentid="MyDialogID" 			 InternalDialogtype="Text" /> 		</ighedit:ToolbarDialogbutton> 	</Toolbar> 	<ClientSideEvents 	 Initialize="WebHtmlEditor1_Initialize" /> </ighedit:WebHtmlEditor> 
+----
+
+|*KeyDown* 
+|That event is fired when editor gets keydown event of browser. 
+
+*Parameters*
+
+_oEditor_ 
+
+Reference to javascript object which represents WebHtmlEditor. _keyCode_ 
+
+The keyCode of browser event. _oEvent_ 
+
+Event arguments. That can be used to cancel that event or raise postback. 
+
+*Remarks*
+
+The following example shows the event being used. 
+
+---- 
+// Process ClientSideEvents.KeyDown. // Show which keyboard key was hit by user. // Disable Backspace key and the A/a keyboard key. function WebHtmlEditor1_KeyDown(oEditor, keyCode, oEvent) { 	window.status = "keyDown=" + keyCode; 	// which are 'A' and 'Backspace' 	if(keyCode == 65 || keyCode == 8) 		oEvent.cancel = true; }
+----
+
+|*KeyPress* 
+|That event is fired when editor gets keypress event of browser. 
+
+*Parameters*
+
+_oEditor_ 
+
+Reference to javascript object which represents WebHtmlEditor. _keyCode_ 
+
+The keyCode of browser event. _oEvent_ 
+
+Event arguments. That can be used to cancel that event or raise postback. 
+
+*Remarks*
+
+Example 1: 
+
+---- 
+// Process ClientSideEvents.KeyPress // Show which character should appear in editor (entered by user) // Prevent 'a', but keep 'A' // Replace 'b' by the '1' (supported by IE only) function WebHtmlEditor1_KeyPress(oEditor, keyCode, oEvent) { 	window.status = "keyDown=" + keyCode; 	if(keyCode == 97) // which is letter 'a' 		oEvent.cancel = true; 	if(keyCode == 98) // which is letter 'b' 		oEvent.key = 49; // which is digit '1' } ---- 
+
+Example 2: 
+
+---- 
+// Process ClientSideEvents.KeyPress. // Show final text in editor after key-press. function WebHtmlEditor1_KeyPress(oEditor, keyCode, oEvent) { 	window.setTimeout('myHandler("' + oEditor.ID + '")', 100); } function myHandler(id) { 	var oEditor = iged_getById(id); 	if(oEditor) 		window.alert(oEditor.getText()); }
+----
+
+|====

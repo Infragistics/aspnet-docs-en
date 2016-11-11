@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-styling-webdayview",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling","Styling"],
+    "guid": "{DB2567E8-425B-4A99-9D2E-D3A340165F1C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Styling WebDayView
+
+The following diagram shows the WebDayView™ and how the different style objects you can set on it map to the UI.
+
+image::images\WebSchedule_Related_Topics_Styling_the_WebDayView.png[]

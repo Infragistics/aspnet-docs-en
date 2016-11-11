@@ -1,0 +1,159 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridmigrationautomaticloadondemand",
+    "controlName": [],
+    "tags": [],
+    "guid": "06f07737-5799-4845-8df0-5acc67d3f1ad",  
+    "buildFlags": [],
+    "createdOn": "2016-03-01T09:39:01.2236053Z"
+}
+|metadata|
+////
+
+= Grid Migration - Automatic Load On Demand
+
+== Automatic Load on Demand
+
+To decrease the initial HTML page size being delivered to the client, the WebGrid™ can utilize one of its LoadOnDemand settings to load the child rows for a parent row only upon user request.
+
+When using the LoadOnDemand.Xml setting, the WebGrid will decrease the payload even more by initially limiting the number of rows provided on the top level band as well as limiting the rows on the child bands.
+
+The application databinds the grid using a dataset. Initially, only the rows at the top level of the hierarchy are added to the grid. All Band 0 rows with children in the dataset are rendered with the ShowExpand property set to true. When the user clicks a row expansion indicator, the page is posted back and the databind is performed again. This time, the row that was expanded is also populated from the dataset. No unexpanded rows are populated. Using the Automatic form of LoadOnDemand requires that DataBind() is called on each postback.
+
+The WebHierarchicalDataGrid™ (Aikido) control has a load on demand feature too. The control retrieves data when needed, such as when a row is expanded. The InitialDataBindDepth property controls this feature. The property is set to 0 by default, initially only loading the root data. Any numeric value thereafter determines the successive data level(s) to load at start up. A value of -1 disables load on demand and loads all data levels.
+
+The EnableAjax property affects the manner in which data is received when using load on demand. The property is True by default and allows data retrieval to be asynchronous. If this property is False, data retrieval results in a full page postback.
+
+This walkthrough will show how to set up the WebGrid to use LoadOnDemand.Xml.
+
+==== Follow These Steps:
+
+[start=1]
+. Set the Browser property off the UltraWebGrid object to Xml.
+[start=2]
+. Set the LoadOnDemand property of the DisplayLayout object to Xml.
+[start=3]
+. Set the ViewType off the DisplayLayout object to Hierarchical.
+[start=4]
+. Add a server side event handler for the InitializeDataSource event.
+
+The WebGrid uses the InitializeDataSource event to fill the WebGrid with data. In this event, you would populate the DataTable or DataSet that will provide the data for the WebGrid, and ensure that it is connected to the WebGrid, if the DataSource was not set at design time.
+
+Create the InitializeDataSource event, and put in the code necessary to populate your DataTable or DataSet. Then set the grid's DataSource property if you didn't set it at design time.
+
+.Note:
+[NOTE]
+====
+The makeData() function used below is not a part of the WebGrid, but a function that provides a DataSet object to the WebGrid. Creation and population of a DataSet object is outside the scope of this article.
+====
+
+*In Visual Basic:*
+
+[source,vb]
+----
+Private Sub UltraWebGrid1_InitializeDataSource(ByVal sender As Object, _
+  ByVal e As Infragistics.WebUI.UltraWebGrid.UltraGridEventArgs) _
+  Handles UltraWebGrid1.InitializeDataSource 
+     Me.UltraWebGrid1.DataSource = makeData()     
+End Sub
+----
+
+*In C#:*
+
+[source,csharp]
+----
+private void UltraWebGrid1_InitializeDataSource(object sender, 
+  Infragistics.WebUI.UltraWebGrid.UltraGridEventArgs e)
+{ 
+        this.UltraWebGrid1.DataSource = makeData();
+}
+----
+
+5. Set the DataKeyField on the Band objects.
+
+The DataKey is used by the WebGrid to identify rows in the DataSource. In LoadOnDemand.Xml the DataKey is used by the WebGrid to filter the DataSource to quickly find the child rows for the particular parent row. Create the InitializeLayout event for the grid, and place the following example code inside it.
+
+In the example code shown, Id is a column in the parent band, and ParentId is a column in the child band. You are essentially letting the grid know the relationship between the two bands.
+
+*In Visual Basic:*
+
+[source,vb]
+----
+Private Sub UltraWebGrid1_InitializeLayout(ByVal sender As Object, _
+  ByVal e As Infragistics.WebUI.UltraWebGrid.LayoutEventArgs) _
+  Handles UltraWebGrid1.InitializeLayout
+    Me.UltraWebGrid1.Bands(0).DataKeyField = "Id"
+    Me.UltraWebGrid1.Bands(1).DataKeyField = "ParentId,Id"
+End Sub
+----
+
+*In C#:*
+
+[source,csharp]
+----
+private void UltraWebGrid1_InitializeLayout(object sender, 
+  Infragistics.WebUI.UltraWebGrid.LayoutEventArgs e)
+{
+        this.UltraWebGrid1.Bands[0].DataKeyField = "Id";
+        this.UltraWebGrid1.Bands[1].DataKeyField = "ParentId,Id";
+}
+----
+
+.Note:
+[NOTE]
+====
+Since XML Load-on-Demand is row-based as such, the web application developer must use a row-based update model by using the UpdateRow event, rather than a "batch" update model which uses the UpdateRowBatch event.
+====
+
+*What You Accomplished:*
+
+By following the above walkthrough, the WebGrid is now set up to utilize LoadOnDemand.Xml.
+
+==== WebHierarchicalDataGrid (Aikido)
+
+WebHierarchicalDataGrid will automatically load your hierarchical data on demand. Simply bind the grid to your data source at design time and then set the InitialDataBindDepth property to 0; no other property settings are required. The grid will automatically detect from the data source when data binding should occur and bind child row islands as necessary.
+
+When binding at runtime, the DataSource/DataSourceID property must be set on every postback so that WebHierarchicalDataGrid knows which data level to retrieve. You can do this on every page load, or you can perform one data bind on the initial page load, and subsequent data binds on WebHierarchicalDataGrid's RowIslandsPopulating event.
+
+The following code shows you how to enable *Automatic* Load on Demand.
+
+*In ASPX:*
+
+[source,html]
+----
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" Height="350px" 
+Width="800px"
+DataKeyFields="CategoryID" DataMember="SqlDataSource1_DefaultView" 
+DataSourceID="WebHierarchicalDataSource1"
+Key="SqlDataSource1_DefaultView" 
+InitialDataBindDepth="0"> 
+</ig:WebHierarchicalDataGrid>
+----
+
+*In Visual Basic:*
+
+[source,vb]
+----
+Me.WebHierarchicalDataGrid1.InitialDataBindDepth = 0
+----
+
+*In C#:*
+
+[source,csharp]
+----
+this.WebHierarchicalDataGrid1.InitialDataBindDepth = 0;
+----
+
+==== Server Events
+
+RowIslandsPopulating – This is a cancelable event that is raised before row islands are created and bound. You can use this event for manual load on demand. If canceled and no new row islands are created the row is not expanded on the client.
+
+RowIslandsPopulated – This is the event that is raised after row islands are created and bound.
+
+==== Client Events
+
+Populating – This is a cancelable event that is raised before the grid initiates a request to the server to load child rows. If canceled the row is not expanded.
+
+Populated – This is the event that is raised after child rows are received from the server but before the row expanding event.

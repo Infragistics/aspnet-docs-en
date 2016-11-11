@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-webtexteditors",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Editing","Styling","Theming"],
+    "guid": "{425DB28C-7841-4F7D-9C64-17A9C67CDE22}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebTextEditors
+
+View all of your styling modifications that involve the WebTextEditors control in the WebTextEditors canvas. You will find the following control on the WebTextEditors canvas:
+
+* WebTextEditors
+
+image::images/AppStylist_WebTextEditors_Canvas_01.png[The canvas for the WebTextEdiotrs.]

@@ -1,0 +1,341 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-list-of-webhtmleditors-toolbar-buttons",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{7D502AC5-2787-4FF6-A382-FD8FFCC84566}",  
+    "buildFlags": [],
+    "createdOn": "2006-09-01T00:00:00Z"
+}
+|metadata|
+////
+
+= List of WebHtmlEditor's Toolbar Buttons
+
+The following table is a full list of the WebHtmlEditor™ toolbar buttons (in the order that they appear on the UI), along with a description of the toolbar button.
+
+[options="header", cols="a,a,a,a"]
+|====
+|Button|Button Name|Toolbar Category|Description
+
+|image::Images/bold.gif[] 
+
+|Bold
+|General-Purpose Toolbar
+|Strengthens text by applying bold formatting using the <strong> tag.
+
+|image::Images/italic.gif[] 
+
+|Italic
+|General-Purpose Toolbar
+|Emphasizes text by applying italicized formatting using the <em> tag.
+
+|image::Images/underline.gif[] 
+
+|Underline
+|General-Purpose Toolbar
+|Formats content with a line beneath the text.
+
+|image::Images/strikethrough.gif[] 
+
+|Strikethrough
+|General-Purpose Toolbar
+|Formats content with a horizontal line struck through the text.
+
+|image::Images/subscript.gif[] 
+
+|Subscript
+|General-Purpose Toolbar
+|Applies subscript formatting (font size is reduced and text is lowered beneath the baseline).
+
+|image::Images/superscript.gif[] 
+
+|Superscript
+|General-Purpose Toolbar
+|Applies superscript formatting (font size is reduced and text is elevated above the baseline).
+
+|image::Images/cut.gif[] 
+
+|Cut
+|General-Purpose Toolbar
+|Removes the selected text content from the edit pane and posts it to the client-side clipboard. If the content is not subsequently pasted from the clipboard (either elsewhere in the edit pane, or to another destination on the user's machine), then the content will be lost.
+
+|image::Images/copy.gif[] 
+
+|Copy
+|General-Purpose Toolbar
+|Copies the selected text content to the client-side clipboard.
+
+|image::Images/paste.gif[] 
+
+|Paste
+|General-Purpose Toolbar
+|Pastes text content as is from the client-side clipboard.
+
+|image::Images/undo.gif[] 
+
+|Undo
+|General-Purpose Toolbar
+|Reverses the most recently performed operation (except another Undo). To reverse an Undo, see the Redo button description.
+
+|image::Images/redo.gif[] 
+
+|Redo
+|General-Purpose Toolbar
+|Repeats the prior operation that had been undone by Undo.
+
+|image::Images/justifyleft.gif[] 
+
+|LeftJustify
+|General-Purpose Toolbar
+|Formats text with left justification. This causes lines of text to align neatly against the left margin, however lines can appear jagged on the right side.
+
+|image::Images/justifycenter.gif[] 
+
+|CenterJustify
+|General-Purpose Toolbar
+|Formats text with center justification. Lines of text are padded approximately equal distances from the left and right margins.
+
+|image::Images/justifyright.gif[] 
+
+|RightJustify
+|General-Purpose Toolbar
+|Formats text with right justification. This causes lines of text to align neatly against the right margin, however lines can appear jagged on the left side.
+
+|image::Images/justifyfull.gif[] 
+
+|Justify
+|General-Purpose Toolbar
+|Formats proportionally-spaced text with full justification. Whitespace within lines will appear to expand such that text content appears aligned to both right and left margins. This formatting is subject to Web browser support.
+
+|image::Images/indent.gif[] 
+
+|Indent
+|General-Purpose Toolbar
+|Indents the text content from the left margin.
+
+|image::Images/outdent.gif[] 
+
+|Outdent
+|General-Purpose Toolbar
+|Outdents the text content towards the left margin. This formatting has no effect if the text content was not previously indented.
+
+|image::Images/unorderedlist.gif[] 
+
+|UnorderedList
+|General-Purpose Toolbar
+|Formats text as an unorder list. An unordered list (or bulleted list) implies the sequence of list items is insignificant.
+
+|image::Images/orderedlist.gif[] 
+
+|OrderedList
+|General-Purpose Toolbar
+|Formats text as an ordered list. An ordered list can use numbering, and implies the sequence of list items has importance.
+
+|image::Images/insertrule.gif[] 
+
+|InsertRule
+|Dialog Box Toolbar
+|Shows a dialog box allowing the end user to select the type of horizontal rule they would like inserted into the document at their current position.
+
+|image::Images/fontcolor.gif[] 
+
+|FontColor
+|Dialog Box Toolbar
+|Shows a color palette dialog box from which the end user can pick a color to use as the foreground color, either for subsequent input or for a selected range of text. Color changes produce HTML <font> tags.
+
+|image::Images/fonthighlight.gif[] 
+
+|FontHighlight
+|Dialog Box Toolbar
+|Shows a color palette dialog box from which the end user can pick a color to use as the background color for text, effectively as if the text had been highlighted. Background color changes produce HTML <span> tags.
+
+|image::Images/specialcharacter.gif[] 
+
+|SpecialCharacter
+|Dialog Box Toolbar
+|Shows the dialog box allowing the end user to select a special character. These characters are normally unavailable or difficult to enter with many keyboards.
+
+|image::Images/inserttable.gif[] 
+
+|Insert Table
+|Menu Toolbar
+|Displays a menu from which users can choose commands related to HTML <table> tags.
+
+|image::Images/toggleborder.gif[] 
+
+|ToggleBorders
+|General-Purpose Toolbar
+|Toggles whether borders are shown for the HTML <table> element that is selected (or if not selected, at the current caret position).
+
+|image::Images/insertlink.gif[] 
+
+|InsertLink
+|General-Purpose Toolbar
+|Inserts a hyperlink at the current caret position.
+
+|image::Images/removelink.gif[] 
+
+|RemoveLink
+|General-Purpose Toolbar
+|Removes a hyperlink at the current caret position.
+
+|image::Images/save.gif[] 
+
+|Save
+|General-Purpose Toolbar
+|Raises a postback to the Web server. On the Web Server, your application retrieves content from the WebHtmlEditor control using the pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~text.html[Text]"] property, and should then perform actions consistent with saving the user's changes.
+
+|image::Images/open.gif[] 
+
+|OpenFile
+|Upload Toolbar
+|Shows a dialog box allowing the end user to select a file from their local file system.
+
+|image::Images/preview.gif[] 
+
+|Preview
+|General-Purpose Toolbar
+|Pops up a preview browser window showing the end user how the current content from the edit pane would appear in a stand-alone HTML document. The browser used for preview will be the same as the browser that currently displays the WebHtmlEditor control.
+
+|image::Images/findreplace.gif[] 
+
+|Find Replace
+|Dialog Box Toolbar
+|Shows the Find and Replace dialog box allowing the end user to search the edit content pane for text content, and optionally replace matches with new text content.
+
+|image::Images/insertbookmark.gif[] 
+
+|InsertBookmark
+|Dialog Box Toolbar
+|Shows a dialog box that allows the end user to insert a bookmark at their current position.
+
+|image::Images/insertimage.gif[] 
+
+|InsertImage
+|Upload Toolbar
+|Shows a dialog box allowing the end user to attach an image file to their document.
+
+|image::Images/insertflash.gif[] 
+
+|InsertFlash
+|Upload Toolbar
+|Shows a dialog box allowing the end user to attach flash media to their document.
+
+|image::Images/insertwindowsmedia.gif[] 
+
+|InsertWindowsMedia
+|Upload Toolbar
+|Shows a dialog box allowing the end user to attach a Windows media file to their document.
+
+|image::Images/help.gif[] 
+
+|Help
+|Dialog Box Toolbar
+|Shows a Help dialog box for your WebHtmlEditor application. If you do not plan to customize the information that this dialog box will display for your application, then it is recommended that you remove the Help button from the WebHtmlEditor control.
+
+|image::Images/cleanword.gif[] 
+
+|CleanWord
+|General-Purpose Toolbar
+|Cleans extraneous tags typically introduced by Microsoft®Word from the content within the editor pane.
+
+|image::Images/wordcount.gif[] 
+
+|WordCount
+|General-Purpose Toolbar
+|Displays a pop-up with a count of the number of words, and the number of characters, in the current content.
+
+|image::Images/pastehtml.gif[] 
+
+|Paste-Html
+|General-Purpose Toolbar
+|Pastes text content (stripped of HTML tags) from the client-side clipboard.
+
+|image::Images/zoom.gif[] 
+
+|Zoom
+|Menu Toolbar
+|Displays a menu used to select the degree to which the editor content zooms out (becomes smaller) or zooms in (becomes larger). The zoom does not affect the actually size of the HTML.
+
+|image::Images/togglepositioning.gif[] 
+
+|TogglePositioning
+|General-Purpose Toolbar
+|Toggles HTML elements between absolute and relative positioning.
+
+|image::Images/bringforward.gif[] 
+
+|BringForward
+|General-Purpose Toolbar
+|Moves an HTML element to the foreground by increasing its z-index value.
+
+|image::Images/sendbackward.gif[] 
+
+|SendBackward
+|General-Purpose Toolbar
+|Moves and HTML element towards the background by decreasing its z-index value.
+
+|image::Images/custom.gif[] 
+
+|CustomButton
+|General-Purpose Toolbar
+|Custom toolbar button with an image, ToolTip and behavior tailored to your Web application. Your client-side script should perform a custom action when the user clicks any custom button. 
+
+.Note:
+[NOTE]
+====
+This button does not appear on the toolbar by default.
+====
+
+|image::Images/print.gif[] 
+
+|Print
+|General-Purpose Toolbar
+|Sends the content of the WebHtmlEditor edit pane to a client-side printer, if available. 
+
+.Note:
+[NOTE]
+====
+This button does not appear on the toolbar by default.
+====
+
+|image::Images/custom.gif[] 
+
+|CustomDialogButton
+|Dialog Box Toolbar
+|Shows a pop-up dialog box with custom content that you can tailor to your Web application. 
+
+.Note:
+[NOTE]
+====
+This button does not appear on the toolbar by default.
+====
+
+|image::Images/custom.gif[] 
+
+|CustomMenuButton
+|Menu Toolbar
+|Displays a custom menu populated with selections specific to your Web application. 
+
+.Note:
+[NOTE]
+====
+This button does not appear on the toolbar by default.
+====
+
+|image::Images/upload.gif[] 
+
+|UploadFile
+|Upload Toolbar
+|Shows a dialog box allowing the end user to upload arbitrary files to the Web server. WebHtmlEditor does not add any HTML markup to the document associated with this file. Users attaching these files to their documents must make a manual reference to the URL at which your application stores their uploaded file. 
+
+.Note:
+[NOTE]
+====
+This button does not appear on the toolbar by default.
+====
+
+|====

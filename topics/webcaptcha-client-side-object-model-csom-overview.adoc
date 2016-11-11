@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcaptcha-client-side-object-model-csom-overview",
+    "controlName": ["WebCaptcha"],
+    "tags": ["API","Validation"],
+    "guid": "12e35bb6-f2fa-4187-8ed5-a4d58362ab10",  
+    "buildFlags": [],
+    "createdOn": "2010-06-07T14:49:29.1625619Z"
+}
+|metadata|
+////
+
+= Client-Side Object Model (CSOM) Overview
+
+The WebCaptcha control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webcaptcha~infragistics.web.ui_namespace.html[WebCaptcha CSOM Overview]

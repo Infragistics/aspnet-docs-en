@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-layout-of-webhtmleditor",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","Layouts"],
+    "guid": "{DBF368A6-DC78-40A9-AD9A-F49278368A8D}",  
+    "buildFlags": [],
+    "createdOn": "2006-04-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Layout of WebHtmlEditor
+
+In this section, you'll find explanations of the different regions of the WebHtmlEditor™ control.
+
+Click the links below to find out more…
+
+* link:webhtmleditor-regions-of-webhtmleditor.html[Regions of WebHtmlEditor]
+* link:webhtmleditor-webhtmleditor-toolbar.html[WebHtmlEditor Toolbar]
+* link:webhtmleditor-webhtmleditor-text-window.html[WebHtmlEditor Text Window]
+* link:webhtmleditor-webhtmleditor-tab-strip.html[WebHtmlEditor Tab Strip]

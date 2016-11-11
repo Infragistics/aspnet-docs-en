@@ -1,0 +1,101 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatasource-add-a-parent-to-multiple-child-relationship",
+    "controlName": ["WebHierarchicalDataSource"],
+    "tags": ["Data Presentation","Sample Data Source"],
+    "guid": "{EDBC5112-6480-41AA-B040-0C94BA16B93A}",  
+    "buildFlags": [],
+    "createdOn": "2008-05-05T16:42:41Z"
+}
+|metadata|
+////
+
+= Add a Parent to Multiple Child Relationship
+
+A data source can consist of a parent record set with multiple child record sets. You can create this type of relationship with WebHierarchicalDataSource™ at design time or run time. At design time, you can add multiple child views on the same level in the Quick Designer. At run time, add the views in code with data relations to the same parent.
+
+.Note:
+[NOTE]
+====
+When adding data relations, make sure that the data sources obey rules of referential integrity. The WebHierarchicalDataSource component does not enforce these rules and you will not be notified when a rule is broken. For example, if the records in your child data are not all related to the parent data, this is simply ignored and the data that are related are shown. Also, if the data type of your primary key and foreign key columns do not match, only the parent records are shown.
+====
+
+*In Visual Basic:*
+
+----
+Dim view As New Infragistics.Web.UI.DataSourceControls.DataView() 
+' Add the parent view 
+view.DataSourceID = Me.SqlDataSource1.ID 
+view.ID = "Parent_DataSource_View1" 
+Me.WebHierarchicalDataSource1.DataViews.Add(view) 
+' Add child view 1 
+view = New Infragistics.Web.UI.DataSourceControls.DataView() 
+view.DataSourceID = Me.SqlDataSource2.ID 
+view.ID = "Child_DataSource_View1" 
+Me.WebHierarchicalDataSource1.DataViews.Add(view) 
+' Add child view 2 
+view = New Infragistics.Web.UI.DataSourceControls.DataView() 
+view.DataSourceID = Me.SqlDataSource3.ID 
+view.ID = "Child_DataSource_View2" 
+Me.WebHierarchicalDataSource1.DataViews.Add(view) 
+' Add the relation of the first child to the parent 
+Dim dr As New Infragistics.Web.UI.DataSourceControls.DataRelation() 
+dr.ParentDataViewID = "Parent_DataSource_View1" 
+dr.ParentColumns = New String() {"RegionID"} 
+dr.ChildDataViewID = "Child_DataSource_View1" 
+dr.ChildColumns = New String() {"RegionID"} 
+Me.WebHierarchicalDataSource1.DataRelations.Add(dr) 
+' Add the relation of the second child to the parent 
+dr = New Infragistics.Web.UI.DataSourceControls.DataRelation() 
+dr.ParentDataViewID = "Parent_DataSource_View1" 
+dr.ParentColumns = New String() {"RegionID"} 
+dr.ChildDataViewID = "Child_DataSource_View2" 
+dr.ChildColumns = New String() {"RegionID"} 
+Me.WebHierarchicalDataSource1.DataRelations.Add(dr)
+----
+
+*In C#:*
+
+----
+Infragistics.Web.UI.DataSourceControls.DataView view = 
+new Infragistics.Web.UI.DataSourceControls.DataView();
+// Add the parent view
+view.DataSourceID = this.SqlDataSource1.ID;
+view.ID = "Parent_DataSource_View1";
+this.WebHierarchicalDataSource1.DataViews.Add(view);
+// Add child view 1
+view = new Infragistics.Web.UI.DataSourceControls.DataView();
+view.DataSourceID = this.SqlDataSource2.ID;
+view.ID = "Child_DataSource_View1";
+ this.WebHierarchicalDataSource1.DataViews.Add(view);
+// Add child view 2
+view = new Infragistics.Web.UI.DataSourceControls.DataView();
+view.DataSourceID = this.SqlDataSource3.ID;
+view.ID = "Child_DataSource_View2";
+this.WebHierarchicalDataSource1.DataViews.Add(view);
+// Add the relation of the first child to the parent
+Infragistics.Web.UI.DataSourceControls.DataRelation dr = 
+new Infragistics.Web.UI.DataSourceControls.DataRelation();
+dr.ParentDataViewID = "Parent_DataSource_View1";
+dr.ParentColumns = new string[] { "RegionID" };
+dr.ChildDataViewID = "Child_DataSource_View1";
+dr.ChildColumns = new string[] { "RegionID" };
+this.WebHierarchicalDataSource1.DataRelations.Add(dr);
+// Add the relation of the second child to the parent
+dr = new Infragistics.Web.UI.DataSourceControls.DataRelation();
+dr.ParentDataViewID = "Parent_DataSource_View1";
+dr.ParentColumns = new string[] { "RegionID" };
+dr.ChildDataViewID = "Child_DataSource_View2";
+dr.ChildColumns = new string[] { "RegionID" };
+this.WebHierarchicalDataSource1.DataRelations.Add(dr);
+----
+
+== Related Topics
+
+link:webhierarchicaldatasource-add-a-single-parent-to-single-child-relationship.html[Add a Single Parent to Single Child Relationship]
+
+link:webhierarchicaldatasource-add-a-composite-key-relationship.html[Add a Composite Key Relationship]
+
+link:webhierarchicaldatasource-creating-a-self-related-data-relation.html[Creating a Self-Related Data Relation]

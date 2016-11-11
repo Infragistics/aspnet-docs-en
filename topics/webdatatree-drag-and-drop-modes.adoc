@@ -1,0 +1,51 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-drag-and-drop-modes",
+    "controlName": ["WebDataTree"],
+    "tags": [],
+    "guid": "356e0e47-0c6e-457c-b8ef-0a7557e7e5c9",  
+    "buildFlags": [],
+    "createdOn": "2010-06-03T08:43:53.7563831Z"
+}
+|metadata|
+////
+
+= Drag and Drop Modes
+
+Drag and Drop Modes
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] supports three link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.dragdropsettings~dragdropmode.html[drag and drop modes].
+
+* *Copy* – copies selected node(s) to the dropped location
+* *Move* – cuts selected node(s) and moves them to the new location
+* *Default* – works as Copy if we hold the Ctrl key pressed while we move selected node(s),
+
+and behaves as Move if we just drag and drop to the new location
+
+*In HTML:* 
+----
+
+<ig:WebDataTree id="WebDataTree1" runat="server">
+
+<DragDropSettings AllowDrop="true" DragDropMode="Copy" EnableDragDrop="True" />
+
+…
+
+</ig:WebDataTree> 
+----
+
+*In C#:*
+----
+
+this.DDWebDataTree.DragDropSettings.DragDropMode = Infragistics.Web.UI.NavigationControls.DragDropMode.Copy;
+----
+
+== Related Topics
+
+link:webdatatree-drag-and-drop-client-side-api.html[Client-side API]
+
+link:webdatatree-drag-and-drop-client-side-events.html[Client-side events]
+
+link:webdatatree-drag-and-drop-handle-server-side-event.html[Server-side events]

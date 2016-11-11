@@ -1,0 +1,32 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-checking-for-reminders",
+    "controlName": ["WebSchedule"],
+    "tags": ["Scheduling","Tips and Tricks"],
+    "guid": "{2FC1B5FC-628D-408C-81D8-5C4B018BDFC3}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Checking for Reminders
+
+Currently WebSchedule™ does not check to see if a reminder has come due. This means, that you may miss reminders if you haven't posted-back to the server in a while. The following are two ways in which you can have the page reload automatically after a certain amount of time has gone by. This will cause WebSchedule to get the latest activities and check to see if any reminders have come due.
+
+[start=1]
+. Meta Refresh Tag - You can add the following meta tag to your header to automatically cause a reload:
+
+<meta http-eqiv="refresh" content="60">
+
+The content attribute is represented in seconds. So this will cause the page to post-back every minute.
+[start=2]
+. setTimeout – You can also globally call the setTimeout function.
+
+setTimeout("__doPostBack('','')", 60000);
+
+The first parameter of setTimeout is the expression to evaluate. In this case we would call __doPostBack to cause the page to post-back.
+
+The second parameter is the amount of time that the page should wait to evaluate this expression. The time is in milliseconds. So the above code will cause the page to post-back in 1 minute.

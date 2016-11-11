@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webdatamenu",
+    "controlName": ["WebDataMenu"],
+    "tags": ["Getting Started"],
+    "guid": "{FA38A26C-56DF-4D2D-90F4-E128E520CA06}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDataMenu
+
+This page contains all of the overview/task-based information related to the WebDataMenu™ control. This section contains valuable information about the control, ranging from what it does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to learn about the WebDataMenu control.
+
+== link:webdatamenu-about-webdatamenu.html[About WebDataMenu]
+
+In this section, you will find information that will help you better understand functionalities of the WebDataMenu control. Further, you will understand the purpose of the control.
+
+== link:webdatamenu-getting-started-with-webdatamenu.html[Getting Started with WebDataMenu]
+
+This section provides you with information on how to get up and running as quickly as possible with the WebDataMenu control.
+
+== link:webdatamenu-using-webdatamenu.html[Using WebDataMenu]
+
+This section provides task-based information showing you how to use the features available in WebDataMenu.
+
+== link:webdatamenu-accessibility-compliance.html[WebDataMenu Accessibility Compliance]
+
+This topic outlines the way in which WebDataMenu meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebDataMenu control.
+
+== link:webdatamenu-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebDataMenu control. The namespaces and classes listed in this topic link conveniently into the API Reference Guide section of the Infragistics ASP.NET help.
+
+== link:webdatamenu~infragistics.web.ui_namespace.html[Client-Side Object Model (CSOM) Overview]
+
+The WebDataMenu™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.

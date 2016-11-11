@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalcmanager-statistical-functions",
+    "controlName": ["WebCalcManager"],
+    "tags": ["How Do I"],
+    "guid": "{4707D114-FD1A-445B-B78C-B0549D2DF995}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Statistical Functions
+
+Below is a list of all Microsoft® Excel®-style statistical functions provided by the WebCalcManager™ control. Visit Microsoft's website for more information on these link:https://support.office.com/en-us/article/Excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb#__toc309306716[Statistical Functions].
+
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionaverage.html[AVERAGE]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctioncount.html[COUNT]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionmax.html[MAX]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionmedian.html[MEDIAN]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionmin.html[MIN]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionstdev.html[STDEV]"] 
+*  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunctionvar.html[VAR]"] 
+
+== Related Topics
+
+link:webcalcmanager-date-and-time-functions.html[Date and Time Functions]
+
+link:webcalcmanager-financial-functions.html[Financial Functions]
+
+link:webcalcmanager-information-functions.html[Information Functions]
+
+link:webcalcmanager-logical-functions.html[Logical Functions]
+
+link:webcalcmanager-math-functions.html[Math Functions]
+
+link:webcalcmanager-text-and-data-functions.html[Text and Data Functions]

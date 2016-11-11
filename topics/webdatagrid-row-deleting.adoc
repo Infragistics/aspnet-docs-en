@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-row-deleting",
+    "controlName": [],
+    "tags": [],
+    "guid": "5a436991-1a10-40bb-b0db-aca6e4a9077d",  
+    "buildFlags": [],
+    "createdOn": "2014-03-10T16:25:02.8651873Z"
+}
+|metadata|
+////
+
+= Row Deleting (WebDataGrid)
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the Row Deleting behavior of the  _WebDataGrid_™ and its use.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webdatagrid-row-deleting-overview.html[Row Deleting Overview (WebDataGrid)]
+|This topic provides an overview of the _WebDataGrid_ Row Deleting behavior’s features and functionality.
+
+| link:webdatagrid-enabling-row-deleting.html[Enabling Row Deleting (WebDataGrid)]
+|This topic details how to enable the Row Deleting behavior in the _WebDataGrid_ .
+
+|====

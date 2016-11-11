@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "webpercenteditor-setting-minimum-and-maximum-values-for-webpercenteditor",
+    "controlName": ["WebPercentEditor"],
+    "tags": ["Editing","Error Handling","How Do I","Styling"],
+    "guid": "{EDA893AB-38C9-482F-AFFE-336C3B248ED4}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T13:48:57Z"
+}
+|metadata|
+////
+
+= Setting minimum and maximum values for WebPercentEditor
+
+WebPercentEditor™ allows you to set a range of values that your end-user can enter into the editor by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~minvalue.html[MinValue]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~maxvalue.html[MaxValue]"]  properties. If an end-user types a percent more than the maximum value then the editor sets the value to the maximum value. Similarly, if an end-user types a percent less than the minimum value then the editor sets the value to the minimum value.
+
+You can set the MinValue and MaxValue properties either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebPercentEditor1.MinValue = 10
+WebPercentEditor1.MaxValue = 95
+----
+
+*In C#:*
+
+----
+WebPercentEditor1.MinValue = 10;
+WebPercentEditor1.MaxValue = 95;
+----
+
+*In JavaScript:*
+
+----
+var Editor = $find("WebPercentEditor1");
+Editor.set_minValue(10);
+Editor.set_maxValue(95);
+----

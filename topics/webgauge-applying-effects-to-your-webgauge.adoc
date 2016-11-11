@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-applying-effects-to-your-webgauge",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{B0C61FA3-2FAA-4765-9BB7-A4865EC1A3E0}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Applying Effects to Your WebGauge
+
+The Effects tab in the Properties panel allows you to apply various effects to the properties of your gauge. For example, you can use the tab to apply a drop shadow effect to the anchor of your Radial gauge.
+
+Click the following link for a description of the Effects tab available in the Properties panel:
+
+* link:webgauge-effects-tab.html[Effects Tab]

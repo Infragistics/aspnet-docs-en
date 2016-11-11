@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-drag-and-drop-drag-and-drop-modes",
+    "controlName": [],
+    "tags": [],
+    "guid": "6031adf7-2d3e-4009-9423-efd315c3412d",  
+    "buildFlags": [],
+    "createdOn": "2010-05-31T09:01:30.1094122Z"
+}
+|metadata|
+////
+
+= Drag and Drop Modes
+
+Drag and Drop Modes
+
+WebDataTree supports three drag and drop modes.
+
+* *Copy* – copies selected node(s) to the dropped location
+* *Move* – cuts selected node(s) and moves it(them )on the new location
+* *Default* – works as copy if we hold Ctrl key pressed while we move selected node(s), and behaves as move if we just drag it and drop it(them) to the new location
+
+*In HTML* :
+
+<ig:webdatatree id="WebDataTree1" runat="server"></ig:webdatatree>
+
+<dragdropsettings enabledragdrop="True" dragdropmode="Copy" allowdrop="true"></dragdropsettings>
+
+<ig:WebDataTree id="WebDataTree1" runat="server">
+
+<DragDropSettings AllowDrop="true" DragDropMode="Copy" EnableDragDrop="True" />
+
+…
+
+</ig:WebDataTree>
+
+*In C#:*
+
+this.DDWebDataTree.DragDropSettings.DragDropMode = Infragistics.Web.UI.NavigationControls.DragDropMode.Copy;

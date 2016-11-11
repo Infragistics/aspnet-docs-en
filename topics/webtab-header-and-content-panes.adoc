@@ -1,0 +1,122 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-header-and-content-panes",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I"],
+    "guid": "{10F3AB10-9781-415D-9E12-34223A3D5584}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Header and Content Panes
+
+WebTab™ of allows you to customize the header and the content pane of each tab item depending on your application. By setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem.html[ContentTabItem]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~imageurl.html[ImageUrl]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~text.html[Text]"]  properties you can set the image and text in the header of a tab. The image can be aligned before or after the text by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~imagealignment.html[ImageAlignment]"]  to one of the members of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabimagealignment.html[TabImageAlignment]"]  enumeration. You can also set the alt text of the image and tooltip of the tab by using the ContentTabItem object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~imagealttext.html[ImageAltText]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.layoutpane~tooltip.html[ToolTip]"]  properties.
+
+*In Visual Basic:*
+
+----
+Dim Item1 As New ContentTabItem()
+Item1.Text = "tab1"
+Item1.ImageUrl = "~\images\aspNet.gif"
+Item1.ImageAlignment = TabImageAlignment.Trailing 
+Item1.ImageAltText = "IG ASP.NET logo" 
+Item1.ToolTip = "ASP.NET"
+----
+
+*In C#:*
+
+----
+ContentTabItem Item1 = new ContentTabItem();
+Item1.Text = "tab1";
+Item1.ImageUrl = "~\\images\\aspNet.gif";
+Item1.ImageAlignment = TabImageAlignment.Trailing;
+Item1.ImageAltText = "IG ASP.NET logo";
+Item1.ToolTip = "ASP.NET";
+----
+
+The ContentTabItem object's Text property allows usage of html tags, so besides text and image defined by Text and ImageUrl properties, extra objects can be inserted into the tab labels.
+
+*In HTML:*
+
+----
+<ig:ContentTabItem Text="IMG object: &lt;img src='images/close.gif' /&gt;" ></ig:ContentTabItem>
+----
+
+WebTab also allows you to use a close button, so that the end user can close a tab. A close button can be displayed on all the tabs by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~closebutton.html[CloseButton]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabclosebutton~enabled.html[Enabled]"]  property to True. By default, the close button for the tabs is disabled.
+
+*In HTML:*
+
+----
+<ig:WebTab ID="WebTab1" runat="server" Height="200px" Width="300px">
+        <CloseButton Enabled="True" />
+</ig:WebTab>
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.CloseButton.Enabled = true
+----
+
+*In C#:*
+
+----
+WebTab1.CloseButton.Enabled = true;
+----
+
+The content pane of the WebTab can be customized by configuring various properties of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabcontentpane.html[TabContentPane]"]  class. TabContentPane object’s AutoSize property when set to True allows the WebTab to adjust itself to fit the content in the pane.
+
+*In HTML:*
+
+----
+<ContentPane AutoSize="True">
+</ContentPane>
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.ContentPane.AutoSize = true
+----
+
+*In C#:*
+
+----
+WebTab1.ContentPane.AutoSize = true;
+----
+
+== Related Topics
+
+link:webtab-about-webtab.html[Understanding WebTab]
+
+link:webtab-getting-started-with-webtab.html[Getting Started with WebTab]
+
+link:webtab-tab-states.html[Tab States]
+
+link:webtab-ajax-indicator-support-for-webtab.html[Ajax Indicator Support for WebTab]
+
+link:webtab-display-modes.html[Display Modes]
+
+link:webtab-animations.html[Animations]
+
+link:webtab-handling-overflow-in-webtab.html[Handling Overflow in WebTab]
+
+link:webtab-load-on-demand.html[Load on Demand]
+
+link:webtab-orientation-and-alignment.html[Orientation and Alignment]
+
+link:webtab-overlapping-tabs.html[Overlapping Tabs]
+
+link:webtab-tab-moving.html[Tab Moving]
+
+link:webtab-scrolling.html[Scrolling]
+
+link:webtab-validation-in-webtab.html[Validation in WebTab]
+
+link:webtab-api-overview.html[API Overview]
+
+link:webtab-client-side-object-model.html[Client-Side Object Model(CSOM) Overview]

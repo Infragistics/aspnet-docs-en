@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-back-anchor-radius-pane",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{729AA1F0-525B-469C-AAFE-CF28F0986503}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Radius Pane
+
+The Radius pane lets you change the size of the back anchor's radius.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedleanchor~radius.html[Value]"]  -- Set this value to an integer from 0 to 100. This value is the size of the back anchor's radius.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedleanchor~radiusmeasure.html[Measure]"]  -- Use the Measure drop-down list to specify the unit of measurement for the radius. The radius can be measured in pixels or as a percentage of the Radial gauge.
+
+image::images/Anchor_Radius_Pane_01.png[The back anchor radius pane in the gauge designer.]
+
+== Related Topic
+
+link:webgauge-back-anchor-layout-tab.html[Back Anchor Layout Tab]

@@ -1,0 +1,81 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-using-load-on-demand-for-tabs-with-content-url-set",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I","Performance"],
+    "guid": "{2C6C679E-D1BC-4343-8936-047C58069C4A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using Load on Demand for Tabs with Content Url Set
+
+WebTab allows you to enable the load-on-demand feature for tab items with  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  by setting the EnableLoadOnDemandUrl property to True. This property can be used when the ContentUrl is set to websites that run scripts like jquery.js,which may attempt to set focus or calculate offsets on initialization regardless of html element visibility. These actions may result in javascript exceptions being raised. The workaround for these bugs is to set the EnableLoadOnDemandUrl property to True, which allows only visible selected ContentUrl to load.
+
+=== To enable load-on-demand feature for tabs with ContentUrl:
+
+[start=1]
+. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebTab control onto the page.
+[start=2]
+. Add tabs to WebTab as shown in the link:webtab-getting-started-with-webtab.html[Adding Tabs to the WebTab] topic.
+[start=3]
+. In the Properties window expand  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~postbackoptions.html[PostBackOptions]"]  ; select the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabpostbackoptions~enableloadondemandurl.html[EnableLoadOnDemandUrl]"]  property and set it to True to enable the load-on-demand feature for tabs with ContentUrl set. You can also enable this feature through the following code:
+
+*In HTML:*
+
+----
+<PostBackOptions EnableLoadOnDemandUrl="True" />
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.PostBackOptions.EnableLoadOnDemandUrl = true
+----
+
+*In C#:*
+
+----
+WebTab1.PostBackOptions.EnableLoadOnDemandUrl = true;
+----
+
+[start=4]
+. Save and run your application. You will observe that the content of the tab with ContentUrl set is fetched as the tab is selected.
+
+== Related Topics
+
+link:webtab-about-webtab.html[About WebTab]
+
+link:webtab-getting-started-with-webtab.html[Getting Started with WebTab]
+
+link:webtab-header-and-content-panes.html[Header and Content Panes]
+
+link:webtab-tab-states.html[Tab States]
+
+link:webtab-ajax-indicator-support-for-webtab.html[Ajax Indicator Support for WebTab]
+
+link:webtab-display-modes.html[Display Modes]
+
+link:webtab-animations.html[Animations]
+
+link:webtab-handling-overflow-in-webtab.html[Handling Overflow in WebTab]
+
+link:webtab-using-load-on-demand-in-webtab.html[Using Load on Demand in WebTab]
+
+link:webtab-orientation-and-alignment.html[Orientation and Alignment]
+
+link:webtab-overlapping-tabs.html[Overlapping Tabs]
+
+link:webtab-tab-moving.html[Tab Moving]
+
+link:webtab-scrolling.html[Scrolling]
+
+link:webtab-validation-in-webtab.html[Validation in WebTab]
+
+link:webtab-api-overview.html[API Overview]
+
+link:webtab-client-side-object-model.html[Client-Side Object Model(CSOM) Overview]

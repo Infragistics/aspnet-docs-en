@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "webpagestyler-api-overview",
+    "controlName": [],
+    "tags": ["API"],
+    "guid": "{21ACD82F-A977-4BD5-AED3-166CF9A804C5}",  
+    "buildFlags": [],
+    "createdOn": "2007-08-02T14:35:57Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section list the namespace that is relevant to the control. We also give you the key class that you will be using while programming with this control. The namespace and class on this page link directly into our API documentation.
+
+=== AppStyling.Runtime Namespace:
+link:infragistics4.webui.misc.v{ProductVersion}~infragistics.webui.misc_namespace.html[Infragistics.WebUI.Misc] 
+
+=== Key Classes:
+
+link:infragistics4.webui.misc.v{ProductVersion}~infragistics.webui.misc.webpagestyler.html[WebPageStyler]

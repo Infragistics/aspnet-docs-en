@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-changing-the-annotations-on-your-webgauge",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{B6DBBB65-6E91-4DFC-A610-8733EF9660B6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Changing the Annotations on Your WebGauge
+
+The Properties panel allows you to add annotations to your gauge by using the Annotations tab. For example, you can use the Annotations tab to specify the position of an annotation on your Radial gauge.
+
+Click the following link to find information about the Annotations tab available in the Properties panel:
+
+* link:webgauge-annotations-tab.html[Annotations Tab]

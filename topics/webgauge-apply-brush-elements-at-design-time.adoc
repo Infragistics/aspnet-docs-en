@@ -1,0 +1,26 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-apply-brush-elements-at-design-time",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{1F39A0A0-A50C-4F44-946B-3F705AA2C370}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Apply Brush Elements at Design Time
+
+Click the following links for information on how to apply each brush element to your property at design time:
+
+* link:webgauge-apply-the-hatch-brush-element-at-design-time.html[Apply the Hatch Brush Element at Design Time]
+* link:webgauge-apply-the-image-brush-element-at-design-time.html[Apply the Image Brush Element at Design Time]
+* link:webgauge-apply-the-multi-stop-linear-gradient-brush-element-at-design-time.html[Apply the Multi Stop Linear Gradient Brush Element at Design Time]
+* link:webgauge-apply-the-multi-stop-radial-gradient-brush-element-at-design-time.html[Apply the Multi Stop Radial Gradient Brush Element at Design Time]
+* link:webgauge-apply-the-radial-gradient-brush-element-at-design-time.html[Apply the Radial Gradient Brush Element at Design Time]
+* link:webgauge-apply-the-simple-gradient-brush-element-at-design-time.html[Apply the Simple Gradient Brush Element at Design Time]
+* link:webgauge-apply-the-solid-fill-brush-element-at-design-time.html[Apply the Solid Fill Brush Element at Design Time]
+* link:webgauge-apply-the-texture-brush-element-at-design-time.html[Apply the Texture Brush Element at Design Time]

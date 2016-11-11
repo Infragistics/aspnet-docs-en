@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatetimeeditor-setting-prompt-character-for-webdatetimeeditor",
+    "controlName": ["WebDateTimeEditor"],
+    "tags": ["Editing","How Do I","Styling","Tips and Tricks"],
+    "guid": "{14ABB44B-163E-4D81-89A9-33B1C83C1DC8}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T17:10:13Z"
+}
+|metadata|
+////
+
+= Setting Prompt Character for WebDateTimeEditor
+
+WebDateTimeEditor™ allows you to set the prompt character that is used to fill missing date fields when the control has focus by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~promptchar.html[PromptChar]"]  property. By default the prompt character is set to '_'.
+
+You can set the PromptChar property either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebDateTimeEditor1.PromptChar = "*"c
+----
+
+*In C#:*
+
+----
+WebDateTimeEditor1.PromptChar = '*';
+----
+
+*In JavaScript:*
+
+----
+$find("WebDateTimeEditor").set_promptChar('$$*$$');
+----
+
+image::images/WebDateTimeEditor_Setting_Prompt_Character_for_WebDateTimeEditor_01.png[]

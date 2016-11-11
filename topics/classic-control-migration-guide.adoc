@@ -1,0 +1,91 @@
+﻿////
+
+|metadata|
+{
+    "name": "classic-control-migration-guide",
+    "controlName": [],
+    "tags": [],
+    "guid": "9f72deb6-71b0-4a08-b276-b67995b3f322",  
+    "buildFlags": [],
+    "createdOn": "2011-05-25T15:01:31.2002906Z"
+}
+|metadata|
+////
+
+= Infragistics ASP.NET Classic Control Migration Guide
+
+With the move to standardizing on ASP.NET AJAX for Infragistics ASP.NET, the following classic controls are released for the last time with Infragistics ASP.NET 2011 Volume 1. Starting with Infragistics ASP.NET 2011 Volume 2, these classic controls will not be included with the product.
+
+Table 1 lists all the classic controls that will no longer be available and shows which new control is used to achieve comparable functionality built with the ASP.NET AJAX framework.
+
+== Table 1: Table showing classic control and corresponding ASP.NET AJAX control
+
+[options="header", cols="a,a"]
+|====
+|Classic Control|Migrate To
+
+|WebGrid
+|WebDataGrid/WebHierarchicalDataGrid
+
+|WebCombo
+|WebDropDown
+
+|WebDateChooser
+|WebDatePicker
+
+|WebListBar
+|WebExplorerBar
+
+|WebCalendar
+|WebMonthCalendar
+
+|WebToolbar
+|WebDataMenu
+
+|UltraWebTab
+|WebTab
+
+|WebTextEdit
+|WebTextEditor
+
+|WebMaskEdit
+|WebMaskEditor
+
+|WebNumericEdit
+|WebNumericEditor
+
+|WebDateTimeEdit
+|WebDateTimeEditor
+
+|WebPercentEdit
+|WebPercentEditor
+
+|WebCurrencyEdit
+|WebCurrencyEditor
+
+|WebMenu
+|WebDataMenu
+
+|WebTree
+|WebDataTree
+
+|WebAsyncRefreshPanel
+|ASP.NET AJAX UpdatePanel
+
+|WebPanel
+|WebExplorerBar
+
+|WebNavBar
+|WebDataMenu
+
+|WebGridExcelExporter
+|WebExcelExporter (with WebDataGrid/WebHierarchicalDataGrid)
+
+|WebGridDocumentExporter
+|WebDocumentExporter (with WebDataGrid/WebHierarchicalDataGrid)
+
+|====
+
+== Related Items
+
+* link:http://dl.infragistics.com/pg/cheat-sheet/InfragisticsASPNETGridCheatSheet.pdf[Infragistics ASP.NET Grid Feature Cheat Sheet]

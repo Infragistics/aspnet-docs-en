@@ -1,0 +1,51 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-api-overview",
+    "controlName": ["WebSchedule"],
+    "tags": ["API"],
+    "guid": "{5DD82A3B-0163-46A9-B0B2-D4FCB4793ABA}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+[cols="a,a"]
+|====
+|*WebSchedule Namespace:* 
+
+link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule_namespace.html[Infragistics.WebUI.UltraWebSchedule]
+|*KeyClasses:* 
+
+link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity] +
+
+link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment] + 
+
+link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webcalendarview.html[WebCalendarView] +
+
+link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview.html[WebDayView] + 
+
+link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview.html[WebMonthView] +
+
+link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo.html[WebScheduleInfo]
+
+|*Data Namespace:* 
+
+link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data_namespace.html[Infragistics.WebUI.Data]
+|*Key Classes:* 
+
+link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledataproviderbase.html[WebScheduleDataProviderBase] +
+
+link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider.html[WebScheduleDbProvider] + 
+
+link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduleoledbprovider.html[WebScheduleOleDbProvider] +
+
+link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulesqlclientprovider.html[WebScheduleSqlClientProvider]
+
+|====

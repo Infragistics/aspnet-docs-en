@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-template-control-bindings",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Data Binding","Grids"],
+    "guid": "{8AB75020-EA0E-4EDF-881B-E505D1D1C32A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Template Control Bindings
+
+You can bind any controls used in a template to any fields in WebDataGrid™. You can also specify a custom evaluation statement to bind the controls. WebDataGrid provides a smart tag for every control present in any one of its templates. The smart tag gives you the option to edit the data binding of the control through an easy-to-use editor.
+
+== Smart Tag
+
+When you click on a control inside a WebDataGrid template, the control displays a smart tag. Click the tag and a link to edit the data bindings for the control will appear.
+
+image::images\WebDataGrid_Template_Control_Bindings_01.png[]
+
+== Data Bindings Editor
+
+The Data Bindings editor presents a list of properties in a control. It also gives you a Field Binding and a Custom Binding option. The Field Binding option gives you a dropdown list with all the available fields in WebDataGrid that you can bind to. The Custom Binding option allows you to specify a code expression to do a custom bind. Select a property and choose an option to specify what that property will bind to.
+
+image::images\WebDataGrid_Template_Control_Bindings_02.png[]
+
+The format field of the data bindings editor allows you to specify a custom display format. The special string "{0}" is used to display the actual value. For example, you can specify a string of "CustomerID: {0}" for the format field in order to display "CustomerID: " followed by the value of the cell.
+
+.Note:
+[NOTE]
+====
+This type of data binding is one way only; you will only see changes reflected from data source to editor control, not the other way around. To persist any changes within an editor control in a template, you need to access the control and save the value manually.
+====

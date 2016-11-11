@@ -1,0 +1,32 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-guidelines-for-customizing-the-appointments-and-reminders-forms",
+    "controlName": ["WebSchedule"],
+    "tags": ["Scheduling","Styling"],
+    "guid": "{928A3E2D-4B00-4066-AC88-B38542609D0C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Guidelines for Customizing the Appointments and Reminders Forms
+
+WebSchedule™ contains an ASP.NET project that maintains the dialog box forms that are displayed for adding and editing appointments, as well as the dialog box that displays activity reminders. You can customize these forms for individual applications, as long as a few basic rules are followed to allow the forms to operate correctly and fulfill their function.
+
+The forms can be opened, edited and styled within Visual Studio .NET and then compiled and saved for access from within the WebSchedule elements. The location of the Forms project and the dialog pages can be changed to any virtual directory on the system. Use the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~appointmentformpath.html[WebScheduleInfo.AppointmentFormPath]"]  and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~reminderformpath.html[WebScheduleInfo.ReminderFormPath]"]  to change the path or file name of the WebSchedule forms.
+
+If you make any changes to the Forms project and its ASPX pages, it is highly recommended that you copy those pages to a different virtual directory for testing and deployment. The reason is that any upgrades or hot fixes to the product that get installed on the machine are likely to install over the changed files. Therefore, all customizations to the Forms project should be carried out in a virtual directory that is different than the default. The default installation directory is located under the ig_common virtual root.
+
+The following are several guidelines that you should follow when customizing the Appointments and Reminders forms:
+
+[start=1]
+. Do not remove any form elements from the page. If one or more form elements are not needed, you should hide them by setting the Visible property to ".
+[start=2]
+. Do not change the ID property of any of the form elements on the page; otherwise, JavaScript errors may occur at run time.
+[start=3]
+. Do not remove or change any of the JavaScript code on the forms; otherwise, error may occur at run time.
+[start=4]
+. Items of the form elements that are most likely (and can) be customized are: fonts, text, colors, styles positions and sizes.

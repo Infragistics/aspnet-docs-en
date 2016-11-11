@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-retrieve-a-reference-to-the-webscheduleinfo-object-on-the-client-side",
+    "controlName": ["WebScheduleInfo"],
+    "tags": [],
+    "guid": "{8516D208-550F-487D-9F61-34231E3194F1}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Retrieve a Reference to the WebScheduleInfo Object on the Client Side
+
+When working with WebScheduleInfo™, you may want perform some actions client-side. In order to do this, you have to get a reference to the WebScheduleInfo object. We provide a utility function that allows you to pass in the Id of the WebScheduleInfo and get a reference to WebScheduleInfo.
+
+The code below gets a reference to the WebScheduleInfo and displays an alert box that shows the WebScheduleInfo's ID.
+
+*In JavaScript:*
+
+----
+function GetWebScheduleInfoReference()
+{
+        var scheduleInfo = ig_getWebScheduleInfoById("WebScheduleInfo1");
+        alert(scheduleInfo.getID());
+}
+----

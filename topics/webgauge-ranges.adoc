@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-ranges",
+    "controlName": ["WebGauge"],
+    "tags": [],
+    "guid": "929706ec-c075-4e30-9a31-cb2cfd0f1b33",  
+    "buildFlags": [],
+    "createdOn": "2012-04-23T12:13:59.6304005Z"
+}
+|metadata|
+////
+
+= Ranges
+
+This section provides you with useful information about the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gaugerange.html[Ranges]"]  property of the WebGauge control, as well as a task-based procedure on how to add ranges to the scales of your gauge:
+
+* link:webgauge-about-gauge-ranges.html[About Gauge Ranges]
+* link:webgauge-add-a-range-to-a-gauge.html[Add a Range to a Gauge]

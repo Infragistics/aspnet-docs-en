@@ -1,0 +1,31 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-tips-and-tricks",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids"],
+    "guid": "6c9af7fa-f7e2-43fe-957e-dc0b95a00fb4",  
+    "buildFlags": [],
+    "createdOn": "2010-11-15T15:25:25.6659188Z"
+}
+|metadata|
+////
+
+= Tips And Tricks
+
+link:webdatagrid-getting-started-with-webdatagrid-enabledataviewstate-property.html[EnableDataViewState Property]
+
+This topic describes how to store the control's data in ViewState.
+
+link:webdatagrid-refreshing-webdatagrid-when-autocrud-is-turned-off.html[Refreshing WebDataGrid when AutoCRUD is Turned off]
+
+This topic describes how to force the update of control's HTML on asynchronous post backs.
+
+link:webdatagrid-conditional-batch-updating-in-webdatagrid.html[Conditional Batch Updating in WebDataGrid]
+
+This topic describes how to perform any necessary logic on a row batch before updating the datasource by handling the update events of the data source.
+
+link:webdatagrid-persistent-selection.html[Persistent Selection]
+
+This topic describes how to identify in and out-of-scope selected rows in the WebDataGrid when paging and virtual scrolling are enabled.

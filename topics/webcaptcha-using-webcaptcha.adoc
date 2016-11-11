@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcaptcha-using-webcaptcha",
+    "controlName": ["WebCaptcha"],
+    "tags": ["API","How Do I","Validation"],
+    "guid": "884840c4-9d87-470c-9af9-d5374580134c",  
+    "buildFlags": [],
+    "createdOn": "2010-05-31T11:50:47.0770544Z"
+}
+|metadata|
+////
+
+= Using WebCaptcha
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebCaptcha™.
+
+link:webcaptcha-protection-modes.html[Protection Modes]
+
+You can learn about the three basic protection modes supported by WebCaptcha in this section.
+
+link:webcaptcha-dictionary-modes.html[Dictionary Modes]
+
+The WebCaptcha can generate random text, read a specific dictionary from a file or ask for an answer to a logical question. You can learn how to use the different modes in this section.
+
+link:webcaptcha-captcha-validation.html[Captcha Validation]
+
+The WebCaptcha can validate on both client and server side and in this section you can learn how to switch between the two.
+
+link:webcaptcha-configuring-captcha-buttons.html[Configuring Captcha Buttons]
+
+You can style the buttons rendered by the WebCaptcha seperately. In this section you can learn how to accomplish this.
+
+link:webcaptcha-configuring-captcha-image-properties.html[Configuring Captcha Image Properties]
+
+There is a variety of properties that are used to modify the Captcha image. You can learn more about them in this section.
+
+link:webcaptcha-configuring-captcha-input-field.html[Configuring Captcha Input Field]
+
+In this section you can learn how to configure the WebCaptcha input field.
+
+link:webcaptcha-configuring-captcha-audio.html[Configuring Captcha Audio]
+
+The WebCaptcha supports the functionality to spell the required word or question. This sections contains details on configuring and customizing it.

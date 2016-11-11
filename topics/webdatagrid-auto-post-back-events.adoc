@@ -1,0 +1,40 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-auto-post-back-events",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Events","Grids"],
+    "guid": "{02B2AD35-282E-497B-BBE2-48F0F55AE88A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Auto Post Back Events
+
+The WebDataGrid™ has behaviors that do not post back by default but you may want to trigger a postback automatically. For this reason, the behavior exposes an AutoPostBack property that you can set to trigger the correpsonding server-side event.
+
+The following lists the behaviors that have the AutoPostBack property and the events that they trigger.
+
+* Activation - ActiveCellChanged event is raised when a cell is activated.
+* Column Resizing - ColumnResized event is raised when a column is resized.
+* Selection - CellSelectionChanged, ColumnSelectionChanged, or RowSelectionChanged is raised when a cell is selected.
+
+If you have Ajax enabled, then the events are raised asynchronously; if not, you will get a full page postback.
+
+The following code shows you how to set the AutoPostBack property for cell selection and handle the CellSelectionChanged event.
+
+*In HTML:*
+
+----
+<ig:WebDataGrid ID="WebDataGrid1" runat="server" Height="350px" Width="400px" 
+    oncellselectionchanged="WebDataGrid1_CellSelectionChanged" >
+    <Behaviors>
+        <ig:Selection>
+            <AutoPostBackFlags CellSelectionChanged="True" />
+        </ig:Selection>
+    </Behaviors>
+</ig:WebDataGrid>
+----

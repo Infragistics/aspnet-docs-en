@@ -1,0 +1,73 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-using-webtab",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I"],
+    "guid": "{6FB1270E-EC4C-470C-BF75-2FE9385195F6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebTab
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebTab™.
+
+link:webtab-header-and-content-panes.html[Header and Content Panes]
+
+In this section you can learn how to customize both the header and the content panes of the WebTab control.
+
+link:webtab-tab-states.html[Tab States]
+
+The WebTab control can have tabs with different states that are indicated by different styles. You can learn more about these states in this section.
+
+link:webtab-ajax-indicator-support-for-webtab.html[Ajax Indicator Support for WebTab]
+
+You can learn how to use the Ajax indicator when the control is waiting for a callback in this section.
+
+link:webtab-display-modes.html[Display Modes]
+
+In this section you can learn about the various display modes supported by the WebTab control.
+
+link:webtab-animations.html[Animations]
+
+The WebTab control provides animations when a tab is opening or closing. You can learn how to use the animations in this section.
+
+link:webtab-handling-overflow-in-webtab.html[Handling Overflow in WebTab]
+
+In this section you can learn how to handle tabs overflow with the WebTab control.
+
+link:webtab-keyboard-navigation.html[Keyboard Navigation]
+
+You can learn about the supported keys for navigating through the control in this section.
+
+link:webtab-load-on-demand.html[Load on Demand]
+
+You can learn how to enable load on demand for the WebTab control in this section.
+
+link:webtab-orientation-and-alignment.html[Orientation and Alignment]
+
+This section explains how orientation and alignment is handled in the WebTab control
+
+link:webtab-overlapping-tabs.html[Overlapping Tabs]
+
+You can learn how to enable tabs overlapping in this section.
+
+link:webtab-tab-moving.html[Tab Moving]
+
+WebTab supports tab moving by mouse drag. More information about how to enable the functionality can be found in this section.
+
+link:webtab-scrolling.html[Scrolling]
+
+You can learn more about scrolling through tabs with the WebTab control in this section.
+
+link:webtab-validation-in-webtab.html[Validation in WebTab]
+
+In this section you can learn how to set validation for tabs in the WebTab control.
+
+link:webtab-webtab-smart-tag.html[WebTab Smart Tag]
+
+In this section you can learn about the WebTab Smart Tag.

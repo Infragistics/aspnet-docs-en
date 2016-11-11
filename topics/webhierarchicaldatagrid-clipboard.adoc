@@ -1,0 +1,197 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-clipboard",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Editing","Grids"],
+    "guid": "fdda1c36-8830-4bff-b930-b2210dec8665",  
+    "buildFlags": [],
+    "createdOn": "2011-10-21T08:27:07.06481Z"
+}
+|metadata|
+////
+
+= Clipboard
+
+=== Purpose
+
+This topic explains how to configure Clipboard support for the WebDataGrid™ and WebHierarchicalDataGrid™controls.
+
+[[_anchor_1]]
+
+=== In this topic
+
+This topic contains the following sections:
+
+* <<_Clipboard_Configuration_Overview,Clipboard Configuration Overview>>
+* <<_Enabling_Clipboard_Support,Enabling Clipboard Support>>
+* <<_Configuring_the_cut,Configuring the Cut, Copy, and Paste Functionalities Individually>>
+
+** <<_Individual_clipboard_functionalitie,Individual clipboard functionalities support>>
+** <<_Configuring_the_property,Configuring the property settings for partial clipboard support>>
+** <<_Example_allowing_only,Example: allowing only copy operations>>
+
+* <<_Copying_Column_Headers,Copying Column Headers>>
+
+** <<_Copying_column_headers_1,Copying column headers overview>>
+** <<_Copying_column_headers_2,Copying column headers property settings>>
+
+* <<_Related_Topics,Related Topics>>
+
+=== Required background
+
+You need to first read the following topics:
+
+* link:webhierarchicaldatagrid-getting-started-with-webhierarchicaldatagrid.html[Getting Started with WebHierarchicalDataGrid]
+* link:webdatagrid-using-behaviors.html[Adding a Behavior at Design Time]
+* link:webdatagrid-adding-a-behavior-at-runtime.html[Adding a Behavior at Runtime]
+* link:known-issues-known-issues-and-breaking-changes-revision-history.html[Known Issues and Breaking Changes]
+
+.Note:
+[NOTE]
+====
+There are numerous browser limitations when accessing the Clipboard. Please refer to the link:known-issues-known-issues-and-breaking-changes-revision-history.html[Known Issues and Breaking Changes] topic for details regarding browser support.
+====
+
+== Clipboard Configuration Overview
+
+=== Introduction
+
+Using the standard keyboard shortcuts of CTRL+C to copy, CTRL+V to paste, and CTRL+X to cut users can manipulate the grid’s data in the clipboard.
+
+The Clipboard behavior is added to the grid like the other grid behaviors through markup, code, or the designer. The Selection and Activation behaviors are required to select cells for copying. The Editing core behavior is required to store pasted data over post backs.
+
+=== Clipboard configuration chart
+
+The table below lists the configurableClipboard behaviors of the WebDataGrid and WebHierarchicalDataGrid.
+
+[options="header", cols="a,a,a"]
+|====
+|Configurable behavior|Configuration details|Configuration properties
+
+|*Clipboard support*
+|Adds the Clipboard behavior to the grid.
+|
+* Behaviors 
+
+|*Configuring cut, copy, and paste* *individually*
+|The cut, copy, and paste operations can be turned on or off independently of each other.
+|
+* EnableCopy 
+
+* EnableCut 
+
+* EnablePaste 
+
+|*Copying column headers*
+|Configures the copy and paste operations to copy the column header text for pasting into another application.
+|
+* CopyColumnHeader 
+
+|====
+
+== Enabling Clipboard Support
+
+*In ASPX:*
+
+----
+<ig:WebHierarchicalDataGrid ID="wdg1" runat="server">
+    <Behaviors>
+        <ig:Clipboard />
+    </Behaviors> 
+</ig:WebHierarchicalDataGrid>
+----
+
+*In C#:*
+
+----
+Clipboard gridClipboard = this.WebHierarchicalDataGrid1.Behaviors.CreateBehavior<Clipboard>();
+----
+
+*In Visual Basic:*
+
+----
+Dim gridClipboard As Clipboard = Me.WebHierarchicalDataGrid1.Behaviors.CreateBehavior(Of Clipboard)()
+----
+
+== Configuring the Cut, Copy, and Paste Functionalities Individually
+
+=== Individual clipboard functionalities support
+
+The copy operation can be turned on or off independently of the other behaviors. The cut and paste behaviors can be individually configured as well. In order to only allow copying, you must disable the cut and paste operations. All clipboard features are turned on by default when adding the Clipboard behavior.
+
+=== Configuring the property settings for partial clipboard support
+
+The table below maps the desired behaviors to property settings. The properties are accessed through the WebHierarchicalDataGrid’s Clipboard behavior. 
+
+[options="header", cols="a,a,a"]
+|====
+|In order to…|Use this property:|And set it to...
+
+|*Disable cut operations*
+|EnableCut
+|_false_
+
+|*Disable copy operations*
+|EnableCopy
+|_false_
+
+|*Disable paste operations*
+|EnablePaste
+|_false_
+
+|====
+
+=== Example: allowing only copy operations
+
+Allowing only copy operations can be seen in the grid as a result of the following settings:
+
+[options="header", cols="a,a"]
+|====
+|Property|Setting
+
+|EnableCut
+|_false_
+
+|EnablePaste
+|_false_
+
+|====
+
+For detailed information about these properties, refer to their listing in the property reference section:
+
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.clipboard.html[Clipboard API Documentation]
+
+[[_anchor_7]]
+
+=== Copying column headers overview
+
+You can configure the Clipboard behavior to copy the column header information so that when the values are pasted into another application such as Excel®, the data is pasted underneath the copied header information.
+
+image::Images/WebDataGrid_Clipboard_01.png[]
+
+image::Images/WebDataGrid_Clipboard_02.png[]
+
+=== Copying column headers property settings
+
+The table below maps the desired behaviors to property settings. The properties are accessed through the Clipboard behavior.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to…|Use this property:|And set it to...
+
+|*Enable column headers to be copied*
+|CopyColumnHeader
+|_true_
+
+|====
+
+== Related Topics
+
+Following are some other topics you may find useful.
+
+* link:webdatagrid-removing-a-behavior.html[Removing a Behavior]
+* link:webhierarchicaldatagrid-activation.html[Activation]
+* link:webhierachicaldatagrid-selection.html[Selection]
+* link:webhierarchicaldatagrid-cell-editing.html[Cell Editing]

@@ -1,0 +1,58 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-disabling-drop-down-items",
+    "controlName": ["WebDropDown"],
+    "tags": [],
+    "guid": "{040D42D9-AFA3-4F82-969D-EB03D74E72DB}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Disabling Drop-Down Items
+
+WebDropDown™ allows individual items to be disabled. For instance, you may not want the end-users to select or activate particular items in the drop-down container. You may even want to avoid auto-filtering on certain items. This functionality can be achieved by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem.html[DropDownItem]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem~disabled.html[Disabled]"]  property.
+
+== To disable individual drop-down items:
+
+[start=1]
+. Place a ScriptManger component and a WebDropDown control on the form and leave their default names.
+[start=2]
+. Add items to WebDropDown by creating an instance of DropDownItem and add it to the Items collection using the Add method.
+
+*In Visual Basic:*
+
+[source]
+----
+Dim india As New DropDownItem()india.Text = "India"WebDropDown1.Items.Add(india)Dim usa As New DropDownItem()usa.Text = "U.S.A"WebDropDown1.Items.Add(usa)Dim singapore As New DropDownItem()singapore.Text = "Singapore"WebDropDown1.Items.Add(singapore)Dim bulgaria As New DropDownItem()bulgaria.Text = "Bulgaria"WebDropDown1.Items.Add(bulgaria)
+----
+
+*In C#:*
+
+[source]
+----
+DropDownItem india = new DropDownItem();india.Text = "India";WebDropDown1.Items.Add(india);DropDownItem usa = new DropDownItem();usa.Text = "U.S.A";WebDropDown1.Items.Add(usa);DropDownItem Singapore = new DropDownItem();Singapore.Text = "Singapore";WebDropDown1.Items.Add(Singapore);DropDownItem Bulgaria = new DropDownItem();Bulgaria.Text = "Bulgaria";WebDropDown1.Items.Add(Bulgaria);
+----
+
+[start=3]
+. Disable the singapore drop-down item by setting its Disabled property to true.
+
+*In Visual Basic:*
+
+----
+singapore.Disabled = True
+----
+
+*In C#:*
+
+----
+singapore.Disabled = true;
+----
+
+[start=4]
+. Save and run the application. You will see that you can neither select nor activate the singapore item.
+
+image::images\WebDropDown_Disabling_Drop_Down_Items_01.png[]

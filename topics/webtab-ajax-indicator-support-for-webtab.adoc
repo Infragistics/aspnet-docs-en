@@ -1,0 +1,87 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-ajax-indicator-support-for-webtab",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I"],
+    "guid": "{CA9E3FF3-9EAC-46C7-8D91-D376AC242362}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Ajax Indicator Support for WebTab
+
+The WebTab™ control’s AJAX Indicator displays a wait notification for end users whenever the control is waiting for a callback to complete. By default, the AJAX Indicator is shared with other Infragistics ASP.NET AJAX controls; however the shared AJAX Indicator settings can be overridden on the control level. The wait message is configurable to show text or an image, by using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~text.html[Text]"]  or the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~imageurl.html[ImageUrl]"]  property settings. You can also set the screen location of the indicator by using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~location.html[Location]"]  property. For more information on the AJAX Indicator please see the link:web-ajax-indicator.html[About AJAX Indicator] topic.
+
+.Note:
+[NOTE]
+====
+Ajax Indicator is not only used for Ajax requests made by UpdatePanels, but also for ContentUrls (local aspx pages).
+====
+
+*In HTML:*
+
+----
+<AjaxIndicator Enabled="True" Text="Ajax Call Wait"  Location="AboveCenter" RelativeToControl="True" />
+----
+
+*In Visual Basic:*
+
+----
+' Enable Ajax Indicator at control level
+Me.WebTab1.AjaxIndicator.Enabled = Infragistics.Web.UI.DefaultableBoolean.True 
+' Set the Ajax Indicator’s wait message 
+Me.WebTab1.AjaxIndicator.Text = "Ajax Call Wait" 
+' Set the Ajax Indicator’s Location 
+Me.WebTab1.AjaxIndicator.Location = Infragistics.Web.UI.RelativeLocation.AboveCenter 
+' Set the location of the Ajax Indicator specific to the control. 
+Me.WebTab1.AjaxIndicator.RelativeToControl = Infragistics.Web.UI.DefaultableBoolean.True
+----
+
+*In C#:*
+
+----
+// Enable Ajax Indicator at control level
+this.WebTab1.AjaxIndicator.Enabled = Infragistics.Web.UI.DefaultableBoolean.True;
+// Set the Ajax Indicator’s wait message
+this.WebTab1.AjaxIndicator.Text = "Ajax Call Wait";
+// Set the Ajax Indicator’s Location
+this.WebTab1.AjaxIndicator.Location = Infragistics.Web.UI.RelativeLocation.AboveCenter;
+// Set the location of the Ajax Indicator specific to the control.
+this.WebTab1.AjaxIndicator.RelativeToControl = Infragistics.Web.UI.DefaultableBoolean.True;
+----
+
+== Related Topics
+
+link:webtab-about-webtab.html[About WebTab]
+
+link:webtab-getting-started-with-webtab.html[Getting Started with WebTab]
+
+link:webtab-header-and-content-panes.html[Header and Content Panes]
+
+link:webtab-tab-states.html[Tab States]
+
+link:webtab-display-modes.html[Display Modes]
+
+link:webtab-animations.html[Animations]
+
+link:webtab-handling-overflow-in-webtab.html[Handling Overflow in WebTab]
+
+link:webtab-load-on-demand.html[Load on Demand]
+
+link:webtab-orientation-and-alignment.html[Orientation and Alignment]
+
+link:webtab-overlapping-tabs.html[Overlapping Tabs]
+
+link:webtab-tab-moving.html[Tab Moving]
+
+link:webtab-scrolling.html[Scrolling]
+
+link:webtab-validation-in-webtab.html[Validation in WebTab]
+
+link:webtab-api-overview.html[API Overview]
+
+link:webtab-client-side-object-model.html[Client-Side Object Model(CSOM) Overview]

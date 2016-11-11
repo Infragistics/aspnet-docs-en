@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-introducing-application-styling-for-asp-net",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Getting Started"],
+    "guid": "{E0835F18-A0EA-441A-A5C1-34A8A28CBADE}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Introducing Application Styling for ASP.NET
+
+For several years now, Web page design has relied on the versatility and power of cascading style sheets. These style sheets not only define a graphical ruleset for your web page, but they organize and categorize different looks and feels according to a cascade, or inheritance effect. A great thing about cascading style sheets is that you don't have to use inline styles, all styles can be defined through assigning a class to a div, paragraph, id, or span tag. This is where Application Styling takes full advantage of style sheets.
+
+Each Infragistics ASP.NET control/component has several states that they can exist in. For example, a button can be in its normal state, a hovered state, or even a pressed state. Each of these states is represented by a class in the style sheet - and each control is represented by an entire style sheet.

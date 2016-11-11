@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatetimeeditor-using-webdatetimeeditor",
+    "controlName": ["WebDateTimeEditor"],
+    "tags": [],
+    "guid": "{49F0EA3C-4DD9-4652-9645-A365DA8C2E3B}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T17:01:51Z"
+}
+|metadata|
+////
+
+= Using WebDateTimeEditor
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebDateTimeEditor™.
+
+link:webdatetimeeditor-edit-and-display-modes-in-webdatetimeeditor.html[Edit and Display Modes in WebDateTimeEditor]
+
+In this section you can learn how to set different edit and display modes for the WebDateTimeEditor control.
+
+link:webdatetimeeditor-reducing-day-on-invalid-date-in-webdatetimeeditor.html[Reducing Day on Invalid Date in WebDateTimeEditor]
+
+In this section you can learn how the WebDateTimeEditor control handles the common situation in which the end user picks an inexistent date.
+
+link:webdatetimeeditor-setting-minimum-and-maximum-values-for-webdatetimeeditor.html[Setting minimum and maximum values for WebDateTimeEditor]
+
+In this section you can learn how to set minimum and maximum values for the WebDateTimeEditor control.
+
+link:webdatetimeeditor-setting-prompt-character-for-webdatetimeeditor.html[Setting Prompt Character for WebDateTimeEditor]
+
+You can learn how to set the prompt character for the WebDateTimeEditor control in this section.
+
+link:webdatetimeeditor-setting-the-culture-of-webdatetimeeditor.html[Setting the Culture of WebDateTimeEditor]
+
+This section contains information about setting a specific culture for the WebDateTimeEditor control.
+
+link:webdatetimeeditor-spinning-through-a-list-of-values-in-webdatetimeeditor.html[Spinning through a list of values in WebDateTimeEditor]
+
+In this section you can learn how to use spin buttons in the control to spin through a list of values.
+
+link:webdatetimeeditor-using-custom-button-in-webdatetimeeditor.html[Using Custom Button in WebDateTimeEditor]
+
+In this section you can learn how to implement a customized button and use it to perform custom actions.
+
+link:webdatetimeeditor-webdatetimeeditor-smart-tag.html[WebDateTimeEditor Smart Tag]
+
+In this section you can learn about the WebDateTimeEditor Smart Tag.

@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-performance",
+    "controlName": ["WebSchedule"],
+    "tags": ["Performance"],
+    "guid": "{E0531EA5-B459-4AE5-B24D-5781E75B8845}",  
+    "buildFlags": [],
+    "createdOn": "2005-01-08T00:00:00Z"
+}
+|metadata|
+////
+
+= Performance
+
+WebSchedule™ is designed to work without ViewState. Therefore, if you want to disable ViewState, the WebSchedule controls will continue to function.
+
+In addition, the WebSchedule controls are designed to take advantage of Smart Navigation.
+
+* link:webschedule-enabling-smart-callbacks-ajax-for-webschedule-controls.html[Enabling Smart Callbacks (AJAX) for WebSchedule Controls]
+* link:webschedule-limiting-appointment-dates-and-times.html[Limiting Appointment Dates and Times]
+* link:webschedule-stop-the-webscheduleviews-from-synchronizating.html[Stop the WebSchedule Views from Synchronizing]

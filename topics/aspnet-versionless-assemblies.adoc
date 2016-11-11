@@ -1,0 +1,93 @@
+﻿////
+
+|metadata|
+{
+    "name": "aspnet-versionless-assemblies",
+    "controlName": [],
+    "tags": ["API","Application Scenarios","How Do I"],
+    "guid": "a0c2d737-4756-4924-a58a-44f89b114218",  
+    "buildFlags": [],
+    "createdOn": "2010-10-07T07:12:19.9589688Z"
+}
+|metadata|
+////
+
+= Version-less Assemblies
+
+== Before You Begin
+
+ASP.NET applications built with the Infragistics ASP.NET™ toolset have in the past used assemblies with version numbers embedded in the file names in order to avoid version collisions. While version safety is valuable in many situations, there are times when you may want to be able to drop new versions of the toolset into applications without having to update configuration files to reflect the new version numbers.
+
+== Which Runtime is Version-less Assemblies Compiled Against?
+
+While Infragistics ships Infragistics ASP.NET compiled against a number of different runtimes, the DLLs with version-less assembly names will always be compiled against the latest version of the ASP.NET runtime.
+
+== What You Will Accomplish
+
+You learn to take an existing ASP.NET application and update reference and configuration information to run against DLLs with version-less assembly names.
+
+== Follow these Steps:
+
+First, create an application as usual using regular versioned assemblies.
+
+When your application is ready for publishing, remove the references to the DLLs with versioned assembly names and add references to the version-less assemblies. You may place the version-less DLLs in the bin folder of your application or in the GAC.
+
+Next, you must update application to reference the control DLLs using version-less assembly names by removing reference to the versioned DLLs in the application’s References dialog and add references to the version-less assemblies.
+
+When setting reference to the DLLs with version-less assembly names, make sure you configure the References properties to set SpecificVersion equal to false and CopyLocal equal to true.
+
+Once your application is published to it's desired location, open the Web.config file and edit the assemblies references.
+
+.Note:
+[NOTE]
+====
+It’s recommended that you move control references to the Web.config file. This helps to centralize the application's access to the controls, otherwise you must change the version information in every .aspx or .ascx file.
+====
+
+The following example depicts entries in the Web.config file referencing DLLs with versioned assembly names:
+
+[cols="a"]
+|====
+|In Web.config:
+
+|   
+
+< tagPrefix="ig"> 
+
+namespace="Infragistics.Web.UI.GridControls" 
+
+assembly="Infragistics4.Web.v10.3, Version=10.3.20103.100, Culture=neutral, PublicKeyToken=7DD5C3163F2CD0CB" />       
+
+...  
+
+|====
+
+To allow your application to access the version-less assemblies you must remove the version numbers from the assembly references as demonstrated below:
+
+[cols="a"]
+|====
+|In Web.config:
+
+|   
+
+< tagPrefix="ig"> 
+
+namespace="Infragistics.Web.UI.GridControls" 
+
+assembly="Infragistics.Web" />       
+
+...  
+
+|====
+
+.Note:
+[NOTE]
+====
+You may have to change the version information in your .licx file as well.
+====
+
+Removing the version information from the Web.config file and referencing the application to the version-less assemblies will allow your application to run agnostic Infragistics control version numbers.
+
+== Application Maintenance
+
+As of the 2010.3 release, the version-less assemblies only support the DLLs to run the application. Should you need to open the application in Visual Studio™then you must revert the application to using versioned assembly names in order to get designer support. Once updates to the application are complete, you may configure the application to use the version-less assembly names once again before publishing.

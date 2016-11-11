@@ -1,0 +1,34 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-create-an-object-the-updates-an-activitys-properties",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{A0671382-6E08-46F4-AEA9-2E35017975C7}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Create an Object that Updates an Activity's Properties
+
+If you update  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  client-side you will need to create an object that mimics the properties of an activity. You can list every property if you are updating every property of the activity, but you can also define only the properties you want to update in the object and exclude the ones you don't want to update.
+
+The JavaScript code snippet below shows how to create an object that updated all the properties of an activity.
+
+*In JavaScript:*
+
+----
+var activityUpdateProps =  {StartDateTime: new Date(),
+			Duration: 30,
+			Subject: "Update Appointment",
+			Location: "Here",
+			Description: "No Description",
+			AllDayEvent: false,
+			EnableReminder: true,
+			ShowTimeAs: 1,
+			Importance: 1,
+			ReminderInterval: 9000000000};
+----

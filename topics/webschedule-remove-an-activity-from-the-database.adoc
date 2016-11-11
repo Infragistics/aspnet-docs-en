@@ -1,0 +1,57 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-remove-an-activity-from-the-database",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{970F415E-02FA-4964-9B02-798B929578E4}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Remove an Activity from the Database
+
+In server-side code behind you can delete an existing  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  from the database. This may be required when users direct your application to remove an Activity outside of the Edit Appointment dialog, or as part of maintenance to clean-up Activities that have exceeded an age threshold (i.e., 12 months.)
+
+This example makes use of the link:webschedule-locate-an-activity.html[How to Locate an Activity] topic.
+
+Add an ASP.NET Button to your web form named "RemoveButton1", and handle it's Click event. In the event handler, RemoveButton1_Click, you will locate an Activity object to be deleted (you may be able to obtain this from input through a TextBox or other user selection criteria), and then call the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider~removeactivity.html[RemoveActivity]"]  method on the data provider.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.Shared
+Imports Infragistics.WebUI.WebSchedule
+...
+Private Sub RemoveButton1_Click(ByVal sender As Object, _
+	ByVal e As EventArgs) Handles RemoveButton1.Click
+	'Find the Appointment object to be deleted.
+	Dim appt As Appointment = Me.FindAppointment()
+	'Delete the Appointment from the database.
+	Me.WebScheduleSqlClientDataProvider1.RemoveActivity(appt)
+End Sub
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.Shared;
+using Infragistics.WebUI.WebSchedule;
+...
+private void RemoveButton1_Click(object sender, EventArgs e)
+{
+	// Find the Appointment object to be deleted.
+	Appointment appt = this.FindAppointment();
+	// Delete the Appointment from the database.
+	this.WebScheduleSqlClientDataProvider1.RemoveActivity(appt);
+}
+----
+
+.Note:
+[NOTE]
+====
+Although this example shows the Microsoft SQL Server data provider being used, this works with any data provider derived from WebScheduleDbProvider including OLE DB.
+====

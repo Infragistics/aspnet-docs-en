@@ -1,0 +1,33 @@
+﻿////
+|metadata|
+{
+    "name": "webdropdown-templating",
+    "controlName": ["WebDropDown"],
+    "tags": ["Templating"],
+    "guid": "{179DADE9-BCA0-4556-8AC8-CBA385D092B2}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Templating
+
+WebDropDown™ supports templating, which allows you to define an item template that can be used to customize the appearance of value list items. The Item template can be defined using the ItemTemplate property. Auto complete and filtering can be performed on the WebDropDown even when templating is applied. Using the templating feature, you can also define a custom control to be in the drop-down container.
+
+
+.Note:
+[NOTE]
+====
+There can be only one custom control in the items list. For example, you can have either the WebCalendar™ control or the WebGrid™ control but not both in the drop-down list.
+====
+
+In order to set the value display of the WebDropDown control, you need to handle the client-side events that the underlying control offers.If multiple columns are in the template instead of a simple list, you can set the WebDropDown control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField] property to the column name you want to show in the value display.
+
+WebDropDown not only allows you to set the item template for the contents, but also allows you to set the templates for the header and footer contents of the drop-down container using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~headertemplate.html[HeaderTemplate] and link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~footertemplate.html[FooterTemplate] properties. You can also apply a template to the loading message when the load-on-demand feature is enabled using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~loadingitemsmessagetemplate.html[LoadingItemsMessageTemplate] property.
+
+Click the links below to find more information on how to use templating in WebDropDown:
+
+* link:webdropdown-assigning-templates-to-individual-items-using-the-templates-collection.html[Assigning templates to individual items using the templates collection]
+* link:webdropdown-create-a-multi-column-webdropdown-using-templates.html[Create a Multi-Column WebDropDown using Templates]
+* link:webdropdown-using-loading-items-message-template-in-webdropdown.html[Using loading items message template in WebDropDown]

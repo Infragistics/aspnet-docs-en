@@ -1,0 +1,174 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-referencing-rows-when-using-outlook-groupby",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Editing","Grids","Grouping"],
+    "guid": "{EA7D3665-DFD1-4EED-B643-1BEA5842EA95}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Referencing Rows When Using Outlook GroupBy
+
+== Group Row
+
+When using the GroupBy feature in WebHierarchicalDataGrid™, the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid] object groups a column's data into grouped rows represented by the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid~groupedrows.html[GroupedRows] property of type link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecordcollection.html[GroupedRecordCollection]. To access the data row, you must first access this collection of link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecord.html[GroupedRecord] objects.
+
+== Getting Grouped Data Rows
+
+When grouping columns, WebHierarchicalDataGrid still provides a link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergridrecord.html[ContainerGridRecord] collection using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rows.html[Rows] property for you to access the data rows it is bound to; however, if you want only the data rows for a specific group, you must use the GroupedRows property.
+
+The following code shows you how to access the data rows for the first grouped row in the group rows collection. The serverside code accesses the GroupedRecord object's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecord~rows.html[Rows] property, which returns an enumerator for the data rows. The clientside code calls the group row's get_rows method to get the data rows.
+
+*In Visual Basic:*
+
+----
+Dim groupedRows As GroupedRecordCollection = Me.WebHierarchicalDataGrid1.GridView.GroupedRows
+While groupedRows(0).Rows.MoveNext()
+    Dim row As ContainerGridRecord = TryCast(groupedRows(0).Rows.Current, ContainerGridRecord)
+End While
+----
+
+*In C#:*
+
+----
+GroupedRecordCollection groupedRows = this.WebHierarchicalDataGrid1.GridView.GroupedRows;
+while (groupedRows[0].Rows.MoveNext())
+{
+    ContainerGridRecord row = groupedRows[0].Rows.Current as ContainerGridRecord;
+}
+----
+
+*In Javascript:*
+
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var groupRow = grid.get_gridView().get_groupRows().get_row(0);
+var row;
+for (var i = 0; i < groupRow.get_rows().length; i++) {
+    row = groupRow.get_rows()[i];
+}
+----
+
+== Child Group Rows
+
+If your data has child groupings, you can access them by accessing the child link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecordcollection.html[GroupedRecordCollection] object using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecord~childgrouprows.html[ChildGroupRows] property of the parent GroupedRecord object.
+
+The following code is similar to the code above, except it gets the data rows for the first child group row.
+
+*In Visual Basic:*
+
+----
+Dim groupedRows As GroupedRecordCollection = Me.WebHierarchicalDataGrid1.GridView.GroupedRows
+' Check for child group rows for first group row
+If groupedRows(0).HasChildGroupRows Then
+    ' Get data rows of first child group row
+    Dim childGroupedRows As GroupedRecordCollection = groupedRows(0).ChildGroupRows
+    While childGroupedRows(0).Rows.MoveNext()
+        Dim row As ContainerGridRecord = TryCast(childGroupedRows(0).Rows.Current, ContainerGridRecord)
+    End While
+End If
+----
+
+*In C#:*
+
+----
+GroupedRecordCollection groupedRows = this.WebHierarchicalDataGrid1.GridView.GroupedRows;
+// Check for child group rows for first group row
+if (groupedRows[0].HasChildGroupRows)
+{
+    // Get data rows of first child group row
+    GroupedRecordCollection childGroupedRows = groupedRows[0].ChildGroupRows;
+    while (childGroupedRows[0].Rows.MoveNext())
+    {
+        ContainerGridRecord row = childGroupedRows[0].Rows.Current as ContainerGridRecord;
+    }
+}
+----
+
+*In Javascript:*
+
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var groupRow = grid.get_gridView().get_groupRows().get_row(0);
+var childGroupRow = groupRow.get_childGroupRows();
+// Check for child group rows for first group row
+if (groupRow.get_childGroupRows()) {
+// Get data rows of first child group row
+    var childGroupRow = groupRow.get_childGroupRows().get_row(0);
+    var row;
+    for (var i = 0; i < childGroupRow.get_rows().length; i++) {
+        row = childGroupRow.get_rows()[i];
+    }
+}
+----
+
+== Getting Parent Group Row
+
+Given a data row, you can find the group row it belongs to. On the server, use the GetGroupedRow method of a GroupedRecordCollection object. On the client, search the group row's collection of the container grid. The following code shows you how to do this.
+
+.Note:
+[NOTE]
+====
+If you have child group rows, you must check your child group rows for the data row. For example, on the server, the GetGroupRow method will return the GroupedRecord object that the data row belongs to; however, it could be grouped under a child group row (if you have multiple grouped columns), therefore if you want the immediate group row the data row belongs to, you have to call the GetGroupRow method on the child group row as well. On the client, you can enumerate through each child group row and check for the cell value.
+====
+
+*In Visual Basic:*
+
+----
+' Data Row
+Dim row As ContainerGridRecord = Me.WebHierarchicalDataGrid1.GridView.Rows(0)
+' Get Group Row
+Dim groupRow As GroupedRecord = Me.WebHierarchicalDataGrid1.GridView.GroupedRows.GetGroupedRow(row)
+----
+
+*In C#:*
+
+----
+// Data Row
+ContainerGridRecord row = this.WebHierarchicalDataGrid1.GridView.Rows[0];
+// Get Group Row
+GroupedRecord groupRow = this.WebHierarchicalDataGrid1.GridView.GroupedRows.GetGroupedRow(row);
+----
+
+*In Javascript:*
+
+----
+var grid = $find("WebHierarchicalDataGrid1");
+// The data row
+var row = grid.get_gridView().get_rows().get_row(0);
+// Get the container grid
+var containerGrid = row.get_grid();
+// Get the groupRows of the container grid
+var groupRows = containerGrid.get_groupRows();
+// Get the GroupBy column's column key
+var columnKey = groupRows.get_row(0).get_columnKey();
+// Search for group row with matching value in the GroupBy cell
+var dataRow, containerGroupRow;
+for (var i = 0; i < groupRows.get_length(); i++) {
+    // Get the first data row in each group row to check for the value being grouped by.
+    dataRow = groupRows.get_row(i).get_rows()[0];
+    // Check the value of the row to the value being grouped by
+    if (row.get_cellByColumnKey(columnKey).get_value() == dataRow.get_cellByColumnKey(columnKey).get_value()) {
+        // if data row's value matches, it belongs to the current group row
+        containerGroupRow = groupRows.get_row(i);
+        break;
+    }
+}
+----
+
+== Related Topics
+
+link:webhierarchicaldatagrid-about-outlook-groupby.html[About Outlook GroupBy]
+
+link:webhierarchicaldatagrid-custom-group-by-name.html[Custom Group by Name]
+
+link:webhierarchicaldatagrid-custom-text-in-group-row.html[Custom Text in Group Row]
+
+link:webhierarchicaldatagrid-group-columns-from-code-behind.html[Group Columns from Code Behind]
+
+link:webhierarchicaldatagrid-outlook-groupby-with-behaviors.html[Outlook GroupBy with Behaviors]

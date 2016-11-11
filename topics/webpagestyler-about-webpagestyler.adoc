@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webpagestyler-about-webpagestyler",
+    "controlName": [],
+    "tags": ["Getting Started"],
+    "guid": "{B7D18E96-9E8D-4E19-B6EA-467CF6D6E43C}",  
+    "buildFlags": [],
+    "createdOn": "2007-08-02T14:34:22Z"
+}
+|metadata|
+////
+
+= About WebPageStyler
+
+The WebPageStyler™ component allows Application Styling to be used on certain ASPX pages without turning Application Styling on for the entire project. The advantage of this component is that it allows you to have different themes and styles throughout your application instead of the same theme and style. The WebPageStyler component allows for greater flexibly and versatility with your application. Different StyleSets can be created and implemented on different ASPX pages throughout your project.
+
+== Related Topics
+
+link:web-enabling-application-styling-using-the-webpagestyler-component.html[Enabling Application Styling Using the WebPageStyler Component]

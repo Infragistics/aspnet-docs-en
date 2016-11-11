@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-client-side-programming",
+    "controlName": ["WebScheduleInfo"],
+    "tags": [],
+    "guid": "{5D9300D3-F95E-49C2-B9ED-93F5917CDAB4}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Client Side Programming
+
+This section contains topics that explain some of the client-side programming you can do while working with WebScheduleInfo™.
+
+Click the links below to learn more.
+
+* link:webscheduleinfo-csom-overview.html[CSOM Overview]
+* link:webscheduleinfo-disable-asynchronous-callbacks-for-reminders.html[Disable Asynchronous Callbacks for Reminders]
+* link:webscheduleinfo-retrieve-a-reference-to-the-webscheduleinfo-object-on-the-client-side.html[Retrieve a Reference to the WebScheduleInfo Object on the Client Side]

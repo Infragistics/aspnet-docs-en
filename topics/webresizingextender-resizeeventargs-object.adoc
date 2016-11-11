@@ -1,0 +1,150 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-resizeeventargs-object",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{6954D47B-85E5-4936-AD0C-5619FC275276}",  
+    "buildFlags": [],
+    "createdOn": "2007-08-02T08:04:26Z"
+}
+|metadata|
+////
+
+= ResizeEventArgs Object
+
+== ResizeEventArgs
+
+That class is used as the second parameter in event handlers for the resize and the resizing events of WebResizingExtender.
+
+=== ResizeEventArgs Methods
+
+[cols="a,a"]
+|====
+|*get_cancel* 
+|That method allows to check if the resize or the resizing event was canceled. 
+
+*Returns*
+
+Boolean value. The value of true means that action will be canceled.
+
+|*getBrowserEvent* 
+|That method allows to get reference to the event object. 
+
+*Returns*
+
+Reference to event or null.
+
+|*getHeight* 
+|That method allows to check new height of the resizing panel. 
+
+*Returns*
+
+Numeric value. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ function myResizeFnc(sender, args)  { 	window.status = 'New height=' + args.getHeight();  }
+----
+
+|*getOldHeight* 
+|That method allows to check old height of the resizing panel. 
+
+*Returns*
+
+Numeric value. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ function myResizeFnc(sender, args)  { 	window.status = 'Old height=' + args.getOldHeight();  }
+----
+
+|*getOldWidth* 
+|That method allows to check old width of the resizing panel. 
+
+*Returns*
+
+Numeric value. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ function myResizeFnc(sender, args)  { 	window.status = 'Old width=' + args.getOldWidth();  }
+----
+
+|*getWidth* 
+|That method allows to check new width of the resizing panel. 
+
+*Returns*
+
+Numeric value. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ function myResizeFnc(sender, args)  { 	window.status = 'New width=' + args.getWidth();  }
+----
+
+|*set_cancel* 
+|That method allows to cancel the resize or the resizing events. 
+
+*Parameters*
+
+_value_ 
+
+Boolean value. The value of true will cancel action. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ function myResizeFnc(sender, args)  { 	if(args.getWidth() == 20) if(args.getOldWidth() == 100) 		args.set_cancel(true);  }
+----
+
+|*setHeight* 
+|That method allows to set value of height for resizing panel while processing the resize event. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value for height. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ function myResizeFnc(sender, args)  { 	if(args.getHeight() == 20) 		args.setHeight(50);  }
+----
+
+|*setWidth* 
+|That method allows to set value of width for resizing panel while processing the resize event. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value for width. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ function myResizeFnc(sender, args)  { 	if(args.getWidth() == 20) 		args.setWidth(50);  }
+----
+
+|====

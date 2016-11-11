@@ -1,0 +1,78 @@
+﻿////
+
+|metadata|
+{
+    "name": "support-for-granular-viewstate-and-setting-client-ids",
+    "controlName": [],
+    "tags": ["API","Application Scenarios","FAQ"],
+    "guid": "19b986c3-c8ba-4cce-8680-dcd2fc2612ea",  
+    "buildFlags": [],
+    "createdOn": "2010-06-01T06:13:23.3893206Z"
+}
+|metadata|
+////
+
+= Support for Granular ViewState and Setting Client IDs
+
+The new Microsoft® Visual Studio® 2010 now supports enabling ViewState on individual controls and setting client IDs. All of our Infragistics ASP.NET controls support these two features. You can now enable ViewState at the control level rather than enabling at the page level, resulting in high performance. ViewState can be enabled on the controls using the ViewStateMode property which takes an enumeration that has three values: Enabled, Disabled and Inherit. Taking WebTab as an example:
+
+*In HTML:*
+
+----
+<ig:WebTab ID="WebTab1" runat="server" Height="200px" Width="300px" ViewStateMode="Enabled">
+<tabs>
+         <ig:ContentTabItem runat="server" Text="Tab 1">
+          </ig:ContentTabItem>
+           <ig:ContentTabItem runat="server" Text="Tab 2">
+            </ig:ContentTabItem>
+        </tabs>
+ </ig:WebTab>
+----
+
+*In C#:*
+
+----
+WebTab1.ViewStateMode = System.Web.UI.ViewStateMode.Enabled;
+----
+
+*In Visual Basic:*
+
+----
+In VB:
+WebTab1.ViewStateMode = System.Web.UI.ViewStateMode.Enabled
+----
+
+You can now specify more accurately how the client Id should be generated for the controls using the ClientIDMode which takes one of these values : AutoID, Static, Predictable and Inherit.
+
+.Note:
+[NOTE]
+====
+The link:http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(System.Web.UI.Control.EnableViewState)&rd=true[EnableViewState] property of the controls takes precedence over the link:http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(System.Web.UI.Control.ViewStateMode)&rd=true[ViewStateMode] property.
+====
+
+*In HTML:*
+
+----
+<ig:WebTab ID="WebTab1" runat="server" Height="200px" Width="300px" ClientIDMode= "Predictable" >
+        <tabs>
+            <ig:ContentTabItem runat="server" Text="Tab 1">
+            </ig:ContentTabItem>
+            <ig:ContentTabItem runat="server" Text="Tab 2">
+            </ig:ContentTabItem>
+        </tabs>
+</ig:WebTab>
+----
+
+*In C#:*
+
+----
+WebTab1.ClientIDMode = System.Web.UI.ClientIDMode.Predictable;
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.ClientIDMode = System.Web.UI.ClientIDMode.Predictable
+----
+
+For mor information, see the whitepaper link:http://www.asp.net/learn/whitepapers/aspnet4#0.2__Toc253429261[ASP.NET 4 and Visual Studio 2010 Web Development Overview].

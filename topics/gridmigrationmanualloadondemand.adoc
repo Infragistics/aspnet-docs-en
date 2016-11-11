@@ -1,0 +1,214 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridmigrationmanualloadondemand",
+    "controlName": [],
+    "tags": [],
+    "guid": "f9280097-c862-4141-baf3-337f3903a517",  
+    "buildFlags": [],
+    "createdOn": "2016-03-01T12:48:14.7316512Z"
+}
+|metadata|
+////
+
+= Grid Migration - Manual Load On Demand
+
+== Manual Load on Demand
+
+In this document will be presented how Manual Load on Demand works for WebGrid and respectively for WebHierarchicalDataGrid. The first section will be dedicated on the on WebGrid component while the second part will be focused on WebHierarchicalDataGrid.
+
+==== WebGrid
+
+In order to get WebGrid to work in such way you need to:
+
+[start=1]
+. Enable LoadOnDemand feature of the grid like this: LoadOnDemand="Manual"
+[start=2]
+. Handle OnDemandLoad="UltraWebGrid1_DemandLoad" event.
+[start=3]
+. Set ViewType="Hierarchical".
+
+The above can be set in aspx markup and in code - behind as well.
+
+Code - behind implementation:
+
+*In C#:*
+
+[source,csharp]
+----
+protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            UltraWebGrid1.DataSource = BuildTable("table");
+            UltraWebGrid1.DataBind();
+            UltraWebGrid1.Bands.Add(new UltraGridBand());
+            foreach (UltraGridRow row in UltraWebGrid1.Rows)
+                row.ShowExpand = true;
+        }
+    }
+----
+
+Implement DemandLoad handler:
+
+*In C#:*
+
+[source,csharp]
+----
+protected void UltraWebGrid1_DemandLoad(object sender, RowEventArgs e)
+    {
+        UltraGridBand band = UltraWebGrid1.Bands[e.Row.Band.Index + 1];
+        if (band.Columns.Count == 0)
+        {
+            band.Columns.Add(new UltraGridColumn());
+            band.Columns.Add(new UltraGridColumn());
+            band.Columns[0].HeaderText = "ID";
+            band.Columns[1].HeaderText = "Number";
+        }
+        string rowLevel = "";
+        UltraGridRow row = e.Row;
+        while (row != null)
+        {
+            rowLevel += "_" + row.Index;
+            row = row.ParentRow;
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            e.Row.Rows.Add(new UltraGridRow());
+            e.Row.Rows[i].Cells[0].Value = UltraWebGrid1.ID + "r" + rowLevel + "_" + i.ToString();
+            e.Row.Rows[i].Cells[1].Value = i;
+            e.Row.Rows[i].ShowExpand = true;
+        }
+        if (UltraWebGrid1.Bands[band.Index + 1] == null)
+            UltraWebGrid1.Bands.Add(new UltraGridBand());
+    }
+----
+
+==== WebHierarchicalDataGrid
+
+The WebHierarchicalDataGrid™ control allows you to manually retrieve data as you need it. The control’s RowIslandsPopulating event is raised every time a row is expanded; at this point, data is requested for the row’s child row island(s). You can use this event to manually create a container grid that represents the row island(s) and then bind it to the data that you retrieved.
+
+[start=1]
+. Define the grid markup.
+
+*In ASPX:*
+
+[source,html]
+----
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" 
+AutoGenerateColumns="
+AutoGenerateBands="
+InitialExpandDepth="0"
+InitialDataBindDepth="0"
+Height="350px" 
+Width="800px"
+DataKeyFields="ID" 
+OnRowIslandsPopulating="WebHierarchicalDataGrid1_RowIslandsPopulating" 
+OnInitializeRow="WebHierarchicalDataGrid1_InitializeRow">
+ <ExpandCollapseAnimation
+ SlideOpenDirection="Auto"
+ SlideOpenDuration="300"
+ SlideCloseDirection="Auto
+ SlideCloseDuration="300" />
+ 	<Columns>
+ 	 <ig:BoundDataField DataFieldName="ID" Key="ID" Header-Text="ID" />
+ 	 <ig:BoundDataField DataFieldName="Fname" Key="Fname" Header-Text="First name" />
+  	 <ig:BoundDataField DataFieldName="Sname" Key="Sname" Header-Text="Second Name" />
+ 	</Columns>
+</ig:WebHierarchicalDataGrid>
+----
+
+[start=2]
+. Code – behind implementation:
+
+*In C#:*
+
+[source,csharp]
+----
+protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+  /* Provide flat datasource only for the parent band. * / 
+        this.whdg1.DataSource = GetPeople();
+    }
+    bool isChild = false;
+    protected void whdg1_InitializeRow(object sender, RowEventArgs e)
+    {
+/* If the event is not raised for a row from the child grid 
+         set IsEmptyParent =  true
+         the property will show up the expand indicator for the parent Band. */ 
+ if (isChild == false)
+            ((ContainerGridRecord)e.Row).IsEmptyParent = true;
+    }
+/* This event is called when the user expand a row from the parent band.
+First of all the event is canceled and new ContainerGrid is created 
+and bound to data. This is where the child band is created 
+and sent down to the client. */ 
+    protected void whdg1_RowIslandsPopulating(object sender, Infragistics.Web.UI.GridControls.ContainerRowCancelEventArgs e)
+    {
+        e.Cancel = true;
+        ContainerGrid child = new ContainerGrid();
+        child.InitializeRow += new InitializeRowEventHandler(child_InitializeRow);
+        e.Row.RowIslands.Add(child);
+        child.DataSource = GetAddresses();
+        child.DataBind();
+    }
+/* This event is called for each child row being initialized * /
+    void child_InitializeRow(object sender, RowEventArgs e)
+    {
+        isChild = true;
+    }
+    #region Entities
+    public class Person
+    {
+        public int _addressID;
+        public int ID { get; set; }
+        public string Fname { get; set; }
+        public string Sname { get; set; }
+        public int Addresses
+        {
+            get { return _addressID; }
+        }
+    }
+    public class Address
+    {
+        public int ID { get; set; }
+        public string Street { get; set; }
+        public string City { get; set; }
+    }
+    #endregion
+    #region Data
+    private List<Person> GetPeople()
+    {
+        List<Person> list = new List<Person>();
+        list.Add(
+            new Person() { ID = 1, Fname = "Oliver", Sname = "George", _addressID = 1 });
+        list.Add(
+           new Person() { ID = 2, Fname = "Jack", Sname = "Joseph", _addressID = 1 });
+        list.Add(
+           new Person() { ID = 3, Fname = "Harry", Sname = "Jacob", _addressID = 1 });
+        list.Add(
+           new Person() { ID = 4, Fname = "Thomas", Sname = "Simeonov", _addressID = 2 });
+        list.Add(
+           new Person() { ID = 5, Fname = "Charlie", Sname = "Dylan", _addressID = 2 });
+        list.Add(
+                   new Person() { ID = 6, Fname = "William", Sname = "Lewis", _addressID = 2 });
+        list.Add(
+                   new Person() { ID = 7, Fname = "James", Sname = "Max", _addressID = 2 });
+        list.Add(
+                   new Person() { ID = 8, Fname = "Daniel", Sname = "Jayden", _addressID = 2 });
+        return list;
+    }
+    private List<Address> GetAddresses()
+    {
+        List<Address> list = new List<Address>();
+        list.Add(
+             new Address() { ID = 1, City = "Windsor", Street = "Corporate Park 50 Millstone Road" });
+        list.Add(
+             new Address() { ID = 2, City = "Sofia", Street = "110 B, Simeonovsko Shosse  Office Floor II" });
+        return list;
+    }
+----
+
+image::images/Grids_Migration_-_ManualLoadOnDemand_1.jpg[Grids_Migration_-_ManualLoadOnDemand_1]

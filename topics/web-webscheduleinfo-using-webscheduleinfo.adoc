@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webscheduleinfo-using-webscheduleinfo",
+    "controlName": ["WebScheduleInfo"],
+    "tags": [],
+    "guid": "{B457388B-E285-4EA3-B9AF-862E5B3094DA}",  
+    "buildFlags": [],
+    "createdOn": "2007-05-11T14:38:01Z"
+}
+|metadata|
+////
+
+= Using WebScheduleInfo
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebScheduleInfo™ control.
+
+Click the links below to find out how you can:
+
+* link:webscheduleinfo-client-side-programming.html[Client Side Programming]

@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatepicker-edit-and-display-mode-formats-in-webdatepicker",
+    "controlName": ["WebDatePicker"],
+    "tags": ["How Do I","Selection","Styling"],
+    "guid": "{BE0E32BB-1FFA-4FEC-9F6D-03A9BC68A774}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T11:32:12Z"
+}
+|metadata|
+////
+
+= Edit and Display Mode Formats in WebDatePicker
+
+WebDatePicker™ allows you to specify different format strings for when the control is in edit and display modes. You can set the format of the date used for edit mode (i.e. when the control has input focus) by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~editmodeformat.html[EditModeFormat]"]  property. Similarly, you can set the format of the date used for display mode (i.e. when the control doesn’t have input focus) by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~displaymodeformat.html[DisplayModeFormat]"]  property.
+
+.Note:
+[NOTE]
+====
+EditModeFormat and DisplayModeFormat properties depend on the System.Globalization.DateTimeFormatInfo class.
+====
+
+You can set the EditModeFormat and DisplayModeFormat properties either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+'Create a DateTimeFormatInfo object
+Dim format As New System.Globalization.DateTimeFormatInfo()
+'Set the EditModeFormat property of WebDatePicker to the pattern you want 
+WebDatePicker1.EditModeFormat = format.ShortDatePattern
+'Set the DisplayModeFormat property of WebDatePicker to the pattern you want
+WebDatePicker1.DisplayModeFormat = format.LongDatePattern
+----
+
+*In C#:*
+
+----
+//Create a DateTimeFormatInfo object
+System.Globalization.DateTimeFormatInfo format = new System.Globalization.DateTimeFormatInfo();
+//Set the EditModeFormat property of WebDatePicker to the pattern you want
+WebDatePicker1.EditModeFormat = format.ShortDatePattern;
+//Set the DisplayModeFormat property of WebDatePicker to the pattern you want
+WebDatePicker1.DisplayModeFormat = format.LongDatePattern;
+----
+
+== EditMode:
+
+image::images/WebDatePicker_Edit_and_Display_Modes_in_WebDatePicker_01.png[]
+
+== DisplayMode:
+
+image::images/WebDatePicker_Edit_and_Display_Modes_in_WebDatePicker_02.png[]

@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-getting-started-with-webresizingextender",
+    "controlName": ["WebResizingExtender"],
+    "tags": ["Extending","Getting Started"],
+    "guid": "{FFC6A411-6E78-448E-B873-85FDAF66F561}",  
+    "buildFlags": [],
+    "createdOn": "2006-08-12T14:15:10Z"
+}
+|metadata|
+////
+
+= Getting Started with WebResizingExtender
+
+Click the link below to find information on how to get up and running quickly with the WebResizingExtender™ control.
+
+* link:webresizingextender-setting-up-webresizingextender-to-work-with-a-panel.html[Setting Up WebResizingExtender to Work with a Panel] -- Explains the steps to setup the WebResizingExtender control so that it can resize a Panel on a Web form.

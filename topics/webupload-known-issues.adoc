@@ -1,0 +1,33 @@
+﻿////
+|metadata|
+{
+    "name": "webupload-known-issues",
+    "controlName": ["WebUpload"],
+    "tags": ["Known Issues","Selection"],
+    "guid": "06e879cb-91b0-43de-94bc-747d4f9b86c9",
+    "buildFlags": [],
+    "createdOn": "2011-05-26T15:01:40.0369367Z"
+}
+|metadata|
+////
+
+= Known Issues and Limitations (WebUpload)
+
+== Known Issues
+
+When using the WebUpload control be aware of the following limitations of the control or are exposed from browsers limitations:
+
+[start=1]
+. The max uploaded size for a file is 2 GB. This is browser limitation. Some browsers like newer versions of Opera allow 4GB files.
+[start=2]
+. It’s recommended when you set the option pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[maxSimultaneousFilesUploads]"] , its value must be the maximum value as dictated by the browser. When you are uploading more than one file at a time you are making requests equal to the count of uploaded files. For IE6 it is recommended this option to be 1, for other browsers it is recommended to be 1 or 2. For instance Mozilla FireFox 3.6+ could handle a maximum value of 3.
+[start=3]
+. The igUpload control doesn’t support keyboard navigation, except during tabbed navigation, then the control will gain focus on the page. When using the TAB key, you can navigate the control and its elements.
+[start=4]
+. When you want to upload files and the browser displays a pop-window to select items from your local drives, you are able to select only one file at a time.
+
+== Dependencies
+
+The WebUpload control depends on the following Infragistics ASP.NET widgets – igButton igBrowseButton, igProgressBar and the ajaxQueue plugin. These widgets are included with the WebUpload control so you have them available by default.
+
+Also, the widget uses strings defined from an external JavaScript file ig.ui.fileupload-en.js. Other language locales may be added by creating other similar files with the proper two letter language suffix.

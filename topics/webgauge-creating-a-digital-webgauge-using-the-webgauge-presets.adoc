@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-creating-a-digital-webgauge-using-the-webgauge-presets",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{33146197-3CCB-444A-8F60-15DEAAC054D7}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Creating a Digital WebGauge Using the WebGauge Presets
+
+== Before You Begin
+
+Creating a Digital gauge using the Gauge Designer allows you to use predefined presets, therefore minimizing the work required to create Digital gauges.
+
+== What You Will Accomplish
+
+Using the Gauge Designer to create Digital gauges will help you create visually appealing and professional-looking gauges such as odometers.
+
+== Follow these Steps
+
+[start=1]
+. From the toolbox, drag the UltraGauge control to your form. The Gauge Designer opens.
+
+image::images/Gauge_Creating_a_Digital_Gauge_Using_the_Gauge_Designer_01.png[The gauge designer that appears when you place UltraGauge on your form.]
+
+[start=2]
+. On the Toolbar, click Open Presets.
+[start=3]
+. Click the Digital tab.
+
+image::images/Gauge_Creating_a_Digital_Gauge_Using_the_Gauge_Designer_02.png[The presets available for the digital gauge.]
+
+[start=4]
+. Select a predefined Digital gauge. When you select a gauge it appears in the interactive preview area.
+
+image::images/Gauge_Creating_a_Digital_Gauge_Using_the_Gauge_Designer_03.png[The preset applied to a digital gauge in the gauge designer.]
+
+[start=5]
+. To create a Digital gauge using the selected preset without closing the Gauge Designer, click Apply. To create a Digital gauge using the selected preset and automatically close the designer, click Apply and Close.
+[start=6]
+. Run the application. It should look similar to the form below.
+
+image::images/Gauge_Creating_a_Digital_Gauge_Using_the_Gauge_Designer_06.png[Running form showing the digital gauge showing preset.]

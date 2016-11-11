@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdialogwindow-center-the-dialog-window",
+    "controlName": ["WebDialogWindow"],
+    "tags": ["How Do I"],
+    "guid": "{252E0CB1-8845-49B0-9CB6-60D822A6CACC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Center the Dialog Window
+
+When you first place WebDialogWindow™ on your page, WebDialogWindow will use that location as the default position of the dialog window. If the location where you placed WebDialogWindow is not appropriate for your web page's needs, you can always change the dialog window's initial location by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~initiallocation.html[InitialLocation]"]  property to Centered; this will display the dialog window in the center of the page rather than the location you placed it at design time. If you want to change the location, you'll need to set the InitialLocation property to Manual and set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~top.html[Top]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~left.html[Left]"]  properties.
+
+The following code demonstrates how to display the dialog window in the center of the web page.
+
+*In Visual Basic:*
+
+----
+' Center the Dialog Window.
+Me.WebDialogWindow1.InitialLocation = _
+	Infragistics.Web.UI.LayoutControls.DialogWindowPosition.Centered
+----
+
+*In C#:*
+
+----
+ // Center the Dialog Window.
+this.WebDialogWindow1.InitialLocation = 
+	Infragistics.Web.UI.LayoutControls.DialogWindowPosition.Centered;
+----

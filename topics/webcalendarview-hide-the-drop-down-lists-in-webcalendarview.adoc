@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalendarview-hide-the-drop-down-lists-in-webcalendarview",
+    "controlName": ["WebCalendarView"],
+    "tags": ["Application Scenarios"],
+    "guid": "{3E64A16E-783C-4CF4-86D1-5542F2B99792}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Hide the Drop-Down Lists in WebCalendarView
+
+WebCalendarView™ has two drop-down lists at the top that show the month and year. These are in place to help you easily navigate between months or years.
+
+You may want them to be visible or hidden. The code below shows how to hide both the Month drop-down list and the Year drop-down list.
+
+image::images\WebSchedule_How_to_Hide_the_DropDowns_on_the_WebCalendarView_01.png[]
+
+*In Visual Basic:*
+
+----
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e _
+  As System.EventArgs) Handles MyBase.Load
+	Me.WebCalendarView1.MonthDropDownVisible = False
+	Me.WebCalendarView1.YearDropDownVisible = False
+End Sub
+----
+
+*In C#:*
+
+----
+private void Page_Load(object sender, System.EventArgs e)
+{
+	this.WebCalendarView1.MonthDropDownVisible = false;
+	this.WebCalendarView1.YearDropDownVisible = false;
+}
+----

@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-gaugeimagepipe",
+    "controlName": ["WebGauge"],
+    "tags": ["Getting Started"],
+    "guid": "{248D08A8-7553-4AEB-911D-802C4BEAE1E2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= GaugeImagePipe
+
+Click the link below for an introduction to the GaugeImagePipe™ component, as well as information on how it relates to the WebGauge™ control.
+
+* link:gaugeimagepipe-about-gaugeimagepipe.html[About GaugeImagePipe] -- Provides information on what the GaugeImagePipe control does, and why you would want to use it in your application.

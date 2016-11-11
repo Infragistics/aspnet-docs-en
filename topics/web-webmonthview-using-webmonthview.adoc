@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webmonthview-using-webmonthview",
+    "controlName": ["WebMonthView"],
+    "tags": ["Appointments","Recurrences","Scheduling"],
+    "guid": "{9D78656C-61EC-4881-AE7C-C8A1BCDA01AC}",  
+    "buildFlags": [],
+    "createdOn": "2007-05-11T14:29:28Z"
+}
+|metadata|
+////
+
+= Using WebMonthView
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebMonthView™ control.
+
+Click the links below to find out how you can:
+
+* link:webmonthview-client-side-programming.html[Client Side Programming]
+* link:webschedule-format-the-first-day-of-the-month-in-webmonthview.html[Format the First Day of the Month in WebMonthView]
+* link:webschedule-hide-the-day-of-the-week-header.html[Hide the Day-of-the-Week Header]
+* link:webschedule-show-weekends-as-separate-days.html[Show Weekends as Separate Days]

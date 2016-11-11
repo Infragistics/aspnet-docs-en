@@ -1,0 +1,219 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridsmigrationoutlookgroupby",
+    "controlName": [],
+    "tags": [],
+    "guid": "91bfac8a-0823-443a-bd6a-41b36ae44d62",  
+    "buildFlags": [],
+    "createdOn": "2016-03-01T12:50:26.6572646Z"
+}
+|metadata|
+////
+
+= Grids Migration - Outlook GroupBy
+
+OutlookGroupBy feature allows grid rows to be grouped by the data values of a column. This feature is supported for WebHierarchicalDataGrid (WHDG) and is NOT supported by WebDataGrid (WDG). If a flat grid with OutlookGroupBy is needed simply bind the WHDG to one level of data.
+
+[[_Toc291828865]]
+== Enabling the Feature
+
+To enable the OutlookGroupBy feature use the property window of WHDG:
+
+[start=1]
+. In the Microsoft® Visual Studio™ property window, locate the GroupingSettings property and expand it.
+[start=2]
+. Set the EnableColumnGrouping property to “True” – this will allow you to use the grouping feature.
+[start=3]
+. At this time you can also customize other property settings such as the “GroupAreaVisibility” property ( which controls whether the UI for the feature is available to the end user, meaning whether the columns can be dragged and drop to group data)
+
+.Note:
+[NOTE]
+====
+Note: GroupingSettings property is a band level property and its attributes can be customized per band.
+====
+
+The “OutlookGroupBy” feature can also be added in the .aspx source code for the band:
+
+*In ASPX:*
+
+[source,html]
+----
+<GroupingSettings EnableColumnGrouping="True"
+ShowBandInGroupByArea="true" GroupAreaVisibility="Visible">
+</GroupingSettings>
+----
+
+[[_Toc291828866]]
+== How To Group a Column
+
+Columns can be grouped in several different ways. If the UI is enabled a column can be dragged and dropped onto the GoupByArea to group it and dragged from the GroupByArea to ungroup it.
+
+[[_Toc291828867]]
+==== Grouping Columns Through the Designer
+
+[start=1]
+. In the Microsoft® Visual Studio™ property window, locate the GroupingSettings property and expand it.
+[start=2]
+. Set the EnableColumnGrouping property to “True” – this will allow you to use the grouping feature
+[start=3]
+. Under the GroupingSettings property locate the “GroupedColumns” property and click on the ellipsis(…) to the right of it – this will bring up a design dialog allowing you to add columns which you want to group by
+
+[[_Toc291828868]]
+==== Grouping in ASPX
+
+You can also group a column in ASPX like so:
+
+*In ASPX:*
+
+[source,html]
+----
+<GroupingSettings EnableColumnGrouping="True"  ShowBandInGroupByArea="true"  GroupAreaVisibility="Visible">
+            <GroupedColumns>
+                <ig:GroupedColumn ColumnKey="Color" SortDirection="Descending" />
+                <ig:GroupedColumn ColumnKey="Salary" />
+            </GroupedColumns>
+</GroupingSettings>
+----
+
+[[_Toc291828869]]
+==== Grouping in the Code Behind:
+
+Handle the InitializeBand event, and in the event handler do the following:
+
+*In C#:*
+
+[source,csharp]
+----
+void WebHierarchicalDataGrid1_InitializeBand(object sender, BandEventArgs e)
+{
+      /* Grouping on top band * /
+      if (e.Band.DataMember == "Root")
+      {
+/* We only want to add a column to the GroupedColumns collection once
+becuase the grid will save this addition in its view state */ 
+            if (!this.IsPostBack)
+            {
+                  this.WebHierarchicalDataGrid1.GroupingSettings.GroupedColumns.Add("FirstName");
+                  this.WebHierarchicalDataGrid1.GroupingSettings.GroupedColumns.Add("LastName",
+                              GroupingSortDirection.Descending);
+                  /* Change the Alt Text * /
+                  this.WebHierarchicalDataGrid1.GroupingSettings.AscendingImageAltText = "Top Assend";
+            }
+      }
+      /* Grouping on lower band. * /
+      else if (e.Band.DataMember == "Address")
+      {
+/* We only want to add a column to the GroupedColumns collection once
+becuase the grid will save this addition in its view state */ 
+            if (!this.IsPostBack)
+            { 
+                  e.Band.GroupingSettings.GroupedColumns.Add("AddressType");
+                  /* Don't show the remove button when you hover over the grouped column * /
+e.Band.GroupingSettings.ShowRemoveButton = false;
+                  e.Band.GroupingSettings.AscendingImageAltText = "Adr Assend";
+            }
+      }
+}
+----
+
+You can remove a grouped column in a similar way:
+
+*In C#:*
+
+[source,csharp]
+----
+GroupedColumns grpCols = this.WebHierarchicalDataGrid1.GroupingSettings.GroupedColumns;
+grpCols.Remove(grpCols["FirstName"]);
+----
+
+[[_Toc291828870]]
+==== Grouping a Column in JavaScript
+
+*In JavaScript:*
+
+[source,js]
+----
+/* Top Level * /
+var WHDG = $find("WebHierarchicalDataGrid1");
+var settings = WHDG.get_groupingSettings();
+/* Add grouped column* /
+settings.get_groupedColumns().add("DOB");
+/* Add grouped column range * /
+var grpArray = [];
+grpArray[0] = new $IG.ClientGroupedColumn("DOB", $IG.SortDirection.Descending);
+grpArray[1] = new $IG.ClientGroupedColumn("FavoriteColor");
+settings.get_groupedColumns().addRange(grpArray);
+/* Remove grouped column * /
+settings.get_groupedColumns().removeAt(0);
+settings.get_groupedColumns().remove(settings.get_groupedColumns().getItemFromKey("Name"));
+/* Remove grouped column range * /
+grpArray = [];
+grpArray[0] = settings.get_groupedColumns().getItemFromKey("Salary");
+grpArray[1] = settings.get_groupedColumns().getItemFromKey("Boss");
+settings.get_groupedColumns().removeRange(grpArray);
+/* Lower band * /
+var lowerBand = WHDG.get_bands()[0];
+settings = lowerBand.get_groupingSettings();
+/* Adding and Removing grouped columns is then the same as above. * /
+----
+
+[[_Toc291828871]]
+== Looking at Grouped Rows
+
+Grouped rows can be looked at in the code behind or JavaScript
+
+*In C#:*
+
+[source,csharp]
+----
+ContainerGrid gridView = this.WebHierarchicalDataGrid1.GridView;
+            foreach (GroupedRecord grpRow in gridView.GroupedRows)
+            {
+                  /* To iterate through the data rows under the group row* /
+                  GroupRecordEnumerator itr = grpRow.Rows;
+                  while (itr.Current != null)
+                  {
+                        ContainerGridRecord r = (ContainerGridRecord)itr.Current;
+                        itr.MoveNext();
+                  }
+/* If the Band is grouped by more than one column then a
+                   grouped row will have grouped rows of its own  */
+                  foreach (GroupedRecord childGrpRow in grpRow.ChildGroupRows)
+                  {
+/* From the child grouped row you can see if it hase grouped rows of its own in the same way.
+			You can also iterate through the data rows for this group  */ 
+                        itr = childGrpRow.Rows;
+                        while (itr.Current != null)
+                        {
+                              ContainerGridRecord r = (ContainerGridRecord)itr.Current;
+                              itr.MoveNext();
+                        }
+                  }
+            }
+----
+
+*In JavaScript:*
+
+[source,js]
+----
+var WHDG = $find("WebHierarchicalDataGrid1");
+var gridView = WHDG.get_gridView();
+var grpRows = gridView.get_groupRows();
+for (var i = 0; i < grpRows.get_length(); i++)
+{
+    var grpRow = grpRows.get_row(i);
+    var text = grpRow.get_text();
+    /* The data rows under the grouped row* /
+    var dataRows = grpRow.get_rows();
+    /* Child grouped rows * /
+    var childRows = grpRow.get_childGroupRows();
+    for (var j = 0; j < childRows.get_length(); j++)
+    {
+        var grpChRow = childRows.get_row(j);
+        /* Data rows under the child grouped row  * /
+        var chDataRows = grpChRow.get_rows();
+    }
+}
+----

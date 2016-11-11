@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webvideoplayer-jquery-and-asp.net-helper-api-links",
+    "controlName": ["WebVideoPlayer"],
+    "tags": ["API"],
+    "guid": "1605c298-726c-43df-9d07-d9aee9948050",  
+    "buildFlags": [],
+    "createdOn": "2011-05-31T15:11:17.5077675Z"
+}
+|metadata|
+////
+
+= WebVideoPlayer jQuery and ASP.NET Helper API Links
+
+The VideoPlayer is built as a jQuery UI widget with an accompanying ASP.NET Helper. For more information about each API, see the following API documentation:
+
+* link:{jQueryApiLink}/ui.igvideoplayer[VideoPlayer jQuery API]
+* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.webvideoplayer.html[VideoPlayer ASP.NET Helper API]

@@ -1,0 +1,220 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-paging-template",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Design Environment","Grids","Paging"],
+    "guid": "{D19214B1-8035-4A6F-8DEB-10C0D12B38A5}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Paging Template
+
+== Before You Begin
+
+With the WebHierarchicalDataGrid™ control’s paging template feature, you can customize the look and feel of the pager to your specifications. You can add any control to the template; however, using the pager template requires that you handle the paging mechanism manually.
+
+== What You Will Accomplish
+
+You will set up paging for the parent band of WebHierarchicalDataGrid using two buttons and a dropdown list. The two buttons handle moving to the previous and next pages while the dropdown list moves to the selected page.
+
+== Follow these Steps
+
+[start=1]
+. Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource™ component so that it retrieves data from the Categories and products table. For more information on this see the link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Binding to Hierarchical Data Source] topic.
+[start=2]
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band.html[Bands]"]  property and click the ellipsis (...) button to launch the Edit WebHierarchicalDataGrid Bands Dialog.
+[start=3]
+. For the parent band locate the Behaviors property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+[start=4]
+. Check the CheckBox next to  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  from the list on the left to add and enable the behavior. For this topic the PageSize is set to 3. The EnableInheritance property can be enabled to set Paging for the child bands.
+[start=5]
+. In the properties, expand  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.pagingclientevents.html[PagingClientEvents]"]  and handle the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.pagingclientevents~pageindexchanged.html[PageIndexChanged]"]  event by entering an event handler name: WebHierarchicalDataGrid1_PageIndexChanged.
+
+image::Images/WebHierarchicalDataGrid_Using_Custom_Paging_Template_01.png[]
+
+[start=6]
+. Click Apply then Ok to close the editor.
+[start=7]
+. Right-click on WebHierarchicalDataGrid and highlight Edit Template. You will see an option for Pager Template.
+
+.Note:
+[NOTE]
+====
+If you are using more than one behavior template, you will see Behavior Templates as a selection in the Edit Template submenu.
+====
+
+[start=8]
+. Select Pager Template from the context menu. The WebHierarchicalDataGrid view changes to the template editing view.
+
+.Note:
+[NOTE]
+====
+Depending on what behaviors you have added, you will see other templates in addition to the pager template.
+====
+
+[start=9]
+. Add two HTML buttons and an ASP.NET DropDownList control to the template.
+
+a. Position the dropdown list between the two buttons.
+
+b. Set the value of the button before the dropdown list to Prev and set its id to PrevButton.
+
+c. Set the value of the second button to Next and set its id to NextButton.
+
+d. Double-click each button to add event handlers for them.
+
+image::Images/WebHierarchicalDataGrid_Using_Custom_Paging_Template_02.png[]
+
+e. Add a client-side handler named IndexChanged for the dropdown list. This will handle the manual paging of WebHierarchicalDataGrid when values are selected from the dropdown. The HTML for the dropdown list should look like the following:
+
+*In HTML:*
+
+----
+<asp:DropDownList ID="DropDownList1" runat="server" onchange="return IndexChanged()">
+</asp:DropDownList>
+----
+
+[start=10]
+. Right-click WebHierarchicalDataGrid again and select End Template Editing. You are returned to the normal grid display.
+[start=11]
+. 
+
+Populate the DropDownList control with the page numbers for your data in the WebHierarchicalDataGrid control’s_RowIslandDataBinding event.
+
+a. Obtain a reference to the dropdown list in your pager template. This requires accessing the PagerTemplateContainer—the container of controls inside the template—and finding the control inside.
+
+b. Populate the dropdown list with the number of pages. Handle the RowIslandDataBinding event and write the following code.
+
+*In Visual Basic:*
+
+----
+AddHandler Me.WebHierarchicalDataGrid1.RowIslandDataBinding, AddressOf WebHierarchicalDataGrid1_RowIslandDataBinding
+Protected Sub WebHierarchicalDataGrid1_RowIslandDataBinding(ByVal sender As Object, ByVal e As RowIslandEventArgs)
+If e.RowIsland.DataMember = "SqlDataSource1_DefaultView" Then
+   If Not IsPostBack Then
+      Dim list1 As DropDownList =   DirectCast(e.RowIsland.Behaviors.Paging.PagerTemplateContainer.FindControl("DropDownList1"), DropDownList)
+         'For simplicity, we are hard coding several list items. In a production application, 
+     'you would use logic to calculate how many page numbers should be added to the list.
+         For i As Integer = 1 To 3
+            list1.Items.Add(i.ToString())
+         Next
+      End If
+   End If
+End Sub
+----
+
+*In C#:*
+
+----
+this.WebHierarchicalDataGrid1.RowIslandDataBinding += new RowIslandEventHandler(WebHierarchicalDataGrid1_RowIslandDataBinding);
+protected void WebHierarchicalDataGrid1_RowIslandDataBinding(object sender, RowIslandEventArgs e)
+{
+   if (e.RowIsland.DataMember == "SqlDataSource1_DefaultView")
+   {
+      if (!IsPostBack)
+      {
+         DropDownList list1 = (DropDownList)e.RowIsland.Behaviors.Paging.PagerTemplateContainer.FindControl("DropDownList1");
+         //For simplicity, we are hard coding
+         //several list items. In a production application, 
+         //you would use logic to calculate how many 
+         //page numbers should be added to the list.
+         for (int i = 1; i $$<=$$ 3; i++)
+         {
+            list1.Items.Add(i.ToString());
+         }
+      }
+   }
+}
+----
+
+[start=12]
+. Manually page WebHierarchicalDataGrid in the dropdown list's IndexChanged event handler.
+
+a. Get a reference to WebHierarchicalDataGrid.
+
+b. Page WebHierarchicalDataGrid based on the value selected from the dropdown list.
+
+.Note:
+[NOTE]
+====
+Notice the client ID of the DropDownList control. This is because the control is placed within several container controls (aka: the template). In this example, the client ID is hard-coded. In a production application, you would get this ID dynamically at runtime.
+====
+
+*In Javascript:*
+
+----
+function IndexChanged()
+{
+   var dropdownlist = document.getElementById("WebHierarchicalDataGrid1_ctl00_ctl01_DropDownList1");
+   var grid = $find("WebHierarchicalDataGrid1");
+   var parentGrid = grid.get_gridView();
+   var newValue = dropdownlist.selectedIndex;
+   parentGrid.get_behaviors().get_paging().set_pageIndex(newValue);
+}
+----
+
+[start=13]
+. Page WebHierarchicalDataGrid using the Prev button control’s client-side Click event handler.
+
+a. Get a reference to WebHierarchicalDataGrid.
+
+b. Get a reference to the dropdown list.
+
+c. Check that by decreasing the index, you do not exceed the bounds of the selectable pages.
+
+d. Go to the next page.
+
+*In Javascript:*
+
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var parentGrid = grid.get_gridView();
+var dropdownlist = document.getElementById("WebHierarchicalDataGrid1_ctl00_ctl01_DropDownList1");
+if (parentGrid.get_behaviors().get_paging().get_pageIndex() > 0) {
+   parentGrid.get_behaviors().get_paging().set_pageIndex(parentGrid.get_behaviors().get_paging().get_pageIndex() - 1);
+}
+----
+
+[start=14]
+. Do the same thing for the Next button event handler except that you are increasing the page index.
+
+*In Javascript:*
+
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var parentGrid = grid.get_gridView();
+var dropdownlist = document.getElementById("WebHierarchicalDataGrid1_ctl00_ctl01_DropDownList1");
+if (parentGrid.get_behaviors().get_paging().get_pageIndex() < parentGrid.get_behaviors().get_paging().get_pageCount() - 1) {
+   parentGrid.get_behaviors().get_paging().set_pageIndex(parentGrid.get_behaviors().get_paging().get_pageIndex() + 1);
+}
+----
+
+[start=15]
+. Add code to the body of the WebHierarchicalDataGrid1_PageIndexChanged client-side event you added earlier in step number 5.
+
+*In Javascript:*
+
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var parentGrid = grid.get_gridView();
+var dropdownlist = document.getElementById("WebHierarchicalDataGrid1_ctl00_ctl01_DropDownList1");
+dropdownlist.options[parentGrid.get_behaviors().get_paging().get_pageIndex()].selected = true;
+----
+
+[start=16]
+. Run the application. The parent band of WebHierarchicalDataGrid’s pager consists of two buttons and a dropdown list, each of which can be used for paging. 
+
+image::Images/WebHierarchicalDataGrid_Using_Custom_Paging_Template_03.png[]
+
+== Related Topics
+
+link:webhierarchicladatagrid-column-templates.html[Column Templates]
+
+link:webhierarchicaldatagrid-enable-empty-rows-template.html[Enable Empty Rows Template]
+
+link:webhierarchicaldatagrid-enable-error-template.html[Enable Error Template]

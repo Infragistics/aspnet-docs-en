@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-batch-updating",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Drilldown","Editing","Getting Started","Grids","Performance"],
+    "guid": "719b4f58-640d-4449-8416-bc0e9d91ef03",  
+    "buildFlags": [],
+    "createdOn": "2011-10-26T07:20:29.1614003Z"
+}
+|metadata|
+////
+
+= Batch Updating (WebDataGrid)
+
+Click on the links below to find information on how to get the WebDataGrid Batch Update feature quickly up and running.
+
+* link:webdatagird-batch-updating-overview.html[Overview]
+* link:webdatagrid-batch-updating-enabling.html[Enabling Batch Updating]
+* link:webdatagrid-batch-updating-events.html[Events]
+* link:webdatagrid-batch-updating-summaries.html[Summaries]

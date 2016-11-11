@@ -1,0 +1,165 @@
+﻿////
+
+|metadata|
+{
+    "name": "known-issues-and-limitations-aspnet-131",
+    "controlName": [],
+    "tags": [],
+    "guid": "1d1adcb5-9937-453d-a437-883730da7a88",  
+    "buildFlags": [],
+    "createdOn": "2013-03-21T12:43:30.2452229Z"
+}
+|metadata|
+////
+
+= Known Issues and Limitations ASP.NET 13.1
+
+== Known Issues and Limitations in 2013 Volume 1
+
+=== Overview
+
+The following table summarizes the known issues and limitations of the Infragistics ASP.NET® 2013.1 release. Detailed explanations and possible workarounds are provided for some of the issues follow the summary table.
+
+=== Legend
+
+- image:images\workaround.png[alt="Workaround"] - Workaround available
+- image:images\noworkaround.png[alt="No Workaround"] - No known workaround
+- image:images\fix.png[alt="Fix Planned"] - Fix planned
+
+[options="header", cols="a,a,a"]
+|====
+|Issue|Description|Status
+
+|<<_Ref351486744,Visual Studio Designer freezes with WebHierarchicalDataGrid and WebHierarchicalDataSource in UpdatePanel>>
+|When using the Designer in MS Visual Studio® with _WebHierarchicalDataGrid_™ and _WebHierarchicalDataSource_™ inside an UpdatePanel, there may be an issue with the Designer contiuously repainting and appearing as if it is frozen.
+|image::images/Known_Issues_and_Limitations_ASP.NET_12.1_1.png[]
+
+|<<_Ref351489288,Potentially incorrect tab width when a WebTab is added to a <TD> element>>
+|When a _WebTab_™, with either no width defined or width defined as percentage, is placed in a `<TD>` element with no width defined, occasionally the _WebTab_ control is unable to calculate the tab width correctly and, as a result, display the tab excessively wide.
+|image::images/Known_Issues_and_Limitations_ASP.NET_12.1_1.png[]
+
+|<<_possibly,Possibly misinterpreting the first character of text entered in edit mode when the WebDataGrid/ WebHierarchicalDataGrid is in IME mode with Edit mode configured to trigger on key press>>
+|When using the WebDataGrid control with active Input Method Editor (IME) mode with Edit mode configured to trigger on key press, the first character entered by the user may display as a Roman character.
+|image::images/Known_Issues_and_Limitations_ASP.NET_12.1_1.png[]
+
+|<<_Ref351490526,Asynchronous post-backs causing occasional memory leaks when WebDataGrid and WebTab are inside an UpdatePanel>>
+|With _WebDataGrid_™ and _WebTab_ controls inside an UpdatePanel, asynchronous post-backs might result in a memory leak.
+|image::images/Known_Issues_and_Limitations_ASP.NET_12.1_1.png[]
+
+|<<_recurring,Recurring multi-day appointments in the _WebSchedule_ render incorrectly when they occur on weekends>>
+|In the _WebSchedule_™ control, recurring appointments render incorrectly when they span multiple days with at least one day occuring on a weekend.
+|image::images/Known_Issues_and_Limitations_ASP.NET_12.1_1.png[]
+
+|====
+
+[[_Ref351486744]]
+
+=== Visual Studio Designer freezes with WebHierarchicalDataGrid and WebHierarchicalDataSource in UpdatePanel
+
+When using the Designer in Microsoft® Visual Studio with  _WebHierarchicalDataGrid_   and  _WebHierarchicalDataSource_   inside an UpdatePanel, there may be an issue with the Designer continuously repainting and appearing as if it is frozen.
+
+Workaround
+
+.Note:
+[NOTE]
+====
+Place the  _WebHierarchicalDataSource_   outside of the UpdatePanel control.
+====
+
+[[_Ref351489288]]
+
+=== Potentially incorrect tab width when a WebTab is added to a element
+
+When a  _WebTab_  , with either no width defined or width defined as a percentage, is placed in a `<TD>` element with no width defined, occasionally the  _WebTab_   control is unable to calculate the tab width correctly and, as a result, display the tab excessively wide.
+
+Workaround
+
+.Note:
+[NOTE]
+====
+Explicitly configure a pixel width on the  _WebTab_   control.
+====
+
+=== Possibly misinterpreting the first character of text entered in edit mode when the WebDataGrid/ WebHierarchicalDataGrid is in IME mode and Edit mode is configured to trigger on key press
+
+When using the WebDataGrid control with active Input Method Editor (IME) mode with Edit mode configured to trigger on key press, the first character entered by the user may display as a Roman character.
+
+This issue can occur because when interpreting the IME, the browser requires an actual `INPUT` element. Because the  _WebDataGrid_  / _WebHierarchicalDataGrid_   displays data in `<TD>` elements as opposed to `INPUT`s, the browser will use Roman characters until the `INPUT` is displayed for editing, which is the point at which the IME can accept component characters or processing commands. This results in an initial Roman character as the first input character followed by the correct component characters.
+
+Workaround
+
+.Note:
+[NOTE]
+====
+Clear the initial character from the `enteredEditMode` event.
+====
+
+*In JavaScript:*
+
+[source,js]
+----
+function entered(grid, args) {
+          var editor = args.getEditor();
+     setTimeout(function () { editor.set_value("") }, 0);
+}
+----
+
+=== Asynchronous post-backs causing occasional memory leaks when WebDataGrid and WebTab are inside an UpdatePanel
+
+With  _WebDataGrid_   and  _WebTab_   controls inside an UpdatePanel, asynchronous post-backs could cause a memory leak.
+
+This issue appears to originate in the browser or the ASP.NET AJAX library as it is also reproducible with Microsoft’s GridView and an HTML table within the UpdatePanel.
+
+Workaround
+
+.Note:
+[NOTE]
+====
+Place Infragistics Ajax controls outside UpdatePanel and to use controls own AJAX capabilities.
+====
+
+=== Recurring multi-day appointments in WebSchedule render incorrectly when they occur on weekends
+
+In the  _WebSchedule_   control, recurring appointments render incorrectly when they span over multiple days including a weekend.
+
+Workaround
+
+.Note:
+[NOTE]
+====
+Set the `EnableMultiDayEventBanner` property of the  _WebSchedule’s_   `DetailEventCalenderWebScheduleInfo` object to  _false_  .
+====
+
+*In C#:*
+
+[source,csharp]
+----
+WebSchedule.DetailEventCalenderWebScheduleInfo.EnableMultiDayEventBanner = false;
+----
+
+== Related Content
+
+=== Topics
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| _link:web-webdatagrid-webdatagrid.html[WebDataGrid]_ 
+|Contains all of the overview/task-based information related to the _WebDataGrid_ control consisting of valuable information about the control, ranging from what it does and why you would want to use it in your application, to step-by-step procedures on how to use the control accomplish common tasks.
+
+| _link:web-webhierarchicaldatagrid.html[WebHierarchicalDataGrid]_ 
+|Contains all of the overview/task-based information related to the _WebHierarchicalDataGrid_ control consisting ofvaluable information about _WebHierarchicalDataGrid_, ranging from what the control does and why you would want to use it in your application, to step-by-step procedures on how to use the control to accomplish common tasks.
+
+| _link:web-webhierarchicaldatasource.html[WebHierarchicalDataSource]_ 
+|Contains all of the overview/task-based information related to the _WebHierarchicalDataSource_ control consisting of valuable information about _WebHierarchicalDataSource_, ranging from what the control does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+| _link:web-webtab.html[WebTab]_ 
+|Contains all of the overview/task-based information related to the _WebTab_ control consisting of valuable information about the control, ranging from what it does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+| _link:web-webschedule.html[WebSchedule]_ 
+|Because the _WebSchedule_ controls (e.g., _WebCalendarView_, _WebMonthView_, _WebScheduleInfo_ ) are part of the _WebSchedule_ assembly and take advantage of similar features, we have grouped topics that apply to multiple _WebSchedule_ controls together in this section.
+
+|====

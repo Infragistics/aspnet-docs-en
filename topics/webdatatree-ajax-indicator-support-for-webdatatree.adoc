@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-ajax-indicator-support-for-webdatatree",
+    "controlName": ["WebDataTree"],
+    "tags": [],
+    "guid": "{EE31A85D-D529-4DA0-BB64-05261B058B55}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Ajax Indicator Support for WebDataTree
+
+The WebDataTree™ control’s AJAX Indicator displays a wait notification for end users whenever the control is waiting for a callback to complete. By default, the AJAX indicator is shared with other Infragistics ASP.NET AJAX controls; however the shared AJAX Indicator settings can be overridden on the control level. The wait message is configurable to show text or an Image by, using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~text.html[Text]"]  or the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~imageurl.html[ImageUrl]"]  property settings. You can also set the screen location of the indicator by using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~location.html[Location]"]  property. For more information on the AJAX Indicator please see the link:web-ajax-indicator.html[AJAX Indicator] topic.
+
+*In Visual Basic:*
+
+----
+' Enable Ajax Indicator at control level
+Me.WebDataTree1.AjaxIndicator.Enabled = Infragistics.Web.UI.DefaultableBoolean.[True] 
+' Set the Ajax Indicator’s wait message 
+Me.WebDataTree1.AjaxIndicator.Text = "Ajax Call Wait" 
+' Set the Ajax Indicator’s Location 
+Me.WebDataTree1.AjaxIndicator.Location = Infragistics.Web.UI.RelativeLocation.AboveCenter 
+' Set the location of the Ajax Indicator specific to the control. 
+Me.WebDataTree1.AjaxIndicator.RelativeToControl = Infragistics.Web.UI.DefaultableBoolean.[True]
+----
+
+*In C#:*
+
+----
+// Enable Ajax Indicator at control level
+this. WebDataTree1.AjaxIndicator.Enabled = Infragistics.Web.UI.DefaultableBoolean.True;
+// Set the Ajax Indicator’s wait message
+this. WebDataTree1.AjaxIndicator.Text = "Ajax Call Wait";
+// Set the Ajax Indicator’s Location
+this. WebDataTree1.AjaxIndicator.Location = Infragistics.Web.UI.RelativeLocation.AboveCenter;
+// Set the location of the Ajax Indicator specific to the control.
+this. WebDataTree1.AjaxIndicator.RelativeToControl = Infragistics.Web.UI.DefaultableBoolean.True;
+----
+
+== Related Topic
+
+link:web-ajax-indicator.html[AJAX Indicator]

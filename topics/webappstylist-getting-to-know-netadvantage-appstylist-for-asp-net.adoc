@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-getting-to-know-netadvantage-appstylist-for-asp-net",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Getting Started"],
+    "guid": "{20866BCB-5671-4F6D-8D71-016440682626}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Getting to Know Infragistics AppStylist for ASP.NET
+
+Knowing your way around Infragistics AppStylist for ASP.NET is essential to creating professionally themed Web applications. Infragistics AppStylist's user interface is divided into three sections: Canvas, Style Explorer, and Properties Panel. Each of these sections provides unique functionality that will help you style your application.
+
+* link:webappstylist-canvas.html[Canvas] -- The Canvas is divided into tabbed sections, each containing a sample Web page. These sample pages contain several configurations of Infragistics ASP.NET controls and components that you might encounter in your own Web application. As you change the appearance of Roles, you will see the changes reflected in the canvas.
+* link:webappstylist-properties-panel.html[Properties Panel] -- The Properties Panel is where you change the appearance of roles and other component-specific settings. The Properties Panel is simply a container. Inside the Properties Panel, you will find a designer which will help you modify roles graphically, and a text editor if you prefer to modify the CSS directly.
+* link:webappstylist-style-explorer.html[Style Explorer] -- The Style Explorer is the navigator of Infragistics AppStylist. Through the Roles tab, you can expand the Roles tree and change all kinds of properties and settings (which mostly translate to CSS script). When you click on a particular Role or component, the corresponding properties show up in the Properties Panel; from here, you can change the actual appearance of those Roles and settings. Another feature of the Style Explorer includes managing StyleSets.

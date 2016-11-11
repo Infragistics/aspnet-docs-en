@@ -1,0 +1,158 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-whats-new-in-2009-volume-1",
+    "controlName": [],
+    "tags": ["FAQ","Getting Started"],
+    "guid": "{F402E079-849E-494B-BCA3-F51FB44F1681}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= What's New in 2009 Volume 1
+
+The Infragistics ASP.NET 2009 Volume 1 release includes a collection of new controls built on the Infragistics ASP.NET AJAX framework along with the new Infragistics Drag and Drop Framework.
+
+== New Drag and Drop Framework
+
+The Drag and Drop Framework™ allows you to easily add drag and drop functionality to your application. This allows for real-time moving of elements and more user-friendly interactions. The framework provides you with the scripts necessary to handle the drag and drop process as well as create custom animations.
+
+Some of the Drag and Drop Framework features include:
+
+* *Ease of Implementation* - The framework provides the necessary pieces to make it as simple as possible to add drag and drop functionality.
+* *Scalability and Customization* - Almost any element is draggable with the ability to provide your own drag and drop markup.
+* *Custom Animations* - Ability to add custom animations allows for a smooth and elegant drag and drop behavior.
+
+== Related Topics
+
+link:draganddropframework-about-drag-and-drop-framework.html[About Drag and Drop Framework]
+
+link:draganddropframework-getting-started-with-drag-and-drop.html[Getting Started with Drag and Drop]
+
+link:draganddropframework-using-drag-and-drop-framework.html[Using Drag and Drop Framework]
+
+== New WebDataMenu Control
+
+The WebDataMenu™ control is a new addition to the expanding list of Infragistics ASP.NET AJAX controls. WebDataMenu’s new design makes it an efficient and scalable multi-level, hierarchical Menu or pop-up context Menu control, with native AJAX capabilities.
+
+Like all Infragistics ASP.NET AJAX controls, WebDataMenu seamlessly integrates into the Infragistics® Application Styling framework. With CSS based properties, you can manually customize the WebDataMenu control by leveraging your existing style sheets.
+
+A few of the WebDataMenu features include:
+
+* *High-Performance* - Lightweight markup and optimized code improve performance.
+* *Standards Conformance* - CSS 2 and XHTML 1.0 compliance.
+* *Numerous Supported Data Sources* - Support for a large range of bindable data sources including standard Microsoft data source controls and objects implementing IEnumerable. You can bind flat and even hierarchical data models to WebDataMenu in order to dynamically define your menu layout.
+* *Templates* - WebDataMenu items can be templated so that you can achieve complex custom layouts and have the ultimate in flexibility.
+* *Client-Side Object Model* - Handle client-side events that will allow you to avoid having to perform server-side callbacks.
+* *Menu Orientation* - WebDataMenu can be oriented vertically, horizontally and it can even include both orientations simultaneously.
+* *Pop-up Context Menu* - WebDataMenu can be configured to be a pop-up context menu. Your end-users can right-click on your Page controls and invoke a pop-up menu with relevant tasks.
+* *Menu Item States* - WebDataMenu Items support various states such as Selected, Active, Hovered and even Disabled. Each state can be styled distinctively.
+* *Native AJAX Support* - Because the Infragistics ASP.NET AJAX controls are built on top of the Microsoft® ASP.NET AJAX Extensions, most of WebDataMenu’s functionalities are executed using AJAX, eliminating full page postbacks.
+
+== Related Topics
+
+link:webdatamenu-about-webdatamenu.html[About WebDataMenu]
+
+link:webdatamenu-getting-started-with-webdatamenu.html[Getting Started with WebDataMenu]
+
+link:webdatamenu-using-webdatamenu.html[Using WebDataMenu]
+
+== New WebDataTree Control
+
+The WebDataTree™ control is a new addition to the expanding list of Infragistics ASP.NET AJAX controls. WebDataTree’s new design makes it an efficient and scalable multi-level, hierarchical Tree control. WebDataTree can be used to display your hierarchical data model or it can also be used as a navigation control. Many possibilities exist when integrating WebDataTree into your applications.
+
+Like all Infragistics ASP.NET AJAX controls, WebDataTree seamlessly integrates into the Infragistics® Application Styling framework. With CSS based properties, you can manually customize the WebDataTree control by leveraging your existing style sheets.
+
+A few of the WebDataTree features include:
+
+* *High-Performance* - Lightweight markup and optimized code improve performance.
+* *Standards Conformance* - CSS 2 and XHTML 1.0 compliance.
+* *Load on Demand* - Rather than initially render your entire data source upon the initial page load, you can enable the Load on Demand feature which only sends a small fraction of your data upon the initial page load. Subsequent node expansions invoke an AJAX callback which causes the additional nodes to be retrieved and loaded. This provides dramatic performance improvements over simply loading your entire large data source in one attempt.
+* *Templates* - WebDataTree elements can be templated for the ultimate in flexibility. Nodes can be templated and you can also provide a template for when no data is loaded in WebDataTree.
+* *Node Editing* - WebDataTree nodes can also be edited. The end-user can double-click or press F2 to enter edit mode on specific nodes.
+* *Animations* - WebDataTree node expansions can occur in an animated fashion. May preset animation options are exposed through a simple property setting so that you can easily add professional animated effects to your web applications.
+* *Client-Side object model* - WebDataTree provides an extensive client-side object model that exposes properties, methods and even events that can be handled in order to respond to many events that would traditionally require a server-side round trip. This type of architecture promotes a very fast and responsive end-user experience when used in your applications.
+* *Many other features!*
+
+== Related Topics
+
+link:webdatatree-about-webdatatree.html[About WebDataTree]
+
+link:webdatatree-getting-started-with-webdatatree.html[Getting Started with WebDataTree]
+
+link:webdatatree-using-webdatatree.html[Using WebDataTree]
+
+== New WebDropDown Control
+
+The WebDropDown™ control is a new addition to the expanding list of Infragistics ASP.NET AJAX controls. WebDropDown’s new design makes it an efficient and scalable list control, with native AJAX capabilities.
+
+Like all Infragistics ASP.NET AJAX controls, WebDropDown seamlessly integrates into the Infragistics® Application Styling framework. With CSS based properties, you can manually customize the WebDropDown control by leveraging your existing style sheets.
+
+A few of the WebDropDown features include:
+
+* *High-Performance* - Lightweight markup and optimized code improve performance.
+* *Standards Conformance* - CSS 2 and XHTML 1.0 compliance.
+* *Numerous Supported Data Sources* - Support for a large range of bindable data sources including standard Microsoft data source controls and objects implementing IEnumerable.
+* *Multiple Item Selection* - End-users can select more than one item from the drop-down list.
+* *Load On Demand* - Rather than send your entire data source to the client in one trip, you can enable Load on Demand, where initially, a small segment of data is sent, therefore reducing the time it takes to render your page. As the end-user scrolls through the list of items, any item that does not exist on the client is fetched asynchronously and loaded behind the scenes for a quick and responsive end-user experience.
+* *Paging* - Increase performance by splitting your data into several pages. Similar to Paging in WebDataGrid™ and WebGrid™, large data sources are sent to the client in smaller segments rather than all at once. The end-user simply clicks on the page number that they wish to navigate to.
+* *Autocomplete* - End-users type into the WebDropDown Text editor and the first matching item is scrolled to in the drop down list. This improves the end-user experience whenever you have a large list of items.
+* *Auto Filtering* - End-users can type into the WebDropDown Text editor and suggested matches starting with that text are presented in the drop down list. This is another feature that greatly improves the end-user experience whenever they need to select data from a large list of items.
+* *Keyboard Navigation* - WebDropDown supports a complete set of keyboard navigation where end-users can perform many tasks through simple keyboard strokes. End-user data entry and selection is greatly improved whenever your application allows keyboard navigation.
+* *Templates* - List Items can be templated allowing for maximum flexibility and customization. Just imagine customizing your list items with graphics, custom controls and other objects that would make your list items more attractive and usable.
+* *Native AJAX Support* - Because the Infragistics ASP.NET AJAX controls are built on top of the Microsoft® ASP.NET AJAX Extensions, most of WebDropDown’s functionalities are executed using AJAX, eliminating full page postbacks.
+
+== Related Topics
+
+link:webdropdown-about-webdropdown.html[About WebDropDown]
+
+link:webdropdown-getting-started-with-webdropdown.html[Getting Started with WebDropDown]
+
+link:webdropdown-using-webdropdown.html[Using WebDropDown]
+
+== New WebProgressBar Control
+
+The WebProgressBar™ control is a new addition to the expanding list of Infragistics ASP.NET AJAX controls. WebProgressBar’s new design makes it an efficient and scalable progress indicator control. WebProgressBar can be used to update the end-user with the current progress of an operation as well as provide a visual animated cue to indicate an AJAX postback is currently in progress.
+
+Like all Infragistics ASP.NET AJAX controls, WebProgressBar seamlessly integrates into the Infragistics® Application Styling framework. With CSS based properties, you can manually customize the WebProgressBar control by leveraging your existing style sheets.
+
+A few of the WebProgressBar features include:
+
+* *High-Performance* - Lightweight markup and optimized code improve performance.
+* *Standards Conformance* - CSS 2 and XHTML 1.0 compliance.
+* *Animations* - WebProgressBar value changes can occur in an animated fashion. May preset animation options are exposed through a simple property setting so that you can easily add professional animated progress indication to your web applications.
+* *Orientation* - Vertical and Horizontal progress indication allows for various user interface configurations.
+* *Client-Side object model* - WebProgressBar is essentially a client-side oriented control where JavaScript can be used to interact with and respond to events that would otherwise require server-side callbacks. This architecture allows you to create a quick and responsive user interface that would otherwise be hindered by full page postbacks.
+
+== Related Topics
+
+link:webprogressbar-about-webprogressbar.html[About WebProgressBar]
+
+link:webprogressbar-getting-started-with-webprogressbar.html[Getting Started with WebProgressBar]
+
+link:webprogressbar-using-webprogressbar.html[Using WebProgressBar]
+
+== New WebDataGrid Column Moving
+
+The WebDataGrid™ control now supports Column Moving. Your end-users can now click and drag Column headers to change their position. This is useful for end-users that want to rearrange the visible columns from the order in that they are presented.
+
+Column moving also comes with several UI enhancements that allow you to configure how column headers get dragged during the operation. Column headers can follow the end-user’s mouse pointer during the drag while at the same time fading to a semi-transparent state or column headers can remain in-line with the rest of the headers while the end-user drags the column.
+
+== Related Topics
+
+link:webdatagrid-column-moving.html[Column Moving]
+
+== Miscellaneous
+
+== Chrome Support
+
+* All the ASP.NET AJAX controls are now supported in Chrome.
+* WebSchedule™ is now supported in Chrome.
+
+== Application Styling Framework™
+
+* You can now apply a single application style setting for all the ASP.NET controls.
+* CSS registry to create styles from within code.

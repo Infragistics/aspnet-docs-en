@@ -1,0 +1,180 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-client-side-events-csom",
+    "controlName": [],
+    "tags": ["API","How Do I","Scheduling"],
+    "guid": "{23CD8B31-EC7A-44AB-A541-43309BAC279B}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebScheduleInfo Client-Side Events
+
+== Client Events
+
+=== Client Events Methods
+
+[cols="a,a"]
+|====
+|*ActiveDayChanged* 
+|This event fires after the ActiveDay has changed. 
+
+*Parameters*
+
+_scheduleInfo_ 
+
+The WebScheduleInfo client-side object. _evnt_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _newDate_ 
+
+The date of the new ActiveDay.
+
+|*ActiveDayChanging* 
+|This event fires before the ActiveDay changes. 
+
+*Parameters*
+
+_scheduleInfo_ 
+
+The WebScheduleInfo client-side object. _evnt_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _oldDate_ 
+
+The date of the previous ActiveDay. _newDate_ 
+
+The date of the new ActiveDay. 
+
+*Remarks*
+
+This event is cancelable: 
+
+evnt.cancel = true;
+
+|*ActivityAdding* 
+|This event fires before the Activity is added. 
+
+*Parameters*
+
+_scheduleInfo_ 
+
+The WebScheduleInfo client-side object. _evnt_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _activity_ 
+
+The activity object to be added. _id_ 
+
+The id is a field that either represents the id of the control which caused the event to fire, or the string value passed into the addActivity method. 
+
+*Remarks*
+
+This event is cancelable: 
+
+evnt.cancel = true;
+
+|*ActivityDeleting* 
+|This event fires before the Activity is deleted. 
+
+*Parameters*
+
+_scheduleInfo_ 
+
+The WebScheduleInfo client-side object. _evnt_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _activity_ 
+
+The activity object to be deleted. _id_ 
+
+The id is a field that either represents the id of the control which caused the event to fire, or the string value passed into the deleteActivity method. 
+
+*Remarks*
+
+This event is cancelable: 
+
+evnt.cancel = true;
+
+|*ActivityDialogEdit* 
+|This event fires before the Activity diaog closes, when the user his the "Save and Close" button of the Activity Dialog. 
+
+*Parameters*
+
+_scheduleInfo_ 
+
+The WebScheduleInfo client-side object. _evnt_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _activityEditProps_ 
+
+The dynamic update object which contains the HTML elements of all the controls on the Activity dialog and their values. 
+
+*Remarks*
+
+This event is cancelable: 
+
+evnt.cancel = true;
+
+|*ActivityDialogOpening* 
+|This event fires before the Activity Dialog opens. 
+
+*Parameters*
+
+_scheduleInfo_ 
+
+The WebScheduleInfo client-side object. _evnt_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _dialog_ 
+
+The activity dialog object. _activity_ 
+
+The activity that will be opened in the dialog. 
+
+*Remarks*
+
+This event is cancelable: 
+
+evnt.cancel = true;
+
+|*ActivityUpdating* 
+|This event fires before the Activity is updated. 
+
+*Parameters*
+
+_scheduleInfo_ 
+
+The WebScheduleInfo client-side object. _evnt_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _activityUpdateProps_ 
+
+The dynamic Activity object which contains the fiels of the activity that are going to be updated. _activity_ 
+
+The activity object to be updated. _id_ 
+
+The id is a field that either represents the id of the control which caused the event to fire, or the string value passed into the updateActivity method. 
+
+*Remarks*
+
+This event is cancelable: 
+
+evnt.cancel = true;
+
+|*ReminderDialogOpening* 
+|This event fires before the Reminder Dialog opens. 
+
+*Parameters*
+
+_scheduleInfo_ 
+
+The WebScheduleInfo client-side object. _evnt_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. 
+
+*Remarks*
+
+This event is cancelable: 
+
+evnt.cancel = true;
+
+|====
+

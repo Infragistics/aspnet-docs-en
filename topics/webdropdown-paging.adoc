@@ -1,0 +1,133 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-paging",
+    "controlName": ["WebDropDown"],
+    "tags": [],
+    "guid": "{A854CEC9-938F-4463-A9B6-AC1091C09EB3}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Paging
+
+WebDropDown™ supports a paging mechanism that helps to break a long list of items into multiple separate pages reducing load time and increasing performance. The number of pages is determined by the page size and the number of items in the drop-down container.
+
+To enable the paging feature, you must set the EnablePaging property to true and also set the PageSize property to the number of items you wish to display per page. You can set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enablepaging.html[EnablePaging]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~pagesize.html[PageSize]"]  properties either using the Microsoft® Visual Studio® Property Window or by using the following code :
+
+*In Visual Basic:*
+
+[source]
+----
+WebDropDown1.EnablePaging = true
+----
+
+[source]
+----
+WebDropDown1.PageSize = 10
+----
+
+*In C#:*
+
+[source]
+----
+WebDropDown1.EnablePaging = true;
+----
+
+[source]
+----
+WebDropDown1.PageSize = 10;
+----
+
+== Pager Settings
+
+WebDropDown allows you to customize the page links in several different ways. You can achieve this by accessing the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~pagersettings.html[PagerSettings]"]  property. The following list of modes helps you to determine how to render paging links by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.pagersettings~pagermode.html[PagerMode]"]  property:
+
+* Numeric -- Displays numeric based links
+* NextPrevious -- Displays next and previous links
+* NextPreviousFirstLast -- Displays next,previous,first and last links
+* NumericFirst Last -- Displays numeric based links and First and Last links
+
+.Note:
+[NOTE]
+====
+By default the PagerMode property is set to Numeric.
+====
+
+You can set the PagerMode property either using the Visual Studio Property window or by using the following code :
+
+*In Visual Basic:*
+
+----
+WebDropDown1.PagerSettings.PagerMode = Infragistics.Web.UI.ListControls.PagerMode.NextPreviousFirstLast
+----
+
+*In C#:*
+
+----
+WebDropDown1.PagerSettings.PagerMode = Infragistics.Web.UI.ListControls.PagerMode.NextPreviousFirstLast;   
+----
+
+== To change the text of the page links:
+
+By default , the page links are indicated using HTML character entities “&lt;&lt;" (<<) , “&lt;”(<) , “&gt;”(>) and “&gt;&gt;” (>>) for first,previous,next and last pages respectively. However you can change the text of the page links with the help of the following members of the PagerSettings class:
+
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.pagersettings~firstpagetext.html[FirstPageText]"]  -- The text of the first pager link
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.pagersettings~lastpagetext.html[LastPageText]"]  -- The text of the last pager link
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.pagersettings~nextpagetext.html[NextPageText]"]  -- The text of the next pager link
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.pagersettings~previouspagetext.html[PreviousPageText]"]  -- The text of the previous pager link
+
+You can set the above properties either using the Visual Studio Property window or by using the following code :
+
+*In Visual Basic:*
+
+----
+ WebDropDown1.PagerSettings.FirstPageText = "First"
+ WebDropDown1.PagerSettings.PreviousPageText = "Previous"
+ WebDropDown1.PagerSettings.NextPageText = "Next"
+ WebDropDown1.PagerSettings.LastPageText = "Last"
+----
+
+*In C#:*
+
+----
+ WebDropDown1.PagerSettings.FirstPageText = "First";
+ WebDropDown1.PagerSettings.PreviousPageText = "Previous";
+ WebDropDown1.PagerSettings.NextPageText = "Next";
+ WebDropDown1.PagerSettings.LastPageText = "Last";
+----
+
+== Quick Pages
+
+WebDropDown supports QuickPages feature which allows you to determine how many pages are available on each side of the current page. For example, if the property is set to 3, then up to 6 pages are accessible from the current one: the three following pages and the three preceding pages. If the current page is the first or last page or there are fewer than the specified number of pages left in that direction, then fewer or no page numbers are displayed in that direction. By default, the value is set to 0 which means the feature is disabled. The number of quick pages can be determined by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.pagersettings~quickpages.html[QuickPages]"]  property.
+
+.Note:
+[NOTE]
+====
+The QuickPages feature works only when the PagerMode is set to Numeric.
+====
+
+You can set the PagerMode property either using the Visual Studio Property window or by using the following code :
+
+*In Visual Basic:*
+
+[source]
+----
+WebDropDown1.PagerSettings.QuickPages = 3
+----
+
+*In C#:*
+
+[source]
+----
+WebDropDown1.PagerSettings.QuickPages = 3;
+----
+
+.Note:
+[NOTE]
+====
+Paging is incompatible with the load-on-demand feature and also with unbound DropDownItems.
+====

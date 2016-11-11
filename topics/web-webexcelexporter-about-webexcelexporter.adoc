@@ -1,0 +1,30 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webexcelexporter-about-webexcelexporter",
+    "controlName": ["WebExcelExporter"],
+    "tags": ["Exporting","Grids","How Do I"],
+    "guid": "05f0cf69-e056-4e0e-83ac-109bdae8b1c1",  
+    "buildFlags": [],
+    "createdOn": "2010-06-06T07:45:51.6196939Z"
+}
+|metadata|
+////
+
+= About WebExcelExporter
+
+The WebExcelExporter control allows you to automatically export Grid data. No matter what kind of Infragistics DataGrid you are using (WebDataGrid or WebHierarchicalDataGrid), you can easily achieve your goal to get the data into an Excel™ file, in the format of your choice. The Excel™ file formats that are supported are Excel™ 97 to Excel™ 2003 (all these versions share a common format) and Excel™ 2007 or later.
+
+WebExcelExporter is separate control which lives in Infragistics.Web.UI.GridControls namespace, so you don’t need any additional tag prefixes or namespace declarations in order to use it.
+
+Here is a list of features that are currently supported by WebExcelExporter:
+
+* ExportMode – defines the way exported files are presented. Files can be either sent to the browser for automatic downloading, or just saved to a WorkBook instance, so you decide what to do with the result
+* Exporting more than one grid at once, with an additional option specifying whether to export all grids in same WorkSheet, or each grid on a separate WorkSheet (default)
+* Exporting only grid data (when you have Paging or VirtualScrolling enabled) or the whole data in data source
+* Exporting into multiple Excel™ file formats (Excel™ 97 / Excel™ 2003 and Excel™ 2007 or later)
+* Exporting styles, so you don’t lose the look and feel of your application
+* Exporting data in provided WorkBook or WorkSheet instance
+* Specifying row offset and column offset in the WorkSheet for exported data
+* Server events, which you can handle to apply your custom logic before or after the data is exported, as well as on each exported row

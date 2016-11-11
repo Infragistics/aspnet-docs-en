@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webpercenteditor-using-webpercenteditor",
+    "controlName": ["WebPercentEditor"],
+    "tags": ["Editing","Getting Started"],
+    "guid": "{2E203BDA-EF4C-4E57-80F2-170A40846959}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T13:07:12Z"
+}
+|metadata|
+////
+
+= Using WebPercentEditor
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebPercentEditor™.
+
+link:webpercenteditor-setting-minimum-and-maximum-values-for-webpercenteditor.html[Setting minimum and maximum values for WebPercentEditor]
+
+In this section you can learn how to set minimum and maximum values for the WebPercentEditor control.
+
+link:webpercenteditor-setting-minimum-number-of-decimal-places-for-webpercenteditor.html[Setting minimum number of decimal places for WebPercentEditor]
+
+In this section you can learn how to set minimum and maximum number of decimal places for the WebPercentEditor control.
+
+link:webpercenteditor-styling-negative-text-in-webpercenteditor.html[Styling negative text in WebPercentEditor]
+
+You can learn how to set a custom style for negative text in this section.
+
+link:webpercenteditor-spinning-through-a-list-of-values-in-webpercenteditor.html[Spinning through a list of values in WebPercentEditor]
+
+In this section you can learn how to use spin buttons in the control to spin through a list of values.
+
+link:webpercenteditor-using-custom-button-in-webpercenteditor.html[Using Custom Button in WebPercentEditor]
+
+In this section you can learn how to implement a customized button and use it to perform custom actions.
+
+link:webpercenteditor-using-display-factor-in-webpercenteditor.html[Using Display Factor in WebPercentEditor]
+
+The WebPercentEditor control supports the usage of a display factor value that modifies the user input. This section explains how you can use it.
+
+link:webpercenteditor-webpercenteditor-smart-tag.html[WebPercentEditor Smart Tag]
+
+In this section you can learn about the WebPercentEditor Smart Tag.

@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-appearance",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{40975473-1225-420C-990B-5F65B568889A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Appearance
+
+This section provides useful information about appearances and how you can use them to customize the look and feel of your WebGauge. Click the link below to learn about appearances, as well as to access task-based procedures related to gauge appearances.
+
+* link:webgauge-brush-elements.html[Brush Elements]
+* link:webgauge-effects.html[Effects]

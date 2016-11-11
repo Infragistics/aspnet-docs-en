@@ -1,0 +1,69 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedulegenericdataprovider-about-webschedulegenericdataprovider",
+    "controlName": [],
+    "tags": ["Data Presentation","How Do I"],
+    "guid": "{96893408-527C-4114-9C4F-7D99F0E08FE9}",  
+    "buildFlags": [],
+    "createdOn": "2009-12-10T17:06:01Z"
+}
+|metadata|
+////
+
+= About WebScheduleGenericDataProvider
+
+The WebScheduleGenericDataProvider™ component allows you to bind the WebSchedule™ controls to any supported data sources. This addition of the WebScheduleGenericDataProvider component gives you more flexibility in choosing WebSchedule data sources; you no longer need to rely on just the SqlDataProvider or the OleDbDataProvider for data binding.
+
+== Data Model
+
+Your scheduling data can be in any schema you choose. The WebScheduleGenericDataProvider component allows you to specify the data source you are binding to by providing the following properties: link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~activitydatasource.html[ActivityDataSource]/ link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~activitydatasourceid.html[ActivityDataSourceID], link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~resourcedatasource.html[ResourceDataSource]/ link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~resourcedatasourceid.html[ResourceDataSourceID], and link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~variancedatasource.html[VarianceDataSource]/ link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~variancedatasourceid.html[VarianceDataSourceID].
+
+You can retrieve as many fields as you like from your data entities; you can then access these fields via the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity] and link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource] object’s link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource~datarow.html[DataRow] property. You can also specify the specific fields you want to bind to by setting the corresponding properties in the link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.appointmentbinding.html[AppointmentBinding], link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.resourcebinding.html[ResourceBinding], and link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.variancebinding.html[VarianceBinding] objects. Set a specific binding if your data model does not match WebSchedule's data model bindings (i.e. if the fields' names in your data source differ from the default ones in the AppointmentBinding, VarianceBinding, and ResourceBinding classes). To examine the default data schema, see link:webschedule-data-model-for-webschedule-generic-data-provider.html[Data Model for WebSchedule Generic Data Provider].
+
+The data model for WebSchedule has changed since the addition of WebScheduleGenericDataProvider. First thing you will notice is that the Recurrence table is removed and additional fields are added to the Activity and Resource table. The following table lists the required fields for the different types of data to function correctly in WebSchedule.
+
+[options="header", cols="a,a"]
+|====
+|Data|Required Fields
+
+|Appointment
+|ID, StartDateTimeUtc, Duration, ResourceID, VarianceID, Subject, and Status
+
+|Variance
+|ID, StartDateTimeUtc, Duration, ResourceID, VarianceID, Subject, Status, and OriginalStartDateTimeUtc
+
+|Resource
+|ID and ResourceName
+
+|====
+
+== Supported Data Sources
+
+The following is a list of WebScheduleGenericDataProvider's supported data sources.
+
+* DataSet and DataTable
+* IListSource
+* IDataSource
+* IEnumerable (read-only, updates must be IList or ICollection)
+
+== Data Binding and CRUD Statements
+
+When binding to data source controls such as SqlDataSource or AccessDataSource, configure the Select, Update, Insert, and Delete statements to correspond to your Activity, Resource, and/or Variance data. This means you need separate data source controls for each type of data, but not necessarily separate data sources. It is not mandatory to have an additional data source control defined for variance data if it is intended for display only (no CRUD statements); you can retrieve variance data from the same data source as appointments if OriginalStartDateTimeUtc is defined as a field in the data source. For an example of how to correctly configure the CRUD statements for data source controls, see link:webschedule-binding-to-access-data-source-using-webschedulegenericdataprovider.html[Binding to Access Data Source Control Using WebScheduleGenericDataSource].
+
+Instead of CRUD statements, WebScheduleGenericDataProvider automatically updates and deletes data when binding to data source objects. When adding new data, you need to set the DataKey of the object you are adding. For example, if you are adding an Activity object, handle the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activityadding_ev.html[ActivityAdding] event and set the Activity object's link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.webdataobject~datakey.html[DataKey] property. You can use the DataKey property to locate and update the data in your data base. For more information on binding to data source objects, see link:webschedule-binding-to-a-data-set-with-webschedulegenericdataprovider.html[WebSchedule Binding to a Data Set with WebScheduleGenericDataProvider].
+
+You can enable concurrency checks in data source controls by setting WebScheduleGenericDataProvider's link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~enableconcurrencychecks.html[EnableConcurrencyChecks] property to True. Your Update statement must contain the following Where clause:
+
+… WHERE [ID] = @ID AND [Timestamp] = @Timestamp"
+
+TimeStamp is a field in your data source that represents the timestamp of each record. If there are concurrency conflicts in data updates, the link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider~dataprovidererror_ev.html[DataProviderError] event is raised.
+
+== Related Topics
+
+link:web-webschedule.html[WebSchedule]
+
+link:webschedulegenericdataprovider-webschedulegenericdataprovider-smart-tag.html[WebScheduleGenericDataProvider Smart Tag]
+
+link:webschedule-data-bindings.html[Data Binding]

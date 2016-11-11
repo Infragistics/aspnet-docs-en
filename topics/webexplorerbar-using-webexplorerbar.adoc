@@ -1,0 +1,65 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexplorerbar-using-webexplorerbar",
+    "controlName": ["WebExplorerBar"],
+    "tags": ["How Do I"],
+    "guid": "{AAF5B70F-7941-435C-8983-FCF22009F86C}",  
+    "buildFlags": [],
+    "createdOn": "2010-01-03T23:00:36Z"
+}
+|metadata|
+////
+
+= Using WebExplorerBar
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebExplorerBar™.
+
+link:webexplorerbar-smart-tag.html[WebExplorerBar Smart Tag]
+
+This topic introduces WebExplorerBar Smart Tag anchor and pop-up panel, which give the ability to see and set most of the control properties and settings.
+
+link:webexplorerbar-keyboard-navigation.html[Keyboard Navigation]
+
+In this topic you can learn how to quickly navigate between the groups and items of WebExplorerBar contol.
+
+link:webexplorerbar-display-modes.html[Display Modes]
+
+The WebExplorerBar™ control has two properties to control the way it behaves, which you can discover here.
+
+link:webexplorerbar-height-properties.html[WebExplorerBar Height Properties]
+
+In this topic you can understand and see examples how to configure the height of WebExplorerBar™ using varied properties.
+
+link:webexplorerbar-setting-navigateurl-and-target-properties.html[Setting NavigateURL and Target Properties]
+
+The code in the example shows you how to make profit of the WebExplorerBar's items, using them as navigational links.
+
+link:webexplorerbar-binding-to-an-xml-data-source.html[Binding to an XML Data Source]
+
+The WebExplorerBar can bind to hierarchical data source including XML one. Use this topic to see the implementation of an example, which uses XMLDataSource component.
+
+link:webexplorerbar-binding-to-webhierarchcialdatasource.html[Binding to WebHierarchcialDataSource]
+
+The WebExplorerBar can bind to hierarchical data source, displaying each level of the data hierarchy. The control in this example connect to WebHierarchicalDataSource component.
+
+link:webexplorerbar-serverevents.html[Server-Side Events]
+
+In this topic you can discover the list of the WebExplorerBar server-site events.
+
+link:webexplorerbar-selection-behavior.html[Selection Behavior]
+
+In the example here you can learn how to activate a group or an item from WebExplorerBar control.
+
+link:webexplorerbar-clientside-api.html[ClientSide API]
+
+The purpose of this topic is to explain the usage of basic client-side methods of WebExplorerBar control.
+
+link:webexplorerbar-clientevents.html[Client-Side Events]
+
+Here you can find a list with the available client-side events of the WebExplorerBar control.
+
+link:webexplorerbar-styling.html[CSS Class Properties]
+
+This topic indicates list of CSS properties that WebExplorerBar provides for customizing control appearance.

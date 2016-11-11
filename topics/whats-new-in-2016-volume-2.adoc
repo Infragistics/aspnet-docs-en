@@ -1,0 +1,37 @@
+﻿////
+|metadata|
+{
+    "name": "whats-new-in-2016-volume-2",
+    "controlName": [],
+    "tags": [],
+    "guid": "69ad0921-6a3b-4035-808d-fee0d0c6666c",
+    "buildFlags": [],
+    "createdOn": "2016-09-29T13:26:10.292549Z"
+}
+|metadata|
+////
+
+= What's New in 2016 Volume 2
+
+This topic gives a brief overview of the new controls and features introduced in the Infragistics® ASP.NET 2016 Volume 2 release.
+
+
+== General
+
+[[Watermark]]
+
+=== The licensing mechanism for ASP.NET controls is deprecated and it is replaced with a trial watermark
+
+The server control licensing mechanism that was used in the Infragisitcs ASP.NET controls, to verify the ownership of the product is now deprecated. This means that if you install the Trial version of the product, then you will be able to use it as a licensed one, but when running a web page that contains Infratistics ASP.NET controls, then a trial watermark will appear at the bottom right of the page. The new change will also mean that the trial version of the product will never expire, but the watermark will stay there, unless you license the Infragistics product. The image below shows a web page that contains Infragistics ASP.NET controls in a trial version.
+
+image:images\TrialWatermark.png[alt="TrialWatermark"]
+
+=== ASP.NET NuGet packages are added
+
+The ASP.NET NuGet packages are added in this 2016 volume 2 release. Those packages can boost your productivity allowing you to setup your application faster. They will automatically include the references you need in your project.
+
+The NuGet packages are installed with the product`s installer and during the installation a new local feed is created, meaning that you don`t need to setup your NuGet Package Manager. You will find the local NuGet feed Infragistics (Local) the next time you run your Visual Studio.
+
+==== Related topic
+
+link:aspnet-nuget.html[Using ASP.NET NuGet packages]

@@ -1,0 +1,125 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-sorting",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids","Sorting"],
+    "guid": "{733E7A3E-58BE-4D97-B9C4-60699418BC54}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Sorting
+
+== Before You Begin
+
+WebHierarchicalDataGrid™ sorting is a behavior that enables you to sort columns. You can have single or multiple column sorting.
+
+== What You Will Accomplish
+
+You will enable column sorting for parent and child levels in WebHierarchicalDataGrid at design time.
+
+== Follow these Steps
+
+[start=1]
+. Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource™ component retrieving data from the Categories and Products table. For more information on doing this, see the link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Binding to Hierarchical Data Source] topic.
+[start=2]
+. In the Microsoft® Visual Studio property window, locate the Behaviors property and click the ellipsis (…) button to launch the Behaviors Editor dialog.
+[start=3]
+. Check the checkbox next to Sorting from the list of behaviors on the left to enable the behavior.
+
+image::Images/WebHierarchicalDataGrid_Enabling_Sorting_01.png[]
+
+[start=4]
+. Leave SortingMode as Single in the properties.
+
+.Note:
+[NOTE]
+====
+If you want Sorting only on specific bands, click the WebHierarchicalDataGrid control’s smart tag > Edit bands to launch the Edit WebHierarchicalDataGrid Designer dialog. Select the specific Band for which you want to enable the behavior, from the list of bands on the left. Follow steps 2 to 4.
+====
+
+[start=5]
+. Set link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~enableinheritance.html[EnableInheritance] property to True. This enables all the child levels to automatically inherit Sorting behavior. The property’s default value is False.
+[start=6]
+. Click Apply and OK to close the dialog window.
+
+.Note:
+[NOTE]
+====
+In order to use Sorting in conjunction with paging behavior, DataKeyFields must be set for each band in HierarchicalDataGrid.
+====
+
+[start=7]
+. Run the application. You can sort one column at a time in WebHierarchicalDataGrid. The child band can also be sorted.
+
+image::Images/WebHierarchicalDataGrid_Enabling_Sorting_02.png[]
+
+== Sort Columns in Code
+
+You can sort WebHierarchicalDataGrid using server-side or client-side code. On the server side, you have the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~sortedcolumns.html[SortedColumns]"]  property. In this topic, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabinding_ev.html[RowIslandDataBinding]"]  event is handled to sort parent and child columns.
+
+On the client, you have the sortColumn method to use. The sortColumn method requires the column name and the sort direction parameters. The Sort direction is 0, 1, or 2 for none, ascending, or descending. The RowExpanded client event can be handled to sort a column in the child level.
+
+The following code shows you how to sort a column in WebHierarchicalDataGrid, assuming sorting is enabled and its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property set to true.
+
+*In Visual Basic:*
+
+----
+' Hook up RowIslandDataBinding event 
+AddHandler Me.WebHierarchicalDataGrid1.RowIslandDataBinding, AddressOf WebHierarchicalDataGrid1_RowIslandDataBinding
+Private Sub WebHierarchicalDataGrid1_RowIslandDataBinding(ByVal sender As Object, ByVal e As RowIslandEventArgs) Handles WebHierarchicalDataGrid1.RowIslandDataBinding
+    ' Sort a Column in PARENT BAND 
+    If e.RowIsland.DataMember = "SqlDataSource1_DefaultView" Then
+        Dim sort As Sorting = e.RowIsland.Behaviors.Sorting
+        sort.SortedColumns.Add("CategoryName", Infragistics.Web.UI.SortDirection.Descending)
+    End If
+    ' Sort a Column in CHILD BAND 
+    If e.RowIsland.DataMember = "SqlDataSource2_DefaultView" AndAlso e.RowIsland.ParentRow = Me.WebHierarchicalDataGrid1.GridView.Rows(1) Then
+        Dim sort As Sorting = e.RowIsland.Behaviors.Sorting
+        sort.SortedColumns.Add(e.RowIsland.Columns(1), Infragistics.Web.UI.SortDirection.Ascending)
+    End If
+End Sub
+----
+
+*In C#:*
+
+----
+// Hook up RowIslandDataBinding event
+this.WebHierarchicalDataGrid1.RowIslandDataBinding += new RowIslandEventHandler(WebHierarchicalDataGrid1_RowIslandDataBinding);
+void WebHierarchicalDataGrid1_RowIslandDataBinding(object sender, RowIslandEventArgs e)
+{
+   // Sort a Column in PARENT BAND
+   if (e.RowIsland.DataMember == "SqlDataSource1_DefaultView")
+   {
+      Sorting sort = e.RowIsland.Behaviors.Sorting;
+      sort.SortedColumns.Add("CategoryName", Infragistics.Web.UI.SortDirection.Descending);
+   }
+   // Sort a Column in CHILD BAND
+   if (e.RowIsland.DataMember == "SqlDataSource2_DefaultView"
+      && e.RowIsland.ParentRow == this.WebHierarchicalDataGrid1.GridView.Rows[1])
+   {
+      Sorting sort = e.RowIsland.Behaviors.Sorting;
+      sort.SortedColumns.Add(e.RowIsland.Columns[1], Infragistics.Web.UI.SortDirection.Ascending);
+   }
+}
+----
+
+*In Javascript:*
+
+----
+var grid = $find("WebHierarchicalDataGrid1");
+// Sort a COLUMN IN PARENT BAND
+var parentGrid = grid.get_gridView();
+if (parentGrid != null) parentGrid.get_behaviors().get_sorting().sortColumn(parentGrid.get_columns().get_columnFromKey("CategoryName"), 2, false);
+// Sort a COLUMN IN CHILD BAND 
+var childGrid = grid.get_gridView().get_rows().get_row(0).get_rowIslands(0)[0];
+if (childGrid != null) childGrid.get_behaviors().get_sorting().sortColumn(childGrid.get_columns().get_columnFromKey("ProductName"), 2, false);
+----
+
+== Related Topics
+
+link:webhierarchicaldatagrid-behaviors.html[Behaviors]

@@ -1,0 +1,194 @@
+﻿////
+
+|metadata|
+{
+    "name": "persistenceframework-saving-data-in-application-session-and-in-a-file",
+    "controlName": ["PersistenceFramework"],
+    "tags": ["Persistence"],
+    "guid": "577a2f21-26d8-4f5f-8acb-84eb53186219",  
+    "buildFlags": [],
+    "createdOn": "2011-03-31T07:50:30.5174111Z"
+}
+|metadata|
+////
+
+= Saving Data in Application, Session and in a File
+
+The Persistence Framework manager is creating PersistenceData objects for every page. This means that when you are saving data to a permanent source, you will need a unique name for every one of these sources. This unique name is also required when you retrieve the persisted information. For this reason, the combination of usernames with page names is generally a good method of distinguishing the names of the data sources. However, defining a unique name in Session and Application objects has some differences. This topic demonstrated to you how to use Session and Application states for User Settings Persistence properly. Finally, the advantages of saving the persisted data in a file are explained and the end of this document.
+
+== Serialization
+
+First of all, you have to serialize and deserialize the data to be used for the Session and Application samples as see in *Listing 1.*
+
+*Listing 1: Serialize and deserialize data*
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected void PersistenceLoading(object sender, PersistenceLoadingEventArgs e) 
+{ 
+ if (!string.IsNullOrEmpty(this.StoredData)) 
+ { 
+ e.PersistenceData = PersistenceData.FromXml(this.StoredData); 
+ } 
+} 
+protected void PersistenceSaved(object sender, PersistenceEventArgs e) 
+{ 
+ this.StoredData = e.PersistenceData.ToXml(); 
+}
+----
+
+|====
+
+== Using Session State
+
+You can differentiate the sources of the persisted data by only using the page name as an identifier. This is because Session instances are user-specific, so you don’t need to specify the username.
+
+*Listing 2: Using Session state*
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected string StoredData 
+{ 
+ get 
+ { 
+ return Convert.ToString(Session[String.Format("{0}_StoredData", 
+ this.GetType().FullName)]); 
+ } 
+ set 
+ { 
+ Session[String.Format("{0}_StoredData", this.GetType().FullName)] = value; 
+ } 
+}
+----
+
+|====
+
+When using Session state as a repository of data sources, you must have the persisted data available while the user is navigating through the application. When a page’s state is preserved, it can be loaded later when the page is requested. However, when the user’s session is destroyed, the persisted data is not recovered to the page state.
+
+== Using Application State
+
+Unlike Session, when Application state is used, you are able to reload persisted data while your application is alive.
+
+The key in the Application object must be unique otherwise different users will use the same source and will override persisted values.
+
+.Note:
+[NOTE]
+====
+When you save data on the file system you must also use different names for the files with the persisted data.
+====
+
+*Listing 3: Using Application state*
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+private string _userIPAdress = String.Empty; 
+protected string StoredData 
+{ 
+ get 
+ { 
+ return Convert.ToString(Application[this.PersistenceUniqueID()]); 
+ } 
+ set 
+ { 
+ Application[this.PersistenceUniqueID()] = value; 
+ } 
+} 
+private string PersistenceUniqueID() 
+{ 
+ string userName = (HttpContext.Current.User.Identity.IsAuthenticated) 
+ ? HttpContext.Current.User.Identity.Name 
+ : this._userIPAdress; 
+ return string.Format("{0}.{1}", 
+ userName.Replace('\\', '.'), 
+ this.GetType().FullName); 
+} 
+protected void Page_Init(object sender, EventArgs e) 
+{ 
+ if (!HttpContext.Current.User.Identity.IsAuthenticated) 
+ { 
+ this._userIPAdress = Request.ServerVariables["REMOTE_ADDR"]; 
+ } 
+}
+----
+
+|====
+
+.Note:
+[NOTE]
+====
+This sample is using HttpContext.Current.User.Identity.Name for authenticated users and IP address for the rest. This is only one of many approaches available to you.
+====
+
+== Persist Data in a File
+
+The previous explanations described the way to save data in the Session and Application state. However, using these two approaches should be avoided since loading data on the server could easily lead to application server performance degradation and lack of resources.
+
+If server resources are a concern, consider persisting data in a file on the file system. In this way you can load the persisted data among different browsers. You also have the data persisted permanently on your hard disk, until it’s deleted. This means you can open the same page after a month and its state will be recovered.
+
+The most appropriate way to distinguish the unique name of the file is the same as the method used in the approach used for Application state. The next source lines show how to implement this approach:
+
+*Listing 4: Using the file system*
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected void PersistenceLoading(object sender, PersistenceLoadingEventArgs e) 
+{ 
+ string filePath = this.GetPersistenceFilePath(e.Page); 
+ if (!File.Exists(filePath)) 
+ return; 
+ // Persist the data in a file 
+ using (FileStream fileStream = File.OpenRead(filePath)) 
+ { 
+ e.PersistenceData = PersistenceData.FromStream(fileStream); 
+ } 
+} 
+protected void PersistenceSaved(object sender, PersistenceEventArgs e) 
+{ 
+ if (e.PersistenceData == null) 
+ { 
+ return; 
+ } 
+ string filePath = this.GetPersistenceFilePath(e.Page); 
+ if (File.Exists(filePath)) 
+ File.Delete(filePath); 
+ using (FileStream fileStream = File.Create(filePath)) 
+ { 
+ e.PersistenceData.ToStream(fileStream); 
+ } 
+} 
+private string GetPersistenceFilePath(Page page) 
+{ 
+ string filePath = Server.MapPath("~/DirectoryToSave/"); 
+ string userName = (HttpContext.Current.User.Identity.IsAuthenticated) 
+ ? HttpContext.Current.User.Identity.Name 
+ : this._userIPAdress; 
+ string fileName = string.Format("{0}.{1}.xml", 
+ userName.Replace('\\', '.'), 
+ page.GetType().FullName); 
+ return string.Format("{0}{1}", filePath, fileName); 
+}
+----
+
+|====
+
+== Related Links
+
+link:{SamplesURL}/samples/persistenceframework/data/persistenceauthentication/default.aspx?cn=persistence-framework&sid=5170926a-90cf-4f3b-ae44-79bf54037cf4[Persistence Authentication Sample]
+
+link:persistenceframework-about-persistence-framework.html[About Persistence Framework]
+
+link:persistenceframework-getting-started-with-persistence-framework.html[Getting Started with Persistence Framework]
+
+link:persistenceframework-handling-persistence-events.html[Persistence Events]

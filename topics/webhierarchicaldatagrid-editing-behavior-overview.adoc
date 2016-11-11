@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-editing-behavior-overview",
+    "controlName": [],
+    "tags": [],
+    "guid": "b76092fd-7d30-4a29-bdf7-9045fe9cd586",  
+    "buildFlags": [],
+    "createdOn": "2014-03-10T17:09:53.6330301Z"
+}
+|metadata|
+////
+
+= Editing Behavior Overview (WebHierarchicalDataGrid)
+
+WebHierarchicalDataGrid™ is read-only by default. You must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior to allow interaction with the control. After EditingCore is enabled you can edit WebHierarchicalDataGrid in code; however, if you want to allow your end-users to edit, delete, and add data using WebHierarchicalDataGrid's UI, you must enable additional behaviors. These are all considered dependent behaviors specific to the user interaction. Once editing is enabled, data updates commit immediately to the data source.
+
+.Note:
+[NOTE]
+====
+Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to the name of the primary key column in your data source to ensure that changes in WebHierarchicalDataGrid can be updated in data source.
+====
+
+== Dependent Behaviors
+
+* *Cell Editing* - Allows data manipulation in the cells of WebHierarchicalDataGrid. End-users are allowed to edit data when this behavior is enabled.
+* *Row Editing* - An editing experience that places the entire row in edit mode. Changes are saved are rejected using Done and Cancel buttons respectively.
+* *Row Adding* - Enabling this behavior creates an interface in which users can add new rows to WebHierarchicalDataGrid: A blank row is placed at the bottom or top of the control.
+* *Row Deleting* - Allows data deletion. To delete, end-users can select the row(s) and hit the Delete key.
+* *Row Editing Template* - Allows data manipulation of a row through a template that you create.
+
+.Note:
+[NOTE]
+====
+These behaviors are all dependent on the EditCore behavior; when you remove the EditCore behavior, these behaviors will also get removed.
+====
+
+For more information on editing in WebHierarchicalDataGrid, click the links below.
+
+* link:webhierarchicaldatagrid-cell-editing.html[Cell Editing]
+* link:whdg-row-editing.html[Row Editing (WebHierarchicalDataGrid)]
+* link:webhierarchicaldatagrid-batch-updating.html[Batch Updating]
+* link:whdg-row-deleting.html[Row Deleting (WebHierarchicalDataGrid)]
+* link:whdg-row-adding.html[Row Adding]

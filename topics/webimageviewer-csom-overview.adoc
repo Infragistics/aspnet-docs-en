@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimageviewer-csom-overview",
+    "controlName": ["WebImageViewer"],
+    "tags": ["API","Layouts","Styling","Templating"],
+    "guid": "{E72C8B20-A392-44FB-A9C9-921CEDC2F31B}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-01T21:05:15Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebImageViewer™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the image viewer without the need for server-side post-backs.
+
+link:webimageviewer~infragistics.web.ui_namespace.html[WebImageViewer CSOM Overview]

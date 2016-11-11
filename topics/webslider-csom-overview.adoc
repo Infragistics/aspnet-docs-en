@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webslider-csom-overview",
+    "controlName": ["WebSlider"],
+    "tags": ["Events"],
+    "guid": "{B924FB7B-826F-41FF-A9F7-7F78C0847087}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebSlider™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the image viewer without the need for server-side post-backs.
+
+link:webslider~infragistics.web.ui_namespace.html[WebSlider CSOM Overview]

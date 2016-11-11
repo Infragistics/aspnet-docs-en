@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatetimeeditor-edit-and-display-modes-in-webdatetimeeditor",
+    "controlName": ["WebDateTimeEditor"],
+    "tags": ["Editing","How Do I","Localization","Styling"],
+    "guid": "{AE6522A6-0B02-49E1-A256-3E8F6D78E907}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T17:07:15Z"
+}
+|metadata|
+////
+
+= Edit and Display Modes in WebDateTimeEditor
+
+WebDateTimeEditor™ allows you to specify different format strings for when the control is in edit and display modes. You can set the format of the date used for edit mode (i.e. when the control has input focus) by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~editmodeformat.html[EditModeFormat]"]  property. Similarly, you can set the format of the date used for display mode (i.e. when the control doesn’t have input focus) by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~displaymodeformat.html[DisplayModeFormat]"]  property.
+
+.Note:
+[NOTE]
+====
+EditModeFormat and DisplayModeFormat properties depend on the System.Globalization.DateTimeFormatInfo class.
+====
+
+You can set the EditModeFormat and DisplayModeFormat properties either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+'Create a DateTimeFormatInfo object
+Dim format As New System.Globalization.DateTimeFormatInfo()
+'Set the EditModeFormat property of WebDateTimeEditor to the pattern you want 
+WebDateTimeEditor1.EditModeFormat = format.ShortDatePattern
+'Set the DisplayModeFormat property of WebDateTimeEditor to the pattern you want
+WebDateTimeEditor1.DisplayModeFormat = format.LongDatePattern
+----
+
+*In C#:*
+
+----
+//Create a DateTimeFormatInfo object
+System.Globalization.DateTimeFormatInfo format = new System.Globalization.DateTimeFormatInfo();
+//Set the EditModeFormat property of WebDateTimeEditor to the pattern you want
+WebDateTimeEditor1.EditModeFormat = format.ShortDatePattern;
+//Set the DisplayModeFormat property of WebDateTimeEditor to the pattern you want
+WebDateTimeEditor1.DisplayModeFormat = format.LongDatePattern;
+----
+
+== EditMode:
+
+image::images/WebDateTimeEditor_Edit_and_Display_Modes_in_WebDateTimeEditor_01.png[]
+
+== DisplayMode:
+
+image::images/WebDateTimeEditor_Edit_and_Display_Modes_in_WebDateTimeEditor_02.png[]

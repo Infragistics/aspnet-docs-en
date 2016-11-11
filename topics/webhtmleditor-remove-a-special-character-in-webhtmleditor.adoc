@@ -1,0 +1,48 @@
+﻿////
+|metadata|
+{
+    "name": "webhtmleditor-remove-a-special-character-in-webhtmleditor",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{3DF2543B-9D91-4C50-9A5C-806E1AA8C242}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Remove a Special Character in WebHtmlEditor
+
+WebHtmlEditor™ lets end users enter special characters that are uncommon on most keyboards by selecting them from a drop-down list without having to know their esoteric encoding. The WebHtmlEditor control provides a starter list containing some common special characters, but your application can remove any pre-existing items from the drop-down list.
+
+In the example code below, you will remove the currency symbols that are contained in the Special Character List by default.
+
+In the Page_Load event handler of your Web form, remove any HTML character entity references for special characters that you do not want to be available in the Special Characters Toolbar drop-down list.
+
+*In Visual Basic:*
+
+----
+' Remove all currency symbols from the Special Characters drop down.
+Me.WebHtmlEditor1.SpecialCharacterList.Remove( "&euro;")
+Me.WebHtmlEditor1.SpecialCharacterList.Remove( "&pound;")
+Me.WebHtmlEditor1.SpecialCharacterList.Remove( "&yen;")
+----
+
+*In C#:*
+
+----
+// Remove all currency symbols from the Special Characters drop down.
+this.WebHtmlEditor1.SpecialCharacterList.Remove( "&euro;");
+this.WebHtmlEditor1.SpecialCharacterList.Remove( "&pound;");
+this.WebHtmlEditor1.SpecialCharacterList.Remove( "&yen;");
+----
+
+.Note:
+[NOTE]
+====
+For a list of all HTML character entity references, consult on the link:http://www.w3.org/TR/1998/REC-html40-19980424/sgml/entities.html[W3C® web site].
+====
+
+== Related Topic:
+
+link:webhtmleditor-add-a-special-character-in-webhtmleditor.html[Add a Special Character in WebHtmlEditor]

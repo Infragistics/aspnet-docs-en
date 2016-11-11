@@ -1,0 +1,30 @@
+﻿////
+|metadata|
+{
+    "name": "webgauge-anchor-extent-pane",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{971BE97C-C470-4E72-9314-B3C4A3E42B4F}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Extent Pane
+
+The Spoke pane is used to edit the shape of the anchor. A depth value of 100 and a sweep value of 360 is circle. As the values decrease, the spokes become more visible.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedleanchor~spokedepth.html[Depth]"]  -- Set this value to an integer from 0 to 100. This value is the distance between each spoke and the center of your Radial gauge.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedleanchor~spokesweep.html[Sweep]"]  -- Set this value to an integer from 0 to 360. This value is the angular measurement of each spoke. The "spoke" appearance of the anchor is visible only when the sweep value is less than 100.
+
+image::images/Spoke_Pane_01.png[The spoke pane for the gauge designer.]
+
+The following screen shot shows an anchor with the radius value set to 45, the depth value set to 80 and the sweep value set to 20.
+
+image::images/Gauge_Spoke_01.png[Radial gauge with anchor with a radius set to 45 and depth set to 80 and the sweep set to 20.]
+
+== Related Topic
+
+link:webgauge-anchor-layout-tab.html[Anchor Layout Tab]

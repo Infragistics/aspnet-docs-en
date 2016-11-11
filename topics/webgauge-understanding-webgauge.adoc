@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-understanding-webgauge",
+    "controlName": [],
+    "tags": [],
+    "guid": "f41431a9-834b-46d8-9317-83f5b26dca7f",  
+    "buildFlags": [],
+    "createdOn": "2012-04-20T12:46:51.2043733Z"
+}
+|metadata|
+////
+
+= Understanding WebGauge
+
+This is a great place for you to get an introduction to the WebGauge control, and its key features and functionalities. The topic in this section will give you a better idea of why you would want to use Gauge in your applications.
+
+* link:webgauge-about-webgauge2.html[About WebGauge] -- Introduces you to the WebGauge control.
+* link:webgauge-webgauge-smart-tag.html[WebGauge Smart Tag] -- Explains the functionality available on the WebGauge smart tag.

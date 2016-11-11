@@ -1,0 +1,176 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexcelexporter-exporting-custom-summary",
+    "controlName": ["WebExcelExporter"],
+    "tags": ["Exporting","Grids","Summaries"],
+    "guid": "359d53ed-9355-4767-ab8f-da25bba89960",  
+    "buildFlags": [],
+    "createdOn": "2010-10-06T08:01:03.13388Z"
+}
+|metadata|
+////
+
+= Exporting Custom Summary
+
+== What You Will Accomplish
+
+You will learn how to export the WebDataGrid / WebHierarchicalDataGrid custom summary formula in Excel™ file format.
+
+== Before You Begin
+
+In order to compile and run the samples illustrated here, you will need to install Infragistics ASP.NET v. 10.2. You will also need a running instance of SQL Server (either Express or any other edition), and you will need to have the NorthWind database attached to your SQL Server instance. You can either install the NorthWind database following instructions at: link:http://msdn.microsoft.com/en-us/library/aa276825(SQL.80).aspx[http://msdn.microsoft.com/en-us/library/aa276825(SQL.80).aspx] or download the database directly from: link:http://www.microsoft.com/downloads/details.aspx?familyid=06616212-0356-46a0-8da2-eebc53a68034&displaylang=en[http://www.microsoft.com/downloads/details.aspx?familyid=06616212-0356-46a0-8da2-eebc53a68034&displaylang=en]
+
+== Follow these steps:
+
+[start=1]
+. Create a web page (ASP.NET Web Form) with WebDataGrid bound to the Products table. link:webdatagrid-adding-custom-summary.html[Add a custom summary.]
+
+*In HTML:*
+
+----
+    <ig:WebDataGrid runat="server" ID="wdgProducts"    DataSourceID="SqlDsProducts" DataKeyFields="ProductID"
+        AutoGenerateColumns="  OnCalculateCustomSummary="WebDataGrid1_CalculateCustomSummary">
+        <Columns>
+            <ig:BoundDataField DataFieldName="ProductID"          DataType="System.Int32" Key="ProductID">
+            </ig:BoundDataField>
+            <ig:BoundDataField DataFieldName="ProductName"                DataType="System.String" Key="ProductName">
+            </ig:BoundDataField>
+            <ig:BoundDataField DataFieldName="UnitPrice"          DataType="System.Decimal" Key="UnitPrice">
+            </ig:BoundDataField>
+            <ig:BoundDataField DataFieldName="UnitsInStock"               DataType="System.Int32" Key="UnitsInStock">
+            </ig:BoundDataField>
+            <ig:BoundDataField DataFieldName="UnitsOnOrder"               DataType="System.Int32" Key="UnitsOnOrder">
+            </ig:BoundDataField>
+        </Columns>
+        <Behaviors>
+            <ig:SummaryRow>
+                <ColumnSummaries>
+                    <ig:ColumnSummaryInfo ColumnKey="UnitPrice">
+                        <Summaries>
+                            <ig:Summary CustomSummaryName="STDEV"                                 SummaryType="Custom" />
+                            <ig:Summary SummaryType="Average" />
+                        </Summaries>
+                    </ig:ColumnSummaryInfo>
+                </ColumnSummaries>
+                <ColumnSettings>
+                    <ig:SummaryRowSetting ColumnKey="UnitPrice">
+                        <SummarySettings>
+                            <ig:SummarySetting CustomSummaryName="STDEV"                                          SummaryType="Custom" />
+                        </SummarySettings>
+                    </ig:SummaryRowSetting>
+                </ColumnSettings>
+            </ig:SummaryRow>
+        </Behaviors>
+    </ig:WebDataGrid>
+    <asp:SqlDataSource ID="SqlDsProducts" runat="server"   ConnectionString="<%$ ConnectionStrings:SamplesDB %>"
+        SelectCommand="SELECT  [ProductID], [ProductName], [UnitPrice], [UnitsInStock], [UnitsOnOrder] FROM [Products]">
+    </asp:SqlDataSource>
+----
+
+*In C#:*
+
+----
+protected object WdgProducts_CalculateCustomSummary(object sender, CustomSummaryEventArgs e)
+ {
+     if (e.Summary.CustomSummaryName == "STDEV")
+     {
+         double sum = 0.0;
+         int n = 0;
+         foreach (GridRecord gr in this.WebDataGrid1.Rows)
+         {
+             sum += Convert.ToDouble(gr.Items[2].Value);
+             ++n;
+         }
+         double mean = sum / n;
+         sum = 0;
+         foreach (GridRecord gr in this.WebDataGrid1.Rows)
+         {
+             sum += Math.Pow(mean - Convert.ToDouble(gr.Items[2].Value), 2);
+         }
+         sum = sum / (n - 1);
+         return Math.Round(Math.Sqrt(sum), 2);
+     }
+     return null;
+ }
+----
+
+[start=2]
+. Drag a WebExcelExporter control from the Visual Studio Toolbox onto your page:
+
+.. Set the WebExcelExporter’s ExportMode property to Download.
+.. Set the control’s ID property to WebExcelExporter.
+.. Set the control’s DownloadName property to “ExportedData”.
+.. Add the OnGridFieldCaptionExported event handler.
+
+At the event handler, you’ll need to add your custom summary formula. This example uses the standard deviation formula, which is available in Excel. You will need to add the cell addresses for which the formula is executed.
+
+[cols="a"]
+|====
+|In Code Behind (C#):
+
+|protected WebExcelExporter1_GridRecordExporting(object sender, GridFieldCaptionExportedEventArgs e) 
+
+{ 
+
+if (e.IsSummaryCell && e.Summary != null) 
+
+{ 
+
+if (e.Summary.CustomSummaryName == "STDEV") 
+
+{ 
+
+string formula = "=\"STDEV = \" & STDEV(C2:C78)"; 
+
+e.WorksheetCell.ApplyFormula(formula); 
+
+} 
+
+} 
+
+}
+
+|====
+
+*In HTML:*
+
+----
+<ig:WebExcelExporter  runat="server" ID="WebExcelExporter" ExportMode ="Download" DownloadName="ExportedData" OnGridFieldCaptionExported="WebExcelExporter_GridRecordExporting" />
+----
+
+[start=3]
+. Drag a Button control from Visual Studio Toolbox onto your page:
+
+.. Set the button’s ID property to btnExport.
+.. Set the control’s Text property to “Export Data”.
+.. Set the control’s OnClick to “btnExport_Click”.
+.. Define the “btnExport_Click” handler in the code-behind and call one of the WebDocumentExporter Export() method overloads.
+
+[cols="a"]
+|====
+|In Code Behind (C#):
+
+|protected void btnExport_Click(object sender, EventArgs e) 
+
+{ 
+
+this.WebExcelExporter.Export(this.wdgProducts); 
+
+}
+
+|====
+
+*In HTML:*
+
+----
+<asp:Button runat="server" ID="btnExport" Text="Export Data" OnClick="btnExport_Click" />
+----
+
+[start=4]
+. Run the application.
+[start=5]
+. Click the “Export Data” button.
+
+After clicking the “Export Data” button, your browser will ask you whether you want to open or save the file named “ExportedData.xls”.

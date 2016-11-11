@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-drag-and-drop-framework-csom-overview",
+    "controlName": ["WebDragandDropFramework"],
+    "tags": ["API"],
+    "guid": "{5F8DF133-28B4-4854-961E-9C658F59143C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The Drag and Drop Framework exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:drag%20and%20drop~infragistics.web.ui_namespace.html[Drag and Drop Framework CSOM Overview]

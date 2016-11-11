@@ -1,0 +1,46 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-update-a-recurring-appointment-client-side",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{0C1A80BA-9989-4FBA-8F7E-DF34E337EE10}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Update a Recurring Appointment Client Side
+
+To update an already existing Recurrence object, you must first retrieve an appointment that has the recurrence. For this topic, let's assume that you know the datakey of your appointment. Since you know the key, you can use the getItemFromKey method to retrieve that appointment. Once you have the appointment, you can obtain the Recurrence object.
+
+.Note:
+[NOTE]
+====
+It is recommended that you call the clone method off the recurrence object. Doing so will allow the end user to cancel the update during the UpdatingActivity client-side event.
+====
+
+Once you have updated the Recurrence object, create an activityUpdateProps object. This object will contain all the updated properties for the appointment. Finally, pass the activityUpdateProps object to the updateActivity method of the WebScheduleInfo client-side object.
+
+*In JavaScript:*
+
+----
+// Retrieve an existing appointment with its key using the getItemFromKey method.
+var appointment = oWebScheduleInfo1.getActivities().getItemFromKey("3522");
+// Create a clone of the recurrence object.
+var recurrence = appointment.getRecurrence().clone();
+// Update the recurrence object.
+recurrence.setMaxOccurrences(5);
+// Create an activityUpdateProps object that will contain your updated properties
+// of your appointment and then call the updateActivity method off of WebScheduleInfo. 
+var activityUpdateProps = {Recurrence:recurrence};
+oWebScheduleInfo1.updateActivity(activityUpdateProps, appointment, "");
+----
+
+== Related Topics
+
+link:webschedule-add-a-recurring-appointment-client-side.html[Add a Recurring Appointment Client Side]
+
+link:webschedule-delete-a-recurring-appointment-client-side.html[Delete a Recurring Appointment Client Side]

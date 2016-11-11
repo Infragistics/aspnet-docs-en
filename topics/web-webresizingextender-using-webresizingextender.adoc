@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webresizingextender-using-webresizingextender",
+    "controlName": ["WebResizingExtender"],
+    "tags": [],
+    "guid": "{DFD86B7E-C3BD-47F9-9D30-BFB0C1A09F4D}",  
+    "buildFlags": [],
+    "createdOn": "2007-05-11T14:36:48Z"
+}
+|metadata|
+////
+
+= Using WebResizingExtender
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebResizingExtender™ control.
+
+Click the links below to find out how you can:
+
+* link:webresizingextender-client-side-programming.html[Client Side Programming]
+* link:webresizingextender-modify-the-resize-handle.html[Modify the Resize Handle]
+* link:webresizingextender-set-up-an-aspnet-web-site-to-run-aspnet-ajax.html[Set Up an ASP.NET Web Site to Run ASP.NET AJAX]

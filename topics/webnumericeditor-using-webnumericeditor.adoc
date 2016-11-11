@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webnumericeditor-using-webnumericeditor",
+    "controlName": ["WebNumericEditor"],
+    "tags": ["Editing","Getting Started"],
+    "guid": "{CDB2CDBB-5EEF-4CD3-9687-09253598CDFD}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T10:05:13Z"
+}
+|metadata|
+////
+
+= Using WebNumericEditor
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebNumericEditor™.
+
+link:webnumericeditor-setting-minimum-and-maximum-values-for-webnumericeditor.html[Setting minimum and maximum values for WebNumericEditor]
+
+In this section you can learn how to set minimum and maximum values for the WebNumericEditor control.
+
+link:webnumericeditor-setting-minimum-number-of-decimal-places-for-webnumericeditor.html[Setting minimum number of decimal places for WebNumericEditor]
+
+In this section you can learn how to set minimum and maximum number of decimal places for the WebNumericEditor control.
+
+link:webnumericeditor-spinning-through-a-list-of-values-in-webnumericeditor.html[Spinning through a list of values in WebNumericEditor]
+
+In this section you can learn how to use spin buttons in the control to spin through a list of values.
+
+link:webnumericeditor-styling-negative-text-in-webnumericeditor.html[Styling negative text in WebNumericEditor]
+
+You can learn how to set a custom style for negative text in this section.
+
+link:webnumericeditor-using-custom-button-in-webnumericeditor.html[Using Custom Button in WebNumericEditor]
+
+In this section you can learn how to implement a customized button and use it to perform custom actions.
+
+link:webnumericeditor-using-display-factor-in-webnumericeditor.html[Using Display Factor in WebNumericEditor]
+
+The WebNumericEditor control supports the usage of a display factor value that modifies the user input. This section explains how you can use it.
+
+link:webnumericeditor-webnumericeditor-smart-tag.html[WebNumericEditor Smart Tag]
+
+In this section you can learn about the WebNumericEditor Smart Tag.

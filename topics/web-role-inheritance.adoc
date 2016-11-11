@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-role-inheritance",
+    "controlName": [],
+    "tags": ["FAQ","Styling"],
+    "guid": "{1C203CBF-B313-4309-AD1D-36FD1DE75BA5}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:38:01Z"
+}
+|metadata|
+////
+
+= Role Inheritance
+
+Once you understand the concept of link:web-ui-roles.html[UI Roles], you need to understand the inheritance that exists between roles. Role inheritance gives Application Styling the ability to have one role inherit or cascade from another role because the class name is defined in two different cascading style sheet (CSS) files (for example, if you defined OnyxControl in ig_shared.css and ig_tree.css). There is also some inheritance that is defined in the Application Styling Framework™; for example, WebTree's™ "Node" role actually inherits settings defined in the general Item role defined in ig_shared.css.
+
+Because inheritance shares settings, anything you set in a role that you don't override in the inheriting role, will be used. For example, in ig_shared.css you define a class for the Control role that sets the font-family and font-size. Then in ig_grid.css, you define the Control role, and set the background-color and color properties. WebGrid's™ Control role would then use font-family, font-size from the ig_shared.css, and background-color and color properties from the ig_grid.css.
+
+== Related Topics
+
+link:web-ui-roles.html[UI Roles]
+
+link:web-role-priority.html[Role Priority]

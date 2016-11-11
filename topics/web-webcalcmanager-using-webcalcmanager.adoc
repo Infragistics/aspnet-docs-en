@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webcalcmanager-using-webcalcmanager",
+    "controlName": ["WebCalcManager"],
+    "tags": [],
+    "guid": "{B8860234-87DC-4D02-B948-DAA251586339}",  
+    "buildFlags": [],
+    "createdOn": "2007-05-11T13:54:53Z"
+}
+|metadata|
+////
+
+= Using WebCalcManager
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebCalcManager™ control.
+
+* link:webcalcmanager-summing-two-controls-at-design-time.html[Summing Two Controls at Design Time]
+* link:webcalcmanager-summing-two-controls-at-run-time.html[Summing Two Controls at Run Time]
+* link:webcalcmanager-using-a-namedreference-in-a-formula.html[Using a NamedReference in a Formula]
+* link:webcalcmanager-using-formula-builder-to-generate-calculations.html[Using Formula Builder to Generate Calculations]

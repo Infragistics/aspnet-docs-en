@@ -1,0 +1,51 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-drag-and-drop-drag-handle-server-side-event",
+    "controlName": [],
+    "tags": [],
+    "guid": "0b32ea06-832d-4f3a-8fe1-4ea351afa98e",  
+    "buildFlags": [],
+    "createdOn": "2010-05-31T09:05:40.5353671Z"
+}
+|metadata|
+////
+
+= Handle Server Side Event for Drag and Drop
+
+When using the WebDataTree™ drag and drop functionality, there are several server-side events that you can handle to perform your logic The following code shows how you can handle the the WebDataTree control’s serverNodeDropped event and access the event args:
+
+*In HTML:*
+
+----
+        <ig:WebDataTree ID="WebDataTree1" runat="server"
+        OnNodeDropped = "serverNodeDropped"
+         >
+            <Nodes>
+                <ig:DataTreeNode Text="Node1">
+                </ig:DataTreeNode>
+                <ig:DataTreeNode Text="Node2">
+                </ig:DataTreeNode>
+            </Nodes>
+        </ig:WebDataTree>
+             <asp:TextBox ID="resultTextBox" runat="server" />
+----
+
+*In C#:*
+
+----
+    protected void serverNodeDropped(object sender, DataTreeNodeDroppedEventArgs e)
+    {
+        this.resultTextBox.Text += string.Format("Node Dropped: {0} <br>", e.SourceNodes[0].Text);
+    }
+----
+
+----
+----
+
+WebDataTree drag and drop has the following new server-side events:
+
+* *NodeAdded* – occurs after add/insert, whenever node has been successfully added to the collection.
+* *NodeRemoved* – occurs after remove, similarly in the node add case
+* *NodeDropped* – occurs just after node has been successfully dropped

@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-csom-overview",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Events","Grids"],
+    "guid": "{B65B0203-73CC-43AE-83F4-1BA81CC5956B}",  
+    "buildFlags": [],
+    "createdOn": "2008-07-10T12:07:38Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebDataGrid™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the WebDataGrid control without the need for server-side post-backs.
+
+link:webdatagrid~infragistics.web.ui_namespace.html[WebDataGrid CSOM Overview]

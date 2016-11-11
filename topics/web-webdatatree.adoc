@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webdatatree",
+    "controlName": ["WebDataTree"],
+    "tags": [],
+    "guid": "{279A6945-027C-4C68-8AE3-C38BCC2FC196}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDataTree
+
+This page contains all of the overview/task-based information related to the WebDataTree™ control. This section contains valuable information about the control, ranging from what it does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to learn about the WebDataTree control.
+
+== link:webdatatree-about-webdatatree.html[About WebDataTree]
+
+In this section, you will find information that will help you better understand functionalities of the WebDataTree control. Further, you will understand the purpose of the control.
+
+== link:webdatatree-getting-started-with-webdatatree.html[Getting Started with WebDataTree]
+
+This section provides you with information on how to get up and running as quickly as possible with the WebDataTree control.
+
+== link:webdatatree-using-webdatatree.html[Using WebDataTree]
+
+This section provides task-based information showing you how to use the features available in WebDataTree.
+
+== link:webdatatree-accessibility-compliance.html[WebDataTree Accessibility Compliance]
+
+This topic outlines the way in which WebDataTree meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebDataTree control.
+
+== link:webdatatree-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebDataTree control. The namespaces and classes listed in this topic link conveniently into the API Reference Guide section of the Infragistics ASP.NET help.
+
+== link:webdatatree~infragistics.web.ui_namespace.html[Client-Side Object Model (CSOM) Overview]
+
+The WebDataTree™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.

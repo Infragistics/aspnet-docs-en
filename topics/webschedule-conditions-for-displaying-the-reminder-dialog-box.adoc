@@ -1,0 +1,30 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-conditions-for-displaying-the-reminder-dialog-box",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{27B892D7-F7E9-4DFC-B8FA-9AB383CD42BA}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Conditions for Displaying the Reminder Dialog Box
+
+The Reminder Dialog will display under the following scenarios:
+
+[start=1]
+. When the application first opens, if a reminder is due, the Reminder Dialog will show.
+[start=2]
+. If an activity is added in the past and EnableReminder is set to true for the activity.
+[start=3]
+. If an activity in the past is updated and EnableReminder is true for that activity.
+[start=4]
+. When you postback, if any appointments have come due since the last time you posted back.
+[start=5]
+. When you postback, if any snooze times have expired since the last time you posted back.
+
+image::images\WebSchedule_Related_Topics_Reminder_Dialog_Display_Rules_01.png[]

@@ -1,0 +1,51 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-format-the-first-day-of-the-month-in-webmonthview",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Localization","Scheduling"],
+    "guid": "{2EE43C25-35FC-426D-90D9-36AC22602749}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Format the First Day of the Month in WebMonthView
+
+WebMonthView™ allows designers to specify a different day number format string through the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview~firstdayheaderformatstring.html[FirstDayHeaderFormatString]"]  property. This format string gets applied on the first visible day (in the top-left corner) and on the first calendar day of every month.
+
+The default FirstDayHeaderFormatString includes the abbreviated month. In this example, you will learn how to customize the FirstDayHeaderFormatString in code-behind to display only the day number (with no accompanying month.)
+
+image::Images/WebSchedule_How_to_Change_the_First_Day_of_Month_Formatting_in_WebMonthView_01.PNG[]
+
+*In Visual Basic:*
+
+----
+Protected Sub Page_Load(ByVal sender As Object, _
+	ByVal e As EventArgs) Handles MyBase.Load
+	' Set a custom .NET date/time format specifier
+	' on first days in the WebMonthView.
+	Me.WebMonthView1.FirstDayHeaderFormatString = " d"
+End Sub
+----
+
+*In C#:*
+
+----
+protected void Page_Load(object sender, EventArgs e)
+{
+	 //Set a custom .NET date/time format specifier
+	 //on first days in the WebMonthView.
+	this.WebMonthView1.FirstDayHeaderFormatString = " d";
+}
+----
+
+.Note:
+[NOTE]
+====
+Observe the leading space in the custom format string assigned to FirstDayHeaderFormatString. This differentiates the "d" format specifier indicating that the current culture's short date pattern should be used, versus "d" indicating a single-digit day the of month.
+====
+
+For more information on other custom date/time format strings that can be used with WebSchedule, please see the section on "format specifiers" in Microsoft's .NET Framework SDK.

@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatetimeeditor-setting-the-culture-of-webdatetimeeditor",
+    "controlName": ["WebDateTimeEditor"],
+    "tags": ["Editing","How Do I","Localization"],
+    "guid": "{EF71502D-B215-44B5-82CA-7EF9C770F49D}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T17:11:02Z"
+}
+|metadata|
+////
+
+= Setting the Culture of WebDateTimeEditor
+
+WebDateTimeEditor™ allows you set a specific culture on how to display the date/time by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~culture.html[Culture]"]  property. WebDateTimeEditor relies on the CultureInfo class in order to format its data. By default it will use the current culture that is set on your system.
+
+You can set the Culture property either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+'Specify the culture or locale you want to use
+ Dim c As New System.Globalization.CultureInfo("en-GB")
+'Assign the CultureInfo object to the WebDateTimeEditor's culture
+WebDateTimeEditor1.Culture = c
+----
+
+*In C#:*
+
+----
+//Specify the culture or locale you want to use
+System.Globalization.CultureInfo c = new System.Globalization.CultureInfo("en-GB");
+//Assign the CultureInfo object to the WebDateTimeEditor's Culture
+WebDateTimeEditor1.Culture = c;
+----
+
+image::images/WebDateTimeEditor_Setting_the_culture_of_WebDateTimeEditor_01.png[]

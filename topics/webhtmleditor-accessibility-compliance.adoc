@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-accessibility-compliance",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","Section 508"],
+    "guid": "{67DAE933-88AA-4553-8CEF-14AF028D7491}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebHtmlEditor Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|By enabling the control's pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~section508compliant.html[Section508Compliant]"] property, all non-text elements render a text equivalent. 
+
+.Note:
+[NOTE]
+====
+In Microsoft® Internet Explorer® 6.0, ToolTips for the WebHtmlEditor™ drop-down lists (e.g., Align, Flash align, and Movie quality in the Insert Flash dialog box) are not displayed when the Section508Compliant property is set to True due to a limitation in Internet Explorer 6.0. 
+====
+
+.Note:
+[NOTE]
+====
+A text equivalent is supplied by default, but this can be customized to suit your needs. 
+====
+
+|(m)
+|If you have enabled and made visible the buttons that allow Microsoft® Windows Media™ and Macromedia® Flash™ objects to be inserted into the WebHtmlEditor, then you must provide in your application a link to where your end user can download the Section 508-compliant versions of those programs.
+
+|(n)
+|WebHtmlEditor does not support keyboard navigation in it's toolbar or tab strip regions. Your Web applications should provide it's own accessible Buttons to access any required toolbar button-specific features programmatically.
+
+|====

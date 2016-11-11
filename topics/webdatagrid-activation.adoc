@@ -1,0 +1,116 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-activation",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids"],
+    "guid": "{3721C19A-9E1B-46DF-BDDB-C3476994080C}",  
+    "buildFlags": [],
+    "createdOn": "2008-07-08T16:43:18Z"
+}
+|metadata|
+////
+
+= Activation
+
+== Grid Activation
+
+The WebDataGrid™ control’s cells support activation. A cell is active when it is the current cell--the last to receive an action, such as a mouse click. An element can also be activated by setting it in code. Certain functionalities of WebDataGrid require an active element.
+
+== Activation Behavior
+
+Cell activation in WebDataGrid is a behavior. To enable, click the elipsis (...) button for  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  in the property window and check the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior in the Behaviors editor.
+
+.Note:
+[NOTE]
+====
+The row or column that an active cell belongs to is considered active as well.
+====
+
+WebDataGrid's cell activation behaves in the following ways:
+
+[start=1]
+. When a user clicks on a cell, that cell and row will both become active.
+[start=2]
+. If the user tabs into WebDataGrid, the first cell will become active. The user can then continue to tab into other cells, or use the arrow keys to navigate.
+[start=3]
+. Once a cell has been activated, WebDataGrid will maintain its activation even if it loses focus.
+[start=4]
+. WebDataGrid will maintain the active cell during postbacks.
+[start=5]
+. When a row is selected the first cell in a row will be activated.
+
+== Activation with Code
+
+WebDataGrid provides properties and methods to get or set an active cell: use the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.activation~activecell.html[ActiveCell] property when on the server and use get or set accessors when on the client. Set active cell to null to clear WebDataGrid of an active cell. You can get the row or column from the active cell if you need them.
+
+*In Visual Basic:*
+
+----
+' Set active cell 
+Me.WebDataGrid1.Behaviors.Activation.ActiveCell = Me.WebDataGrid1.Rows(0).Items(1)
+----
+
+*In C#:*
+
+----
+// Set active cell
+this.WebDataGrid1.Behaviors.Activation.ActiveCell = this.WebDataGrid1.Rows[0].Items[1];
+----
+
+*In JavaScript:*
+
+----
+var grid = $find("WebDataGrid1");
+// Set active cell
+grid.get_behaviors().get_activation().set_activeCell(grid.get_rows().get_row(0).get_cell(1));
+// Get active cell
+var activeCell = grid.get_behaviors().get_activation().get_activeCell();
+----
+
+== Activation with Keyboard:
+
+The following are ways to activate WebDataGrid with the keyboard:
+
+*Arrow Keys*
+
+* Move around the WebDataGrid cells.
+* The arrow keys will let the user navigate within cells only
+
+*Tab*
+
+* Move to the next cell in a row.
+* If it is the last cell in the last row, move focus to the next control.
+* If in the last cell of a row then move to the first cell of the next row, if one exists.
+
+*Enter Key*
+
+* Move to the cell below.
+* If already in the last row, then stay there.
+
+*Shift Enter Key*
+
+* Move to Cell Above
+* If already in the top most row, then stay there
+
+*Shift + Tab*
+
+* Move to the previous cell in a row.
+* If it is the first cell in the first row, then move focus to the previous control.
+* If in the first cell of a row then move to the last cell of the previous row, if one exists.
+
+*Shift + [Any Arrow Keys]*
+
+* Begin cell selection from the active cell and navigate depending on the arrow keys user is pressing.
+
+== Activation with Mouse:
+
+The following are ways to activate WebDataGrid with the mouse:
+
+* Click on a cell or a row to activate it.
+* If the user clicks and drags, then the cell the user first clicked on takes the activation and the rest participate in selection, if selection is turned on.
+
+== Activation Styling:
+
+The active elements of WebDataGrid can be styled individually using CSS. This can be done by creating a CSS style and setting the appropriate property for the element you want to style. For example, to style an active row, set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.activation~activerowcssclass.html[ActiveRowCssClass] property.

@@ -1,0 +1,73 @@
+﻿////
+
+|metadata|
+{
+    "name": "emptytemplate",
+    "controlName": [],
+    "tags": [],
+    "guid": "6f7a54b7-3f3a-4e61-9129-716f2b5bf53b",  
+    "buildFlags": [],
+    "createdOn": "2016-03-01T10:02:33.847999Z"
+}
+|metadata|
+////
+
+= Grid Migration - Empty Template
+
+== Empty Template
+
+==== WebDataGrid
+
+WebDataGrid/WebHierarchicalDataGrid have an Empty Template that you can use to provide your end-users with a custom display that appears whenever there are no rows in the data source. Like all templates, you can place any control within the Empty Template to provide a custom message to end-users.
+
+You can set up the empty template at design time by right-clicking WebDataGrid, mouse over Edit Template, and selecting Control Templates. You can then drag controls onto the Empty Template surface.
+
+The following code shows how to create a custom template displaying a message to end-users when WebDataGrid is bound but has no rows.
+
+==== UltraWebGrid
+
+UltraWebGrid does not support Empty-Template functionality.
+
+I will show in the next few lines how Empty – Template can be created and a message will be displayed to end - users when the grid is bound to empty datasource (DataTable)
+
+There are two approaches to create Empty-Template. The first one is using aspx markup and the second one is using server-side code to achieve this functionality:
+
+Using declarative approach:
+
+*In ASPX:*
+
+[source,html]
+----
+ <ig:WebDataGrid ID="WebDataGrid1" runat="server" Height="350px" Width="400px">
+            <EmptyRowsTemplate>
+                Empty row template
+            </EmptyRowsTemplate>
+        </ig:WebDataGrid>
+----
+
+Bind the grid to empty DataSource and you will get the message “Empty row template” within the Grid:
+
+Using code:
+
+*In C#:*
+
+[source,csharp]
+----
+protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+        //template needs to be instantiated on every postback
+        this.WebDataGrid1.EmptyRowsTemplate = new CustomEmptyRowsTemplate();
+    }
+    private class CustomEmptyRowsTemplate : ITemplate
+    {
+        #region ITemplate Members
+        public void InstantiateIn(Control container)
+        {
+            System.Web.UI.WebControls.Label label1 = new System.Web.UI.WebControls.Label();
+            label1.Text = "Empty row template";
+            label1.ID = "Label1";
+            container.Controls.Add(label1);
+        }
+    }
+----

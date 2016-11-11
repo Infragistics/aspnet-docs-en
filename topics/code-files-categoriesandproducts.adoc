@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "code-files-categoriesandproducts",
+    "controlName": [],
+    "tags": ["Data Presentation","Sample Data Source"],
+    "guid": "{69F265AD-232F-4F1A-8F20-1B4439D8683B}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= CategoriesandProducts
+
+*In XML:*
+
+----
+<?xml version="1.0" standalone="yes"?>
+<Categories>
+    <Category CategoryID="1" CategoryName="Beverages" Description="Soft drinks, coffees, teas, beers, and ales">
+      <Product ProductID="1" ProductName="Soft Drinks" QuantityPerUnit="10 boxes x 20 bags" UnitPrice="18.0000">
+      </Product>
+      <Product ProductID="2" ProductName="Chai" QuantityPerUnit="10 boxes x 20 bags" UnitPrice="5.0000">
+      </Product>
+    </Category>
+    <Category CategoryID="2" CategoryName="Seafood" Description="Shrimp, Lobsters, and other fresh sea food">
+      <Product ProductID="3" ProductName="Coctail Shrimp" QuantityPerUnit="10 boxes x 20 bags" UnitPrice="30">
+      </Product>
+      <Product ProductID="4" ProductName="Alaskan Crab Legs" QuantityPerUnit="10 boxes x 20 bags" UnitPrice="35" >
+      </Product>
+    </Category>
+</Categories>
+----

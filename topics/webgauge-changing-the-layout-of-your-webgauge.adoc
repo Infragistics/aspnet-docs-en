@@ -1,0 +1,30 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-changing-the-layout-of-your-webgauge",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{1C48DCD6-43F4-49A4-91FC-62EDA702BF91}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Changing the Layout of Your WebGauge
+
+The Properties panel offers a number of different layout tabs that you can use to modify how components of your gauge are laid out. For example, you can specify how much space there is between tick marks in your Radial gauge using the Tickmarks Layout tab.
+
+Click the following links for a description of each of the Layout tabs available in the Properties panel:
+
+* link:webgauge-anchor-layout-tab.html[Anchor Layout Tab]
+* link:webgauge-back-anchor-layout-tab.html[Back Anchor Layout Tab]
+* link:webgauge-bar-marker-layout-tab.html[Bar Marker Layout Tab]
+* link:webgauge-dial-layout-tab.html[Dial Layout Tab]
+* link:webgauge-gauge-layout-tab.html[Gauge Layout Tab]
+* link:webgauge-labels-layout-tab.html[Labels Layout Tab]
+* link:webgauge-needle-marker-layout-tab.html[Needle Marker Layout Tab]
+* link:webgauge-range-layout-tab.html[Range Layout Tab]
+* link:webgauge-scale-layout-tab.html[Scale Layout Tab]
+* link:webgauge-tickmark-layout-tab.html[Tickmark Layout Tab]

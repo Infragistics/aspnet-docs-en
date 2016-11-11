@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtexteditor-csom-overview",
+    "controlName": ["WebTextEditor"],
+    "tags": ["API"],
+    "guid": "{38CF22C3-ABEF-483C-AEC9-6C20E57DEF92}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebTextEditor™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webtexteditor~infragistics.web.ui_namespace.html[WebTextEditor CSOM Overview]

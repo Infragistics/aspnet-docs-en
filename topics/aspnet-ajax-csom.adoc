@@ -1,0 +1,36 @@
+﻿////
+
+|metadata|
+{
+    "name": "aspnet-ajax-csom",
+    "controlName": [],
+    "tags": ["API","Getting Started","How Do I"],
+    "guid": "{48470BF3-6679-46AB-BA02-6D05B8A03D95}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= ASP.NET AJAX CSOM
+
+Click the following links to view the client side object model for each ASP.NET AJAX control
+
+* link:shared.html[Shared Library]
+* link:drag%20and%20drop.html[Drag and Drop Library]
+* link:webcaptcha.html[WebCaptcha Library]
+* link:webdatagrid.html[WebDataGrid Library]
+* link:webdatamenu.html[WebDataMenu Library]
+* link:webdatatree.html[WebDataTree Library]
+* link:webdialogwindow.html[WebDialogWindow Library]
+* link:webdropdown.html[WebDropDown Library]
+* link:webexplorerbar.html[WebExplorerBar Library]
+* link:webhierarchicaldatagrid.html[WebHierarchicalDataGrid Library]
+* link:webimageviewer.html[WebImageViewer Library]
+* link:webmonthcalendar.html[WebMonthCalendar Library]
+* link:webprogressbar.html[WebProgressBar Library]
+* link:webrating.html[WebRating Library]
+* link:websplitter.html[WebSplitter Library]
+* link:webslider.html[WebSlider Library]
+* link:webtab.html[WebTab Library]
+* link:webtexteditor.html[WebTextEditor Library]

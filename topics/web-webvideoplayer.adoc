@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webvideoplayer",
+    "controlName": ["WebVideoPlayer"],
+    "tags": ["Getting Started"],
+    "guid": "53e8ff6a-3eff-473d-a791-2dbc2a556a3b",  
+    "buildFlags": [],
+    "createdOn": "2011-04-01T19:28:42.6795353Z"
+}
+|metadata|
+////
+
+= WebVideoPlayer
+
+Click on the links below to find information on how to get WebVideoPlayer quickly up and running.
+
+* link:webvideoplayer-overview.html[WebVideoPlayer Overview]
+* link:webvideoplayer-jquery-and-asp-net-helper-api-links.html[WebVideoPlayer jQuery and ASP.NET Helper API Links]
+* link:webvideoplayer-accessibility-compliance.html[WebVideoPlayer Accessibility Compliance]
+* link:webvideoplayer-known-issues.html[WebVideoPlayer Known Issues]
+* link:webvideoplayer-working-with-html5-video.html[WebVideoPlayer Working with HTML5 Video]
+* link:webvideoplayer-styling-and-theming.html[WebVideoPlayer Styling and Theming]

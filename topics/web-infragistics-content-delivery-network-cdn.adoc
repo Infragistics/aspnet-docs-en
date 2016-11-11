@@ -1,0 +1,110 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-infragistics-content-delivery-network-cdn",
+    "controlName": [],
+    "tags": ["API","Performance","Tips and Tricks"],
+    "guid": "2d378609-d01f-444f-9fdc-63fd25a9effb",  
+    "buildFlags": [],
+    "createdOn": "2010-06-05T03:58:16.6107548Z"
+}
+|metadata|
+////
+
+= Infragistics Content Delivery Network (CDN)
+
+The Infragistics ASP.NET controls support Javascript, image, and CSS file delivery through a Content Delivery Network (CDN). A CDN is a “cloud” or network of servers located worldwide that are designed to provide a local server to deliver resources to a client that may be located far away from the original hosting web server. Implementing the use of a CDN under these circumstances enables faster transfer of resources to end users via servers close to their location. Additionally, whenever enabling CDN support on your web application, you do not need to store the CDN resources directly on your web server. These resources can exist on the CDN network. However, the Infragistics ASP.NET CDN support also features a fallback mode, which reverts to using the resources that exist within the deployed Infragistics ASP.NET Assemblies should the CDN become unavailable.
+
+.Note:
+[NOTE]
+====
+By default, Infragistics provides CDN Support via a 3rd party CDN web service provider (Subject to change). In order to allow seamless operation and scalability in your application, the following URLs are used in your Infragistics ASP.NET CDN enabled application:
+====
+
+* Non-secure URL - http://cdn-na.infragistics.com/aspnet
+* Secure URL - https://secure-cdn-na.infragistics.com/aspnet
+
+By prefixing all CDN delivered content in your application with these URLs rather than direct URLs to the current CDN provider, Infragistics is able to change providers without negatively affecting your applications that rely on the CDN.
+
+.Note:
+[NOTE]
+====
+Performance and uptime of the CDN feature is dependent on the current CDN Provider that is being used by Infragistics. . During the CDN feature beta period, should any unforeseen issue arise, Infragistics reserves the right to discontinue providing the redirecting service to our current CDN Web Service provider.
+====
+
+== Enabling CDN Support
+
+You can enable CDN support with an entry in the Web.config for the entire application or by setting configurations on a WebScriptManager for page-by-page support. The WebScriptManager extends the functionality of ScriptManager to better interact with Infragistics ASP.NET controls.
+
+To enable CDN support in the Web.config, add the following.
+
+*In HTML:*
+
+----
+<configuration>
+       <configSections>
+        <section name="infragistics.web" type="System.Configuration.SingleTagSectionHandler,System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+       </configSections>
+<infragistics.web styleSetName="Default" enableCdn="True"/>
+</configuration>
+----
+
+To enable CDN using the WebScriptManager component, add the following in the body of your page.
+
+*In HTML:*
+
+----
+<ig:WebScriptManager runat="server">
+        <InfragisticsCDN Enabled="True"></InfragisticsCDN>
+</ig:WebScriptManager>
+----
+
+When using the Application Styling Configuration dialog to enable AppStyling for you application, you still have the option to use the ~/ig_res/ directory as your styleset path for local testing. However, when you deploy, you should remove this directory as it is not needed when using the CDN for your styling.
+
+== Content
+
+The CDN delivers Javascript, CSS, and Image files for all Infragistics ASP.NET controls. For the Infragistics ASP.NET AJAX controls, you have the option to retrieve a combined Javascript file for all of the controls; This option eliminates multiple requests for each control’s Javascript file. The WebSchedule, WebHtmlEditor, WebChart, WebGauge, WebSpellChecker, WebResizingExtender, and WebImageButton controls do not offer this option; separate JavaScript files are served for those controls. CSS files also do not support the combining functionality.
+
+To enable the Combining functionality, use the enableCdnScriptCombining or EnableCombining properties in the Web.config file or WebScriptManager component, respectively.
+
+*In HTML:*
+
+----
+<infragistics.web styleSetName="Default" enableCdn="True" enableCdnScriptCombining="True"/>
+    <ig:WebScriptManager runat="server">
+        <InfragisticsCDN Enabled="True" EnableCombining="True"></InfragisticsCDN>
+    </ig:WebScriptManager>
+----
+
+All files are delivered compressed using Gzip for browsers that support it. This allows for a smaller file to be sent, reducing end-user load time. If end-users are using a browser that does not support Gzip compression such as IE6, uncompressed files are delivered.
+
+== CDN Availability
+
+The CDN’s uptime is 24 hrs a day; however, in case of a downed server, you can redirect traffic to the application’s server using the enableCdnFallback property. With this setting enabled, if the CDN fails embedded JS files will be used and the ~/ig_res/ directory will be used for AppStyling. Further, the ig_common virtual directory will be used for the WebSchedule, WebHtmlEditor, WebChart, WebGauge, WebSpellChecker, WebResizingExtender, and WebImageButton controls with no AppStyling.
+
+*In HTML:*
+
+----
+<infragistics.web styleSetName="Default" enableCdn="True" enableCdnFallback="True"/>
+----
+
+If you have a specific CDN you would like to use, you can specify this using the styleSetPath and javaScriptPath properties.
+
+*In HTML:*
+
+----
+<infragistics.web styleSetName="Default" styleSetPath="http://some.cdn.com/styles/" javaScriptPath="http://some.cdn.com/js/" />
+----
+
+== Benefits of using CDN
+
+* Increased performance – since files are copied and replicated to the CDN, end users accessing content from far off, remote areas do not download content from your web server, but instead from a closer CDN server therefore increasing download performance.
+* Higher network capacity – in cases where files are replicated across multiple CDN servers, loads for those files that are part of the CDN are shared and distributed across the CDN, not your own web server, therefore freeing up valuable web server resources which can result in higher concurrent connections to your site.
+* High availability – CDN hosted content can usually offer 100% availability due to the strategically located network servers and how hosted content is replicated.
+* File compression – files sent to the client computer arrive in a compressed format, therefore speeding the download time
+* Caching – CDN hosted content is cached; the supporting JavaScript, Image, and CSS files are downloaded to the client PC and reused until the client’s browser cache is discarded. This eliminates the bandwidth expense of having to download the same files repeatedly.
+
+== Recommended cases to NOT use CDN support
+
+* Internal Intranet Applications – applications that are accessed from local Intranet clients should not be configured to use the CDN support for several reasons. This will introduce a dependency to have external WWW access in order to download content hosted on the CDN. This causes a reduction in performance because rather than your local intranet computers accessing your local servers, the local computers must now reach out to the WWW and retrieve the CDN content. Some corporate firewalls may also filter WWW access, therefore blocking access to CDN content.

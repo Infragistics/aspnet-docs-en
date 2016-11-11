@@ -1,0 +1,187 @@
+﻿////
+|metadata|
+{
+    "name": "webdatatree-binding-webdatatree-to-an-xml-data-source",
+    "controlName": ["WebDataTree"],
+    "tags": ["Data Binding","Data Presentation"],
+    "guid": "{07E7766F-EB84-442A-8B3C-2E5A6608379C}",
+    "buildFlags": [],
+    "createdOn": "2009-03-03T14:56:19Z"
+}
+|metadata|
+////
+
+= Binding WebDataTree to an Xml Data Source
+
+== Before You Begin
+
+WebDataTree™ supports binding to an Xml data source to generate a tree node structure without writing any code. In order to retrieve your data from the Xml file, you must specify the data bindings for the nodes using the data binding editor.
+
+== What You Will Accomplish
+
+You will learn how to bind WebDataTree to an Xml file and represent the data in a hierarchical, node-like structure.
+
+== Follow these Steps
+
+[start=1]
+. Create an ASP.NET web page.
+[start=2]
+. Drag a ScriptManager component from the Microsoft® Visual Studio™ toolbox onto the page.
+[start=3]
+. Drag a WebDataTree control onto the page.
+[start=4]
+. Add an XML File to the project and name it Orders.xml
+[start=5]
+. Add the following code to Orders.xml:
+
+----
+<?xml version="1.0" encoding="utf-8" ?>
+<Customers>
+  <Customer CustomerID="ALFKI" CustomerName="Alfreds Futterkiste">
+    <Order OrderID="1024">
+      <OrderDetail ProductID="1" ProductName="Chocolate" Quantity="10" />
+      <OrderDetail ProductID="2" ProductName="Apples" Quantity="20" />
+      <OrderDetail ProductID="3" ProductName="Peanuts" Quantity="30" />
+    </Order>
+    <Order OrderID="1029">
+      <OrderDetail ProductID="10" ProductName="Flour" Quantity="100" />
+    </Order>
+  </Customer>
+  <Customer CustomerID="BLONP" CustomerName="Blondel père et fils">
+    <Order OrderID="2021">
+      <OrderDetail ProductID="4" ProductName="Rigatoni" Quantity="30" />
+      <OrderDetail ProductID="5" ProductName="Ricotta" Quantity="10" />
+    </Order>
+  </Customer>
+  <Customer CustomerID="WOLZA" CustomerName="Wolski Zajazd">
+    <Order OrderID="2029">
+      <OrderDetail ProductID="6" ProductName="Hot Dogs" Quantity="45" />
+      <OrderDetail ProductID="7" ProductName="Brown Rice" Quantity="12" />
+      <OrderDetail ProductID="8" ProductName="Ketchup" Quantity="100" />
+      <OrderDetail ProductID="9" ProductName="Mustard" Quantity="100" />
+    </Order>
+  </Customer>
+</Customers>
+----
+
+[start=6]
+. Drag an XmlDataSource component onto the page.
+[start=7]
+. Click the XmlDataSource components’s smart tag and select Configure Data Source. The Configure Data Source configuration wizard appears.
+
+image::images/WebDataTree_Binding_WebDataTree_to_an%20Xml_Data_Source_01.png[]
+
+[start=8]
+. Click Browse… (next to the Data File text box) to specify the XML data file you want to bind to. The Select XML File dialog appears.
+
+image::images/WebDataTree_Binding_WebDataTree_to_an%20Xml_Data_Source_02.png[]
+
+[start=9]
+. Select the Xml file you want to use and click OK. In this case, Orders.xml.
+[start=10]
+. In the Property window for WebDataTree, set the DataSourceID property to be the id of the XmlDataSource component.
+[start=11]
+. At this point, when you save and run your application your WebDataTree just shows the nodes from your Xml file but doesn’t show the data. Your WebForm looks similar to the following image when nodes are expanded:
+
+image::images/WebDataTree_Binding_WebDataTree_to_an%20Xml_Data_Source_03.png[]
+
+[start=12]
+. To specify the data bindings click Edit DataBindings from the WebDataTree control’s smart tag. This opens the WebDataTree Designer dialog.
+[start=13]
+. Select Customer node and click the Add Databinding button. This will add the node to the Selected databindings area. Set the  link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]  property to CustomerName by clicking the drop-down combo in the property window so that CustomerName will be the display text of the node. Similarly, set the   link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~valuefield.html[ValueField]  property to CustomerID .
+
+
+.Note:
+[NOTE]
+====
+In addition to CustomerName and CustomerID the drop-down also shows InnerText, Name and Value properties of the XmlNode class providing more options for you to select.
+====
+
+
+[start=14]
+. Repeat the above step to add the following data bindings to the Order and OrderDetail nodes:
+
+[options="header", cols="a,a,a"]
+|====
+|Node|TextField|ValueField
+
+|Order
+|OrderID
+|OrderID
+
+|OrderDetail
+|ProductName
+|ProductID
+
+|====
+
+[start=15]
+. Save and run your application. Your WebDataTree will look similar to the following image:
+
+image::images/WebDataTree_Binding_WebDataTree_to_an%20Xml_Data_Source_05.png[]
+
+== Programatically binding WebDataTree to an XmlDataSource :
+
+*In Visual Basic:*
+
+----
+'Create a new XmlDataSource 
+Dim xmlDataSource1 As New XmlDataSource() 
+'Give the path where the file is located 
+xmlDataSource1.DataFile = "~/Orders.Xml" 
+WebDataTree1.DataSourceID = "xmlDataSource1" 
+'Create Customer data binding 
+Dim customer As New DataTreeNodeBinding() 
+customer.DataMember = "Customer" 
+customer.TextField = "CustomerName" 
+customer.ValueField = "CustomerID" 
+'Create Order data binding 
+Dim orders As New DataTreeNodeBinding() 
+orders.DataMember = "Order" 
+orders.TextField = "OrderID" 
+orders.ValueField = "OrderID" 
+'Create OrderDetails data binding 
+Dim orderDetails As New DataTreeNodeBinding() 
+orderDetails.DataMember = "OrderDetail" 
+orderDetails.TextField = "ProductName" 
+orderDetails.ValueField = "ProductID" 
+'Add the data bindings to the WebDataTree 
+WebDataTree1.DataBindings.Add(customer) 
+WebDataTree1.DataBindings.Add(orders) 
+WebDataTree1.DataBindings.Add(orderDetails) 
+'Bind the data to the tree. 
+'Make sure you call the DataBind method after creating and adding the data bindings. 
+WebDataTree1.DataBind()
+----
+
+*In C#:*
+
+----
+        //Create a new XmlDataSource
+        XmlDataSource xmlDataSource1 = new XmlDataSource();
+        //Give the path where the file is located
+        xmlDataSource1.DataFile = "~/Orders.Xml";
+        WebDataTree1.DataSourceID = "xmlDataSource1";
+        //Create Customer data binding
+        DataTreeNodeBinding customer = new DataTreeNodeBinding();
+        customer.DataMember = "Customer";
+        customer.TextField = "CustomerName";
+        customer.ValueField = "CustomerID";
+        //Create Order data binding
+        DataTreeNodeBinding orders = new DataTreeNodeBinding();
+        orders.DataMember = "Order";
+        orders.TextField = "OrderID";
+        orders.ValueField = "OrderID";
+        //Create OrderDetails data binding  
+        DataTreeNodeBinding orderDetails = new DataTreeNodeBinding();
+        orderDetails.DataMember = "OrderDetail";
+        orderDetails.TextField = "ProductName";
+        orderDetails.ValueField = "ProductID";
+        //Add the data bindings to the WebDataTree
+        WebDataTree1.DataBindings.Add(customer);
+        WebDataTree1.DataBindings.Add(orders);
+        WebDataTree1.DataBindings.Add(orderDetails);
+        //Bind the data to the tree. 
+        //Make sure you call the DataBind method after creating and adding the data bindings.
+        WebDataTree1.DataBind();
+----

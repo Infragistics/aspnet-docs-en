@@ -1,0 +1,57 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-using-webhierarchicaldatagrid",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Data Presentation","Getting Started","Grids","How Do I"],
+    "guid": "{C8A49414-C5F8-44EE-AC46-414A6E824FAA}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebHierarchicalDataGrid
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebHierarchicalDataGrid™.
+
+link:webhierarchicaldatagrid-ajax-indicator-support.html[AJAX Indicator Support]
+
+The AJAX indicator is shared between all Infragistics ASP.NET AJAX controls. In this section you can learn how to override it on control level.
+
+link:webhierarchicaldatagrid-behaviors.html[Behaviors]
+
+You can learn more about the specific behaviours implemented for WebHierarchicalDataGrid as well as the ones inherited from WebDataGrid™ in this section.
+
+link:webhierarchicaldatagrid-data-binding.html[Data Binding]
+
+In this section you can learn how to bind the WebHierarchicalDataGrid control to a variety of sources.
+
+link:webhierarchicaldatagrid-editor-providers.html[Editor Providers]
+
+If you wish to use different editors for fields you can learn how to accomplish this in the above section.
+
+link:webhierarchicaldatagrid-load-on-demand.html[Load On Demand]
+
+You can learn more about the load on demand functionality supported by the WebHierarchicalDataGrid control in this section.
+
+link:webhierarchicaldatagrid-templates.html[Templates]
+
+WebHierarchicalDataGrid supports using templates to provide custom user interface. You can learn how templates work in this section.
+
+link:webhierarchicaldatagrid-hide-a-column.html[Hide a Column]
+
+You can learn how to hide columns from the WebHierarchicalDataGrid in this section.
+
+link:webhierarchicaldatagrid-outlook-groupby.html[Outlook GroupBy]
+
+In this section you can learn more about the groupby functionality of the WebHierarchicalDataGrid control
+
+link:webhierarchicaldatagrid-webhierarchicaldatagrid-smart-tag.html[WebHierarchicalDataGrid Smart Tag]
+
+You can learn about the WebHierarchicalDataGrid Smart Tag in this section.
+
+link:webhierarchicaldatagrid-using-itemcommand-event.html[WebHierarchicalDataGrid - Using ItemCommand Event]
+
+You can learn how to use the ItemCommand server event.

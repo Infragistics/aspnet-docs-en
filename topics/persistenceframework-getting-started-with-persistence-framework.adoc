@@ -1,0 +1,156 @@
+﻿////
+
+|metadata|
+{
+    "name": "persistenceframework-getting-started-with-persistence-framework",
+    "controlName": ["PersistenceFramework"],
+    "tags": ["Persistence"],
+    "guid": "956e076a-43e5-439c-b567-c9c45ecd6560",  
+    "buildFlags": [],
+    "createdOn": "2011-03-31T07:45:31.4975121Z"
+}
+|metadata|
+////
+
+= Getting Started with Persistence Framework
+
+In order to start using the Persistence Framework, you must add the proper attributes in the Infragistics section in Web.config file. The following settings enable the component for every page:
+
+[cols="a"]
+|====
+|*In web.config:*
+
+|---- 
+<infragistics.web enablePersistence="true" 
+ persistenceIgnoreLoadingOnPostBack="true" 
+ persistenceIgnorePasswords="true"/>
+----
+
+|====
+
+From here, you have two options for handling the Persistence events and implementing the necessary logic for saving the data. The first approach consists of attaching handlers in the Global.asax file making the logic inside them valid and consistent for all the pages. This is a good approach if you want to automatically save all the controls on every page, in the same way.
+
+For example you want all pages’ status to be persisted in a XML files you can use the following method:
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+public void Application_Start(object sender, EventArgs e) 
+{ 
+ AppSettings.PersistenceManager.PersistenceLoading += LoadingHandler; 
+ AppSettings.PersistenceManager.PersistenceLoaded += LoadedHandler; 
+ AppSettings.PersistenceManager.PersistenceSaving += SavingHanlder; 
+ AppSettings.PersistenceManager.PersistenceSaved += SavedHandler; 
+}
+----
+
+|====
+
+.Note:
+[NOTE]
+====
+Implementation details for the handlers are explained below.
+====
+
+In cases where the logic is not consistent for every page using in Global.asax is not the optimal place to implement the persistence. Therefore, you can attach individual handlers to each page. This approach is more flexible and gives you more freedom to persist only the data you want and cleans up the Global.asax file.
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected void Page_Init(object sender, EventArgs e) 
+{ 
+ if (!Page.IsPostBack) 
+ { 
+ if (!IsSubscribed) 
+ { 
+ AppSettings.PersistenceManager.PersistenceLoading += 
+ this.LoadingHandler; 
+ AppSettings.PersistenceManager.PersistenceLoaded += 
+ this.LoadedHandler; 
+ AppSettings.PersistenceManager.PersistenceSaving += 
+ this.SavingHanlder; 
+ AppSettings.PersistenceManager.PersistenceSaved += 
+ this.SavedHandler; 
+ IsSubscribed = true; 
+ } 
+ } 
+} 
+protected bool IsSubscribed 
+{ 
+ get 
+ { 
+ return Convert.ToBoolean(Session["isSubscribed"]); 
+ } 
+ set 
+ { 
+ Session["isSubscribed"] = value; 
+ } 
+}
+----
+
+|====
+
+.Note:
+[NOTE]
+====
+Once the handlers are attached, you need to avoid attaching them every time the page is requested. The above example is one way to do this.
+====
+
+Going forward, you can access the persisted data and will have an opportunity to save and load it again. The following code will demonstrate using XML methods of the Persistence Framework to serialize and deserialize data. The Persistence Framework also features methods that allow you to serialize data to a JSON stream as well. Once you have already attached to the events, now you can implement the next lines of code in either in Global.asax or in an individual page, depending on which of the above methods for persisting you are using.
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected void LoadingHandler (object sender, PersistenceLoadingEventArgs e) 
+{ 
+ if (!string.IsNullOrEmpty(this.StoredData)) 
+ { 
+ e.PersistenceData = PersistenceData.FromXml(this.StoredData); 
+ } 
+} 
+protected void LoadedHandler(object sender, PersistenceEventArgs e) 
+{ 
+} 
+protected void SavingHandler (object sender, PersistenceSavingEventArgs e) 
+{ 
+} 
+protected void SavedHandler (object sender, PersistenceEventArgs e) 
+{ 
+ if (e.PersistenceData == null) 
+ { 
+ return; 
+ } 
+ this.StoredData = e.PersistenceData.ToXml(); 
+} 
+protected string StoredData 
+{ 
+ get 
+ { 
+ return Convert.ToString(Application["PersistedData"]); 
+ } 
+ set 
+ { 
+ Application["PersistedData"] = value; 
+ } 
+}
+----
+
+|====
+
+.Note:
+[NOTE]
+====
+The example uses the application object to save the data, that’s why persistence will work while the application object is active. If you save the persisted data to a file, persistence will save independent of your application.
+====
+
+== Related Topics
+
+== Related Links
+
+link:persistenceframework-about-persistence-framework.html[About Persistence Framework] link:persistenceframework-exclude-control.html[]

@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-marker-movement",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{5407283E-6843-434A-B09D-BB85141A95D6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Marker Movement
+
+You can configure a marker's Value to point to different values on the scale.
+
+This allows the end user to interact with your gauge. The end user can drag the needle on your Radial gauge to point to a different value on the scale. The needle marker on your Radial gauge can be moved in the following way:
+
+* Automatically -- You can configure the needle on your gauge to move automatically at specific time intervals and distances on the scale.
+
+With Linear gauges, the marker can only move automatically.
+
+== Related Topics
+
+link:webgauge-move-the-needle-marker-automatically.html[Move the Needle Automatically]
+
+link:webgauge-move-the-bar-marker-automatically.html[Move the Bar Marker Automatically]

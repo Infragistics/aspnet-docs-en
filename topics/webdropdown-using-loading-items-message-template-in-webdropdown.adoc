@@ -1,0 +1,34 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-using-loading-items-message-template-in-webdropdown",
+    "controlName": ["WebDropDown"],
+    "tags": ["Templating"],
+    "guid": "{8B6BCE70-3744-4B72-AFC7-9DAC67672A84}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using loading items message template in WebDropDown
+
+When using the load-on-demand feature, WebDropDown™ allows you to show a customized loading message by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~loadingitemsmessagetext.html[LoadingItemsMessageText]"]  property. If this property is set, a message will appear notifying the end-user that loading is in progress during AJAX postback. However you can also apply a loading items message template to the loading message using the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~loadingitemsmessagetemplate.html[LoadingItemsMessageTemplate]"]  property.
+
+== To use loading items message template in WebDropDown:
+
+* From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDropDown control onto the form.
+* In the source code, include the following code between the WebDropDown tags to show the loading message using the LoadingItemsMessageTemplate tags.
+
+*In HTML :*
+
+----
+<LoadingItemsMessageTemplate>
+                <div id="loadTemplate" style="background-color : Aqua">
+                    <span id="actualMsg">Loading, please wait…</span>
+                </div>
+</LoadingItemsMessageTemplate>
+----
+
+* Save and run your application. When you scroll down the scrollbar of the drop-down container , you will observe that the loading items message template is applied to the loading message.

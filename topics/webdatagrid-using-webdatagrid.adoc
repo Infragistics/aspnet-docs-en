@@ -1,0 +1,53 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-using-webdatagrid",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Getting Started"],
+    "guid": "{FB742188-F8B7-408E-AF81-8047A313E0ED}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebDataGrid
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebDataGrid™.
+
+link:webdatagrid-webdatagrid-smart-tag.html[Smart Tag]
+
+This topic describes how to use the WebDataGrid smart tag.
+
+link:webdatagrid-supported-data-sources.html[Supported Data Sources]
+
+In this topic you will find information about the data sources, supported by WebDataGrid.
+
+link:webdatagrid-behaviors.html[Behaviors]
+
+This section describes how to set up and use any particular behavior of WebDataGrid.
+
+link:webdatagrid-columns.html[Columns]
+
+In this section you will find information about how to add or remove a column. It also describes how to customize the columns' view.
+
+link:webdatagrid-editor-providers.html[Editor Providers]
+
+This section contains information about the supported editor providers as well as how to set them up.
+
+link:webdatagrid-events.html[Events]
+
+This section contains common information about the events in WebDataGrid.
+
+link:webdatagrid-templates.html[Templates]
+
+This section describes how to cusomize the UI for certain features of WebDataGrid.
+
+link:webdatagrid-ajax-indicator-support-for-webdatagrid.html[Ajax Indicator Support for WebDataGrid]
+
+Whenever an AJAX callback occurs, WebDataGrid displays a waiting notification. This topic describes how to customize its view.
+
+link:webdatagrid-tips-and-tricks.html[Tips And Tricks]
+
+In this section you will find information about how to handle more tricky WebDataGrid scenarios.

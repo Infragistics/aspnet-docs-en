@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-widths-and-extents-pane",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{1B772997-2ADC-4640-8C83-F3397C6BC8DB}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Widths and Extents Pane
+
+The Widths and Extents pane lets you set the shape and location of the needle marker on your Linear or Radial gauge.
+
+Widths -- Customize the shape of your needle by specifying the following values:
+
+*  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedle~startwidth.html[Start]"]  -- Set this value to an integer from 0 to 100. This value sets the width of the start point of the needle marker.
+*  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedle~midwidth.html[Mid]"]  -- Set this value to an integer from 0 to 100. This value sets the width of the midpoint of the needle marker.
+*  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedle~endwidth.html[End]"]  -- Set this value to an integer from 0 to 100. This value sets the width of the end of the needle marker.
+
+Extents -- This section determines the location of the needle marker. In a Radial gauge, this position is measured from the center, and in a Linear gauge, this position is measured from the bottom of the gauge.
+
+*  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedle~startextent.html[Start]"]  -- Set this value to an integer from 0 to 100. This value sets the position of the start point of the needle marker.
+*  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedle~midextent.html[Mid]"]  -- Set this value to an integer from 0 to 100. This value sets the position of the mid-point of the needle marker.
+*  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedle~endextent.html[End]"]  -- Set this value to an integer from 0 to 100. This value sets the position of the end point of the needle marker.
+
+image::images/Widths_and_Extents_Pane_01.png[The widths and extents pane in the gauge designer.]
+
+== Related Topic
+
+link:webgauge-needle-marker-layout-tab.html[Needle Marker Layout Tab]

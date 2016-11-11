@@ -1,0 +1,40 @@
+﻿////
+
+|metadata|
+{
+    "name": "webwordexporter-about-webwordexporter",
+    "controlName": ["WebWordExporter"],
+    "tags": ["Exporting","Grids","Printing"],
+    "guid": "5f92d63c-7250-4251-87ab-1127f9148425",  
+    "buildFlags": [],
+    "createdOn": "2011-10-26T12:54:04.5659708Z"
+}
+|metadata|
+////
+
+= About WebWordExporter
+
+This topic introduces the WebWordExporter™ component.
+
+== Introduction
+
+The WebWordExporter is a component with exporting functionality that enables you to export your entire WebDataGrid™ or WebHierarchicalDataGrid™ to a Word file.
+
+The Export method provides an all-rounded exporting functionality. There are several events to customize the export. Most of these events fire when a certain object, such as a row, header, or cell is about to be exported and after the object is exported. There are also events that fire at the beginning and end of the entire export. Also, there is an event OnRowExporting, which allows you to change the layout of the grid’s row before it is exported. In addition, that event is cancelable and when it’s canceled the row is not included into the exported document.
+
+The WebWordExporter control supports several overloads of the Export method, including passing a list of web controls’ grids for sequential export of those grids.
+
+If you create a document and fill it with content, this document can be passed as a parameter to the Export method, too. In that case, the Exporter will append the grid(s) data after the end of the document’s content.
+
+== Features
+
+* Different export modes – define the way exported files are presented. Files can be either sent to the browser for automatic downloading, or just saved to a document instance, so you decide what to do with the result. It is also possible to export only the data which is currently visible in the grid.
+* Styles export support – styles, too, can be exported so you keep the look-and-feel of your application, or export the data in plain table format.
+* Customizable page layout of the export output
+
+== Related Topics
+
+Following are some other topics you may find useful.
+
+* link:webwordexporter-getting-started-with-webwordexporter.html[Getting Started with WebWordExporter]
+* link:webwordexporter-api-overview.html[API Overview]

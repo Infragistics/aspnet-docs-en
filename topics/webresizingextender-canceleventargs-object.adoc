@@ -1,0 +1,60 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-canceleventargs-object",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{09C3CC53-7F6B-45CE-93F7-219E7C418505}",  
+    "buildFlags": [],
+    "createdOn": "2007-08-02T08:03:51Z"
+}
+|metadata|
+////
+
+= CancelEventArgs Object
+
+== CancelEventArgs
+
+Class that is used for the second parameter in event handlers of Infragistics.UI.ExtenderBase objects.
+
+=== CancelEventArgs Methods
+
+[cols="a,a"]
+|====
+|*get_cancel* 
+|That method allows to check if event was canceled. 
+
+*Returns*
+
+Boolean value.
+
+|*getBrowserEvent* 
+|That method allows to get reference to the event object of browser. 
+
+*Returns*
+
+Reference to event or null. If it is not null, then it can be a reference to the event used by the Sys.UI.Behavior which wraps the real event of browser and puts into the a member-variable rawEvent. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ function myEvntHandler(sender, args)  {  var evt = args.getBrowserEvent();  var rawEvt = evt ? evt.rawEvent : null;  if(rawEvt) 	 alert('Browser event: ' + rawEvt.type);  //if(someCondition)  args.set_cancel(true);  }
+----
+
+|*set_cancel* 
+|That method allows to cancel event. 
+
+*Parameters*
+
+_value_ 
+
+Boolean value. Value of true will cancel event. 
+
+*Remarks*
+
+Note: not all events can be canceled.
+
+|====

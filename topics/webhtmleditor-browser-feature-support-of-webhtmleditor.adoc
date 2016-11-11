@@ -1,0 +1,107 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-browser-feature-support-of-webhtmleditor",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{D4BC83F6-4268-4991-A6CE-E7C6987CC391}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Browser Feature Support of WebHtmlEditor
+
+WebHtmlEditor™ is a powerful editing element that pushes the envelope of the Web experience. Differing degrees of standards conformance, the capability level of standards, and browser-specific extensions in functionality in present-day browsers all pose challenges in striving for a consistent cross-platform experience. WebHtmlEditor successfully delivers many advanced editing features in a manner supported by most up-level browsers.
+
+== Toolbar Button Support
+
+When used in a web browser other then Internet Explorer a pop-up message appears, explaining that the feature is supported only by Internet Explorer. If your Web application targets a heterogenous browser audience, you should detect the browser type from the HTTP request and remove these toolbar buttons from end users.
+
+The following toolbar buttons take advantage of Internet Explorer-specific functionality, enabling WebHtmlEditor to reach closer to a native desktop experience.
+
+.Note:
+[NOTE]
+====
+These WebHtmlEditor toolbar buttons are supported in all versions of Internet Explorer but note that in the Microsoft Edge browser the paste access has been revoked.The copy and cut buttons are now supported in Chrome as well as in Mozila FireFox from version 41 and above.
+====
+
+[cols="a,a,a,a"]
+|====
+|image::images/copy.gif[]
+|Copy
+|image::images/bringforward.gif[]
+|BringForward
+
+|image::images/cut.gif[]
+|Cut
+|image::images/sendbackward.gif[]
+|SendBackward
+
+|image::images/paste.gif[]
+|Paste
+|image::images/togglepositioning.gif[]
+|TogglePositioning
+
+|image::images/pastehtml.gif[]
+|PasteHtml
+|image::images/zoom.gif[]
+|Zoom
+
+|image::images/justifyfull.gif[]
+|Justify
+|
+|
+
+|====
+
+== Clipboard Support through Keyboard Shortcuts
+
+End users can still take advantage of their platform's Clipboard functionality to cut, copy and paste content from WebHtmlEditor into other desktop applications by using the following familiar keyboard shortcuts:
+
+[cols="a,a"]
+|====
+|Copy
+|Control - C
+
+|Cut
+|Control - X
+
+|Paste
+|Control - V
+
+|====
+
+== Clipboard Support Between Desktop Application
+
+When copying and pasting content from within WebHtmlEditor to another open desktop application capable of receiving the content's MIME media type, different web browsers have different degrees of support for the types of metadata they pass along to a desktop application through the Clipboard. For example, if an images height and/or width was customized in WebHtmlEditor, and then copied from WebHtmlEditor and pasted into Internet Explorer, the image's dimensions are passed from the Clipboard by Internet Explorer to the receiving applications. However, in some browsers only the image is passed, and the image appears with it's original dimensions in the receiving application.
+
+== Border Support
+
+The Cascading Style Sheet (CSS) specification allows web browsers freedom in their support of borders. More complex border styles can be rendered as solid borders without breaking compliance with this Web standard. Consequently, when WebHtmlEditor and its content are viewed from other browsers, the appearance of borders can differ.
+
+== Alert Captions
+
+Pop-up messages that inform the user of a result, such as those used by the Find and Replace and Word Count features, are implemented in the browser by calls to the underlying native APIs in which not all parameters are exposed at the Web programming level. As such, the appearance of these message boxes and the displayed title captions will vary across browsers.
+
+== Support for Dragging, Dropping, and Resizing Object
+
+WebHtmlEditor supports dragging, dropping, and resizing most content across a wide range of up-level browser platforms, including text, tables, and images. However, some browsers support the dragging, dropping and resizing of even more HTML elements. For instance, not all browsers support resizing horizontal rules.
+
+== Context Menu Support
+
+The RightClickBehavior property only has an effect if the browser allows WebHtmlEditor to display a context menu. This is a security feature in some browsers, stopping Web applications from being able to prevent the browser from showing its own context menu. If unsupported by the browser, the behavior defaults to doing nothing on a right mouse click.
+
+== Alignment of Bulleted and Numbered Lists
+
+In some browsers, combining the CenterJustify and RightJustify alignments on specific list items in a bulleted (unordered) or numbered (ordered) list results in different appearances. Specifically, a browser may render the bullets (or numbers) on the left, and not aligned adjacent to the list item.
+
+== Embedded Multimedia Plug-In Support
+
+Browsers not supporting an HTML embed tag may not properly execute streaming media files attached to WebHtmlEditor. Therefore, and end user may not see the embedded plug-in responsible for displaying the media when editing in these browsers. However, when the content is viewed in a browser supporting the embed tag, the streaming media will be played as the content's author had intended.
+
+== Modal Dialog Box Support
+
+Toolbar dialog boxes such as the Upload File dialog box are meant to be modal. Some browsers (e.g., Firefox) have security restrictions on opening modal dialog boxes (requiring the opening Web application to be signed). In these cases, the dialog box appears modeless (i.e., a user can click outside of the dialog box and continue interacting with the Web application in the main browser window).

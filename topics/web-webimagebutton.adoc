@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webimagebutton",
+    "controlName": ["WebImageButton"],
+    "tags": [],
+    "guid": "{ABA6E9A8-318A-4A01-9727-22BF6C8E8031}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebImageButton
+
+If you're looking for an area that houses all of the overview/task-based information related to the WebImageButton™ control, you've come to the right place. This section contains valuable information about WebImageButton, ranging from what the control does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to access important information about the WebImageButton control.
+
+== link:webimagebutton-understanding-webimagebutton.html[Understanding WebImageButton]
+
+In this section you'll find any information that will help you to better understand the functionalities of the WebImageButton control, as well as why you would want to use it to as part of building your applications.
+
+== link:web-webimagebutton-using-webimagebutton.html[Using WebImageButton]
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebImageButton™ control.
+
+== link:webimagebutton-accessibility-compliance.html[WebImageButton Accessibility Compliance]
+
+This topic outlines the way in which WebImageButton meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebImageButton control.
+
+== link:webimagebutton-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebImageButton control. The namespaces and classes listed in this topic link conveniently into the link:web-api-reference-guide.html[API Reference Guide] section of the Infragistics ASP.NET help.

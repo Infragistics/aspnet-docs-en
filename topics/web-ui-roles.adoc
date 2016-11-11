@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-ui-roles",
+    "controlName": [],
+    "tags": ["Styling","Tips and Tricks"],
+    "guid": "{631E08BC-0EE3-415C-97AC-7FDFE16596D8}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:37:40Z"
+}
+|metadata|
+////
+
+= UI Roles
+
+In order to style an application using Application Styling you need to understand the concept of Roles, and how they relate to the controls. A Role is used to indicate what type of UI element or behavior to which a particular cascading style sheet class is going to be applied. There are some general roles that are shared among the controls (e.g. Hover, Selected, Control). But there are also control-specific roles; for example, WebTree™ has roles such as Island, Node, Parent, and Leaf.
+
+A list of every role for every control, as well as all the shared roles, would be too long. The easiest way to learn about the different roles, and what effect each one has on a control is to use the roles in the Infragistics AppStylist® for ASP.NET product. This application uses a tree to show all the controls, with each control's node containing sub-nodes that are the control's available roles. For more information on this program, see link:web-styling-your-application.html[Styling Your Application].
+
+== Related Topics
+
+link:web-role-inheritance.html[Role Inheritance]
+
+link:web-role-priority.html[Role Priority]

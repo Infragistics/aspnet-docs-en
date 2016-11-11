@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-webhierarchicaldatagrid-smart-tag",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Design Environment","Grids"],
+    "guid": "{1FF8F88A-9C74-4D8E-ADF7-2DE10AE754D8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebHierarchicalDataGrid Smart Tag
+
+In Visual Studio 2005/2008 (.NET Framework 2.0/3.5), each Infragistics ASP.NET control/component is equipped with a Smart Tag. By selecting the control/component, a Smart Tag anchor appears. When you click this anchor, a pop-up panel appears, providing you with quick and easy access to the most common properties and settings of the control/component.
+
+The WebHierarchicalDataGrid™ Smart Tag contains the following items:
+
+* Choose Data Source -- Allows you to choose an existing data source or configure a data source to bind to WebHierarchicalDataGrid.
+
+See the table below for a description of the item, as well as the item's corresponding property in the properties grid.
+
+The WebHierarchicalDataGrid Smart Tag contains the following links:
+
+* Configure Data Source - Links to the data source configuration wizard allowing you to configure the data source to bind to WebHierarchicalDataGrid.
+* Refresh Schema - Clicking this refreshes WebHierarchicalDataGrid so that any changes to the data source or the schema are displayed in the designer.
+* Edit Bands – This enables you to add parent and child bands to the WebHierarchicalDataGrid control. Band settings can be configured as well.
+* Edit Behaviors - Brings up the behaviors editor for adding, removing, and configuring WebHierarchicalDataGrid’s behaviors.
+* Edit Grid Editor Providers - Links to the editor provider’s editor to add/remove editor providers for use with WebHierarchicalDataGrid.
+* Edit Template Collection - Links to the template collection editor where you can add/remove templates that you can use in WebHierarchicalDataGrid.
+* About -- Clicking this opens the WebHierarchicalDataGrid product information. It contains information such as Status, Version, Expiration and Product Key.
+* Add Extender – Clicking this brings up all the available control extenders that can be used with WebHierarchicalDataGrid. Control Extenders can be used to add additional functionality (usually AJAX or JavaScript support) to existing controls already declared on a page and can also nicely encapsulate UI behavior, and make it really easy to add richer functionality to an application.
+* Edit Templates - Clicking this brings up all the available templates you can edit. You can drag and drop controls onto the templates and edit them as you like.
+
+image::Images\WebHierarchicalDataGrid_Smart_Tag.png[]
+
+[options="header", cols="a,a,a"]
+|====
+|Items|Description|Corresponding Property
+
+|Choose Data Source
+|The dropdown list allows you to select an existing data source or configure a new data source.
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datasourceid.html[DataSourceID]"] 
+
+|====

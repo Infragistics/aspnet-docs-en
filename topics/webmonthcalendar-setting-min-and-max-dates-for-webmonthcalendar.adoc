@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmonthcalendar-setting-min-and-max-dates-for-webmonthcalendar",
+    "controlName": ["WebMonthCalendar"],
+    "tags": ["How Do I","Styling"],
+    "guid": "{A121EFCC-1ED2-4EA4-968C-D9745E679C98}",  
+    "buildFlags": [],
+    "createdOn": "2009-01-07T11:59:26Z"
+}
+|metadata|
+////
+
+= Setting Min and Max Dates for WebMonthCalendar
+
+WebMonthCalendar™ allows you to set a range of dates you want to display in the calendar by simply setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~mindate.html[MinDate]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~maxdate.html[MaxDate]"]  properties. The end-user therefore cannot view the dates out of the range you have set on the control.
+
+You can set the MinDate and MaxDate properties either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+'Create the minimum datetime object
+Dim minDate As New DateTime(2000, 1, 1)
+'Create the maximum datetime object
+Dim maxDate As New DateTime(2010, 1, 1)
+'Assign the minimum datetime object to the WebMonthCalendar's MinDate
+WebMonthCalendar1.MinDate = minDate
+'Assign the maximum datetime object to the WebMonthCalendar's MaxDate
+WebMonthCalendar1.MaxDate = maxDate
+----
+
+*In C#:*
+
+----
+//Create the minimum datetime object
+DateTime minDate = new DateTime(2000, 1, 1);
+//Create the maximum datetime object
+DateTime maxDate = new DateTime(2010, 1, 1);
+//Assign the minimum datetime object to the WebMonthCalendar's MinDate
+WebMonthCalendar1.MinDate = minDate;
+//Assign the maximum datetime object to the WebMonthCalendar's MaxDate
+WebMonthCalendar1.MaxDate = maxDate;
+----

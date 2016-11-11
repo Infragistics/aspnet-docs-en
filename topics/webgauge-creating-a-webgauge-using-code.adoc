@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-creating-a-webgauge-using-code",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{EC13B96C-C33A-493C-8F76-3171C2919B1E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Creating a WebGauge Using Code
+
+Click on the following links to find out how to create gauges using code:
+
+* link:webgauge-web-creating-a-digital-webgauge-using-code.html[Creating a Digital WebGauge Using Code]
+* link:webgauge-web-creating-a-linear-webgauge-using-code.html[Creating a Linear WebGauge Using Code]
+* link:webgauge-web-creating-a-radial-webgauge-using-code.html[Creating a Radial WebGauge Using Code]

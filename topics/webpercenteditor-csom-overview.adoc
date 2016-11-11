@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webpercenteditor-csom-overview",
+    "controlName": ["WebPercentEditor"],
+    "tags": ["API"],
+    "guid": "{1F830DE8-6109-4A70-A520-EE96DE0F43CD}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T13:10:13Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebPercentEditor™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webtexteditor~infragistics.web.ui_namespace.html[WebPercentEditor CSOM Overview]

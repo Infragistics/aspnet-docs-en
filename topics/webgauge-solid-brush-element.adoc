@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-solid-brush-element",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{3A0AC29B-3D6E-4C3D-9CC3-8CC35F169C38}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Solid Brush Element
+
+If you want a property on your gauge to be one solid color, set the brush type to Solid. When you select the Solid brush element, you can select from a number of available colors. You can apply the Solid brush element to the properties on your gauge using:
+
+* link:webgauge-apply-the-solid-brush-element-using-the-gauge-designer.html[the Gauge Designer]
+* link:webgauge-apply-the-solid-fill-brush-element-at-design-time.html[the Gauges collection editor]
+* link:webgauge-apply-the-solid-brush-element-at-run-time.html[code]
+
+The following screen shot displays a Radial gauge with the Dial's BrushElement property set to a SolidFillBrushElement with the following setting:
+
+* Solid color -- Black
+
+image::images/Gauge_Solid_02.png[Solid brush applied to a radial gauge.]

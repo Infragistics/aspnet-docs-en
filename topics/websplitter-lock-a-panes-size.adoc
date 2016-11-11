@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "websplitter-lock-a-panes-size",
+    "controlName": ["WebSplitter"],
+    "tags": ["How Do I"],
+    "guid": "{775C6E43-3C54-4723-9607-41DF0AB901EC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Lock a Pane's Size
+
+You can lock the pane, preventing it from being resized either by the end user or by the control when sibling panes are resized or collapsed. This will affect the ability of the WebSplitter™ control to resize the panes to fit or fill the WebSplitter control area.
+
+For example, if the sum widths of the pane exceed the width of the WebSplitter control, it will attempt to reduce the size of the last pane in the collection so that it can fit; however, if the WebSplitter control is locked then the WebSplitter control will not be able to resize the pane. In this case, the WebSplitter control will search through the panes collection attempting to locate an unlocked pane to resize. If all panes are locked and their width exceeds the width of the WebSplitter control, then the WebSplitter control will truncate panes from right to left.
+
+The following code demonstrates how to lock a pane's size.
+
+*In Visual Basic:*
+
+----
+' Locks a pane's size
+Me.WebSplitter1.Panes[0].Locked = true
+Me.WebSplitter1.Panes[1].Locked = true
+----
+
+*In C#:*
+
+----
+// Locks a pane's size
+this.WebSplitter1.Panes[0].Locked = true;
+this.WebSplitter1.Panes[1].Locked = true;
+----
+

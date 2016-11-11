@@ -1,0 +1,59 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-using-global-assembly-cache-gac-deployment",
+    "controlName": [],
+    "tags": ["How Do I"],
+    "guid": "{FBB07E69-21DD-4E38-ADBC-A9FF07114ECB}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-06T00:00:00Z"
+}
+|metadata|
+////
+
+= Using Global Assembly Cache (GAC) Deployment
+
+Installing application components into the the Global Assembly Cache (GAC) can be useful if you are installing components that will be used by multiple applications on the same machine, or if you need to run multiple versions of the same assembly on a single computer.
+
+By default when you install the Infragistics ASP.NET toolset the control assemblies are installed into the GAC. If you would like to deploy the Infragistics components that are part of your application into the GAC of the client computer there are three primary methods.
+
+=== Using Gacutil.exe to add components to the GAC
+
+The Gacutil.exe tool is a command line utility installed as part of the base .NET framework which can be used to add and remove application components to/from the GAC. The Gacutil.exe tool is located in the .NET Framework installation directory. The default location for this is  _C:\Windows\Microsoft.NET\Framework\v4.0.30319._
+
+To use the Gacutil.exe tool:
+
+[start=1]
+. Open a Visual Studio command prompt
+
+( _Start > Programs > Microsoft Visual Studio .NET 2005 > Visual Studio .NET Tools > Visual Studio .NET 2005 Command Prompt_ )
+[start=2]
+. Enter the Gacutil.exe command. The following line demonstrates adding the Infragistics WebChart component to the GAC from an application's folder called MyApplication. gacutil -i C:\Projects\MyApplication\Infragistics4.WebUI.UltraWebChart.v{ProductVersion}.dll
+
+Gacutil.exe command line include a number of commands that allow you spe specify the operation you want the tool to perform. The list below explain the available commands:
+
+* /i - Installs an assembly to the GAC
+* /il - Installs one or more assemblies to the GAC
+* /u - Uninstalls an assembly from the GAC
+* /ul - Uninstalls one or more assemblies from the GAC
+* /ungen - Uninstalls a native images installed via the NGEN utility
+* /l - List the GAC filtered by <assembly_name>
+* /lr - List the GAC with all traced references
+* /cdl - Deletes the contents of the download cache
+* /ldl - Lists the contents of the download cache
+
+Gacutil.exe also allows for several options to be specified on the command line:
+
+* /r - Specifies a traced reference to install or uninstall
+* /f - Forces reinstall of an assembly
+* /nologo - Suppresses the display of the logo banner
+* /silent - Suppressed the display f all output
+
+=== Additional Global Assembly Cache Information
+
+For more information on the use of the GAC and installing applications into the GAC please see these resources:
+
+* link:http://msdn2.microsoft.com/en-us/library/yf1d93sz(vs.80).aspx[.NET Framework Developers Guide: Global Assembly Cache]
+* link:http://msdn2.microsoft.com/en-us/library/dkkx7f79(vs.80).aspx[Installing an Assembly into the Global Assembly Cache]
+* link:http://msdn2.microsoft.com/en-us/library/ex0ss12c(vs.80).aspx[.NET Framework Tools: Global Assembly Cache Tool (Gacutil.exe)]

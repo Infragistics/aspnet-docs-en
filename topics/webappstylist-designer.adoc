@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-designer",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Design Environment","Styling","Theming"],
+    "guid": "{B226AF8E-480E-4C45-90F3-5FC299364384}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Designer
+
+The Designer is simply a graphical way to make CSS changes to a Role (also a CSS class) and watch those changes be applied at the same time. The Designer is grouped into six panes, each containing similar properties, all translating into CSS styles. Click the links below to learn more about the properties contained within each pane.
+
+* link:webappstylist-background-pane.html[Background Pane] -- Modify the color and image of the background.
+* link:webappstylist-border-pane.html[Border Pane] -- Modify all borders at once, or each individually.
+* link:webappstylist-font-pane.html[Font Pane] -- Chose one or many fonts as well as color, size, and other font properties.
+* link:webappstylist-margin-pane.html[Margin Pane] -- Edit each of the four margins.
+* link:webappstylist-padding-pane.html[Padding Pane] -- Change the amount of padding on each side.
+* link:webappstylist-other-pane.html[Other Pane] -- Modify other various properties such as the cursor and alignment.

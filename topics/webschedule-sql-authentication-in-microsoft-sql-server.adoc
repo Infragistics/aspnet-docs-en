@@ -1,0 +1,51 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-sql-authentication-in-microsoft-sql-server",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Patterns and Practices","Scheduling"],
+    "guid": "{7BDD0854-BF76-4E95-9972-7EFEA62E152C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= SQL Authentication in Microsoft SQL Server
+
+SQL authentication is one of the two authentication modes in which Microsoft SQL Server can be configured to authenticate users connecting to or executing it's stored procedures. You would use SQL authentication when you wanted to allow access to users without regard to their Windows domain, group or user identity. You can also use SQL authentication to set-up specific roles on a per-application basis, to which you may assign users and define what rights they have when accessing the database.
+
+Most users are familiar with SQL authentication by the default login that Microsoft SQL Server provides:  _sa_  (for System Administrator) with a blank password. While this is the database login on the (local) server that the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulesqlclientprovider.html[WebScheduleSqlClientDataProvider]"]  control uses to connect to the default SQL Server instance if no other connection is specified, it is a poor choice for use in a production environment. Therefore, you will want to set-up your own SqlConnection component with a connection string that specifies a more closely guarded login name and password, and connect the WebScheduleSqlClientDbProvider™ to it when your application deploys.
+
+Many deployments will use SQL authentication in coordination with an application role. You can add an application role for WebSchedule by going to the database you wish to add a role to, right-clicking the "Roles" node beneath the database, and selecting "New Database Role..." from the context menu.
+
+image::Images/WebSchedule_Related_Topics_SQL_Authentication_in_Microsoft_SQL_Server_01.PNG[]
+
+Enter a name for the application role, such as "WebSchedule," and select the "Application role" radio button from the dialog displayed above. Then give the WebSchedule application role a good password and click the OK button.
+
+Next expand the "Security" node beneath your server and on the "Logins" node right-click and select "Add New Login..." from the context menu. On the New Login dialog that appears specify the name of the application role, "WebSchedule," and select the SQL Server Authentication radio button. Specify a password for the application role login (this will be used by the user, "WebScheduleUser," we shall add to the database.) Leave the default database set to "master," this will grant the application role certain permissions necessary to read the catalog listing other databases from the design-time environment.
+
+image::Images/WebSchedule_Related_Topics_SQL_Authentication_in_Microsoft_SQL_Server_03.PNG[]
+
+After entering the application role and giving it a login, go to the "Users" node underneath the database and right-click, then select "New Database User" from the context menu.
+
+image::Images/WebSchedule_Related_Topics_SQL_Authentication_in_Microsoft_SQL_Server_02.PNG[]
+
+On the dialog above specify the name of the application role as the login name, and then the name of an ordinary user for this role, "WebScheduleUser" in our example.
+
+Next we need to grant permissions on the "WebSchedule" application role (and indirectly this covers "WebScheduleUser") to execute the WebSchedule stored procedures (this assumes you intend to run with the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider~usestoredprocedure.html[UseStoredProcedures]"]  property set to true on the data provider; if you intend to work in dynamic SQL then you must grant SELECT, INSERT, UPDATE and DELETE permissions on each of the WebSchedule tables.)
+
+Go back to "Roles" and right-click, to edit the "Properties..." of the "WebSchedule" application role. On the dialog that appears, you want to click the "Permissions..." button and this takes you to the grid containing all database objects (tables, stored procedures and views). From here you want to place a green check mark in each check box in the EXECUTE column for the WebSchedule stored procedures only. When finished your dialog may look like the following screen shot:
+
+image::Images/WebSchedule_Related_Topics_SQL_Authentication_in_Microsoft_SQL_Server_04.PNG[]
+
+Now that you have configured the application role in SQL Server Enterprise Manager, return to the Microsoft Visual Studio .NET environment to your WebSchedule application's WebForm. If you haven't already done so, drag an SqlConnection component onto the form, and select it. In the Properties Editor, drop down the ConnectionString property list box and select "New Connection..." This should raise the Data Link property pages dialog where you can specify the parameters for your connection.
+
+image::Images/WebSchedule_Related_Topics_SQL_Authentication_in_Microsoft_SQL_Server_05.PNG[]
+
+For a local SQL Server you can enter "." in the first field, otherwise select the name of your SQL Server from the drop-down list. Select the radio button enabling the fields where you can specify a login name and password. For your login name you will use the application role, and for your password you will use the password you specified above when defining the application role login in SQL Server Enterprise Manager.
+
+As long as the application role has access to the master database in Microsoft SQL Server, you should receive a catalog of available databases from which to select one named "WebSchedule1" to which you had added to "WebScheduleUser" identity. In some cases an application role may not be granted access to list the databases in a catalog (this is a normal precaution that may be taken by your Database Administrator.) If you can't see the "WebSchedule1" database, you can type in it's name directly. When you click the "Test Connection" button, you should receive a successful response from Microsoft Visual Studio .NET if your login, password, and permissions are all valid for accessing the chosen server and database. If you do not receive a successful message, then double check the steps you have taken above, and ensure that the SQL Server can be reached through TCP/IP.
+
+Although this topic has introduced you to setting up role-based security for your WebSchedule application in Microsoft SQL Server, it only touches the surface on many issues that you must consider. For further information on topics introduced here, please consult the Microsoft SQL Server Books Online.

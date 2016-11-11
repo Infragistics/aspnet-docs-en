@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webexcelexporter",
+    "controlName": ["WebExcelExporter"],
+    "tags": [],
+    "guid": "d10f4d28-aa7a-4cc7-b8e6-c297307132f3",  
+    "buildFlags": [],
+    "createdOn": "2010-06-06T07:40:24.5456939Z"
+}
+|metadata|
+////
+
+= WebExcelExporter
+
+This page contains all of the overview/task-based information related to the WebExcelExporter™. This section contains valuable information about the component, ranging from what it does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the component.
+
+Click the links below to learn about the WebExcelExporter control.
+
+== link:web-webexcelexporter-about-webexcelexporter.html[About WebExcelExporter]
+
+In this section, you will find information that will help you better understand functionalities of the WebExcelExporter component. Further, you will understand the purpose of the component.
+
+== link:webexcelexporter-getting-started-with-webexcelexporter.html[Getting Started with WebExcelExporter]
+
+This section provides you with information on how to get up and running as quickly as possible with the WebExcelExporter component.
+
+== link:webexcelexporter-using-webexcelexporter.html[Using WebExcelExporter]
+
+This section provides task-based information showing you how to use the features available in WebExcelExporter.
+
+== link:webexcelexporter-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebExcelExporter component. The namespaces and classes listed in this topic link conveniently into the API Reference Guide section of the Infragistics ASP.NET help.

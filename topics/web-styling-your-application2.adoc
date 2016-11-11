@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-styling-your-application2",
+    "controlName": [],
+    "tags": ["Styling","Templating","Theming"],
+    "guid": "{C933C732-7340-46F6-8260-EB7C2A956ED0}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Styling Your Application
+
+Click the links below to gain an overview of how to set the visual styles and behavior of our ASP.NET controls and components:
+
+* link:web-understanding-styles.html[Understanding Styles] -- Describes the various ways in which you can add styles to our ASP.NET controls and components, for example, using presets and cascading style sheets (CSS).
+* link:web-application-styling-framework-asf.html[Application Styling Framework (ASF)] – The Application Styling Framework™ (ASF) allows you to create styles (known as StyleSets) and apply it to any of your applications.

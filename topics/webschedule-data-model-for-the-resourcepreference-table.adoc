@@ -1,0 +1,132 @@
+﻿////
+|metadata|
+{
+    "name": "webschedule-data-model-for-the-resourcepreference-table",
+    "controlName": ["WebSchedule"],
+    "tags": ["Scheduling"],
+    "guid": "{4CF7E550-E091-4155-ACFC-6BDA623A86C2}",
+    "buildFlags": [],
+    "createdOn": "2007-05-11T11:03:07Z"
+}
+|metadata|
+////
+
+= Data Model for the ResourcePreference Table
+
+The Activity table identifies a WebSchedule™ Activity or Appointment, and describes when and where it takes place, and how reminder notifications should be given. All columns correspond with .NET properties that have the same name on an Activity or Appointment object, unless otherwise noted.
+
+Columns marked with an asterisk ($$*$$) in the following table are new or have been modified for the WebSchedule Data Model in Infragistics ASP.NET 2006 Volume 2 and later.
+
+[options="header", cols="a,a,a,a"]
+|====
+|Column Name|Data Type|Null Allowed|Remarks
+
+|ActivityID
+|int
+|No
+|*Primary Key.* A numeric value uniquely identifying this Activity.
+
+|StartDateTimeUtc
+|datetime
+|No
+|Starting date/time of the Activity represented in Universal Coordinated Time (UTC).
+
+|Duration
+|int
+|No
+|Length of the activity measured in seconds (3600 seconds = 1 hour).
+
+|Subject
+|nvarchar(255)
+|Yes
+|Free-form text appearing as the Activity's subject.
+
+|ActivityDescription
+|ntext
+|Yes
+|Free-form text describing additional details about the Activity.
+
+|AllDayEvent
+|bit
+|No
+|Indicates whether the Activity spans an entire day. An all-day activity renders with a distinctive style.
+
+|Location
+|nvarchar(64)
+|Yes
+|Free-form text describing the location where the Activity takes place.
+
+|Status
+|int
+|No
+|Indicates the Activity's status code that is currently used for indicating whether or not a reminder notice of the Activity has already expired. 
+
+$$*$$-1 - Deleted 
+
+0 - Normal 
+
+3 - Expired 
+
+|EnableReminder
+|bit
+|No
+|Indicates whether or not the primary Resource affiliated with this Activity requires a reminder notification.
+
+|ReminderInterval
+|int
+|No
+|The period (if time in seconds) before activity's StartDateTimeUtc when a reminder notice should be given. Not used when EnableReminder is False.
+
+|ShowTimeAs
+|int
+|No
+|Determines the color of the time bar for an Activity (not rendered by all WebSchedule views.) 
+
+0 - Free (White) 
+
+1 - Tentative (Light Blue) 
+
+2 - Busy (Blue) 
+
+3 - Out of Office (Purple) 
+
+|Importance
+|int
+|No
+|Priority associated with this activity. Affects which "Importance" button is selected by default on the Edit Appointment dialog box. 
+
+0 - Low 
+
+1 - Normal 
+
+2 - High 
+
+|$$*$$RecurrenceID
+|int
+|No
+|Foreign key identifying a row from the Recurrence table describing the recurring pattern for this Activity, if this Activity recurs. 
+
+Non-recurring Activities must reference -999, the key of the default Recurrence.
+
+|$$*$$VarianceID
+|unique identifier
+|Yes
+|Correlates a recurring root Activity with one or more of it's variance rows. 
+
+Each variance has a unique ActivityID, but is related to it's root Activity because both share the same GUID value in this column. 
+
+Non-recurring Activities, and recurring Activities having no variance rows, will have a NULL value in this column.
+
+|$$*$$OriginalStartDateTimeUtc
+|datetime
+|Yes
+|Identifies an individual occurrence of a recurring Activity to be overridden with column values from this row by what the occurrence's originally scheduled Start Date/Time (in UTC) would have been, based on it's recurrence pattern. 
+
+Applies to variance rows only, all others will have a NULL value in this column.
+
+|_ts
+|timestamp
+|Yes
+|Timestamp that is used to detect concurrency conflicts.
+
+|====

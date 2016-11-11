@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webresizingextender",
+    "controlName": ["WebResizingExtender"],
+    "tags": [],
+    "guid": "{15306409-B879-4F44-8BD9-F1C6D61781B5}",  
+    "buildFlags": [],
+    "createdOn": "2006-08-12T14:09:27Z"
+}
+|metadata|
+////
+
+= WebResizingExtender
+
+If you're looking for an area that houses all of the overview/task-based information related to the WebResizingExtender™ control, you've come to the right place. This section contains valuable information about WebResizingExtender, ranging from what the control does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to access important information about the WebResizingExtender control.
+
+== link:webresizingextender-understanding-webresizingextender.html[Understanding WebResizingExtender]
+
+In this section you'll find any information that will help you to better understand the functionalities of the WebResizingExtender control, as well as why you would want to use it to as part of building your applications.
+
+== link:webresizingextender-getting-started-with-webresizingextender.html[Getting Started with WebResizingExtender]
+
+In order to get you up and running as quickly as possible with the WebResizingExtender control, we've provided you with information on how to get started using the control (i.e., adding WebResizingExtender to a form).
+
+== link:web-webresizingextender-using-webresizingextender.html[Using WebResizingExtender]
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebResizingExtender™ control.
+
+== link:webresizingextender-accessibility-compliance.html[WebResizingExtender Accessibility Compliance]
+
+This topic outlines the way in which WebResizingExtender meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebResizingExtender control.
+
+== link:webresizingextender-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebResizingExtender control. The namespaces and classes listed in this topic link conveniently into the link:web-api-reference-guide.html[API Reference Guide] section of the Infragistics ASP.NET help.

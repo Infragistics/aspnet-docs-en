@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-enabling-application-styling-at-run-time",
+    "controlName": [],
+    "tags": ["Styling"],
+    "guid": "{07EAF2A7-0D2D-4C8B-A5F2-4412A3D0C54D}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:30:26Z"
+}
+|metadata|
+////
+
+= Enabling Application Styling at Run Time
+
+One of the powerful features of Application Styling is the options that are available to the application developer for enabling and disabling Application Styling on their project at run time. Click the links below to find out more about these tasks.
+
+* link:web-enabling-application-styling-using-the-appstylingmanager.html[Enabling Application Styling Using the AppStylingManager]
+* link:web-enabling-application-styling-using-the-web-config-file.html[Enabling Application Styling Using the web.config file]

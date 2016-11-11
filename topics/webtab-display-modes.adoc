@@ -1,0 +1,91 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-display-modes",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I"],
+    "guid": "{5C26F87A-A520-4BBE-B89E-848EF19436DD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Display Modes
+
+WebTab™ supports different types of rendering mode so that the tabs are arranged in a single row or in multi rows or with scroll buttons. The following are the different types of display mode (  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabdisplaymode.html[TabDisplayMode]"]  enumeration) that can be set in a WebTab:
+
+* *SingleRow* – Tabs are placed in a single row without scroll buttons.
+
+.Note:
+[NOTE]
+====
+When there are more number of tabs with width set on the control, some tabs may not be visible even handling the tabs overflow.
+====
+
+* *Scrollable* – Tabs are placed in a single row with scroll buttons.
+* *MultiRow* – Tabs are placed in multiple rows with predefined row breaks.
+
+.Note:
+[NOTE]
+====
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem.html[ContentTabItem]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~nextrow.html[NextRow]"]  property is used to force the tab onto the next row when  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~displaymode.html[DisplayMode]"]  is set to MultiRow.
+====
+
+* *MultiRowAuto* – Tabs are placed in multiple, rows and row breaks are adjusted dynamically on the client.
+
+*In HTML:*
+
+----
+<ig:WebTab ID="WebTab1" runat="server" Height="500px" Width="60%" 
+        DisplayMode = "Scrollable" >
+        <Tabs>
+…
+        </Tabs>
+</ig:WebTab>
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.DisplayMode = TabDisplayMode.Scrollable
+----
+
+*In C#:*
+
+----
+WebTab1.DisplayMode = TabDisplayMode.Scrollable;
+----
+
+== Related Topics
+
+link:webtab-about-webtab.html[Understanding WebTab]
+
+link:webtab-getting-started-with-webtab.html[Getting Started with WebTab]
+
+link:webtab-header-and-content-panes.html[Header and Content Panes]
+
+link:webtab-tab-states.html[Tab States]
+
+link:webtab-ajax-indicator-support-for-webtab.html[Ajax Indicator Support for WebTab]
+
+link:webtab-animations.html[Animations]
+
+link:webtab-handling-overflow-in-webtab.html[Handling Overflow in WebTab]
+
+link:webtab-load-on-demand.html[Load on Demand]
+
+link:webtab-orientation-and-alignment.html[Orientation and Alignment]
+
+link:webtab-overlapping-tabs.html[Overlapping Tabs]
+
+link:webtab-tab-moving.html[Tab Moving]
+
+link:webtab-scrolling.html[Scrolling]
+
+link:webtab-validation-in-webtab.html[Validation in WebTab]
+
+link:webtab-api-overview.html[API Overview]
+
+link:webtab-client-side-object-model.html[Client-Side Object Model(CSOM) Overview]

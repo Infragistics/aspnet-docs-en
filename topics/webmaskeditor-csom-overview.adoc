@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmaskeditor-csom-overview",
+    "controlName": ["WebMaskEditor"],
+    "tags": ["API"],
+    "guid": "{6A985DB3-EE48-4A66-9DE1-85FDCE03123B}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T14:51:26Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebMaskEditor™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webtexteditor~infragistics.web.ui_namespace.html[WebMaskEditor CSOM Overview]

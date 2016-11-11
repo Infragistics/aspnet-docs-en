@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-effects-tab",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{E6CEB8F8-34F3-41D0-B1FB-C9C2EB5AE4FC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Effects Tab
+
+The Effects tab is associated with all of your gauge properties. This Effects tab allows you to add shadows to any property of your WebGauge control. You can access this tab by either clicking on any item in the Gauge Explorer or clicking on any item on your gauge in the interactive preview area.
+
+This tab is divided into three panes:
+
+* link:webgauge-shadow-pane.html[Shadow]
+* link:webgauge-shadow-brush-pane.html[Shadow Brush]
+* link:webgauge-shadow-stroke-pane.html[Shadow Stroke]
+
+image::images/Effects_Tab_01.png[Effects tab for gauge designer.]
+
+The following screen shot shows effect applied to the range of a scale according to the settings specified in the above screen shot.
+
+image::images/Effects_Tab_02.png[Radial gauge showing the effects shown in the screen shot above applied.]

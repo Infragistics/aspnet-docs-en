@@ -1,0 +1,26 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-data-model",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{F5058822-0A41-44F4-BF0C-B35A53B9BAAD}",  
+    "buildFlags": [],
+    "createdOn": "2005-08-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Data Model
+
+The WebSchedule™ data providers interface between the WebScheduleInfo's™ collection properties and the WebSchedule data model.
+
+Click the links below to find out about the data schema required in order for the WebSchedule controls and components to work properly.
+
+* link:webschedule-data-model-for-webschedule-generic-data-provider.html[Data Model for WebSchedule Generic Data Provider]
+* link:webschedule-data-model-for-the-activity-table.html[Data Model for the Activity Table]
+* link:webschedule-data-model-for-the-resource-table.html[Data Model for the Resource Table]
+* link:webschedule-data-model-for-the-activityresource-table.html[Data Model for the ActivityResource Table]
+* link:webschedule-data-model-for-the-resourcepreference-table.html[Data Model for the ResourcePreference Table]
+* link:webschedule-data-model-for-the-recurrence-table.html[Data Model for the Recurrence Table]

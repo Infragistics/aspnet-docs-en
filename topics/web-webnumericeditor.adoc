@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webnumericeditor",
+    "controlName": ["WebNumericEditor"],
+    "tags": [],
+    "guid": "{3BD0A9B2-D7B0-4B53-B4B2-29D1C8152485}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T10:01:30Z"
+}
+|metadata|
+////
+
+= WebNumericEditor
+
+This page contains all of the overview/task-based information related to the WebNumericEditor™ control. This section contains valuable information about the control, ranging from what it does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to learn about the WebNumericEditor control.
+
+== link:webnumericeditor-about-webnumericeditor.html[About WebNumericEditor]
+
+In this section, you will find information that will help you better understand functionalities of the WebNumericEditor control. Further,you will understand the purpose of the control.
+
+== link:webnumericeditor-using-webnumericeditor.html[Using WebNumericEditor]
+
+This section provides task-based information showing you how to use the features available in WebNumericEditor.
+
+== link:webnumericeditor-accessibility-compliance.html[WebNumericEditor Accessibility Compliance]
+
+This topic outlines the way in which WebNumericEditor meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebNumericEditor control.
+
+== link:webnumericeditor-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebNumericEditor control. The namespaces and classes listed in this topic link conveniently into the API Reference Guide section of the Infragistics ASP.NET help.
+
+== link:webtexteditor~infragistics.web.ui_namespace.html[Client-Side Object Model (CSOM) Overview]
+
+The WebNumericEditor™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.

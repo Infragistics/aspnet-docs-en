@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-changing-stylesets-at-the-control-level",
+    "controlName": [],
+    "tags": ["Styling"],
+    "guid": "{E94F9808-B655-412B-958F-2BBFE09C8848}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:34:29Z"
+}
+|metadata|
+////
+
+= Changing StyleSets at the Control Level
+
+When Application Styling is enabled, it is designed to style all Infragistics ASP.NET controls on the form with the same StyleSet. However there may be cases when there is a specific area on your form that you don't want to be styled by the StyleSet.
+
+For example, on the left side of your form there is a navigation element (tree, listbar), and the rest of the form is a WebGrid. You may want the navigational area to have one StyleSet and WebGrid to have another, so that you can draw attention to the grid. You can easily accomplish this scenario because each control has its own set of properties that you use to change which StyleSet is being used for that control.
+
+.Note:
+[NOTE]
+====
+You can also disable/enable Application Styling on the control at this level as well.
+====
+
+The following example code shows you how to change the StyleSet being used by WebGrid.
+
+*In Visual Basic:*
+
+----
+Private Sub UltraWebGrid1_InitializeLayout(ByVal sender As Object, _
+  ByVal e As Infragistics.WebUI.UltraWebGrid.LayoutEventArgs) _
+  Handles UltraWebGrid1.InitializeLayout
+        Me.UltraWebGrid1.StyleSetName = "Office2007Black"
+End Sub
+----
+
+*In C#:*
+
+----
+private void UltraWebGrid1_InitializeLayout(object sender, 
+  Infragistics.WebUI.UltraWebGrid.LayoutEventArgs e)
+{
+        this.UltraWebGrid1.StyleSetName = "Office2007Black";
+}
+----

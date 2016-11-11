@@ -1,0 +1,58 @@
+﻿////
+
+|metadata|
+{
+    "name": "known-issues-and-limitations-asp.net 12.2",
+    "controlName": [],
+    "tags": ["Known Issues"],
+    "guid": "67522038-2945-4496-84ce-db47696f9304",  
+    "buildFlags": [],
+    "createdOn": "2012-09-21T16:07:58.9113061Z"
+}
+|metadata|
+////
+
+= Known Issues and Limitations ASP.NET 12.2
+
+== Known Issues and Limitations
+
+=== Overview
+
+The following table summarizes the known issues and limitations of the Infragistics ASP.NET 12.2 release. Detailed explanations of known issues and the possible workarounds are provided for some of the issues follow the summary table.
+
+=== Legend
+
+- image:images\workaround.png[alt="Workaround"] - Workaround available
+- image:images\noworkaround.png[alt="No Workaround"] - No known workaround
+- image:images\fix.png[alt="Fix Planned"] - Fix planned
+
+[options="header", cols="a,a,a"]
+|====
+|Feature|Description|Status
+
+|<<_Ref320810435,Visual Studio 2012 ASP.NET Web Site template>>
+|When using the default template for ASP.NET web site the default styles in the master page do not work with the Infragistics® controls.
+|image::images/Known_Issues_and_Limitations_ASP.NET_12.1_1.png[]
+
+|====
+
+=== Visual Studio 2012 ASP.NET Web Site template
+
+The new Microsoft® Visual Studio® 2012 ASP.NET web site template includes styles in the master page which do not work well with the Infragistics controls.
+
+*Workaround*
+
+.Note:
+[NOTE]
+====
+The default styles of the master page are in conflict with the Infragistics controls. In order to avoid the conflict, the following code in the default master page must be removed:
+====
+
+*In HTML:*
+
+[source,html]
+----
+<% if (false) { %><%--Designer support--%>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<% } %>
+----

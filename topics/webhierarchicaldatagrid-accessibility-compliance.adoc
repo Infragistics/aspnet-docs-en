@@ -1,0 +1,65 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-accessibility-compliance",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids","Section 508"],
+    "guid": "{7658F67E-29B3-49CD-A9AE-BB75504AD671}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebHierarchicalDataGrid Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(c)
+|Using client side events, the user can change any attribute of any of the control's DOM element reflecting the current state (activate, selected, disabled and so on...) In this way, the information conveyed by colors (or styles) are available to the screen reader.
+
+|(n)
+|By setting the control's TabIndex property to a value higher than 0, the control will participate in the tab sequence of the page, and receive focus. 
+
+* TAB -- Makes the next row/cell active. 
+
+* SHIFT+TAB -- Makes the previous row/cell active. 
+
+* CTRL+TAB -- Switches between an active row and an active cell. 
+
+* Spacebar -- If the active cell is a checkbox, toggles its checked state; otherwise, selects/deselects the active row. 
+
+* LEFT ARROW -- When a cell is active, makes the next cell active. When a row is active, expands the child row island (if any). 
+
+* RIGHT ARROW -- When a cell is active, makes the previous cell active. When a row is active, collapses the child row island (if any). 
+
+* UP ARROW -- Makes the row/cell in the previous row active. Applies only within the current row island. Press SHIFT+TAB to move to a parent row from the first row in a row island. 
+
+* DOWN ARROW -- Makes the row/cell in the next row active. Applies only within the current row island. Press TAB to move to the next row in the parent band from the last row in a row island. 
+
+* CTRL+DOWN ARROW -- Retrieves the next batch of rows through AJAX when using XML rendering. 
+
+* SHIFT+UP (or DOWN) ARROW -- Includes the above (or below) row in a multiple-row selection. Applies only within the current row island. 
+
+* ENTER -- Triggers a click if the cell is a cell button. Navigates to a cell's Target URL, if any exists. 
+
+* DEL -- Deletes the current row. 
+
+* HOME -- When a cell is active, makes the first visible cell in the row active. Makes the first row on the page active when a row is active. 
+
+* END -- Makes the last visible cell in the row active. When a row is active, makes the last row on the page active. 
+
+* +/- Pressing the + key expands the active row if it has children. Similarly pressing the – key collapse the active row. 
+
+When batch updating is enabled: 
+
+* ENTER/SPACE – when a row is deleted, an Undo button appears when hovering the mouse pointer over a deleted row. Pressing either the ENTER or SPACE keys activates the Undo button (and recovers the row) just like a mouse click would do. 
+
+* CTRL+ Z – undoes the changes (edits) made to a row. 
+
+|====

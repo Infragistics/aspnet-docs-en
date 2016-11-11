@@ -1,0 +1,68 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-drag-and-drop-client-side-events",
+    "controlName": ["WebDataTree"],
+    "tags": ["Events"],
+    "guid": "a26e219f-9c54-4b71-bd84-76c0461ab9a5",  
+    "buildFlags": [],
+    "createdOn": "2010-06-03T08:33:38.5733831Z"
+}
+|metadata|
+////
+
+= Client Side Events for Drag and Drop
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] has a large variety of client-side events, which provides the developer with flexibility to create interactive applications. Here is a list of available client events for Drag and Drop Behavior:
+
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragstart.html[DragStart]* – occurs when the mouse enters in a possible drop surface.
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragend.html[DragEnd]* – fired every time a drag operation ends, whether it was canceled or a drop occurred. This event is always the last event fired.
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragcancel.html[DragCancel]* – fired when a drag operation is canceled. This can happen if the dragged element is released. while not over a target element, the escape key is pressed, or a developer calls the endDrag method.
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragenter.html[DragEnter]* – fired when the mouse enters in a possible drop surface.
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragleave.html[DragLeave]* – fired when the mouse leaves a possible drop surface.
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragmove.html[DragMove]* – fired when the mouse is moved while holding the object that is being dragged.
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~nodedropped.html[NodeDropped]* – fired when the node is dropped over the target.
+* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~nodedropping.html[NodeDropping]* – fired when the mouse is released over a potential drop target.
+
+During the lifespan of a single drag and drop operation, the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragstart.html[DragStart] event is fired just once. While moving the dragged node, the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragmove.html[DragMove] event is fired by every pixel moved. Every time we enter drop possible surface, link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragenter.html[DragEnter] is fired, when we leave possible surface link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragleave.html[DragLeave] is fired. When we drop node, three events are fired as it follows: link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~nodedropping.html[NodeDropping], link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~nodedropped.html[NodeDropped], link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreeclientevents~dragend.html[DragEnd];. So we have multiple fired events DragMove, DragEnter and DragLeave and single fired events DragStart, NodeDropping NodeDropped, DragEnd.
+
+For more information you can visit our sample browser and view the sample for Client-side events for WebDataTree.
+
+The following example shows how to wire up to DragStart event:
+
+*In HTML:*
+
+----
+        <ig:WebDataTree ID="WebDataTree1" runat="server">
+            <ClientEvents DragStart="dragStart" />
+            <Nodes>
+                <ig:DataTreeNode Text="Node1">
+                </ig:DataTreeNode>
+                <ig:DataTreeNode Text="Node2">
+                </ig:DataTreeNode>
+            </Nodes>
+        </ig:WebDataTree>
+----
+
+*In C#:*
+
+----
+this.WebDataTree1.ClientEvents.DragStart = "dragStart";
+----
+
+*In JavaScript:*
+
+----
+Function  dragStart(sender, args) {
+    alert("Drag Started");
+}
+----
+
+== Related Topics
+
+link:webdatatree-drag-and-drop-client-side-api.html[Client-side API]
+
+link:webdatatree-drag-and-drop-modes.html[Drag and Drop modes]
+
+link:webdatatree-drag-and-drop-handle-server-side-event.html[Server-side events]

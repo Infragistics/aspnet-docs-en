@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-webhtmleditor-tab-strip",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{3782BBD7-98AC-4955-B0F0-CCB38BE19548}",  
+    "buildFlags": [],
+    "createdOn": "2006-09-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebHtmlEditor Tab Strip
+
+At the bottom of the WebHtmlEditor™ control is the tab strip containing tabs your end users can select to change the current view displayed in the text window from Design view to HTML view (and vice versa). The label and icon associated with each tab is easily customizable as described in, link:webhtmleditor-customize-the-tab-strip-of-webhtmleditor.html[How to Customize the Tab Strip].
+
+You can use the visible property to hide the tab strip. For information, see link:webhtmleditor-hide-the-tab-strip-of-webhtmleditor.html[Hide the WebHtmlEditor Tab Strip].

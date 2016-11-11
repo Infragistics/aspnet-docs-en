@@ -1,0 +1,42 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-how-do-i-know-if-a-problem-is-security-policy-related",
+    "controlName": [],
+    "tags": ["Application Scenarios","FAQ"],
+    "guid": "{755CA33D-1B9A-455E-8DCF-6A5735FA2191}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= How Do I Know if a Problem is Security Policy-Related?
+
+A problem specific to code access security policy generally throws a SecurityException.
+
+When the same code works for you using the non-APTCA Infragistics ASP.NET assemblies in a full-trust environment, the problem is related to the security policy granted to your Web application.
+
+You can troubleshoot the permissions further by examining the stack trace of the SecurityException thrown. See the following example stack trace accompanying a SecurityException.
+
+[source,docX-root]
+----
+System.IO.IsolatedStorage.IsolatedStorageFile.Init(IsolatedStorageScope scope) +45
+System.IO.IsolatedStorage.IsolatedStorageFile.GetStore(IsolatedStorageScope scope, 
+  Type domainEvidenceType, Type assemblyEvidenceType) +61
+System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly() +11
+Infragistics.Documents.Excel.BIFF8Writer.WriteWorkbookToStream(Workbook workbook, Stream outStream)
+ +255
+Infragistics.WebUI.UltraWebGrid.ExcelExport.UltraWebGridExcelExporter.Export
+ ( UltraWebGrid grid, Worksheet worksheet, Int32 startRow, Int32 startColumn) +302
+ApplicationNamespace.WebFormMain.OnExportButtonClick(object sender, EventArgs e) +156
+----
+
+The stack trace indicates the methods executed in the .NET Framework that your Web application has insufficient permission to run with its current security policy. In this example, the INit method of IsolatedStorageFile (a .NET Framework class used when accessing isolated storage) has thrown the exception.
+
+Sometimes, as in this example, the method (Init) that has thrown the SecurityException is undocumented. Walking this stack tells you the public method (GetStore) from which the call triggering the exception came. You can find lists of security permissions demanded for these public methods in the .NET Framework SDK documentation.
+
+In this example, it appears the Web application did not have IsolatedStoragePermission. It may be allowed under medium trust by default, but hosting providers can customize their exact definition of medium trust.
+
+When you've identified the permission causing the exception, you should consult with your site administrator about what can be done to adjust the security policy.

@@ -1,0 +1,170 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-persistent-selection",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids","Persistence"],
+    "guid": "ba8c93d3-a6cc-48ea-8dfc-be9c5e492153",  
+    "buildFlags": [],
+    "createdOn": "2010-09-30T07:40:44.3761579Z"
+}
+|metadata|
+////
+
+= Persistent Selection
+
+== Before You Begin
+
+The following tutorial uses an instance of the WebDataGrid bound to the Northwind database using the SqlDataSource control.
+
+link:http://en.wikipedia.org/wiki/Unique_key[The reader must also be aware of how unique keys operate in a relational database.] The WebDataGrid is flexible enough to work with simple, single-column keys as well as multi-column composite keys.
+
+== What You Will Accomplish
+
+WebDataGrid now includes a “persistent selection” behavior. In the past, if users selected a row on the grid and then changed page or scrolled to another logical section of data using virtual scrolling, the previous selections would be lost. Now, as users navigate through the grid and select different rows, each row is tracked and may be identified on the server side.
+
+While each row is available for identification, be aware that there are two different states of the data as the user interacts with the grid:
+
+* In-scope rows: When a postback occurs while the selected row is on the same grid page in which the user made a selection, then these rows are said to be “in-scope”. In-scope rows have the full GridRecord class available in the RowSelectionChanged event.
+* Out-of-scope rows: When a postback occurs while the grid is not on the same page in which the user made a selection, then the rows are said to be “out-of-scope”. Out-of-scope rows are not exposed to the RowSelectionChanged event as full instances of the GridRecord class, but rather the key information is available through a call to e.CurrentSelectedRows.GetIDPair. The GetIDPair method requires the row index in order to return the appropriate data. Out-of-scope rows are determined by checking to see if the current instance of the GridRecord class is null during a loop of selected rows found in e.CurrentSelectedRows.
+
+The tutorial demonstrates how to identify in and out-of-scope selected rows in the WebDataGrid when paging and virtual scrolling are enabled.
+
+.Note:
+[NOTE]
+====
+Creating multiple selections on the grid is made possible by pressing CTRL $$->$$ mouse click. The key/mouse combination is required even when the user changes pages or scrolls to a different location on the grid.
+====
+
+== Follow these Steps
+
+[start=1]
+. Create an ASP.Net web page.
+[start=2]
+. Drag a ScriptManager component from the toolbox onto the page.
+[start=3]
+. Drag a WebDataGrid control from the toolbox onto the page.
+[start=4]
+. Drag an SqlDataSource control from the toolbox onto the page.
+[start=5]
+. Set up the SqlDataSource to retrieve product information from the Northwind database.
+
+*In HTML:*
+
+----
+<asp:SqlDataSource id="ds" runat="server" 
+    ConnectionString="<%$ ConnectionStrings:NorthwindConnectionString %>" 
+    SelectCommand="SELECT [ProductID], [ProductName], [QuantityPerUnit], [UnitPrice], [UnitsInStock], [UnitsOnOrder], [ReorderLevel] FROM [Products]" >
+</asp:SqlDataSource>
+----
+
+[start=6]
+. Set the DataSourceID on the WebDataGrid equal to the SqlDataSource’s ID (in this case the ID is “ds”). Once you make this change the designer will configure the WebDataGrid to read from the SqlDataSource.
+[start=7]
+. Verify the WebDataGrid’s DataKeyFields property has the correct value. In this example, DataKeyFields must equal ProductID.
+[start=8]
+. Next, you must enable the paging and selection behaviors. You may configure these items using the smart tag design or directly in the markup. The following listing shows how to configure Paging (with default settings) and Selection (with a few customizations) in ASP.NET markup.
+
+*In HTML:*
+
+----
+<ig:WebDataGrid ID="grid"  
+    AutoGenerateColumns="True"
+    DataSourceID="ds" 
+    DataKeyFields="ProductID"
+    Width="800px" 
+    Height="300px"
+    runat="server">
+    <Behaviors>
+        <ig:RowSelectors />
+        <ig:Paging />
+        <ig:Selection 
+            CellClickAction="Row" 
+            EnableCrossPageSelection="True" 
+            RowSelectType="Multiple" />
+    </Behaviors>
+</ig:WebDataGrid>
+----
+
+The AutoGenerateColumns property is set to “true” since only the relevant fields are selected in the SqlDatasource. As stated before, DataSourceID is set to “ds” so it will use the accompanying SqlDataSource control for data access. The DataKeyFields property lists the primary key fields used in displaying data in the grid. In this case the primary key field is ProductID. The width and height properties are given reasonable values for a grid on a full-size page.
+
+The behaviors collection is defined next in the grid. The RowSelectors and Paging behaviors are enabled and used with default values. The Selection behavior is enabled and includes a few customizations. The CellClickAction attribute is set to Row to allow the grid to select the entire row even if the user only clicks on a single cell in the grid. The attribute EnableCrossPageSelection is set to true and is responsible for enabling the tracking behavior for persisting selection after different pages of data come into scope. Finally, the RowSelectType attribute is set to Multiple in order to grant the user the ability to select more than one row throughout the grid.
+[start=9]
+. Now that the grid’s behavior is configured to accept and track multiple selections on different pages, the next step is to update the code on the page extract the selected record information for further processing.
+
+In order for the grid to handle the selection action, you must define an event handler for the SelectedRows event. To do this, switch to Design view and locate the events list in the Properties pane. In the Properties window, find in the Behavior list Selection.RowSelectionChanged and double click on this event. The IDE will open the codebehind window with the event handler stubbed out for you.
+[start=10]
+. Next, update the method stub to match the listing below:
+
+*In C#:*
+
+----
+using System;
+using System.Collections.Generic;
+using Infragistics.Web.UI.GridControls;
+...
+protected void grid_RowSelectionChanged(object sender, SelectedRowEventArgs e)
+{
+    IList<int> ids = new List<int>();
+    int id = 0;
+    int index = 0;
+    foreach (GridRecord row in e.CurrentSelectedRows)
+    {
+        if (row == null)
+        {
+            IDPair pair = e.CurrentSelectedRows.GetIDPair(index);
+            id = Convert.ToInt32(pair.Key[0]);
+        }
+        else
+        {
+            id = Convert.ToInt32(row.DataKey[0]);
+        }
+        if (!ids.Contains(id))
+        {
+            ids.Add(id);
+        }
+        index++;
+    }
+    //TODO: use the selected IDs to update the database, call a 
+    // service, or any other operation
+    System.Diagnostics.Debug.WriteLine(ids.Count);
+}
+----
+
+The record information collected with this listing will result in a list of ProductIDs. Once you have this list then you may pass the values to your data layer, service layer or deal with them any way your application requires.
+
+Starting from the top, a generic list named ids is created. This list will keep track of each of the IDs from the selected rows in the grid. The next two variables, id and index, are used as support variables later in the code and are discussed in context.
+
+The next section of this code is the foreach loop used to cycle through the selected rows in the grid. Recall from the explanation above that there are two types of selected rows: in-scope rows and out-of-scope rows. While looping through the selected items the event handler checks to see if the row in the loop is null. If the row is null, then the row was selected on another page or are in the virtual scrolling of the grid. Therefore instead of directly accessing the GridRecord, the event args are interrogated to call GetIDPair from the CurrentSelectedRows collection. GetIDPair requires an index value for the row. The variable named index was previously initialized at 0 and is incremented at the conclusion of the method. This ensures that the index value will always have the current row’s index value available to pass to GetIDPair. The GetIDPairMethod returns an instance of the IDPair class.
+
+The IDPair class is responsible for holding the key information for out-of-scope selected rows. Once you have an instance of the IDPair you may then access the Key property to find the key values. Note that the IDPair class is able to handle multi-column keys so an indexer is used to find the single ProductID value as the key for this record. The result is casted as an integer (the data type of the field in the database table) and set to the value of the id variable.
+
+Alternatively, if the selected row is in scope, then the instance of the GridRecord may be accessed directly by querying the DataKey property. (Once again DataKey supports multi-column keys, so the indexer is required.)
+
+Once the key value is located via either method, then the id is added to the list if it doesn’t already exist in the list. With the list fully populated, the developer may choose to continue processing the selected rows in any manner appropriate for the application.
+
+*Using Virutal Scrolling*
+
+The example above used paging to demonstrate persistent selection. In order to enable this behavior for Virtual Scrolling, the exact same code behind will work, the ASP.NET markup just needs to be updated to use Virtual Scrolling instead of paging.
+
+*In HTML:*
+
+----
+<ig:WebDataGrid ID="grid"  
+    AutoGenerateColumns="True"
+    DataSourceID="ds" 
+    DataKeyFields="ProductID"
+    Width="800px" 
+    Height="300px"
+    runat="server">
+    <Behaviors>
+        <ig:RowSelectors />
+        <ig:VirtualScrolling />
+        <ig:Selection 
+            CellClickAction="Row" 
+            EnableCrossPageSelection="True" 
+            RowSelectType="Multiple" />
+    </Behaviors>
+</ig:WebDataGrid>
+----

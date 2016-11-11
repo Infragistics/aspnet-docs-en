@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedulegenericdataprovider-multi-day-event-banner",
+    "controlName": [],
+    "tags": ["How Do I"],
+    "guid": "{5A97FA96-8F27-46F4-B4D0-F09EA336662D}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Multi Day Event Banner
+
+This section describes the Multi Day Event Banner feature. Click the links below to find out more.
+
+* link:webschedulegenericdataprovider-about-multi-day-event-banner.html[About Multi Day Event Banner]
+* link:webschedulegenericdataprovider-localize-multi-day-event-banner-caption.html[Localize Multi Day Event Banner Caption]
+* link:webschedulegenericdataprovider-style-multi-day-event-banner.html[Style Multi Day Event Banner]

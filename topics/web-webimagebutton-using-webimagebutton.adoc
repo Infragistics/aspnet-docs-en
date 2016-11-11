@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webimagebutton-using-webimagebutton",
+    "controlName": ["WebImageButton"],
+    "tags": ["Layouts","Styling"],
+    "guid": "{766B30D2-F2F6-4373-87C5-177250CF6162}",  
+    "buildFlags": [],
+    "createdOn": "2007-05-11T14:26:37Z"
+}
+|metadata|
+////
+
+= Using WebImageButton
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebImageButton™ control.
+
+* link:webimagebutton-client-side-programming.html[Client Side Programming]
+* link:webimagebuton-create-rounded-images.html[Create Rounded Images]
+* link:webimagebutton-using-webimagebutton.html[Using WebImageButton]

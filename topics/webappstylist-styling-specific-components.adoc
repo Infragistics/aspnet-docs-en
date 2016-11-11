@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-styling-specific-components",
+    "controlName": ["WebAppStylist"],
+    "tags": [],
+    "guid": "{967966B2-2C4A-483D-B0A8-B4D9D0F537B1}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Styling Specific Components
+
+This section describes how the various Web controls in Infragistics ASP.NET implement and support cascading style sheets (CSS). It also contains some indicators of styling that cannot be implemented and supported through CSS. In general, the CSS support for various controls has not changed with the addition of Application Styling. All controls render their basic HTML in the same manner as they did previous to Application Styling. Therefore, whatever aspects were controllable through CSS previously and whatever aspects were not controllable through CSS previously remain the same.
+
+Where an aspect of a control is not controllable through CSS, it usually can be controlled by setting properties on the control. However, setting properties on controls is not handled from within Infragistics AppStylist for ASP.NET.
+
+In Infragistics AppStylist, the controls appear within the canvas using a limited number of property settings. This will provide the general idea of how it will look at run time, but depending on actual run-time circumstances, it may look different. Be aware that a control can potentially look significantly different at run time than it does within Infragistics AppStylist.
+
+Click the links below for extended information on styling, inheritance, and properties within each control.
+
+* link:webappstylist-styling-specific-components-webmonthview.html[WebMonthView]
+* link:webappstylist-styling-specific-components-webcalendarview.html[WebCalendarView]
+* link:webappstylist-styling-specific-components-webdayview.html[WebDayView]

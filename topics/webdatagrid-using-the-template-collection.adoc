@@ -1,0 +1,142 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-using-the-template-collection",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids","Templating"],
+    "guid": "{9BBAC0C8-00B8-4B6E-84FA-1EB82072164B}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using the Template Collection
+
+== Before You Begin
+
+WebDataGrid™ has a template collection to store common, reusable templates. You can add item templates to the collection using the WebDataGrid control's smart tag. You can also do this in code using the Templates collection.
+
+You can use the templates as you would for any templatable element in WebDataGrid. The collection gives you a place to store and quickly access templates that you plan to use often.
+
+== What You Will Accomplish
+
+You will learn how to add a commonly used template to the template collection as well as access that template to use in WebDataGrid. The template will be a generic template with Submit and Cancel buttons that you can use for many different tasks.
+
+== Follow these Steps
+
+[start=1]
+. Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
+[start=2]
+. Click the WebDataGrid's smart tag.
+[start=3]
+. Select Edit Template Collection. The Template Collection Editor appears. Here you can add as many templates as you need.
+[start=4]
+. Click the add item button to add a blank template.
+[start=5]
+. Click Apply then Ok to close the editor.
+[start=6]
+. Right-click WebDataGrid.
+[start=7]
+. Mouseover Edit Template.
+[start=8]
+. Select Template Collection. Any templates present in the collection appear in the template editor.
+[start=9]
+. Drag two buttons onto the template area that was just added.
+[start=10]
+. Set the text of one button to Submit and set the other to Cancel. The template is now ready for use.
+[start=11]
+. You can do steps 4-10 in code
+
+*In Visual Basic:*
+
+----
+' Create template
+Dim itemTemplate1 As New ItemTemplate()
+' Instantiate template with button controls
+itemTemplate1.Template = New CustomTemplate()
+' Add template to collection
+Me.WebDataGrid1.Templates.Add(itemTemplate1)
+' Set template id
+CType(Me.WebDataGrid1.Templates(0), ItemTemplate).TemplateID = "WebDataGrid1Template1"
+Private Class CustomTemplate Implements ITemplate 
+   Public Sub InstantiateIn(ByVal container As Control)
+      Dim b1 As New Button()
+      Dim b2 As New Button()
+      b1.Text = "Submit"
+      b2.Text = "Cancel"
+      container.Controls.Add(b1)
+      container.Controls.Add(b2)
+   End Sub 
+End Class 
+----
+
+*In C#:*
+
+----
+// Create template
+ItemTemplate itemTemplate1 = new ItemTemplate();
+// Instantiate template with button controls
+itemTemplate1.Template = new CustomTemplate();
+// Add template to collection
+this.WebDataGrid1.Templates.Add(itemTemplate1);
+// Set template id
+((ItemTemplate)this.WebDataGrid1.Templates[0]).TemplateID = "WebDataGrid1Template1";
+private class CustomTemplate : ITemplate
+{
+   #region ITemplate Members
+   public void InstantiateIn(Control container)
+   {
+      Button b1 = new Button();
+      Button b2 = new Button();
+      b1.Text = "Submit";
+      b2.Text = "Cancel";
+      container.Controls.Add(b1);
+      container.Controls.Add(b2);
+   }
+   #endregion
+}
+----
+
+[start=12]
+. You can assign the template to any templatable elements of WebDataGrid using the id of the template that you created; assign the template's id to the TemplateId property of the element to use the template in place of that element.
+
+*In Visual Basic:*
+
+----
+' Access the template from the template collection
+Dim itemTemplate As ItemTemplate = CType(Me.WebDataGrid1.Templates(0), ItemTemplate)
+' Assign the template to be used for a row item
+Me.WebDataGrid1.Rows(0).Items(1).TemplateId = "WebDataGrid1Template1"
+----
+
+*In C#:*
+
+----
+// Access the template from the template collection
+ItemTemplate itemTemplate = (ItemTemplate)this.WebDataGrid1.Templates[0];
+// Assign the template to be used for a row item
+this.WebDataGrid1.Rows[0].Items[1].TemplateId = "WebDataGrid1Template1";
+----
+
+[start=13]
+. For elements that do not have the TemplateId property ( elements that only create one instance of a template ) you can use the Template property of the template to assign the template directly to an element.
+
+*In Visual Basic:*
+
+----
+' Access the template from the template collection
+Dim itemTemplate As ItemTemplate = CType(Me.WebDataGrid1.Templates(0), ItemTemplate)
+' Assign the template to be used for paging
+Me.WebDataGrid1.Behaviors.Paging.PagerTemplate = itemTemplate.Template
+----
+
+*In C#:*
+
+----
+// Access the template from the template collection
+ItemTemplate itemTemplate = (ItemTemplate)this.WebDataGrid1.Templates[0];
+// Assign the template to be used for paging
+this.WebDataGrid1.Behaviors.Paging.PagerTemplate = itemTemplate.Template;
+----

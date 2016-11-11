@@ -1,0 +1,32 @@
+﻿////
+
+|metadata|
+{
+    "name": "whdg-row-adding",
+    "controlName": [],
+    "tags": [],
+    "guid": "630b358d-d6cd-4249-8e42-74b9b7266af5",  
+    "buildFlags": [],
+    "createdOn": "2014-03-10T17:21:06.0525819Z"
+}
+|metadata|
+////
+
+= Row Adding (WebHierarchicalDataGrid)
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the Row Adding behavior of the  _WebHierarchicalDataGrid_™ and its use.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webhierarchicaldatagrid-enabling-row-adding.html[Enabling Row Adding]
+|This topic details how to enable the Row Adding behavior in the _WebHierarchicalDataGrid_ .
+
+|====

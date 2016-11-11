@@ -1,0 +1,68 @@
+﻿////
+
+|metadata|
+{
+    "name": "persistenceframework-exclude-control",
+    "controlName": ["PersistenceFramework"],
+    "tags": ["Persistence"],
+    "guid": "5bc37be0-b4e0-4b24-a032-da27f326025d",  
+    "buildFlags": [],
+    "createdOn": "2011-03-31T07:52:13.6197203Z"
+}
+|metadata|
+////
+
+= Exclude Control
+
+When the Persistence manager is looping through the controls in a page, it saves all of them by default. However, if you want to persist just one group of controls, you have the option of excluding specific controls. Excluding controls reduces the size of the persisted data, which can sometimes be crucial for the application of available resources.
+
+The Persistence framework API contains classes that hold the persisted data. The class that contains the data for the whole page is pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.persistencedata.html[PersistenceData]"]*, and for a single control is *pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.controldata.html[ControlData]*"] .
+
+You can remove the unnecessary controls while handling the pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaved_ev.html[PersistenceSaved]*"] event. To do so, you must list all the controls that you want to be ignored in an array and provide to the Persistence manager.
+
+[cols="a"]
+|====
+|*In ASPX:*
+
+|---- 
+protected void PersistenceSaved(object sender, PersistenceEventArgs e) 
+{ 
+ if (e.PersistenceData == null) 
+ { 
+ return; 
+ } 
+ // List of all the control IDs that will not be persisted 
+ List<string> ignoredControls = new List<string>() { this.control1.ID, 
+ this.control2.ID, 
+ this.control3.ID }; 
+ PersistenceData data = e.PersistenceData; 
+ ControlData controlToRemove = null; 
+ foreach (string ignoredControlID in ignoredControls) 
+ { 
+ controlToRemove = data.Controls.Find( 
+ delegate(ControlData controlToFind) 
+ { 
+ return 
+ controlToFind.ControlId == ignoredControlID; 
+ }); 
+ if (controlToRemove != null) 
+ { 
+ data.Controls.Remove(controlToRemove); 
+ controlToRemove = null; 
+ } 
+ } 
+ this.StoredData = data.ToJson(); 
+}
+----
+
+|====
+
+This sample is appropriate to use in situations where you exclude a small number of controls. If you remove most of the controls, you can easily use the Persistence manager to save the controls manually. You can follow link:persistenceframework-persist-control.html[Persist control manually] topic to see more information about manual persistence.
+
+== Related Links
+
+link:{SamplesURL}/samples/persistenceframework/editingandselection/editingandselection/clr3.5/excludecontrols/default.aspx?cn=persistence-framework&sid=8888c4ee-9c9f-426a-b426-3a2a0255f662[Exclude Control Sample]
+
+link:persistenceframework-exclude-control-properties.html[Exclude control properties]
+
+link:persistenceframework-persist-control.html[Persist control manually]

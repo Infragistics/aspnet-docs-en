@@ -1,0 +1,48 @@
+﻿////
+
+|metadata|
+{
+    "name": "whats-new-in-2015-volume-1",
+    "controlName": [],
+    "tags": [],
+    "guid": "f934e8c1-159c-4f1e-8ab2-245cd0355432",  
+    "buildFlags": [],
+    "createdOn": "2015-03-15T20:23:54.1588705Z"
+}
+|metadata|
+////
+
+= What's New in 2015 Volume 1
+
+== Topic Overview
+
+=== Purpose
+
+This topic provides an overview of the new things and new and enhanced features for the Infragistics® ASP.NET 2015 Volume 1 release.
+
+== What’s New Summary
+
+=== What’s new summary chart
+
+The following table summarizes what’s new in 2015 Volume 1 release. Additional details follow the summary table.
+
+==== <<_Ref367305754,General>>
+
+[options="header", cols="a,a"]
+|====
+|Feature|Description
+
+|<<wrapper-igniteui,EnableSpellCheck property of WebHtmlEditor>>
+|The WebHtmlEditor component has a property which enables the spellcheck of the editor
+
+|====
+
+[[_Ref367305754]]
+
+== General
+
+[[wrapper-igniteui]]
+
+=== EnableSpellCheck property of WebHtmlEditor
+
+Since 2015.1 the WebSpellchecker component has been removed from the toolset. WebHtmlEditor has a new property  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~enablespellcheck.html[EnableSpellCheck]"] , which sets the spellcheck attribute to the editor. When the property is set to true the WebHtmlEditor uses spelling and grammar check of the browser.

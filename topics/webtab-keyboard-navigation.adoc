@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-keyboard-navigation",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I","Navigation"],
+    "guid": "{8E4BE2BF-D473-44E0-AAF5-2581EBB2210E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Keyboard Navigation
+
+WebTab™ supports very easy navigation through the tabs using the keyboard.
+
+* Left Arrow – Moves active tab to left.
+* Right Arrow – Moves active tab to right.
+* Home – Makes first tab active.
+* End – Makes last tab active.
+* Space/Enter – Selects active tab.
+
+.Note:
+[NOTE]
+====
+WebTab responds to the keyboard only if the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~enableactivation.html[EnableActivation]"]  property is set to True.
+====

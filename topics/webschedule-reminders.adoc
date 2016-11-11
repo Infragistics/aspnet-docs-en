@@ -1,0 +1,26 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-reminders",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{261EC5B2-0D47-46AC-81C4-F31515BC2F17}",  
+    "buildFlags": [],
+    "createdOn": "2005-01-08T00:00:00Z"
+}
+|metadata|
+////
+
+= Reminders
+
+WebSchedule™ supports reminder notifications from any of its views. A web dialog displays for activities approaching in the near future, and those that have already past. Users can dismiss reminders, edit their underlying activity, or set a time period ( _snooze_ ) in which they would like to be reminded again.
+
+You can style individual visual aspects of the web dialog that is displayed during a reminder; for example, change its font or background color to better match your application.
+
+You can turn off reminders on all WebSchedule views managed by a WebScheduleInfo™ control, by the individual resource, or by an individual activity. Since users reviewing the schedule information of other resources may not be interested in receiving reminders, the WebScheduleInfo control supports the notion of having a logged-on user to tie into your application's user authentication. When the name of the active resource doesn't match the name of the logged-on user, reminders are not shown.
+
+In the Web environment, the delivery of reminders is a best-effort endeavor based on a pull model. The Web dialog displays following post-backs to the Web server. If the browser fails to post back periodically, reminders may not be displayed precisely on time.
+
+* link:webschedule-checking-for-reminders.html[Checking for Reminders]
+* link:webschedule-conditions-for-displaying-the-reminder-dialog-box.html[Conditions for Displaying the Reminder Dialog Box]

@@ -1,0 +1,59 @@
+﻿////
+|metadata|
+{
+    "name": "web-how-do-i-deploy-aptca-assemblies",
+    "controlName": [],
+    "tags": ["Deployment"],
+    "guid": "{452C922F-370C-4CA2-8641-02B3EC508DDE}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= How Do I Deploy APTCA Assemblies?
+
+There is no difference between deploying AllowPartiallyTrustedCallersAttribute (APTCA) and non-APTCA release assemblies. At deployment time, you will still copy (or FTP) the APTCA release builds to the Bin folder of your Web application on your Web server in the same way as you would deploy the assemblies of your Web application.
+
+You can make the deployment independent of the build number on the assemblies by specifying a <bindingRedirect> element in your Web application's web.config file. This technique helps you avoid having to update any @ Register directives present on the ASPX pages from your development machine when they may differ from the version/build number being deployed.
+
+The following is an example procedure:
+
+[start=1]
+. For each Infragistics assembly referenced by your Web application (called a "dependent assembly" by the .NET runtime), place a pair of elements beneath your web.config file's <runtime> / <assemblyBinding> / <dependentAssembly> element(s).
+[start=2]
+. The <assemblyIdentity> element is the first element you specify for each <dependentAssembly>, and it contains the assembly file name (without its .dll file extension) and public key token ("7dd5c3163f2cd0cb" for all Infragistics assemblies).
+[start=3]
+. the second element is the <bindingRedirect> element containing one or more old version/build numbers to map to a new version/build number. You may need to add these elements if they were not already present in your web.config file by default.
+
+The following excerpt illustrates using a binding redirect on the Infragistics.WebUI.Shared and Infragistics.WebUI.Documents.Excel assemblies:
+
+[source]
+----
+</system.web>
+<runtime>
+<assemblyBinding
+    xmlns="urn:schemas-microsoft-com:asm.vl" >
+    <dependentAssembly>
+        <assemblyIdentity
+        name="Infragistics.WebUI.Shared.v8.1 "
+        publicKeyToken="7dd5c3163f2cd0cb "/> 
+        <bindingRedirect
+        oldVersion="8.1.20081.1-8.1.20081.1050 "
+        newVersion="8.1.20081.1050 " /> 
+    </dependentAssembly>
+    <dependentAssembly>
+        <assemblyIdentity
+        name="Infragistics.WebUI.Documents.Excel.v8.1"
+        publicKeyToken="7dd5c3163f2cd0cb " />
+        <bindingRedirect
+        oldVersion="8.1.20081.1-8.1.20081.1050 "
+        newVersion="8.1.20081.1050 " />
+    </dependentAssembly>
+    : :
+</assemblyBinding >
+</runtime>
+</configuration> 
+----
+
+These <bindingRedirect> declarations tell the .NET runtime to load the assemblies found in your Bin folder (which can have any build number within the range specified by the oldVersion attribute) and treat them as if they had the build number specified by the newVersion attribute. Using the <bindingRedirect> element in this way helps ensure a seamless deployment, even if the build number of the assemblies on your Web site differs from those used on your development machine.

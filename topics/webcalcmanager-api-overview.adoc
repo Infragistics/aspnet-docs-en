@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalcmanager-api-overview",
+    "controlName": ["WebCalcManager"],
+    "tags": ["API"],
+    "guid": "{8CCBF312-D1C7-48FD-B3CF-10397D24DAF6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+[cols="a,a"]
+|====
+|*CalcEngine Namespace:* 
+
+link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine_namespace.html[Infragistics.WebUI.CalcEngine]
+|*Key Classes:* 
+
+link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.calcengine.ultracalcfunction.html[UltraCalcFunction]
+
+|*WebCalcManager Namespace:* 
+
+link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager_namespace.html[Infragistics.WebUI.UltraWebCalcManager]
+|*Key Classes:* 
+
+link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.ultrawebcalcmanager.html[UltraWebCalcManager]
+
+link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings.html[CalcSettings]
+
+|====

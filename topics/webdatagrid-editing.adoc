@@ -1,0 +1,50 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-editing",
+    "controlName": [],
+    "tags": [],
+    "guid": "cbcfc724-c047-4de0-9645-3cf40c2186c3",  
+    "buildFlags": [],
+    "createdOn": "2014-03-10T16:18:46.3477759Z"
+}
+|metadata|
+////
+
+= Editing (WebDataGrid)
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the  _WebDataGrid_   __™__  editing behaviors and their use.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webdatagrid-editting.html[Editing Behavior Overview (WebDataGrid)]
+|This topic provides an overview of the _WebDataGrid_ editing behaviors and functionality.
+
+| link:webdatagrid-batch-updating.html[Batch Updating (WebDataGrid)]
+|The topics in this group explain the Batch Updating functionality and its use.
+
+| link:webdatagrid-cell-editing.html[Cell Editing (WebDataGrid)]
+|This topic explains the Cell Editing behavior and its use.
+
+| link:webdatagrid-row-adding.html[Row Adding (WebDataGrid)]
+|This topic explains the Row Adding behavior and its use.
+
+| link:webdatagrid-row-deleting.html[Row Deleting (WebDataGrid)]
+|Ths topic explains the Row Deleting behavior and its use.
+
+| link:webdatagrid-row-editing.html[Row Editing (WebDataGrid)]
+|The topics in this group explain the Row Editing behavior and its use.
+
+| link:webdatagrid-row-editing-template.html[Row Editing Template (WebDataGrid)]
+|This topic provides an overview of the Row Editing Template behavior.
+
+|====

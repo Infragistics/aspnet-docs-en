@@ -1,0 +1,84 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-binding-webdatatree-to-webhierarchicaldatasource",
+    "controlName": ["WebDataTree"],
+    "tags": ["Data Binding"],
+    "guid": "{918283AE-BB86-439C-9A15-920A52A77063}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Binding WebDataTree to WebHierarchicalDataSource
+
+== Before You Begin
+
+WebDataTree™ can be used to represent hierarchical data in a tree like structure. Hierarchical data can be offered by many sources such as Datasets, custom objects, xml files, and ObjectDataSource (just to name a few). The WebHierarchicalDataSource™ component can be used to create and represent your hierarchical data model.
+
+== What You Will Accomplish
+
+You will create a hierarchical tree that displays your WebHierarchicalDataSource data. The WebHierarchicalDataSource control will be composed of 2 flat data sources.
+
+In this topic, you will use the Categories and Products tables of the Northwind Access database to create a two level hierarchy linked by their respective CategoryID fields.
+
+== Follow these Steps
+
+[start=1]
+. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component, two AccessDataSource components, a WebHierarchicalDataSource component and a WebDataTree control onto the Web Form. Name the AccessDataSource components as categoriesDataSource and productsDataSource.
+[start=2]
+. In this step, the AccessDataSources are configured :
+
+** Click the categoriesDataSource component’s smart tag and select Configure Data Source. The Configure Data Source configuration wizard appears.
+** Click the Browse… button to open the Select Microsoft Access Database dialog. Select the Northwind database file (assuming that you have copied the access database file into your App_Data folder) and click OK.
+** Click Next to open the Configure the Select Statement dialog. Here you configure the Select statement such that you select all the columns from the Categories table.
+** Click Next and test your query by clicking Test Query button. Click Finish to close the Configure Data Source dialog.
+
+Repeat the above procedure in order to configure the productsDataSource to select all the columns from the Products table.
+
+[start=3]
+. Configure WebHierarchicalDataSource:
+
+** Click WebHeierarchicalDataSource component’s smart tag and select Edit Relations. The WebHierarchicalDataSource Designer appears.
+** Click Add View to select the available data sources. From the Data Source drop-down list select categoriesDataSource and click OK.
+** Click Add Child to create the next node level. Select the productsDataSource from the Child Data Source drop-down list.
+** Now add the relation between the two data sources by selecting the columns for the relationship.
+
+*** Select CategoryID in the Parent Columns drop-down list.
+*** Select CategoryID in the Child Columns drop-down list.
+
+** Click OK to finish adding the relation between the two data sources. Now your WebHierarchicalDataSource Designer looks similar to the following image :
+
+image::images\WebDataTree_Binding_WebDataTree_to_WebHierarchicalDataSource_01.png[]
+
+** Click Apply and then OK to close the designer.
+
+[start=4]
+. At this point your WebDataTree doesn’t show the data. Set the ID of the WebHierarchicalDataSource to the DataSourceID of the WebDataTree. To specify the data bindings click Edit DataBindings from the WebDataTree control’s smart tag in order to open the WebDataTree Designer dialog.
+[start=5]
+. Select the categoriesDataSource_DefaultView and click Add DataBinding. This will add the node to the Selected databindings area. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitembinding~textfield.html[TextField]"]  property to CategoryName by clicking the drop-down list in the property window so that CategoryName will be the display text of the node. Similarly, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitembinding~valuefield.html[ValueField]"]  property to CategoryID.
+[start=6]
+. Repeat the above step to add the following data bindings to the productsDataSource_DefaultView :
+
+[options="header", cols="a,a"]
+|====
+|TextField|ValueField
+
+|ProductName
+|ProductID
+
+|====
+
+[start=7]
+. Your WebDataTree Designer now looks similar to the following image :
+
+image::images\WebDataTree_Binding_WebDataTree_to_WebHierarchicalDataSource_02.png[]
+
+[start=8]
+. Click OK to close the designer.
+[start=9]
+. Save and run your application. Your WebDataTree now looks similar to the following image:
+
+image::images\WebDataTree_Binding_WebDataTree_to_WebHierarchicalDataSource_03.png[]

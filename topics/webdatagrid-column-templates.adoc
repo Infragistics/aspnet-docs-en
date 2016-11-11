@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-column-templates",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids","Templating"],
+    "guid": "{698B10A6-F26E-45F1-90C7-4F5491C84F94}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Column Templates
+
+== Custom Columns
+
+WebDataGrid™ provides the ability to create custom columns using column templates. You can embed any control within the template creating a unique look-and-feel for your column along with custom functionality.
+
+== Column Templates
+
+You can provide a cell, alternate cell, header, and footer template for a column. Setting a specific template for a column means the template will render in place of the element. For example, specifying an item template for a column will create a template for every cell in that column.
+
+You can also specify an item template without making the entire column a template column. Each cell in a column has a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldataitem~template.html[Template]"]  and a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldataitem~templateid.html[TemplateId]"]  property. You can set either one of these properties to define a template for an individual cell.
+
+== Referencing a Control within a Template
+
+You can access a control within an item template by accessing that item and calling its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldataitem~findcontrol.html[FindControl]"]  method.
+
+As for the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfieldcaption.html[Header]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfieldcaption.html[Footer]"]  templates, you can use the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.fieldcaption~templatecontainer.html[TemplateContainer]"]  property off of each object to get reference to the template. Use the FindControl method to find the control.
+
+== Template Editing
+
+Templates for a column are just HTML within the column. You need to make the column read-only to prevent editing of the HTML. Doing this allows your end-users to edit using any editors in the template but prevent them from editing the actual markup of the template. For more information on adding column settings for a behavior, see link:webdatagrid-setting-column-settings-for-a-behavior.html[Setting Column Settings for a Behavior].
+
+== Data Binding
+
+Using a column template means you will not get any data binding between an editor control in the template and the data from a field in WebDataGrid; you must specify the column an editor needs to bind to in order to display data from that column in the editor control.
+
+You can specify bindings using the Data Bindings editor. For more information on custom bindings, see link:webdatagrid-template-control-bindings.html[Template Control Bindings].
+
+== Related Topics
+
+link:webdatagrid-refrence-a-cell-when-creating-an-item-template.html[Reference a Cell When Creating an Item Template]
+
+link:webdatagrid-using-item-template.html[Using Item Template]

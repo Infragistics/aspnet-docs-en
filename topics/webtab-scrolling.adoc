@@ -1,0 +1,86 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-scrolling",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I"],
+    "guid": "{C3232CEE-3B2F-45FB-980B-2FED7B813205}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Scrolling
+
+WebTab™ displays scroll buttons to navigate through the tabs when the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~displaymode.html[DisplayMode]"]  is set to Scrollable. These scroll buttons can be easily customized using the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~scrollbuttons.html[ScrollButtons]"]  property. The ScrollButtons property provides you with a bunch of options where you can set the CSS classes and image URLs for the buttons and also the scrolling speed. The ScrollButtons object's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabscrollbuttons~scrollposition.html[ScrollPosition]"]  property allows you to set the scroll position of tab items in number of pixels.
+
+*In HTML:*
+
+----
+<ig:WebTab ID="WebTab1" runat="server" DisplayMode="Scrollable" Height="200px" SelectedIndex="3" Width="250px">
+  <Tabs>
+                …
+  </Tabs>
+  <ScrollButtons ScrollPosition="200" AutoHide=" EndSpeed="1000" StartSpeed="100" />
+</ig:WebTab>
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.DisplayMode = TabDisplayMode.Scrollable 
+WebTab1.ScrollButtons.ScrollPosition = 200 
+WebTab1.ScrollButtons.AutoHide = false 
+WebTab1.ScrollButtons.StartSpeed = 100 
+WebTab1.ScrollButtons.EndSpeed = 1000
+----
+
+*In C#:*
+
+----
+WebTab1.DisplayMode = TabDisplayMode.Scrollable;
+WebTab1.ScrollButtons.ScrollPosition = 200;
+WebTab1.ScrollButtons.AutoHide = false;
+WebTab1.ScrollButtons.StartSpeed = 100;
+WebTab1.ScrollButtons.EndSpeed = 1000;
+----
+
+.Note:
+[NOTE]
+====
+The value in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabscrollbuttons~startspeed.html[StartSpeed]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabscrollbuttons~endspeed.html[EndSpeed]"]  properties defines number of pixels per second. During the first 1.5 seconds the scroll speed is gradually increased from the start speed to the end speed.
+====
+
+== Related Topics
+
+link:webtab-about-webtab.html[Understanding WebTab]
+
+link:webtab-getting-started-with-webtab.html[Getting Started with WebTab]
+
+link:webtab-header-and-content-panes.html[Header and Content Panes]
+
+link:webtab-tab-states.html[Tab States]
+
+link:webtab-ajax-indicator-support-for-webtab.html[Ajax Indicator Support for WebTab]
+
+link:webtab-display-modes.html[Display Modes]
+
+link:webtab-animations.html[Animations]
+
+link:webtab-handling-overflow-in-webtab.html[Handling Overflow in WebTab]
+
+link:webtab-load-on-demand.html[Load on Demand]
+
+link:webtab-orientation-and-alignment.html[Orientation and Alignment]
+
+link:webtab-overlapping-tabs.html[Overlapping Tabs]
+
+link:webtab-tab-moving.html[Tab Moving]
+
+link:webtab-validation-in-webtab.html[Validation in WebTab]
+
+link:webtab-api-overview.html[API Overview]
+
+link:webtab-client-side-object-model.html[Client-Side Object Model(CSOM) Overview]

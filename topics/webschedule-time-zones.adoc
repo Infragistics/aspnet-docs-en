@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-time-zones",
+    "controlName": ["WebSchedule"],
+    "tags": ["Localization","Scheduling"],
+    "guid": "{A617EF25-5BBA-4D35-9794-F9619E13B686}",  
+    "buildFlags": [],
+    "createdOn": "2005-08-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Time Zones
+
+An end user in Los Angeles adds an appointment at 5:30 p.m. PDT (Pacific Daylight Time). This is received at your web server in New York where local time is 8:30 p.m. EDT (Eastern Daylight Time).
+
+How does WebSchedule work with this?
+
+Your application must know the preferred time zone of the end user. Set the property on WebScheduleInfo™ to translate Los Angeles time to Universal Time (-7 hours when Daylight Savings Time is in effect).
+
+WebSchedule™ views automatically adjust to the user's local time to display activity based on this time zone information. All times are stored in Universal Time within the data store.
+
+link:webschedule-working-with-the-frameinterval.html[Working with the Frame Interval]

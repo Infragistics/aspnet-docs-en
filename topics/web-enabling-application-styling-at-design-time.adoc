@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-enabling-application-styling-at-design-time",
+    "controlName": [],
+    "tags": ["How Do I","Styling"],
+    "guid": "{79358A88-260A-48CF-9C92-561824A26389}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:31:06Z"
+}
+|metadata|
+////
+
+= Enabling Application Styling at Design Time
+
+One of the powerful features of Application Styling is the options that are available to the application developer that allow him/her to enable and disable Application Styling on their project at design time. Click the links below to find out more about these tasks.
+
+* link:web-netadvantage-application-styling-configuration-tool.html[Infragistics Application Styling Configuration Tool]
+* link:web-enabling-application-styling-using-the-netadvantage-application-styling-configuration-tool.html[Enabling Application Styling Using the Infragistics Application Styling Configuration Tool]
+* link:web-enabling-application-styling-using-the-webpagestyler-component.html[Enabling Application Styling Using the WebPageStyler Component]
+* link:web-using-application-styling-project-templates.html[Using Application Styling Project Templates]

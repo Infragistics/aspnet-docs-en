@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-recurrence",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{7BA76BDB-07FF-47A6-9A04-AF40F49B6CFD}",  
+    "buildFlags": [],
+    "createdOn": "2006-10-04T00:00:00Z"
+}
+|metadata|
+////
+
+= Recurrence
+
+WebSchedule™ supports recurring appointments. These appointments follow a specific set of rules that govern how a recurring appointment will behave. You can enable or modify these rules by making choices on the Recurrence dialog, or by setting them on the appointment if you are creating the appointment in code.
+
+* link:webschedule-how-recurrence-logic-is-executed.html[How Recurrence Logic is Executed]
+* link:webschedule-using-the-recurrence-pattern-dialog-box.html[Using the Recurrence Pattern Dialog Box]
+* link:webschedule-add-a-recurring-appointment-client-side.html[Add a Recurring Appointment Client Side]
+* link:webschedule-add-a-recurring-appointment-server-side.html[Add a Recurring Appointment Server Side]
+* link:webschedule-creating-and-modifying-a-recurring-appointment.html[Creating and Modifying a Recurring Appointment]
+* link:webschedule-delete-a-recurring-appointment-client-side.html[Delete a Recurring Appointment Client Side]
+* link:webschedule-delete-a-recurring-appointment-server-side.html[Delete a Recurring Appointment Server Side]
+* link:webschedule-update-a-recurring-appointment-client-side.html[Update a Recurring Appointment Client Side]
+* link:webschedule-update-a-recurring-appointment-server-side.html[Update a Recurring Appointment Server Side]

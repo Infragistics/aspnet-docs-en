@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-menu-buttons-of-webhtmleditors-toolbar",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{832BD714-0DC1-4EA0-B70C-48ECE13FE034}",  
+    "buildFlags": [],
+    "createdOn": "2006-03-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Menu Buttons of WebHtmlEditor's Toolbar
+
+Instances of the ToolbarMenuButton class displays a context menu when clicked by your application's end users. These buttons support editing or viewing tasks in which the end user must provide further input for a single parameter, but the number of possible values from which the end user can select are relatively small. An example of a good context-menu operation is zooming in to a document (50%, 100%, 200%, etc.)
+
+The following table lists the CategoryName buttons in the toolbar of the WebHtmlEditor™ control. For a description of each button, see link:webhtmleditor-list-of-webhtmleditors-toolbar-buttons.html[List of WebHtmlEditor's Toolbar Buttons].
+
+[options="header", cols="a,a"]
+|====
+|Button|Button Name
+
+|image::Images/custom.gif[] 
+
+|CustomMenuButton
+
+|image::Images/inserttable.gif[] 
+
+|Insert Table
+
+|image::Images/zoom.gif[] 
+
+|Zoom
+
+|====

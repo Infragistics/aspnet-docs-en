@@ -1,0 +1,15 @@
+﻿////
+
+|metadata|
+{
+    "name": "newtopic2",
+    "controlName": [],
+    "tags": [],
+    "guid": "c7ba3e18-1d13-42c0-a1c2-2f1e7062c16d",  
+    "buildFlags": [],
+    "createdOn": "2010-06-01T01:27:10.9433125Z"
+}
+|metadata|
+////
+
+= What's New in 2010 Volume 2

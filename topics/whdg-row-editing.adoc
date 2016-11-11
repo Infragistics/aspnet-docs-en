@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "whdg-row-editing",
+    "controlName": [],
+    "tags": [],
+    "guid": "f8f39d2d-9e5c-46b3-ab01-6a06cd92808d",  
+    "buildFlags": [],
+    "createdOn": "2014-03-10T17:11:00.005988Z"
+}
+|metadata|
+////
+
+= Row Editing (WebHierarchicalDataGrid)
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the Row Editing behavior of the  _WebHierarchicalDataGrid_™ and its use.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:whdg-row-editing-overview.html[Row Editing Overview (WebHierarchicalDataGrid)]
+|This topic provides an overview of the _WebHierarchicalDataGrid_ Row Editing behavior’s features and functionality.
+
+| link:whdg-enabling-row-editing.html[Enabling Row Editing (WebHierarchicalDataGrid)]
+|This topic details how to enable the Row Editing behavior in the _WebHierarchicalDataGrid_ .
+
+|====

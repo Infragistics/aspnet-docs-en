@@ -1,0 +1,227 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridmigrationsorting",
+    "controlName": [],
+    "tags": [],
+    "guid": "1a29cc1f-db10-4778-9e01-153607e635fe",  
+    "buildFlags": [],
+    "createdOn": "2016-03-01T12:50:41.7182164Z"
+}
+|metadata|
+////
+
+= Grid Migration - Sorting
+
+Sorting behavior allows the end user to sort data by one or more columns in WebDataGrid (WDG) or WebHierarchicalDataGrid (WHDG). It also allows the developer to sort the data either through javaScript or code behind. In order to use this functionality Sorting behavior needs to be added to WDG or WHDG behaviors collection and enabled.
+
+[[_Toc292460955]]
+== Enabling the Behavior
+
+The behavior can be enabled through the property window of WDG or WHDG.
+
+[start=1]
+. In the Microsoft® Visual Studio™ property window, locate the Behaviors property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+[start=2]
+. Check the CheckBox next to Sorting on the left-hand side to add and enable the behavior
+
+.Note:
+[NOTE]
+====
+At this point you can configure additional Sorting related properties (e.g., SortingMode which controls if multiple columns can be sorted at the same time).
+====
+
+[start=3]
+. Click Ok to close the dialog. “WebDataGrid/WebHierarchicalDataGrid” is now set up to for Sorting.
+
+The “Sorting” behavior can also be added in the .aspx source code for the “WebDataGrid/WebHierarchicalDataGrid” controls:
+
+*In ASPX:*
+
+[source,html]
+----
+<Behaviors>               
+       <ig:Sorting>
+       </ig:Sorting>
+</Behaviors>
+----
+
+[[_Toc292460956]]
+==== WDG Adding Sorted columns
+
+*In JavaScript:*
+
+[source,js]
+----
+var grid = $find("WebDataGrid1");
+/* Get a reference to the sorting behavior * /
+var sorting = grid.get_behaviors().get_sorting();
+/* Sort a column, the second parameter is the sort direction and can
+be one of the following:
+0 - None, 1 - Ascending, 2 - Descending
+The third parameter is a boolean value indicating whether the 
+previous sort of column needs to be removed or not. */
+sorting.sortColumn(grid.get_columns().get_column(0), 1, false);
+----
+
+To sort multiple columns without a call back
+
+*In JavaScript:*
+
+[source,js]
+----
+var grid = $find("WebDataGrid1");
+/* Get a reference to the sorting behavior * /
+var sorting = grid.get_behaviors().get_sorting();
+/* Add several columns to be sorted.
+The second parameter is the sort direction and can
+be one of the following:
+0 - None, 1 - Ascending, 2 - Descending */ 
+sorting.addSortColumn(grid.get_columns().get_column(0), 1);
+sorting.addSortColumn(grid.get_columns().get_column(1), 2);
+/* Call apply sort to go to the server and perform the sorting * /
+sorting.applySort();
+----
+
+sorting.clear() can be called to take off all sorting.
+
+[[_Toc292460958]]
+==== Code Behind
+
+This should be done before data binding or if done after data binding, then DataBind() needs to be called on the grid to have the sorting take effect right away.
+
+*In C#:*
+
+[source,csharp]
+----
+Sorting sorting = this.WebDataGrid1.Behaviors.Sorting;
+sorting.SortedColumns.Add("Column1", Infragistics.Web.UI.SortDirection.Ascending);
+----
+
+[[_Toc292460959]]
+==== WHDG Adding Sorted columns through
+
+==== Top Level
+
+*In JavaScript:*
+
+[source,js]
+----
+/* Find the control * /
+var grid = $find("WebHierarchicalDataGrid1");
+/* Adding rows for the top row island * /
+var topRowIsland = grid.get_gridView();       
+/* Get a reference to the sorting behavior * /
+var sorting = topRowIsland.get_behaviors().get_sorting();
+/* Sort a column, the second parameter is the sort direction and can
+be one of the following:
+0 - None, 1 - Ascending, 2 - Descending
+The third parameter is a boolean value indicating whether the 
+previous sort of column needs to be removed or not. */ 
+sorting.sortColumn(grid.get_columns().get_column(0), 1, false);
+----
+
+==== Child Level
+
+*In JavaScript:*
+
+[source,js]
+----
+/* Find the control * /
+var grid = $find("WebHierarchicalDataGrid1");
+/* ---------- Adding rows for the top row island -------- * /
+var topRowIsland = grid.get_gridView();             
+var childGrid = topRowIsland.get_rows().get_row(3).get_rowIslands()[0];
+/* Get a reference to the sorting behavior * /
+var sorting = childGrid.get_behaviors().get_sorting();
+/* Sort a column, the second parameter is the sort direction and can
+be one of the following:
+0 - None, 1 - Ascending, 2 - Descending
+The third parameter is a boolean value indicating whether the 
+previous sort of column needs to be removed or not. */
+sorting.sortColumn(grid.get_columns().get_column(0), 1, false);
+----
+
+Sorting multiple columns at once or clearing sorting is done the same way as its is for WDG after you get a reference to the sort behavior.
+
+[[_Toc292460961]]
+==== Code Behind
+
+A column can be sorted either on a band level or a rowIsland level. To sort a column on the rowIsland level, just get a hold of the sorting behavior in the RowIslandDataBinding event and add the column to the Sorting behavior of the rowIsland the same as it done for WDG. To accomplish this on the band level, handle the InitializeBand event and add the sorted column to the Sorting behavior of the Band’s behaviors collection.
+
+[[_Toc292460962]]
+== Customizing the Sorting Behavior
+
+Sorting behavior can be customized per column basis. This can be done by creating SortingColumnSetting object and adding it to the ColumnSettings of the Sorting behavior. You can do this through the Behaviors Editor Dialog, on the aspx or in the code behind.
+
+In the aspx it would look like this
+
+*In ASPX:*
+
+[source,html]
+----
+<Behaviors>               
+          <ig:Sorting>
+        <ColumnSettings>
+            <ig:SortingColumnSetting ColumnKey="Time_Start" Sortable=" />
+        </ColumnSettings>
+    </ig:Sorting>
+</Behaviors>
+----
+
+[[_Toc292460964]]
+==== WDG Code Behind
+
+For WDG this should be done in the Page Load event.
+
+*In C#:*
+
+[source,csharp]
+----
+/* Save of the Sorting behavior for ease of use * /            
+Sorting sorting = this.WebDataGrid1.Behaviors.Sorting;
+/* Do not allow sorting on the Column1 * /
+SortingColumnSetting setting = new SortingColumnSetting();
+setting.ColumnKey = "Column1";
+setting.Sortable = false;
+sorting.ColumnSettings.Add(setting);
+----
+
+[[_Toc292460965]]
+==== WHDG Code Behind
+
+For WHDG this should be done in the InitializeBand event for WHDG.
+
+*In C#:*
+
+[source,csharp]
+----
+protected void Page_Load(object sender, EventArgs e)
+{
+      this.WebHierarchicalDataGrid1.InitializeBand += new InitializeBandEventHandler(WebHierarchicalDataGrid1_InitializeBand);
+}
+void WebHierarchicalDataGrid1_InitializeBand(object sender, BandEventArgs e)
+{
+      if (e.Band.DataMember == "Root")
+      {
+             /* Save of the Sorting behavior for ease of use * /            
+             Sorting sorting = e.Band.Behaviors.Sorting;
+             /* Do not allow sorting on the Column1 * /
+             SortingColumnSetting setting = new SortingColumnSetting();
+             setting.ColumnKey = "Column1";
+             setting.Sortable = false;
+             sorting.ColumnSettings.Add(setting);
+      }
+      else if (e.Band.DataMember == "SecondLevel")
+      {
+             /* Save of the Sorting behavior for ease of use * /            
+             Sorting sorting = e.Band.Behaviors.Sorting;
+             /* Do not allow sorting on the ChildColumn1 * /
+             SortingColumnSetting setting = new SortingColumnSetting();
+             setting.ColumnKey = "ChildColumn1";
+             setting.Sortable = false;
+             sorting.ColumnSettings.Add(setting);
+      }
+}
+----

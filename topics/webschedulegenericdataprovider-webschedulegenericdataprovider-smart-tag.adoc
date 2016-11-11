@@ -1,0 +1,66 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedulegenericdataprovider-webschedulegenericdataprovider-smart-tag",
+    "controlName": [],
+    "tags": ["How Do I"],
+    "guid": "{FBAE144F-55AF-4342-8099-25F66E9C4F28}",  
+    "buildFlags": [],
+    "createdOn": "2009-12-10T17:17:42Z"
+}
+|metadata|
+////
+
+= WebScheduleGenericDataProvider Smart Tag
+
+Each Infragistics ASP.NET control/component is equipped with a Smart Tag. By simply selecting the control/component, a Smart Tag anchor appears. When you click this anchor, a pop-up panel appears, providing you with quick and easy access to the most common properties and settings of the control/component.
+
+The WebScheduleGenericDataProvider™ Smart Tag contains the following sections:
+
+* Actions -- Lets you perform common tasks (i.e., accessing the Quick Designer).
+* Properties -- Provides quick access to common properties.
+
+See below for a description of the item (e.g., field, drop-down list, checkbox) in each section.
+
+image::images/WebScheduleGenericDataProvider_WebScheduleGenericDataProvider_Smart_Tag_01.png[]
+
+[options="header", cols="a,a,a"]
+|====
+|Actions|Description|CorrespondingProperty
+
+|Quick Design
+|Click Quick Design to access the WebScheduleGenericDataProvider Designer. This is the same functionality as if you right-clicked on the control and selected Quick Design from the context menu.
+|n/a
+
+|====
+
+[options="header", cols="a,a,a"]
+|====
+|Properties|Description|CorrespondingProperty
+
+|WebScheduleInfoID
+|Use the drop-down box to select a WebScheduleInfo to associate with WebScheduleGenericDataProvider.
+| link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledataproviderbase~webscheduleinfoid.html[WebScheduleInfoID]
+
+|ActivityDataSourceID
+|Use the drop-down box to select a data source control to bind to for Activity data.
+| link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~activitydatasourceid.html[ActivityDataSourceID]
+
+|VarianceDataSourceID
+|Use the drop-down box to select a data source control to bind to for Variance data.
+| link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~variancedatasourceid.html[VarianceDataSourceID]
+
+|ResourceDataSourceId
+|Use the drop-down box to select a data source control to bind to for Resource data.
+| link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulegenericdataprovider~resourcedatasourceid.html[ResourceDataSourceID]
+
+|====
+
+== Related Topics
+
+link:webschedulegenericdataprovider-webschedulegenericdataprovider.html[WebScheduleGenericDataProvider]
+
+link:webschedule-webschedulegenericdataprovider-crud-statements-for-sql-data-source.html[WebScheduleGenericDataProvider CRUD Statements for SQL Data Source]
+
+link:webschedule-binding-to-access-data-source-using-webschedulegenericdataprovider.html[Binding to Access Data Source Control Using WebScheduleGenericDataSource]

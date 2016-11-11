@@ -1,0 +1,82 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-binding-webdropdown-to-a-web-service",
+    "controlName": ["WebDropDown"],
+    "tags": [],
+    "guid": "{A4551BD6-EFAD-4C13-95FA-83BCC6BF6490}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Binding WebDropDown to a Web Service
+
+== Before You Begin
+
+WebDropDown™ supports binding to a Web Service using its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasource.html[DataSource]"]  property.In this walkthrough, a simple Web Service is created with a method which returns the days of the week as a string array. This string array is bound to WebDropDown so that the days of the week are displayed in the drop-down container.
+
+== What You Will Accomplish
+
+You will learn how to bind WebDropDown to a string array returned by a Web Service.
+
+.Note:
+[NOTE]
+====
+Building and designing a web service is beyond the scope of this topic. This topic demonstrates a synchronous way of retrieving data. For more advanced and data intensive applications, an asynchronous approach should be taken. For more information on Web Services, please visit the link: http://msdn.microsoft.com/en-us/default.aspx[MSDN ®].
+====
+
+== Follow these Steps
+
+[start=1]
+. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDropDown control.
+[start=2]
+. Create a Web Service as shown in the following steps:
+
+** Right click on the project and click Add New Item…This will open the Add New Item dialog.
+** Select Web Service from the templates and change the name to myWebService.asmx. Click Add to close the dialog.
+** Now add a WebMethod which returns the days of the week to the Web Service as shown in the following code:
+
+*In Visual Basic:*
+
+----
+Public Function GetDaysOfTheWeek() As String()
+                 Dim weekdays As String() = New String() {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", _
+    "Saturday"}
+                 Return weekdays
+            End Function
+----
+
+*In C#:*
+
+----
+public string[] GetDaysOfTheWeek()
+      {
+        string[] weekdays = new     string[]{"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+        return weekdays;
+      }
+----
+
+[start=3]
+. Set the WebDropDown control’s DataSource property to the WebService’s GetDaysOfTheWeek WebMethod as shown in the following code:
+
+*In Visual Basic:*
+
+----
+         Dim service As New myWebService()
+         WebDropDown1.DataSource = service.GetDaysOfTheWeek()
+----
+
+*In C#:*
+
+----
+         myWebService service = new myWebService();
+         WebDropDown1.DataSource = service.GetDaysOfTheWeek();
+----
+
+[start=4]
+. Save and run your application. Your WebDropDown now looks similar to the following image:
+
+image::images\WebDropDown_Binding_WebDropDown_to_a_Web_Service_01.png[]

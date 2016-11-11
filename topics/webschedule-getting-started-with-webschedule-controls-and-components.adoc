@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-getting-started-with-webschedule-controls-and-components",
+    "controlName": ["WebSchedule"],
+    "tags": ["Getting Started"],
+    "guid": "{0D530D23-7904-48B5-8DAE-46C478FD455D}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Getting Started with WebSchedule Controls and Components
+
+Click the links below to find information on how to get up and running quickly with the WebSchedule™ controls.
+
+* link:webschedule-using-the-webschedule-controls-quick-design.html[Using the WebSchedule Controls Quick Design] -- Shows you how to add the WebSchedule controls and components to a form and their basic settings using the Quick Designer.
+* link:webschedule-creating-webschedule-controls-using-code.html[Creating WebSchedule Controls Using Code] -- Shows you how to create the WebSchedule controls and components using all code behind.
+* link:webschedule-placing-webschedule-controls-on-a-user-control.html[Placing WebSchedule Controls on a User Control] -- Shows you how to place the WebSchedule controls and components on a User Control.

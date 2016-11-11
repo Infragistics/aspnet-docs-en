@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-binding-to-data",
+    "controlName": ["WebDropDown"],
+    "tags": ["Data Binding"],
+    "guid": "{ADFBFCA7-D656-4722-96F8-4DC3E2C05963}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-03T14:01:56Z"
+}
+|metadata|
+////
+
+= Binding to Data
+
+WebDropDown™ supports a large range of bindable data sources including standard Microsoft data source controls and objects implementing IEnumerable.
+
+Click the following links to learn more about binding WebDropDown with data sources :
+
+* link:webdropdown-binding-webdropdown-to-a-sql-data-source.html[Binding WebDropDown to a Sql Data Source]
+* link:webdropdown-binding-webdropdown-to-a-web-service.html[Binding WebDropDown to a Web Service]

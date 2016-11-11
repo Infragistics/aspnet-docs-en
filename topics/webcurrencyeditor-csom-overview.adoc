@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcurrencyeditor-csom-overview",
+    "controlName": ["WebCurrencyEditor"],
+    "tags": ["API"],
+    "guid": "{6D0B1EEA-F2B1-440E-BA17-3503309A97BF}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T16:27:29Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebCurrencyEditor™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webtexteditor~infragistics.web.ui_namespace.html[WebCurrencyEditor CSOM Overview]

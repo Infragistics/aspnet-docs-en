@@ -1,0 +1,40 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatasource-crud-operations-with-webhierarchicaldatasource",
+    "controlName": ["WebHierarchicalDataSource"],
+    "tags": ["Data Presentation","Editing","Sample Data Source"],
+    "guid": "{427CCF31-0BD7-4F80-8935-829D17F3016A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= CRUD Operations with WebHierarchicalDataSource
+
+== Overview
+
+The WebHierarchicalDataSource™ component supports create, read , update and delete (CRUD) operations for compatible data sources. This combination of WebHierarchicalDataSource and updatable data allows you to relate your data sources in any combination and update each data source, extending scalability and flexibility in your application. Updating a data source remains the same process as if the data source was used to bind directly to a data bound control.
+
+== Data Source Controls
+
+WebHierarchicalDataSource supports CRUD operations for the following data source controls.
+
+* SqlDataSource
+* AccessDataSource
+* LinqDataSource
+* ObjectDataSource
+
+WebHierarchicalDataSource acts as an intermediary between the data-bound control and the data source controls. When an insert, update, or delete is performed, this information is passed from the data-bound control to the WebHierarchicalDataSource component. WebHierarchicalDataSource passes this information to the appropriate data source being updated. The data source performs the appropriate action for the request internally, based on what it was set up to do. The CRUD operation is seen as an automatic operation.
+
+To achieve automatic CRUD operations, set up your insert, update, and delete commands as normal for each data source. Simply add the controls and relations to WebHierarchicalDataSource, and the CRUD operations are handled automatically through the commands you set for each control.
+
+== Custom Data Entities and Data Sets
+
+Data sources that include data sets and objects that implement the IEnumerable and ICollection interfaces are currently not supported for automatic CRUD operations. However, you can always update these data sources manually. Again, WebHierarchicalDataSource acts only as an intermediate layer between the data-bound control and the data source, which means update requests are passed to the appropriate data sources. Therefore, the process of updating is done the same as when bound to these data sources directly.
+
+== Efficiency
+
+By allowing CRUD operations to be handled by the underlying data source, WebHierarchalDataSource allows for a simple and flexible way of combining your data sources without interfering with the way you handle CRUD operations.

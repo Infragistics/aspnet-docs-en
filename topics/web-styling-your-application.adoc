@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-styling-your-application",
+    "controlName": [],
+    "tags": ["Formatting","How Do I","Styling","Theming"],
+    "guid": "{1490DBE1-1610-460C-BA50-59A39B27E075}",  
+    "buildFlags": [],
+    "createdOn": "2006-07-12T08:11:46Z"
+}
+|metadata|
+////
+
+= Styling Your Application
+
+Application Styling gives the graphic designer the privilege of working with Infragistics' very own Infragistics AppStylist® for ASP.NET product. Infragistics AppStylist is a breakthrough application that assists both the application developer by freeing them up to do more coding and the graphic designer by leveraging their individual skills. This specific section of the help will guide the graphic designer through every aspect of the Infragistics AppStylist for ASP.NET experience by helping them create and maintain Style Libraries, understand the Infragistics AppStylist user interface, and use the different controls of the UI to make stylish themes for their applications. Click the links below to learn more about Infragistics AppStylist.
+
+* link:webappstylist-introducing-application-styling-for-asp-net.html[Introducing Application Styling for ASP.NET]
+* link:webappstylist-getting-started.html[Getting Started]
+* link:webappstylist-getting-to-know-netadvantage-appstylist-for-asp-net.html[Getting to Know Infragistics AppStylist for ASP.NET]
+* link:webappstylist-walkthroughs.html[Walkthroughs]

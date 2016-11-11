@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdayview-client-side-programming",
+    "controlName": ["WebDayView"],
+    "tags": ["Events"],
+    "guid": "{592E2014-56CA-480F-9D4F-319004A155F6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Client Side Programming
+
+This section gives information on the client-side features and functionalities of WebDayView™.
+
+Click the links below to find out more.
+
+* link:webdayview-csom-overview.html[CSOM Overview]
+* link:webdayview-reference-the-control.html[Reference the Control]

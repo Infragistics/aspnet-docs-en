@@ -1,0 +1,127 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-make-the-fontsize-drop-down-list-render-previews",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","Styling"],
+    "guid": "{752F36CE-0F91-407D-9FBD-FC05B87880BD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Make the FontSize Drop-Down List Render Previews
+
+WebHtmlEditor™ provides a  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~fontsizelist.html[FontSizeList]"]  property that accepts font sizes your users can apply to ranges of text. For this to work, the strings you add to the FontSizeList property must be valid values of the size attribute on an HTML font tag.
+
+[cols="a,a"]
+|====
+
+|image::images/WebHtmlEditor_How_Do_I_Make_the_FontSize_drop_down_Render_Previews_1.PNG[] 
+
+Without Preview
+|image::images/WebHtmlEditor_How_Do_I_Make_the_FontSize_drop_down_Render_Previews_2.PNG[] 
+
+With Preview
+
+|====
+
+These encoded numeric values are not intuitive to users, therefore the following procedure can be used to cause the FontSizeList property to render a more user-friendly label in the drop-down list while still mapping to a value appropriate to the size attribute.
+
+[start=1]
+. Before you start writing any code, you should place using/imports directives in your code-behind so you don't always need to type out a member's fully qualified name.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.WebHtmlEditor
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.WebHtmlEditor;
+----
+
+[start=2]
+. Add an event handler to the Web Form containing the WebHtmlEditor control for the PreRender event.
+
+*In Visual Basic:*
+
+----
+Private Sub Page_PreRender(ByVal sender As System.Object, ByVal e As _ 
+  System.EventArgs) Handles MyBase.PreRender
+  ' Place code to populate drop down with preview items here.
+End Sub
+----
+
+*In C#:*
+
+----
+private void Page_PreRender( object sender, System.EventArgs e)
+{
+  // Place code to populate drop down with preview items here.
+}
+. . .
+private void InitializeComponent()
+{    
+  // Handle the Page.PreRender event.
+  this.PreRender += new System.EventHandler(this.Page_PreRender);
+}
+----
+
+[start=3]
+. Within your PreRender event handler, get the ToolbarDropDown object for the FontSizeList Toolbar item type, and clear out any pre-existing contents before adding your own list items.
+
+*In Visual Basic:*
+
+----
+Dim dropDown As ToolbarDropDown 
+' Find the FontSize drop down item in the Toolbar.Items collection.
+dropDown = CType( _
+  Me.WebHtmlEditor1.Toolbar.Items.GetByType(ToolbarItemType.FontSize), _
+  ToolbarDropDown)
+' Clear items coming from the FontSizeList property.
+dropDown.Items.Clear( )
+' Add items that preview the font size their selection sets.
+dropDown.Items.Add( New ToolbarDropDownItem( _
+  "<font size='1'>xx-small</font>", "1"))
+dropDown.Items.Add( New ToolbarDropDownItem( _
+  "<font size='2'>small</font>", "2"))
+dropDown.Items.Add( New ToolbarDropDownItem( _
+  "<font size='3'>medium</font>", "3"))
+dropDown.Items.Add( New ToolbarDropDownItem( _
+  "<font size='4'>large</font>", "4"))
+dropDown.Items.Add( New ToolbarDropDownItem( _
+  "<font size='5'>x-large</font>", "5"))
+dropDown.Items.Add( New ToolbarDropDownItem( _
+  "<font size='6'>xx-large</font>", "6"))
+----
+
+*In C#:*
+
+----
+// Find the FontSize drop down item in the Toolbar.Items collection.
+ToolbarDropDown dropDown = (ToolbarDropDown)
+  this.WebHtmlEditor1.Toolbar.Items.GetByType(
+  ToolbarItemType.FontSize);
+// Clear items coming from the FontSizeList property.
+dropDown.Items.Clear( );
+// Add items that preview the font size their selection sets.
+dropDown.Items.Add( new ToolbarDropDownItem( 
+  "<font size='1'>xx-small</font>", "1"));
+dropDown.Items.Add( new ToolbarDropDownItem( 
+  "<font size='2'>small</font>", "2"));
+dropDown.Items.Add( new ToolbarDropDownItem( 
+  "<font size='3'>medium</font>", "3"));
+dropDown.Items.Add( new ToolbarDropDownItem( 
+  "<font size='4'>large</font>", "4"));
+dropDown.Items.Add( new ToolbarDropDownItem( 
+  "<font size='5'>x-large</font>", "5"));
+dropDown.Items.Add( new ToolbarDropDownItem( 
+  "<font size='6'>xx-large</font>", "6"));
+----
+
+You can take advantage of using HTML within the name of each drop-down list item to give it a preview-like quality. This approach also works well when using the FontName drop-down list, and any other list-typed property the WebHtmlEditor presents to users as a drop-down list box.

@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatamenu-keyboard-navigation",
+    "controlName": ["WebDataMenu"],
+    "tags": [],
+    "guid": "{7DBC7669-B0C3-4891-931D-3C37560FBEAE}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Keyboard Navigation
+
+WebDataMenu™ supports navigating through the menu-items using the keyboard very easily.
+
+* *UP ARROW* -- If the items are vertically rendered (either root items of Vertical menu, or vertical sub-menu which is default), then the end- user should move to the previous non-disabled item, if on the first item, then moves to the last item. If items in the menu/sub-menu are rendered horizontally and current item has children: nothing will happen. If items in the menu/sub-menu are rendered vertically and current item has no children: parent item will be selected.
+* *DOWN ARROW* -- If the items are vertically rendered (either root items of Vertical menu, or vertical sub-menu which is default), then the end-user moves to the next non-disabled item, if on the last item, then moves to the first item. If items in the menu/sub-menu are rendered horizontally and current item has children: the sub-menu will open, and the first item will be selected. If items in the menu/sub-menu are rendered vertically and current item has no children: nothing will happen.
+* *RIGHT ARROW* -- If the items are horizontally rendered (either root items of Horizontal menu, or horizontal sub-menu), then the end-user moves to the next non-disabled item, if on the last item, then moves to the first item. If items in the menu/sub-menu are rendered vertically and current item has children, then the submenu will be opened, and the first child of it will be selected. If items in the menu/sub-menu are rendered vertically and current item has no children, current submenu will be closed, and the parent will be selected.
+* *LEFT ARROW* -- If the items are horizontally rendered (either root items of Horizontal menu, or horizontal sub-menu), then the end-user moves to the previous non-disabled item, if on the first item, then moves to the last item. If items in the menu/sub-menu are rendered vertically and current item has children, nothing will happen. If items in the menu/sub-menu are rendered vertically and current item has no children, current submenu will be closed, and the parent will be selected.
+* *Enter* -- Fires the click event and selected event for that menu item.
+* *Tab* -- Moves focus to the next plain DOM element or control on the page.
+* *SPACE* -- Hitting the Space Bar over an item will select the item if it was not selected already, and deselects the last selected item. If the item was already selected, it will be unselected, thus removing entire selection from the menu.

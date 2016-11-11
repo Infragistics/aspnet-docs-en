@@ -1,0 +1,444 @@
+﻿////
+|metadata|
+{
+    "name": "webschedule-overview-of-the-stored-procedures-used-by-the-webschedule-data-providers",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{618415CB-7CA0-4712-9FD0-C1E89D5EF7AE}",
+    "buildFlags": [],
+    "createdOn": "2006-02-05T00:00:00Z"
+}
+|metadata|
+////
+
+= Overview of the Stored Procedures Used by WebSchedule Data Providers
+
+In the following table you will find the names, descriptions, parameter lists and result sets (when applicable) of the stored procedures required by the WebSchedule™ data providers. Adapting your own data model to WebSchedule requires redefining the implementations of these stored procedures. Pay close attention to the intended purpose of each stored procedure, the parameters it provides, and which result set (if any) it requires the stored procedure to return.
+
+Complete Transact SQL definitions for all stored procedures listed here can be found in the "WebSchedule2.sql" database script. You can find this script in the following folder, depending on your operating system:
+
+* XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
+* Vista or later -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+
+.Note:
+[NOTE]
+====
+If you are using the WebSchedule2.sql file from versions prior to 2009.2, you need to upgrade the schema and stored procedures. For more information on upgrading your SQL data base, see Upgrading Existing SQL Data and Stored Procedures.
+====
+
+==== *Activity_Add*
+
+Inserts an Activity into the database associated with the named Resource.
+
+Parameters
+
+* @AllDayEvent (Boolean) 
+* @ActivityDescription (String) 
+* @Duration (Int32) 
+* @Location (String) 
+* @StartDateTimeUtc (DateTime) 
+* @Subject (String) 
+* @EnableReminder (Boolean) 
+* @ReminderInterval (Int32) 
+* @ShowTimeAs (Int32) 
+* @Importance (Int32) 
+* @Status (Int32) 
+* @RecurrenceKey (Int32) 
+* @ResourceName (String)
+
+*Returns*
+
+```
+[Activity].[ActivityID]
+```
+
+==== *Activity_Rem*
+
+Deletes an Activity from the database, including its association with any Resource(s), Recurrence, and Variances.
+
+*Parameters*
+
+* @DataKey (Int32)
+
+*Returns*
+
+N/A
+
+==== *Activity_SelByDate*
+
+Selects all Activities that are associated with one Resource and start within an application-defined date range. This stored procedure does not return Variance rows; they are returned by Variance_Sel.
+
+*Parameters*
+
+* @StartDateTimeUtc (DateTime) 
+* @EndDateTimeUtc (DateTime) 
+* @OrganizerName (String)
+
+*Returns*
+
+```
+[Activity].[AllDayEvent], 
+[Activity].[Description], 
+[Activity].[Duration], 
+[Activity].[Location], 
+[Activity].[ActivityID], 
+[Activity].[StartDateTimeUtc], 
+[Activity].[Subject], 
+[Activity].[EnableReminder], 
+[Activity].[ReminderInterval], 
+[Activity].[ShowTimeAs], 
+[Activity].[Importance], 
+[Activity].[Status], 
+[Activity].[RecurrenceID], 
+[Activity].[VarianceID], 
+[Activity].[_ts] 
+[ActivityResource].[ResourceID]
+```
+
+==== *Activity_SelAllByDate*
+
+Selects all Activities for all resources. This stored procedure does not return Variance rows; they are returned by Variance_Sel.
+
+*Parameters*
+
+* @StartDateTimeUtc (DateTime) 
+* @EndDateTimeUtc (DateTime)
+
+*Returns*
+
+```
+[Activity].[AllDayEvent], 
+[Activity].[Description], 
+[Activity].[Duration], 
+[Activity].[Location], 
+[Activity].[ActivityID], 
+[Activity].[StartDateTimeUtc], 
+[Activity].[Subject], 
+[Activity].[EnableReminder], 
+[Activity].[ReminderInterval], 
+[Activity].[ShowTimeAs], 
+[Activity].[Importance], 
+[Activity].[Status], 
+[Activity].[RecurrenceID], 
+[Activity].[VarianceID], 
+[Activity].[_ts] 
+[ActivityResource].[ResourceID]
+```
+
+==== *Activity_SelTS*
+
+Selects the timestamp on an Activity before committing an update. Used to detect concurrency conflicts.
+
+*Parameters*
+
+* @ActivityID (Int32)
+
+*Returns*
+
+```
+[Activity].[_ts]
+```
+
+==== *Activity_Upd*
+
+Updates an existing Activity. This stored procedure cannot change the Resource affiliation of an Activity, and is not appropriate for updating Variances.
+
+*Parameters*
+
+* @AllDayEvent (Boolean) 
+* @ActivityDescription (String) 
+* @Duration (Int32) 
+* @Location (String) 
+* @StartDateTimeUtc (DateTime) 
+* @Subject (String) 
+* @EnableReminder (Boolean) 
+* @ReminderInterval (Int32) 
+* @ShowTimeAs (Int32) 
+* @Importance (Int32) 
+* @Status (Int32) 
+* @RecurrenceKey (Int32) 
+* @VarianceKey (GUID) 
+* @DataKey (Int32)
+
+*Returns*
+
+N/A
+
+==== *Recurrence_Add*
+
+Inserts a new Recurrence when an end user makes an existing Activity the Root Activity of a new recurring series.
+
+*Parameters*
+
+* @EndDateUtc (DateTime) 
+* @DayOfWeekMask (Int32) 
+* @DayOfMonth (Int32) 
+* @MonthOfYear (Int32) 
+* @PeriodMultiple (Int32) 
+* @Period (Char) 
+* @EditType (Int32)
+
+*Returns*
+
+```
+[Recurrence].[RecurrenceID]
+```
+
+==== *Recurrence_Rem*
+
+Removes an existing Recurrence and any Variances, so that only the original Root Activity is left as a non-recurring appointment.
+
+*Parameters*
+
+* @DataKey (Int32) 
+* @RecurrenceKey (Int32)
+
+*Returns*
+
+N/A
+
+==== *Recurrence_Sel*
+
+Selects the Recurrences applicable over a given date range for recurring activities with the specified Resource(s).
+
+*Parameters*
+
+* @StartDateTimeUtc (DateTime) 
+* @EndDateTimeUtc (DateTime) 
+* @OrganizerName (String)
+
+*Returns*
+
+```
+[Recurrence].[RecurrenceID], 
+[Recurrence].[EndDateUtc], 
+[Recurrence].[DayOfWeekMask], 
+[Recurrence].[DayOfMonth], 
+[Recurrence].[MonthOfYear], 
+[Recurrence].[PeriodMultiple], 
+[Recurrence].[Period], 
+[Recurrence].[EditType], 
+[Recurrence].[LastReminderDateTimeUtc], 
+[Recurrence].[_ts]
+```
+
+==== *Recurrence_SelTS*
+
+Selects the timestamp on an Recurrence before committing an update. Used to detect concurrency conflicts.
+
+*Parameters*
+
+* @RecurrenceID (Int32)
+
+*Returns*
+
+```
+[Recurrence].[_ts]
+```
+
+==== *Reminder_Sel*
+
+Selects the Activities belonging to a Resource for which a reminder notification is pending within an application-defined time frame.
+
+*Parameters*
+
+* @LookAheadWindowEndTime (DateTime) 
+* @ResourceID (Int32)
+
+*Returns*
+
+```
+[Activity].[AllDayEvent], 
+[Activity].[Description], 
+[Activity].[Duration], 
+[Activity].[Location], 
+[Activity].[ActivityID], 
+[Activity].[StartDateTimeUtc], 
+[Activity].[Subject], 
+[Activity].[EnableReminder], 
+[Activity].[ReminderInterval], 
+[Activity].[ShowTimeAs], 
+[Activity].[Importance], 
+[Activity].[Status], 
+[Activity].[_ts]
+```
+
+==== *Reminder_Upd*
+
+Updates a non-recurring Activity to Expired status when its reminder notification has been dismissed.
+
+*Parameters*
+
+* @Status (Int32) 
+* @ActivityID (Int32)
+
+*Returns*
+
+N/A
+
+==== *Reminder_UpdByRecurrence*
+
+Updates the date and time of the last occurrence of a recurring Activity to receive a reminder.
+
+*Parameters*
+
+* @LastReminderDateTimeUtc (DateTime) 
+* @RecurrenceID (Int32)
+
+*Returns*
+
+N/A
+
+==== *Resource_Add*
+
+Inserts a new Resource and its ResourcePreference(s). This stored procedure is invoked only by the WebSchedule data provider's administrative API.
+
+*Parameters*
+
+* @ResourceName (String) 
+* @ResourceDesc (String) 
+* @ResourceEmail (String) 
+* @EnableEmailReminders (Int32)
+
+*Returns*
+
+```
+[Resource].[ResourceID]
+```
+
+*Resource_RemByName*
+
+Deletes an existing Resource and its ResourcePreference(s) by the ResourceName, but not any of its Activities. This stored procedure is invoked only by the WebSchedule data provider's administrative API. 
+
+.Note:
+[NOTE]
+====
+All Activities that are associated with the deleted Resource revert to the Unassigned Resource. To avoid unassignment, you must delete a Resource's Activities before deleting the Resource.
+====
+
+*Parameters*
+
+* @ResourceName (String)
+
+*Returns*
+
+N/A
+
+==== *Resource_Sel*
+
+Selects _all_ Resources from the database. This stored procedure is only invoked by the Web Schedule data provider's administrative API.
+
+*Parameters*
+
+N/A
+
+*Returns*
+
+```
+[Resource].[ResourceID], 
+[Resource].[ResourceName], 
+[Resource].[ResourceDescription], 
+[Resource].[EmailAddress], 
+[ResourcePreference].[EnableEmailReminders], 
+[Resource].[_ts]
+```
+
+==== *Resource_SelByName*
+
+Selects one Resource by its uniquely-identifying name.
+
+*Parameters*
+
+* @ResourceName (String)
+
+*Returns*
+
+```
+[Resource].[ResourceID], 
+[Resource].[ResourceName], 
+[Resource].[ResourceDescription], 
+[Resource].[EmailAddress], 
+[ResourcePreference].[EnableEmailReminders], 
+[Resource].[_ts]
+```
+
+==== *Resource_SelTS*
+
+Selects the timestamp on a Resource before committing an update. Used to detect concurrency conflicts. This stored procedure is invoked only by the WebSchedule data provider's administrative API.
+
+*Parameters*
+
+* @ResourceID (Int32)
+
+*Returns*
+
+```
+[Resource].[_ts]
+```
+
+==== *Resource_Upd*
+
+Updates a Resource and its ResourcePreference(s). This stored procedure is invoked only by the WebSchedule data provider's administrative API.
+
+*Parameters*
+
+* @ResourceID (Int32) 
+* @ResourceName (String) 
+* @ResourceDesc (String) 
+* @ResourceEmail (String) 
+* @EnableEmailReminders (Int32)
+
+*Returns*
+
+N/A
+
+==== *Variance_Rem*
+
+Marks the Activity row containing a Variance with a Status of Deleted.
+
+*Parameters*
+
+* @DeletedStatusCode (Int32) 
+* @ActivityID (Int32)
+
+*Returns*
+
+N/A
+
+==== *Variance_Sel*
+
+Selects Activities representing the Variances of a specific recurring series. Each Variance row is an Activity with one or more field values different from that of the recurring Root Activity.
+
+*Parameters*
+
+* @StartDateTimeUtc (DateTime) 
+* @EndDateTimeUtc (DateTime) 
+* @OrganizerName (String) 
+* @RecurrenceKey (Int32) 
+* @VarianceKey (GUID)
+
+*Returns*
+
+```
+[Activity].[AllDayEvent], 
+[Activity].[Description], 
+[Activity].[Duration], 
+[Activity].[Location], 
+[Activity].[ActivityID], 
+[Activity].[StartDateTimeUtc], 
+[Activity].[Subject], 
+[Activity].[EnableReminder], 
+[Activity].[ReminderInterval], 
+[Activity].[ShowTimeAs], 
+[Activity].[Importance], 
+[Activity].[Status], 
+[Activity].[RecurrenceID], 
+[Activity].[VarianceID], 
+[Activity].[OriginalStartDateTimeUtc], 
+[Activity].[_ts] 
+[ActivityResource].[ResourceID]
+```
+
+== Related Topic
+
+link:webschedule-update-data-and-stored-procedures.html[Update Data and Stored Procedures]

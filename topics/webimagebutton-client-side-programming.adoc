@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimagebutton-client-side-programming",
+    "controlName": ["WebImageButton"],
+    "tags": ["Layouts","Styling"],
+    "guid": "{68D3B8D9-8A5D-4E3D-B74F-C8D8641D4574}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Client Side Programming
+
+This section gives information on the client-side features and functionalities of WebImageButton™.
+
+Click the links below to find out more.
+
+* link:webimagebutton-csom-overview.html[CSOM Overview]
+* link:webimagebutton-handle-click-event.html[Handle Click Event]

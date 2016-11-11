@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-webdatamenu",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Navigation","Styling","Theming"],
+    "guid": "{CC8AA933-C2DB-4B6C-97E9-815F44D174A8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDataMenu
+
+View all of your styling modifications that involve the WebDataMenu control in the WebDataMenu canvas. You will find the following control on the WebDataMenu canvas:
+
+* WebDataMenu
+
+image::images/AppStylist_WebDataMenu_Canvas_01.png[The canvas for the WebDataMenu control.]

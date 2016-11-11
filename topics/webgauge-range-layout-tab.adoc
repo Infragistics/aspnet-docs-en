@@ -1,0 +1,30 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-range-layout-tab",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{67E04822-544F-423D-BB97-C3B6D671EA4C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Range Layout Tab
+
+The  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gaugerange.html[Range]"]  property of the WebGauge control is a visual element that begins and ends at specified values on a scale. The Range property allows you to highlight specific parts of the scale. For example on a vehicle tachometer, the high RPM zones, which are usually yellow and red, indicate that the engine is running higher than the optimal load.
+
+You can customize the range of your scale using the Range Layout tab of the Properties panel. To display this tab, click Ranges in the Gauge Explorer (Radial Gauge > Scales > Ranges).
+
+The tab is divided into two panes:
+
+* link:webgauge-value-pane.html[Value]
+* link:webgauge-extent-pane.html[Extent]
+
+image::images/Range_Layout_Tab_01.png[Range Layout panel of the gauge desginer.]
+
+The following screen shot shows a range that was created according to the layout settings specified in the above screen shot.
+
+image::images/Range_Layout_Tab_02.png[Radial gauge with settings based on the range layout shown in screen shot above.]

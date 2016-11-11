@@ -1,0 +1,75 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-cell-merging",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids","Grouping"],
+    "guid": "dc3edfd0-3572-429b-89e7-eabf64edca01",  
+    "buildFlags": [],
+    "createdOn": "2012-04-12T19:42:25.7364723Z"
+}
+|metadata|
+////
+
+= Cell Merging
+
+=== Introduction
+
+The Cell Merging feature of the  _WebHierarchicalDataGrid_™ control allows users to visually merge grid cells that have the same values.
+
+The two pictures that follow demonstrate a column with unmerged (left) and merged (right) values.
+
+[cols="a,a"]
+|====
+|image::images/Cell_Merging(WHDG)_1.png[]|image::images/Cell_Merging(WHDG)_2.png[]
+
+|====
+
+=== Topics
+
+Detailed information regarding Cell Merging is provided in the following topics:
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webhierarchicaldatagrid-cell-merging-overview.html[Cell Merging Overview (WebHierarchicalDataGrid)]
+|This topic provides an overview of the Cell Merging feature of the _Web_ _Hierarchical_ _DataGrid_ .
+
+| link:webhierarchicaldatagrid-enabling-cell-merging.html[Enabling Cell Merging (WebHierarchicalDataGrid)]
+|This topic explains, with code examples, how to enable Cell Merging feature of the _WebHierarchicalDataGrid_ control on sorting and grouping behaviors.
+
+|====
+
+== Related Content
+
+The following topics provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webhierarchicaldatagrid-sorting.html[Sorting]
+|This topic demonstrates, with code examples, how to enable the sorting behavior of the _WebHierarchicalDataGrid_ .
+
+| link:webhierarchicaldatagrid-about-outlook-groupby.html[About Outlook GroupBy]
+|This topic explains the Outlook GroupBy feature of the _WebHierarchicalDataGrid_ and demonstrates, with code examples, how to enable it.
+
+|====
+
+=== Samples
+
+The following samples provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Sample|Purpose
+
+| link:{SamplesURL}/samples/webhierarchicaldatagrid/organization/sortingcellmerging/default.aspx?cn=hierarchical-data-grid&sid=bec77c3a-c432-4f5f-a526-a6e7bb4cc9c2[Cell Merging with Sorting]
+|This sample demonstrates the cell merging capabilities of the sorting behavior in _WebHierarchicalDataGrid_ .
+
+| link:{SamplesURL}/samples/webhierarchicaldatagrid/organization/groupbycellmerging/default.aspx?cn=hierarchical-data-grid&sid=79b0908a-792b-419f-ae00-c6d3947b2866[Cell Merging with Grouping]
+|This sample demonstrates the cell merging capabilities of the grouping in _WebHierarchicalDataGrid_ .
+
+|====

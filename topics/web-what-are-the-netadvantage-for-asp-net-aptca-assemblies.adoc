@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-what-are-the-netadvantage-for-asp-net-aptca-assemblies",
+    "controlName": [],
+    "tags": ["Application Scenarios","FAQ"],
+    "guid": "{951ECF59-3469-4E35-811A-BF0BE998B27D}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= What are the Infragistics ASP.NET APTCA Assemblies?
+
+Starting in the 2006 Volume 3 release, the ASP.NET product includes a set of assemblies marked with the AllowPartiallyTrustedCallersAttribute (APTCA) attribute, and capable of running in a partial-trust environment. These specially-marked assemblies are packaged as a ZIP archive as part of the Infragistics ASP.NET install. You can simply unpack the ZIP and deploy the APTCA assemblies to your Web site(s). If you do not plan to deploy your Web application to a partial-trust environment, then you do not need to unpack the ZIP.
+
+The APTCA assemblies were built from the same executable code as that of the Infragistics ASP.NET assemblies, and have the same version and build number as that of the NetAdvantge for ASP.NET assemblies.
+
+Infragistics has listened to feedback from the development community actively using our ASP.NET controls/components in shared hosting environments where applications are granted only partial trust. Previously, developers were forced to manually build the assemblies from the source code in order to mark the assemblies so they could run under partial trust. By making the APTCA assemblies available, we help to simplify the deployment of your Web applications when running in shared hosting and partial-trust environments.
+
+.Note:
+[NOTE]
+====
+The APTCA assemblies included as part of the Infragistics ASP.NET install are no replacement for the Infragistics ASP.NET product. The Infragistics ASP.NET release packages the release builds of these assemblies (not marked with the APTCA attribute), control designers, documentation, and samples with an installer not present in the APTCA package.
+====
+
+When developing in Microsoft® Visual Studio® .NET, you should continue to use the release (non-APTCA) assemblies. The Infragistics ASP.NET installer places the release assemblies into the Global Assembly Cache (GAC) on your development machine, ensuring that they run with full trust. The enhanced design-time experience provided our designers in Visual Studio .NET currently depend on having full trust.
+
+Medium trust provides a security sandbox intended to help system administrators to securely manage the resources of a Web server that can potentially be shared by multiple users. When you are developing your own development machine, there is no analagous benefit tot be gained by running Visual Studio .NET under a partial trust.
+
+== Related Topic
+
+link:web-deploying-an-application-to-a-partial-trust-environment.html[Deploying an Application to a Partial-Trust Environment]

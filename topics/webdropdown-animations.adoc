@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-animations",
+    "controlName": ["WebDropDown"],
+    "tags": [],
+    "guid": "{B94261ED-1C95-49AD-90AC-C5223633A149}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Animations
+
+WebDropDown™ supports different types of animations for when the drop-down container opens. By default, animations are enabled in WebDropDown. You can turn off this feature by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enableanimations.html[EnableAnimations]"]  property to False. You can easily set the animation duration by setting the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~dropdownanimationduration.html[DropDownAnimationDuration]"]  property. The following are the different types of animations you can set by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~dropdownanimationtype.html[DropDownAnimationType]"]  property:
+
+* *Linear* -- Displays the drop-down container with constant speed, based on the animation duration.
+* *EaseIn* -- Displays the drop-down container slowly at the beginning but accelerates afterwards based on the animation duration.
+* *EaseOut* -- Displays the drop-down container rapidly at the beginning but decelerates afterwards based on the animation duration.
+* *EaseInOut* -- Displays the drop-down container slowly at the beginning but accelerates afterwards and then decelerates at the end, based on the animation duration.
+* *Bounce* -- Displays all the items in the drop-down container, and then closes the drop-down container for some extent and again shows all the items (like a ball bouncing).
+
+You can set the drop-down animation type either through the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebDropDown1.DropDownAnimationType = Infragistics.Web.UI.ListControls.DropDownAnimationTypes.EaseInOut
+----
+
+*In C#:*
+
+----
+WebDropDown1.DropDownAnimationType = Infragistics.Web.UI.ListControls.DropDownAnimationTypes.EaseInOut;
+----

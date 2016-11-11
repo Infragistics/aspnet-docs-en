@@ -1,0 +1,73 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalcmanager-excel-style-formula-support",
+    "controlName": ["WebCalcManager"],
+    "tags": ["Application Scenarios"],
+    "guid": "{25DF8016-1839-4E84-9351-683E030F2C49}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Excel-Style Formula Support
+
+== General Overview
+
+A calculated column is a column with an associated formula. For example, an unbound column named "Total Cost" might have its Formula property set to "[Units] $$*$$ [UnitPrice]". Cells in that column would automatically display the product of the cells in the Units and UnitPrice columns of the same row.
+
+In addition, support was added for more complex column summary formulas beyond the existing sum, average, min, max and count basic formulas, which are currently shared.
+
+There was also a wish to integrate other simple bound controls into a shared calculation network. For example, a textbox might allow you to enter-in an overall 'factor' value that can be referenced by formulas in one (or more) grid(s) on the same form.
+
+In creating the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.calcengine_namespace.html[CalcEngine]"] , the following design constraints apply:
+
+=== Design Constraints
+
+* It must be implemented in such a way that if the feature is not used, then there is no penalty (i.e., No additional assemblies are referenced by the WebGrid™).
+* The CalcEngine should be able to be used without the "overhead" of referencing the grid assembly.
+* A function library needs to be supplied that is a significant subset of Excel's function library.
+* Formulas should be able to be specified at design time as well as run time. The designers should include a 'formula builder' so the user doesn't need to learn formula syntax rules before becoming productive.
+* The supplied function library must allow for user-defined functions to be added, and those functions should be available at design time through the designers.
+* The recalc logic must be performed, and, in the case of the win forms implementation, should provide an asynchronous option so that the UI is not blocked during lengthy recalc operations.
+
+=== Overall Approach
+
+Formula support, although primarily intended to be used with the WebGrid elements, can be used by other controls as well. Simple bound controls including textboxes, labels and WebEditors™ don't have to be modified in any way to support formulas. Complex controls and components such as the WebGrid require modifications in their object models to support formulas.
+
+This functionality is primarily exposed by the UltraCalcEngine class,  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.ultrawebcalcmanager.html[UltraWebCalcManager]"]  component and the formula designer.
+
+* The UltraCalcEngine is a class and not a component or a control. An UltraCalcEngine represents a calculation network; it performs the tasks of formula compilation, formula evaluation and management of reference objects which are the source of values in a formula evaluation, as well as targets of formula evaluations. Typically, you will not interact with the UltraCalcEngine unless you want to perform some advanced task that can't otherwise be accomplished via normal procedures. Under normal circumstances, you don't even have to be aware of UltraCalcEngine interacting with the UltraCalcManager component or simply with the grid.
+* The UltraCalcManager component is what the user instantiates on the component tray of a form to turn on formula support for the controls on the form.
+.Note:
+[NOTE]
+====
+That the formula designers accessed through the grid designer can facilitate this by offering to add the component when the form doesn't already have one.
+====
+
+Every UltraCalcManager creates an UltraCalcEngine (associated with it). The UltraCalcManager component provides WinGrid and other controls that support formula functionality with a way to compile and evaluate the formulas. UltraCalcManager also provides formula support to standalone controls via a .NET extender architecture; this extends the standalone controls and provides a property on each control to let you specify whether the control participates in the calc network. It also provides a property for specifying the formula and a property for specifying the property on the control to use to get (or set) the value. If a formula is specified, then the UltraCalcManager will set the result of the formula evaluation to the specified property on the control. If there is no formula specified, then the control can be used as a source of the value to provide to other formulas on the form. Of course, a control with a formula can also be a source of a value for other formulas. UltraCalcEngine maintains formula dependencies, so it calculates the formulas in the proper order. Note that there can be only one UltraCalcManager component on a form or user-control. Also, there is no cross-form formula support. For example, a formula on one form cannot directly reference an item in another form's recalc network.
+* The formula designer is not a single class or a single entity, but rather a collection of dialogs, UI-type editors and other design-time-related infrastructure to facilitate a user-friendly mechanism for the developer to input formulas. You can specify formulas on grid columns, on standalone controls as well as when creating so called named references. Named references are typically used to associate certain values or formulas with identifiers that can be used in other formulas. For example, one can associate identifier PI with the value 3.14 and refer to it in a column formula as "[PI] $$*$$ 2 $$* $$ [radius]".
+
+=== General Coding Discussion
+
+A formula is a right-value expression that evaluates to (culminates in) a single value. Thus, a formula cannot be an assignment. Examples of formulas are: "[Quantity] $$*$$ [Price]", "SUM([Total])" and "AVG([Price])" . As you will notice, the formula is simply a string that specifies the calculations that need to be made. We have defined customized syntax for formulas. Although this syntax is a typical syntax found in many spreadsheets including Microsoft Excel, due to the fact that WinGrid is not a spreadsheet control, its syntax is slightly different. All identifiers are enclosed in square brackets. In the first of the examples, [Quantity] is an identifier so is [Price]. In the second and third examples, SUM and AVG are functions. We will supply many predefined functions that form a significant portion of functions offered by Microsoft Excel. These functions will have the same names and take the same arguments as the ones in Microsoft Excel. This will make it easy for users who are already familiar with the MS Excel functions to use our formulas.
+
+References are objects that are either the source of values to be used in formula evaluations, or the target of formula evaluation results (or both). Cells in a column that has its Formula property set are targets of formula evaluations. The column's formula is evaluated for every cell in the column and the cell's value is set to the result of the evaluation. These formula column cells can be the source of values for other formulas as well. UltraCalcEngine maintains dependencies between formulas so it knows the order in which they need to be calculated. From the implementation perspective, references are any objects that implement the IUltraCalcReference interface. The developer does not have to be aware of this interface in order to use the functionality.
+
+Named references as mentioned previously are reference objects maintained by UltraCalcManager that implement the IUltraCalcReference interface. UltraCalcManager exposes named references as a keyed collection of references where the key is the name of the named reference. UltraCalcManager provides a user interface during design-time to allow a user to add named references; these references may contain either constant values or formulas.
+
+In order to minimize the addition of assembly dependencies, the following measures were taken, regarding code/assembly organization: A single, new assembly named Infragistics.Win.UltraCalcEngine was created that contains both the UltraCalcEngine class and the UltraCalcManager component. There will be a similarly-named assembly to support web forms. WinGrid and other controls providing formula support do not depend on this assembly. However, WinGrid does need to communicate with UltraCalcManager for things like formula compilation, evaluation, as well as reference management. It does so via interfaces, like  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.calcengine.iultracalcmanager.html[IUltraCalcManager]"] , defined in the Infragistics.WebUI.Shared assemblies.
+
+=== Defined Interfaces in Shared Assemblies
+
+* UltraCalcManager implements IUltraCalcManager. UltraGrid communicates to the CalcEngine via IUltraCalcManager interface for things like formula compilation/evaluation and reference management.
+* IUltraCalcReference is implemented by any object that can be either the source or target of a formula evaluation. It is also implemented by objects that represent steps in a logical pathway to other reference objects. The grid will implement this by objects representing the grid, band, column, row, cell and summary objects.
+* The IUltraCalcParticipant interface is implemented by UltraGrid. IUltraCalcParticipant has a single property called CalcManager of type IUltraCalcManager. UltraCalcManager sets this property on all instances of UltraGrid and other controls that implement this interface on the form to itself. This is used to let the implementing control "shake hands" with the CalcManager and is necessary for supporting semi-trust scenarios.
+
+.Note:
+[NOTE]
+====
+that there can be, at most, one instance of UltraCalcManager on a form. If a user attempts to add a new instance to the form, then the UltraCalcManager that is being added checks to see if an UltraCalcManager already exists on the form, and if so, it throws an exception into the constructor. Throwing this exception into the constructor will result in the IDE aborting the addition of the component and will show an error message to the user.
+====

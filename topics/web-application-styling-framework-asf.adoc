@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-application-styling-framework-asf",
+    "controlName": [],
+    "tags": ["Getting Started","Styling"],
+    "guid": "{67831C12-D2FC-49FE-9114-2B5045C13FA0}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:28:11Z"
+}
+|metadata|
+////
+
+= Application Styling Framework (ASF)
+
+We designed the Application Styling Framework™ (ASF) to make styling your applications as simple as possible. Using the ASF, you can create one style (known as StyleSets) and apply it to any of your applications. Create a StyleSet with Infragistics AppStylist® for ASP.NET, and then apply that StyleSet to your application using the custom APIs found in the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.appstyling_namespace.html[Infragistics.WebUI.Shared.AppStyling namespace]"] .
+
+* link:web-asf-overview.html[ASF Overview] -- The ASF overview will teach you the basics of the ASF and how the different components interact.
+* link:web-setting-up-your-project-for-styling.html[Setting Up Your Project for Styling] -- The application developer needs to know, for example, how to enable Application Styling for a project, and how to change StyleSets at runtime. This is where you can find that information.
+* link:web-styling-your-application.html[Styling Your Application] -- Infragistics AppStylist is a unique stand-alone application that graphic designers can use to create StyleSets. This section of the help will teach you all you need to know about creating Style Libraries, StyleSets, Resources, and much more.

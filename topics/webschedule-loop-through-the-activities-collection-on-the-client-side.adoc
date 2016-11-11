@@ -1,0 +1,42 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-loop-through-the-activities-collection-on-the-client-side",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{16502202-A28A-4AC4-9E6D-C4966B49ADAF}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Loop through the Activities Collection on the Client Side
+
+When working with the WebSchedule™ you may want to loop over the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  available client-side. The code below shows how to loop over the Activities collection client-side and find an activity that's  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment~subject.html[Subject]"]  is New  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"] , and displays an alert box showing its  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment~location.html[Location]"] .
+
+*In JavaScript:*
+
+----
+function LoopOverActivitiesCollection()
+{
+	// Get a reference to the WebScheduleInfo
+	var scheduleInfo = ig_getWebScheduleInfoById("WebScheduleInfo1");
+	// Get the WebScheduleInfo's Activities
+	var activities = scheduleInfo.getActivities(); 
+	var activity = null; 
+	// Loop over the activities collection
+	for(var i = 0; i < activities.length; i++) 
+	{ 
+		// Find the activity that has subject New Appointment
+		if(activities[i].getSubject() == "New Appointment") 
+		{ 
+			activity = activities[i]; 
+			// Return the New Appointments Location
+			alert(activity.getLocation());
+			break;
+		}
+	}
+}
+----

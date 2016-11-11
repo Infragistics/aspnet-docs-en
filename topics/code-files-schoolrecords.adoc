@@ -1,0 +1,199 @@
+﻿////
+
+|metadata|
+{
+    "name": "code-files-schoolrecords",
+    "controlName": [],
+    "tags": [],
+    "guid": "{61C0C3C3-000B-46C5-A005-DE3A7519FCB4}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= SchoolRecords
+
+*In XAML:*
+
+----
+<?xml version="1.0" encoding="utf-8" ?>
+<Main>
+  <Level1 School="Lincoln High School" Class="1998">
+    <Student Name="Julie" StudentId="1234592" LastName="Millville">
+      <Subject SubjectName="Math" Credits="4" Day="Monday" Time="10:00am"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Music" Credits="1" Day="Friday" Time="3:00pm"></Subject>
+      <Subject SubjectName="History" Credits="2" Day="Thursday" Time="5:00pm"></Subject>
+    </Student>
+    <Student Name="Bob" StudentId="8945922" LastName="Smith">
+      <Subject SubjectName="Math" Credits="4" Day="Monday" Time="10:00am"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Art" Credits="1" Day="Friday" Time="3:00pm"></Subject>
+      <Subject SubjectName="History" Credits="2" Day="Thursday" Time="5:00pm"></Subject>
+    </Student>
+    <Student Name="Fred" StudentId="7634592" LastName="Calloway">
+      <Subject SubjectName="Math" Credits="4" Day="Monday" Time="10:00am"></Subject>
+      <Subject SubjectName="Drafting" Credits="2" Day="Tuesday" Time="9:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Music" Credits="1" Day="Friday" Time="3:00pm"></Subject>
+      <Subject SubjectName="History" Credits="2" Day="Thursday" Time="5:00pm"></Subject>
+    </Student>
+    <Student Name="Mauri" StudentId="1553542" LastName="Solberg">
+      <Subject SubjectName="Math" Credits="4" Day="Monday" Time="10:00am"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Music" Credits="1" Day="Friday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Welding" Credits="2" Day="Thursday" Time="2:00pm"></Subject>
+    </Student>
+    <Student Name="Robert" StudentId="1477592" LastName="Hunterdon">
+      <Subject SubjectName="Math" Credits="4" Day="Monday" Time="10:00am"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Physics" Credits="3" Day="Wednesday" Time="1:00pm"></Subject>
+      <Subject SubjectName="Music" Credits="1" Day="Friday" Time="3:00pm"></Subject>
+      <Subject SubjectName="History" Credits="2" Day="Thursday" Time="5:00pm"></Subject>
+    </Student>
+    <Student Name="Heather" StudentId="2390685" LastName="Robbins">
+      <Subject SubjectName="Math" Credits="4" Day="Monday" Time="10:00am"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Art" Credits="1" Day="Friday" Time="3:00pm"></Subject>
+      <Subject SubjectName="History" Credits="2" Day="Thursday" Time="5:00pm"></Subject>
+    </Student>
+  </Level1>
+  <Level1 School="Lincoln High School" Class="1999">
+    <Student Name="Rachel" StudentId="2012342" LastName="Wise">
+      <Subject SubjectName="Physics" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="History" Credits="2" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Ellen" StudentId="3894592" LastName="Williams">
+      <Subject SubjectName="Art" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Keyboarding" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Writing" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="History" Credits="2" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="George" StudentId="1639592" LastName="Williams">
+      <Subject SubjectName="Physics" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Keyboarding" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Theology" Credits="2" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Tony" StudentId="1545342" LastName="Land">
+      <Subject SubjectName="Art" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Writing" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="History" Credits="2" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Bethany" StudentId="4776592" LastName="Krumpt">
+      <Subject SubjectName="Physics" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Theology" Credits="2" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Peggy" StudentId="7423908" LastName="Mertz">
+      <Subject SubjectName="Art" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Keyboarding" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Writing" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="History" Credits="2" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+  </Level1>
+  <Level1 School="Lincoln High School" Class="2000">
+    <Student Name="Carla" StudentId="1234582" LastName="Mennel">
+      <Subject SubjectName="Spanish" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Earth and Science" Credits="4" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Government" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Mindy" StudentId="8634592" LastName="Bakker">
+      <Subject SubjectName="Wood Shop" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Earth and Science" Credits="4" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="German" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Government" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="John" StudentId="1274592" LastName="Henry">
+      <Subject SubjectName="Spanish" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Earth and Science" Credits="4" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Keyboarding" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Travis" StudentId="1755342" LastName="Woods">
+      <Subject SubjectName="Welding" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Earth and Science" Credits="4" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="German" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Keyboarding" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Becky" StudentId="1477652" LastName="Henderson">
+      <Subject SubjectName="Spanish" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="4" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Programming" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Government" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Ann" StudentId="6523908" LastName="Mills">
+      <Subject SubjectName="Spanish" Credits="1" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="Math" Credits="4" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="4" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="German" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Keyboarding" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+  </Level1>
+  <Level1 School="Lincoln High School" Class="2001">
+    <Student Name="Meredith" StudentId="8647592" LastName="Todd">
+      <Subject SubjectName="Graphics Art" Credits="2" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="French" Credits="3" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Physics" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Applications" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Economics" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Margaret" StudentId="1894592" LastName="Long">
+      <Subject SubjectName="Graphics Art" Credits="2" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="German" Credits="3" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Physics" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Writing" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Economics" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Dean" StudentId="1534692" LastName="Calloway">
+      <Subject SubjectName="Wood Shop" Credits="2" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="French" Credits="3" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Chemistry" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Applications" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Economics" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Steve" StudentId="1585342" LastName="Call">
+      <Subject SubjectName="Graphics Art" Credits="2" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="German" Credits="3" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Earth and Science" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Applications" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Government" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Jay" StudentId="1476592" LastName="Spangle">
+      <Subject SubjectName="Graphics Art" Credits="2" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="French" Credits="3" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Physics" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Applications" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Economics" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+    <Student Name="Angie" StudentId="4723908" LastName="Robbins">
+      <Subject SubjectName="Graphics Art" Credits="2" Day="Monday" Time="3:00pm"></Subject>
+      <Subject SubjectName="German" Credits="3" Day="Tuesday" Time="8:00am"></Subject>
+      <Subject SubjectName="Physics" Credits="3" Day="Wednesday" Time="12:00pm"></Subject>
+      <Subject SubjectName="Computer Applications" Credits="2" Day="Thursday" Time="2:00am"></Subject>
+      <Subject SubjectName="Government" Credits="3" Day="Friday" Time="11:00pm"></Subject>
+    </Student>
+  </Level1>
+</Main>
+----

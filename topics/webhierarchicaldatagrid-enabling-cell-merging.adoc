@@ -1,0 +1,107 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-enabling-cell-merging",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": [],
+    "guid": "c795a731-c741-46f8-9bc7-28684bfd40b7",  
+    "buildFlags": [],
+    "createdOn": "2012-04-12T19:49:54.45834Z"
+}
+|metadata|
+////
+
+= Enabling Cell Merging
+
+== Topic Overview
+
+=== Purpose
+
+This topic explains, with code examples, how to enable Cell Merging feature of the  _WebHierarchicalDataGrid_™ control on sorting and grouping behaviors. If you need details about the Cell Merging feature itself, refer to the link:webhierarchicaldatagrid-cell-merging-overview.html[Cell Merging Overview] topic.
+
+=== Required background
+
+The following table lists the materials required as a prerequisite to understanding this topic.
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webhierarchicaldatagrid-sorting.html[Sorting]
+|This topic explains, with code examples, how to enable sorting for the users of the _WebHierarchicalDataGrid_ .
+
+| link:webhierarchicaldatagrid-about-outlook-groupby.html[About Outlook GroupBy]
+|This topic explains the Outlook GroupBy feature of the _WebHierarchicalDataGrid_ and demonstrates, with code examples, how to enable it.
+
+| link:webhierarchicaldatagrid-cell-merging-overview.html[Cell Merging Overview (WebHierarchicalDataGrid)]
+|This topic provides an overview of the Cell Merging feature of the _WebHierarchicalDataGrid_ .
+
+|====
+
+== Enabling Cell Merging
+
+=== Overview
+
+By default, link:webhierarchicaldatagrid-cell-merging.html[Cell Merging] is disabled. To enable it, you need to have the sorting behavior enabled and set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~enablecellmerging.html[EnableCellMerging] property to  _true_  .
+
+For the child bands, you need to enable Cell Merging separately for each band. This is true for the child features, too – you need to specify the merge options individually for every band.
+
+=== Property settings
+
+The following table maps the desired Enable Cell Merging to property settings.
+
+[options="header", cols="a,a,a"]
+|====
+|In order to:|Use this property:|And set it to:
+
+|Enable Cell Merging
+| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~enablecellmerging.html[EnableCellMerging]
+| _true_ 
+
+|====
+
+=== Description
+
+The following code snippets demonstrate how to enable Cell Merging server-side on the sorting and on the grouping behaviors of the grid.
+
+=== Code example: enabling Cell Merging on sorting
+
+*In ASPX:*
+
+[source,html]
+----<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server"> 
+        <Behaviors>
+             <ig:Sorting Enabled="true" EnableCellMerging="true">
+              </ig:Sorting>
+       </Behaviors>
+</ig:WebHierarchicalDataGrid>
+----
+
+=== Code example: enabling Cell Merging on grouping
+
+*In ASPX:*
+
+[source,html]
+----<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server">
+            <GroupingSettings EnableColumnGrouping="True" GroupAreaVisibility="Visible" GroupAreaCssClass="GroupArea" EnableCellMerging="true" />
+</ig:WebHierarchicalDataGrid>
+----
+
+== Related Content
+
+=== Samples
+
+The following samples provide additional information related to this topic.
+
+[options="header", cols="a,a"]
+|====
+|Sample|Purpose
+
+| link:{SamplesURL}/samples/webhierarchicaldatagrid/organization/sortingcellmerging/default.aspx?cn=hierarchical-data-grid&sid=bec77c3a-c432-4f5f-a526-a6e7bb4cc9c2[Cell Merging with Sorting]
+|This sample demonstrates the cell merging capabilities on sorting in _WebHierarchicalDataGrid_ .
+
+| link:{SamplesURL}/samples/webhierarchicaldatagrid/organization/groupbycellmerging/default.aspx?cn=hierarchical-data-grid&sid=79b0908a-792b-419f-ae00-c6d3947b2866[Cell Merging with Grouping]
+|This sample demonstrates the cell merging capabilities on grouping in _WebHierarchicalDataGrid_ .
+
+|====

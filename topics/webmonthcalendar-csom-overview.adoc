@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmonthcalendar-csom-overview",
+    "controlName": ["WebMonthCalendar"],
+    "tags": ["API"],
+    "guid": "{7896940F-4F37-41C1-87A2-A73ACFD81176}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebMonthCalendar™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webmonthcalendar~infragistics.web.ui_namespace.html[WebMonthCalendar CSOM Overview]

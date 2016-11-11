@@ -1,0 +1,51 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-dialog-object",
+    "controlName": [],
+    "tags": ["API","How Do I","Scheduling"],
+    "guid": "{39D8B4D7-DF83-4EBC-AE94-00C1DBC2F8EC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Dialog Object
+
+== Dialog
+
+Object that is passed in as an argument in the ActivityDialogOpening client-side event.
+
+=== Dialog Methods
+
+[cols="a,a"]
+|====
+|*getContentUrl* 
+|The URL that will open when the showDialog is called.
+
+|*getCaption*
+|The caption of the dialog.
+
+|*setCaption*
+|Set the caption of the dialog. 
+
+*Parameters*
+
+_string_ 
+
+An string value to display as the new caption.
+
+|*showDialog*
+|Show the dialog, at the specified height and width. 
+
+*Parameters*
+
+_height_ 
+
+An integer value. _width_ 
+
+An integer value.
+
+|====

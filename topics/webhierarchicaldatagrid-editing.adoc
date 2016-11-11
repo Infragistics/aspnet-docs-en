@@ -1,0 +1,47 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-editing",
+    "controlName": [],
+    "tags": [],
+    "guid": "b9f016d4-2f8c-4ff5-93ee-6085d07734ec",  
+    "buildFlags": [],
+    "createdOn": "2014-03-10T17:06:57.5623255Z"
+}
+|metadata|
+////
+
+= Editing (WebHierarchicalDataGrid)
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the  _WebHierarchicalDataGrid_   __™__  editing behaviors and their use.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webhierarchicaldatagrid-editing-behavior-overview.html[Editing Behavior Overview (WebHierarchicalDataGrid)]
+|This topic provides a conceptual overview of the Editing feature (`EditingCore` behavior) of the _WebHierarchicalDataGrid_ .
+
+| link:webhierarchicaldatagrid-batch-updating.html[Batch Updating]
+|This is a group of topics explaining the Batch Updating functionality and its use.
+
+| link:webhierarchicaldatagrid-cell-editing.html[Cell Editing]
+|This topic explains the Cell Editing behavior and its use.
+
+| link:whdg-row-adding.html[Row Adding (WebHierarchicalDataGrid)]
+|This topic explains the Row Adding behavior and its use.
+
+| link:whdg-row-deleting.html[Row Deleting (WebHierarchicalDataGrid)]
+|This topic explains the Row Deleting behavior and its use.
+
+| link:whdg-row-editing.html[Row Editing (WebHierarchicalDataGrid)]
+|This is a group of topics explaining the Row Editing behavior and its use.
+
+|====

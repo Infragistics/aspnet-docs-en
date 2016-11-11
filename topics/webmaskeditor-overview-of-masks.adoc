@@ -1,0 +1,86 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmaskeditor-overview-of-masks",
+    "controlName": ["WebMaskEditor"],
+    "tags": [],
+    "guid": "{BA143DA5-223B-4C54-B8FA-C8B03370C049}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T14:54:44Z"
+}
+|metadata|
+////
+
+= Masks Overview
+
+[options="header", cols="a,a,a,a"]
+|====
+|Character|Description|Sample Mask|Possible Entry Values
+
+|0
+|Digit (0 through 9, entry required; plus [+] and minus [-] signs not allowed).
+|(000) 000-0000
+|(206) 555-0248
+
+|9
+|Digit or space (entry not required).
+|9999
+|2 0
+
+|#
+|Digit or space (entry required).
+|####
+|2000
+
+|L
+|Letter (A through Z, entry required).
+|>LL00000-0000
+|DB51392-0493
+
+|?
+|Letter (A through Z, entry optional).
+|>L????L?000L0
+|MAY R 452B7
+
+|A
+|Letter or digit (entry required).
+|(000) AAA-AAAA
+|(206) 555-TELE
+
+|a
+|Letter or digit (entry optional).
+|aaaaaaaaaa
+|Item 123
+
+|&
+|Any character or a space (entry required).
+|ISBN 0-&&&&&&&&&-0
+|ISBN 1-55615-507-7
+
+|C
+|Any character or a space (entry optional).
+|CCCCCCCCCCC
+|Hello There
+
+|. , : ; - /
+|These characters are used to separate numeric thousandths, decimals, and date/time values. The actual character used depends on the regional settings specified in Microsoft Windows Control Panel.
+|0,000.00
+|1,999.45
+
+|<
+|All characters that follow this character will be converted to lowercase. Subsequent < characters will actually toggle the lowercase functionality. For example, the mask
+|>L<??????????????
+|Maria
+
+|>
+|All characters that follow this character will be converted to uppercase. Subsequent > characters will actually toggle the uppercase functionality. For example, the mask >LL>LL>LL will cause the uppercase functionality to be turned off for the second LL characters, but then turned back on for the third LL characters.
+|>L<??????????????
+|Joe
+
+|\
+|Characters that follow this character will be treated as a literal part of the mask until the next \ character appears.
+|A\AB\B\\\##\99
+|xABB\# 91
+
+|====

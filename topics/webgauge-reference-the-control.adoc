@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-reference-the-control",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{6C42C59D-E3F7-4C1B-BFF8-55AFA6780C68}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Reference the Control
+
+The following code shows you how to reference the WebGauge™ control on the client side.
+
+*In Javascript:*
+
+----
+var webGauge = ig_getWebGaugeById("WebGauge1");
+----

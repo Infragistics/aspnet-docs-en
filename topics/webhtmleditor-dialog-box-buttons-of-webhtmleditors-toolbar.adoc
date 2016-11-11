@@ -1,0 +1,57 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-dialog-box-buttons-of-webhtmleditors-toolbar",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{7418E769-0043-4E5E-A50D-7249D3740A0A}",  
+    "buildFlags": [],
+    "createdOn": "2006-03-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Dialog Box Buttons of WebHtmlEditor's Toolbar
+
+Instances of the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbardialogbutton.html[ToolbarDialogButton]"]  class launch a pop-up dialog box when clicked by your application's users. Use these buttons for operations that require further user input to complete a task. After clicking a dialog box button, the end user can choose dismiss the dialog box to prevent the task from being performed. The dialog boxes shown can be customized through the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.htmlboxdialog~caption.html[Caption]"]  and  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.htmlboxdialog~text.html[Text]"]  properties of each ToolbarDialogButton object. Some examples of operations that use dialog buttons include those where the user must select a color from a palette (highlight, text foreground color) or specify parameters for a function (find and replace).
+
+The following table lists the CategoryName buttons in the toolbar of the WebHtmlEditor™ control. For a description of each button, see link:webhtmleditor-list-of-webhtmleditors-toolbar-buttons.html[List of WebHtmlEditor's Toolbar Buttons].
+
+[options="header", cols="a,a"]
+|====
+|Button|Button Name
+
+|image::Images/custom.gif[] 
+
+|CustomDialogButton
+
+|image::Images/findreplace.gif[] 
+
+|Find Replace
+
+|image::Images/fontcolor.gif[] 
+
+|FontColor
+
+|image::Images/fonthighlight.gif[] 
+
+|FontHighlight
+
+|image::Images/help.gif[] 
+
+|Help
+
+|image::Images/insertbookmark.gif[] 
+
+|InsertBookmark
+
+|image::Images/insertrule.gif[] 
+
+|InsertRule
+
+|image::Images/specialcharacter.gif[] 
+
+|SpecialCharacter
+
+|====

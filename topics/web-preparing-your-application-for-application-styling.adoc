@@ -1,0 +1,49 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-preparing-your-application-for-application-styling",
+    "controlName": [],
+    "tags": ["Styling"],
+    "guid": "{E32106CC-79FB-4D73-A23F-67B3528184B0}",  
+    "buildFlags": [],
+    "createdOn": "2007-10-04T14:43:23Z"
+}
+|metadata|
+////
+
+= Preparing Your Application for Application Styling
+
+This topic contains valuable information regarding issues you may encounter when enabling Application Styling and how to overcome these issues depending on your application's current state.
+
+== Before You Enable Application Styling on an Existing Application…
+
+* Start by enabling Application Styling on a single control or page. This will allow you to see changes made to the control or page without affecting your entire application. For more information, see link:web-changing-stylesets-at-the-control-level.html[Changing StyleSets at the Control Level] and link:web-enabling-application-styling-using-the-webpagestyler-component.html[Enabling Application Styling Using the WebPageStyler Component].
+
+== Default Settings Have Been Removed
+
+WebGrid™, WebCombo™, and WebListbar™ may appear slightly differently after upgrading to the 2007 Volume 1 release, and enabling Application Styling. In order to complete the link:web-application-styling-framework-asf.html[Application Styling Framework (ASF)], we had to make a difficult decision of breaking backwards compatibility by removing default settings. In the above-mentioned controls, settings such as BorderStyle, BorderWidth, BorderColor would be 'assumed' if a value had not been entered. However, this causes problems in cases where you may have decided to specify a border-style through an external style sheet.
+
+You can work around this by opening the form in Microsoft® Visual Studio® after upgrading your project. In Design View, on the control's shortcut menu, select Set Default Styles. Alternatively, you can call the control's SetDefaultStyleSettings method at run time.
+
+== Common Scenarios When Preparing Your Application for Application Styling
+
+This section describes common scenarios that may relate to the current stage of your Web application. Each scenario has key information to help you prepare your new or existing Web application for Application Styling.
+
+== Creating a New Application
+
+It's important to enable Application Styling before any control is placed on the Web Form. When a control is dropped on the Web Form, all default styles and presets will not be applied to the control. Instead, the control's styles will be determined by the StyleSet (e.g., Appletini) selected when enabling Application Styling. For more information, see link:web-upgrading-web-applications-to-make-use-of-application-styling.html[Upgrading Web Applications to Make Use of Application Styling].
+
+== Working with an Existing Application Without Application Styling Enabled
+
+If your application does not have Application Styling enabled, the default behavior remains. In other words, default styles and/or presets are applied exactly as in the previous versions of Infragistics ASP.NET.
+
+== Enabling Application Styling for an Existing Application
+
+If you enable Application Styling on an existing application, you need to manually remove the styles currently applied to the control through Design or Source View. Since the ASF functions by establishing default CSS values for various style points on a control, the style points set on the control (e.g., a previously applied preset) will take precedence and override the Application Styling values. For Application Styling to be applied correctly, you will need to manually remove the styles currently applied. For more information, see link:web-upgrading-web-applications-to-make-use-of-application-styling.html[Upgrading Web Applications to Make Use of Application Styling].
+
+.Note:
+[NOTE]
+====
+If you use Reset Default Styles, available on the control's shortcut menu at design time, it will clear only default style settings that are set internally by WebGrid. Any other default style not set by WebGrid will remain intact.
+====

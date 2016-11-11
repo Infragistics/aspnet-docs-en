@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalendarview-reference-the-control",
+    "controlName": ["WebCalendarView"],
+    "tags": ["How Do I"],
+    "guid": "{09BAAF98-5103-4721-A442-85FAC3BA8DC6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Reference the Control
+
+There are two ways to reference the WebCalendarView™ control on the client-side. All of WebSchedule™ controls can use the ig_getWebControlById function and pass in the Id of the control to access it on the client. Specifically for the WebCalendarView, you can use the ig_getWebCalendarViewById function to reference the control.
+
+The following code shows you how to reference the control.
+
+*In Javascript:*
+
+----
+var calendarView = ig_getWebCalendarViewById("WebCalendarView1");
+----

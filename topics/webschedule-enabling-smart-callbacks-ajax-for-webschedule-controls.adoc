@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-enabling-smart-callbacks-ajax-for-webschedule-controls",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Performance","Scheduling","Tips and Tricks"],
+    "guid": "{CE9F891D-14E1-444D-8DA2-8B7D939965C9}",  
+    "buildFlags": [],
+    "createdOn": "2006-10-04T00:00:00Z"
+}
+|metadata|
+////
+
+= Enabling Smart Callbacks (AJAX) for WebSchedule Controls
+
+In Infragistics ASP.NET 2006 Volume 2, WebSchedule™ controls can use AJAX to post back only the data that is neccessary. This new feature is called SmartCallbacks. Through changing one property, EnableSmartCallbacks of the WebScheduleInfo™ component, WebSchedule will handle all postbacks behind the scenes, eliminating the need to refresh the entire web page. This way, you will never notice the Web page posting back. Turning on SmartCallbacks is easy – just set the EnableSmartCallbacks property in the Properties window to True. Alternatively, you can set this property in code, as shown below.
+
+*In Visual Basic:*
+
+----
+Me.WebScheduleInfo1.EnableSmartCallbacks = True
+----
+
+*In C#:*
+
+----
+this.webScheduleInfo1.EnableSmartCallbacks = true;
+----

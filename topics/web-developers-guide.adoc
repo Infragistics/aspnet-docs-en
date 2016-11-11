@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-developers-guide",
+    "controlName": [],
+    "tags": ["Getting Started","How Do I"],
+    "guid": "{3F8735E1-3B74-4263-A80E-552293C96156}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= Developer's Guide
+
+This integral section of the help contains a wealth of important information about Infragistics ASP.NET controls and components. This section features hundreds of topics ranging from descriptions of the key features and functionalities of the controls/components to detailed, step-by-step procedures on how to use the controls/components to accomplish common tasks. The knowledge that you'll gain from the Developer's Guide section will give you the power necessary to take full advantage of our controls in order to develop professional, feature-rich UI for your ASP.NET-based applications.
+
+The links below are the top-level entry points into the main sections of the Developer's Guide:
+
+== link:web-assemblies.html[Assemblies]
+
+This section offers a listing of all of our ASP.NET assemblies. It also provides you with useful links about Infragistics ASP.NET APTCA Assemblies and how to add an assembly to your project.
+
+== link:web-architecture.html[Architecture]
+
+Here you will find information on the Web Architecture on which our ASP.NET controls/components are based. That includes both Server-Side and Client-Side Architectural Overview.
+
+== link:web-controls.html[Controls]
+
+This is an essential section in the help, and the one that you will most likely refer to most often. This section contains information on each Infragistics ASP.NET control.
+
+== link:web-styling-your-application2.html[Styling Your Application]
+
+Our ASP.NET controls and components offer a number of ways for you to define their look feel. In this section you'll learn how to set the visual styles and behaviors of the controls and components using presets, skins, and style objects to add polished fit and finish to your applications.
+
+== link:web-deploying-your-application.html[Deploying Your Application]
+
+This section discusses the various ways you can deploy applications that use one or more of our ASP.NET controls and components. It explains the various methods of deployment (i.e., link:web-using-global-assembly-cache-gac-deployment.html[Global Assembly Cache (GAC)], and link:web-deploying-an-application-to-a-hosted-server-environment.html[Hosted Server Environment] deployment).
+
+== link:web-using-version-upgrade-utility.html[Upgrading Your Application]
+
+This section provides you with information on how to upgrade an existing project that uses Infragistics ASP.NET

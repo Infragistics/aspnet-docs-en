@@ -1,0 +1,33 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-get-the-selected-activity-on-the-client-side",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{15DB6018-9139-4739-8569-A02D8C959B62}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Get the Selected Activity on the Client Side
+
+WebDayView™ and WebMonthView™ all have a method called getSelectedActivity off them client-side that can be used to get access to the selected  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"] . This can be used when deleting or updating an activity client-side.
+
+The code snippet below shows this method being used. Notice the testing to make sure that an activity is selected to avoid null errors.
+
+*In JavaScript:*
+
+----
+function GetSelectedActivity()
+{
+	var webDayView = ig_getWebControlById("WebDayView1");
+	var activity = webDayView.getSelectedActivity();
+	if(activity != null)
+		alert(activity.getSubject());
+	else
+		alert("You must select an Activity first");
+}
+----

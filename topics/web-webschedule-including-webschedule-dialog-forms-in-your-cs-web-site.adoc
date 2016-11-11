@@ -1,0 +1,100 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webschedule-including-webschedule-dialog-forms-in-your-cs-web-site",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{DD58036D-C7A8-4447-9605-46E4FDEC3156}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Including WebSchedule Dialog Forms in your CS Web Site
+
+== Before You Begin
+
+The various WebSchedule controls rely on a series of pop-up dialog forms that are provided with the Infragistics ASP.NET product line. In order for your WebSchedule powered application to show these forms, they must be accessible by your application. One way of doing this is to include the various WebSchedule project files to your own application.
+
+== What You Will Accomplish
+
+After reading this topic, you will understand how to correctly add the WebSchedule forms project files and related references to your application.
+
+*Assumptions for the following code example:*
+
+* You already have installed and configured IIS on your machine.
+* You already have an ASP.NET Application configured for File System deployment with one WebForm named Default.aspx.
+* Default.aspx contains an instance of WebMonthView™ that is connected with an instance of WebScheduleInfo™.
+* WebScheduleInfo is connected to an instance of WebScheduleOleDbProvider which uses the in-box Microsoft© AccessDataSource™ control.
+* The Application also has an `App_Data` folder with the WebSchedule2.mdb Microsoft© Access™ database file included as WebSchedule’s database. For information on how to configure WebSchedule to use the WebSchedule2.mdb Microsoft Access Database, see link:webschedule-connecting-webschedule-to-a-database-in-visual-studio-2005.html[Connecting WebSchedule to a Database in Visual Studio 2005].
+
+== Follow These Steps
+
+[start=1]
+. Locate the WebSchedule folder, typically located here: `C:\Inetpub\wwwroot\aspnet_client\Infragistics\200XXCLRXX\Forms\WebSchedule` Make a copy of the WebSchedule folder and its contents to your project’s folder. Move the WebSchedule’s Code Files to your application’s `App_Code` folder
+[start=2]
+. If your application does not have an `App_Code` folder, you can simply right click the application node in the Solution Explorer and from the menu, select Add ASP.NET Folder and select `App_Code`. It is possible that your application may already have an `App_Code` folder.
+[start=3]
+. Move the files ComboBox.cs and MCListBox.cs from the WebSchedule `App_Code` folder to your application’s `App_Code` folder. The `App_Code` folder is a special ASP.NET folder where source code files are placed.
+[start=4]
+. Move the Resource file to your application’s `App_GlobalResources` folder. Much like the `App_Code` folder, check to ensure that you have an `App_GlobalResources` folder. If you do not, please right click the application node in the Solution Explorer and from the menu, select Add ASP.NET Folder and select `App_GlobalResources`. It is possible that your existing application already has an `App_GlobalResources` folder.
+[start=5]
+. Move the file strings.resx from the WebSchedule `App_GlobalResources` folder to your application’s `App_GlobalResources`. The `App_GlobalResources` folder contains files that represent various resources that are separated and exposed for localization.
+[start=6]
+. Delete the `Bin`, `App_Code`, and `App_GlobalResources` folders from the WebSchedule folder.
+[start=7]
+. Delete the Forms.sln, FormsVS08.sln, FormsVS08.suo, Global.asax, Global.asax.cs, Global.asax.resx, licenses.licx, and Web.config files from the WebSchedule folder. Since the main WebSchedule files have been integrated into our main application, these files are no longer needed and can be safely deleted. Your sample application should look similar to the following image. The items that were changed in these steps have been highlighted in yellow:
+
+image::images/Web_WebSchedule_Including_WebSchedule_Dialog_Forms_in_your_CS_Web_Site_01.png[]
+
+[start=8]
+. Since several Forms that contain Infragistics ASP.NET controls have been added, we must ensure that we also add the appropriate references to our application. The WebSchedule application itself contains the following references:
+
+Infragistics.WebUI.Shared.{ProductVersion}
+
+Infragistics.WebUI.WebSchedule.{ProductVersion}
+
+In the Solution Explorer, right click the Application node and select Property Pages. In the Property Pages dialog, select the References node and review the references that are added to your application. If any of these four references do not exist in your application, please click the Add button and from the dialog, under the .NET tab, locate the references that you require, select them and click the OK button. Your application should now contain all of the references that you need. If your application contains other Infragistics ASP.NET controls, it is possible that these references may already have been added previously.
+
+[start=9]
+. Add the following Infragistics section to your ConfigSections in your existing Web.Config file.
+
+*In XML:*
+
+----
+<configuration>
+ <configSections>
+ <!--ADD THE FOLLOWING LINE-->
+ <section name="infragistics.web"
+     type="System.Configuration.SingleTagSectionHandler,System, 
+     Version=1.0.3300.0, 
+     Culture=neutral, 
+     PublicKeyToken=b77a5c561934e089" />
+  <sectionGroup name="system.web.extensions"
+        type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions,
+        Version=3.5.0.0,
+        Culture=neutral,
+        PublicKeyToken=31BF3856AD364E35" >
+   <sectionGroup name="scripting"
+        type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions,
+        Version=3.5.0.0,
+        Culture=neutral,
+        PublicKeyToken=31BF3856AD364E35" >
+   <!--OTHER CONFIGURATION MEMBERS OMITTED FOR BREVITY-->
+   </sectionGroup>
+  </sectionGroup>
+</configSections>
+<!--ADD THE FOLLOWING LINE-->
+<infragistics.web formsDirectory="~/WebSchedule" />
+----
+
+[start=10]
+. Save, compile and run the application.
+[start=11]
+. Double click a day in the WebMonthView control.
+[start=12]
+. If everything was configured correctly, the Appointment Dialog will show, allowing you to enter a new Appointment (shown in the image below)
+
+image::images/Web_WebSchedule_Including_WebSchedule_Dialog_Forms_in_your_VB_NET_Web_Site_02.png[Properties window]

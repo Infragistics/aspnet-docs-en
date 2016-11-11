@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-object",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{B30AB6F1-36D8-4CF8-AFC4-B6E6C5F2B698}",  
+    "buildFlags": [],
+    "createdOn": "2007-06-02T11:55:30Z"
+}
+|metadata|
+////
+
+= WebGauge Object
+
+== UltraWebGauge
+
+The gauge CSOM object. Can be acquired by calling the ig_getWebGaugeById function and providing the gauge's id as a parameter.
+
+=== WebGauge Methods
+
+==== refresh
+
+Updates the gauge image asynchronously. The AsyncRefresh event will be raised on the server before sending a new image to the client browser.

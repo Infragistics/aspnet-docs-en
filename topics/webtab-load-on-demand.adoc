@@ -1,0 +1,28 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-load-on-demand",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I","Performance"],
+    "guid": "{D2BB6F90-CF3B-4C3A-B31D-542B1A194DFD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Load on Demand
+
+WebTab™ provides you with a load-on-demand feature, which means that during the initial load not all the content is fetched, only the content of the selected tab. As the end user selects other tabs, the content of the selected tab is then delivered to the client. However, the content page of the previous tab is cached to avoid calls for the content that is already on the client.
+
+.Note:
+[NOTE]
+====
+When  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabpostbackoptions~enableloadondemand.html[EnableLoadOnDemand]"]  is True, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabpostbackoptions~enableloadondemandviewstate.html[EnableLoadOnDemandViewState]"]  property is used to reload all previously loaded (selected) tabs; otherwise, content of selected tab only is loaded and application is responsible for persistence of view states in child controls of content panes. However, when EnableAjax is enabled, during asynchronous postbacks content panes of all previously loaded tabs are reloaded regardless of the value in the EnableLoadOnDemandViewState property. That is necessary to avoid exceptions raised by failed EventValidation feature of dot-net.
+====
+
+Click the links below to find more information on how to use load-on-demand in WebTab:
+
+* link:webtab-using-load-on-demand-in-webtab.html[Using Load on Demand in WebTab]
+* link:webtab-using-load-on-demand-for-tabs-with-content-url-set.html[Using Load on Demand for Tabs with Content Url Set]

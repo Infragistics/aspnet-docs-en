@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-server-side-behaviors",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{9621BF01-E61A-4C52-B892-9EB4F0F1C81B}",  
+    "buildFlags": [],
+    "createdOn": "2005-01-08T00:00:00Z"
+}
+|metadata|
+////
+
+= Server-Side Behaviors
+
+The WebSchedule™ views have a very robust event model available on the server-side.
+
+For WebScheduleDbProvider, DataBinding, PreRender, Init, Load, Disposed, and Unload events are available.
+
+The WebMonthView™, WebDayView™ and WebCalendarView™ have DataBinding, Disposed, Init, Load, PreRender, and Unload events.
+
+* link:webschedule-activeday-events.html[ActiveDay Events]
+* link:webschedule-set-the-active-day.html[Set the Active Day]
+* link:webschedule-stop-the-webscheduleviews-from-synchronizating.html[Stop the WebScheduleViews from Synchronizing]

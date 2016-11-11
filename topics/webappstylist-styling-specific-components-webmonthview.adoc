@@ -1,0 +1,168 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-styling-specific-components-webmonthview",
+    "controlName": ["WebAppStylist"],
+    "tags": ["Scheduling","Styling","Theming"],
+    "guid": "{DEAEFB9A-9F52-478C-B11B-76FCFE66C4BD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebMonthView
+
+This topic will help you understand the differences and similarities between each of WebMonthView's roles and how they are affected by the CSS cascade. The Role Description Table defines each of WebMonthView's roles and the Role Inheritance Tree shows how certain styles are inherited from others.
+
+== Role Description Table
+
+Below is a list of Roles that you can use to style WebMonthView. Each Role is matched by a class in a cascading style sheet (CSS). These classes, and therefore Roles, are governed by CSS rules. If this is not the case, the exception to the rule will be explained in the table below. This table will help you understand which Roles are inherited from which and how some Roles are unaffected by others.
+
+[options="header", cols="a,a"]
+|====
+|Role|Description
+
+|*Control*
+|These style rules are applied to the frame surrounding the WebMonthView. You can set its border and padding style properties. Note that certain border settings on the Control do not collapse with adjacent border settings assigned to other style roles. The built-in style sets expect the Control style role to have a left border. 
+
+Any settings for the font or foreground color applied on the Control style role may be inheritable by the CaptionHeader style role, if you are designing for a "Standards" mode document type. This is because an HTML <table> element can prevent font settings from passing through to immediate children on browsers running in "Quirks" mode. 
+
+Since the WebMonthView is contained inside of an HTML <table> element, increasing the margin on the Control style role has no effect. The spacing between the cells of the table and the table edge cannot have a different value specified for them than the spacing between adjacent cells inside of the <table> element.
+
+|*WeekNumber*
+|Styles the week numbers that run down the left-side of the WebMonthView. Week numbers are shown only when the developer has set the WeekNumbersVisible property to true. This style role applies to each individual week number – not the entire column of week numbers. 
+
+Week numbers are HTML <table> cells and may share their limitations when you attempt to create separation between them and adjacent cells using margin styles. When styling borders, keep in mind what border styles you have applied on adjacent cells such as the Day, Today, ActiveDay, OtherMonthDay, CompressedDay, and OtherCompressedDay that may appear in the first day of week column on a WeekNumber's right side. Since the week numbers always appear on the left side of the WebMonthView, you will not need to set a left-border if you have set a framing left-border at the Control style role level.
+
+|*MonthDayOfWeekHeader*
+|Styles the day of week column headings that run along the top of the WebMonthView, directly beneath the CaptionHeader. These column headings appear only when the developer has set the DayOfWeekHeadersVisible property to true. This style role applies to each individual column heading – not the entire row of day of week headings. 
+
+Day of week column headings are HTML <table> cells and may share their limitations when you attempt to create separation between them and adjacent cells using margin styles. When styling borders, keep in mind what border styles you have applied on adjacent cells such as the CaptionHeader on top and the variety of DayHeader style roles that may exist to the bottom.
+
+|*CaptionHeader*
+|Styles the caption bar appearing at the top of the WebMonthView control which displays the name of the month and year by default (based on what is set in the CaptionFormatString property), and optionally displays navigation buttons for moving forward or backward to another calendar month. A caption is only displayed when the developer has set the CaptionHeaderVisible property to true.
+
+|*NavigationButton*
+|Provides shared styles that are common to both the left and right navigation buttons appearing in the CaptionHeader. Navigation buttons are displayed only when both the developer has set the NavigationButtonsVisible property and the CaptionHeaderVisible property to true.
+
+|*PreviousButtonArea*
+|Style role governing the overlapping HTML <table> cell that exists where the CaptionHeader row and WeekNumber column cross. You may find controlling the background color on this table cell useful for controlling which background color (whether that of the CaptionHeader or the WeekNumber) prevails. By default, the CaptionHeader will have precedence.
+
+|*Day*
+|Styles the day compartment, which contains the day header at the top and beneath the day header is the area populated by appointments. which is the space beneath the day header populated by appointments. The Day style role is inherited by the Today style role (when today's date is inside of the current month) and the ActiveDay style role. It is distinct from the OtherMonthDay style role in that it represents only day compartments for the current month. 
+
+Because Days are represented as HTML <table> cells that sometimes span multiple rows, they are not affected by margin settings. Choose border styles carefully to avoid double bordering issues with adjacent Days. The built-in style sets generally apply top and left borders to Days.
+
+|*OtherMonthDay*
+|Styles the day compartments of trailing days in the prior month, and leading days in the upcoming month. See the description of the Day style role for more information applicable to OtherMonthDay.
+
+|*Today*
+|Styles a single day compartment belonging to today's date. See the description of the Day style role for more information applicable to Today.
+
+|*Today*
+|Styles a single day compartment representing the actively selected date. When Today and ActiveDay are the same date, the style properties of ActiveDay take precedence. See the description of the Day style role for more information applicable to ActiveDay.
+
+|*OtherMonthDay*
+|Styles the day compartments of trailing days in the prior month, and leading days in the upcoming month. See the description of the Day style role for more information applicable to OtherMonthDay.
+
+|*CompressedDay*
+|Styles the day compartments of weekend days in the current month when the WeekendDisplayFormat property has been set to CompressedWeekend. 
+
+Since two day headers and two day compartments must fit into the height normally reserved for one calendar day, the CompressedDay has less height available for you to work with than other Day style roles. Much of the Day style role information also applies to CompressedDay.
+
+|*OtherCompressedDay*
+|Styles the day compartments of trailing weekend days in the prior month, and leading weekend days in the upcoming month, when the WeekendDisplayFormat property has been set to CompressedWeekend. 
+
+Since two day headers and two day compartments must fit into the height normally reserved for one calendar day, the OtherCompressedDay has less height available for you to work with than other Day style roles. Much of the Day style role information also applies to OtherCompressedDay.
+
+|*DayHeader*
+|Styles the day headers within the current month. A day header will contain the day number, and optionally more information such as the abbreviated month or year. Developers specify the day numbering formats using the DayHeaderFormatString property. The DayHeader style role is inherited by the TodayHeader style role (when today's date is inside of the current month) and the ActiveDayHeader style role. 
+
+While you can specify borders on DayHeaders, you should carefully consider their impact on neighboring cells which may also specify borders to prevent double borders from appearing where you do not intend.
+
+|*OtherMonthDayHeader*
+|Styles the day headers for trailing days of the previous month, and leading days of the following month. See the description of the DayHeader style role for more information applicable to OtherMonthDayHeader.
+
+|*TodayHeader*
+|Styles the single day header corresponding to today's date. See the description of the DayHeader style role for more information applicable to TodayHeader.
+
+|*ActiveDayHeader*
+|Styles the single day header for the actively selected date. When the active date equals today's date, style properties of the ActiveDayHeader take precedence. See the description of the DayHeader style role for more information applicable to ActiveDayHeader. 
+
+When the DayHeader style role defines a background image and the ActiveDayHeader defines a solid background color, the background image hides the background color. In order to comply with the CSS specification you must set the background image on your ActiveDayHeader style role to "none" to override the inherited background image from your DayHeader style role.
+
+|*Appointment*
+|These style rules dictate the default appearance of WebSchedule activities that are not all-day events when they appear in the WebMonthView. 
+
+Appointments render as HTML <div> elements and support all color, font, border, margin and padding style properties. Since Appointments are expected to stack neatly in their containing day compartment, they must be given relative positioning. Text and vertical alignment only affects the positioning of the static activity text appearing inside of the Appointment. 
+
+An Appointment style role should also specify it's own font and color style properties. Appointments appear as child elements in a day compartment. This makes them subject to inheriting the font and color style properties of their day compartment. Under these circumstances, the greater diversity of -Day style roles can cause appointments to display with a seemingly inconsistent font and color.
+
+|*AllDayEvent*
+|These style rules define the default appearance of WebSchedule activities marked as all-day or multi-day events when they appear in the WebMonthView. 
+
+AllDayEvents render as HTML <div> elements and support all color, font, border, margin and padding style properties. Many of the built-in style sets distinguish AllDayEvents from Appointments by giving them a border or background. Text and vertical alignment only affects the positioning of the static activity text appearing inside of the AllDayEvent. 
+
+Like an Appointment, the AllDayEvent style role should specify it's own font and color style properties. It can suffer from the same inherited inconsistencies based on it's container –Day style role as were explained for the Appointment style role.
+
+|*SelectedAppointment*
+|These style rules dictate the selected appearance of WebSchedule activities in the WebMonthView when an end user selects an activity with their mouse. It can inherit from either the Appointment or AllDayEvent style role, depending upon whether the WebSchedule activity being presented was an all-day (or multi-day) activity, and it's style properties supercede those it inherits. 
+
+You can use the SelectedAppointment style role to merge new style properties onto either of the AllDayEvent or Appointment style roles to embellish the selection act. Be careful when changing the inherited font size or weight on selection as it may cause an undesirable jumpiness as the browser must lay out the AllDayEvent or Appointment again with new font metrics. It is recommended that the font size and weight should be the same for all three style roles: AllDayEvent, Appointment, and SelectedAppointment.
+
+|====
+
+== Role Inheritance Tree
+
+The following tree will give you a visual idea of how the roles mentioned above are inherited from each other. If a specific role is inherited from Shared, it is noted in parenthesis next to the role.
+
+* Control
+
+** CaptionHeader
+
+*** NavigationButton
+
+** Day
+
+*** DayHeader
+
+**** ActiveDayHeader
+
+*** Today
+
+**** Appointment
+
+***** SelectedAppointment
+
+**** AllDayEvent
+
+***** SelectedAppointment
+
+**** TodayHeader
+
+***** ActiveDayHeader
+
+**** ActiveDay
+
+** WeekNumber
+** MonthDayOfWeekHeader
+** OtherMonthDay
+
+*** OtherMonthDayHeader
+*** Today
+
+**** Appointment
+
+***** SelectedAppointment
+
+**** AllDayEvent
+
+***** SelectedAppointment
+
+**** TodayHeader
+
+***** ActiveDayHeader
+
+**** ActiveDay

@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatamenu-activateonhover-property",
+    "controlName": ["WebDataMenu"],
+    "tags": [],
+    "guid": "fcc98b82-cc7e-46a7-a4f8-a2b1053bbe6d",  
+    "buildFlags": [],
+    "createdOn": "2010-10-07T11:12:23.134727Z"
+}
+|metadata|
+////
+
+= WebDataMenu ActivateOnHover Property
+
+* New ActivateOnHover property added:
+
+** ActivateOnHover is True (default) – the menu keeps track of the currently focused element. Once the menu is hovered over, it takes focus and expands. Keyboard navigation is also possible at this point. If none of the menu items is clicked and the mouse is moved out of the menu (unhover) the menu collapses and returns the focus to the previously focused element. If the menu is clicked after expanding, when the mouse is moved out, the menu collapses and the focus goes to the body of the page.
+** ActivateOnHover is False – the top-level menu items are only highlighted on hover – without expanding. A mouse click or tabbing in is required to set the focus on the menu and expand the first-level submenu. Then keyboard navigation becomes possible. When the mouse is moved away from the menu (unhover) the menu stays opened until the user clicks outside of it or hits the Esc key.

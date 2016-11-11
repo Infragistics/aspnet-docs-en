@@ -1,0 +1,99 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-ajax-indicator",
+    "controlName": ["WebAjaxIndicator"],
+    "tags": ["Getting Started","How Do I"],
+    "guid": "{8224439D-CEDE-4EE8-9CFE-5A549FD89E44}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= AJAX Indicator
+
+This page contains all of the overview/task-based information related to the Ajax Indicator.
+
+== About AJAX Indicator
+
+The AJAX Indicator displays a wait notification for the end users, while an Infragistics ASP.NET AJAX control is waiting for a callback to complete. The indicator will show itself when a control initiates an AJAX call, and automatically hides itself once the callback is complete. AJAX Indicator can be configured to alert the end user in the form of an image or in html. By default, a shared Ajax Indicator exists for all Infragistics™ AJAX controls with common property settings.
+
+The AJAX Indicator can be set for each control, or globally for an entire application through the web.config file. The shared AJAX Indicator settings can be overridden on the control level AJAX settings. If the AJAX Indicator set for a particular control has conflicting properties with the globally set AJAX Indicator, the control level settings have priority.
+
+The AJAX Indicator can be enabled or disabled using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~enabled.html[Enabled]"]  property which is of type DefaultableBoolean. The Enabled property of each InfragisticsAJAX control is set to NotSet, by default. The Location of the Indicator can be set to be placed anywhere on the page or anywhere relative to the control. This can be accomplished by using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~location.html[Location]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~relativetocontrol.html[RelativeToControl]"]  property settings. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~text.html[Text]"]  or the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~imageurl.html[ImageUrl]"]  property can be used to show the wait message, and if both the properties are set the Text has priority over the ImageUrl property.
+
+== Using AJAX Indicator
+
+== Configuring AJAX Indicator at Control Level
+
+The Ajax Indicator can be enabled or disabled for each Ajax control used in your application. By default the shared Ajax indicator is enabled. Hence, if you want to disable it specifically for any control you can do so by setting the control level Ajax Indicator  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~enabled.html[Enabled]"]  property to false. The control level AJAX Indicator property settings have priority over the shared Indicator settings.
+
+The Indicator’s wait message can be configured to display either Text or an image that can be set using the Text and ImageUrl properties respectively. If both properties are set, then the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~text.html[Text]"]  property has priority over the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.ajaxindicator~imageurl.html[ImageUrl]"]  property. All control level settings for the Ajax Indicator can be set both at design time and run time.
+
+image::Images/WebAjaxIndicator_Configuring_Ajax_Indicator_at_Control_level.png[]
+
+*In Visual Basic:*
+
+----
+Me.WebDataGrid1.AjaxIndicator.Enabled = Infragistics.Web.UI.DefaultableBoolean.[True] 
+Me.WebDataGrid1.AjaxIndicator.Text = "Ajax Call Wait Indicator" 
+Me.WebDataGrid1.AjaxIndicator.Location = Infragistics.Web.UI.RelativeLocation.AboveCenter 
+' Set the location of the Ajax Indicator specific to the control. 
+Me.WebDataGrid1.AjaxIndicator.RelativeToControl = Infragistics.Web.UI.DefaultableBoolean.[True] 
+' Blocks or Grey out the control during Ajax call 
+Me.WebDataGrid1.AjaxIndicator.BlockArea = Infragistics.Web.UI.AjaxIndicatorBlockArea.Control
+----
+
+*In C#:*
+
+----
+this.WebDataGrid1.AjaxIndicator.Enabled = Infragistics.Web.UI.DefaultableBoolean.True;
+this.WebDataGrid1.AjaxIndicator.Text = "Ajax Call Wait Indicator";
+this.WebDataGrid1.AjaxIndicator.Location = Infragistics.Web.UI.RelativeLocation.AboveCenter;
+// Set the location of the Ajax Indicator specific to the control.
+this.WebDataGrid1.AjaxIndicator.RelativeToControl = Infragistics.Web.UI.DefaultableBoolean.True;
+// Blocks or Grey out the control during Ajax call
+this.WebDataGrid1.AjaxIndicator.BlockArea = Infragistics.Web.UI.AjaxIndicatorBlockArea.Control;
+----
+
+== Configuring AJAX Indicator Globally
+
+The Ajax Indicator supports configuration settings within the web.config file. Configuration through the web.config file affects the Ajax Indicators on all pages in an application. The following properties can be specified within the section of the web.config file:
+
+* ajaxIndicatorEnabled
+* ajaxIndicatorBlockArea
+* ajaxIndicatorImageUrl
+* ajaxIndicatorText
+
+The following code example enables Ajax indicator throughout the application, for all Ajax controls on all pages. It also disables or greys out the entire page during an Ajax call.
+
+----
+<infragistics.web styleSetName="Default" styleSetPath="~/ig_res" ajaxIndicatorEnabled="true" ajaxIndicatorBlockArea ="page"/>
+----
+
+By default a globally shared Ajax Indicator is enabled for all Infragistics™ AJAX controls, and all the controls share common property settings corresponding to the indicator. A default Ajax Indicator image is applied to all the controls which is located in your web application here: *ig_res/(Default)/images/ig_ajaxIndicator.gif* These default settings of the the shared Ajax Indicator can be modified from both server and client side code. The following code shows how you can get a reference to the shared Ajax Indicator through server and client-side code.
+
+*In Visual Basic:*
+
+----
+Dim ai As Infragistics.Web.UI.AjaxIndicator = Infragistics.Web.UI.Framework.AppSettings.SharedAjaxIndicator
+ai.Location = Infragistics.Web.UI.RelativeLocation.BottomCenter 
+ai.BlockArea = Infragistics.Web.UI.AjaxIndicatorBlockArea.Control
+----
+
+*In C#:*
+
+----
+Infragistics.Web.UI.AjaxIndicator ai = Infragistics.Web.UI.Framework.AppSettings.SharedAjaxIndicator;
+ai.Location = Infragistics.Web.UI.RelativeLocation.BottomCenter;
+ai.BlockArea = Infragistics.Web.UI.AjaxIndicatorBlockArea.Control;
+----
+
+*In JavaScript:*
+
+----
+var ai = $util.get_ajaxIndicator();
+ai.set_imageUrl('myImage.gif');
+----

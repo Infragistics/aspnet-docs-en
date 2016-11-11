@@ -1,0 +1,66 @@
+﻿////
+
+|metadata|
+{
+    "name": "draganddropframework-about-drag-and-drop-framework",
+    "controlName": ["WebDragandDropFramework"],
+    "tags": ["Extending","Getting Started","Patterns and Practices"],
+    "guid": "{B3D534BA-BD98-42A4-9430-9C01A8917C69}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= About Drag and Drop Framework
+
+The Drag and Drop Framework allows you to easily add drag and drop functionality to your application. This allows for real-time moving of elements and more user-friendly interactions. The framework provides you with the scripts necessary to handle the drag and drop process as well as create custom animations.
+
+Utilizing the Drag and Drop Framework requires that you set a source and target element. The source element can be dragged and dropped onto the target element. In some cases, it is as simple as that to implement drag and drop in your application.
+
+*Required Files*
+
+The Drag and Drop Framework consists of the following Javascript files in the Infragistics4.Web.v{ProductVersion} assembly:
+
+* igDragDrop.js
+* 5_igObjects.js
+* igAnimations.js
+
+You will need to include these files in your application when implementing drag and drop functionality.
+
+*Requirements for Drag and Drop*
+
+For source elements:
+
+* MouseDown
+* MouseMove
+
+For target elements:
+
+* MouseUp
+* MouseMove
+
+The MouseUp event of the document is also listened for.
+
+*Drag and Drop Actions*
+
+There are two ways in which elements can behave as they are dropped onto the target.
+
+* Append – each element is placed at the end of the list of elements inside the target.
+* Insert – each element is placed at the beginning of the list of elements.
+
+*Drag and Drop Modes*
+
+There are 4 modes that determine the end-result of a drag and drop operation.
+
+* None – the effect of the drag and drop operation is left up to you.
+* Copy – a clone of the original element is made and placed inside the target element.
+* Move – a clone of the original element is placed inside the target element and the original element is removed.
+* Default – The default drag and drop is a move; the user can also hold the Ctrl key and drag to make the operation result in a copy.
+
+*Key Classes*
+
+There are two classes in the Drag and Drop Framework that controls most of the work done in a drag and drop operation.
+
+* Infragistics.Web.UI.DragDropManager – A static class that manages and provides information on drag and drop operations on a page. This object can be accessed at any time and contains information such as if a drag and drop operation is occurring, and if so, any information about that operation. It also provides the source and target information for a drag and drop operation.
+* Infragistics.Web.UI.DragDropBehavior – An object that allows the developer to specify elements and/or UIObjects that should be source elements and/or target elements. This object handles all aspects of a drag operation and provides events that allow the developer to interact with the operation. The object also controls other settings pertaining to the drag and drop behavior, such as the drop action and mode, cursor, and the markup to represent an item being dragged.

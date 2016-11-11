@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "webslider-set-websliders-track-behavior",
+    "controlName": ["WebSlider"],
+    "tags": ["Editing","How Do I"],
+    "guid": "{97CD9165-F867-4641-901D-B4EA07A12107}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-05T16:16:33Z"
+}
+|metadata|
+////
+
+= Set WebSlider's Track Behavior
+
+You can control how WebSlider™ behaves when your end users single-click or double-click the track. WebSlider's thumb can either move to the clicked point, or do nothing.
+
+You can control the track’s behavior by setting the appropriate properties:
+
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.slidertrack~clickaction.html[ClickAction]"]  -- On a click, the thumb will move to the clicked point by setting the ClickAction property to MoveToPoint.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.slidertrack~doubleclickaction.html[DoubleClickAction]"]  -- On a double-click, the thumb can move to the clicked point by setting the DoubleClickAction property to MoveToPoint.
+
+The following example code demonstrates how to move the thumb on a mouse click.
+
+*In Visual Basic:*
+
+----
+Me.WebSlider1.Track.ClickAction = _
+Infragistics.Web.UI.EditorControls.SliderTrackClickAction.MoveToPoint
+----
+
+*In C#:*
+
+----
+this.WebSlider1.Track.ClickAction = Infragistics.Web.UI.EditorControls.SliderTrackClickAction.MoveToPoint;
+----
+
+== Related Topic
+
+link:webslider-set-websliders-track-appearance.html[Set WebSlider's Track Appearance]

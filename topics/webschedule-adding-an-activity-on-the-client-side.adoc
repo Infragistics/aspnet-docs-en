@@ -1,0 +1,86 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-adding-an-activity-on-the-client-side",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{8A8DCCA9-4892-45BF-B868-D33935763F1E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Adding an Activity on the Client Side
+
+== Before You Begin:
+
+The WebSchedule™ allows  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[activities]"]  to be added Client-Side. This walk through goes over how you go about adding an activity client-side. The main method used to add an activity client-side is called addActivity.
+
+The addActivity method takes two parameters:
+
+[start=1]
+. Activity: the actual activity object you wish to add.
+[start=2]
+. id: a string value which is retrievable in the Adding Client and Server events.
+
+The following JavaScript code will demonstrate how to dynamically add and activity client-side.
+
+== Follow These Steps:
+
+[start=1]
+. *Setup Project*
+
+Create an ASP.NET project and setup the WebSchedule controls. For information on how to do this you can review the link:webschedule-using-the-webschedule-controls-quick-design.html[Quick Start using the Web Forms Designer] or link:webschedule-creating-webschedule-controls-using-code.html[Setting Up the WebSchedule in Code].
+[start=2]
+. After you have the project setup you will need to have a button or something that you can click to trigger a JavaScript event.
+[start=3]
+. *Getting Reference to WebScheduleInfo*
+
+First you will need a reference to the WebSchdeuleInfo™ object. You can get this object by passing in the ClientId of your WebScheduleInfo into the following utility function:
+
+*In JavaScript:*
+
+----
+var scheduleInfo = ig_getWebScheduleInfoById("WebScheduleInfo1");
+----
+
+[start=4]
+. *Create new Activity*
+
+Next you will need to create a new empty Activity. This can be done by getting the activities collection and calling the function createActivity();
+
+*In JavaScript:*
+
+----
+var appointment = scheduleInfo.getActivities().createActivity();
+----
+
+[start=5]
+. You can then set various properties using the setter methods on the appointment object:
+
+*In JavaScript:*
+
+----
+appointment.setStartDateTime(new Date());
+appointment.setSubject("New Appointment");
+----
+
+[start=6]
+. *Add Activity*
+
+Finally you can call addActivity, which is a method off of the WebScheduleInfo object. This method will trigger a postback and both the client and server side Adding events.
+
+*In JavaScript:*
+
+----
+scheduleInfo.addActivity(appointment, "");
+----
+
+[start=7]
+. This is the basics to adding an activity client-side.
+
+== What You Accomplished:
+
+This walk through was designed to explain the steps to adding an Activity client-side.

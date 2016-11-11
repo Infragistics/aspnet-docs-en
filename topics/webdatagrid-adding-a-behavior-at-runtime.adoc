@@ -1,0 +1,123 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-adding-a-behavior-at-runtime",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids"],
+    "guid": "{D8BD4ACE-5437-46E1-B600-F208F50CA9AA}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Adding a Behavior at Runtime
+
+Enabling a behavior at runtime is simple; you only need to call the generic  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridbehaviorcollection~createbehavior.html[CreateBehavior]"]  method. This method requires a specific behavior type. It creates the behavior and adds it to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. Every behavior has a class that represents the type of behavior (e.g.,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection.html[Selection]"] ).
+
+The following table lists the behaviors and their corresponding classes.
+
+[options="header", cols="a,a"]
+|====
+|Behavior|Class Name
+
+|
+
+|Activation
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.activation.html[Activation]"] 
+
+|Selection
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection.html[Selection]"] 
+
+|Row Selectors
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowselectors.html[RowSelectors]"] 
+
+|Grid Editing
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"] 
+
+|Cell Editing
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"] 
+
+|Row Adding
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding.html[RowAdding]"] 
+
+|Row Deleting
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"] 
+
+|Row Editing
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowediting.html[RowEditing]"] 
+
+|Edit Template
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate.html[RowEditingTemplate]"] 
+
+|Filtering
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering.html[Filtering]"] 
+
+|Sorting
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting.html[Sorting]"] 
+
+|Paging
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"] 
+
+|Column Resizing
+| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizing.html[ColumnResizing]"] 
+
+|====
+
+WebDataGrid™ provides read-only properties of the same name as the classes previously listed so that you can conveniently access a behavior once you have added it to the behaviors collection.
+
+The following code shows how to add the selection behavior to WebDataGrid using the CreateBehavior method. It also shows the equivalent code if you decide to create a behavior and add it manually.
+
+.Note:
+[NOTE]
+====
+As with adding controls dynamically, if you create a behavior manually, make sure you add the behavior to the Behaviors collection before setting its properties in order to keep those settings in ViewState.
+====
+
+*In Visual Basic:*
+
+----
+Dim gridSelection As Selection = Me.WebDataGrid1.Behaviors.CreateBehavior(Of Selection)() 
+gridSelection.CellClickAction = CellClickAction.Row 
+gridSelection.RowSelectType = SelectType.Multiple 
+' THE EQUIVALENT CODE IS SHOWN BELOW 
+' To get reference to a behavior, use its property of the same name 
+Dim selectionBehavior As Selection = Me.WebDataGrid1.Behaviors.Selection 
+' Check if behavior does not exist 
+If selectionBehavior Is Nothing Then 
+        ' Create the behavior 
+        Dim selection As New Selection() 
+        ' Add to behaviors collection first before setting its properties
+        Me.WebDataGrid1.Behaviors.Add(selection)
+        ' Set its options 
+        selection.CellClickAction = CellClickAction.Row 
+        selection.RowSelectType = SelectType.Multiple 
+End If
+----
+
+*In C#:*
+
+----
+Selection gridSelection = this.WebDataGrid1.Behaviors.CreateBehavior<Selection>();
+gridSelection.CellClickAction = CellClickAction.Row;
+gridSelection.RowSelectType = SelectType.Multiple;
+// THE EQUIVALENT CODE IS SHOWN BELOW
+// To get reference to a behavior, use its property of the same name
+Selection selectionBehavior = this.WebDataGrid1.Behaviors.Selection;
+// Check if behavior does not exist
+if (selectionBehavior == null)
+{
+        // Create the behavior
+        Selection selection = new Selection();
+        // Add to behaviors collection
+        this.WebDataGrid1.Behaviors.Add(selection);
+        // Set its options
+        selection.CellClickAction = CellClickAction.Row;
+        selection.RowSelectType = SelectType.Multiple;
+}
+----
+
+== Related Topic
+
+link:webdatagrid-using-behaviors.html[Adding a Behavior at Design Time]

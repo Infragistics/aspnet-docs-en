@@ -1,0 +1,17 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatatree-drag-and-drop-about",
+    "controlName": [],
+    "tags": [],
+    "guid": "897ccb88-330e-4332-8618-08dcb0ad49aa",  
+    "buildFlags": [],
+    "createdOn": "2010-05-31T08:35:55.5685924Z"
+}
+|metadata|
+////
+
+= About Drag and Drop
+
+The WebDataTree Drag and Drop feature provides functionality to drag node, or group of nodes and drop them on same WebDataTree, or on another WebDataTree control. The behavior has three modes – default, Copy and Move. The default mode works as Copy if we hold down Ctrl key pressed, otherwise it works like Move. You can insert before, between and after node, as well into chosen node. In this case the dropped node become child of the node we drop dragged one. While we move the dragged node over the other nodes tooltips appear where we want to drop the selected node. If we move between two nodes a line appears between them and next to it appears text “Insert between uppernode and node” We have same option for “insert before node” and “insert after node”. There is both server side and client side, event associated with drag and drop – you can read more about them on ClientSideEvents and ServerSideEvents topics. Ones you set both properties on the WebDataTree $$->$$ DragDropSEttings AllowDorop and EnableDragDrop to true, you have fully functional drag and drop feature. You don’t need to handle NodeDragged server-side event every time node is dragged. Also you can cancel dragging by hitting Escape key, or dropping dragged node outside the WebDataTree area.

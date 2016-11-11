@@ -1,0 +1,57 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmonthcalendar-using-webmonthcalendar",
+    "controlName": ["WebMonthCalendar"],
+    "tags": [],
+    "guid": "{1FF81861-B87A-45C7-A2E6-43339675A78D}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebMonthCalendar
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebMonthCalendar™.
+
+link:webmonthcalendar-webmonthcalendar-smart-tag.html[WebMonthCalendar Smart Tag]
+
+This topic introduces WebMonthCalendar Smart Tag anchor and pop-up panel, which give the ability to see and set most of the control properties and settings.
+
+link:webmonthcalendar-keyboard-navigation.html[Keyboard Navigation]
+
+In this topic can be found a table with the keyboard navigation functionallity that WebMonthCalendar supports.
+
+link:webmonthcalendar-creating-custom-days-in-webmonthcalendar.html[Creating Custom Days in WebMonthCalendar]
+
+In this topic you can learn how to customize specific days in WebMonthCalendar.
+
+link:webmonthcalendar-day-name-formats-in-webmonthcalendar.html[Day Name Formats in WebMonthCalendar]
+
+In this topic you will learn which WebMonthCalendar property is used to set different display formats for the days of the week.
+
+link:webmonthcalendar-hiding-days-of-previous-and-next-months-in-webmonthcalendar.html[Hiding Days of Previous and Next Months in WebMonthCalendar]
+
+This topic explains which WebMonthCalendar property is used to hide other month days from displaying.
+
+link:webmonthcalendar-hiding-header-and-footer-of-webmonthcalendar.html[Hiding Header and Footer of WebMonthCalendar]
+
+In this topic you will learn which are the ways to hide WebMonthCalendar header and footer from displaying.
+
+link:webmonthcalendar-list-animations-in-webmonthcalendar.html[List Animations in WebMonthCalendar]
+
+In this topic are listed the animations you can apply to WebMonthCalendar control.
+
+link:webmonthcalenadar-set-a-custom-day-as-the-first-day-of-the-week.html[Set a Custom Day as the First Day of the Week]
+
+This topic illustrates how to set any day as the first day of the week.
+
+link:webmonthcalendar-enable-week-numbers-in-webmonthcalendar.html[Enable Week Numbers in WebMonthCalendar]
+
+Follow this link and you will learn how to enable week numbers in WebMonthCalendar and show them to the end-user.
+
+link:webmonthcalendar-setting-min-and-max-dates-for-webmonthcalendar.html[Setting Min and Max Dates for WebMonthCalendar]
+
+This topic shows how to set a range of days you want to display in the WebMonthCalendar control.

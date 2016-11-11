@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-browser-support",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{6078E0E2-1571-47CC-A03D-7B5EC613E337}",  
+    "buildFlags": [],
+    "createdOn": "2005-01-08T00:00:00Z"
+}
+|metadata|
+////
+
+= Browser Support
+
+The WebSchedule™ controls are designed to function in several different browsers, including Internet Explorer 5.5 and later. The WebSchedule controls are also fully supported in Firefox, and Netscape.
+
+* link:webschedule-web-page-refresh-limitation.html[Web Page Refresh Limitation]

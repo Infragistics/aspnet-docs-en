@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-api-reference-guide",
+    "controlName": [],
+    "tags": ["API"],
+    "guid": "{99F2DA1D-F1DB-4954-8FDB-F8A73F0775DE}",  
+    "buildFlags": [],
+    "createdOn": "2005-06-10T00:00:00Z"
+}
+|metadata|
+////
+
+= API Reference Guide
+
+The application programming interface (API) is the foundation for all of our ASP.NET controls and components. The API Reference Guide offers a definitive listing of all the Infragistics ASP.NET classes, enumerations, interfaces, and delegates -- organized by ASP.NET assembly.
+
+* link:infragistics4.webui.documents.excel.v{ProductVersion}.html[Infragistics.Documents.Excel]
+* link:infragistics4.webui.documents.io.v{ProductVersion}.html[Infragistics.Documents.IO]
+* link:infragistics4.webui.documents.reports.v{ProductVersion}.html[Infragistics.Documents.Reports]
+* link:infragistics4.webui.documents.word.v{ProductVersion}.html[Infragistics.Documents.Word]
+* link:infragistics4.webui.documents.core.v{ProductVersion}.html[Infragistics.Documents.Core]
+* link:infragistics4.web.v{ProductVersion}.html[Infragistics.Web]
+* link:infragistics4.web.jquery.v{ProductVersion}.html[Infragistics.Web.jQuery]
+* link:infragistics4.webui.misc.v{ProductVersion}.html[Infragistics.WebUI.Misc]
+* link:infragistics4.webui.shared.v{ProductVersion}.html[Infragistics.WebUI.Shared]
+* link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}.html[Infragistics.WebUI.UltraWebCalcManager]
+* link:infragistics4.webui.ultrawebchart.v{ProductVersion}.html[Infragistics.WebUI.UltraWebChart]
+* link:infragistics4.webui.ultrawebgauge.v{ProductVersion}.html[Infragistics.WebUI.UltraWebGauge]
+* link:infragistics4.webui.webdatainput.v{ProductVersion}.html[Infragistics.WebUI.WebDataInput]
+* link:infragistics4.webui.webhtmleditor.v{ProductVersion}.html[Infragistics.WebUI.WebHtmlEditor]
+* link:infragistics4.webui.webresizingextender.v{ProductVersion}.html[Infragistics.WebUI.WebResizingExtender]
+* link:infragistics4.webui.webschedule.v{ProductVersion}.html[Infragistics.WebUI.WebSchedule]
+* link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}.html[Infragistics.WebUI.WebScheduleDataProvider]

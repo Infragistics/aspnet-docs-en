@@ -1,0 +1,95 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexplorerbar-clientevents",
+    "controlName": ["WebExplorerBar"],
+    "tags": ["Events","How Do I"],
+    "guid": "{34682806-FDD5-4DD3-A3AC-3C593EE0072D}",  
+    "buildFlags": [],
+    "createdOn": "2010-01-03T22:50:44Z"
+}
+|metadata|
+////
+
+= Client-Side Events
+
+WebExplorerBar™ has a large variety of client-side events, which provides the developer with flexibility to create interactive applications. Here is a list of available events:
+
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemclick.html[ItemClick]"]  – occurs whenever mouse click occurs for a group or item.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemhovered.html[ItemHovered]"]  – occurs whenever a group or item is hovered.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemunhovered.html[ItemUnhovered]"]  – occurs whenever a group or item is unhovered.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemexpanding.html[ItemExpanding]"]  – occurs whenever a group or item is going to be expanded. This can be canceled.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemexpanded.html[ItemExpanded]"]  – occurs whenever a group or item has just expanded.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemcollapsing.html[ItemCollapsing]"]  – occurs whenever a group or item is going to be collapsed. This can be canceled.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemcollapsed.html[ItemCollapsed]"]  – occurs whenever a group or item has just been collapsed.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itempopulating.html[ItemPopulating]"]  – occurs before a group fetches its child items from the server. This can be canceled.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itempopulated.html[ItemPopulated]"]  – occurs after a group fetches its child items from the server.
+
+.Note:
+[NOTE]
+====
+All these client-side events take a group or an item as event argument. You can get an instance of group or item for which the event is raised by calling link:webexplorerbar~infragistics.web.ui.explorerbareventargs~getexplorerbaritem.html[getExplorerBarItem] method.
+====
+
+The following example shows how to wire up to ItemClicked event:
+
+*In HTML:*
+
+----
+<ig:WebExplorerBar ID="WebExplorerBar1" runat="server">
+  <ClientEvents ItemClick="ItemClickHandler" />
+    <Groups>
+       <ig:ExplorerBarGroup Text="FirstGroup" Selected="true">
+           <Items>
+              <ig:ExplorerBarItem Text="FirstItem">
+              </ig:ExplorerBarItem>
+           </Items>
+       </ig:ExplorerBarGroup>
+    </Groups>
+</ig:WebExplorerBar>
+----
+
+*In Visual Basic:*
+
+----
+Me.WebExplorerBar1.ClientEvents.ItemClick = "ItemClickHandler"
+----
+
+*In C#:*
+
+----
+this.WebExplorerBar1.ClientEvents.ItemClick = "ItemClickHandler";
+----
+
+*In Javascript:*
+
+----
+function ItemClickHandler(sender, args) {
+    alert("You clicked " + args.getExplorerBarItem().get_text());
+}
+----
+
+== Related Topics
+
+link:webexplorerbar-smart-tag.html[WebExplorerBar Smart Tag]
+
+link:webexplorerbar-keyboard-navigation.html[Keyboard Navigation]
+
+link:webexplorerbar-display-modes.html[Display Modes]
+
+link:webexplorerbar-height-properties.html[WebExplorerBar Height Properties]
+
+link:webexplorerbar-setting-navigateurl-and-target-properties.html[Setting NavigateURL and Target Properties]
+
+link:webexplorerbar-binding-to-an-xml-data-source.html[Binding to an XML Data Source]
+
+link:webexplorerbar-binding-to-webhierarchcialdatasource.html[Binding to WebHierarchcialDataSource]
+
+link:webexplorerbar-serverevents.html[Server-Side Events]
+
+link:webexplorerbar-selection-behavior.html[Selection Behavior]
+
+link:webexplorerbar-clientside-api.html[ClientSide API]
+
+link:webexplorerbar-styling.html[CSS Class Properties]

@@ -1,0 +1,233 @@
+﻿////
+|metadata|
+{
+    "name": "web-accessibility-overview",
+    "controlName": [],
+    "tags": ["Section 508"],
+    "guid": "{30CE7EE7-B5A5-4386-B2BC-531715806CEA}",
+    "buildFlags": [],
+    "createdOn": "2006-01-09T12:16:33Z"
+}
+|metadata|
+////
+
+= Accessibility Overview
+
+link:http://www.section508.gov/[Section 508] of the Rehabilitation Act was amended in 1998 by Congress to require all Federal agencies to make their electronic and information technology accessible to people with disabilities. Since then, Section 508 compliance has not only been a requirement in government agencies, but it's also important when providing software solutions and designing Web pages.
+
+Section 1194.22 of the Section 508 law specifically targets Web-based intranet and internet information and systems, and contain a set of 16 rules to follow. The following chart helps you assess your application's accessibility compliance by detailing how the Infragistics ASP.NET controls adhere to individual accessibility rules.
+
+The matrix below provides a high-level outline of the accessibility support provided by our visual controls (and related components). To learn more about an individual control/component's accessibility compliance, click the name of the control/component.
+
+[options="header", cols="a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a"]
+|====
+|Control/Component
+
+|(a)|(b)|(c)|(d)|(e)|(f)|(g)|(h)|(i)|(j)|(k)|(l)|(m)|(n)|(o)|(p)
+
+| link:webcalendarview-accessibility-compliance.html[WebCalendarView]
+|image::images/greenCheck.png[]
+||||||
+|image::images/greenCheck.png[]
+||||||||
+
+| link:chart-webchart-accessibility-compliance.html[WebChart]
+|image::images/greenCheck.png[]
+||||
+|image::images/greenCheck.png[]
+||||||||||
+
+| link:webcurrencyeditor-accessibility-compliance.html[WebCurrencyEditor]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webdatagrid-accessibility-compliance.html[WebDataGrid]
+||
+|image::images/greenCheck.png[]
+||||||||||
+|image::images/greenCheck.png[]
+||
+
+| link:webdatamenu-accessibility-compliance.html[WebDataMenu]
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|image::images/greenCheck.png[]
+|||||||
+|image::images/greenCheck.png[]
+||||
+
+| link:webdatatree-accessibility-compliance.html[WebDataTree]
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|image::images/greenCheck.png[]
+|||||||
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+
+| link:webdatepicker-accessibility-compliance.html[WebDatePicker]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webdatetimeeditor-accessibility-compliance.html[WebDateTimeEditor]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webdayview-accessibility-compliance.html[WebDayView]
+|image::images/greenCheck.png[]
+||
+|image::images/greenCheck.png[]
+|||
+|image::images/greenCheck.png[]
+|||||
+|image::images/greenCheck.png[]
+||
+
+| link:webdialogwindow-webdialogwindow-accessibility-compliance.html[WebDialogWindow]
+|image::images/greenCheck.png[]
+||||||||||||
+|image::images/greenCheck.png[]
+||
+
+| link:webdropdown-accessibility-compliance.html[WebDropDown]
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|image::images/greenCheck.png[]
+|||||||
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+
+| link:webgauge-webgauge-accessibility-compliance.html[WebGauge]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webgroupbox-accessibility-compliance.html[WebGroupBox]
+|||||||||||||
+|image::images/greenCheck.png[] 
+||
+
+| link:webhierarchicaldatagrid-accessibility-compliance.html[WebHierarchicalDataGrid]
+||
+|image::images/greenCheck.png[]
+||||||||||
+|image::images/greenCheck.png[]
+||
+
+| link:webhtmleditor-accessibility-compliance.html[WebHtmlEditor]
+|image::images/greenCheck.png[]
+|||||||||||
+|image::images/greenCheck.png[]
+|image::images/greenCheck.png[]
+||
+
+| link:webimagebutton-accessibility-compliance.html[WebImageButton]
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|||||||||||||
+
+| link:webimageviewer-webimageviewer-accessibility-compliance.html[WebImageViewer]
+|image::images/greenCheck.png[]
+||||||||
+|image::images/greenCheck.png[]
+|||
+|image::images/greenCheck.png[]
+||
+
+| link:webmaskeditor-accessibility-compliance.html[WebMaskEditor]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webmonthcalendar-accessibility-compliance.html[WebMonthCalendar]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webmonthview-accessibility-compliance.html[WebMonthView]
+|image::images/greenCheck.png[]
+||
+|image::images/greenCheck.png[]
+||
+|image::images/greenCheck.png[]
+|image::images/greenCheck.png[]
+|||||
+|image::images/greenCheck.png[]
+||
+
+| link:webnumericeditor-accessibility-compliance.html[WebNumericEditor]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webpercenteditor-accessibility-compliance.html[WebPercentEditor]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webprogressbar-accessibility-compliance.html[WebProgressBar]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webresizingextender-accessibility-compliance.html[WebResizingExtender]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webslider-accessibility-compliance.html[WebSlider]
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|||||||||||
+
+| link:websplitter-websplitter-accessibility-compliance.html[WebSplitter]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webtab-accessibility-compliance.html[WebTab]
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|||||||||||||
+
+| link:webtexteditor-accessibility-compliance.html[WebTextEditor]
+|image::images/greenCheck.png[]
+|||||||||||||||
+
+| link:webupload.html[WebUpload]
+||
+|image::images/greenCheck.png[]
+|image::images/redX.png[]
+|||||||
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+|image::images/greenCheck.png[]
+|image::images/greenCheck.png[]
+
+| link:web-webvideoplayer.html[WebVideoPlayer]
+||
+|image::images/greenCheck.png[]
+|image::images/redX.png[]
+|||||
+|image::images/redX.png[]
+|
+|image::images/greenCheck.png[]
+|
+|image::images/greenCheck.png[]
+||
+
+|====
+
+=== Legend
+
+* image:images/greenCheck.png[] - The control/component is completely accessible in this particular area.
+
+* 'white space' - this particular rule does not apply to the control.
+
+* image:images/redX.png[] - The control/component is not entirely accessible unless you perform some sort of action.

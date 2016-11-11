@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "websplitter-change-the-splitter-bars-orientation",
+    "controlName": ["WebSplitter"],
+    "tags": [],
+    "guid": "{5632F18A-7EE6-43B0-84CA-5B1F3894C92C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Change the Splitter Bars' Orientation
+
+The WebSplitter™ control supports two orientation modes:
+
+* Horizontal
+* Vertical
+
+By default, the Orientation property is set to Vertical.
+
+The following example code sets the Orientation property to Horizontal.
+
+*In Visual Basic:*
+
+----
+' Sets Orientation to Horizontal
+Me.WebSplitter1.Orientation = Infragistics.Web.UI.LayoutControls.SplitterOrientation.Horizontal
+----
+
+*In C#:*
+
+----
+// Sets Orientation to Horizontal
+this.WebSplitter1.Orientation = Infragistics.Web.UI.LayoutControls.SplitterOrientation.Horizontal;
+----
+

@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "webprogressbar-getting-started-with-webprogressbar",
+    "controlName": ["WebProgressBar"],
+    "tags": ["Getting Started"],
+    "guid": "{83F50EB6-87E9-4200-B137-A35CFCA1F924}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Getting Started with WebProgressBar
+
+WebProgressBar works as an indicator which shows the end user to what extent a task is completed by indicating the progress starting from a minimum value and ending at a maximum value. There are several WebProgressBar properties that you need to set to have the required minimum, maximum and current values for your application.
+
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~minimum.html[Minimum]"]  -- Starting value of the bar.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~maximum.html[Maximum]"]  -- Ending value of the bar.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  -- Current progress of the bar.
+
+.Note:
+[NOTE]
+====
+The default values for Minimum, Maximum and Value are 0, 100 and 0 respectively.
+====
+
+The properties Minimum, Maximum and Value can be set using the smart tag or through the Microsoft® Visual Studio® Property Window or by using the following code :
+
+*In Visual Basic:*
+
+----
+WebProgressBar1.Minimum = 0    
+WebProgressBar1.Maximum = 200
+WebProgressBar1.Value = 100
+----
+
+*In C#:*
+
+----
+WebProgressBar1.Minimum = 0;
+WebProgressBar1.Maximum = 200;
+WebProgressBar1.Value = 100;
+----

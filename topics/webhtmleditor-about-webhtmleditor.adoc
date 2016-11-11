@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-about-webhtmleditor",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing","How Do I"],
+    "guid": "{3F685E52-496E-4A95-AD32-A736FCAF7CE3}",  
+    "buildFlags": [],
+    "createdOn": "2006-03-01T00:00:00Z"
+}
+|metadata|
+////
+
+= About WebHtmlEditor
+
+WebHtmlEditor™ enriches the editing experience that your Web application gives end users with a What You See Is What You Get (WYSIWYG) editing window. The editing window is comprised of the following fully-customizable regions:
+
+* link:webhtmleditor-webhtmleditor-toolbar.html[toolbar] -- Contains buttons and drop-down lists for editing and upload operations.
+* link:webhtmleditor-webhtmleditor-text-window.html[text window] -- Displays content that the end user can edit and preview content.
+* link:webhtmleditor-webhtmleditor-tab-strip.html[tab strip] -- Contains tabs to allow the end user to switch between Design view and HTML view.
+
+image::Images/WebHtmlEditor_About_WebHtmlEditor_01.png[]

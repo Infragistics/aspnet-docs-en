@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-webgauge-types",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{F44AD303-0EFB-42A1-96B5-6D4E0312B193}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebGauge Types
+
+The WebGauge control provides the following key Gauge types:
+
+* link:webgauge-digital-webgauges.html[Digital WebGauge] – Resembles a car odometer.
+* link:webgauge-linear-gauge.html[Linear WebGauge] – Resembles a wall thermometer.
+* link:webgauge-radial-webgauges.html[Radial WebGauge] – Resembles a car speedometer.

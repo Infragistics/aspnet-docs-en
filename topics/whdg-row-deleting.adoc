@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "whdg-row-deleting",
+    "controlName": [],
+    "tags": [],
+    "guid": "e4e0cc9d-1454-4cd1-846b-46fa78f43d98",  
+    "buildFlags": [],
+    "createdOn": "2014-03-10T17:13:30.0006488Z"
+}
+|metadata|
+////
+
+= Row Deleting (WebHierarchicalDataGrid)
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the Row Deleting behavior of the  _WebHierarchicalDataGrid_™ and its use.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:whdg-row-deleting-overview.html[Row Deleting Overview (WebHierarchicalDataGrid)]
+|This topic provides an overview of the _WebHierarchicalDataGrid_ Row Deleting behavior’s features and functionality.
+
+| link:webhierarchicaldatagrid-enabling-row-deleting.html[Enabling Row Deleting]
+|This topic details how to enable the Row Deleting behavior in the _WebHierarchicalDataGrid_ .
+
+|====

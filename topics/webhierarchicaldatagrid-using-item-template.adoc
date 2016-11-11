@@ -1,0 +1,249 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-using-item-template",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids","Templating"],
+    "guid": "{F572A101-11EB-45BC-8ED2-9CC93845FB28}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using Item Template
+
+== Before You Begin
+
+Using a column template allows you to create a column with a unique look-and-feel. You can add any control to the template. A template column in WebHierarchicalDataGrid™ consists of four templates: header, footer, item, and alternate item templates.
+
+== What You Will Accomplish
+
+You will learn how to set up an item template for columns in the parent and child band of WebHierarchicalDataGrid. This template will contain a link button to modify a cell.
+
+== Follow these Steps
+
+[start=1]
+. Bind WebHierarchicalDataGrid to the WebHierarchicalDataSource™ component retrieving data from the Categories and Products table. For more information on doing this, see the link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Binding to Hierarchical Data Source] topic.
+[start=2]
+. In the Microsoft® Visual Studio™ property window, locate the Bands property and click the ellipsis (...) button to launch the Edit WebHierarchicalDataGrid Bands Dialog.
+[start=3]
+. For the parent band locate the Columns property from the property grid on the right and click the ellipsis (...) button to launch the Columns Editor Dialog. Select a column in the Available Fields section, under TemplateField, and click the Add Field button to add a template column. Set the Key to TemplateColumn1 and Header Text to Edit. You can also select the column you intend to use as a template column from the Selected Fields section and click the Convert Selected Grid Field into a Template Field link.
+
+Follow the same procedure and add a column setting for the child band as well. For setting columns in the child band, the child band must be selected in the Edit WebHierarchicalDataGrid Bands dialog window and then follow step3. Set the key of the template column to ChildTemplateColumn1.
+
+You can also add a template column in code. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabinding_ev.html[RowIslandDataBinding]"]  event is handled to add a template column in code.
+
+*In Visual Basic:*
+
+----
+AddHandler Me.WebHierarchicalDataGrid1.RowIslandDataBinding, AddressOf WebHierarchicalDataGrid1_RowIslandDataBinding
+Protected Sub WebHierarchicalDataGrid1_RowIslandDataBinding(ByVal sender As Object, ByVal e As RowIslandEventArgs) Handles WebHierarchicalDataGrid1.RowIslandDataBinding
+   ' parent band 
+   If e.RowIsland.DataMember = "SqlDataSource1_DefaultView" Then
+      If Not IsPostBack Then
+         Dim field1 As New TemplateDataField()
+         field1.Key = "TemplateColumn1"
+         field1.Header.Text = "Edit"
+         Me.WebHierarchicalDataGrid1.Columns.Add(field1)
+         'get reference to the template column 
+         Dim templateColumn1 As TemplateDataField = DirectCast(Me.WebHierarchicalDataGrid1.Columns("TemplateColumn1"), TemplateDataField)
+         templateColumn1.ItemTemplate = New CustomItemTemplate()
+      End If
+   End If
+   ' Child Level 
+   If e.RowIsland.DataMember = "SqlDataSource2_DefaultView" AndAlso e.RowIsland.ParentRow = Me.WebHierarchicalDataGrid1.GridView.Rows(0) Then
+      Dim field2 As New TemplateDataField()
+      field2.Key = "ChildTemplateColumn1"
+      field2.Header.Text = "Edit"
+      Me.WebHierarchicalDataGrid1.Bands(0).Columns.Add(field2)
+      Dim templateColumn2 As TemplateDataField = DirectCast(Me.WebHierarchicalDataGrid1.Bands(0).Columns("ChildTemplateColumn1"), TemplateDataField)
+      templateColumn2.ItemTemplate = New CustomChildItemTemplate()
+   End If
+End Sub
+----
+
+*In C#:*
+
+----
+this.WebHierarchicalDataGrid1.RowIslandDataBinding += new RowIslandEventHandler(WebHierarchicalDataGrid1_RowIslandDataBinding);
+protected void WebHierarchicalDataGrid1_RowIslandDataBinding(object sender, RowIslandEventArgs e)
+{
+   //parent band
+   if (e.RowIsland.DataMember == "SqlDataSource1_DefaultView")
+   {
+      if (!IsPostBack)
+      {
+         TemplateDataField field1 = new TemplateDataField();
+         field1.Key = "TemplateColumn1";
+         field1.Header.Text = "Edit";
+         this.WebHierarchicalDataGrid1.Columns.Add(field1);
+         //get reference to the template column
+         TemplateDataField templateColumn1 = (TemplateDataField)this.WebHierarchicalDataGrid1.Columns["TemplateColumn1"];
+         templateColumn1.ItemTemplate = new CustomItemTemplate();
+      }
+   }
+   // Child Level
+   if (e.RowIsland.DataMember == "SqlDataSource2_DefaultView"
+        && e.RowIsland.ParentRow == this.WebHierarchicalDataGrid1.GridView.Rows[0])
+   {
+      TemplateDataField field2 = new TemplateDataField();
+      field2.Key = "ChildTemplateColumn1";
+      field2.Header.Text = "Edit";
+      this.WebHierarchicalDataGrid1.Bands[0].Columns.Add(field2);
+      TemplateDataField templateColumn2 = (TemplateDataField)this.WebHierarchicalDataGrid1.Bands[0].Columns["ChildTemplateColumn1"];
+      templateColumn2.ItemTemplate = new CustomChildItemTemplate();
+   }
+}
+----
+
+[start=4]
+. Click Ok to close the editor.
+[start=5]
+. By this time you will have two column templates, one for the parent band and one for the child band. Right click WebHierarchicalDataGrid. Mouse over Edit Template from the context menu and select the column template you have just added for the parent band (TemplateColumn1). The templates are shown in the screenshot.
+
+image::Images/WebHierarchicalDataGrid_Using_Item_Templates_01.png[]
+
+a. Drag a LinkButton control onto the Item Template area.
+
+b. Set the LinkButton control’s Text property to “Edit”.
+
+c. Handle the LinkButton control’s client-side click by setting the OnClientClick property to "return editRow();".
+
+*In HTML:*
+
+----
+<asp:LinkButton ID="LinkButton1" runat="server" onclientclick="return editRow();">Edit</asp:LinkButton>
+----
+
+[start=6]
+. Follow steps a and b of step 5, but this time mouse over the Edit Template that you have created for the child band (ChildTemplateColumn1). Set a handler for the client-side click event of the child button by using the OnClientClick property.
+
+For the Edit button in the child band, set the property equal to "return editChildRow ()."
+
+*In HTML:*
+
+----
+<asp:LinkButton ID="LinkButton2" runat="server" OnClientClick="return editChildRow()">Edit</asp:LinkButton>
+----
+
+You can also do the above steps (5&6) in code by creating a class that implements the ITemplate interface and set an instance of it to the ItemTemplate property of the column.
+
+*In Visual Basic:*
+
+----
+'get reference to the template column 
+Dim templateColumn1 As TemplateDataField = DirectCast(Me.WebHierarchicalDataGrid1.Columns("TemplateColumn1"), TemplateDataField)
+templateColumn1.ItemTemplate = New CustomItemTemplate()
+#Region "ITemplate Members"
+Public Sub InstantiateIn(ByVal container As Control)
+Dim edit As New LinkButton()
+edit.CssClass = "LinkButton"
+edit.Text = "Edit"
+edit.OnClientClick = "return editRow()"
+container.Controls.Add(edit)
+End Sub
+#End Region
+End Class
+Public Class CustomChildItemTemplate
+    Implements ITemplate
+#Region "ITemplate Members"
+   Public Sub InstantiateIn(ByVal container As Control)
+      Dim edit As New LinkButton()
+      edit.CssClass = "LinkButton"
+      edit.Text = "Edit"
+      edit.OnClientClick = "return editChildRow()"
+      container.Controls.Add(edit)
+   End Sub
+#End Region
+End Class
+----
+
+*In C#:*
+
+----
+//get reference to the template column
+TemplateDataField templateColumn1 = (TemplateDataField)this.WebHierarchicalDataGrid1.Columns["TemplateColumn1"];
+templateColumn1.ItemTemplate = new CustomItemTemplate();
+public class CustomItemTemplate : ITemplate
+{
+   #region ITemplate Members
+   public void InstantiateIn(Control container)
+   {
+      LinkButton edit = new LinkButton();
+      edit.CssClass = "LinkButton";
+      edit.Text = "Edit";
+      edit.OnClientClick = "return editRow()";
+      container.Controls.Add(edit)
+   }
+   #endregion
+}
+public class CustomChildItemTemplate : ITemplate
+{
+   #region ITemplate Member
+   public void InstantiateIn(Control container)
+   {
+      LinkButton edit = new LinkButton();
+      edit.CssClass = "LinkButton";
+      edit.Text = "Edit";
+      edit.OnClientClick = "return editChildRow()";
+      container.Controls.Add(edit); 
+   }
+   #endregion
+}
+----
+
+[start=7]
+. Add the functions to edit.
+
+*In Javascript:*
+
+----
+// function to edit a cell in Parent Band
+function editRow()
+{
+   var grid = $find("WebHierarchicalDataGrid1");
+   var parentGrid = grid.get_gridView();
+   // Get active row
+   var activeRow = parentGrid.get_behaviors().get_activation().get_activeCell().get_row();
+   // Enter edit mode on the first cell of active row
+   parentGrid.get_behaviors().get_editingCore().get_behaviors().get_cellEditing().enterEditMode(activeRow.get_cell(0));
+   // Cancel auto postback from link button
+   return false;
+}
+// function to edit a cell in Child Band
+function editChildRow()
+{
+   var grid = $find("WebHierarchicalDataGrid1");
+   var parentGrid = grid.get_gridView();
+   var childGrid = grid.get_gridView().get_rows().get_row(0).get_rowIslands(0)[0];
+   // Get active row
+   var activeRow = childGrid.get_behaviors().get_activation().get_activeCell().get_row();
+   // Enter edit mode on the first cell of active row
+   childGrid.get_behaviors().get_editingCore().get_behaviors().get_cellEditing().enterEditMode(activeRow.get_cell(0));
+   // Cancel auto postback from link button
+   return false;
+}
+----
+
+.Note:
+[NOTE]
+====
+Since the buttons function to modify WebHierarchicalDataGrid, you must enable the EditingCore behavior. For more information on doing this, see link:webhierarchicaldatagrid-cell-editing.html[Cell Editing]. You also need the Activation behavior. For more information, see link:webhierarchicaldatagrid-activation.html[Activation].
+====
+
+.Note:
+[NOTE]
+====
+Since the item template is just HTML within the cell of a column, be sure to make the column read-only to prevent editing of the HTML. Doing this allows your end-users to edit using any editors in the template but prevent them from editing the actual markup of the template.
+====
+
+[start=8]
+. Run the application. WebHierarchicalDataGrid has parent and child columns that display a link button which handles editing of cells.
+
+image::Images/WebHierarchicalDataGrid_Using_Item_Templates_02.png[]
+
+== Related Topic
+
+link:webhierarchicladatagrid-column-templates.html[Column Templates]

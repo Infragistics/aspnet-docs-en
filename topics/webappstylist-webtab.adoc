@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-webtab",
+    "controlName": [],
+    "tags": ["Styling","Theming"],
+    "guid": "{A5A9EA21-3D28-4825-B9D7-147431EC471C}",  
+    "buildFlags": [],
+    "createdOn": "2010-04-03T14:45:50Z"
+}
+|metadata|
+////
+
+= WebTab
+
+View all of your styling modifications that involve the WebTab control in the WebTab canvas. You will find the following control on the WebTab canvas:
+
+* WebTab
+
+image::images/AppStylist_WebTab_Canvas_01.png[The canvas for the WebTab control.]

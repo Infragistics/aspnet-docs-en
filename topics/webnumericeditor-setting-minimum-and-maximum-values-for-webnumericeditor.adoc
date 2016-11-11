@@ -1,0 +1,33 @@
+﻿////
+
+|metadata|
+{
+    "name": "webnumericeditor-setting-minimum-and-maximum-values-for-webnumericeditor",
+    "controlName": ["WebNumericEditor"],
+    "tags": ["Editing","Error Handling","How Do I"],
+    "guid": "{3FF8A2E2-E2B5-42A0-B039-1B5F82CE0EA9}",  
+    "buildFlags": [],
+    "createdOn": "2009-03-06T10:33:47Z"
+}
+|metadata|
+////
+
+= Setting minimum and maximum values for WebNumericEditor
+
+WebNumericEditor™ allows you to set a range of values that your end-user can enter into the editor by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~minvalue.html[MinValue]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~maxvalue.html[MaxValue]"]  properties. If an end-user types a number more than the maximum value then the editor sets the value to the maximum value. Similarly, if an end-user types a number less than the minimum value then the editor sets the value to the minimum value.
+
+You can set the MinValue and MaxValue properties either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebNumericEditor1.MinValue = 10
+WebNumericEditor1.MaxValue = 100
+----
+
+*In C#:*
+
+----
+WebNumericEditor1.MinValue = 10;
+WebNumericEditor1.MaxValue = 100;
+----

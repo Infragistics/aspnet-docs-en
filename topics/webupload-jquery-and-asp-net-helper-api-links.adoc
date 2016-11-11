@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webupload-jquery-and-asp.net-helper-api-links",
+    "controlName": ["WebUpload"],
+    "tags": ["API","MVC","Selection"],
+    "guid": "beb49f5f-1645-43ac-b9ad-47dbeac9bd81",  
+    "buildFlags": [],
+    "createdOn": "2011-05-31T15:12:14.5507675Z"
+}
+|metadata|
+////
+
+= jQuery and ASP.NET Helper API Links (WebUpload)
+
+WebUpload is built as a jQuery UI widget with an accompanying ASP.NET Helper. For more information about each API, see the following API documentation:
+
+* link:{jQueryApiLink}/ui.igupload[WebUpload jQuery API]
+* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload.html[WebUpload ASP.NET Helper API]

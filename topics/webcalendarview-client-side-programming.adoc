@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalendarview-client-side-programming",
+    "controlName": ["WebCalendarView"],
+    "tags": ["How Do I"],
+    "guid": "{B466285A-27F3-4C74-BA6F-0B1A09236462}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Client Side Programming
+
+This section gives information on the client-side features and functionalities of WebCalendarView™.
+
+Click the links below to find out more.
+
+* link:webcalendarview-csom-overview.html[CSOM Overview]
+* link:webcalendarview-reference-the-control.html[Reference the Control]

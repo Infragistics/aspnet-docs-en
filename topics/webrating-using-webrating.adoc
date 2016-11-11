@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webrating-using-webrating",
+    "controlName": ["WebRating"],
+    "tags": ["Getting Started","Selection"],
+    "guid": "1329efa9-fa77-4286-9517-3c41de14c23e",  
+    "buildFlags": [],
+    "createdOn": "2010-06-01T04:45:54.3907535Z"
+}
+|metadata|
+////
+
+= Using WebRating
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebRating™.
+
+link:webrating-adding-webrating-items.html[Adding WebRating Items]
+
+In this topic you will learn how to customize WebRating by adding your own rating items, different from the default one - the star.
+
+link:webrating-editor-provider.html[WebRating Editor Provider]
+
+This topic introduces how to use WebRating control acting the same way as a editor provider.
+
+link:webrating-styling-webrating.html[Styling WebRating]
+
+In this topic can be found the properties needed to customize the WebRating look.

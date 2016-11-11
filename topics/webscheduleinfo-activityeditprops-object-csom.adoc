@@ -1,0 +1,284 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-activityeditprops-object-csom",
+    "controlName": [],
+    "tags": ["API","How Do I","Scheduling"],
+    "guid": "{FABDC058-60F5-4ABB-88B0-FED453EB8310}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= ActivityEditProps Object
+
+== ActivityEditProps
+
+Object that is passed in as an argument in the ActivityDialogEdit client-side event.
+
+=== ActivityEditProps Properties
+
+[cols="a,a"]
+|====
+|*AllDayEvent* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*Description* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*DisplayInterval* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*document* 
+|The Activity Dialog's document object.
+
+|*Duration* 
+|Object that contains Value of the Activity's duration.
+
+|*EnableReminder* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*EndDate* 
+|Object that contains the Element, Value, and WebDateChoooser Object that are associated with the Activity Dialog.
+
+|*EndTime* 
+|Object that contains the Element, Value, and WebDateChoooser Object that are associated with the Activity Dialog.
+
+|*Importance* 
+|Object that contains the WebToolbar, Value, and Toolbar Items that associated with Importance on the Activity Dialog.
+
+|*Location* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*ShowTimeAs* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*StartDate* 
+|Object that contains the Element, Value, and WebDateChoooser Object that are associated with the Activity Dialog.
+
+|*StartTime* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*Subject* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*window* 
+|The window object associated with the Activity Dialog.
+
+|====
+
+[[StartDate]]
+
+== StartDate
+
+=== StartDate Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the StartDate field.
+
+|*Object* 
+|The WebDateChooser object associated with the StartDate field.
+
+|*Value* 
+|The current value of the StartDate field.
+
+|====
+
+[[StartTime]]
+
+== StartTime
+
+=== StartTime Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the StartTime field.
+
+|*Value* 
+|The current value of the StartTime field.
+
+|====
+
+[[EndDate]]
+
+== EndDate
+
+=== EndDate Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the EndDateField.
+
+|*Object* 
+|The WebDateChooser object associated witht he EndDatefield.
+
+|*Value* 
+|The current value of the EndDate Field.
+
+|====
+
+[[EndTime]]
+
+== EndTime
+
+=== EndTime Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with EndTime field.
+
+|*Value* 
+|The current value of the EndTime field.
+
+|====
+
+[[AllDayEvent]]
+
+== AllDayEvent
+
+=== AllDayEvent Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the AllDayEvent field.
+
+|*Value* 
+|The value of the AllDayEvent field.
+
+|====
+
+[[Subject]]
+
+== Subject
+
+=== Subject Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the Subject field.
+
+|*Value* 
+|The value of the Subject field.
+
+|====
+
+[[Location]]
+
+== Location
+
+=== Location Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the Location field.
+
+|*Value* 
+|The value of the Location field.
+
+|====
+
+[[Description]]
+
+== Description
+
+=== Description Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the Description field.
+
+|*Value* 
+|The value of the Description field.
+
+|====
+
+[[EnableReminder]]
+
+== EnableReminder
+
+=== EnableReminder Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the EnableReminder field.
+
+|*Value* 
+|The value of the EnableReminder field.
+
+|====
+
+[[DisplayInterval]]
+
+== DisplayInterval
+
+=== DisplayInterval Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the DisplayInterval field.
+
+|*Value* 
+|The value of the DisplayInterval field.
+
+|====
+
+[[ShowTimeAs]]
+
+== ShowTimeAs
+
+=== ShowTimeAs Properties
+
+[cols="a,a"]
+|====
+|*Element* 
+|The HTML element associated with the ShowTimeAs field.
+
+|*Value* 
+|The value of the ShowTimeAs field.
+
+|====
+
+[[Importance]]
+
+== Importance
+
+=== Importance Properties
+
+[cols="a,a"]
+|====
+|*HighItem* 
+|The WebToolBarButton object associated with the HightItem.
+
+|*LowItem* 
+|The WebToolBarButton object associated with the LowItem.
+
+|*ToolBar* 
+|The WebToolBar object associated with Importance.
+
+|*Value* 
+|The value of the Importance field.
+
+|====
+
+[[Duration]]
+
+== Duration
+
+=== Duration Properties
+
+==== Value
+
+The value in minutes of the duration of the Activity.

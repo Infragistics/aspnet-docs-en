@@ -1,0 +1,44 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimagebutton-handle-click-event",
+    "controlName": ["WebImageButton"],
+    "tags": ["Events","Layouts","Styling"],
+    "guid": "{7ED67C30-51CB-4AC7-86B9-A7B736F4661E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Handle Click Event
+
+The following code shows you how to handle the client-side click event of WebImageButton™.
+
+*In HTML:*
+
+----
+<igtxt:WebImageButton ID="WebImageButton1" runat="server">
+	<ClientSideEvents Click="WebImageButton1_Click" />
+</igtxt:WebImageButton>
+----
+
+*In Javascript:*
+
+----
+function WebImageButton1_Click(oButton, oEvent){
+    // cancel click if it was triggered by Space key
+    if (Event.action == 1)
+        Event.cancel = true;
+    // cancel click if it was triggered by Enter key
+    if (Event.action == 2)
+        Event.cancel = true;
+    // cancel click if it was triggered by Access key
+    if (Event.action == 3)
+        Event.cancel = true;
+    // cancel click if it was triggered by Mouse button
+    if (Event.action == 0)
+        return;
+}
+----

@@ -1,0 +1,30 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-using-the-webhtmleditor-designer",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Design Environment","Editing","Getting Started","How Do I"],
+    "guid": "{93CE7E21-F405-4E0F-8ADA-204C6746F58A}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-02T00:00:00Z"
+}
+|metadata|
+////
+
+= Using the WebHtmlEditor Designer
+
+The WebHtmlEditor™ control comes with a design-time Quick Design that enables you to customize the appearance and behavior of the control in the Microsoft® Visual Studio® .NET designer environment.
+
+Click the links below for an overview of how to use the WebHtmlEditor Quick Design, as well as to access the in-depth tutorials on how to use each tab in the Quick Design:
+
+* link:webhtmleditor-overview-of-the-webhtmleditor-designer.html[Overview of the WebHtmlEditor Designer]
+* link:webhtmleditor-webhtmleditor-designer-general-tab.html[WebHtmlEditor Designer (General Tab)]
+* link:webhtmleditor-webhtmleditor-designer-format-tab.html[WebHtmlEditor Designer (Format Tab)]
+* link:webhtmleditor-webhtmleditor-designer-toolbar-tab.html[WebHtmlEditor Designer (Toolbar Tab)]
+* link:webhtmleditor-webhtmleditor-designer-text-window-tab.html[WebHtmlEditor Designer (Text Window Tab)]
+* link:webhtmleditor-webhtmleditor-designer-tabstrip-tab.html[WebHtmlEditor Designer (TabStrip Tab)]
+* link:webhtmleditor-webhtmleditor-designer-progress-bar-tab.html[WebHtmlEditor Designer (Progress Bar Tab)]
+* link:webhtmleditor-webhtmleditor-designer-skins-tab.html[WebHtmlEditor Designer (Skins Tab)]
+* link:webhtmleditor-webhtmleditor-designer-down-level-tab.html[WebHtmlEditor Designer (Down Level Tab)]
+* link:webhtmleditor-webhtmleditor-designer-languages-tab.html[WebHtmlEditor Designer (Languages Tab)]

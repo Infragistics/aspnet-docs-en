@@ -1,0 +1,94 @@
+﻿////
+|metadata|
+{
+    "name": "webdatagrid-behaviors",
+    "controlName": ["WebDataGrid"],
+    "tags": ["How Do I"],
+    "guid": "{3EDDA92E-1FF4-4BCB-A186-ABF4C7C38ED2}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Behaviors
+
+The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection allows you to customize the behavior of WebDataGrid™. You can combine multiple behaviors according to your needs. The control loads only the client-side javascript for the behaviors that are added on the server-side (pay to play model). This increases performance in WebDataGrid since you will only incur the necessary overhead for the functionalities you require.
+
+The following links have specific information about WebDataGrid’s behaviors.
+
+link:webdatagrid-using-behaviors.html[Adding a Behavior at Design Time]
+
+This topic describes how to add a behavior via Microsoft® Visual Studio™ Designer.
+
+link:webdatagrid-adding-a-behavior-at-runtime.html[Adding a Behavior at Runtime]
+
+This topic describes how to add a behavior at run time for your application.
+
+link:webdatagrid-auto-post-back-events.html[Auto Post Back Events]
+
+This topic describes how to trigger an automatic postback for a behavior.
+
+link:webdatagrid-activation.html[Activation]
+
+In this section you will find general information about how to set up and use Activation behavior.
+
+link:webdatagrid-cell-merging.html[Cell Merging]
+
+In this section you will find general information about how to set up and use Cell Merging.
+
+link:webdatagrid-clipboard.html[Clipboard]
+
+In this section you will find general information about how to set up and use the Clipboard behavior.
+
+link:webdatagrid-column-fixing.html[Column Fixing]
+
+In this section you will find general information about how to set up and use Column Fixing behavior.
+
+link:webdatagrid-column-moving.html[Column Moving]
+
+In this topic you will find general information about how to set up and use Column Moving behavior.
+
+link:webdatagrid-column-resizing.html[Column Resizing]
+
+In this topic you will find general information about how to set up and use Column Resizing behavior.
+
+link:webdatagrid-editing.html[Editing (WebDataGrid)]
+
+This section details the features and functionality of the WebDataGrid EditingCore behavior.
+
+link:webdatagrid-enabling-row-selectors.html[Enabling Row Selectors]
+
+In this topic you will find general information about how to set up and use Row Selectors behavior.
+
+link:webdatagrid-filtering.html[Filtering]
+
+In this topic you will find general information about how to set up and use Filtering behavior.
+
+link:webdatagrid-excelstylefiltering-landingpage.html[Excel Style Filtering] link:webdatagrid-excelstylefiltering-landingpage.html[Excel Style Filtering]
+
+In this topic you will find general information about how to set up and use Excel Style Filtering.
+
+link:webdatagrid-paging.html[Paging]
+
+In this topic you will find general information about how to set up and use Paging behavior.
+
+link:webdatagrid-removing-a-behavior.html[Removing a Behavior]
+
+This topic describes how to remove (disable) a behavior.
+
+link:webdatagrid-selection.html[Selection]
+
+In this section you will find general information about how to set up and use Selection behavior.
+
+link:webdatagrid-sorting.html[Sorting]
+
+In this section you will find general information about how to set up and use Sorting behavior.
+
+link:webdatagrid-summary-row.html[Summary Row]
+
+In this section you will find general information about how to set up and use Summary Row behavior.
+
+link:webdatagrid-virtual-scrolling.html[Virtual Scrolling]
+
+In this section you will find general information about how to set up and use Virtual Scrolling behavior.

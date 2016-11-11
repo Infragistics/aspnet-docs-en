@@ -1,0 +1,57 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatepicker-using-webdatepicker",
+    "controlName": ["WebDatePicker"],
+    "tags": [],
+    "guid": "{313ECA40-6034-41D3-A917-6F698AAE9428}",  
+    "buildFlags": [],
+    "createdOn": "2009-04-06T11:21:34Z"
+}
+|metadata|
+////
+
+= Using WebDatePicker
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebDatePicker™.
+
+link:webdatepicker-edit-and-display-mode-formats-in-webdatepicker.html[Edit and Display Mode Formats in WebDatePicker]
+
+In this section you can learn how to set different edit and display modes for the WebDatePicker control.
+
+link:webdatepicker-setting-minimum-and-maximum-values-for-webdatepicker.html[Setting minimum and maximum values for WebDatePicker]
+
+In this section you can learn how to set minimum and maximum values for the WebDatePicker control.
+
+link:webdatepicker-setting-prompt-character-for-webdatepicker.html[Setting Prompt Character for WebDatePicker]
+
+You can learn how to set the prompt character for the WebDatePicker control in this section.
+
+link:webdatepicker-setting-minimum-number-of-valid-fields-for-webdatepicker.html[Setting Minimum Number of Valid Fields for WebDatePicker]
+
+The WebDatePicker control has the functionality to validate the entire entered date on different numbers of valid fields. In this section you can learn how to set this number.
+
+link:webdatepicker-autofilling-the-year-field-in-webdatepicker.html[Autofilling the Year Field in WebDatePicker]
+
+In this section you can learn how to set the property which determines the behaviour of the year autofilling function to work as you require.
+
+link:webdatepicker-spinning-through-a-list-of-values-in-webdatepicker.html[Spinning through a list of values in WebDatePicker]
+
+In this section you can learn how to use spin buttons in the control to spin through a list of values.
+
+link:webdatepicker-using-the-last-valid-date-in-webdatepicker.html[Using the Last Valid Date in WebDatePicker]
+
+You can make the control use the last valid date when it loses focus. This section explains how to accomplish this.
+
+link:webdatepicker-using-webmonthcalendar-as-webdatepickers-dropdown-calendar.html[Using WebMonthCalendar as WebDatePicker's Drop-Down Calendar]
+
+The WebDatePicker control has the functionality to use the WebMonthCalendar™ control for the end user to pick dates on edit with. In this section you can learn how to accomplish this.
+
+link:webdatepicker-using-custom-button-in-webdatepicker.html[Using Custom Button in WebDatePicker]
+
+In this section you can learn how to implement a customized button and use it to perform custom actions.
+
+link:webdatepicker-webdatepicker-smart-tag.html[WebDatePicker Smart Tag]
+
+In this section you can learn about the WebDatePicker Smart Tag.

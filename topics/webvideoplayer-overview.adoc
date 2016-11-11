@@ -1,0 +1,113 @@
+﻿////
+
+|metadata|
+{
+    "name": "webvideoplayer-overview",
+    "controlName": ["WebVideoPlayer"],
+    "tags": ["Getting Started"],
+    "guid": "a2b62d1d-482b-4a5c-93bc-1ae667265755",  
+    "buildFlags": [],
+    "createdOn": "2011-04-01T19:29:47.1419809Z"
+}
+|metadata|
+////
+
+= WebVideoPlayer Overview
+
+== About the Video Player
+
+The Infragistics ASP.NET Video Player is an HTML 5 video player, which renders video on a web page with a robust, cross-browser user interface. The video player is built using the HTML 5 video tag and the jQuery UI framework providing users with a fast-loading, rich multimedia experience without the need for installing and maintaining browser plugins.
+
+The video player exposes a rich jQuery API, which can be configured without the use of any specific server backend. At the same time the user can use the video player’s ASP.NET server-side wrapper to configure the control with their .NET™ language of choice.
+
+Styling the ASP.NET Video Player provides a consistent appearance across supported browsers. The video player can utilize your existing style sheets and can be styled using jQuery UI’s Theme Roller.
+
+image::images/WebVideoPlayer_Overview_01.png[]
+
+== Features
+
+* Uses the HTML 5 video tag to render video without the need for browser plugins
+* Built-in fallback for non-HTML 5 browsers including customizable unsupported message
+* Style-able playback controls, which display consistently across supported browsers
+* Full-screen support with options and animations
+* Advertisement support including video ads and banners ads
+* Bookmark support including Table of Contents
+* JavaScript Playback API
+* Keyboard Shortcuts
+* Display Related Videos
+
+== Adding ASP.NET Video Player to a Web Page
+
+The following steps demonstrate how to create a basic implementation of the ASP.NET Video Player on a web page using either ASP.NET server code.
+
+image::images/WebVideoPlayer_Overview_02.png[]
+
+[start=1]
+. To get started, include the required and localized resources for your application.
+[start=2]
+. On your HTML page or ASP.NET View, reference the required JavaScript files, CSS files, and ASP.NET assemblies.
+
+[cols="a"]
+|====
+|*In ASPX:*
+
+|
+
+[source]
+---- 
+<link type="text/css" href="/Styles/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+---- 
+
+[source]
+---- 
+<link type="text/css" href="/Styles/css/structure/infragistics.css" rel="stylesheet" />
+---- 
+
+[source]
+---- 
+<script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+---- 
+
+[source]
+---- 
+<script type="text/javascript" src="/Scripts/jquery-ui.min.js"></script> 
+<script type="text/javascript" src="/Scripts/js/infragistics.js"></
+---- 
+
+script> 
+
+|====
+
+[start=3]
+. Next, add the server-side code for the control.
+
+*In ASPX:*
+
+----
+<igjq:WebVideoPlayer ID="player1" runat="server" Width="720" Height="270" 
+FullScreen=" BrowserControls=" AutoHide="true" AutoPlay=" 
+Title="Title" PosterUrl="poster.png">
+   <Sources>
+      <igjq:VideoPlayerSource Source="example_video1.mp4" />
+      <igjq:VideoPlayerSource Source="example_video2.webm" />
+      <igjq:VideoPlayerSource Source="example_video3.ogv" />
+   </Sources>
+</igjq:WebVideoPlayer>
+----
+
+In the code snippet above a few of the control’s properties are explicitly set:
+
+*  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.webvideoplayer~width.html[Width]"]  and  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.webvideoplayer~height.html[Height]"]  determine the dimensions of the control and include all additionally rendered controls such as Bookmarks. Leaving width and height unset renders the control with dimensions equal to the ones of the video source plus any additional controls. The video source’s aspect ratio is never changed.
+*  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.webvideoplayer~fullscreen.html[FullScreen]"]  determines if the video player will be rendered in fullscreen mode on initialization. Going into fullscreen mode can be done with the player’s controls on runtime.
+* Turning  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.webvideoplayer~browsercontrols.html[BrowserControls]"]  on hides all custom controls for the WebVideoPlayer and instead lets the browser render it’s default controls.
+*  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.webvideoplayer~autohide.html[AutoHide]"]  determines if controls will be automatically hidden when the mouse hovers out of the control for a certain amount of time.
+* If you turn  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.webvideoplayer~autoplay.html[AutoPlay]"]  on the video will start playing when the page is rendered.
+*  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.webvideoplayer~posterurl.html[PosterUrl]"]  provides the functionality to add a poster of the video which will be displayed until the video is played. Note: Microsoft® Internet Explorer™ 9 does not support this feature.
+* Video sources for the ASP.NET Video Player are set in the tag. More information about the required video types for cross-browser compatibility can be found in the link:webvideoplayer-working-with-html5-video.html[WebVideoPlayer Working with HTML5 Video] topic.
+* Run the web page in an HTML 5 - compliant browser and the video player will load the video selection.
+
+== Related Links
+
+link:{SamplesURL}/componentoverview.aspx?cn=video-player[WebVideoPlayer Samples]
+
+link:webvideoplayer-working-with-html5-video.html[WebVideoPlayer Working with HTML5 Video]

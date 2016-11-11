@@ -1,0 +1,284 @@
+﻿////
+|metadata|
+{
+    "name": "known-issues-and-limitations-aspnet-16-2",
+    "controlName": [],
+    "tags": [],
+    "buildFlags": [],
+    "createdOn": "2016-07-20T17:26:00.2768827Z"
+}
+|metadata|
+////
+
+= Known Issues and Limitations ASPNET 16.2
+
+== Known Issues and Limitations Summary
+
+The following table summarizes the known issues and limitations of the Infragistics® ASP.NET 2016.2 release. Detailed explanations of all of the issues and the existing workarounds are provided after the summary table.
+
+=== Legend
+
+- image:images\workaround.png[alt="Workaround"] - Workaround available
+- image:images\noworkaround.png[alt="No Workaround"] - No known workaround
+- image:images\fix.png[alt="Fix Planned"] - Fix planned
+
+=== WebDataGrid
+
+[options="header", cols="a,a,a"]
+|=======
+|Issue | Description | Status
+
+|<<drop-down-editor-donot-support-multiselection, Drop-down editor provider of WebDataGrid does not support multiselection>>
+|WebDataGrid's drop-down provider does not support multiselection.
+|image:images\noworkaround.png[alt="No Workaround"]
+
+|<<unbound_column_event_handler, Unbound column and `OnInitializeRow` event handler>>
+|When there is an unbound column and `OnInitializeRow` event is handled, Paging and Sorting features don’t work as expected.
+|image:images\noworkaround.png[alt="No Workaround"]
+
+|<<_Ref398735988, Drop-down item text is not correctly retrieved by WebDataGrid DropDownProvider when paging is enabled>>
+|Value of drop down item is displayed if the cell value isn't on the current page of the DropDownProvider even though the text is known from the grid cell. The feature is supposed to work like this because the WebDataGrid is databound to values that are different from what is expected to be displayed in the cells as content.
+|image:images\workaround.png[alt="Workaround"]
+
+|<<_Ref39873598813, When programmatically opening the `RowEditTemplate` for the adding row, the values of the WebTextEditors used in the template will be persisted>>
+|In scenarios where the `RowEditTemplate` contains WebTextEditors and is manually opened for the adding row the values of the WebTextEditors are not cleared after editing finishes. As a result when entering edit mode again the previous values are retained.
+|image:images\workaround.png[alt="Workaround"]
+
+|=======
+
+=== WebHierarchicalDataGrid
+
+[options="header", cols="a,a,a"]
+|=======
+|Issue | Description | Status
+
+|<<expanded-rows, Expanded rows of HierarchicalDataGrid do not render past a certain depth in Firefox>>
+|HierarchicalDataGrid's rows does not render past depth bigger than 200 in Firefox
+|image:images\noworkaround.png[alt="No Workaround"]
+
+|=======
+
+=== WebTab
+
+[options="header", cols="a,a,a"]
+|=======
+|Issue | Description | Status
+
+|`ViewState` is corrupted when you use WebDataTree inside a WebTab
+|When you use the WebDataTree control inside a WebTab the ViewState is corrupted.
+
+*Workaround*: In order for this scenario to work you should call `InstantiateTemplates()` method of the WebTab at the `Page_Init()`.
+|image:images\workaround.png[alt="Workaround"]
+
+|Cannot access templated controls on postback before the `InstantiateTemplates()` methods is called
+|Controls that are instantiated inside a template cannot be accessed before the `InstantiateTemplates()` method of the WebTab is called.
+
+*Workaround*: In order for this scenario to work you should call `InstantiateTemplates()` method of the WebTab before attempting to access a control from the template.
+|image:images\workaround.png[alt="Workaround"]
+
+|=======
+
+=== WebUpload / WebCaptcha
+
+[options="header", cols="a,a,a"]
+|=======
+|Issue | Description | Status
+
+|<<http-error, HTTP error 500.22 is thrown when you add the WebUpload/WebCaptcha from the toolbox for IIS7 and above>>
+|When you drop the `WebUpload/WebCaptcha` control into the design pane it will automatically add the control’s `httpModules` and `httpHandlers` in the `system.web` section. That configuration is not valid for IIS7 and newer running in integrated mode.
+|image:images\workaround.png[alt="Workaround"]
+
+|=======
+
+=== WebEditors
+
+[options="header", cols="a,a,a"]
+|=======
+|Issue | Description | Status
+
+|<<editors-ime, By default, IME is disabled for all the editors, except text and mask ones, but in WebKit browsers IME is available for all of them, which may lead to some unexpected results, while typing.>>
+|By default, IME is disabled for all the editors, except text and mask ones, but in WebKit browsers IME is available for all of them, which may lead to some unexpected results, while typing.
+|image:images\noworkaround.png[alt="No Workaround"]
+
+
+|=======
+
+=== WebNumericEditor
+
+[options="header", cols="a,a,a"]
+|=======
+|Issue | Description | Status
+
+|<<web-num-editor, WebNumericEditor `MaxValue`/`MinValue` options are limited to values that are not represented as exponential on the client.>>
+|WebNumericEditor `MaxValue` option can work correctly only when set to `1000000000000000` or less. WebNumericEditor `MinValue` option can work correctly only when set to `-1000000000000000` or greater.
+|image:images\noworkaround.png[alt="No Workaround"]
+
+|=======
+
+=== Trident
+
+[options="header", cols="a,a,a"]
+|=======
+|Issue | Description | Status
+
+|<<drop-down-selection, Trident layout engine handles double click on a HTML checkbox by changing its state only once.>>
+|link:http://stackoverflow.com/questions/9908000/why-internet-explorer-checkbox-accepts-double-click-but-changing-state-only-once[Trident layout engine handles double click on a HTML checkbox, by changing its state only once]. This may lead to an inconsistent behavior in some of the Infragistics controls, those that render checkbox. For example, if WebDropDown has multiple selection enabled, double clicking on a WebDropDown item checkbox, will result in selecting the item, but adding and removing the item's text in the drop down input.
+
+[NOTE]
+====
+*Workaround:* In order for this scenario to work you should manually change checkbox state, when checkbox, inside WebDropDown item (or any other control), is double-clicked, in Internet Explorer.
+====
+
+|image:images\workaround.png[alt="Workaround"]
+
+|=======
+
+
+== WebDataGrid
+
+[[drop-down-editor-donot-support-multiselection]]
+=== Drop-down editor provider of WebDataGrid does not support multiselection
+WebDataGrid’s drop-down provider does not support multiselection, because all get/set value operations while exchange values between WebDropDown editor and grid, do target only single selection. If editor somehow got multiple selected items, then that will corrupt editor provider and result will be unpredictable.
+
+[[unbound_column_event_handler]]
+=== Unbound column and OnInitializeRow event handler
+
+`UnboundColumn` + `OnInitializeRow` event handled, does not work well with Paging and Sorting features enabled. Unexpected behavior may occur when using those in combination, such as the Rows collection being sorted before an unbound record is being updated, thus resulting in an exception.
+
+[[Ref398735988]]
+=== Drop-down item text is not correctly retrieved by WebDataGrid DropDownProvider when paging is enabled
+
+Value of drop down item is displayed if the cell value isn't on current page of the DropDownProvider even though the text is known from the grid cell. The feature is supposed to work like this because the WebDataGrid is data bound to values that are different from what is expected to be displayed in the cells as content.
+The workaround for that issue is to implement a custom logic on initial load which handles the rows initializing and fills the Text property of the cells in the specified column by querying the web drop-down data source by the specified value. In the following code you can see an example how to accomplish that.
+
+*In ASPX:*
+
+[source,html]
+----
+<EditorProviders>
+      <ig:DropDownProvider ID="ddp1">
+            <EditorControl
+                  ClientIDMode="Predictable"
+                  EnableAutoFiltering="Server"
+                  AutoFilterResultSize="2"
+                  AutoFilterTimeoutMs="1000"
+                  EnableAnimations="false"
+                  EnablePaging="true"
+                  PageSize="4"
+                  AutoFilterQueryType="Contains"
+                  DataSourceID="SqlDataSource2"
+                  DropDownContainerMaxHeight="200px">
+                  <DropDownItemBinding TextField="CAtegoryName" ValueField="CategoryID" />
+            </EditorControl>
+      </ig:DropDownProvider>
+</EditorProviders>
+----
+
+The workaround: 
+
+*In ASPX:*
+
+[source,html]
+----
+<ig:WebDataGrid AutoGenerateColumns="False" ID="WebDataGrid1" runat="server"  OnInitializeRow="WebDataGrid1_InitializeRow">
+----
+
+*In C#:*
+
+[source, csharp]
+----
+protected void WebDataGrid1_InitializeRow(object sender, RowEventArgs e)
+{
+    if (!this.Page.IsPostBack)
+    {
+        if (e.Row.Index < 8)
+        {
+            e.Row.Items[3].Text = texts[e.Row.Index];
+        }
+    }
+}
+
+// This is only an example. Actual usage would have to extract these from a data source provider.
+string[] texts = new string[] {
+    "Beverages",
+    "Condiments",
+    "Confections",
+    "Dairy Products",
+    "Grains/Cereals",
+    "Meat/Poultry",
+    "Produce",
+    "Seafood"
+};
+----
+
+[[Ref39873598813]]
+=== When programmatically opening the RowEditTemplate for the adding row, the values of the WebTextEditors used in the template will be persisted
+In scenarios where the RowEditTemplate contains WebTextEditors and is manually opened for the adding row the values of the WebTextEditors are not cleared after editing finishes. As a result when entering edit mode again the previous values are retained.
+
+*In C#:*
+
+[source, csharp]
+----
+protected void Page_PreRender(object sender, EventArgs e)
+{
+    var templateContainer=  this.WebDataGrid.Behaviors.EditingCore.Behaviors.RowEditTemplate.TemplateContainer;
+    WebTextEditor editor =(WebTextEditor)templateContainer.FindControl( "control_Item");
+    editor.Value = null;        
+}
+----
+
+== HierarchicalDataGrid
+
+[[expanded-rows]]
+=== Expanded rows of HierarchicalDataGrid do not render past a certain depth in Firefox
+HierarchicalDataGrid’s rows does not render past depth bigger than 200 in Firefox caused by limitation in DOM Depth in this particular browser. link:https://bugzilla.mozilla.org/show-bug.cgi?id=354161#c3[This limitation is also documented by Firefox here].
+
+== WebUpload/WebCaptcha
+
+[[http-error]]
+=== HTTP error 500.22 is thrown when you add the WebUpload/WebCaptcha from the toolbox for IIS7 and above
+There are few ways to handle this issue. First you can just add the control without using the toolbox and add manually the link:https://fiddle.jshell.net/-display/6423ea36-dac6-41f6-be9a-b77c191e0446[HTTP Modules and Handlers]. If you prefer dropping the control to the designer, you can either, go and manually change the modules to the system.webServer/modules section or you can use the AppCmd from the command line to migrate your application following the instructions in the error message.
+
+Same goes for the link:https://fiddle.jshell.net/-display/169f0356-69bb-43d8-8559-55685980be02[HTTP Handler of the WebCaptcha] control.
+
+
+== WebEditors
+
+[[editors-ime]]
+=== By default, IME is disabled for all the editors, except text and mask ones, but in WebKit browsers IME is available for all of them, which may lead to some unexpected results, while typing.
+By default, IME is disabled for all the editors, except text and mask ones, but in WebKit browsers IME is available for all of them, which may lead to some unexpected results, while typing.
+
+
+== WebNumericEditor
+
+[[web-num-editor]]
+=== WebNumericEditor `MaxValue`/`MinValue` options are limited to values that are not represented as exponential on the client.
+WebNumericEditor `MaxValue` does not work correctly with values larger than `1000000000000000` as numbers larger than that are expressed in Scientific notation. The number that is passed in E notation is rounded at the client which may result in incorrect maximal allowed value. WebNumericEditor `MinValue` does not work correctly with values smaller than `-1000000000000000` as numbers smaller than that are expressed in Scientific notation. The number that is passed in E notation is rounded at the client which may result in incorrect minimal allowed value.
+
+== Trident
+
+[[drop-down-selection]]
+=== Trident layout engine handles double click on a HTML checkbox by changing its state only once.
+link:http://stackoverflow.com/questions/9908000/why-internet-explorer-checkbox-accepts-double-click-but-changing-state-only-once[Trident layout engine handles double click on a HTML checkbox, by changing its state only once]. This may lead to an inconsistent behavior in some of the Infragistics controls, those that render checkbox. For example, if WebDropDown has multiple selection enabled, double clicking on a WebDropDown item checkbox, will result in selecting the item, but adding and removing the item's text in the drop down input.
+
+In order for this scenario to work you should manually change checkbox state, when checkbox, inside WebDropDown item (or any other control), is double-clicked, in Internet Explorer.
+
+The workaround: 
+
+*In ASPX:*
+[source,html]
+----
+<ig:WebDropDown ID="WebDropDown1" MultipleSelectionType="Checkbox" EnableMultipleSelection="true" runat="server" >
+    <ClientEvents Initialize="WebDropDown1_Initialize" />
+</ig:WebDropDown>
+
+<script>
+function WebDropDown1_Initialize(event) {
+ $addHandler($find("WebDropDown1")._elements["List"], 'dblclick', function (e) {
+  if (e.target.type === "checkbox" && ($util.IsIE || $util.IsEdge)) {
+   e.target.checked = !e.target.checked;
+  }
+ });
+}
+</script>
+----

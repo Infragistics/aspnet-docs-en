@@ -1,0 +1,436 @@
+﻿////
+
+|metadata|
+{
+    "name": "webchart-client-side-events-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{D823DD47-42C2-4563-BCD8-DAF9E03EBEA7}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebChart Client-Side Events CSOM
+
+== WebChart Client-Events
+
+The client side events for the WebChart object.
+
+=== WebChart Client-Events Properties
+
+[cols="a,a"]
+|====
+|*ClientOnChartScroll* 
+|The event fired when the chart scrollbar is clicked on. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _oIGScrollbar_ </dt> 
+
+<dd>A reference to the IGScrollBar object. 
+
+---- //Called when the chart is scrolled. 
+//The client side event ClientOnChartScroll takes one parameter, oIGScrollBar. 
+//oIGScrollBar is the scrollbar object 
+function UltraChart1_ClientOnChartScroll(oIGScrollBar) { 
+ // Value of scroll bar 
+ var value = oIGScrollBar.Value; 
+ // Height of scroll bar 
+ var height = oIGScrollBar.Height; 
+ // Width of scroll bar 
+ var width = oIGScrollBar.Width 
+ // Maximum value of scroll bar 
+ var maximum = oIGScrollBar.Maximum; 
+ // Minimum value of scroll bar 
+ var minimum = oIGScrollBar.Minimum; 
+ window.status = "Value:: " + value + 
+ " Height:: " + height + 
+ " Width:: " +width+ 
+ " Maximum Value:: "+maximum+ 
+ " Minimum Value:: "+minimum; 
+}
+---- 
+
+</dd> 
+
+</dl>
+
+|*ClientOnCrosshairMove* 
+|The event fired when the crosshair is moved over the chart. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _x_ </dt> 
+
+<dd>The x-coordinate of the mouse location.</dd> 
+
+<dt> _y_ </dt> 
+
+<dd>The y-coordinate of the mouse location. 
+
+---- // Called when the crosshair is moved around the chart 
+// The client side event ClientOnCrosshairMove takes two parameters, x and y. 
+// x is the x-coordinate of the crosshair location 
+// y is the y-coordinate of the crosshair location 
+function UltraChart1_ClientOnCrosshairMove(x, y){ 
+ // x coordinate of the crosshair 
+ var xValue = x; 
+ // y coordinate of the crosshair 
+ var yValue = y; 
+ window.status = "Crosshair at (" + xValue + ","+yValue+ ")"; 
+}
+---- 
+
+</dd> 
+
+</dl>
+
+|*ClientOnShowCrosshair* 
+|The event fired when the crosshair is shown as a result of moving the mouse into the crosshair area. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _x_ </dt> 
+
+<dd>The x-coordinate of the mouse location.</dd> 
+
+<dt> _y_ </dt> 
+
+<dd>The y-coordinate of the mouse location. 
+
+---- // Called when the crosshair is displayed on chart 
+//The client side event ClientOnShowCrosshair takes two parameters, x and y. 
+//x is the x-coordinate of the location where the crosshair is displayed 
+//y is the y-coordinate of the location where the crosshair is displayed 
+function UltraChart1_ClientOnShowCrosshair(x, y){ 
+//This gets the reference to the HTML element that hosts the Chart 
+var chartHtml = document.getElementById("UltraChart1"); 
+ // Set the HTML element that hosts the 
+ //chart’s background color to yellow 
+ chartHtml.style.backgroundColor = "yellow"; 
+ // x coordinate of the crosshair 
+ var xValue = x; 
+ // y coordinate of the crosshair 
+ var yValue = y; 
+ window.status = "Crosshair shown at (" + xValue + "," + yValue+")"; 
+}
+---- 
+
+</dd> 
+
+</dl>
+
+|*ClientOnHideCrosshair* 
+|The event fired when the crosshair is hidden as a result of moving the mouse out of the crosshair area. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _x_ </dt> 
+
+<dd>The x-coordinate of the mouse location.</dd> 
+
+<dt> _y_ </dt> 
+
+<dd>The y-coordinate of the mouse location. 
+
+---- // Called when the crosshair is hidden from the chart 
+//The client side event ClientOnHideCrosshair takes two parameters, x and y. 
+//x is the x-coordinate of the location where the crosshair is hidden 
+//y is the y-coordinate of the location where the crosshair is hidden 
+function UltraChart1_ClientOnHideCrosshair(x, y){ 
+ // x coordinate of the crosshair 
+ var xValue = x; 
+ // y coordinate of the crosshair 
+ var yValue = y; 
+ window.status = "Crosshair hidden at (" + xValue + "," + yValue+")"; 
+}
+---- 
+
+</dd> 
+
+</dl>
+
+|*ClientOnShowTooltip* 
+|The event fired when the tooltip is shown as a result of moving the mouse over of the tooltip area. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _text_ </dt> 
+
+<dd>The current text value for the toolip.</dd> 
+
+<dt> _tooltip_ref_ </dt> 
+
+<dd>A reference to the tooltip's html element. 
+
+---- // Called when the tooltip is shown on the chart 
+// The client side event ClientOnShowTooltip takes two parameters, text and tooltip_ref. 
+// text is the value of the tooltip 
+// tooltip_ref is a reference to the tooltip’s html element 
+function UltraChart1_ClientOnShowTooltip(text, tooltip_ref){ 
+ // If tooltip value is less than 4, set the background color of the 
+ // tooltip to red, else set it to yellow 
+ if (text < 4) 
+ tooltip_ref.style.backgroundColor = "red"; 
+ else 
+ tooltip_ref.style.backgroundColor = "yellow"; 
+ // Enable the tooltip 
+ tooltip_ref.disabled = false; 
+ // Set the font properties of the tooltip 
+ tooltip_ref.style.fontFamily = "Arial"; 
+ tooltip_ref.style.fontSize = "14px"; 
+ tooltip_ref.style.fontWeight = "bold"; 
+}
+---- 
+
+</dd> 
+
+</dl>
+
+|*ClientOnHideTooltip* 
+|The event fired when the tooltip is hidden as a result of moving the mouse out of the tooltip area. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _text_ </dt> 
+
+<dd>The current text value for the toolip.</dd> 
+
+<dt> _tooltip_ref_ </dt> 
+
+<dd>A reference to the tooltip's html element. 
+
+---- // Called when the tooltip is hidden 
+//The client side event ClientOnHideTooltip takes two parameters, text and tooltip_ref. 
+//text is the value of the tooltip 
+//tooltip_ref is a reference to the tooltip’s html element 
+function UltraChart1_ClientOnHideTooltip(text, tooltip_ref){ 
+ // Value of tooltip 
+ var tooltipValue = text; 
+ // Set the background color to red 
+ tooltip_ref.style.backgroundColor = "red"; 
+ // Disable the tooltip 
+ tooltip_ref.disabled = true; 
+}
+---- 
+
+</dd> 
+
+</dl>
+
+|*ClientOnMouseClick* 
+|The event fired when chart data is clicked. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _this_ref_ </dt> 
+
+<dd>A reference to the IGUltraChart object in context.</dd> 
+
+<dt> _row_ </dt> 
+
+<dd>The row number in context.</dd> 
+
+<dt> _column_ </dt> 
+
+<dd>The column number in context.</dd> 
+
+<dt> _value_ </dt> 
+
+<dd>The data value in context.</dd> 
+
+<dt> _row_label_ </dt> 
+
+<dd>The row label in context.</dd> 
+
+<dt> _column_label_ </dt> 
+
+<dd>The column label in context.</dd> 
+
+<dt> _evt_type_ </dt> 
+
+<dd>The javascript event type in context.</dd> 
+
+<dt> _layer_id_ </dt> 
+
+<dd>A unique identifier for the chart layer containing the data that was clicked. 
+
+---- // Called when the chart is clicked on 
+//The client side event ClientOnMouseClick takes eight parameters. 
+//this_ref is a reference to the IGUltraChart object in context 
+//row is the row number that was clicked on 
+//column is the column number that was clicked on 
+//value is the data value that was clicked on 
+//row_label is the label of the row that was clicked on 
+//column_label is the label of the column that was clicked on 
+//evt_type is the JavaScript event, in this situation it is click 
+//layer_id is the unique identifier for the chart layer containing the data that was clicked on 
+function UltraChart1_ClientOnMouseClick(this_ref, row, column, value, row_label, column_label, evt_type, layer_id){ 
+//This gets the reference to the HTML element that hosts the Chart 
+var chartHtml = document.getElementById("UltraChart1"); 
+ // If chart is clicked below row 2, the HTML element that hosts the 
+ //chart’s background color is changed tored 
+ if (row < 2) 
+ chartHtml.style.backgroundColor = "red"; 
+ // If value clicked is below 4, 
+ //the HTML element that hosts the 
+ //chart’s background color is changed to blue 
+ if (value < 4) 
+ chartHtml.style.backgroundColor = "blue"; 
+ // Enable Cross Hair when chart is clicked 
+ this_ref.EnableCrossHair = true; 
+ // Enable Tooltip fading when chart is clicked 
+ this_ref.EnableTooltipFading = true; 
+ // Display which row and column was clicked 
+ window.status = "Row Clicked:: "+ row_label + 
+ " Column Clicked:: "+ column_label; 
+}
+---- 
+
+</dd> 
+
+</dl>
+
+|*ClientOnMouseOut* 
+|The event fired when the mouse cursor moves out of charted data. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _this_ref_ </dt> 
+
+<dd>A reference to the IGUltraChart object in context.</dd> 
+
+<dt> _row_ </dt> 
+
+<dd>The row number in context.</dd> 
+
+<dt> _column_ </dt> 
+
+<dd>The column number in context.</dd> 
+
+<dt> _value_ </dt> 
+
+<dd>The data value in context.</dd> 
+
+<dt> _row_label_ </dt> 
+
+<dd>The row label in context.</dd> 
+
+<dt> _column_label_ </dt> 
+
+<dd>The column label in context.</dd> 
+
+<dt> _evt_type_ </dt> 
+
+<dd>The javascript event type in context.</dd> 
+
+<dt> _layer_id_ </dt> 
+
+<dd>A unique identifier for the chart layer containing the data that was clicked. 
+
+---- // Called when the mouse moves away from the chart data 
+//The client side event ClientOnMouseOut takes eight parameters. 
+//this_ref is a reference to the IGUltraChart object in context 
+//row is the row number 
+//column is the column number 
+//value is the data value 
+//row_label is the label of the row 
+//column_label is the label of the column 
+//evt_type is the JavaScript event 
+//layer_id is the unique identifier for the chart layer containing the data 
+function UltraChart1_ClientOnMouseOut(this_ref, row, column, value, row_label, column_label, evt_type, layer_id){ 
+ // Disable Cross Hair when mouse moves away 
+ this_ref.EnableCrossHair = false; 
+ // Display which row and column the mouse moved away from 
+ window.status = "Row Mouse Out:: "+ row_label + 
+ " Column Mouse Out:: "+ column_label; 
+}
+---- 
+
+</dd> 
+
+</dl>
+
+|*ClientOnMouseOver* 
+|The event fired when the mouse cursor moves over charted data. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _this_ref_ </dt> 
+
+<dd>A reference to the IGUltraChart object in context.</dd> 
+
+<dt> _row_ </dt> 
+
+<dd>The row number in context.</dd> 
+
+<dt> _column_ </dt> 
+
+<dd>The column number in context.</dd> 
+
+<dt> _value_ </dt> 
+
+<dd>The data value in context.</dd> 
+
+<dt> _row_label_ </dt> 
+
+<dd>The row label in context.</dd> 
+
+<dt> _column_label_ </dt> 
+
+<dd>The column label in context.</dd> 
+
+<dt> _evt_type_ </dt> 
+
+<dd>The javascript event type in context.</dd> 
+
+<dt> _layer_id_ </dt> 
+
+<dd>A unique identifier for the chart layer containing the data that was clicked. 
+
+---- // Called when the mouse moves over chart data 
+//The client side event ClientOnMouseOver takes eight parameters. 
+//this_ref is a reference to the IGUltraChart object in context 
+//row is the row number that the mouse is over 
+//column is the column number that the mouse is over 
+//value is the data value that the mouse is over 
+//row_label is the label of the row that the mouse is over 
+//column_label is the label of the column that the mouse is over 
+//evt_type is the JavaScript event 
+//layer_id is the unique identifier for the chart layer containing the data that the mouse is over 
+function UltraChart1_ClientOnMouseOver(this_ref, row, column, value, row_label, column_label, evt_type, layer_id) { 
+ // Enable the crosshair 
+ this_ref.EnableCrossHair = true; 
+ // Disable the tooltip 
+ this_ref.TooltipVisible = false; 
+ // Display which row and column the mouse is over 
+ window.status = "Mouse Over:: " + row_label + 
+ " Column Clicked:: " + column_label; 
+}
+---- 
+
+</dd> 
+
+</dl>
+
+|====

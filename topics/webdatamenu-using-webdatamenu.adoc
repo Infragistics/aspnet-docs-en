@@ -1,0 +1,69 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatamenu-using-webdatamenu",
+    "controlName": ["WebDataMenu"],
+    "tags": ["Getting Started"],
+    "guid": "{CE7FC61D-2F83-4C4A-880F-778140B8818E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebDataMenu
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebDataMenu™.
+
+link:webdatamenu-webdatamenu-smart-tag.html[WebDataMenu Smart Tag]
+
+This topic introduces WebDataMenu Smart Tag anchor and pop-up panel, which give the ability to see and set most of the contol properties and settings.
+
+link:webdatamenu-keyboard-navigation.html[Keyboard Navigation]
+
+This topic shows how easily to navigate through the WebDataMenu items using the keyboard.
+
+link:webdatamenu-adding-images-and-navigation-urls-to-menu-items.html[Adding Images and Navigation Urls to Menu Items]
+
+This sheet contains a step up topic of how to add images and navigation urls of the WebDatMenu items.
+
+link:webdatamenu-binding-to-data.html[Binding to Data]
+
+In this topic you will learn how to bind the WebDataMenu contol to different data soucres, including Infragistics ASP.NET data source controls.
+
+link:webdatamenu-disabling-menu-items.html[Disabling Menu Items]
+
+This topic illustrates how to disable individual WebDataMenu items.
+
+link:webdatamenu-menu-item-states.html[Menu Item States]
+
+In this topic are listed the different visual states that a WebDataMenu item can have.
+
+link:webdatamenu-orientation.html[Orientation]
+
+In this topic you will learn which are the orientation properties of WebDataMenu and how to combine them to get more complex contol.
+
+link:webdatamenu-separators.html[Separators]
+
+This topic presents how to take advantage of the WebDataMenu Separator functionallity.
+
+link:webdatamenu-templating.html[Templating]
+
+In this topic you will see list and examples of WebDataMenu item templates.
+
+link:webdatamenu-using-webdatamenu-as-context-menu-on-webdatatree-node.html[Using WebDataMenu as Context menu on WebDataTree Node]
+
+WebDataMenu can act as a context menu. Follow this topic to learn how to intagrate WebDataMenu with the WebDataTree contol.
+
+link:webdatamenu-scrolling-about.html[Scrolling]
+
+This topic contains detailed explanation and vivid example of WebDataMenu scrolling.
+
+link:webdatamenu-activateonhover-property.html[ActivateOnHover Property]
+
+This topic explains what is the effect of setting WebDataMenu ActivateOnHover property.
+
+link:webdatamenu-closemenuonclick-property.html[CloseMenuOnClick Property]
+
+This topic explains how CloseMenuOnClick affects the WebDataMenu contol.

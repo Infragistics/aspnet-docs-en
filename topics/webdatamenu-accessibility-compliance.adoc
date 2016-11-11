@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatamenu-accessibility-compliance",
+    "controlName": ["WebDataMenu"],
+    "tags": [],
+    "guid": "{2E56116A-7D29-467F-A42B-D966C37EC2A1}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDataMenu Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|All IMG tags, which have key functionality, have "alt" attributes property set or allow for setting of the alt attribute value.
+
+|(c)
+|Using client side events, the user can change any attribute of any of the control's DOM element reflecting the current node state (activate, selected, disabled and so on...) In this way, the information conveyed by colors (or styles) are available to the screen reader.
+
+|(d)
+|The control's markup is readable without requiring an associated style sheet. It consists of simple nested unsorted lists.
+
+|(l)
+|If initial markup is changed by the script engine of WebDataMenu, the new markup fully comply with applicable option of Section 508 document.
+
+|====

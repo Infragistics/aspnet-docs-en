@@ -1,0 +1,129 @@
+﻿////
+
+|metadata|
+{
+    "name": "webvideoplayer-working-with-html5-video",
+    "controlName": ["WebVideoPlayer"],
+    "tags": ["Getting Started"],
+    "guid": "705283cd-35ed-4ccc-a39a-be851d9661ff",  
+    "buildFlags": [],
+    "createdOn": "2011-06-01T08:12:03.9875426Z"
+}
+|metadata|
+////
+
+= WebVideoPlayer Working with HTML5 Video
+
+== Introduction
+
+The WebVideoPlayer™ control uses the HTML5-specific <video> tag to play videos. It is supported by the following versions of the most popular browsers.
+
+[cols="a,a,a,a,a"]
+|====
+|Internet Explorer|Firefox|Safari|Chrome|Opera
+
+|9+
+|3.6+
+|5+
+|8+
+|11.+
+
+|====
+
+Earlier versions of these browsers are not HTML5 video compatible. Initializing the control in any of older browser versions results in firing the  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.videoplayerclientevents~browsernotsupported.html[BrowserNotSupported]"]  event, which if unhandled displays a user-friendly message with links to the download pages of the respective supported browsers.
+
+image::images/WebVideoPlayer_Working_with_HTML5_Video_01.png[]
+
+If the desired course of action in the case of browser not supporting HTML5 video is different, you can handle the BrowserNotSupported event and execute custom logic such as displaying an alternative video player using Microsoft® Silverlight™ or Adobe® Flash™. The following code snippet demonstrates this.
+
+*In ASPX:*
+
+----
+<igjq:WebVideoPlayer ID="player1" runat="server">
+   <Sources>
+      <igjq:VideoPlayerSource Source="example_video1.mp4" />
+      <igjq:VideoPlayerSource Source="example_video2.webm" />
+      <igjq:VideoPlayerSource Source="example_video3.ogv" />
+   </Sources>
+   <ClientEvents BrowserNotSupported="onBrowserNotSupported" />
+</igjq:WebVideoPlayer>
+----
+
+*In Javascript:*
+
+----
+function onBrowserNotSupported(sender, args) {
+            $("#flashContainer").css("display", "block");
+            $("#<%= this.player1.ClientID %>").css("display", "none");
+            eventArgs.cancel = true;
+        }
+----
+
+== Video Codecs
+
+Each browser has its own way of handling video tags and supports one or more video codecs. Currently there is no universally supported codec. Therefore if you wish to have your video viewable in all of the most popular browsers you will need to encode the video more than once.
+
+Here is a complete list of codec support in the modern browsers.
+
+[options="header", cols="a,a,a,a,a,a"]
+|====
+|Codecs/Container|IE|Firefox|Safari|Chrome|Opera
+
+|Theora+Vorbis/Ogg
+|-
+|3.5+
+|$$*$$$$* $$
+|3.0+
+|11+
+
+|H264+AAC/MP4
+|9.0+
+|-
+|5+
+|-
+|-
+
+|WebM
+|9.0+$$*$$
+|4.0+
+|$$*$$$$* $$
+|6.0+
+|11+
+
+|====
+
+$$*$$ Internet Explorer 9 will only support WebM if the end-user has a VP8 codec installed.
+
+$$*$$$$* $$ Safari plays anything that Apple® QuickTime™ can play, but QuickTime only comes with H.264/AAC/ MP4 support pre-installed.
+
+.Note:
+[NOTE]
+====
+For more up to date data on browser support visit: link:http://en.wikipedia.org/wiki/HTML5_video[http://en.wikipedia.org/wiki/HTML5_video]
+====
+
+In most cases, you will need to encode the video with each of the codec/container combinations listed above. Paths to the three files must be passed to the control which will then chose the most appropriate one for the browser if it supports more than one. The priority is the following:
+
+[start=1]
+. H264/AAC in MP4 container
+[start=2]
+. Theora/Vorbis in Ogg container
+[start=3]
+. WebM
+
+The chosen source will be added in the src attribute of the video tag.
+
+You can also test a specific browser for compatibility with the three separate codec/container combinations using built-in functions.
+
+*In Javascript:*
+
+----
+var supportsHTML5 = $("#<%= this.player1.ClientID %>").igVideoPlayer("supports_video");
+var supportsH264 = $("#<%= this.player1.ClientID %>").igVideoPlayer("supports_h264_baseline_video");
+var supportsOgv = $("#<%= this.player1.ClientID %>").igVideoPlayer("supports_ogg_theora_video");
+var supportsWebM = $("#<%= this.player1.ClientID %>").igVideoPlayer("supports_webm_video");
+----
+
+== Related Topics
+
+link:webvideoplayer-overview.html[WebVideoPlayer Overview]

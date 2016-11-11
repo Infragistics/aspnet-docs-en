@@ -1,0 +1,34 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-utility-functions",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{BADB8D73-C516-44BE-9BF1-FB6AFAEDD3A1}",  
+    "buildFlags": [],
+    "createdOn": "2007-06-02T11:54:28Z"
+}
+|metadata|
+////
+
+= WebGauge Utility Functions
+
+The following utility function is available for public use and ships with WebGauge's™ JavaScript. The function works with Ids of gauge's elements and in fact is the connection between HTML elements with Id and DOM objects that represent the elements internally.
+
+=== WebGauge Utility Methods
+
+[cols="a,a"]
+|====
+|*ig_getWebGaugeById* 
+|*Parameters* 
+
+_id_ 
+
+String. Id of the gauge which object should be returned. 
+
+*Returns*
+
+Object. DOM object of the gauge that corresponds to the id that is passed in. Null if no gauge with such an id is found.
+
+|====

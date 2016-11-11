@@ -1,0 +1,131 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-load-on-demand",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Grids","Performance"],
+    "guid": "{E99010B2-55F5-47AF-9E67-8BFF81802576}",  
+    "buildFlags": [],
+    "createdOn": "2009-01-10T13:46:13Z"
+}
+|metadata|
+////
+
+= Load On Demand
+
+The WebHierarchicalDataGrid™ control has a load on demand feature; the control only retrieves data when needed, such as when a row is expanded. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~initialdatabinddepth.html[InitialDataBindDepth]"]  property controls this feature. The property is set to 0 by default, initially only loading the root data. Any numeric value thereafter determines the successive data level(s) to load at start up. A value of -1 disables load on demand and loads all data levels.
+
+The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~enableajax.html[EnableAjax]"]  property affects the manner in which data is received when using load on demand. The property is True by default and allows data retrieval to be asynchronous. If this property is False, data retrieval results in a full page postback.
+
+===== Automatic Mode
+
+WebHierarchicalDataGrid will automatically load your hierarchical data on demand. Simply bind the grid to your data source at design time and then set the InitialDataBindDepth property to 0; no other property settings are required. The grid will automatically detect from the data source when data binding should occur and bind child row islands as necessary.
+
+When binding at runtime, the DataSource/DataSourceID property must be set on every postback so that WebHierarchicalDataGrid knows which data level to retrieve. You can do this on every page load, or you can perform one data bind on the initial page load, and subsequent data binds on WebHierarchicalDataGrid's RowIslandsPopulating event.
+
+The following code shows you how to enable Load on Demand.
+
+*In HTML:*
+
+----
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" Height="350px"
+    Width="800px"  
+    DataKeyFields="CategoryID" DataMember="SqlDataSource1_DefaultView" 
+    DataSourceID="WebHierarchicalDataSource1" Key="SqlDataSource1_DefaultView" 
+    InitialDataBindDepth="0">
+<ig:WebHierarchicalDataGrid>
+----
+
+*In Visual Basic:*
+
+----
+Me.WebHierarchicalDataGrid1.InitialDataBindDepth = 0
+----
+
+*In C#:*
+
+----
+this.WebHierarchicalDataGrid1.InitialDataBindDepth = 0;
+----
+
+===== Server Events
+
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislandspopulating_ev.html[RowIslandsPopulating]"]  – This is a cancelable event that is raised before row islands are created and bound. You can use this event for manual load on demand. If canceled and no new row islands are created the row is not expanded on the client.
+
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislandspopulated_ev.html[RowIslandsPopulated]"]  – This is the event that is raised after row islands are created and bound.
+
+===== Client Events
+
+Populating – This is a cancelable event that is raised before the grid initiates a request to the server to load child rows. If canceled the row is not expanded.
+
+Populated – This is the event that is raised after child rows are received from the server but before the row expanding event.
+
+===== Manual Mode
+
+You can manually control the load on demand process. The control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislandspopulating_ev.html[RowIslandsPopulating] event is raised every time a row is expanded; at this point, data is requested for the row’s child row island(s). You can use this event to manually create a container grid that represents the row island(s) and then bind it to the data that you retrieved.
+
+The following code shows you how to perform manual load on demand using the Categories and Products tables from the Northwind database. Be sure to include the following namespaces:
+
+* System.Data.SqlClient
+* System.Data
+* Infragistics.Web.UI.GridControls
+
+The WebHierarchicalDataGrid control is bound at design time to a WebHierarchicalDataSource™ control. For more information on binding to WebHierarchicalDataSource, see link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Binding to Hierarchical Data Source].
+
+*In Visual Basic:*
+
+----
+Protected Sub WebHierarchicalDataGrid1_RowIslandsPopulating(ByVal sender As Object, ByVal e As ContainerRowCancelEventArgs) Handles WebHierarchicalDataGrid1.RowIslandsPopulating
+   'Cancel the default automatic load on demand operation 
+   e.Cancel = True
+   ' Get the data key 
+   Dim key As Integer = CInt(e.Row.DataKey(0))
+   Dim con As New SqlConnection("Data Source=.\sqlexpress;Initial Catalog=Northwind;Integrated Security=True")
+   ' Use data key to select only the set of records that belongs to the parent row 
+   Dim com As New SqlCommand("SELECT * FROM Products Where CategoryId = @Id", con)
+   com.Parameters.AddWithValue("@Id", key)
+   ' Set up a data adapter to fill up a dataset with data 
+   Dim da As New SqlDataAdapter(com)
+   Dim products As New DataSet()
+   con.Open()
+   ' Retrieve data 
+   da.Fill(products, "ProductRowIsland")
+   con.Close()
+   ' Create Container Grid 
+   Dim childGrid As New ContainerGrid()
+   e.Row.RowIslands.Add(childGrid)
+   ' Bind Grid 
+   childGrid.DataSource = products
+   childGrid.DataBind()
+End Sub
+----
+
+*In C#:*
+
+----
+protected void WebHierarchicalDataGrid1_RowIslandsPopulating(object sender, ContainerRowCancelEventArgs e)
+{
+   //Cancel the default automatic load on demand operation
+   e.Cancel = true;
+   // Get the data key
+   int key = (int)e.Row.DataKey[0];
+   SqlConnection con = new SqlConnection(@"Data Source=.\sqlexpress;Initial Catalog=Northwind;Integrated Security=True");
+   // Use data key to select only the set of records that belongs to the parent row
+   SqlCommand com = new SqlCommand("SELECT * FROM Products Where CategoryId = @Id", con);
+   com.Parameters.AddWithValue("@Id", key);
+   // Set up a data adapter to fill up a dataset with data
+   SqlDataAdapter da = new SqlDataAdapter(com);
+   DataSet products = new DataSet();
+   con.Open();
+   // Retrieve data
+   da.Fill(products, "ProductRowIsland");
+   con.Close();
+   // Create Container Grid
+   ContainerGrid childGrid = new ContainerGrid();
+   e.Row.RowIslands.Add(childGrid);
+   // Bind Grid
+   childGrid.DataSource = products;
+   childGrid.DataBind();
+}
+----

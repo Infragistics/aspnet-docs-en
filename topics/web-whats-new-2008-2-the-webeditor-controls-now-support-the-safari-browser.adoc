@@ -1,0 +1,17 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-whats-new-2008-2-the-webeditor-controls-now-support-the-safari-browser",
+    "controlName": [],
+    "tags": ["Editing","FAQ","Getting Started"],
+    "guid": "{661472C9-8D16-4D86-AEC9-A90CC3C61ECB}",  
+    "buildFlags": ["docx-online","docx-booklet"],
+    "createdOn": "2008-01-05T15:38:02Z"
+}
+|metadata|
+////
+
+= The WebEditor Controls Now Support the Safari Browser
+
+Starting in Infragistics ASP.NET 2008 Volume 2, all of the web editors fully support the Apple® Safari™ Web Browser. The expansive and varied features of these editors are now fully available in the Safari browser.

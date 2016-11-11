@@ -1,0 +1,79 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-remove-an-activity-on-the-server",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{271671B9-4D93-4DD5-B95A-D1DA60424C40}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Remove an Activity on the Server
+
+In server-side code, you remove an existing  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  from the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activitiescollection.html[Activities]"]  collection property of the WebScheduleInfo™ after data binding to hide that activity from being rendered for the current page request. Because your intention is only to prevent this activity from being rendered, the PreRender event of the Page class is the best place to put it.
+
+The following code example demonstrates how to use the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activitiescollection~remove.html[Remove]"]  method to hide Activities that meet arbitrary selection criteria (e.g., starting today) from view.
+
+.Note:
+[NOTE]
+====
+Changes made to the Activities collection, including the removal of an Activity, affect only the rendering of the Activities in the current page request. The Activities collection is never preserved in ViewState (even when ViewState is enabled). This behavior is by design because it unnecessarily duplicates the scheduling information found in the data store. If you want to remove this Activity programmatically from the data store, see link:webschedule-remove-an-activity-from-the-database.html[Removing an Activity from the Database].
+====
+
+If you continue seeing the Activity you have removed, verify that a call has been made to the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~databind.html[DataBind]"]  method on WebScheduleInfo before removing the Activity. If your application does not manually data bind itself, WebScheduleInfo waits until the last possible moment before rendering and data binds automatically. This automatic data binding effectively renews the Activities collection from the data store with a fresh copy of the Activity you had thought was removed.
+
+An alternative for hiding Activities is to set their  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity~visible.html[Visible]"]  property to false. If your application simply calls for concealing an Activity from the end user, it is often simpler to hide it by setting the Visible property. Use the Remove method when you don't want to find the Activity in future searches of the Activities collection during the current page request.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.Shared
+Imports Infragistics.WebUI.WebSchedule
+...
+	Dim appt As Activity
+	Dim index As Integer
+	'Data-bind manually before removing Activities from the collection.
+	Me.WebScheduleInfo1.DataBind()
+	'Loop through the Activities in the WebScheduleInfo in reverse order
+	'because Activities will be removed. Going in forward order might
+	'skip over some Activities.
+	For index = (Me.WebScheduleInfo1.Activities.Count - 1) To 0 Step -1
+		'Get the Activity at the current Index.
+		appt = Me.WebScheduleInfo1.Activities(index)
+		'Check the Activity to see if it belongs to Today.
+		If (appt.StartDateTime.Date.Value = DateTime.Today) Then
+			'Remove this Activity from the Collection.
+			Me.WebScheduleInfo1.Activities.Remove(appt)
+		End If
+	Next index
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.Shared;
+using Infragistics.WebUI.WebSchedule;
+...
+	Activity appt;
+	int index;
+	// Data-bind manually before removing Activities from the collection.
+	this.WebScheduleInfo1.DataBind();
+	// Loop through the Activities in the WebScheduleInfo in reverse order
+	// because Activities will be removed. Going in forward order might
+	// skip over some Activities.
+	for( index = this.WebScheduleInfo1.Activities.Count - 1; index > 0; --index)
+	{
+		// Get the Activity at the current Index.
+		appt = this.WebScheduleInfo1.Activities[index];
+		// Check the Activity to see if it belongs to Today.
+		if (appt.StartDateTime.Date.Value == DateTime.Today)
+		{
+			// Remove this Activity from the Collection.
+			this.WebScheduleInfo1.Activities.Remove(appt);
+		}
+	}
+----

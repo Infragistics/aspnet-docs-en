@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexplorerbar-accessibility-compliance",
+    "controlName": ["WebExplorerBar"],
+    "tags": ["Section 508"],
+    "guid": "{27E19730-053A-4811-891B-061AD0AA8673}",  
+    "buildFlags": [],
+    "createdOn": "2010-02-03T23:43:07Z"
+}
+|metadata|
+////
+
+= WebExplorerBar Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|All IMG tags, which have key functionality, have "alt" attributes property set or allow for setting of the alt attribute value.
+
+|(c)
+|The WebExplorerBar supports different styles reflecting the current group/item state (activated, selected, disabled, etc.) and while this information may be conveyed by color, it is the developer’s responsibility when styling the groups/items appearance for maximum accessibility to users who cannot distinguish color to use non-color style indications which can include CSS style rules for borders, font weight, font size, font decoration, etc.
+
+|(d)
+|The control's markup is readable without requiring an associated style sheet because of the attributes described in rules A and C.
+
+|(l)
+|When the control's scripts are changing the page markup, the new created content comply with the screen reader due to the attributes described in rules A and C.
+
+|(n)
+|When placed in form, all parts of the control are accessible using both the mouse and the keyboard, which includes expanding, collapsing, selecting, editing and navigating through groups.
+
+|(p)
+|A customizable "Data Loading" message is supported to allow the developer to notify the user about data fetching from the server.
+
+|====

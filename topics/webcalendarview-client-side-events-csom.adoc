@@ -1,0 +1,111 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalendarview-client-side-events-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{DDB0D671-EA5D-416C-AD43-DA279CA18182}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebCalendarView Client-Side Events
+
+== Client Events
+
+=== Client Events Methods
+
+[cols="a,a"]
+|====
+|*Click* 
+|This event fires when any element of the CalendarView is clicked. 
+
+*Parameters*
+
+_oCalendarView_ 
+
+The WebCalendarView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to what was clicked.
+
+|*DblClick* 
+|This event fires when any element of the CalendarView is double clicked. 
+
+*Parameters*
+
+_oCalendarView_ 
+
+The WebCalendarView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to what was double clicked.
+
+|*Initialize* 
+|This event fires when the CalendarView initializes. 
+
+*Parameters*
+
+_oCalendarView_ 
+
+The WebCalendarView client-side object.
+
+|*MouseDown* 
+|This event fires when a mouse down occurs on any element in the CalendarView. 
+
+*Parameters*
+
+_oCalendarView_ 
+
+The WebCalendarView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to where the mouse button was pressed down.
+
+|*MouseUp* 
+|This event fires when a mouse up occurs on any element in the DayView. 
+
+*Parameters*
+
+_oCalendarView_ 
+
+The WebCalendarView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _element_ 
+
+The html element that corresponds to where the mouse button was released.
+
+|*Navigate* 
+|This event fires when the user presses the Navigate Next or Previous button. 
+
+*Parameters*
+
+_oCalendarView_ 
+
+The WebCalendarView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _date_ 
+
+The first date of the month that is being navigated to.
+
+|*RenderDay* 
+|This event is fired before a day is rendered. The text and CSS class can be modified using buffer member variables of the oDay parameter. Any aspect of rendering can be modified explicitly using the HTML element that represents a day. Default logic that renders the day can be canceled. 
+
+*Parameters*
+
+_oCalendarView_ 
+
+The WebCalendarView client-side object. _oEvent_ 
+
+The event object, which allows you to cancel the event, cancel the postback, or request a postback. _oDay_ 
+
+An oDay object that represents the day that is being rendered.
+
+|====
+

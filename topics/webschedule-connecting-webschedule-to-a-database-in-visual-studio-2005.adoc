@@ -1,0 +1,108 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-connecting-webschedule-to-a-database-in-visual-studio-2005",
+    "controlName": ["WebSchedule"],
+    "tags": ["Data Binding","How Do I","Scheduling"],
+    "guid": "{AAC382D0-5CEA-49D1-912D-9CE2DCA625A8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Connecting WebSchedule to a Database in Visual Studio 2005
+
+In this walkthrough you are shown how to set up an AccessDataSource control for use with the WebSchedule OLE DB data provider by setting its DataSourceID property. This is the recommended way to connect WebSchedule™ to a database in the Microsoft® Visual Studio® .NET 2005 (.NET Framework).
+
+The WebSchedule SQL data provider can support the SqlDataSource (which AccessDataSource extends) for connecting to Microsoft SQL Server. What is important for you to understand is that the WebSchedule data providers use the ConnectionString property of the data source control to create a connection to your database.
+
+The WebSchedule data providers do not support every type of data source control introduced by ADO.NET 2.0, and they do not take advantage of additional features of the data source control such as eventing, binding members, or conflict detection. Instead, the WebSchedule data providers support these through a consistent API.
+
+This walkthrough guides you through the steps taken when connecting the WebSchedule OLE DB data provider to an AccessDataSource control.
+
+[start=1]
+. Starting with a new Web application, and drag the controls in the following list from the Toolbox onto the design surface. The "ASP.NET tab" will be whichever tab you had chosen to contain the Infragistics ASP.NET controls and components, including the WebSchedule controls/components.
+[start=2]
+. AccessDataSource (Data tab)
+** WebScheduleInfo (ASP.NET tab)
+** WebScheduleOleDbProvider (ASP.NET tab)
+** WebDayView (ASP.NET tab)
+
+When you are finished with this step, your Web application should contain the following control layout.
+
+image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visual_Studio_NET_2005_1.png[]
+
+[start=3]
+. Before configuring the connection with the AccessDataSource, copy the WebSchedule2.mdb file to your Web application's App_Data folder. This is a new folder introduced by Microsoft Visual Studio .NET 2005 for the purpose of holding your application's data resources.
+[start=4]
+. The WebSchedule1.mdb file is installed in the following default location, depending on your operating system:
+
+** XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
+** Vista or later -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+
+Right-click on the App_Data folder and select Add Existing Item…. You can then navigate to the Infragistics ASP.NET samples installation folder containing the WebSchedule2.mdb file (or your own Access database file).
+
+The App_Data folder appears to be nested beneath your Web project's folder so you may be security-conscious about storing data files beneath an IIS virtual directory for fear users may attempt to directly download the data files by figuring out their URL. IIS protects this special folder from HTTP requests so anyone requesting a data file with a specially crafted URL receives a 404 "Not Found" error. The data files contained by App_Data are made available for connection from your Web application and not externally.
+
+image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visual_Studio_NET_2005_2.png[]
+
+[start=5]
+. Click the Smart Tag on the AccessDataSource control to expand a list of tasks pertinent to setting up a database connection. Since you have just dropped the AccessDataSource control onto the form, click "Configure Data Source" to open the Configure Data Source wizard.
+[start=6]
+
+image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visual_Studio_NET_2005_3.png[]
+
+[start=7]
+. Choose a Database by clicking Browse and selecting the WebSchedule2.mdb database file in the App_Data folder. Click Next to continue.
+[start=8]
+
+image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visual_Studio_NET_2005_4.png[]
+
+[start=9]
+. Configure the Select statement by choosing the "Specify a custom SQL statement or stored procedure" radio button. This selection disables the remainder of the wizard page.
+[start=10]
+. 
+
+WebSchedule data providers use the AccessDataSource control only to retrieve connection information, and already offer sophisticated data binding support. Click Next to continue.
+
+image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visual_Studio_NET_2005_5.png[]
+
+[start=11]
+. Define a minimal custom SELECT statement such as ";" (a single semicolon). WebSchedule data providers are unaffected by what you define here because they manage their own data binding. You may customize the SQL (or stored procedures) that this data source control exposes to your Web application's other data consumers, if any. ClickNext to continue.
+[start=12]
+. 
+
+image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visual_Studio_NET_2005_6.png[]
+
+[start=13]
+. The last page of the Configure Data Source wizard lets you test your connection. Unless you specified data binding information for steps 5 and 6, this test may fail. The WebSchedule data provider did not require you to fill in this additional information because it only needs the connection information from your data source control. Click Finish to complete configuring your data source control.
+[start=14]
+. Select the WebSchedule OLE DB data provider and connect it to your AccessDataSource control by setting its DataSourceID property from the Properties window. The ID of your AccessDataSource (i.e., "AccessDataSource1") should appear in the drop-down list shown below.
+[start=15]
+. 
+
+image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visual_Studio_NET_2005_7.png[]
+
+[start=16]
+. Connect the WebSchedule OLE DB data provider to the WebScheduleInfo™ control by setting the data provider's  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo.html[WebScheduleInfo]"]  property to the ID given to your WebScheduleInfo component (i.e., "WebScheduleInfo1").
+[start=17]
+. 
+
+image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visual_Studio_NET_2005_8.png[]
+
+[start=18]
+. Select the WebDayView™ control and connect it to the WebScheduleInfo component by setting its WebScheduleInfoID property, too. At run time, your WebScheduleInfo acts as the central nervous system interconnecting the data provider with one or more WebSchedule view elements.
+[start=19]
+. You should now have completed the necessary database connection configuration between the WebSchedule elements and a new instance of a new AccessDataSource control. Press the CTRL-F5 key to run your Web application in Microsoft Visual Studio .NET 2005 to verify that everything works.
+
+== Related Topics
+
+link:webschedule-handle-concurrency-conflicts.html[Handle Concurrency Conflicts]
+
+link:webschedule-binding-to-access-data-source-using-webschedulegenericdataprovider.html[Binding to Access Data Source Control Using WebScheduleGenericDataSource]
+
+link:webschedule-binding-to-a-data-set-with-webschedulegenericdataprovider.html[WebSchedule Binding to a Data Set with WebScheduleGenericDataProvider]
+
+link:webschedule-webschedulegenericdataprovider-crud-statements-for-sql-data-source.html[WebScheduleGenericDataProvider CRUD Statements for SQL Data Source]

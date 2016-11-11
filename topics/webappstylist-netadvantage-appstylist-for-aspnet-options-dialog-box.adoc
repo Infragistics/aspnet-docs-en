@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webappstylist-netadvantage-appstylist-for-aspnet-options-dialog-box",
+    "controlName": ["WebAppStylist"],
+    "tags": [],
+    "guid": "{65844A63-8C49-4BBB-818E-FC689479C841}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Infragistics AppStylist for ASPNET Options Dialog Box
+
+You can customize several key Infragistics AppStylist for ASP.NET functions by changing options in the Infragistics AppStylist for ASP.NET Options dialog box.
+
+* *Application Splash Screen* -- When you launch Infragistics AppStylist, a splash screen appears with valuable application information. This information includes the version of Infragistics AppStylist that you are currently using and the status of Infragistics AppStylist. If you clear the check box, Infragistics AppStylist will no longer show the splash screen during application startup.
+* *Recent Files List* -- The Recent Files list is found both in the File menu and in the Open Recent section of the Start page. This list will display all the files that you recently opened in Infragistics AppStylist. You can display a maximum of 99 recent files.
+* *Default Library Location* -- The default library location is where Infragistics AppStylist will look when creating new Style Libraries or opening existing ones. When creating a new Style Library, this will be the Style Library that will automatically appear in the Start From Existing Library option of the Create New Library dialog box.
+* *DocType* -- The DocType controls how the canvases are rendered. If your Web application uses HTML 4.0 Transitional, do not change this option. Select XHTML 1.0 Transitional if your Web application supports it. This option will allow the canvases to better represent what your style changes will look like in your own application.

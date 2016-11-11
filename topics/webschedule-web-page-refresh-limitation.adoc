@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-web-page-refresh-limitation",
+    "controlName": ["WebSchedule"],
+    "tags": ["Scheduling","Validation"],
+    "guid": "{E502B8F9-620C-4369-9C24-BB6AC0B9F849}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Web Page Refresh Limitation
+
+Users of WebSchedule™ applications should be aware that using the page refresh option within the browser can have unexpected consequences in one particular situation.
+
+Specifically, if the user clicks the Refresh (
+
+image::images\WebSchedule_Related_Topic_Browser_Refresh_Issue_01.png[]
+
+) button immediately after adding a new appointment, the appointment will be added twice to the system. The browser will display a warning message box to alert the user that the added appointment information is going to be resent to the server again (as shown below).
+
+We recommend that users not use the web browser's Refresh button.
+
+image::images\WebSchedule_Related_Topic_Browser_Refresh_Issue_02.png[]

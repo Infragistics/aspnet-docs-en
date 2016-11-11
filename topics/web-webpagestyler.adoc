@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webpagestyler",
+    "controlName": [],
+    "tags": ["Getting Started"],
+    "guid": "{0BD26285-BB25-41DD-B9ED-2845D990CE9F}",  
+    "buildFlags": [],
+    "createdOn": "2007-08-02T14:33:04Z"
+}
+|metadata|
+////
+
+= WebPageStyler
+
+Click the links below to find information specific to the WebPageStyler™ component.
+
+* link:webpagestyler-about-webpagestyler.html[About WebPageStyler] -- Provides information on what the WebPageStyler does, and why you would want to use it in your application.
+* link:webpagestyler-api-overview.html[API Overview] -- This topic lists the namespaces and classes that you will be working with while programming with the WebPageStyler control. The namespaces and classes listed in this topic link conveniently into the link:web-api-reference-guide.html[API Reference Guide] section of the Infragistics ASP.NET help.

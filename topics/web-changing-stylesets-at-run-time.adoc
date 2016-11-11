@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-changing-stylesets-at-run-time",
+    "controlName": [],
+    "tags": ["Styling"],
+    "guid": "{60E3B9F7-2B5A-490A-9221-5787A5EEF568}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:33:56Z"
+}
+|metadata|
+////
+
+= Changing StyleSets at Run Time
+
+A very unique feature of Application Styling is the ability to change StyleSets at run time. This functionality can be beneficial in an application, with multiple end users, and each end user has a different style preference. With the simple selection of a drop-down list, they can specify the StyleSet of their choice.
+
+The following example code demonstrates this concept, allowing an end user to apply a StyleSet at run time. It makes use of a drop-down list that contains the available StyleSets to choose from.
+
+*In Visual Basic:*
+
+----
+Private Sub Page_Load(ByVal sender As System.Object, _
+  ByVal e As System.EventArgs) Handles MyBase.Load
+	Dim settings As AppStylingManager = AppStylingManager.Settings
+	settings.StyleSetName = "Office2007Black"
+End Sub
+----
+
+*In C#:*
+
+----
+private void Page_Load(object sender, System.EventArgs e)
+{
+	AppStylingManager settings = AppStylingManager.Settings;
+	settings.StyleSetName = "Office2007Black";
+}
+----

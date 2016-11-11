@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdayview-understanding-webdayview",
+    "controlName": ["WebDayView"],
+    "tags": [],
+    "guid": "{368A1FF6-C0CD-4995-8BF5-52FDC5AE42BD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Understanding WebDayView
+
+This is a great place for you to start learning about the WebDayView™ control, and its key features and functionalities
+
+* link:webdayview-about-webdayview.html[About WebDayView] -- Provides information on what the WebDayView control does, and why you would want to use it in your application.
+* link:webschedule-navigating-using-next-and-previous-navigational-buttons.html[Navigating Using the Next and Previous Navigational Buttons] -- Explains the functionality of the Navigational arrows at the top of the control.
+* link:webschedule-styling-webdayview.html[Styling WebDayView] -- This topics explains how you can style the WebDayView.
+link:webdayview-smart-tag.html[WebDayView Smart Tag] -- Explains the functionality available on the WebDayView smart tag

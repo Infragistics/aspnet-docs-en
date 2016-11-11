@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-whats-new-new-webdocumentexporter-control ",
+    "controlName": [],
+    "tags": [],
+    "guid": "0c3cd64f-a89b-4093-a41d-76e11711083c",  
+    "buildFlags": [],
+    "createdOn": "2010-09-30T11:49:15.5182038Z"
+}
+|metadata|
+////
+
+= New WebDocumentExporter Control
+
+The new WebDocumentExporter™ control, just like WebExcelExporter™ control, allows you to automatically export Grid data. No matter what kind of Infragistics DataGrid you are using (WebDataGrid™ or WebHierarchicalDataGrid™), you can easily achieve your goal to get the data into a XPS or PDF file format.
+
+== Related Topics
+
+link:webdocumentexporter-about-webdocumentexporter.html[About WebDocumentExporter]
+
+link:webdocumentexporter-getting-started-with-webdocumentexporter.html[Getting Started with WebDocumentExporter]

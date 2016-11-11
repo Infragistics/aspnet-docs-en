@@ -1,0 +1,122 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmonthview-object-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{DE63EBD0-1E9F-44DA-ABE3-77D1A0366AD0}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebMonthView Object
+
+== WebMonthView
+
+The WebMonthView object provides access to the control-level features of the WebMonthView control.
+
+=== WebMonthView Methods
+
+[cols="a,a"]
+|====
+|*getActiveDayHeaderStyle* 
+|Returns the css class names for the ActiveDayHeaderStyle.
+
+|*getActiveDayStyle* 
+|Returns the css class names for the ActiveDayStyle.
+
+|*getAllDayEventStyle* 
+|Returns the css class names for the AllDayEventStyle.
+
+|*getAppointmentStyle* 
+|Returns the css class names for the AppointmentStyle.
+
+|*getCaptionHeaderStyle* 
+|Returns the css class names for the CaptionHeaderStyle.
+
+|*getCaptionHeaderVisible* 
+|Returns "true" if the Caption Header on the MonthView is visible.
+
+|*getClientID* 
+|Returns the ClientId of the WebMonthView.
+
+|*getCompressedDayStyle* 
+|Returns the css class names for the CompressedDayStyle.
+
+|*getDayHeaderStyle* 
+|Returns the css class names for the DayHeaderStyle.
+
+|*getDayStyle* 
+|Returns the css class names for the the DayStyle.
+
+|*getElement* 
+|Returns the HTML element of the WebMonthView.
+
+|*getEnableAutoActivityDialog* 
+|Returns "true" if the WebMonthView allows the Appointment Dialog to open when the user double clicks on the Day or DayHeader.
+
+|*getFirstVisibleDay* 
+|Returns a Date object that represents the First Visible Day of the WebMonthView.
+
+|*getMonthDayOfWeekHeaderStyle* 
+|Returns the css class names for the MonthDayOfWeekHeaderStyle.
+
+|*getMonthStyle* 
+|Returns the css class names for the MonthStyle.
+
+|*getNavigationAnimation* 
+|Returns the type of Animation that will be used when the View control is navigated. 
+
+*Remarks*
+
+0 - None 
+
+1 - Accelerate 
+
+2 - Decelerate 
+
+3 - AccelDecel 
+
+4 - Linear
+
+|*getOtherCompressedDayStyle* 
+|Returns the css class names for the OtherCompressedDayStyle.
+
+|*getOtherMonthDayHeaderStyle* 
+|Returns the css class names for the OtherMonthDayHeaderStyle.
+
+|*getOtherMonthDayStyle* 
+|Returns the css class names for the MonthDayStyle.
+
+|*getSelectedActivity* 
+|Returns the selected activity in the WebMonthView. 
+
+*Remarks*
+
+If no activity is selected, the method returns null.
+
+|*getSelectedAppointmentStyle* 
+|Returns the css class names for the SelectedAppointmentStyle.
+
+|*getTodayHeaderStyle* 
+|Returns the css class names for the TodayHeaderStyle.
+
+|*getTodayStyle* 
+|Returns the css class names for the TodayStyle.
+
+|*getUniqueID* 
+|Returns the UniqueID of the WebMonthView.
+
+|*getWebScheduleInfo* 
+|Returns the WebScheduleInfo object that the WebMonthView is attached to.
+
+|*getWebScheduleInfoID* 
+|Returns the ID of the WebScheduleInfo object that the WebMonthView is attached to.
+
+|*getWeekNumbersVisible* 
+|Returns "true if the WeekNumbers are visible on the WebMonthView.
+
+|====

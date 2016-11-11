@@ -1,0 +1,90 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexplorerbar-styling",
+    "controlName": ["WebExplorerBar"],
+    "tags": ["How Do I","Styling","Theming"],
+    "guid": "{5E321F8E-15F7-40A9-9B65-D37E74C5E866}",  
+    "buildFlags": [],
+    "createdOn": "2010-01-03T22:53:23Z"
+}
+|metadata|
+////
+
+= CSS Class Properties
+
+WebExplorerBar™ provides CSS properties that can be used to customize the outfit of the control. Here is a list of CSS class properties that can be applied to both groups and items:
+
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~cssclass.html[CssClass]"]  – applied to group or item header container.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~selectedcssclass.html[SelectedCssClass]"]  – applied to group or item header container when it becomes selected.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~activecssclass.html[ActiveCssClass]"]  – applied to group or item header container when it becomes active. This happens only when the control has focus. A group or item becomes visually active when we are navigating on it with the keyboard, or clicking on it with the mouse. Active style is usually combined with Selected style.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~disabledcssclass.html[DisabledCssClass]"]  applied to group or item header container when it is disabled.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~hovercssclass.html[HoverCssClass]"]  – applied to group or item header container when it is hovered over.
+
+The following example shows how to apply SelectedCssClass:
+
+*In HTML:*
+
+----
+<ig:WebExplorerBar ID="WebExplorerBar1" runat="server">
+     <Groups>
+        <ig:ExplorerBarGroup Text="FirstGroup" SelectedCssClass="GroupSelectedCssClass">
+            <Items>
+               <ig:ExplorerBarItem Text="FirstItem" SelectedCssClass="ItemSelectedCssClass">
+               </ig:ExplorerBarItem>
+            </Items>
+        </ig:ExplorerBarGroup>
+     </Groups>
+</ig:WebExplorerBar>
+----
+
+*In Visual Basic:*
+
+----
+Dim groupFirst As New ExplorerBarGroup()
+groupFirst.Text = "FirstGroup"
+groupFirst.SelectedCssClass = "GroupSelectedCssClass"
+Me.WebExplorerBar1.Groups.Add(groupFirst)
+Dim itemFirst As New ExplorerBarItem()
+itemFirst.Text = "FirstItem"
+itemFirst.SelectedCssClass = "ItemSelectedCssClass"
+groupFirst.Items.Add(itemFirst)
+----
+
+*In C#:*
+
+----
+ExplorerBarGroup groupFirst = new ExplorerBarGroup();
+groupFirst.Text = "FirstGroup";
+groupFirst.SelectedCssClass = "GroupSelectedCssClass";
+this.WebExplorerBar1.Groups.Add(groupFirst);
+ExplorerBarItem itemFirst = new ExplorerBarItem();
+itemFirst.Text = "FirstItem";
+itemFirst.SelectedCssClass = "ItemSelectedCssClass";
+groupFirst.Items.Add(itemFirst);
+----
+
+== Related Topics
+
+link:webexplorerbar-smart-tag.html[WebExplorerBar Smart Tag]
+
+link:webexplorerbar-keyboard-navigation.html[Keyboard Navigation]
+
+link:webexplorerbar-display-modes.html[Display Modes]
+
+link:webexplorerbar-height-properties.html[WebExplorerBar Height Properties]
+
+link:webexplorerbar-setting-navigateurl-and-target-properties.html[Setting NavigateURL and Target Properties]
+
+link:webexplorerbar-binding-to-an-xml-data-source.html[Binding to an XML Data Source]
+
+link:webexplorerbar-binding-to-webhierarchcialdatasource.html[Binding to WebHierarchcialDataSource]
+
+link:webexplorerbar-serverevents.html[Server-Side Events]
+
+link:webexplorerbar-selection-behavior.html[Selection Behavior]
+
+link:webexplorerbar-clientside-api.html[ClientSide API]
+
+link:webexplorerbar-clientevents.html[Client-Side Events]

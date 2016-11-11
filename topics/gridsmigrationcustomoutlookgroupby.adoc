@@ -1,0 +1,70 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridsmigrationcustomoutlookgroupby",
+    "controlName": [],
+    "tags": [],
+    "guid": "277dbf19-4432-4d74-91fb-9734d7d2b379",  
+    "buildFlags": [],
+    "createdOn": "2016-03-01T12:50:07.9447129Z"
+}
+|metadata|
+////
+
+= Grids Migration - Custom Outlook Group By
+
+OutlookGroupBy feature allows you to group columns with custom grouping logic. To do so first enable OutlookGroupBy. The next step is then to implement your own custom group comparer. Your comparer needs to inherit from the GroupEqualityComparer<T> class. Below are two examples of how to implement a group comparer:
+
+*In C#:*
+
+[source,csharp]
+----
+public class AlphabetGroupComparer : GroupEqualityComparer<string>
+{
+      public override bool Equals(string x, string y)
+      {
+            if (x.Substring(0, 1).ToLower() == y.Substring(0, 1).ToLower())
+                  return true;
+            return false;
+      }
+      public override string GroupName(string value)
+      {
+            if (value.Length == 0)
+                  return string.Empty;
+            return value.Substring(0, 1).ToUpper();
+      }      
+}
+public class DateGroupComparer : GroupEqualityComparer<DateTime>
+{
+      string[] _groups = new string[] { "1901 - 1950", "1951 - 2000" };
+      public override bool Equals(DateTime x, DateTime y)
+      {
+            if (x.Year < 1951 && y.Year < 1951 || x.Year > 1950 && y.Year > 1950)
+                  return true;
+            return false;
+      }
+      public override string GroupName(DateTime value)
+      {
+            if (value.Year < 1951)
+                  return this._groups[0];
+            return this._groups[1];
+      }
+}
+----
+
+The next step is to create a ColumnGroupingSetting for the column which you want to use your custom group comparer and to add these settings to the band’s GroupingSettings.ColumnSettings collection. Which can be done like so:
+
+*In C#:*
+
+[source,csharp]
+----
+ColumnGroupingSetting setting = new ColumnGroupingSetting();
+            setting.ColumnKey = "FirstName";
+            setting.GroupComparer = new AlphabetGroupComparer();
+            this.WebHierarchicalDataGrid1.GroupingSettings.ColumnSettings.Add(setting);
+            setting = new ColumnGroupingSetting();
+            setting.ColumnKey = "DOB";
+            setting.GroupComparer = new DateGroupComparer();
+            this.WebHierarchicalDataGrid1.GroupingSettings.ColumnSettings.Add(setting);
+----

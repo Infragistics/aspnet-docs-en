@@ -1,0 +1,41 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdayview-display-multiple-days-in-a-webdayview",
+    "controlName": ["WebDayView"],
+    "tags": ["How Do I"],
+    "guid": "{62490B9F-4491-489E-BA8E-085E2F8C850A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Display Multiple Days in WebDayView
+
+The WebDayView™ has the ability to show multiple days by setting the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~visibledays.html[VisibleDays]"]  property. It can be set to a minimum of one day to a maximum of fourteen days.
+
+The control will resize itself in order to show an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  in each day shown, using the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~activitywidthminimum.html[ActivityWidthMinimum]"]  property to calculate how much space each activity needs.
+
+The code below shows setting this property to have the WebDayView display four days.
+
+image::images\WebSchedule_How_to_Display_Multiple_Days_in_a_WebDayView_01.png[]
+
+*In Visual Basic:*
+
+----
+Private Sub Page_Load(ByVal sender As System.Object, ByVal e _
+  As System.EventArgs) Handles MyBase.Load
+	Me.WebDayView1.VisibleDays = 4
+End Sub
+----
+
+*In C#:*
+
+----
+private void Page_Load(object sender, System.EventArgs e)
+{
+	this.WebDayView1.VisibleDays = 4;
+}
+----

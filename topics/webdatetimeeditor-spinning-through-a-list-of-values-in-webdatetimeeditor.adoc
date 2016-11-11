@@ -1,0 +1,103 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatetimeeditor-spinning-through-a-list-of-values-in-webdatetimeeditor",
+    "controlName": ["WebDateTimeEditor"],
+    "tags": ["Editing","Styling","Tips and Tricks"],
+    "guid": "{918FFBB6-702C-4C40-8536-8E0A486333E6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Spinning through a list of values in WebDateTimeEditor
+
+WebDateTimeEditor™ provides the option to spin through a list of values using spin buttons. You can display the spin buttons by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~spinbuttonsdisplay.html[SpinButtonsDisplay]"]  property to either OnRight or OnLeft. By default, this property is set to None. The spin buttons have two buttons: lower and upper so that your end-users can move to the next and previous values. You can customize the lower and upper buttons by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~lowerspinbutton.html[LowerSpinButton]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~upperspinbutton.html[UpperSpinButton]"]  properties respectively.
+
+You can set the SpinButtonsDisplay property either using Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+'Displays the spin buttons on the right
+WebDateTimeEditor1.Buttons.SpinButtonsDisplay = Infragistics.Web.UI.EditorControls.ButtonDisplay.OnRight
+----
+
+*In C#:*
+
+----
+//Displays the spin buttons on the right
+WebDateTimeEditor1.Buttons.SpinButtonsDisplay = Infragistics.Web.UI.EditorControls.ButtonDisplay.OnRight;
+----
+
+WebDateTimeEditor also allows you to spin through the list continuously even if it reaches the first or last value in the list by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~spinwrap.html[SpinWrap]"]  property to True.
+
+== Add and Insert Values into the list
+
+WebDateTimeEditor allows you to add a list of values that you want to iterate through using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons.html[TextEditorButtons]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~listofvalues.html[ListOfValues]"]  property. You can set the ListOfValues property either using Microsoft® Visual Studio® Property Window:
+
+*In Visual Basic:*
+
+----
+WebDateTimeEditor1.Buttons.ListOfValues = "2009-02-02-11-30-15-20|2009-03-03-12-30-15-20|2009-04-04-15-22-20-33|2009-05-05-18-23-20-35"
+----
+
+*In C#:*
+
+----
+WebDateTimeEditor1.Buttons.ListOfValues = "2009-02-02-11-30-15-20|2009-03-03-12-30-15-20|2009-04-04-15-22-20-33|2009-05-05-18-23-20-35";
+----
+
+.Note:
+[NOTE]
+====
+Items in the list must be separated by the "|" character when using the ListOfValues property. The format of the values in the list of values must be in the "YYYY-MM-DD-HH-mm-ss-ms" (yyyy –year; MM-month; DD-date; HH –hours; mm-minutes; ss-seconds; ms – milliseconds) format.
+====
+
+However you can also insert values into the list using the TextEditorButtons object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~insertlistvalueatindex.html[InsertListValueAtIndex]"]  method.
+
+*In Visual Basic:*
+
+----
+'Insert the values into the list at a particular index  
+ WebDateTimeEditor1.Buttons.InsertListValueAtIndex(0, "2009-02-02-11-30-15-20")
+ WebDateTimeEditor1.Buttons.InsertListValueAtIndex(1, "2009-03-03-12-30-15-20")
+ WebDateTimeEditor1.Buttons.InsertListValueAtIndex(2, "2009-04-04-15-22-20-33")
+ WebDateTimeEditor1.Buttons.InsertListValueAtIndex(3, "2009-05-05-18-23-20-35")   
+----
+
+*In C#:*
+
+----
+//Insert the values into the list at a particular index  
+WebDateTimeEditor1.Buttons.InsertListValueAtIndex(0, "2009-02-02-11-30-15-20");
+WebDateTimeEditor1.Buttons.InsertListValueAtIndex(1, "2009-03-03-12-30-15-20");
+WebDateTimeEditor1.Buttons.InsertListValueAtIndex(2, "2009-04-04-15-22-20-33");
+WebDateTimeEditor1.Buttons.InsertListValueAtIndex(3, "2009-05-05-18-23-20-35");  
+----
+
+== Increment/Decrement the editing value
+
+WebDateTimeEditor also allows you to increment/decrement the editing value using the spin buttons. You can set the increment/decrement factor by simply setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~spindelta.html[SpinDelta]"]  property. For instance, if you set the SpinDelta property to 10 then clicking the upper button increases the value by 10 days if it is in the date format or by 10 minutes if it is in the time format. Similarly, clicking the lower button decreases the value by 10 days if it is in the date format or by 10 minutes if it is in the time format.
+
+You can set the SpinDelta property either using Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+WebDateTimeEditor1.SpinDelta = 10
+----
+
+*In C#:*
+
+----
+WebDateTimeEditor1.SpinDelta = 10;
+----
+
+.Note:
+[NOTE]
+====
+The ListOfValues property has higher priority than the SpinDelta property.
+====

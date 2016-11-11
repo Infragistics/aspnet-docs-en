@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalendarview-understanding-the-webcalendarview-control",
+    "controlName": ["WebCalendarView"],
+    "tags": ["Getting Started"],
+    "guid": "{22474417-D0FA-4AF8-859B-618C18D7FA8E}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Understanding the WebCalendarView Control
+
+This is a great place for you to start learning about the WebCalendarView™ control, and its key features and functionalities.
+
+* link:webcalendarview-about-webcalendarview.html[About WebCalendarView] -- Provides information on what the WebCalendarView control does, and why you would want to use it in your application.
+* link:webschedule-navigating-using-next-and-previous-navigational-buttons.html[Navigating Using the Next and Previous Navigational Buttons] -- This topic explains how navigational arrows are used to help you navigate between different months, weeks, or days, depending on the view you are using.
+* link:webcalendarview-styling-webcalendarview.html[Styling WebCalendarView] -- This topic explains how you can use different objects to style WebCalendarView.
+* link:webcalendarview-smart-tag.html[WebCalendarView Smart Tag] -- Explains the functionality available on the WebCalendarView smart tag.

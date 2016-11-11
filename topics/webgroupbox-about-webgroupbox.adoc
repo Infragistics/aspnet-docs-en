@@ -1,0 +1,33 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgroupbox-about-webgroupbox",
+    "controlName": ["WebGroupBox"],
+    "tags": ["Getting Started","Grouping","Layouts"],
+    "guid": "{0D62AEC8-FB35-4426-92D4-EFE9ABF7A8F3}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= About WebGroupBox
+
+WebGroupBox™ is a container control for ASP.NET Web Forms. It functions similarly to the standard ASP.NET panel, with added client and server-side functionality, and extended customization available for appearance & styling.
+
+Following is a list of the basic features offered by WebGroupBox:
+
+* Header Text/Header Appearance
+
+WebGroupBox provides labels in the header area of the container. Using containers with header labels facilitates the logical grouping of controls on any web page, and reduces clutter.
+
+Naturally, the controls can easily be styled and customized in this area. Simple borders and background colors can be used, or background images can be used to achieve gradient or textured appearances on panels.
+
+image::Images\WebPanel_and_WebGroupBox_Overview_01.png[]
+
+* Enhanced Styles
+
+WebGroupBox has extensive Style & Appearance type objects which allow for the designer/developer to easily create great looking user interfaces.
+
+Additionally, Styles can be applied to cascade to all contained controls, so that the control groupings created by WebGroupBox automatically take on common style settings, such as foreground color or font family.

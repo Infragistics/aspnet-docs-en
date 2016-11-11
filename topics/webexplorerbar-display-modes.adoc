@@ -1,0 +1,76 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexplorerbar-display-modes",
+    "controlName": ["WebExplorerBar"],
+    "tags": ["How Do I"],
+    "guid": "{3AC9BDCC-A06A-41D1-8A3C-F558A3226468}",  
+    "buildFlags": [],
+    "createdOn": "2010-01-03T22:33:29Z"
+}
+|metadata|
+////
+
+= Display Modes
+
+The WebExplorerBar™ control has two properties to control the way it behaves:  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groupexpandbehavior.html[GroupExpandBehavior]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groupexpandaction.html[GroupExpandAction]"]  . GroupExpandBehavior controls how many groups can be expanded and GroupExpandAction controls the action of expanding these groups.
+
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.groupexpandbehavior.html[GroupExpandBehavior]"]  is an enum that has the following values:
+
+* SingleExpanded – Only one group can be expanded at a time.
+* AllExpanded – All groups are expanded and stay expanded.
+* AnyExpandable – All groups can be expanded and collapsed. Default value.
+
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.groupexpandaction.html[GroupExpandAction]"]  is an enum that has the following values:
+
+* HeaderClick – Default value where a group is expanded when the group header is clicked.
+* ButtonClick– A group is expanded only when the expander icon is clicked.
+* HeaderHover – A group is expanded when the cursor hovers over the group header.
+
+The following code shows you how to set these properties in WebExplorerBar.
+
+*In HTML:*
+
+----
+<ig:WebExplorerBar ID="WebExplorerBar1" runat="server" GroupExpandBehavior="SingleExpanded" GroupExpandAction="ButtonClick"> 
+</ig:WebExplorerBar >
+----
+
+*In Visual Basic:*
+
+----
+Me.WebExplorerBar1.GroupExpandBehavior = Infragistics.Web.UI.NavigationControls.GroupExpandBehavior.AnyExpandable 
+Me.WebExplorerBar1.GroupExpandAction = Infragistics.Web.UI.NavigationControls.GroupExpandAction.ButtonClick
+----
+
+*In C#:*
+
+----
+this.WebExplorerBar1.GroupExpandBehavior = Infragistics.Web.UI.NavigationControls.GroupExpandBehavior.AnyExpandable;
+this.WebExplorerBar1.GroupExpandAction = Infragistics.Web.UI.NavigationControls.GroupExpandAction.ButtonClick;
+----
+
+== Related Topics
+
+link:webexplorerbar-smart-tag.html[WebExplorerBar Smart Tag]
+
+link:webexplorerbar-keyboard-navigation.html[Keyboard Navigation]
+
+link:webexplorerbar-height-properties.html[WebExplorerBar Height Properties]
+
+link:webexplorerbar-setting-navigateurl-and-target-properties.html[Setting NavigateURL and Target Properties]
+
+link:webexplorerbar-binding-to-an-xml-data-source.html[Binding to an XML Data Source]
+
+link:webexplorerbar-binding-to-webhierarchcialdatasource.html[Binding to WebHierarchcialDataSource]
+
+link:webexplorerbar-serverevents.html[Server-Side Events]
+
+link:webexplorerbar-selection-behavior.html[Selection Behavior]
+
+link:webexplorerbar-clientside-api.html[ClientSide API]
+
+link:webexplorerbar-clientevents.html[Client-Side Events]
+
+link:webexplorerbar-styling.html[CSS Class Properties]

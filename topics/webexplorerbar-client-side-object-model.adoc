@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexplorerbar-client-side-object-model",
+    "controlName": ["WebExplorerBar"],
+    "tags": ["API","Events","How Do I"],
+    "guid": "{1CB80D68-7E2D-402A-8185-0B8FA2D7A539}",  
+    "buildFlags": [],
+    "createdOn": "2010-02-03T23:55:51Z"
+}
+|metadata|
+////
+
+= Client-Side Object Model (CSOM) Overview
+
+The WebExplorerBar™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webexplorerbar~infragistics.web.ui_namespace.html[WebExplorerBar CSOM Overview]

@@ -1,0 +1,43 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webexplorerbar",
+    "controlName": ["WebExplorerBar"],
+    "tags": [],
+    "guid": "{D8B9CD5F-225B-4F2D-A8CB-3E76E48FE5D6}",  
+    "buildFlags": [],
+    "createdOn": "2010-01-03T22:46:12Z"
+}
+|metadata|
+////
+
+= WebExplorerBar
+
+This page contains all of the overview/task-based information related to the WebExplorerBar™ control. This section contains valuable information about the control, ranging from what it does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to learn about the WebExplorerBar control.
+
+== link:webexplorerbar-about-webexplorerbar.html[About WebExplorerBar]
+
+In this section, you will find information that will help you better understand functionalities of the WebExplorerBar control. Further, you will understand the purpose of the control.
+
+== link:webexplorerbar-getting-started-with-webexplorerbar.html[Getting Started with WebExplorerBar]
+
+This section provides you with information on how to get up and running as quickly as possible with the WebExplorerBar control.
+
+== link:webexplorerbar-using-webexplorerbar.html[Using WebExplorerBar]
+
+This section provides task-based information showing you how to use the features available in WebExplorerBar.
+
+== link:webexplorerbar-accessibility-compliance.html[WebExplorerBar Accessibility Compliance]
+
+This topic outlines the way in which WebExplorerBar meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebExplorerBar control.
+
+== link:webexplorerbar-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebExplorerBar control. The namespaces and classes listed in this topic link conveniently into the API Reference Guide section of the Infragistics ASP.NET help.
+
+== link:webexplorerbar~infragistics.web.ui_namespace.html[Client-Side Object Model (CSOM) Overview]
+
+The WebExplorerBar™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.

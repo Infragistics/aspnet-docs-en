@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-dial-corners-pane",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{9900A0B5-AFA9-4FF5-84DC-BE54957375FD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Corners Pane
+
+The Corners pane determines the size of the corners on the dial on your Radial gauge.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.dialappearance~cornerextent.html[Extent]"]  -- Set this value to an integer from 0 to 999. If you set the start and end angles on the link:webgauge-angle-and-extents-pane.html[Angle and Extents pane] to sweep fewer than 360 degrees or change the shape of the dial to a rectangle on the link:webgauge-shape-pane.html[Shape pane], you can see the effect of the extent value. It determines the roundness of the visible corners.
+
+pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.dialappearance~cornersplinetension.html[Spline Tension]"]  -- Set this value to a value from 0.0 to 1.0. This value determines the curviness of the corners of the dial.
+
+image::images/Corners_Pane_01.png[The dial corners pane in the gauge designer.]
+
+== Related Topic
+
+link:webgauge-dial-layout-tab.html[Dial Layout Tab]

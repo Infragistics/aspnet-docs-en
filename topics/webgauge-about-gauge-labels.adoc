@@ -1,0 +1,27 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-about-gauge-labels",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{8C766D1C-1524-43EB-84E2-08704D646329}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= About Gauge Labels
+
+Labels are numeric or text values that are used to represent the points of the scale. They are associated with the tick marks on the scale, and can help the end user to read the value that the marker is pointing to.
+
+For example, if you created a Linear gauge to represent a thermometer, you could read the temperature by the label value.
+
+The following screen shot shows an example of a Radial gauge with labels associated with every 20^th^ tick mark.
+
+image::images/Gauge_Labels_01.png[Radial gauge demonstrating labels.]
+
+== Related Topic
+
+link:webgauge-add-labels-to-a-gauge.html[Add Labels to a Gauge]

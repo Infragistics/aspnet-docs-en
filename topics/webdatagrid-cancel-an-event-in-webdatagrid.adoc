@@ -1,0 +1,56 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-cancel-an-event-in-webdatagrid",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Events","Grids"],
+    "guid": "{8CF6FC8F-AA5F-46D2-B4E1-C286818A2EFB}",  
+    "buildFlags": [],
+    "createdOn": "2008-09-09T15:19:47Z"
+}
+|metadata|
+////
+
+= Cancel an Event in WebDataGrid
+
+There may be certain times in your application in which you will need to cancel a WebDataGrid™ event. You may want to stop execution because of invalid data or cancel an event because it violates some kind of rule. Whatever the case may be, you can cancel most of the WebDataGrid events that end in "ing".
+
+The following code shows you how to cancel WebDataGrid’s client-side and server-side RowUpdating events.
+
+.Note:
+[NOTE]
+====
+It is assumed you have handled these events. For information on handling events in WebDataGrid, see link:webdatagrid-handle-an-event-in-webdatagrid.html[Handle an Event in WebDataGrid].
+====
+
+*In Visual Basic:*
+
+----
+Private Sub EditingCore_RowUpdating(ByVal sender As Object, ByVal e As RowUpdatingEventArgs) 
+    e.Cancel = True 
+End Sub
+----
+
+*In C#:*
+
+----
+void EditingCore_RowUpdating(object sender, RowUpdatingEventArgs e)
+{
+    e.Cancel = true;
+}
+----
+
+*In JavaScript:*
+
+----
+function WebDataGrid2_RowUpdating(sender, e) {
+e.set_cancel(true);
+}
+----
+
+== Related Topics
+
+link:webdatagrid-events.html[About Events in WebDataGrid]
+
+link:webdatagrid-handle-an-event-in-webdatagrid.html[Handle an Event in WebDataGrid]

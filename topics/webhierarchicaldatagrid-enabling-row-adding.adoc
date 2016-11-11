@@ -1,0 +1,94 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-enabling-row-adding",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Editing","Grids"],
+    "guid": "{9563F1DE-1BC1-4BC5-9487-7C15A22CF48F}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Enabling Row Adding (WebHierarchicalDataGrid)
+
+== Before You Begin
+
+You can use the WebHierarchicalDataGrid™ control’s Add New Row feature to allow your end-users to add new records. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding.html[RowAdding]"]  behavior provides a blank row that is always present on the control. When you enter new data to the Add New Row and then lose focus on the row, that row is inserted in WebHierarchicalDataGrid and its underlying data source. For a row to obtain or lose focus, you must have the Activation behavior enabled. For more information on the Activation behavior, see the link:webhierarchicaldatagrid-activation.html[Activation] topic.
+
+.Note:
+[NOTE]
+====
+When RowAdding is enabled for child bands and if a parent row does not have any children, it will still have an expansion indicator, which when expanded will show an empty child grid and an Add new row at the bottom.
+====
+
+== What You Will Accomplish
+
+You will learn how to allow users to add new rows to WebHierarchicalDataGrid.
+
+== Follow these Steps
+
+[start=1]
+. Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource™ component retrieving data from the Categories and Products table. For more information on doing this, see the link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Using the WebHierarchicalDataSource] topic. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datakeyfields.html[DataKeyFields]"]  property for each Data source that you bind to the HierarchicalDataGrid so that changes can be updated to the data source. In the Microsoft® Visual Studio property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (…) button to launch the Behaviors Editor dialog.
+[start=2]
+. Check the CheckBox for Row Adding from the list on the left to add the behavior. Notice that the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]  behavior is checked as well.
+[start=3]
+. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property of the EditingCore and Row Adding Behaviors to True. This enables all the child levels to automatically inherit Row Adding behavior. The property’s default value is False.
+[start=4]
+. In the properties, check that  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding~alignment.html[Alignment]"]  is set to Bottom. This positions the Add New Row at the bottom of WebHierarchicalDataGrid.
+[start=5]
+. Click Apply, then Ok to close the editor. Your end-users are now able to add new rows to WebHierarchicalDataGrid by entering data into the row and causing the row to lose focus by pressing the keyboard Enter key.
+
+image::Images/WebHierarchicalDataGrid_Enabling_Row_Adding.png[]
+
+You can also use the following code examples for enabling row adding.
+
+*In HTML:*
+
+----
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" 
+    Height="350px" Width="400px">
+    <Behaviors>
+        <ig:EditingCore EnableInheritance="True">
+            <Behaviors>
+                <ig:RowAdding Alignment="Bottom" Enabled="true" EnableInheritance="True">
+                </ig:RowAdding>
+            </Behaviors>
+        </ig:EditingCore>
+    </Behaviors>
+</ig:WebHierarchicalDataGrid>
+----
+
+*In Visual Basic:*
+
+----
+Me.WebHierarchicalDataGrid1.Behaviors.EditingCore.EnableInheritance = True
+Me.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowAdding.Enabled = true
+Me.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowAdding.Alignment = AddNewRowAlignment.Bottom
+Me.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowAdding.EnableInheritance = True
+----
+
+*In C#:*
+
+----
+this.WebHierarchicalDataGrid1.Behaviors.EditingCore.EnableInheritance = true;
+this.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowAdding.Enabled = true;
+this.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowAdding.Alignment = AddNewRowAlignment.Bottom;
+this.WebHierarchicalDataGrid1.Behaviors.EditingCore.Behaviors.RowAdding.EnableInheritance = true;
+----
+
+== Related Topics
+
+link:webhierarchicaldatagrid-activation.html[Activation]
+
+link:webhierarchicaldatagrid-cell-editing.html[Cell Editing]
+
+link:webhierarchicaldatagrid-enabling-paging.html[Enabling Paging]
+
+link:webhierarchicaldatagrid-enabling-row-deleting.html[Enabling Row Deleting]
+
+link:webhierachicaldatagrid-selection.html[Selection]
+
+link:webhierarchicaldatagrid-sorting.html[Sorting]

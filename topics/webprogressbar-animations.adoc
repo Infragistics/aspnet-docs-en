@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webprogressbar-animations",
+    "controlName": ["WebProgressBar"],
+    "tags": [],
+    "guid": "{2F9B866A-2F92-49E8-94AC-CDB817C28CD8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Animations
+
+WebProgressBar™ supports different type of animations for indicating the progress. You can easily set the animation duration and threshold by setting the WebProgressBar control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~animationduration.html[AnimationDuration]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~animationthreshold.html[AnimationThreshold]"]  properties respectively. The following are the different types of animation properties of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~animationtype.html[AnimationType]"]  object that you can set for indicating the progress:
+
+* *Linear* -- Progress is shown with constant speed, based on the animation duration.
+* *EaseIn* -- Progress is slow at the beginning but accelerates afterwards based on the animation duration.
+* *EaseOut* -- Progress is fast at the beginning but decelerates afterwards based on the animation duration.
+* *EaseInOut* -- Progress is slow at the beginning but accelerates afterwards and then again decelerates at the end, based on the animation duration.
+* *Bounce* -- The progress value first reaches the maximum value and then decreases to a certain value and again reaches the maximum value.
+
+.Note:
+[NOTE]
+====
+Animations are only applicable on client side and can be turned off by setting the AnimationDuration property to -1.
+====

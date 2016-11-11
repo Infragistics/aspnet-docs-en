@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-api-overview",
+    "controlName": ["WebScheduleInfo"],
+    "tags": [],
+    "guid": "{87F6F3C9-7D54-459C-9B4C-6B87ED0B6074}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+=== WebScheduleInfo Namespace:
+
+pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule_namespace.html[Infragistics.WebUI.WebSchedule]"]
+
+=== Key Classes:
+
+pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo.html[WebScheduleInfo]"]

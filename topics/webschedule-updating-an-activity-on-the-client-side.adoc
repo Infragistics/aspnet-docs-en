@@ -1,0 +1,122 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-updating-an-activity-on-the-client-side",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{FC7DC96B-7016-498B-9A3A-CC6DA6310AEC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Updating an Activity on the Client Side
+
+== Before You Begin:
+
+The WebSchedule™ allows  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[activities]"]  to be updated Client-Side. This walk through goes over how you update an activity client-side. The main method used to update an activity client-side is called updateActivity.
+
+The updateActivity method takes three parameters:
+
+[start=1]
+. ActivityUpdateProps: a dynamic object that contains the properties of the appointment that you wish to update.
+[start=2]
+. Activity: the actual activity you wish to update
+[start=3]
+. id: a string value which is retrievable in the Updating Client and Server events.
+
+The following will describe step by step how to Update an existing activity client-side.
+
+== Follow These Steps:
+
+[start=1]
+. *Setup Project*
+
+Create an ASP.NET project and setup the WebSchedule controls. For information on how to do this you can review the link:webschedule-using-the-webschedule-controls-quick-design.html[Quick Start using the Web Forms Designer] or link:webschedule-creating-webschedule-controls-using-code.html[Setting Up the WebSchedule in Code].
+[start=2]
+. After you have the project setup you will need to have a button or something that you can click to trigger a JavaScript event.
+[start=3]
+. *Getting Reference to WebScheduleInfo*
+
+First you will need a reference to the WebSchdeuleInfo™ object. You can get this object by passing in the ClientId of your WebScheduleInfo into the following utility function:
+
+*In JavaScript:*
+
+----
+var scheduleInfo = ig_getWebScheduleInfoById("WebScheduleInfo1");
+----
+
+[start=4]
+. *Get the Activity*
+
+Next you will need to get the activity you wish to update. The following are two of the more common ways to get an activity.
+[start=5]
+. First you can loop through each activity in the activities collection:
+
+*In JavaScript:*
+
+----
+var activities = scheduleInfo.getActivities(); 
+var activity = null; 
+for(var i = 0; i < activities.length; i++) 
+{ 
+	if(activities[i].getSubject() == "New Appointment") 
+	{ 
+		activity = activities[i]; 
+		break;
+ 	}
+}
+----
+
+[start=6]
+. Second you can use getSelectedActivity() method which can be found on either the WebDayView™, and WebMonthView™.
+
+*In JavaScript:*
+
+----
+var webDayView = ig_getWebDayViewById("WebDayView1"); 
+var activity = webDayView.getSelectedActivity();
+----
+
+[start=7]
+. *Create Object of Properties for Activity*
+
+Next you need to create a dynamic object that contains the properties you wish to update on the Activity.
+
+.Note:
+[NOTE]
+====
+you do not have to include every property for the activityUpdateProps object, nor do you have to have the properties in this order. However, the values on the left side of the colon are case sensitive and must be spelled out as they are listed below.
+====
+
+*In JavaScript:*
+
+----
+var activityUpdateProps =  {StartDateTime: new Date(),
+			Duration: 30,
+			Subject: "Update Appointment",
+			Location: "Here",
+			Description: "No Description",
+			AllDayEvent: false,
+			EnableReminder: true,
+			ShowTimeAs: 1,
+			Importance: 1,
+			ReminderInterval: 9000000000};
+----
+
+[start=8]
+. *Update Activity*
+
+Finally you can call updateActivity, which is a method off of the WebScheduleInfo object. This method will trigger a postback and both the client and server side Updating events.
+
+*In JavaScript:*
+
+----
+scheduleInfo.updateActivity(activityUpdateProps, activity, "" );
+----
+
+== What You Accomplished:
+
+This walk through was designed to explain the steps to follow in order to update an activity Client-Side.

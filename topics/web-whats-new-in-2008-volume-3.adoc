@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-whats-new-in-2008-volume-3",
+    "controlName": [],
+    "tags": ["FAQ","Getting Started"],
+    "guid": "{2EA1688C-8A8B-4118-B0A7-F6DACF959702}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= What's New in 2008 Volume 3
+
+The Infragistics ASP.NET 2008 Volume 3 release includes the long-awaited WebDataGrid™ control built on the Infragistics ASP.NET AJAX framework.
+
+== New WebDataGrid Control
+
+The WebDataGrid™ control is a new addition to the expanding list of Infragistics ASP.NET AJAX controls. WebDataGrid’s new design makes it an efficient and scalable grid control, with native AJAX capabilities.
+
+All the functionalities for a flexible, feature-rich grid control are present in WebDataGrid.
+
+Like all Infragistics ASP.NET AJAX controls, WebDataGrid seamlessly integrates into the Infragistics® Application Styling framework. With CSS based properties, you can manually customize the WebDataGrid control by leveraging your existing style sheets.
+
+A few of the WebDataGrid features include:
+
+* *High-Performance* - Lightweight markup and optimized code improve performance.
+* *Standards Conformance* - CSS 2 and XHTML 1.0 compliance.
+* *Numerous Supported Data Sources* - Support for a large range of bindable data sources including standard Microsoft data source controls and objects implementing IEnumerable.
+* *Paging* - Break up your data into smaller, viewable pages of data.
+* *Filtering* - Customizable filter conditions and values allow for a more tailored filtering experience according to your needs and specifications.
+* *Templates* - Most of the elements in WebDataGrid can be templated allowing for maximum flexibility and customization.
+* *Native AJAX Support* - Because the Infragistics ASP.NET AJAX controls are built on top of the Microsoft® ASP.NET AJAX Extensions, most of WebDataGrid’s functionalities are executed using AJAX, eliminating the hindrance of full page postbacks.
+
+== Related Topics
+
+link:web-webdatagrid-webdatagrid.html[WebDataGrid]
+
+link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid]
+
+link:webdatagrid-about-webdatagrid.html[About WebDataGrid]
+
+link:webdatagrid-using-webdatagrid.html[Using WebDataGrid]

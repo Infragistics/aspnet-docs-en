@@ -1,0 +1,21 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-whats-new-office2010blue-styles",
+    "controlName": [],
+    "tags": [],
+    "guid": "4c6e20c2-cee0-4871-ab69-d8bdb6c3d5e9",  
+    "buildFlags": [],
+    "createdOn": "2010-09-30T12:04:46.4042831Z"
+}
+|metadata|
+////
+
+= Office 2010 Blue Styles
+
+NetAdvantage® ASP.NET controls now supports Office 2010 Blue Styles.
+
+== Related Topics
+
+link:web-application-styling-framework-asf.html[Application Styling Framework (ASF)]

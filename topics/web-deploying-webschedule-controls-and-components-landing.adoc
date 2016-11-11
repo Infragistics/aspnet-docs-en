@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-deploying-webschedule-controls-and-components-landing",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{153BA6CE-D2F0-4EE6-A748-CB03CEF27542}",  
+    "buildFlags": [],
+    "createdOn": "2006-04-06T00:00:00Z"
+}
+|metadata|
+////
+
+= Deploying WebSchedule Controls and Components
+
+Click the links below for information pertaining to the deployment of an application that contains WebSchedule™ controls and components:
+
+* link:webschedule-deploying-to-microsoft-sql-server.html[Deploying to Microsoft SQL Server]
+* link:web-webschedule-including-webschedule-dialog-forms-in-your-cs-web-site.html[Including WebSchedule Dialog Forms in your CS Web Site]
+* link:web-webschedule-including-webschedule-dialog-forms-in-your-vb-net-web-site.html[Including WebSchedule Dialog Forms in your VB.NET Web Site]
+* link:webschedule-sql-authentication-in-microsoft-sql-server.html[SQL Authentication in Microsoft SQL Server]
+* link:webschedule-windows-authentication-in-microsoft-sql-server.html[Windows Authentication in Microsoft SQL Server]

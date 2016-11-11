@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-api-overview",
+    "controlName": ["WebDropDown"],
+    "tags": ["API"],
+    "guid": "{B21492E9-E34E-4ADF-BC1C-4E2B1BC4D719}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+=== WebDropDown Namespace:
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols_namespace.html[Infragistics.Web.UI.ListControls]
+
+=== Key Classes:
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitemcollection.html[DropDownItemCollection]
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.pagersettings.html[PagerSettings]
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown.html[WebDropDown]

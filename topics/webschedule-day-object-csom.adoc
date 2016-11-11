@@ -1,0 +1,52 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-day-object-csom",
+    "controlName": [],
+    "tags": ["API","Appointments","Scheduling"],
+    "guid": "{5C5A93E6-E045-4772-BB36-600C15FC4888}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Day Object
+
+== Day
+
+This object and all its member variables are read-only and they should not be modified.
+
+|====
+|====
+
+=== Day Properties
+
+[cols="a,a"]
+|====
+|*activity* 
+|A boolean value that indicates if there is an activity on that day.
+
+|*calendar* 
+|Reference to the calendar object that owns the day.
+
+|*css* 
+|The css class names that are being applied to that day.
+
+|*day* 
+|Integer that represents the day of the month.
+
+|*element* 
+|Reference to the HTML element that renders the day.
+
+|*index* 
+|Integer that contains the index of the day in the Days array.
+
+|*month* 
+|Integer that contains the value of the month for that day.
+
+|*year* 
+|Integer that contains the value of the year for that day.
+
+|====

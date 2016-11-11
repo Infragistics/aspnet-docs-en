@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-multi-resource-view",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{6AC9261D-2320-4FF0-B902-896979473A18}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Multi Resource View
+
+The WebSchedule™ controls allow you to display more than one resource and the corresponding appointments.
+
+For more information on this feature, click the links below:
+
+* link:webschedule-about-multi-resource-view.html[About Multi Resource View]
+* link:webschedule-set-visible-resources.html[Set Visible Resources]
+* link:webschedule-styling-active-and-inactive-resources.html[Styling Active and Inactive Resources]

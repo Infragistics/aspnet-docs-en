@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdialogwindow-webdialogwindow-accessibility-compliance",
+    "controlName": ["WebDialogWindow"],
+    "tags": ["Section 508"],
+    "guid": "{569D8B88-3B34-476E-B49F-3720CFC13FC7}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDialogWindow Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the two rules of subpart 1194.22 that are applicable to WebDialogWindow™ and how we comply with each rule. You won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|All non-text elements render a text equivalent (such as Close, Minimize, and Maximize box AltText properties). 
+
+.Note:
+[NOTE]
+====
+A text equivalent is supplied by default, but this can be customized to suit your needs. 
+====
+
+|(n)
+|Compliance with this accessibility rule does not require you to enable any settings.
+
+|====

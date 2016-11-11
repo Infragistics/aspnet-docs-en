@@ -1,0 +1,146 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdayview-object-csom",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{9CB974DC-093D-46CF-839A-759833CDC4FF}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebDayView Object
+
+== WebDayView
+
+The WebDayView object provides access to the control-level features of the WebDayView control.
+
+=== WebDayView Methods
+
+[cols="a,a"]
+|====
+|*getActivityEdgeBusyStyle* 
+|Returns the css class names for the ActivityEdgeBusyStyle.
+
+|*getActivityEdgeFreeStyle* 
+|Returns the css class names for the ActivityEdgeFreeStyle.
+
+|*getActivityEdgeOutofOfficeStyle* 
+|Returns the css class names for the ActivityEdgeOutofOfficeStyle.
+
+|*getActivityEdgeTentativeStyle* 
+|Returns the css class names for the ActivityEdgeTentativeStyle.
+
+|*getActivityHeightMinimum* 
+|Returns the minimum height of appointment in pixels. 
+
+*Remarks*
+
+If value is zero, then the height of a TimeSlot row is used.
+
+|*getActivityHoverStyle* 
+|Returns the css class names for the ActivityHoverStyle.
+
+|*getActivitySelectedStyle* 
+|Returns the css class names for the ActivitySelectedStyle.
+
+|*getActivityWidthMinimum* 
+|Returns the minimum width of appointments in pixels. 
+
+*Remarks*
+
+The property will have effect only when multiple appointments are assigned to a particular time slot and calculated widths of those appointments become too small.
+
+|*getAllDayEventAreaSelectedStyle* 
+|Returns the css class names for the AllDayEventAreaSelectedStyle.
+
+|*getAllDayEventSelectedStyle* 
+|Returns the css class names for the AllDayEventsSelectedStyle.
+
+|*getCaptionHeaderVisible* 
+|Returns "true" if the CaptionHeader of the WebDayView is visible.
+
+|*getClientID* 
+|Returns the ClientID of the WebDayView.
+
+|*getElement* 
+|Returns the underlying HTML element of the WebDayView.
+
+|*getEnableActivityMoving* 
+|Returns a boolean that determines if the activity can be moved by mouse. 
+
+*Remarks*
+
+The start time of appointment can be modified.
+
+|*getEnableActivityResizing* 
+|Returns a boolean that determines if an activity can be resized by mouse. 
+
+*Remarks*
+
+The start time of an activity and its duration can be modified.
+
+|*getEnableAutoActivityDialog* 
+|Returns a boolean value that determines if the Appointment Dialog should be displayed when double clicking a day or an Activity.
+
+|*getEnabled* 
+|Returns a boolean that determines the Enabled state of the control.
+
+|*getFirstDay* 
+|Returns the first day of the DayView.
+
+|*getNavigationAnimation* 
+|Returns the type of Animation that will be used when the View control is navigated. 
+
+*Remarks*
+
+0 - None 
+
+1 - Accelerate 
+
+2 - Decelerate 
+
+3 - AccelDecel 
+
+4 - Linear
+
+|*getScrollPosition* 
+|Returns the Vertical scroll in pixels. 
+
+*Remarks*
+
+A Negative value will scroll webDayView to the first working time slot.
+
+|*getSelectedActivity* 
+|Returns the selected activity in the WebDayView. 
+
+*Remarks*
+
+If no activity is selected, the method returns null.
+
+|*getTimeSlotInterval* 
+|Returns the time interval to be used for each time slot in minutes. 
+
+*Remarks*
+
+Intervals are from 4 hours to 1 minute
+
+|*getUniqueID* 
+|Returns the UniqueID of the WebDayView.
+
+|*getWebScheduleInfo* 
+|Returns the WebScheduleInfo object that the WebDayView is attached to.
+
+|*setScrollPosition* 
+|Sets the vertical scroll position. 
+
+*Parameters*
+
+_position_ 
+
+Scroll position in pixels.
+
+|====

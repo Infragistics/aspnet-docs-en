@@ -1,0 +1,237 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-object-csom",
+    "controlName": [],
+    "tags": ["API","How Do I","Scheduling"],
+    "guid": "{67C3EA3B-1701-4427-94D6-FB88462479D2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebScheduleInfo Object
+
+== WebScheduleInfo
+
+The WebScheduleInfo object provides access to the control-level features of the WebScheduleInfo control.
+
+=== WebScheduleInfo Methods
+
+[cols="a,a"]
+|====
+|*addActivity* 
+|Adds an Activity. 
+
+*Parameters*
+
+_activity_ 
+
+The activity to be added. _id_ 
+
+A string value that can be accessed in the Adding events on both the client and server. 
+
+*Remarks*
+
+If called by a control, the control's ClientId is used for the id.
+
+|*deleteActivity* 
+|Deletes an Activity. 
+
+*Parameters*
+
+_activity_ 
+
+The activity to be deleted. _id_ 
+
+A string value that can be accessed in the Deleting events on both the client and server. 
+
+*Remarks*
+
+If called by a control, the control's ClientId is used for the id.
+
+|*fetchReminders* 
+|Performs a SmartCallback that goes to the server and checks to see if any reminders have come due.
+
+|*getActiveDay* 
+|Returns a Date object that represents the ActiveDay.
+
+|*getActiveDayClientSynchronization* 
+|Returns 0 if ActiveDayClientSynchronization is set to Always and 1 if its sent to Never.
+
+|*getActiveResourceDataKey* 
+|Returns the ActiveResources Datakey.
+
+|*getActiveResourceName* 
+|Returns the ActiveResource name.
+
+|*getActivities* 
+|Returns an ig_ActivityCollection of all the Activites passed down to the client.
+
+|*getAllowAllDayEvents* 
+|Returns "true" if All Day Events are allowed.
+
+|*getAppointmentDialogID* 
+|Returns the ClientID of the Appointment Dialog.
+
+|*getClientID* 
+|Returns the ClientID of the WebScheduleInfo.
+
+|*getDefaultActivityDuration* 
+|Returns the default duration of an Activity in Minutes. The default value is 30\.
+
+|*getDefaultReminderInterval* 
+|Returns the default interval for reminders in Ticks.
+
+|*getDefaultSnoozeInterval* 
+|Returns the default interval for snoozing in Ticks.
+
+|*getEnableProgressIndicator* 
+|Returns a boolean value that determines if a Progress Indicator will be displayed during a SmartCallback.
+
+|*getEnableSmartCallbacks* 
+|Returns a boolean value that determines if SmartCallbacks are turned on.
+
+|*getImageDirectory* 
+|Returns a string value of the image directory specified for WebScheduleInfo.
+
+|*getProgressIndicator* 
+|Returns the Progress Indicator object that will be displayed during a SmartCallback.
+
+|*getReminderDialogID* 
+|Returns the ClientID for the ReminderDialog.
+
+|*getReminders* 
+|Returns an ig_ReminderCollection of all the Reminders passed passed down to the client.
+
+|*getTimeDisplayFormat* 
+|Returns 0 if TimeDisplayFormat is set to 12Hours and 1 if its set to 24Hours.
+
+|*getUniqueID* 
+|Returns the UniqueID of WebScheduleInfo.
+
+|*getWorkDayEndTime* 
+|Returns a Date object for the WorkDayEndTime, or null if its not set.
+
+|*getWorkDayStartTime* 
+|Returns a Date object for the WorkDayStartTime, or null if its not set.
+
+|*navigate* 
+|Navigates the activeday the specified amount of time. 
+
+*Parameters*
+
+_years_ 
+
+The amount of years to navigate. _months_ 
+
+The amount of months to navigate. _days_ 
+
+The amount of days to navigate. _id_ 
+
+A string value that can be accessed in the ActiveDayChanging/Navigation events on both the client and server. 
+
+*Remarks*
+
+If called by a control, the control's ClientId is used for the id.
+
+|*setActiveDay* 
+|Sets the ActiveDay to the specified date. 
+
+*Parameters*
+
+_dateTime_ 
+
+The new date to set the ActiveDay. This parameter must be a date object. _post_ 
+
+True if a postback should occur. _id_ 
+
+A string value that can be accessed in the ActiveDayChanging events on both the client and server. 
+
+*Remarks*
+
+If called by a control, the control's ClientId is used for the id.
+
+|*setDefaultActivityDuration* 
+|Sets the default duartion for an Activity. 
+
+*Parameters*
+
+_duration_ 
+
+The number of minutes the default duration for an activity should be. 
+
+*Remarks*
+
+This method is client side only and must be reset for each post.
+
+|*setFetchReminderInterval* 
+|Sets the interval on how often WebScheduleInfo should check for reminders when SmartCallbacks are turned on. 
+
+*Parameters*
+
+_interval_ 
+
+The interval to be set in miliseconds. 
+
+*Remarks*
+
+The default value is 2 minutes. Automatic fetch reminders can be turned off by setting the interval to any number less than or equal to zero.
+
+|*showAddAppointmentDialog* 
+|Opens the Appointment Dialog. 
+
+*Parameters*
+
+_appointment_ 
+
+The appointment to display in the Dialog. _id_ 
+
+A string value that can be accessed in the Dialog events on the client. 
+
+*Remarks*
+
+If called by a control, the control's ClientId is used for the id.
+
+|*showReminders* 
+|Opens the ReminderDialog.
+
+|*showUpdateAppointmentDialog* 
+|Opens the Appointment Dialog. 
+
+*Parameters*
+
+_dataKey_ 
+
+The DataKey of the appointment to display in the appointment dialog. _id_ 
+
+A string value that can be accessed in the Dialog events on the client. 
+
+*Returns*
+
+False if no appointment is found with the passed datakey on the client. 
+
+*Remarks*
+
+If called by a control, the control's ClientId is used for the id.
+
+|*updateActivity* 
+|Updates an Activity. 
+
+*Parameters*
+
+_activityUpdateProps_ 
+
+A dynamic object that contains the properties and their values that are to be updated. _activity_ 
+
+The activity to be updated. _id_ 
+
+A string value that can be accessed in the Updating events on both the client and server. 
+
+*Remarks*
+
+Note: this is not an activity object. The activity object should not be modified. Any properties that should be updated should be placed in the activityUpdateProps object. If called by a control, the control's ClientId is used for the id.
+
+|====

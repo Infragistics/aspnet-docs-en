@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-understanding-webresizingextender",
+    "controlName": ["WebResizingExtender"],
+    "tags": [],
+    "guid": "{15788B3B-EC41-462C-9230-9BE8F234C8FB}",  
+    "buildFlags": [],
+    "createdOn": "2006-08-12T14:11:38Z"
+}
+|metadata|
+////
+
+= Understanding WebResizingExtender
+
+This is a great place for you to start learning about the WebResizingExtender™ control, and its key features and functionalities. The topics in this section will give you a better idea of why you would want to use WebResizingExtender in your applications.
+
+Click the links below to gain an overview of the WebResizingExtender control.
+
+* link:webresizingextender-about-webresizingextender.html[About WebResizingExtender]
+* link:webresizingextender-aspnet-ajax-extenders.html[ASP.NET AJAX Extenders]

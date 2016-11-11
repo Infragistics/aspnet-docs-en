@@ -1,0 +1,17 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-what-minimum-trust-level-do-i-require-from-my-hosting-provider",
+    "controlName": [],
+    "tags": ["Deployment","FAQ"],
+    "guid": "{BB479359-B80D-4702-A8D3-FA4CCD097248}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= What Minimum Trust Level Do I Require from My Hosting Provider?
+
+The Infragistics ASP.NET controls and components should be functional under medium trust. In some cases, you can use individual controls in environments that have less trust, but this is not supported.

@@ -1,0 +1,24 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedulegenericdataprovider-webschedulegenericdataprovider",
+    "controlName": [],
+    "tags": ["Getting Started","How Do I"],
+    "guid": "{0137C36F-3F2A-491F-8B46-EB194C22A5FC}",  
+    "buildFlags": [],
+    "createdOn": "2009-12-10T16:35:25Z"
+}
+|metadata|
+////
+
+= WebScheduleGenericDataProvider
+
+Click the links below for an introduction to the WebScheduleGenericDataProvider™ component.
+
+* link:webschedulegenericdataprovider-about-webschedulegenericdataprovider.html[About WebScheduleGenericDataProvider] -- Provides information on what the WebScheduleGenericDataProvider component does, and why you would want to use it in your application.
+* link:webschedulegenericdataprovider-webschedulegenericdataprovider-smart-tag.html[WebScheduleGenericDataProvider Smart Tag] -- Explains the functionality available on the WebScheduleGenericDataProvider smart tag.
+
+The WebScheduleGenericDataProvider component is part of the WebSchedule™ group of controls and components. If you're looking for a section that houses overview/task-based information common to multiple WebSchedule controls and components (e.g., WebCalendarView™, WebDayView™), click the link below:
+
+link:web-webschedule.html[WebSchedule]

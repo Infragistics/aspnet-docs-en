@@ -1,0 +1,57 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimageviewer-using-webimageviewer",
+    "controlName": ["WebImageViewer"],
+    "tags": ["How Do I","Layouts","Styling","Templating"],
+    "guid": "{92BD0C03-BE10-438B-AAB3-3AD1679E08DF}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-01T21:03:41Z"
+}
+|metadata|
+////
+
+= Using WebImageViewer
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebImageViewer™ control.
+
+link:webimageviewer-webimageviewer-smart-tag.html[WebImageViewer Smart Tag]
+
+This topic introduces WebImageViewer Smart Tag anchor and pop-up panel, which give the ability to see and set most of the control properties and settings.
+
+link:webimageviewer-adding-text-to-webimageviewers-header-and-footer-areas2.html[Adding Text to WebImageViewer's Header and Footer Areas]
+
+With this topic you will learn how to set descriptive text in WebImageViewer Header and Footer areas.
+
+link:webimageviewer-scroll-animation-types.html[Scroll Animation Types]
+
+This topic presents how to configure the scrolling behaviour of WebImageViewer and which are the type of the scrolling animation.
+
+link:webimageviewer-change-how-the-image-viewer-scrolls-through-images.html[Change how the Image Viewer Scrolls Through Images]
+
+In this topic you will learn how to configure WebImageViewer when scrolling through images.
+
+link:webimageviewer-orientation-types.html[Orientation Types]
+
+In this topic can be found the orientation types provided by WebImageViewer and useful screenshots, which will help to understand the concept of the orientation fauture of the contol.
+
+link:webimageviewer-change-the-image-viewers-orientation.html[Change the Image Viewer's Orientation]
+
+In this topic you can learn how to set WebImageViewer orientation in the back-end code.
+
+link:webimageviewer-adding-images-to-the-webimageviewer-on-the-clientside.html[Adding Images to the WebImageViewer on the Client Side]
+
+This topic will show you how to add an image to the WebImageViewer on the client side.
+
+link:webimageviewer-next-and-previous-buttons.html[Next and Previous Buttons]
+
+Here is explained how to configure Next and Previous Buttons of the WebImageViewer contol.
+
+link:webimageviewer-scroll-images-while-dragging-the-mouse.html[Scroll Images While Dragging the Mouse]
+
+In this topic is explained how to enable and disable dragging mode of the WebImageViewer contol.
+
+link:webimageviewer-stop-images-looping-continuously.html[Stop Images Looping Continuously]
+
+This topic discovers how to limit looping through images in the WebImageViewer contol.

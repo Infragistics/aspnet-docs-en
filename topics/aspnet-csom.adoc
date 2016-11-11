@@ -1,0 +1,28 @@
+﻿////
+
+|metadata|
+{
+    "name": "aspnet-csom",
+    "controlName": [],
+    "tags": ["API","Getting Started"],
+    "guid": "{9684F640-945F-4F53-B5CA-8383E0EEFEAF}",  
+    "buildFlags": [],
+    "createdOn": "2009-05-02T15:07:07Z"
+}
+|metadata|
+////
+
+= ASP.NET CSOM
+
+Click the following links to view the client side object model for each ASP.NET control
+
+* link:webcalendarview-csom.html[WebCalendarView CSOM]
+* link:webchart-csom.html[WebChart CSOM]
+* link:webdayview-csom.html[WebDayView CSOM]
+* link:webgauge-csom.html[WebGauge CSOM]
+* link:webhtmleditor-csom.html[WebHtmlEditor CSOM]
+* link:webimagebutton-csom.html[WebImageButton CSOM]
+* link:webmonthview-csom.html[WebMonthView CSOM]
+* link:webresizingextender-csom.html[WebResizingExtender CSOM]
+* link:webschedule-csom.html[WebSchedule CSOM]
+* link:webscheduleinfo-csom.html[WebScheduleInfo CSOM]

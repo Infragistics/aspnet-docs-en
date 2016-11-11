@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-setting-up-the-image-deployment",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{9D6299CE-996A-4E41-AB58-81AD91337758}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Setting Up the Image Deployment
+
+At this point, you must choose and configure a deployment scenario before running the application. There are two deployment scenarios available. One allows the WebGauge™ images to be created and written to the hard disk of the Web server. The other scenario allows the images to be created and stored in the Session state. To get up and running with this demonstration, choose one of the following deployment scenarios:
+
+* link:webgauge-file-system-deployment.html[File System Deployment]
+* link:webgauge-session-deployment.html[Session Deployment]

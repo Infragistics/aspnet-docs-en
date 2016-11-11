@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "webnumericeditor-using-display-factor-in-webnumericeditor",
+    "controlName": ["WebNumericEditor"],
+    "tags": [],
+    "guid": "{64BD6F2F-B02E-4797-B6F4-B4CF081C4433}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using Display Factor in WebNumericEditor
+
+WebNumericEditor™ allows you to set a factor that multiplies the value in the control and displays it as the text in the editor. For example, if the display factor is 100 and the end-user enters the value 80 into the editor (this is reflected in the editor's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~text.html[Text]"]  property) then the editor's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~value.html[Value]"]  property will be 0.8. You can set the display factor by simply setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~displayfactor.html[DisplayFactor]"]  property. By default, this property is set to 1.
+
+*In Visual Basic:*
+
+----
+WebNumericEditor1.DisplayFactor = 10
+----
+
+*In C#:*
+
+----
+WebNumericEditor1.DisplayFactor = 10;
+----

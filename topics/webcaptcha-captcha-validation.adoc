@@ -1,0 +1,64 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcaptcha-captcha-validation",
+    "controlName": ["WebCaptcha"],
+    "tags": ["Validation"],
+    "guid": "162d032f-0fca-4ebf-aace-04c1b803e7c0",  
+    "buildFlags": [],
+    "createdOn": "2010-05-31T13:08:23.3938633Z"
+}
+|metadata|
+////
+
+= Captcha Validation
+
+WebCaptcha™ control provides the functionality to check its validation status on both server side and client side.
+
+* On the server side, the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~validate.html[Validate] method is called automatically when the page loads. During this event you can also use the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~isvalid.html[IsValid] property to check if the validation was successful. You may also check the validation status in any other event by calling the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~validate.html[Validate] method and then checking the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~isvalid.html[IsValid] property.
+
+*In C#:*
+
+----
+this.WebCaptcha1.Validate();
+if (this.WebCaptcha1.IsValid)
+{
+    //add your logic here
+}
+----
+
+*In Visual Basic:*
+
+----
+Me.WebCaptcha1.Validate()
+If Me.WebCaptcha1.IsValid Then
+'add your logic here 
+End If
+----
+
+* On the client side, you can check the validation status by calling the control’s link:webcaptcha~infragistics.web.ui.webcaptcha~validationfailed.html[validationFailed] property. It indicates whether the Captcha validation has failed on the server.
+
+*In Javascript:*
+
+----
+var captcha = $IG.WebCaptcha.find('WebCaptcha1'); // gets a reference to the WebCaptcha control
+if (captcha.get_validationFailed()) // checks if the validation was successful on the server
+{
+    //add your logic here
+}
+----
+
+== Related Topics
+
+link:webcaptcha-protection-modes.html[Protection Modes]
+
+link:webcaptcha-dictionary-modes.html[Dictionary Modes]
+
+link:webcaptcha-configuring-captcha-buttons.html[Configuring Captcha Buttons]
+
+link:webcaptcha-configuring-captcha-image-properties.html[Configuring Captcha Image Properties]
+
+link:webcaptcha-configuring-captcha-input-field.html[Configuring Captcha Input Field]
+
+link:webcaptcha-configuring-captcha-audio.html[Configuring Captcha Audio]

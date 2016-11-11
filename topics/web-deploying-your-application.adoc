@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-deploying-your-application",
+    "controlName": [],
+    "tags": ["Deployment"],
+    "guid": "{9A288CD0-00BD-42EB-9238-9C9EBD1F20D0}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Deploying Your Application
+
+After you have compiled a .NET application that contains Infragistics ASP.NET controls/components, you will then need to deploy the application.
+
+Click the links below to learn about the various deployment methods.
+
+* link:web-deployment-overview.html[Deployment Overview] -- Contains a list of links to topics that outline the specific resources you will need to deploy when a particular Infragistics ASP.NET control/component is included in your application.
+* link:web-deploying-a-web-application-that-uses-netadvantage-for-asp-net-controls.html[Deploying a Web Application that Uses Infragistics ASP.NET Controls] -- Explains how to deploy your Web application using Infragistics ASP.NET controls/components.
+* link:deploying-common-assets.html[Deploying Common Assets]– Explains the tasks that you need to perform in order to deploy your Infragistics ASP.NET application in an environment where you have control over the web server.
+* link:web-deploying-an-application-to-a-hosted-server-environment.html[Deploying an Application to a Hosted Server Environment]– Provides information on what you need to do in order to deploy Infragistics ASP.NET controls/components into environments where you have limited or no access to Internet Information Services (IIS).
+* link:web-using-global-assembly-cache-gac-deployment.html[Using Global Assembly Cache (GAC) Deployment] – Discusses the GAC, a central reserved location used to store assemblies for applications running on a machine. The GAC enables the sharing of assemblies among multiple applications, as well as the installation of multiple assembly versions on the same computer. Learn how to deploy the Infragistics ASP.NET controls/components of your application to the GAC.

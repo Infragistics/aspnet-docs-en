@@ -1,0 +1,66 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-css-file-structure",
+    "controlName": [],
+    "tags": ["FAQ","How Do I","Styling"],
+    "guid": "{36A357FA-568B-44D9-9097-C8737AD1391A}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:36:36Z"
+}
+|metadata|
+////
+
+= CSS File Structure
+
+The heart of Application Styling for Infragistics ASP.NET is cascading style sheets (CSS). These files define the styles that the controls use to change their look and feel when they are rendered. Each StyleSet contains one or more CSS files that are loaded and cached by the web browser at run time according to their definition order, and path specification within the ASPX page.
+
+The Application Styling Framework (ASF) controls the naming and location of the CSS files used in a page. By doing this, it makes changing the StyleSet for a page as simple as altering a single directory path. For example, if all the CSS files associated with a StyleSet called Onyx are located in a directory called "/ig_res/onyx", and all the files that define a StyleSet called Aqua are located in a directory called "/ig_res/aqua", then to toggle an application between the Onyx and Aqua styles, you simply need to change the StyleSetName in one location, and the whole application is affected. This, in effect, is the biggest benefit of Application Styling. By specifying a different path in one location, the whole application's look and feel can change.
+
+The CSS files follow a strict set of guidelines for the names of classes that can be used inside the files. By following these guidelines, role-based styling can be used to consolidate standard styles across all controls in an application. One CSS file is control-independent, and is used to contain generic role-based styles. This files is called ig_shared.css and it is present in every style set.
+
+*In CSS:*
+
+----
+.ig_OnyxControl {
+        ...
+}
+.ig_OnyxDisabled {
+        ...
+}
+.ig_OnyxHeader {
+        ...
+}
+.ig_OnyxSelected {
+        ...
+}
+.ig_OnyxHover {
+        ...
+}
+.ig_OnyxItem{
+        ...
+}
+.ig_OnyxButton {
+        ...
+}
+----
+
+The styles defined in this file are used by all controls that make use of Application Styling and make use of the defined roles. You can override styles defined for specific roles in a control-specific CSS file. In addition, in the control's CSS file you can define styles for roles that are specific to that control. For example, the CSS file named ig_tree.css is used by WebTree™, and you can override the OnyxControl class, as well as define a style for WebTree's SelectedNode role, as shown below.
+
+*In CSS:*
+
+----
+.igtr_OnyxControl{
+        ...
+}
+.igtr_OnyxNode {
+        ...
+}
+----
+
+This concept of overriding styles works because when the control is rendered, the styles defined in ig_shared.css are loaded first, then the styles defined in ig_tree.css are loaded. This overriding creates a single CSS class name that is a combination of both class names. For example, using the CSS files defined above the WebTree's Control role would have a class name of "ig_OnyxControl igtr_OnyxControl". This class name applies one role from ig_shared.css_ig_OnyxControl, and one role from ig_tree.css_igtr_OnyxControl.
+
+== Related Topic
+
+link:web-ui-roles.html[UI Roles]

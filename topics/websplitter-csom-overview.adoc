@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "websplitter-csom-overview",
+    "controlName": ["WebSplitter"],
+    "tags": ["Events","How Do I"],
+    "guid": "{F468F474-CC75-4549-819B-1BC20EE511D6}",  
+    "buildFlags": [],
+    "createdOn": "2008-12-01T21:10:06Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+The WebSplitter™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the splitter without the need for server-side post-backs.
+
+link:websplitter~infragistics.web.ui_namespace.html[WebSplitter CSOM Overview]

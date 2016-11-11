@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webrating-client-side-object-model-csom-overview",
+    "controlName": ["WebRating"],
+    "tags": ["API","Selection"],
+    "guid": "34a73ba5-2c3b-480e-aa90-fd6af50637c2",  
+    "buildFlags": [],
+    "createdOn": "2010-06-01T04:48:56.0607535Z"
+}
+|metadata|
+////
+
+= Client-Side Object Model (CSOM) Overview
+
+The WebRating™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webrating~infragistics.web.ui_namespace.html[WebRating CSOM Overview]

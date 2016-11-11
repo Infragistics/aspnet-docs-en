@@ -1,0 +1,70 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-add-an-activity-to-the-database",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{EA9AB1D2-1BBA-4890-A4F7-2C182F88D1A1}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Add an Activity to the Database
+
+In server-side code behind you can add a new  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  to the Activity table in the database for persistence. This example makes use of the link:webschedule-create-an-activity-using-code.html[How to Create an Activity in Code] topic. You will need three things to add an Activity to the database:
+
+[start=1]
+. A concrete instance of an Activity (for example, an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  object.)
+[start=2]
+. The  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource]"]  (person or thing) this Activity is owned by, organized by, or pertains to.
+[start=3]
+. A data provider derived from the WebScheduleDbProvider class.
+
+Add an ASP.NET Button to your WebForm named "AddButton1", and handle it's Click event to make a new Appointment object.
+
+Pass this along with the Unassigned Resource (or other associated Resource) to the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider~addactivity.html[AddActivity]"]  method on the data provider.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.Shared
+Imports Infragistics.WebUI.WebSchedule
+...
+Private Sub AddButton1_Click(ByVal sender As Object, _
+	ByVal e As EventArgs) Handles AddButton1.Click
+	' Create the Appointment object.
+	Dim appt As Appointment = Me.CreateAppointment()
+	' Add the Appointment to the database, associating
+	' it with the Unassigned Resource.
+	Me.WebScheduleSqlClientDataProvider1.AddActivity( _
+	   appt, _
+	   Me.WebScheduleInfo1.VisibleResources.UnassignedResource)
+End Sub
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.Shared;
+using Infragistics.WebUI.WebSchedule;
+...
+private void AddButton1_Click(object sender, EventArgs e)
+{
+	// Create the Appointment object.
+	Appointment appt = this.CreateAppointment();
+	// Add the Appointment to the database, associating
+	// it with the Unassigned Resource.
+	this.WebScheduleSqlClientDataProvider1.AddActivity(
+	   appt, 
+	   this.WebScheduleInfo1.VisibleResources.UnassignedResource);
+}
+----
+
+.Note:
+[NOTE]
+====
+Although this example shows the Microsoft SQL Server data provider being used, this works with any data provider derived from WebScheduleDbProvider including OLE DB.
+====

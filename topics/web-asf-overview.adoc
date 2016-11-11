@@ -1,0 +1,26 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-asf-overview",
+    "controlName": [],
+    "tags": ["Formatting","Styling","Theming"],
+    "guid": "{A83A9397-54CA-4480-B502-84112F188904}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:29:06Z"
+}
+|metadata|
+////
+
+= ASF Overview
+
+The Application Styling Framework™ (ASF) is designed to give you ultimate flexibility when styling your projects. The application developer can utilize the assistance of a graphic designer and save time and resources in the process. This collaboration between developer and graphic designer is at the heart of the ASF. The fully managed code-base of the ASF gives the developer all the tools he/she needs in order to manipulate how the entire project is affected by Application Styling. The standalone application, Infragistics AppStylist® for ASP.NET, is a great tool that graphic designers can use to not only style one project, but any project the developer wants to style.
+
+By leveraging the latest advancements in cascading style sheets, the ASF architecture is easy to learn and work with in your project. Click the links below to learn more about the different parts of the ASF architecture.
+
+* link:web-css-file-structure.html[CSS File Structure]
+* link:web-css-directory-structure.html[CSS Directory Structure]
+* link:web-ui-roles.html[UI Roles]
+* link:web-role-inheritance.html[Role Inheritance]
+* link:web-role-priority.html[Role Priority]
+* link:web-images.html[Images]

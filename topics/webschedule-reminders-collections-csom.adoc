@@ -1,0 +1,65 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-reminders-collections-csom",
+    "controlName": [],
+    "tags": ["API","How Do I","Scheduling"],
+    "guid": "{7B4E4E7B-91E6-4EAE-B114-D314A584FADD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Reminders Collections
+
+== Reminders
+
+A collection of Reminder objects. There is a reminder object for every Activity that has a reminder thats due prior to the last trip from the server.Any reminder that comes due after the last trip to server will not be added to this collection until the next post-back.
+
+=== Reminders Methods
+
+[cols="a,a"]
+|====
+|*getItem* 
+|Gets the Reminder from the specified index. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _index_ </dt> 
+
+<dd>The index of the Reminder in the collection.</dd> 
+
+</dl> 
+
+*Returns*
+
+An activity object.
+
+|*getReminderFromKey* 
+|Gets the Reminder from the specified datakey. 
+
+*Parameters*
+
+<dl> 
+
+<dt> _dataKey_ </dt> 
+
+<dd>The dataKey of the reminder to retrieve.</dd> 
+
+</dl> 
+
+*Returns*
+
+Returns the Reminder if its in the collection. Otherwise it will return null.
+
+|====
+
+=== Reminders Properties
+
+==== length
+
+The number of reminders in the ActivitiesCollection.

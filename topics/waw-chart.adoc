@@ -1,0 +1,51 @@
+﻿////
+
+|metadata|
+{
+    "name": "waw-chart",
+    "controlName": ["WebChart"],
+    "tags": [],
+    "guid": "{1037844A-4664-4E23-9D89-8A1B4EF711AC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebChart
+
+If you're looking for an area that houses all of the overview/task-based information related to the WebChart™ control, you've come to the right place. This section contains valuable information about WebChart, ranging from what the control does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the control.
+
+Click the links below to access important information about the WebChart control.
+
+== link:chart-understanding-chart.html[Understanding Chart]
+
+In this section you'll find any information that will help you to better understand the functionalities of the WebChart control, as well as why you would want to use it to as part of building your applications.
+
+== link:chart-chart-types.html[Chart Types]
+
+This key section contains a comprehensive listing of all the 2D and 3D chart types, along with a brief overview of the chart type, information on the type of data that is required to generate the chart type, and a list of properties specific to the chart type.
+
+== link:chart-getting-started-with-chart.html[Getting Started with Chart]
+
+In order to get you up and running as quickly as possible with the WebChart control, we've provided you with information on how to get started using the control (e.g., adding WebChart to your form).
+
+== link:chart-using-chart.html[Using Chart]
+
+This section contains information on the key features and functionalities provided by the WebChart control.
+
+== link:chart-deploying-webchart-landing.html[Deploying WebChart]
+
+If your application uses the WebChart control, refer to this topic for a list of the Infragistics .NET assemblies that you need to redistribute as part of your application.
+
+== link:chart-webchart-accessibility-compliance.html[WebChart Accessibility Compliance]
+
+This topic outlines the way in which WebChart meets the requirements of the Section 508 standards. This accessibility compliance allows your end users, specifically those with disabilities, to be able to access and use your Web application built using the WebChart control.
+
+== link:chart-webchart-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the WebChart control. The namespaces and classes listed in this topic link conveniently into the link:web-api-reference-guide.html[API Reference Guide] section of the Infragistics ASP.NET help.
+
+== link:chart-webchart-csom-overview.html[Client-Side Object Model (CSOM) Overview]
+
+This topic lists the pages for the utility functions, objects, and events that you will be working with while programming client-side with WebChart. The utility functions, objects, and events listed in this topic link conveniently into the Client-Side Model (CSOM) Reference Guide section of the Infragistics ASP.NET help.

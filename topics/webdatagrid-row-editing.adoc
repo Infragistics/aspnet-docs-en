@@ -1,0 +1,35 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-row-editing",
+    "controlName": [],
+    "tags": [],
+    "guid": "e85b5896-9efd-4cf2-9419-aa78226205f5",  
+    "buildFlags": [],
+    "createdOn": "2014-03-10T16:12:51.1649674Z"
+}
+|metadata|
+////
+
+= Row Editing (WebDataGrid)
+
+== In This Group of Topics
+
+=== Introduction
+
+The topics in this group explain the Row Editing behavior of the  _WebDataGrid_™ and its use.
+
+=== Topics
+
+[options="header", cols="a,a"]
+|====
+|Topic|Purpose
+
+| link:webdatagrid-row-editing-overview.html[Row Editing Overview (WebDataGrid)]
+|This topic provides an overview of the _WebDataGrid_ Row Editing behavior’s features and functionality.
+
+| link:webdatagrid-enabling-row-editing.html[Enabling Row Editing (WebDataGrid)]
+|This topic details how to enable the Row Editing behavior in the _WebDataGrid_ .
+
+|====

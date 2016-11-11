@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmonthview-client-side-programming",
+    "controlName": ["WebMonthView"],
+    "tags": ["API","Appointments","Recurrences","Scheduling"],
+    "guid": "{8237263D-5D7C-44A5-B093-6FB2BADF9FA7}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Client Side Programming
+
+This section contains topics that explain some of the client-side programming you can do while working with WebMonthView™.
+
+Click the links below to learn more.
+
+* link:webmonthview-csom-overview.html[CSOM Overview]
+* link:webmonthview-reference-the-control.html[Reference the Control]

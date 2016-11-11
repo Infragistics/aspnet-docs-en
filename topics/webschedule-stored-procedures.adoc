@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-stored-procedures",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{AC8CAE6C-E44E-45D6-B416-195466E2FF4E}",  
+    "buildFlags": [],
+    "createdOn": "2005-08-09T00:00:00Z"
+}
+|metadata|
+////
+
+= Stored Procedures
+
+The WebScheduleSqlDataProvider™ uses stored procedures. A stored procedure is a compiled piece of SQL code that executes a canned transaction (for example, updating an activity).
+
+Click on the following links for information on the stored procedures used by WebSchedule's data SQL data provider.
+
+* link:webschedule-overview-of-the-stored-procedures-used-by-the-webschedule-data-providers.html[Overview of the Stored Procedures Used by WebSchedule Data Providers]
+* link:webschedule-update-data-and-stored-procedures.html[Update Data and Stored Procedures]

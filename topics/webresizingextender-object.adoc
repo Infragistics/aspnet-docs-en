@@ -1,0 +1,542 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-object",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{DFE0CFD5-B36C-4E65-884A-DCE5EA65D9A0}",  
+    "buildFlags": [],
+    "createdOn": "2007-08-02T08:02:57Z"
+}
+|metadata|
+////
+
+= WebResizingExtender Object
+
+== WebResizingExtender
+
+Object that represents Infragistics.WebUI.WebResizingExtender on client.
+
+=== WebResizingExtender Methods
+
+[cols="a,a"]
+|====
+|*add_mouseout* 
+|Add a listener function to process mouseout events of WebResizingExtender. 
+
+*Parameters*
+
+_handler_ 
+
+Reference to a function which will be called on mouseout events. 
+
+*Remarks*
+
+Note: the args parameter in handler function is an instance of the CancelEventArgs class. Example: 
+
+---- 
+ function myFnc(sender, args)  { 	var evt = args.getBrowserEvent(); 	var rawEvt = evt ? evt.rawEvent : null; 	if(rawEvt) 		window.status = 'x=' + rawEvt.clientX;  }  var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.add_mouseout(myFnc);
+----
+
+|*add_mouseover* 
+|Add a listener function to process mouseover events of WebResizingExtender. 
+
+*Parameters*
+
+_handler_ 
+
+Reference to a function which will be called on mouseover events. 
+
+*Remarks*
+
+Note: the args parameter in handler function is an instance of the CancelEventArgs class. Example: 
+
+---- 
+ function myFnc(sender, args)  { 	var evt = args.getBrowserEvent(); 	var rawEvt = evt ? evt.rawEvent : null; 	if(rawEvt) 		window.status = 'x=' + rawEvt.clientX;  }  var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.add_mouseover(myFnc);
+----
+
+|*add_resize* 
+|Add a listener function to process resize events of WebResizingExtender. That event is raised at the end of resize action when mouse is released. Application may cancel that event or modify final size. 
+
+*Parameters*
+
+_handler_ 
+
+Reference to a function which will be called on resize events. 
+
+*Remarks*
+
+Note: the args parameter in handler function is an instance of the ResizeEventArgs class. Example: 
+
+---- 
+ function myFnc(sender, args)  { 	if(args.getWidth() == 20) 	 if(args.getOldWidth() == 100) 		args.set_cancel(true); 	if(args.getHeight() == 20) 		args.setHeight(50);  }  var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.add_resize(myFnc);
+----
+
+|*add_resizing* 
+|Add a listener function to process resizing events of WebResizingExtender. That event is raised while resizing by mouse drag. Application may cancel that event. 
+
+*Parameters*
+
+_handler_ 
+
+Reference to a function which will be called on resizing events. 
+
+*Remarks*
+
+Note: the args parameter in handler function is an instance of the ResizeEventArgs class. Example: 
+
+---- 
+ function myFnc(sender, args)  { 	if(args.getWidth() == 20) 	 if(args.getOldWidth() == 100) 		args.set_cancel(true);  }  var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.add_resizing(myFnc);
+----
+
+|*get_handleClass* 
+|That method allows to get value of css class applied to the handler (rectangle at the bottom right corner of resizing panel). 
+
+*Returns*
+
+Name of css class.
+
+|*get_handleImage* 
+|That method allows to get value of src applied to IMG of handler (rectangle at the bottom right corner of resizing panel). 
+
+*Returns*
+
+Name of url used for image.
+
+|*get_initialize* 
+|That method allows to get name of the handler function which is used to process initialization event. 
+
+*Returns*
+
+Name of function.
+
+|*get_maximumHeight* 
+|That method allows to get value of maximum height. 
+
+*Returns*
+
+Numeric value.
+
+|*get_maximumWidth* 
+|That method allows to get value of maximum width. 
+
+*Returns*
+
+Numeric value.
+
+|*get_minimumHeight* 
+|That method allows to get value of minimum height. 
+
+*Returns*
+
+Numeric value.
+
+|*get_minimumWidth* 
+|That method allows to get value of minimum width. 
+
+*Returns*
+
+Numeric value.
+
+|*get_mouseout* 
+|That method allows to get name of the handler function which is used to process mouseout event. 
+
+*Returns*
+
+Name of function.
+
+|*get_mouseover* 
+|That method allows to get name of the handler function which is used to process mouseover event. 
+
+*Returns*
+
+Name of function.
+
+|*get_offsetBottom* 
+|That method allows to get value of the offset of resizing panel from the bottom edge of target element. 
+
+*Returns*
+
+Numeric value.
+
+|*get_offsetLeft* 
+|That method allows to get value of the offset of resizing panel from the left edge of target element. 
+
+*Returns*
+
+Numeric value.
+
+|*get_offsetRight* 
+|That method allows to get value of the offset of resizing panel from the right edge of target element. 
+
+*Returns*
+
+Numeric value.
+
+|*get_offsetTop* 
+|That method allows to get value of the offset of resizing panel from the top edge of target element. 
+
+*Returns*
+
+Numeric value.
+
+|*get_parentType* 
+|That method allows to get value which defines how the parent element of resizing panel is calculated. 
+
+*Returns*
+
+Numeric value. 0 - automatic. 1 - child node of target html element. 2 - child node of the parent of the target html element.
+
+|*get_resize* 
+|That method allows to get name of the handler function which is used to process resize event. 
+
+*Returns*
+
+Name of function.
+
+|*get_resizeBorder* 
+|That method allows to get value which is applied to the border of resizing panel. 
+
+*Returns*
+
+String similar to "2px solid red".
+
+|*get_resizing* 
+|That method allows to get name of the handler function which is used to process resizing event. 
+
+*Returns*
+
+Name of function.
+
+|*get_targetHtmlElementID* 
+|That method allows to get value the id of target html element. 
+
+*Returns*
+
+String value.
+
+|*remove_mouseout* 
+|Remove a listener function which was set by add_mouseout method. 
+
+*Parameters*
+
+_handler_ 
+
+Reference to a function to be removed.
+
+|*remove_mouseover* 
+|Remove a listener function which was set by add_mouseover method. 
+
+*Parameters*
+
+_handler_ 
+
+Reference to a function to be removed.
+
+|*remove_resize* 
+|Remove a listener function which was set by add_resize method. 
+
+*Parameters*
+
+_handler_ 
+
+Reference to a function to be removed.
+
+|*remove_resizing* 
+|Remove a listener function which was set by add_resizing method. 
+
+*Parameters*
+
+_handler_ 
+
+Reference to a function to be removed.
+
+|*set_handleClass* 
+|That method allows to set value of css class applied to the handler (rectangle at the bottom right corner of resizing panel). 
+
+*Parameters*
+
+_value_ 
+
+Name of css class. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_handleClass('myHandlerCss');
+----
+
+|*set_handleImage* 
+|That method allows to set value of src attribute of the html element which is used as the handler (rectangle at the bottom right corner of resizing panel). 
+
+*Parameters*
+
+_value_ 
+
+Name for src attribute. 
+
+*Remarks*
+
+Note: that method may have effect only if IMG element is used. Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_handleImage('./myHandlerImage.gif');
+----
+
+|*set_initialize* 
+|Not supported.
+
+|*set_maximumHeight* 
+|That method allows to set value for the maximum height. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_maximumHeight(300);
+----
+
+|*set_maximumWidth* 
+|That method allows to set value for the maximum width. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_maximumWidth(300);
+----
+
+|*set_minimumHeight* 
+|That method allows to set value for the minimum height. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_minimumHeight(100);
+----
+
+|*set_minimumWidth* 
+|That method allows to set value for the minimum width. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_minimumWidth(100);
+----
+
+|*set_mouseout* 
+|Set name of function which can be used to process mouseout events. 
+
+*Parameters*
+
+_handler_ 
+
+Name of a function. 
+
+*Remarks*
+
+Note: the args parameter in handler function is an instance of the CancelEventArgs class. Example: 
+
+---- 
+ function myFnc(sender, args)  { 	var evt = args.getBrowserEvent(); 	var rawEvt = evt ? evt.rawEvent : null; 	if(rawEvt) 		window.status = 'x=' + rawEvt.clientX;  }  var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_mouseout('myFnc');
+----
+
+|*set_mouseover* 
+|Set name of function which can be used to process mouseover events. 
+
+*Parameters*
+
+_handler_ 
+
+Name of a function. 
+
+*Remarks*
+
+Note: the args parameter in handler function is an instance of the CancelEventArgs class. Example: 
+
+---- 
+ function myFnc(sender, args)  { 	var evt = args.getBrowserEvent(); 	var rawEvt = evt ? evt.rawEvent : null; 	if(rawEvt) 		window.status = 'x=' + rawEvt.clientX;  }  var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_mouseover('myFnc');
+----
+
+|*set_offsetBottom* 
+|That method allows to set value for the offset of resizing panel from the bottom edge of target element. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value. 
+
+*Remarks*
+
+Value can be positive or negative. Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_offsetBottom(-2);
+----
+
+|*set_offsetLeft* 
+|That method allows to set value for the offset of resizing panel from the left edge of target element. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value. 
+
+*Remarks*
+
+Value can be positive or negative. Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_offsetLeft(2);
+----
+
+|*set_offsetRight* 
+|That method allows to set value for the offset of resizing panel from the right edge of target element. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value. 
+
+*Remarks*
+
+Value can be positive or negative. Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_offsetRight(-2);
+----
+
+|*set_offsetTop* 
+|That method allows to set value for the offset of resizing panel from the top edge of target element. 
+
+*Parameters*
+
+_value_ 
+
+Numeric value. 
+
+*Remarks*
+
+Value can be positive or negative. Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_offsetTop(2);
+----
+
+|*set_parentType* 
+|Not supported.
+
+|*set_resize* 
+|Set name of function which can be used to process resize events. 
+
+Set name of function which can be used to process mouseover events. 
+
+*Parameters*
+
+_handler_ 
+
+Name of a function. _handler_ 
+
+Name of a function. 
+
+*Remarks*
+
+Note: the args parameter in handler function is an instance of the ResizeEventArgs class. Example: 
+
+---- 
+ function myFnc(sender, args)  { 	if(args.getWidth() == 20) if(args.getOldWidth() == 100) 		args.set_cancel(true); 	if(args.getHeight() == 20) 		args.setHeight(50);  }  var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_resize('myFnc');
+----
+
+|*set_resizeBorder* 
+|That method allows to set border for the resizing panel. 
+
+*Parameters*
+
+_value_ 
+
+String value. 
+
+*Remarks*
+
+Note: value should start with a digit which represents the width of border. Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_resizeBorder('4px dotted blue');
+----
+
+|*set_resizing* 
+|Set name of function which can be used to process resizing events. 
+
+*Parameters*
+
+_handler_ 
+
+Name of a function. 
+
+*Remarks*
+
+Note: the args parameter in handler function is an instance of the ResizeEventArgs class. Example: 
+
+---- 
+ function myFnc(sender, args)  { 	if(args.getWidth() == 20) 	 if(args.getOldWidth() == 100) 		args.set_cancel(true);  }  var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.set_resizing('myFnc');
+----
+
+|*set_targetHtmlElementID* 
+|Not supported.
+
+|*setSize* 
+|That method allows to set size of resizing panel. 
+
+*Parameters*
+
+_width_ 
+
+Numeric value. _height_ 
+
+Numeric value. 
+
+*Remarks*
+
+Example: 
+
+---- 
+ var wre =  Sys.Application.findComponent("WebResizingExtender1");  wre.setSize(400, 200);
+----
+
+|====

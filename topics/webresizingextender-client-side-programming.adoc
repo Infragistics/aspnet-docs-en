@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webresizingextender-client-side-programming",
+    "controlName": ["WebResizingExtender"],
+    "tags": [],
+    "guid": "{A9516A0F-6D20-45EA-A4CC-A74CA12C0DEB}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Client Side Programming
+
+This section contains topics that explain some of the client-side programming you can do while working with WebResizingExtender™.
+
+Click the links below to learn more.
+
+* link:webresizingextender-csom-overview.html[CSOM Overview]
+* link:webresizingextender-reference-the-control.html[Reference the Control]

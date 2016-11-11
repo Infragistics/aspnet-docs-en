@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-apply-the-image-brush-element-at-design-time",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{D52E11BB-D075-426C-B8F4-9BEC4E955812}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Apply the Image Brush Element at Design Time
+
+Applying the Image Fill brush element to a property of your gauge renders the property as an image. For example, if you created a Radial gauge, and want the background to be your company's logo you can set the *Dial* property as the Image brush element.
+
+*To apply the Image Fill brush element to a property of your gauge at design time:*
+
+[start=1]
+. Add a Radial Gauge to the Gauges collection.
+[start=2]
+. In the left-hand pane of the Gauges collection editor, click Radial Gauge.
+[start=3]
+. Expand the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgauge~dial.html[Dial]"]  property.
+[start=4]
+. From the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gauge~brushelement.html[BrushElement]"]  drop-down list, select Image Fill. This will create a new Image Fill brush element.
+[start=5]
+. Click the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.imagebrushelement.html[Image]"]  property, then click the ellipsis button (...).
+[start=6]
+. Using the Select Resource dialog box, import the image that you want to use to fill the selected property.
+
+== Related Topics
+
+link:webgauge-image-fill-brush-element.html[Image Fill Brush Element]
+
+link:webgauge-apply-the-image-fill-brush-element-at-run-time.html[Apply the Image Fill Brush Element at Run Time]

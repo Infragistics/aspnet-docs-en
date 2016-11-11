@@ -1,0 +1,62 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-locate-an-activity",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{0F9A4DC8-8E96-4001-8C4E-107D41ADC868}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Locate an Activity
+
+Sometimes you need to get a hold of an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  object contained in the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activitiescollection.html[Activities]"]  collection of the WebScheduleInfo™. You can loop over the contents in this collection to check properties on the Activity (or any objects extending the Activity base class, such as  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"] ) to find the needed Activity.
+
+The following code finds the first Activity with an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity~importance.html[Importance]"]  property value of Low, so that your application can take some action on it.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.Shared
+Imports Infragistics.WebUI.WebSchedule
+...
+Private Function FindAppointment() As Appointment
+	' Loop over the Activities, returning the first one
+	' that has an Importance of Low.
+	Dim index As Integer
+	For index = 0 To Me.WebScheduleInfo1.Activities.Count
+		Dim current As Activity = Me.WebScheduleInfo1.Activities(index)
+		If ( current.Importance = Importance.Low ) Then
+			Return CType(current, Appointment)
+		End If
+	Next index
+	' Return Nothing if no matching Activity was found.
+	Return Nothing	
+End Function	
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.Shared;
+using Infragistics.WebUI.WebSchedule;
+...
+private Appointment FindAppointment()
+{
+	// Loop over the Activities, returning the first one.
+	// that has an Importance of Low.
+	int index;
+	for( index = 0; index < this.WebScheduleInfo1.Activities.Count; ++index)
+	{
+		Activity current = this.WebScheduleInfo1.Activities[index];
+		if ( current.Importance == Importance.Low )
+			return current as Appointment;
+	}
+	// Return null if no matching Activity was found.
+	return null;
+}
+----

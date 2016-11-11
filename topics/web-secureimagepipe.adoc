@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-secureimagepipe",
+    "controlName": ["WebChart"],
+    "tags": [],
+    "guid": "{982C7761-AEF5-47A2-A285-78E67AC98381}",  
+    "buildFlags": [],
+    "createdOn": "2006-09-01T00:00:00Z"
+}
+|metadata|
+////
+
+= SecureImagePipe
+
+Click the link below for an introduction to the SecureImagePipe™ component, as well as information on how it relates to the WebChart™ control.
+
+* link:web-secureimagepipe-about-secureimagepipe.html[About SecureImagePipe] -- Provides information on what the SecureImagePipe control does, and why you would want to use it in your application.
+* link:secureimagepipe-smart-tag.html[SecureImagePipe Smart Tag] -- Explains the functionality available on the SecureImagePipe smart tag.

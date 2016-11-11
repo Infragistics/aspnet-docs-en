@@ -1,0 +1,36 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-using-the-webschedule-controls-and-components",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{51125F16-B26D-4D3F-B9C1-2EC04EAA86DC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using the WebSchedule Controls and Components
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebSchedule™ controls and components.
+
+* link:webschedule-activities.html[Activities]
+* link:webschedule-browser-support.html[Browser Support]
+* link:webschedule-client-side-programming.html[Client-Side Behaviors]
+* link:webschedule-data-bindings.html[Data Binding]
+* link:webschedule-data-model.html[Data Model]
+* link:webschedule-data-providers.html[Data Providers]
+* link:webschedule-designers.html[Designers]
+* link:webschedule-forms-and-dialogs.html[Forms and Dialog Boxes]
+* link:webschedule-international-support.html[International Support]
+* link:webschedule-performance.html[Performance]
+* link:webschedule-recurrence.html[Recurrence]
+* link:webschedule-reminders.html[Reminders]
+* link:webschedule-resources.html[Resources]
+* link:webschedule-server-side-behaviors.html[Server-Side Behaviors]
+* link:webschedule-standards-support.html[Standards Support]
+* link:webschedule-stored-procedures.html[Stored Procedures]
+* link:webschedule-time-zones.html[Time Zones]
+* link:webschedule-visual-aspects.html[Visual Aspects]

@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalcmanager-understanding-webcalcmanager",
+    "controlName": ["WebCalcManager"],
+    "tags": ["Getting Started","How Do I"],
+    "guid": "{DAD55378-4943-4DA5-AC21-76269111D6DA}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Understanding WebCalcManager
+
+This is a great place for you to start learning about the WebCalcManager™ component, and its key features and functionalities. The topics in this section will give you a better idea of why you would want to use WebCalcManager in your applications.
+
+Click the links below to gain an overview of the WebCalcManager component.
+
+* link:webcalcmanager-excel-style-formula-support.html[Excel®-Style Formula Support] -- Explains the design decisions that were made while creating the WebCalcManager component.
+* link:webcalcmanager-excel-style-functions.html[Excel-Style Functions] -- Contains a list of topics listing the different types of Excel-style functions provided by the WebCalcManager component.

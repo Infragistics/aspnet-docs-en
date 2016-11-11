@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-whats-new",
+    "controlName": [],
+    "tags": ["Getting Started","How Do I"],
+    "guid": "{524EBC65-94AC-4595-BFAD-0D34FEDA3FAB}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= What's New
+
+== link:whats-new-in-2016-volume-2.html[What's New in 2016 Volume 2]
+
+Find out what new components and features were added to the most recent volume of Infragistics ASP.NET.
+
+== link:web-revision-history.html[Revision History]
+
+Need to find out when a certain feature was added to our controls? Easily track down any new feature since our 2008 Volume 1 release.

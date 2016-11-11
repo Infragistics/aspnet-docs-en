@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webimagebutton-api-overview",
+    "controlName": ["WebImageButton"],
+    "tags": ["API","Layouts","Styling"],
+    "guid": "{A75F2F14-4602-4FF7-B617-BFA133DD15C6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+=== WebDataInput Namespace:
+
+pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput_namespace.html[Infragistics.WebUI.WebDataInput]"]
+
+=== Key Class:
+
+pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.webimagebutton.html[WebImageButton]"]

@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-tick-marks",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{8791CD0C-6AC3-405E-BCA0-CFFCD00593B4}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Tick Marks
+
+This section provides you with useful information about the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gaugescaletickmarkappearance.html[TickMark]"]  property of the WebGauge control, as well as a task-based procedure on how to add tick marks to your scale:
+
+* link:webgauge-about-gauge-tick-marks.html[About Gauge Tick Marks]
+* link:webgauge-add-tick-marks-to-a-scale-on-a-gauge.html[Add Tick Marks to a Scale on a Gauge]

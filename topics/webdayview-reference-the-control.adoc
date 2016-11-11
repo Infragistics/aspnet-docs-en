@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdayview-reference-the-control",
+    "controlName": ["WebDayView"],
+    "tags": ["How Do I","Scheduling"],
+    "guid": "{ADAC660C-D590-4CC3-81DD-44832D0068B8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Reference the Control
+
+There are two ways to reference the WebDayView™ control on the client-side. All of WebSchedule™ controls can use the ig_getWebControlById function and pass in the Id of the control to access it on the client. Specifically for the WebDayView, you can use the ig_getWebDayViewById function to reference the control.
+
+The following code shows you how to reference the control.
+
+*In Javascript:*
+
+----
+var dayView = ig_getWebDayViewById("WebDayView1");
+----

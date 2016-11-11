@@ -1,0 +1,39 @@
+﻿////
+
+|metadata|
+{
+    "name": "waw-infragistics-document-engine",
+    "controlName": [],
+    "tags": ["Data Presentation","Exporting","Grids"],
+    "guid": "{9E8EA1C2-63A9-4770-9A3E-FB50DA18B00C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Infragistics Document Engine
+
+If you're looking for an area that houses all of the overview/task-based information related to the Infragistics Document Engine™, you've come to the right place. This section contains valuable information about the Infragistics Document Engine, ranging from what the code library does and why you would want to use it in your application, to step-by-step procedures on how to accomplish a common task using the code library.
+
+Click the links below to access important information about the Infragistics Document Engine.
+
+== link:documentengine-welcome-to-infragistics-document-engine.html[Welcome to Infragistics Document Engine]
+
+This topic gives you a very high-level overview of the Infragistics Document Engine. You'll be introduced to the numerous report elements that come together to build a professional report, as well as report graphics that add life and color to your report.
+
+== link:documentengine-getting-started-with-infragistics-document-engine.html[Getting Started with Infragistics Document Engine]
+
+Once you have a basic understanding of the Infragistics Document Engine, this topic will help you start using the code library. This topic is a quick walkthrough of the objects you need to create in order to produce a full report.
+
+== link:documentengine-writing-reports.html[Writing Reports]
+
+This section is the meat of the Infragistics Document Engine help. You will be shown the details of each report and graphic element. These topics are in the form of conceptual walkthroughs, as most elements are quite hefty and contain many features!
+
+== link:documentengine-deploying-infragistics-document-engine.html[Deploying Infragistics Document Engine]
+
+If your application uses the Infragistics Document Engine, refer to this topic for a list of the Infragistics .NET assemblies that you need to redistribute as part of your application.
+
+== link:documentengine-api-overview.html[API Overview]
+
+This topic lists the namespaces and classes that you will be working with while programming with the Infragistics Excel Engine. The namespaces and classes listed in this topic link conveniently into the "API Reference Guide" section of the Infragistics ASP.NET help.

@@ -1,0 +1,93 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdropdown-using-webdropdown",
+    "controlName": ["WebDropDown"],
+    "tags": [],
+    "guid": "{7DD1B308-28DA-4B3D-BA3D-5B5DF9FC10E4}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebDropDown
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebDropDown™.
+
+link:webdropdown-animations.html[Animations]
+
+In this section you can find information about using the various animation types when expanding the WebDropDown, as well as learn how to disable animations completely.
+
+link:webdropdown-autocomplete-and-auto-filtering.html[Autocomplete and Auto Filtering]
+
+This section contains details on working with the autocomplete and auto filtering features of the WebDropDrown control.
+
+link:webdropdown-binding-to-data.html[Binding to Data]
+
+In this section you can learn how to use the various binding options of the WebDropDown control.
+
+link:webdropdown-cascading-webdropdown-controls.html[Cascading WebDropDown Controls]
+
+This section contains information about cascading WebDropDrown controls.
+
+link:webdropdown-custom-values-and-persistence.html[Custom Values and Persistence]
+
+In this section you will find information on insering custom values in the WebDropDown control and making them persistent.
+
+link:webdropdown-disabling-drop-down-items.html[Disabling Drop-Down Items]
+
+The WebDropDown control has the functionality to seperately disable items from the drop-down list. You can learn how to achieve it in this section.
+
+link:webdropdown-disabling-typing-text-when-no-match-is-found.html[Disabling typing text when no match is found]
+
+This section contains information on preventing the user from typing text when no match is found.
+
+link:webdropdown-keyboard-navigation.html[Keyboard Navigation]
+
+You can learn about the supported keys for navigating through the control in this section.
+
+link:webdropdown-lazy-loading.html[Lazy Loading]
+
+In this section you can learn how to load the items in the WebDropDown control when the end user wants to use it. Using this feature can greatly improve performance.
+
+link:webdropdown-load-on-demand.html[Load-on-demand]
+
+This section contains comprehensive information on how load on demand works and how to use it for your WebDropDown control.
+
+link:webdropdown-multi-mode-display.html[Multi-mode Display]
+
+In this section you can learn how different display modes work for the WebDropDown control and how to use them.
+
+link:webdropdown-multiple-selection.html[Multiple Selection]
+
+The WebDropDown control supports multiple selection of items. This section explains how to use the functionality.
+
+link:webdropdown-paging.html[Paging]
+
+You can learn how to use the WebDropDrown control paging mechanism in this section.
+
+link:webdropdown-setting-height-and-width-of-dropdown-container.html[Setting Height and Width of DropDown Container]
+
+Very often the height and width attributes of the WebDropDown control need to be set to specific values. This section contains information about how to do it and explains the control's behaviour in various situations when using these properties.
+
+link:webdropdown-templating.html[Templating]
+
+In this section you can learn how to use the templating mechanisms of the control.
+
+link:webdropdown-using-webdropdown-as-an-editor-provider-for-webdatagrid.html[Using WebDropDown as an editor provider for WebDataGrid]
+
+This section explains how to use the WebDropDown as an editor provider for the WebDataGrid™.
+
+link:webdropdown-validating-webdropdown-using-requiredfieldvalidator-control.html[Validating WebDropDown using RequiredFieldValidator Control]
+
+In this section you will learn how to validate a WebDropDown control.
+
+link:webdropdown-ajax-indicator-support-for-webdropdown.html[Ajax Indicator Support for WebDropDown]
+
+In this section you can learn how to override the Ajax Indicator to work on control level for the WebDropDown.
+
+link:webdropdown-webdropdown-smart-tag.html[WebDropDown Smart Tag]
+
+You can learn about the WebDropDown Smart Tag in this section.

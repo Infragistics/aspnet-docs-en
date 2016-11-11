@@ -1,0 +1,949 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-datautil",
+    "controlName": [],
+    "tags": ["API","Sample Data Source"],
+    "guid": "{51A52533-9FF1-4D43-80B9-BA600591B868}",  
+    "buildFlags": [],
+    "createdOn": "2010-10-03T15:47:47Z"
+}
+|metadata|
+////
+
+= DataUtil
+
+*In Visual Basic:*
+
+----
+Imports System.ComponentModel
+Imports System.Collections.Generic
+Namespace DataUtilVB
+    Public Class DataUtil
+#Region "private members"
+#Region "private fields"
+        Private Shared m_categories As List(Of Category)
+        Private Shared m_products As List(Of Product)
+        Private Shared m_categoriesAndProducts As List(Of Category)
+#End Region
+#Region "private methods"
+        Private Shared Function CreateCategories() As List(Of Category)
+            Dim retVal As New List(Of Category)()
+            retVal.Add(New Category With {.CategoryID = 1, .CategoryName = "Beverages", .Description = "Soft drinks, coffees, teas, beers, and ales"})
+            retVal.Add(New Category With {.CategoryID = 2, .CategoryName = "Condiments", .Description = "Sweet and savory sauces, relishes, spreads, and seasonings"})
+            retVal.Add(New Category With {.CategoryID = 3, .CategoryName = "Confections", .Description = "Desserts, candies, and sweet breads"})
+            retVal.Add(New Category With {.CategoryID = 4, .CategoryName = "Dairy Products", .Description = "Cheeses"})
+            retVal.Add(New Category With {.CategoryID = 5, .CategoryName = "Grains/Cereals", .Description = "Breads, crackers, pasta, and cereal"})
+            retVal.Add(New Category With {.CategoryID = 6, .CategoryName = "Meat/Poultry", .Description = "Prepared meats"})
+            retVal.Add(New Category With {.CategoryID = 7, .CategoryName = "Produce", .Description = "Dried fruit and bean curd"})
+            retVal.Add(New Category With {.CategoryID = 8, .CategoryName = "Seafood", .Description = "Seaweed and fish"})
+            Return retVal
+        End Function
+        Private Shared Function CreateProducts() As List(Of Product)
+            Dim retVal As New List(Of Product)()
+            retVal.Add(New Product With {.ProductID = 1, .ProductName = "Chai", .CategoryID = 1, .QuantityPerUnit = "10 boxes x 20 bags", .UnitPrice = 18D, .UnitsInStock = 39, .UnitsOnOrder = 0, .ReorderLevel = 10, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 2, .ProductName = "Chang", .CategoryID = 1, .QuantityPerUnit = "24 - 12 oz bottles", .UnitPrice = 19D, .UnitsInStock = 17, .UnitsOnOrder = 40, .ReorderLevel = 25, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 24, .ProductName = "Guaraná Fantástica", .CategoryID = 1, .QuantityPerUnit = "12 - 355 ml cans", .UnitPrice = 4.5D, .UnitsInStock = 20, .UnitsOnOrder = 0, .ReorderLevel = 0, .Discontinued = True})
+            retVal.Add(New Product With {.ProductID = 77, .ProductName = "Original Frankfurter grüne Soße", .CategoryID = 2, .QuantityPerUnit = "12 boxes", .UnitPrice = 13D, .UnitsInStock = 32, .UnitsOnOrder = 0, .ReorderLevel = 15, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 61, .ProductName = "Sirop d'érable", .CategoryID = 2, .QuantityPerUnit = "24 - 500 ml bottles", .UnitPrice = 28.5D, .UnitsInStock = 113, .UnitsOnOrder = 0, .ReorderLevel = 25, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 63, .ProductName = "Vegie-spread", .CategoryID = 2, .QuantityPerUnit = "15 - 625 g jars", .UnitPrice = 43.9D, .UnitsInStock = 24, .UnitsOnOrder = 0, .ReorderLevel = 5, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 16, .ProductName = "Pavlova", .CategoryID = 3, .QuantityPerUnit = "32 - 500 g boxes", .UnitPrice = 17.45D, .UnitsInStock = 29, .UnitsOnOrder = 0, .ReorderLevel = 10, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 19, .ProductName = "Teatime Chocolate Biscuits", .CategoryID = 3, .QuantityPerUnit = "10 boxes x 12 pieces", .UnitPrice = 9.2D, .UnitsInStock = 25, .UnitsOnOrder = 0, .ReorderLevel = 5, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 20, .ProductName = "Sir Rodney's Marmalade", .CategoryID = 3, .QuantityPerUnit = "30 gift boxes", .UnitPrice = 81D, .UnitsInStock = 40, .UnitsOnOrder = 0, .ReorderLevel = 0, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 69, .ProductName = "Gudbrandsdalsost", .CategoryID = 4, .QuantityPerUnit = "10 kg pkg.", .UnitPrice = 36D, .UnitsInStock = 26, .UnitsOnOrder = 0, .ReorderLevel = 15, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 71, .ProductName = "Flotemysost", .CategoryID = 4, .QuantityPerUnit = "10 - 500 g pkgs.", .UnitPrice = 21.5D, .UnitsInStock = 26, .UnitsOnOrder = 0, .ReorderLevel = 0, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 72, .ProductName = "Mozzarella di Giovanni", .CategoryID = 4, .QuantityPerUnit = "24 - 200 g pkgs.", .UnitPrice = 34.8D, .UnitsInStock = 14, .UnitsOnOrder = 0, .ReorderLevel = 0, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 22, .ProductName = "Gustaf's Knäckebröd", .CategoryID = 5, .QuantityPerUnit = "24 - 500 g pkgs.", .UnitPrice = 21D, .UnitsInStock = 104, .UnitsOnOrder = 0, .ReorderLevel = 25, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 23, .ProductName = "Tunnbröd", .CategoryID = 5, .QuantityPerUnit = "12 - 250 g pkgs.", .UnitPrice = 9D, .UnitsInStock = 61, .UnitsOnOrder = 0, .ReorderLevel = 25, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 64, .ProductName = "Wimmers gute Semmelknödel", .CategoryID = 5, .QuantityPerUnit = "20 bags x 4 pieces", .UnitPrice = 33.25D, .UnitsInStock = 22, .UnitsOnOrder = 80, .ReorderLevel = 30, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 53, .ProductName = "Perth Pasties", .CategoryID = 6, .QuantityPerUnit = "48 pieces", .UnitPrice = 32.8D, .UnitsInStock = 0, .UnitsOnOrder = 0, .ReorderLevel = 0, .Discontinued = True})
+            retVal.Add(New Product With {.ProductID = 54, .ProductName = "Tourtière", .CategoryID = 6, .QuantityPerUnit = "16 pies", .UnitPrice = 7.45D, .UnitsInStock = 21, .UnitsOnOrder = 0, .ReorderLevel = 10, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 55, .ProductName = "Pâté chinois", .CategoryID = 6, .QuantityPerUnit = "24 boxes x 2 pies", .UnitPrice = 24D, .UnitsInStock = 115, .UnitsOnOrder = 0, .ReorderLevel = 20, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 28, .ProductName = "Rössle Sauerkraut", .CategoryID = 7, .QuantityPerUnit = "25 - 825 g cans", .UnitPrice = 45.6D, .UnitsInStock = 26, .UnitsOnOrder = 0, .ReorderLevel = 0, .Discontinued = True})
+            retVal.Add(New Product With {.ProductID = 7, .ProductName = "Uncle Bob's Organic Dried Pears", .CategoryID = 7, .QuantityPerUnit = "12 - 1 lb pkgs.", .UnitPrice = 30D, .UnitsInStock = 15, .UnitsOnOrder = 0, .ReorderLevel = 10, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 14, .ProductName = "Tofu", .CategoryID = 7, .QuantityPerUnit = "40 - 100 g pkgs.", .UnitPrice = 23.25D, .UnitsInStock = 35, .UnitsOnOrder = 0, .ReorderLevel = 0, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 45, .ProductName = "Rogede sild", .CategoryID = 8, .QuantityPerUnit = "1k pkg.", .UnitPrice = 9.5D, .UnitsInStock = 5, .UnitsOnOrder = 70, .ReorderLevel = 15, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 46, .ProductName = "Spegesild", .CategoryID = 8, .QuantityPerUnit = "4 - 450 g glasses", .UnitPrice = 12D, .UnitsInStock = 95, .UnitsOnOrder = 0, .ReorderLevel = 0, .Discontinued = False})
+            retVal.Add(New Product With {.ProductID = 58, .ProductName = "Escargots de Bourgogne", .CategoryID = 8, .QuantityPerUnit = "24 pieces", .UnitPrice = 13.25D, .UnitsInStock = 62, .UnitsOnOrder = 0, .ReorderLevel = 20, .Discontinued = False})
+            Return retVal
+        End Function
+        Private Shared Function CreateCategoriesAndProducts() As List(Of Category)
+            Dim retVal As List(Of Category) = CreateCategories()
+            Dim tempProducts As List(Of Product) = CreateProducts()
+            Dim parentCategory As Category = Nothing
+            For Each p As Product In tempProducts
+                If parentCategory Is Nothing OrElse parentCategory.CategoryID <> p.CategoryID Then
+                    parentCategory = retVal.Find(Function(category) category.CategoryID = p.CategoryID)
+                End If
+                parentCategory.Products.Add(p)
+            Next
+            Return retVal
+        End Function
+#End Region
+#End Region
+#Region "public members"
+#Region "public properties"
+        Public Shared ReadOnly Property Categories() As List(Of Category)
+            Get
+                If m_categories Is Nothing Then
+                    m_categories = CreateCategories()
+                End If
+                Return m_categories
+            End Get
+        End Property
+        Public Shared ReadOnly Property Products() As List(Of Product)
+            Get
+                If m_products Is Nothing Then
+                    m_products = CreateProducts()
+                End If
+                Return m_products
+            End Get
+        End Property
+        Public Shared ReadOnly Property CategoriesAndProducts() As List(Of Category)
+            Get
+                If m_categoriesAndProducts Is Nothing Then
+                    m_categoriesAndProducts = CreateCategoriesAndProducts()
+                End If
+                Return m_categoriesAndProducts
+            End Get
+        End Property
+#End Region
+#End Region
+    End Class
+    Public Class Category
+        Implements INotifyPropertyChanged
+#Region "private fields"
+        Private m_categoryID As Integer
+        Private m_categoryName As String
+        Private m_description As String
+        Private m_products As List(Of Product)
+#End Region
+#Region "public properties"
+        Public Property CategoryID() As Integer
+            Get
+                Return Me.m_categoryID
+            End Get
+            Set(ByVal value As Integer)
+                If Me.m_categoryID <> value Then
+                    Me.m_categoryID = value
+                    OnPropertyChanged("CategoryID")
+                End If
+            End Set
+        End Property
+        Public Property CategoryName() As String
+            Get
+                Return Me.m_categoryName
+            End Get
+            Set(ByVal value As String)
+                If Me.m_categoryName <> value Then
+                    Me.m_categoryName = value
+                    OnPropertyChanged("CategoryName")
+                End If
+            End Set
+        End Property
+        Public Property Description() As String
+            Get
+                Return Me.m_description
+            End Get
+            Set(ByVal value As String)
+                If Me.m_description <> value Then
+                    Me.m_description = value
+                    OnPropertyChanged("Description")
+                End If
+            End Set
+        End Property
+        Public ReadOnly Property Products() As List(Of Product)
+            Get
+                If m_products Is Nothing Then
+                    m_products = New List(Of Product)()
+                End If
+                Return Me.m_products
+            End Get
+        End Property
+#End Region
+#Region "INotifyPropertyChanged Members"
+        Public Event PropertyChanged(ByVal sender As Object, ByVal e As PropertyChangedEventArgs) Implements INotifyPropertyChanged.PropertyChanged
+        Protected Overridable Sub OnPropertyChanged(ByVal propertyName As String)
+            RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+        End Sub
+#End Region
+    End Class
+    Public Class Product
+        Implements INotifyPropertyChanged
+#Region "INotifyPropertyChanged Members"
+        Public Event PropertyChanged(ByVal sender As Object, ByVal e As PropertyChangedEventArgs) Implements INotifyPropertyChanged.PropertyChanged
+        Protected Overridable Sub OnPropertyChanged(ByVal propertyName As String)
+            RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+        End Sub
+#End Region
+#Region "private members"
+        Private m_productID As Integer
+        Private m_productName As String
+        Private m_categoryID As Integer
+        Private m_quantityPerUnit As String
+        Private m_unitPrice As Decimal
+        Private m_unitsInStock As Integer
+        Private m_unitsOnOrder As Integer
+        Private m_reorderLevel As Integer
+        Private m_discontinued As Boolean
+#End Region
+#Region "public properties"
+        Public Property ProductID() As Integer
+            Get
+                Return Me.m_productID
+            End Get
+            Set(ByVal value As Integer)
+                If Me.m_productID <> value Then
+                    Me.m_productID = value
+                    OnPropertyChanged("ProductID")
+                End If
+            End Set
+        End Property
+        Public Property ProductName() As String
+            Get
+                Return Me.m_productName
+            End Get
+            Set(ByVal value As String)
+                If Me.m_productName <> value Then
+                    Me.m_productName = value
+                    OnPropertyChanged("ProductName")
+                End If
+            End Set
+        End Property
+        Public Property CategoryID() As Integer
+            Get
+                Return Me.m_categoryID
+            End Get
+            Set(ByVal value As Integer)
+                If Me.m_categoryID <> value Then
+                    Me.m_categoryID = value
+                    OnPropertyChanged("CategoryID")
+                End If
+            End Set
+        End Property
+        Public Property QuantityPerUnit() As String
+            Get
+                Return Me.m_quantityPerUnit
+            End Get
+            Set(ByVal value As String)
+                If Me.m_quantityPerUnit <> value Then
+                    Me.m_quantityPerUnit = value
+                    OnPropertyChanged("QuantityPerUnit")
+                End If
+            End Set
+        End Property
+        Public Property UnitPrice() As Decimal
+            Get
+                Return Me.m_unitPrice
+            End Get
+            Set(ByVal value As Decimal)
+                If value < 0 Then
+                    Throw New Exception("Negative numbers are not allowed")
+                End If
+                Me.m_unitPrice = value
+                OnPropertyChanged("UnitPrice")
+            End Set
+        End Property
+        Public Property UnitsInStock() As Integer
+            Get
+                Return Me.m_unitsInStock
+            End Get
+            Set(ByVal value As Integer)
+                If value < 0 Then
+                    Throw New Exception("Negative numbers are not allowed")
+                End If
+                Me.m_unitsInStock = value
+                OnPropertyChanged("UnitsInStock")
+            End Set
+        End Property
+        Public Property UnitsOnOrder() As Integer
+            Get
+                Return Me.m_unitsOnOrder
+            End Get
+            Set(ByVal value As Integer)
+                If Me.m_unitsOnOrder <> value Then
+                    Me.m_unitsOnOrder = value
+                    OnPropertyChanged("UnitsOnOrder")
+                End If
+            End Set
+        End Property
+        Public Property ReorderLevel() As Integer
+            Get
+                Return Me.m_reorderLevel
+            End Get
+            Set(ByVal value As Integer)
+                If Me.m_reorderLevel <> value Then
+                    Me.m_reorderLevel = value
+                    OnPropertyChanged("ReorderLevel")
+                End If
+            End Set
+        End Property
+        Public Property Discontinued() As Boolean
+            Get
+                Return Me.m_discontinued
+            End Get
+            Set(ByVal value As Boolean)
+                If Me.m_discontinued <> value Then
+                    Me.m_discontinued = value
+                    OnPropertyChanged("Discontinued")
+                End If
+            End Set
+        End Property
+#End Region
+    End Class
+End Namespace
+----
+
+*In C#:*
+
+----
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Linq;
+using System;
+using System.Collections.Generic;
+namespace IGDocumentation
+{
+    public class DataUtil
+    {
+        #region private members
+        #region private fields
+        private static List<Category> categories;
+        private static List<Product> products;
+        private static List<Category> categoriesAndProducts;
+        #endregion
+        #region private methods
+        private static List<Category> CreateCategories()
+        {
+            return new List<Category>
+            {
+                new Category 
+                {
+                    CategoryID = 1, 
+                    CategoryName = "Beverages", 
+                    Description = "Soft drinks, coffees, teas, beers, and ales"
+                },
+                new Category 
+                {
+                    CategoryID = 2, 
+                    CategoryName = "Condiments", 
+                    Description = "Sweet and savory sauces, relishes, spreads, and seasonings"
+                },
+                new Category
+                {
+                    CategoryID = 3,
+                    CategoryName = "Confections",
+                    Description = "Desserts, candies, and sweet breads",
+                },
+                new Category
+                {
+                    CategoryID = 4,
+                    CategoryName = "Dairy Product",
+                    Description = "Cheeses",
+                },
+                new Category
+                {
+                    CategoryID = 5,
+                    CategoryName = "Grains/Cereals",
+                    Description = "Breads, crackers, pasta, and cereal",
+                },
+                new Category
+                {
+                    CategoryID = 6,
+                    CategoryName = "Meat/Poultry",
+                    Description = "Prepared meats",
+                },
+                new Category
+                {
+                    CategoryID = 7,
+                    CategoryName = "Produce",
+                    Description = "Dried fruit and bean curd",
+                },
+                new Category
+                {
+                    CategoryID = 8,
+                    CategoryName = "Seafood",
+                    Description = "Seaweed and fish",
+                }
+            };
+        }
+        private static List<Product> CreateProducts()
+        {
+            return new List<Product>
+            {
+                new Product
+                {
+                    ProductID = 1,
+                    ProductName = "Chai",
+                    CategoryID = 1,
+                    QuantityPerUnit = "10 boxes x 20 bags",
+                    UnitPrice = 18.0000m,
+                    UnitsInStock = 39,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 10,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 2,
+                    ProductName = "Chang",
+                    CategoryID = 1,
+                    QuantityPerUnit = "24 - 12 oz bottles",
+                    UnitPrice = 19.0000m,
+                    UnitsInStock = 17,
+                    UnitsOnOrder = 40,
+                    ReorderLevel = 25,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 24,
+                    ProductName = "Guaraná Fantástica",
+                    CategoryID = 1,
+                    QuantityPerUnit = "12 - 355 ml cans",
+                    UnitPrice = 4.5000m,
+                    UnitsInStock = 20,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 0,
+                    Discontinued = true
+                },
+                new Product
+                {
+                    ProductID = 77,
+                    ProductName = "Original Frankfurter grüne Soße",
+                    CategoryID = 2,
+                    QuantityPerUnit = "12 boxes",
+                    UnitPrice = 13.0000m,
+                    UnitsInStock = 32,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 15,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 61,
+                    ProductName = "Sirop d'érable",
+                    CategoryID = 2,
+                    QuantityPerUnit = "24 - 500 ml bottles",
+                    UnitPrice = 28.5000m,
+                    UnitsInStock = 113,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 25,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 63,
+                    ProductName = "Vegie-spread",
+                    CategoryID = 2,
+                    QuantityPerUnit = "15 - 625 g jars",
+                    UnitPrice = 43.9000m,
+                    UnitsInStock = 24,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 5,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 16,
+                    ProductName = "Pavlova",
+                    CategoryID = 3,
+                    QuantityPerUnit = "32 - 500 g boxes",
+                    UnitPrice = 17.4500m,
+                    UnitsInStock = 29,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 10,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 19,
+                    ProductName = "Teatime Chocolate Biscuits",
+                    CategoryID = 3,
+                    QuantityPerUnit = "10 boxes x 12 pieces",
+                    UnitPrice = 9.2000m,
+                    UnitsInStock = 25,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 5,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 20,
+                    ProductName = "Sir Rodney's Marmalade",
+                    CategoryID = 3,
+                    QuantityPerUnit = "30 gift boxes",
+                    UnitPrice = 81.0000m,
+                    UnitsInStock = 40,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 0,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 69,
+                    ProductName = "Gudbrandsdalsost",
+                    CategoryID = 4,
+                    QuantityPerUnit = "10 kg pkg.",
+                    UnitPrice = 36.0000m,
+                    UnitsInStock = 26,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 15,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 71,
+                    ProductName = "Flotemysost",
+                    CategoryID = 4,
+                    QuantityPerUnit = "10 - 500 g pkgs.",
+                    UnitPrice = 21.5000m,
+                    UnitsInStock = 26,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 0,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 72,
+                    ProductName = "Mozzarella di Giovanni",
+                    CategoryID = 4,
+                    QuantityPerUnit = "24 - 200 g pkgs.",
+                    UnitPrice = 34.8000m,
+                    UnitsInStock = 14,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 0,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 22,
+                    ProductName = "Gustaf's Knäckebröd",
+                    CategoryID = 5,
+                    QuantityPerUnit = "24 - 500 g pkgs.",
+                    UnitPrice = 21.0000m,
+                    UnitsInStock = 104,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 25,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 23,
+                    ProductName = "Tunnbröd",
+                    CategoryID = 5,
+                    QuantityPerUnit = "12 - 250 g pkgs.",
+                    UnitPrice = 9.0000m,
+                    UnitsInStock = 61,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 25,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 53,
+                    ProductName = "Perth Pasties",
+                    CategoryID = 6,
+                    QuantityPerUnit = "48 pieces",
+                    UnitPrice = 32.8000m,
+                    UnitsInStock = 0,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 0,
+                    Discontinued = true
+                },
+                new Product
+                {
+                    ProductID = 54,
+                    ProductName = "Tourtière",
+                    CategoryID = 6,
+                    QuantityPerUnit = "16 pies",
+                    UnitPrice = 7.4500m,
+                    UnitsInStock = 21,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 10,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 55,
+                    ProductName = "Pâté chinois",
+                    CategoryID = 6,
+                    QuantityPerUnit = "24 boxes x 2 pies",
+                    UnitPrice = 24.0000m,
+                    UnitsInStock = 115,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 20,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 28,
+                    ProductName = "Rössle Sauerkraut",
+                    CategoryID = 7,
+                    QuantityPerUnit = "25 - 825 g cans",
+                    UnitPrice = 45.6000m,
+                    UnitsInStock = 26,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 0,
+                    Discontinued = true
+                },
+                new Product
+                {
+                    ProductID = 7,
+                    ProductName = "Uncle Bob's Organic Dried Pears",
+                    CategoryID = 7,
+                    QuantityPerUnit = "12 - 1 lb pkgs.",
+                    UnitPrice = 30.0000m,
+                    UnitsInStock = 15,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 10,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 14,
+                    ProductName = "Tofu",
+                    CategoryID = 7,
+                    QuantityPerUnit = "40 - 100 g pkgs.",
+                    UnitPrice = 23.2500m,
+                    UnitsInStock = 35,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 0,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 45,
+                    ProductName = "Rogede sild",
+                    CategoryID = 8,
+                    QuantityPerUnit = "1k pkg.",
+                    UnitPrice = 9.5000m,
+                    UnitsInStock = 5,
+                    UnitsOnOrder = 70,
+                    ReorderLevel = 15,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 46,
+                    ProductName = "Spegesild",
+                    CategoryID = 8,
+                    QuantityPerUnit = "4 - 450 g glasses",
+                    UnitPrice = 12.0000m,
+                    UnitsInStock = 95,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 0,
+                    Discontinued = false
+                },
+                new Product
+                {
+                    ProductID = 58,
+                    ProductName = "Escargots de Bourgogne",
+                    CategoryID = 8,
+                    QuantityPerUnit = "24 pieces",
+                    UnitPrice = 13.2500m,
+                    UnitsInStock = 62,
+                    UnitsOnOrder = 0,
+                    ReorderLevel = 20,
+                    Discontinued = false
+                }
+            };
+        }
+        private static List<Category> CreateCategoriesAndProducts()
+        {
+            List<Category> retVal = CreateCategories();
+            List<Product> tempProducts = CreateProducts();
+            Category parentCategory = null;
+            foreach (Product p in tempProducts)
+            {
+                if (parentCategory == null || parentCategory.CategoryID != p.CategoryID)
+                {
+                    parentCategory = retVal.First<Category>(category => category.CategoryID == p.CategoryID);
+                }
+                parentCategory.Products.Add(p);
+            }
+            return retVal;
+        }
+        #endregion
+        #endregion
+        #region public members
+        #region public properties
+        public static List<Category> Categories
+        {
+            get
+            {
+                if (categories == null)
+                    categories = CreateCategories();
+                return categories;
+            }
+        }
+        public static List<Product> Products
+        {
+            get
+            {
+                if (products == null)
+                    products = CreateProducts();
+                return products;
+            }
+        }
+        public static List<Category> CategoriesAndProducts
+        {
+            get
+            {
+                if (categoriesAndProducts == null)
+                    categoriesAndProducts = CreateCategoriesAndProducts();
+                return categoriesAndProducts;
+            }
+        }
+        #endregion
+        #region Public Methods
+        public static List<Product> GetProducts()
+        {
+            return Products;
+        }
+        public static List<Category> GetCategories()
+        {
+            return Categories;
+        }
+        #endregion
+        #endregion
+    }
+    public class Category : INotifyPropertyChanged
+    {
+        #region private fields
+        private int categoryID;
+        private string categoryName;
+        private string description;
+        private List<Product> products;
+        #endregion
+        #region public properties
+        public int CategoryID
+        {
+            get
+            {
+                return this.categoryID;
+            }
+            set
+            {
+                if (this.categoryID != value)
+                {
+                    this.categoryID = value;
+                    OnPropertyChanged("CategoryID");
+                }
+            }
+        }
+        public string CategoryName
+        {
+            get
+            {
+                return this.categoryName;
+            }
+            set
+            {
+                if (this.categoryName != value)
+                {
+                    this.categoryName = value;
+                    OnPropertyChanged("CategoryName");
+                }
+            }
+        }
+        public string Description
+        {
+            get
+            {
+                return this.description;
+            }
+            set
+            {
+                if (this.description != value)
+                {
+                    this.description = value;
+                    OnPropertyChanged("Description");
+                }
+            }
+        }
+        public List<Product> Products
+        {
+            get
+            {
+                if (products == null)
+                {
+                    products = new List<Product>();
+                }
+                return this.products;
+            }
+        }
+        #endregion
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        #endregion
+    }
+    public class Product : INotifyPropertyChanged
+    {
+        #region INotifyPropertyChanged Members
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+        #endregion
+        #region private members
+        private int productID;
+        private string productName;
+        private int categoryID;
+        private string quantityPerUnit;
+        private decimal unitPrice;
+        private int unitsInStock;
+        private int unitsOnOrder;
+        private int reorderLevel;
+        private bool discontinued;
+        #endregion
+        #region public properties
+        public int ProductID
+        {
+            get
+            {
+                return this.productID;
+            }
+            set
+            {
+                if (this.productID != value)
+                {
+                    this.productID = value;
+                    OnPropertyChanged("ProductID");
+                }
+            }
+        }
+        public string ProductName
+        {
+            get
+            {
+                return this.productName;
+            }
+            set
+            {
+                if (this.productName != value)
+                {
+                    this.productName = value;
+                    OnPropertyChanged("ProductName");
+                }
+            }
+        }
+        public int CategoryID
+        {
+            get
+            {
+                return this.categoryID;
+            }
+            set
+            {
+                if (this.categoryID != value)
+                {
+                    this.categoryID = value;
+                    OnPropertyChanged("CategoryID");
+                }
+            }
+        }
+        public string QuantityPerUnit
+        {
+            get
+            {
+                return this.quantityPerUnit;
+            }
+            set
+            {
+                if (this.quantityPerUnit != value)
+                {
+                    this.quantityPerUnit = value;
+                    OnPropertyChanged("QuantityPerUnit");
+                }
+            }
+        }
+        public decimal UnitPrice
+        {
+            get
+            {
+                return this.unitPrice;
+            }
+            set
+            {
+                if (value < 0)
+                    throw new Exception("Negative numbers are not allowed.");
+                this.unitPrice = value;
+                OnPropertyChanged("UnitPrice");
+            }
+        }
+        public int UnitsInStock
+        {
+            get
+            {
+                return this.unitsInStock;
+            }
+            set
+            {
+                if (value < 0)
+                    throw new Exception("Negative numbers are not allowed.");
+                    this.unitsInStock = value;
+                    OnPropertyChanged("UnitsInStock");
+            }
+        }
+        public int UnitsOnOrder
+        {
+            get
+            {
+                return this.unitsOnOrder;
+            }
+            set
+            {
+                if (this.unitsOnOrder != value)
+                {
+                    this.unitsOnOrder = value;
+                    OnPropertyChanged("UnitsOnOrder");
+                }
+            }
+        }
+        public int ReorderLevel
+        {
+            get
+            {
+                return this.reorderLevel;
+            }
+            set
+            {
+                if (this.reorderLevel != value)
+                {
+                    this.reorderLevel = value;
+                    OnPropertyChanged("ReorderLevel");
+                }
+            }
+        }
+        public bool Discontinued
+        {
+            get
+            {
+                return this.discontinued;
+            }
+            set
+            {
+                if (this.discontinued != value)
+                {
+                    this.discontinued = value;
+                    OnPropertyChanged("Discontinued");
+                }
+            }
+        }
+        #endregion
+    }
+}
+----

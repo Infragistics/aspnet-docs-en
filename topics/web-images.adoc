@@ -1,0 +1,29 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-images",
+    "controlName": [],
+    "tags": ["FAQ","Styling"],
+    "guid": "{D02671E6-BEAB-44F0-A09B-9491798B0BA3}",  
+    "buildFlags": [],
+    "createdOn": "2006-01-12T08:38:59Z"
+}
+|metadata|
+////
+
+= Images
+
+Because of some of the limitations in styling options through cascading style sheets, images are key to Application Styling. Using images, you can create advanced styles for your application.
+
+When dealing with the images, one thing to keep in mind, is that the browser must be provided an explicit path to the image file. The Infragistics ASP.NET components make use of the following three ways to define a path to an image:
+
+* Absolute -- The image path is fully specified, starting at the server root.
+* Relative -- The image path is specified relative to the application root.
+* Resolved -- The image path is specified as a combination of the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.iprovideappstyling~imagedirectory.html[ImageDirectory]"]  property, which supplies the path, and the image file name. This type of image path tends to be used most often when working with Infragistics components. Application Styling's image directory is a combination of the StyleSetPath and StyleSetName name ending with images. For example if your Application Style Library is in ~/ig_res/Default, then your image directory would be located at ~/ig_res/Default/images.
+
+== Image Gradients
+
+Gradients have become increasingly popular when styling controls and components. When it comes to ASP.NET though you can't create a gradient like you can in Windows Forms, because Cascading Style Sheets don't provide the functionality to do this. Therefore, gradients are created, and saved as images, then those images are applied to the controls to mimic the gradient effect in Windows Forms.
+
+Infragistics AppStylist® for ASP.NET has built-in functionality to allow the creation of gradient images. For more information, see link:webappstylist-creating-a-gradient-background.html[Creating a Gradient Background].

@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webprogressbar-api-overview",
+    "controlName": ["WebProgressBar"],
+    "tags": ["API"],
+    "guid": "{AB368B80-76A4-4B62-B73C-FBE0806D50BF}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= API Overview
+
+This section lists each namespace that is relevant to the control. We also give you several key classes that you will be using while programming with this control. The namespaces and classes on this page link directly into our API documentation.
+
+=== WebProgressBar Namespace:
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols_namespace.html[Infragistics.Web.UI.DisplayControls]
+
+=== Key Classes:
+
+link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar.html[WebProgressBar]

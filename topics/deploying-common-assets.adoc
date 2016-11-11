@@ -1,0 +1,45 @@
+﻿////
+
+|metadata|
+{
+    "name": "deploying-common-assets",
+    "controlName": [],
+    "tags": [],
+    "guid": "{D28A8AF6-59C3-49D0-9D52-5D713B141F69}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-06T00:00:00Z"
+}
+|metadata|
+////
+
+= Deploying Common Assets
+
+=== Deploying Common Infragistics ASP.NET Assets
+
+For the new Aikido controls most assets ship as embedded resources in the related control’s assembly. The only additional assets that needs to be deployed are the style sets, which by default are stored in a folder named `ig_res` in the Web Application’s directory. If you’d like to deploy them to a place where these styles can be shared between different applications that use them you can create a separate Virtual Directory.
+
+.Note:
+[NOTE]
+====
+The WebSchedule's controls and components make use of a Forms directory and Styles directory that is underneath  `C:\inetpub\wwwroot\aspnet_client\infragistics\{ProductVersion}CLR4\`. These folders must also be deployed if your project is using any of the WebSchedule controls or components.
+====
+
+==== Creating the IIS `ig_res` Virtual Directory
+
+To provide the ASP.NET applications a way to access the styles you can create a Virtual Directory named `ig_res` in IIS. The virtual directories content path should be set to `C:\inetpub\wwwroot\aspnet_client\infragistics\`.
+
+Then in the web.config file add the following:
+
+[cols="a"]
+|====
+|*In web.config:*
+
+|---- 
+<configuration> 
+ <infragistics.web enableAppStyling ="true" styleSetName="Default" styleSetPath ="ig_res/" /> 
+</configuration>
+----
+
+|====
+
+Where the styleSetPath corresponds to the path where the `ig_res` virtual directory is located in IIS.

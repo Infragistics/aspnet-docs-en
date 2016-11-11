@@ -1,0 +1,86 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-batch-updating-summaries",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Editing","Grids","Performance","Summaries"],
+    "guid": "272ae128-357f-45cf-9000-356c342763a2",  
+    "buildFlags": [],
+    "createdOn": "2011-10-26T07:54:08.5153328Z"
+}
+|metadata|
+////
+
+= Summaries
+
+This topic explains how batch updating works with Summaries including a special case in which the new summary cannot be calculated.
+
+== Introduction
+
+The batch update feature is compatible with the Summaries. When you modify a row , the column summaries are immediately affected and recalculated on the client performing a postback on the server.
+
+== Special Case: a Summary Cannot Be Calculated
+
+There is only one special case in which it is not possible to recalculate the new summary on the client. This can happen if the data required for calculating is not (or might not be) available on the client, for example when paging is enabled.
+
+For example, when user delete a row that contains either a minimum or maximum value or just edit a cell containing such value, then the new minimum/maximum should be calculated. But if the new minimum/maximum value is not available on the client of if you are not whether it is available and cannot check this, you cannot retrieve the new minimum/maximum.
+
+In such cases, a special event, called “SummaryRowClientEvents-CalculateSummary”, is fired. It can be handled by you, as the developer, and you can decide, for example, to set a new value or make some modifications to the event arguments and then force a postback and accept the changes. You can also revert the deleted changes on the client side and make no postbacks. If you leave this event unhandled, then automatic postback is called internally and the new extreme value is calculated automatically.
+
+For other summary values like Count, Average, and Sum, all recalculations take place on the client.
+
+To attach to the SummaryRowClientEvents-CalculateSummary event, use this line of codes:
+
+*In ASPX:*
+
+----
+<ig:WebHierarchicalDataGrid ID="wdg1" runat="server">
+    <Behaviors>
+        <ig:EditingCore BatchUpdating="true">
+            <Behaviors>
+                <ig:RowAdding/>
+                <ig:RowDeleting/>
+                <ig:CellEditing/>
+            </Behaviors>
+        </ig:EditingCore>
+        <ig:SummaryRow 
+             SummaryRowClientEvents-CalculateSummary="wdg1CalculateSummary">
+        </ig:SummaryRow>
+        <ig:Selection 
+             CellClickAction="Row" RowSelectType="Multiple"></ig:Selection>
+        <ig:Paging></ig:Paging>
+    </Behaviors>
+</ig:WebHierarchicalDataGrid>
+----
+
+And define handler using javascript code:
+
+*In Javascript:*
+
+----
+function wdg1CalculateSummary(sender, eventArgs) {
+}
+----
+
+.Note:
+[NOTE]
+====
+If you want to attach to the child band you need to do the same in each band.
+====
+
+For a real-life code example about how to handle the SummaryRowClientEvents-CalculateSummary event, refer to the Batch Update Summary sample. The sample is for the WebDataGrid but you can achieve the same in the Hierarchical one.
+
+== Related Topics
+
+link:webhierarchicaldatagrid-batch-updating-overview.html[WebHierarchicalDataGrid Batch Updating Overview]
+
+link:webhierarchicaldatagrid-batch-updating-enabling.html#_enabling_batch_updating[Enabling Batch Updating in the WebHierarchicalDataGrid]
+
+link:webhierarchicaldatagrid-batch-updating-events.html[WebHierarchicalDataGrid Batch Updating Events]
+
+link:known-issues-known-issues-and-breaking-changes-revision-history.html[Known Issues and Dreaking Changes]
+
+== Related Samples
+
+link:{SamplesURL}/samples/webdatagrid/editingandselection/batchupdatingsummaries/default.aspx?cn=data-grid&sid=0e6ba7c3-04b0-46d7-af6b-d0cadafda185[Batch Update Summary]

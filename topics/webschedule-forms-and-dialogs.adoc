@@ -1,0 +1,23 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-forms-and-dialogs",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{8E8498F2-9928-44BA-A627-DC4157F019E8}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Forms and Dialog Boxes
+
+The WebSchedule™ controls make use of several Web forms used for its dialogs. These dialogs appear as reminders and for adding new appointments at run time.
+
+link:webschedule-conditions-for-displaying-the-reminder-dialog-box.html[Conditions for Displaying the Reminder Dialog Box]
+
+link:webschedule-guidelines-for-customizing-the-appointments-and-reminders-forms.html[Guidelines for Customizing the Appointments and Reminders Forms]
+
+link:webschedule-printing-an-appointment.html[Printing an Appointment]

@@ -1,0 +1,55 @@
+﻿////
+
+|metadata|
+{
+    "name": "webprogressbar-label-format-and-alignment",
+    "controlName": ["WebProgressBar"],
+    "tags": [],
+    "guid": "{4CDBE0E5-FAEE-4D11-BEC4-A6E56778A4EA}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Label Format and Alignment
+
+WebProgressBar™ contains a label that helps relay progress information. The label can be formatted to leverage six different values by using the WebProgressBar control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelformatstring.html[LabelFormatString]"]  property along with any custom format strings that represent progress information. The following is the list of intrinsic string values that you can insert into the label format string so that you can customize the information that is displayed in your label:
+
+* {0} or {ProgressValue} : Shows the current progress value
+* {1} or {PercentProgress} : Shows the current progress in percentage
+* {2} or {RemainingProgress} : Shows the remaining progress value to be completed
+* {3} or {PercentageRemaining} : Shows the remaining progress in percentage
+* {4} or {Min} : Shows the minimum value
+* {5} or {Max} : Shows the maximum value
+
+WebProgressBar supports label positioning within the progress bar by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelalignment.html[LabelAlignment]"]  property to either of the following four options:
+
+* LeftOrTop : Aligns the label left or top depending on the orientation
+* Center : Aligns the label in the center
+* RightOrBottom : Aligns the label right or bottom depending on the orientation
+* Running : The label runs ahead of the progress bar as the progress bar is moving until it reaches the end.
+
+.Note:
+[NOTE]
+====
+By default, the LabelAlignment property is set to LeftOrTop.
+====
+
+The following code shows you how to format the label to show the remaining progress in percentage format as well as positioning the label in the center of WebProgressBar:
+
+*In Visual Basic:*
+
+----
+WebProgressBar1.LabelFormatString = "Remaining percentage : {3}"
+WebProgressBar1.LabelAlignment = Infragistics.Web.UI.DisplayControls.ProgressBarLabelAlignment.Center
+----
+
+*In C#:*
+
+----
+WebProgressBar1.LabelFormatString = "Remaining percentage : {3}";
+WebProgressBar1.LabelAlignment = Infragistics.Web.UI.DisplayControls.ProgressBarLabelAlignment.Center;
+----
+
+image::images\WebProgressBar_Label_Format_and_Alignment.png[]

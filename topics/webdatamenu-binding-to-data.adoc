@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatamenu-binding-to-data",
+    "controlName": ["WebDataMenu"],
+    "tags": ["Data Binding","Navigation"],
+    "guid": "{CF4E40E1-9C57-43F3-88B5-A63300B1C7B2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Binding to Data
+
+WebDataMenu™ supports a large range of bindable data sources including standard Microsoft data source controls.
+
+Click the following links to learn more about binding WebDataMenu with data sources :
+
+* link:webdatamenu-binding-webdatamenu-to-webhierarchicaldatasource.html[Binding WebDataMenu to WebHierarchicalDataSource]
+* link:webdatamenu-binding-webdatamenu-to-an-xml-data-source.html[Binding WebDataMenu to an Xml Data Source]

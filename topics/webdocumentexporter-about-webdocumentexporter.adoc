@@ -1,0 +1,36 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdocumentexporter-about-webdocumentexporter",
+    "controlName": ["WebDocumentExporter"],
+    "tags": ["Exporting","Getting Started","Grids","How Do I"],
+    "guid": "3ed7a4cb-4e79-4921-95dc-0128cb3ea56a",  
+    "buildFlags": [],
+    "createdOn": "2010-09-29T07:31:51.9353826Z"
+}
+|metadata|
+////
+
+= About WebDocumentExporter
+
+== Exporting WebDataGrid / WebHierarchicalDataGrid data into XPS or PDF document
+
+The WebDocumentExporter™ control, just like the link:web-webexcelexporter.html[WebExcelExporter] control, allows you to automatically export WebDataGrid or WebHierarchicalDataGrid data, but in a document file format. The file formats that are supported are XPS and PDF document.
+
+Here is a list of features that are currently supported by WebDocumentExporter:
+
+* Files can be either sent to the browser for automatic downloading, or just saved to a document instance, so you decide what to do with the result ( link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.baseexporter~exportmode.html[ExportMode] property).
+* Exporting only grid data (when you have Paging or VirtualScrolling enabled) or the whole data in data source ( link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.baseexporter~dataexportmode.html[DataExportMode] property).
+* Exporting into XPS or PDF document file formats( link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~format.html[Format] property).
+* Exporting styles, so you don’t lose the look and feel of your application ( link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.baseexporter~enablestylesexport.html[EnableStylesExport] property).
+* Customizing the page layout that the grid will be exported to ( link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~margins.html[Margins], link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~targetpapersize.html[TargetPaperSize] and link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~targetpaperorientation.html[TargetPaperOrientation] properties).
+* Server events, which you can handle to apply your custom logic before or after the data is exported, as well as on each exported row ( link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~cellexporting_ev.html[CellExporting], link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~cellexported_ev.html[CellExported], link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~rowexporting_ev.html[RowExporting], events).
+
+== Related Topics
+
+link:webdocumentexporter-getting-started-with-webdocumentexporter.html[Getting Started with WebDocumentExporter]
+
+link:webexcelexporter-saving-all-data-in-the-data-source.html[Saving all Data in the Data Source]
+
+link:webexcelexporter-saving-exported-data-on-the-server.html[Saving Exported Data on the Server]

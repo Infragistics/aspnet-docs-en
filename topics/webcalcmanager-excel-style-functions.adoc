@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webcalcmanager-excel-style-functions",
+    "controlName": ["WebCalcManager"],
+    "tags": ["Styling"],
+    "guid": "{686DBFEE-F14F-42D4-94C9-2D5C6DB9F83C}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Excel-Style Functions
+
+Click the links below for descriptions and examples of the Excel®-style functions supported by the WebCalcManager™ component.
+
+* link:webcalcmanager-date-and-time-functions.html[Date & Time Functions]
+* link:webcalcmanager-information-functions.html[Financial Functions]
+* link:webcalcmanager-information-functions.html[Information Functions]
+* link:webcalcmanager-logical-functions.html[Logical Functions]
+* link:webcalcmanager-math-functions.html[Math Functions]
+* link:webcalcmanager-statistical-functions.html[Statistical Functions]
+* link:webcalcmanager-text-and-data-functions.html[Text & Data Functions]

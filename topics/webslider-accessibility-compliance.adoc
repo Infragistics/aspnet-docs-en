@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "webslider-accessibility-compliance",
+    "controlName": ["WebSlider"],
+    "tags": ["Section 508"],
+    "guid": "{404F680A-0F6A-41BD-943C-4D2310224609}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebSlider Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. In some cases, you may have to set a property. In other cases, you won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|All non-text elements render a text equivalent. 
+
+.Note:
+[NOTE]
+====
+A text equivalent is supplied by default, but this can be customized to suit your needs. 
+====
+
+|(c)
+|WebSlider is CSS style based. You can provide CSS styles for the control that do not include different colors.
+
+|(n)
+|WebSlider will participate in the tab sequence of the page. Once focus is on the WebSlider control, clicking the tab key changes focus from the primary value to the secondary value.
+
+|====

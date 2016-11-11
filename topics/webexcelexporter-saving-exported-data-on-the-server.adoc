@@ -1,0 +1,105 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexcelexporter-saving-exported-data-on-the-server",
+    "controlName": ["WebExcelExporter"],
+    "tags": ["Exporting","Grids","Persistence"],
+    "guid": "7e87e074-701d-4af4-9e8c-ebdbb2294517",  
+    "buildFlags": [],
+    "createdOn": "2010-06-06T07:51:03.4626939Z"
+}
+|metadata|
+////
+
+= Saving Exported Data on the Server
+
+== What You Will Accomplish
+
+You will learn how to setup and use WebExcelExporter to export WebDataGrid / WebHierarchicalDataGrid data into a Microsoft™ Excel™ file that gets saved to the web server’s hard drive.
+
+== Before You Begin
+
+In order to compile and run the samples illustrated here, you will need to install NetAdvatage for ASP.NET v. 10.2. You will also need a running instance of SQL Server (either Express or any other edition), and you will need to have the NorthWind database attached to your SQL Server instance. You can either install the NorthWind database following the instructions at: link:http://msdn.microsoft.com/en-us/library/aa276825%28SQL.80%29.aspx[http://msdn.microsoft.com/en-us/library/aa276825%28SQL.80%29.aspx] or download the data base directly from: link:http://www.microsoft.com/downloads/details.aspx?familyid=06616212-0356-46a0-8da2-eebc53a68034&displaylang=en[http://www.microsoft.com/downloads/details.aspx?familyid=06616212-0356-46a0-8da2-eebc53a68034&displaylang=en]
+
+== Saving exported data to a file on the server
+
+Follow these steps to export data into Microsoft Office Excel™ 2003 file format and save the file on the server hard drive.
+
+[start=1]
+. Create a web page (ASP.NET Web Form) with WebDataGrid bound to a SqlDataSource Control. The SqlDataSource control will be configured to retrieve data from the Northwind Customers table.
+
+*In HTML:*
+
+----
+<ig:WebDataGrid runat="server" ID="wdgEmpoyees" 
+            DataSourceID="SqlDsEmployees" 
+            DataKeyFields="EmployeeID" 
+            AutoGenerateColumns="true"
+            >
+            </ig:WebDataGrid>
+<asp:SqlDataSource ID="SqlDsEmployees" runat="server" 
+    ConnectionString="<%$ ConnectionStrings:NorthwindConnectionString %>" 
+    SelectCommand="SELECT [EmployeeID], [LastName], [FirstName], [Title], [ReportsTo] FROM [Employees]">
+</asp:SqlDataSource>
+----
+
+[start=2]
+. Drag a WebExcelExporter control from the Visual Studio Toolbox onto your page
+
+.. Set the WebExcelExporter’s ExportMode property to Custom
+.. Set the control’s ID property to WebExcelExporter
+.. Set the control’s DownloadName property to ExportedData
+
+*In HTML:*
+
+----
+<ig:WebExcelExporter runat="server" ID="WebExcelExporter" ExportMode ="Custom" DownloadName="ExportedData" />
+----
+
+[start=3]
+. Drag a Button control from Visual Studio Toolbox onto your page
+
+.. Se the button’s ID property to btnExport
+.. Set the control’s Text property to Export Data
+.. Set the control’s OnClick property to btnExport_Click
+.. Define the btnExport_Click handler in the Code Behind and call one of the WebExcelExporter’s Export() method overloads
+
+[cols="a"]
+|====
+|In Code Behind (C#):
+
+|protected void btnExport_Click(object sender, EventArgs e) 
+
+{ 
+
+Infragistics.Documents.Excel.WorkbookFormat excelFormat = Infragistics.Documents.Excel.WorkbookFormat. Excel97To2003; 
+
+Infragistics.Documents.Excel.Workbook wBook = new Infragistics.Documents.Excel.Workbook(excelFormat); 
+
+this.WebExcelExporter.Export(this.wdgEmpoyees, wBook); 
+
+string tmpName = Server.MapPath("~/exported_data/GridData.xls"); wBook.Save(tmpName); 
+
+}
+
+|====
+
+*In HTML:*
+
+----
+<asp:Button runat="server" ID="btnExport" Text="Export Data" OnClick="btnExport_Click" />
+----
+
+[start=4]
+. Run the application
+[start=5]
+. Click the “Export Data” button
+[start=6]
+. Check the Application relative folder exported_data for file named GridData.xls. It will contain the exported data.
+
+.Note:
+[NOTE]
+====
+The GridData.xls file will only contain Grid’s visible Data. If you want to export all the data in data source, please refer Exporting All Data in Data Source
+====

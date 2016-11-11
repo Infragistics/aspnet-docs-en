@@ -1,0 +1,96 @@
+﻿////
+|metadata|
+{
+    "name": "web-what-are-the-limitations-when-working-under-medium-trust",
+    "controlName": [],
+    "tags": ["Application Scenarios","FAQ","Known Issues"],
+    "guid": "{28F26102-CB7E-4094-B140-F7BAF5E1506E}",
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= What are the Limitations When Working Under Medium Trust?
+
+The more restrictive security sandbox imposed by medium trust curtails some operations that may have worked without issue when running in a full-trust environment. The following is a list of the known limitations when working in a medium-trust environment.
+
+== OLE DB Permissions are Not Granted By Default
+
+The restriction on OleDBPermission affects any ASP.NET application that makes use of the OLE DB data provider support of ADO.NET, and is being migrated from a full-trust environment to a partial-trust environment.
+
+The WebScheduleOleDbProvider™ control indirectly requires OleDbPermission because it communicates with OLE DB data sources (e.g., Microsoft® Access™ database file) through these Microsoft .NET Framework facilities. Consequently, it will not function in partial-trust environments unless your site administrator grants your application unrestricted OleDbPermission.
+
+Your site administrator can add OleDbPermission to all medium-trust applications by editing the web_mediumtrust.config file. This file is located in the following path for .NET Framework 2.0:
+
+____
+%windir%\Microsoft.NET\Framework\v2.0.50727\Config
+____
+
+To grant unrestricted OleDbPermission, you must add the XML highlighted in the excerpt below to the web_mediumtrust.config file:
+
+.Note:
+[NOTE]
+====
+If available, consider using the SqlClient data provider in partial trust environments, as it is more secure and scalable than OLE DB.
+====
+
+[source]
+----
+<SecurityClasses>
+        ...
+        <SecurityClass
+          Name="OleDbPermission"
+          Description="System.Data.OleDb.OleDbPermission, System.Data,
+            Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+</SecurityClasses>
+    ...
+        <IPermission
+          class="WebPermission"
+          version="1">
+          <ConnectAccess>
+                <URI uri="$OriginHost$"/>
+          </ConnectAccess>
+        <IPermission>
+        <IPermission class="OleDbPermission"
+          version="1">
+          Unrestricted="true" />
+          
+          </PermissionSet>
+        </NamedPermissionSets>
+        ...
+
+----
+
+== File I/O Permissions are Restricted to the Web Application's Directory by Default
+
+All external files which your Web application works with at run time will be constrained to the Web application's directory.
+
+Applications which load a preset dynamically at run time to restore the look and feel of the Infragistics ASP.NET controls to a user's custom preferences will need to deploy those preset files in their Web application's directory.
+
+If your application generates temporary files using the WebGridExcelExporter™ control with a DownloadMode of "Custom", it should intend to write those files in the Web application directory.
+
+Where possible, it is recommended that you use IsolatedStorage instead of File I/O in Web applications running under partial trust.
+
+== Reflection is Permitted Only Against Public Members
+
+Some properties may allow you to specify a .NET component, property, or field in your application. For example, the WebScheduleSqlClientProvider™ component allows you to specify the ConnectionID of an SqlConnection component at design time. At run time, such properties use late-binding (reflection) to connect with the named component, property, or field. Medium trust permits only late-binding to public members.
+
+If the access qualifier on a .NET component, property, or field ("members") that you specify for these kinds of properties is the "protected", "private", "internal", or "family" keyword, then late-binding fails to connect. When running under partial trust, you must mark these members public or assign the property value directly.
+
+For example, you have the choice of connecting the WebScheduleSqlClientProvider component to the SqlConnection in either of the following ways.
+
+* At design time, set the ConnectionID property to the name of your SqlConnection component (e.g., sqlConnection1) when sqlConnection1 has been marked with the "public" access qualifier.
+* At run time, during your Web Form's Init event (after the InitializeComponents method has initialized your SqlConnection component), you can assign the SqlConnection component directly to the WebScheduleSqlClientProvider component's Connection property.
+
+*In Visual Basic:*
+
+----
+Me.WebScheduleSqlClientProvider1.Connection = Me.sqlConnection1
+----
+
+*In C#:*
+
+----
+this.WebScheduleSqlClientProvider1.Connection = this.sqlConnection1;
+----

@@ -1,0 +1,76 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-conditional-batch-updating-in-webdatagrid",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Editing","Grids"],
+    "guid": "{FBA3341A-2E98-441C-9F4F-9764985E48FC}",  
+    "buildFlags": [],
+    "createdOn": "2010-04-03T23:15:35Z"
+}
+|metadata|
+////
+
+= Conditional Batch Updating in WebDataGrid
+
+== Before You Begin
+
+Binding WebDataGrid™ to a DataSource object such as SqlDataSource or ObjectDataSource using the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasourceid.html[DataSourceID]"]  , the DataSource will provide the conditional batch updating functionality for you. Any add or delete operations will trigger the WebDataGrid’s hidden postbacks to execute those operations with the data. However when editing, WebDataGrid does not postback unless it is handling  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~rowupdated_ev.html[RowUpdated]"]  or  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~rowupdating_ev.html[RowUpdating]"]  events. If not handling any of those events, your data will be updated in the DataSource on the next postback essentially providing the end-user with batch updating functionality.
+
+== What You Will Accomplish
+
+You will learn how to perform any necessary logic on a row batch before updating the datasource by handling the update events of the datasource.
+
+== Follow these Steps
+
+[start=1]
+. From the Microsoft® Visual Studio® Toolbox, drag and drop a ScriptManager component,a SqlDataSource component, a WebDataGrid control and a button onto the form.
+[start=2]
+. Set the ID and Text properties of the Button to btnSave and Save respectively.
+[start=3]
+. SqlDataSource configuration:
+
+** Click the smart tag of the SqlDataSource and click Configure Data Source…
+** Click New Connection… and select the database (Northwind Database in this walkthrough).
+** Click OK to close the Add Connection dialog.
+** Click Next and leave the connection string with the default name.
+** Click Next.
+** Select the ProductID, ProductName and UnitPrice columns from the Products table and click Advanced… button.
+** Check the checkbox next to Generate INSERT, UPDATE, and Delete statements as shown below:
+
+image::images\WebDataGrid_Conditional_Batch_Updating_in_WebDataGrid_01.png[]
+
+** Click OK to close the Advanced SQL Generation Options dialog.
+** Click Next.
+** Click Finish to close the Configure Data Source dialog.
+
+[start=4]
+. Set the WebDataGrid’s DataSourceID property to SqlDataSource1 and the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to ProductID in the property window.
+[start=5]
+. Enable the CellEditing Behavior of the grid using the designer or through the following code:
+
+*In Visual Basic:*
+
+----
+Dim editingCore As EditingCore = Me.WebDataGrid1.Behaviors.CreateBehavior(Of EditingCore)() 
+Me.WebDataGrid1.Behaviors.Add(editingCore) 
+editingCore.Enabled = True 
+Dim cellEditing As CellEditing = editingCore.Behaviors.CreateBehavior(Of CellEditing)() 
+editingCore.Behaviors.Add(cellEditing) 
+cellEditing.Enabled = True
+----
+
+*In C#:*
+
+----
+EditingCore editingCore = this.WebDataGrid1.Behaviors.CreateBehavior<EditingCore>();
+this.WebDataGrid1.Behaviors.Add(editingCore);
+editingCore.Enabled = true;
+CellEditing cellEditing = editingCore.Behaviors.CreateBehavior<CellEditing>();
+editingCore.Behaviors.Add(cellEditing);
+cellEditing.Enabled = true;
+----
+
+[start=6]
+. Include the following style in the source to show the row which is successfully updated in green and the row that is not updated in red.

@@ -1,0 +1,28 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-digit-appearance-tab",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{6937A68D-D999-4CAA-9CD9-CF4517336AB7}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Digit Appearance Tab
+
+The Digit Appearance tab is used for customizing the data on your Digital gauge. You can access this tab by either clicking the Digital Gauge in the Gauge Explorer or clicking the Digital gauge in the interactive preview area.
+
+The tab is divided into two panes:
+
+* link:webgauge-font-brush-pane.html[Font Brush]
+* link:webgauge-unlit-brush-pane.html[Unlit Brush]
+
+image::images/Digit_Appearance_Tab_01.png[Digit appearance tab in the gauge designer.]
+
+The following screen shot shows a Digital gauge that was created according to the digit appearance settings specified in the above screen shot:
+
+image::images/Digit_Appearance_Tab_02.png[Digital gauge showing settings based on the digit appearance shown in screen shot above.]

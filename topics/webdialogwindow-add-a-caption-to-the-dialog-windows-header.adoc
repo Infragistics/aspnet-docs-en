@@ -1,0 +1,38 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdialogwindow-add-a-caption-to-the-dialog-windows-header",
+    "controlName": ["WebDialogWindow"],
+    "tags": ["How Do I"],
+    "guid": "{6AD9FA27-E1E9-469D-B3D4-CADC8F95BDF2}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Add a Caption to the Dialog Windows Header
+
+Every window, no matter how insignificant, needs some sort of descriptive text in the header area. This way, end users will know, at-a-glance, what they are about to read in the window. The dialog window is no exception, and exposes useful properties off the Header object to accommodate a caption in the header area:
+
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.layoutheader~captiontext.html[CaptionText]"]  – this property allows you to supply a descriptive string which is displayed in the header. The captions location depends on the CaptionAlignment property.
+*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.layoutheader~captionalignment.html[CaptionAlignment]"]  – this property allows you to align the caption to the left, right, center, or even justify the text. If you set CaptionAlignment to NotSet, it will inherit its style from its parent element.
+
+The following code demonstrates how to set the dialog windows caption and center it in the header area.
+
+*In Visual Basic:*
+
+----
+' Add a Caption to the Dialog Window's Header.
+Me.WebDialogWindow1.Header.CaptionText = "More information needed..."
+Me.WebDialogWindow1.Header.CaptionAlignment = HorizontalAlign.Center
+----
+
+*In C#:*
+
+----
+// Add a Caption to the Dialog Window's Header.
+this.WebDialogWindow1.Header.CaptionText = "More information needed...";
+this.WebDialogWindow1.Header.CaptionAlignment = HorizontalAlign.Center;
+----

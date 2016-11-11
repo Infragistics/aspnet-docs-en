@@ -1,0 +1,37 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-csom-overview",
+    "controlName": ["WebSchedule"],
+    "tags": ["API"],
+    "guid": "{C22CEA99-404C-434A-95EF-810543580F49}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= CSOM Overview
+
+WebSchedule™ exposes a robust object model within the client-side JavaScript programming environment. The client-side object model (CSOM) consists of full-fledged JavaScript objects, events, and utility functions that enable developers to program significant units of functionality pertaining to the WebSchedule controls and components without the need for server-side postbacks.
+
+In general, the object model is derived directly from the object model as it exists on the server. The property names, events, parameters and return values have very similar meanings to their counterparts on the server. However, where noted, properties are sometimes read-only on the client. These properties are only for informational purposes; you should not modify them.
+
+The following are links to the CSOM reference information for the WebSchedule control:
+
+link:webschedule-utility-functions-csom.html[WebSchedule Utility Functions]
+
+link:webschedule-activity-object-csom.html[Activity Object]
+
+link:webschedule-activities-collection-csom.html[Activities Collection]
+
+link:webschedule-day-object-csom.html[Day Object]
+
+link:webschedule-progressindicator-object-csom.html[ProgressIndicator Object]
+
+link:webschedule-recurrence-object.html[Recurrence Object]
+
+link:webschedule-reminders-collections-csom.html[Reminders Collections]
+
+link:webschedule-reminder-object-csom.html[Reminder Object]

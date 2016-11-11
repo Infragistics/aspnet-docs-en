@@ -1,0 +1,254 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridmigrationrowdelete",
+    "controlName": [],
+    "tags": [],
+    "guid": "222154c3-539f-4bd4-b935-f59c86dc5995",  
+    "buildFlags": [],
+    "createdOn": "2016-03-01T12:49:26.6840932Z"
+}
+|metadata|
+////
+
+= Grid Migration - Row Delete
+
+Row Delete functionality is created and used to help end user easily remove certain rows from the grid by pressing “Delete” button on the keyboard or any other page element (such as button or link) that can rise the event needed for row deletion.
+
+In order to use Delete Row functionality on the “WebGrid” the user must enable row deletion by setting “AllowDeleteDefault” property in the “DisplayLayout” object or set “AllowDelete” property to “Yes” on the specific band. If the user wants to delete selected rows the selection for the grid must be enabled first and set to row selection.
+
+To delete data in “WebDataGrid/WebHierarchicalDataGrid” user must add the “RowDeleting” behavior to the “Behaviors” collection. This behavior allows end-users to delete rows in “WebDataGrid/WebHierarchicalDataGrid”. User also needs the “Selection” behavior enabled for deleting to function in the UI. When “RowDeleting” is enabled in the designer, user will be prompted to add the “Selection” behavior as well. A row can be deleted by selecting the row and pressing the delete key or by calling the needed function from the user defined event.
+
+== Client side code snippets:
+
+==== UltraWebGrid Row Delete:
+
+In order to delete rows on the client in JavaScript you need to use the JavaScript function: “igtbl_deleteRow(gridName,rowID)”. First, be sure to allow the deletion itself by setting the “AllowDeleteDefault” property in the “DisplayLayout” object or “AllowDelete” on the specific band.
+
+The function needs to be passed the name of the “WebGrid” and the ID of the row you want to delete.
+
+The following sample JavaScript code would delete the first row and all its sub-rows on the client.
+
+All the selected rows within the “WebGrid” can be deleted as well. For deleting selected rows, use the following function: “igtbl_deleteSelRows(gridName)”.
+
+*In JavaScript:*
+
+[source,js]
+----
+function DeleteRow() {
+      // Row deletion needs to be allowed
+      igtbl_getGridById("UltraWebGrid1").AllowDelete=1;
+      // Get the first row in the grid
+      var row=igtbl_getRowById("UltraWebGrid1r_0");
+      // Delete the first row in the grid
+      igtbl_deleteRow("UltraWebGrid1","UltraWebGrid1r_0");
+      // Create a counter for the row id
+      var cnt=0;
+      // Create a loop, if the row has a next sibling then we need to delete    it
+      while(row.NextSibling!=null)
+      {
+            // Increment the counter for the next rowID
+            cnt+=1;
+            // Get the row current row using the name of the grid and the row
+            // number from our counter so we can check it for a sibling
+            row=igtbl_getRowById("UltraWebGrid1r_"+cnt)
+            // Finally delete that row,
+            igtbl_deleteRow("UltraWebGrid1","UltraWebGrid1r_"+cnt);
+      }
+}
+----
+
+To only remove the row without permanently deleting it user can use following function:
+
+*In JavaScript:*
+
+[source,js]
+----
+function removeRow() {
+var row=igtbl_getRowById("UltraWebGrid1r_0");
+row.remove();
+}
+----
+
+Or to remove row from row collection:
+
+*In JavaScript:*
+
+[source,js]
+----
+function removeRow_Collection() {
+var grid=igtbl_getGridById("UltraWebGrid1");
+var removedRow=grid.Rows.remove(0);
+}
+----
+
+== WebDataGrid Row Delete
+
+You must add “RowDeleting” behavior to the “Behaviors” collection. This behavior allows end-users to delete rows in “WebDataGrid”. You also need the Selection behavior enabled for deleting to function in the UI:
+
+*In ASPX:*
+
+[source,html]
+----
+<Behaviors>
+      <ig:Activation />
+      <ig:Selection RowSelectType="Multiple" CellClickAction="Row" />
+      <ig:EditingCore Enabled="true">
+          <Behaviors>
+              <ig:RowDeleting Enabled="true" />
+          </Behaviors>
+      </ig:EditingCore>
+</Behaviors>
+----
+
+And use this function to delete selected rows:
+
+*In JavaScript:*
+
+[source,js]
+----
+function DeleteRow() {
+            var grid = $find('<%= WebDataGrid1.ClientID %>');
+            var gridRows = grid.get_rows()
+            var selectedRows = grid.get_behaviors().get_selection().get_selectedRows();
+            var rows = new Array();
+            var i1 = 0;
+            for (var i = selectedRows.get_length() - 1; i >= 0; i--) {
+                rows[i1] = selectedRows.getItem(i);
+                i1++;
+            }
+            grid.get_behaviors().get_editingCore().get_behaviors().get_rowDeleting().deleteRows(rows);
+}
+----
+
+You can also use “remove()” method to delete the selected rows:
+
+*In JavaScript:*
+
+[source,js]
+----
+function DeleteRow_Remove() {
+            var grid = $find('<%= WebDataGrid1.ClientID %>');
+            var gridRows = grid.get_rows()
+            var selectedRows = grid.get_behaviors().get_selection().get_selectedRows();
+            for (var i = selectedRows.get_length() - 1; i >= 0; i--) {
+                var row = selectedRows.getItem(i);
+                gridRows.remove(row);
+            }
+}
+----
+
+If you want to delete specific row that is not selected you may use this code:
+
+*In C#:*
+
+[source,csharp]
+----
+// remove first row 
+grid.get_rows().remove(grid.get_rows().get_row(0));
+----
+
+.Note:
+[NOTE]
+====
+If your data source cannot be automatically updated by “WebDataGrid”, you must handle the update events and update the data manually.
+====
+
+== WebHierarchicalDataGrid Row Delete
+
+You must add “RowDeleting” behavior to the “Behaviors” collection. This behavior allows end-users to delete rows in “WebHierarchicalDataGrid”. You also need the Selection behavior enabled for deleting to function in the UI:
+
+*In ASPX:*
+
+[source,html]
+----
+<Behaviors>
+      <ig:Activation />
+      <ig:Selection RowSelectType="Multiple" CellClickAction="Row" />
+      <ig:EditingCore Enabled="true">
+          <Behaviors>
+              <ig:RowDeleting Enabled="true" />
+          </Behaviors>
+      </ig:EditingCore>
+</Behaviors>
+----
+
+And use this function to delete selected rows (from any level on the grid – parent or child):
+
+*In JavaScript:*
+
+[source,js]
+----
+function DeleteRow_Hier_Selected() {
+       var grid = $find('<%= Me.WebHierarchicalDataGrid1.ClientID %>');
+       var selection = grid.get_gridView().get_behaviors().get_selection();
+       /* these will be the selected rows accross all grids, this is an row array * /
+       var selectedRows = selection.get_selectedRowsResolved(); 
+       for (var i=0; i < selectedRows.length; i++)
+       {
+           var row = selectedRows[i];
+           var containerGrid = row.get_grid();
+           var gridRows = containerGrid.get_rows();
+           gridRows.remove(row);
+        }           
+}
+----
+
+If you want to remove the rows from the grid that are not selected than you can use the following code:
+
+*In JavaScript:*
+
+[source,js]
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var parentGrid = grid.get_gridView();
+// Remove first PARENT row
+parentGrid.get_rows().remove(parentGrid.get_rows().get_row(0));
+var childGrid = grid.get_gridView().get_rows().get_row(0).get_rowIslands(0)[0];
+// Remove first CHILD row 
+childGrid.get_rows().remove(childGrid.get_rows().get_row(0));
+----
+
+.Note:
+[NOTE]
+====
+If your data source cannot be automatically updated by “WebHierarchicalDataGrid”, you must handle the update events and update the data manually.
+====
+
+== Server side code snippets:
+
+== UltraWebGrid Row Delete
+
+In “UltraWebGrid” the “Delete()” method can be used in order to delete a row from the server side.
+
+This method will delete a row from the grid. It will also delete the corresponding record from the records source, provided deletion is an allowed action and the control has been properly configured to implement record deletion.
+
+*In C#:*
+
+[source,csharp]
+----
+private void UltraWebGrid1_ClickCellButton(object sender, Infragistics.WebUI.UltraWebGrid.CellEventArgs e)
+{
+        // Delete the row of the cell who's cell button was clicked
+        e.Cell.Row.Delete();
+}
+----
+
+.Note:
+[NOTE]
+====
+In order to delete the row grid must have “AllowDelete” property set to “Yes”:
+====
+
+*In C#:*
+
+[source,csharp]
+----
+// allow users to delete rows in the first band
+UltraWebGrid1.Bands[0].AllowDelete = Infragistics.WebUI.UltraWebGrid.AllowDelete.Yes;
+----
+
+== WebDataGrid/WebHierarchicalDataGrid Row Delete:
+
+Not available.

@@ -1,0 +1,107 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmonthcalendar-keyboard-navigation",
+    "controlName": ["WebMonthCalendar"],
+    "tags": ["Navigation"],
+    "guid": "{4B8371C3-EB41-4B4D-8788-A2488AB1A6CC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Keyboard Navigation
+
+WebMonthCalendar™ supports keyboard navigation so that your end-users can easily and quickly navigate between the days, months, years, decades and select the dates.
+
+[options="header", cols="a,a,a,a,a"]
+|====
+|Key Combination|Month Calendar View|Month Selection View|Year Selection View|Decade Selection View
+
+|*Up Arrow*
+|Moves to the same week day in the previous week.
+|Moves to the month above in the same year; if in the top row, then moves to the last month in the same column in the previous year.
+|Moves to the year above in the same decade; if in the top row, then moves to the last year in the same column of the previous decade.
+|Moves to the decade above in the same decade selection view; if in the top row then moves to the last decade in the same column of the previous decade selection view.
+
+|*Down Arrow*
+|Moves to the same day in the next week.
+|Moves to the month below in the same year; if in the last row, then moves to the top month in the same column in the next year.
+|Moves to the year below in the same decade; if in the last row, then moves to the top year in the same column of the next decade.
+|Moves to the decade below in the same decade selection view; if in the last row, then moves to the top decade in the same column of the next decade selection view.
+
+|*Right Arrow*
+|Moves to the next day; if on the last day of the month, moves to the first day of the next month.
+|Moves to the next month; if on December, moves to January of next year.
+|Moves to the next year; if on the last year in a decade, moves to the first year in the next decade.
+|Moves to the next decade; if in the last decade in the "decade selection", moves to the next decade.
+
+|*Left Arrow*
+|Moves to the previous day; if on the first day of the month, moves to the last day of the previous month.
+|Moves to the previous month; if on January, moves to December of previous year.
+|Moves to the previous year; if on the first year in that decade, moves to the last year in the previous decade.
+|Moves to the previous decade, if in the first decade in the "decade selection", moves to the previous decade.
+
+|*Ctrl + Up Arrow*
+|Displays the Month Selection View.
+|Displays the Year Selection View.
+|Displays the Decade Selection View.
+|Does nothing.
+
+|*Ctrl + Down Arrow*
+|Does nothing.
+|Displays the Calendar Selection View.
+|Displays the Month Selection View.
+|Displays the Year Selection View.
+
+|*Ctrl + Right Arrow*
+|Moves to the same day in the next month; if the next month doesn’t contain that day, then goes to the last day in the next month.
+|Moves to the same month in the next year.
+|Moves 10 years ahead.
+|Moves to the next Decade Selection View; if on the last one, then moves to the last decade in that view.
+
+|*Ctrl + Left Arrow*
+|Moves to the same day in the previous month; if the previous month doesn’t contain that day, then goes to the last day in the previous month.
+|Moves to the same month in the previous year.
+|Moves 10 years behind.
+|Moves to the previous Decade Selection View; if on the last one, then moves to the first decade in that view.
+
+|*Esc*
+|Does Nothing.
+|Displays Calendar View without selecting anything.
+|Displays Calendar View without selecting anything.
+|Displays Calendar View without selecting anything.
+
+|*Home*
+|Moves to the first day in the month displayed.
+|Moves to the first month in this view.
+|Moves to the first year in the decade displayed.
+|Moves to the first decade in the century displayed.
+
+|*End*
+|Moves to the last day in the month displayed.
+|Moves to the last month in this view.
+|Moves to the last year in the decade displayed.
+|Moves to the last decade in the century displayed.
+
+|*Space/Enter*
+|Selects the day.
+|Selects the month and displays Month Calendar View.
+|Selects the year and displays the Month Selection View.
+|Selects the decade and displays the Year Selection View.
+
+|*Page Up*
+|Same as Ctrl +Left Arrow.
+|Same as Ctrl +Left Arrow.
+|Same as Ctrl +Left Arrow.
+|Same as Ctrl +Left Arrow.
+
+|*Page Down*
+|Same as Ctrl + Right Arrow.
+|Same as Ctrl + Right Arrow.
+|Same as Ctrl + Right Arrow.
+|Same as Ctrl + Right Arrow.
+
+|====

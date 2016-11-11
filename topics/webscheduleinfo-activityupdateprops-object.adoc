@@ -1,0 +1,61 @@
+﻿////
+
+|metadata|
+{
+    "name": "webscheduleinfo-activityupdateprops-object",
+    "controlName": [],
+    "tags": ["API","How Do I"],
+    "guid": "{934A5345-1EB1-430E-9FC3-6D609AF45D64}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= ActivityUpdateProps Object
+
+== ActivityUpdateProps
+
+Object that is passed in as an argument in the ActivityUpdating client-side event.
+
+=== ActivityUpdateProps Properties
+
+[cols="a,a"]
+|====
+|*AllDayEvent* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*Description* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*Duration* 
+|Object that contains Value of the Activity's duration.
+
+|*EnableReminder* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*EndDate* 
+|Object that contains the Element, Value, and WebDateChoooser Object that are associated with the Activity Dialog.
+
+|*EndTime* 
+|Object that contains the Element, Value, and WebDateChoooser Object that are associated with the Activity Dialog.
+
+|*Importance* 
+|Object that contains the WebToolbar, Value, and Toolbar Items that associated with Importance on the Activity Dialog.
+
+|*Location* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*ShowTimeAs* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*StartDate* 
+|Object that contains the Element, Value, and WebDateChoooser Object that are associated with the Activity Dialog.
+
+|*StartTime* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|*Subject* 
+|Object that contains the Element and Value that are associated with the Activity Dialog.
+
+|====

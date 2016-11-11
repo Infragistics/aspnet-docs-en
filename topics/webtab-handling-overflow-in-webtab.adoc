@@ -1,0 +1,118 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-handling-overflow-in-webtab",
+    "controlName": ["WebTab"],
+    "tags": ["How Do I"],
+    "guid": "{BAEE1662-D593-45BB-98C2-B7EF3A94F771}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Handling Overflow in WebTab
+
+=== Tabs Overflow
+
+WebTab™ provides you with an option to reduce the width of the tabs in case of overflow. You can easily achieve this by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~tabsoverflow.html[TabsOverflow]"]  property to Reduce.
+
+.Note:
+[NOTE]
+====
+This property takes effect only when the following three conditions are met:
+====
+
+* TabOrientation is set to horizontal.
+* DisplayMode is set to SingleRow or MultiRow.
+* Size of WebTab is set.
+
+
+*In HTML:*
+
+----
+<ig:WebTab ID="WebTab1" runat="server" Height="515px" 
+             Width="500px" TabsOverflow="Reduce" >
+            <Tabs>
+                …
+            </Tabs>
+</ig:WebTab>
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.TabsOverflow = TabsOverflow.Reduce
+----
+
+*In C#:*
+
+----
+WebTab1.TabsOverflow = TabsOverflow.Reduce;
+----
+
+=== Text Overflow
+
+There may be situations where the content of the tab header may not be visible entirely because of less width. To overcome this situation you can provide your end users with an option to click an ellipsis button to show the header content when it is clicked. You can set this feature by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~textoverflow.html[TextOverflow]"]  property to Ellipsis.
+
+.Note:
+[NOTE]
+====
+TextOverflow property has effect only when the tab orientation is set to horizontal. However this property is not supported for those tab items which contain html tags (inner elements).
+====
+
+*In HTML:*
+
+----
+<ig:WebTab ID="WebTab1" runat="server" Height="515px" 
+             Width="659px"  TextOverflow="Ellipsis" >
+            <Tabs>
+                …
+            </Tabs>
+</ig:WebTab>
+----
+
+*In Visual Basic:*
+
+----
+WebTab1.TextOverflow = TabTextOverflow.Ellipsis
+----
+
+*In C#:*
+
+----
+WebTab1.TextOverflow = TabTextOverflow.Ellipsis;
+----
+
+== Related Topics
+
+link:webtab-about-webtab.html[Understanding WebTab]
+
+link:webtab-getting-started-with-webtab.html[Getting Started with WebTab]
+
+link:webtab-header-and-content-panes.html[Header and Content Panes]
+
+link:webtab-tab-states.html[Tab States]
+
+link:webtab-ajax-indicator-support-for-webtab.html[Ajax Indicator Support for WebTab]
+
+link:webtab-display-modes.html[Display Modes]
+
+link:webtab-animations.html[Animations]
+
+link:webtab-load-on-demand.html[Load on Demand]
+
+link:webtab-orientation-and-alignment.html[Orientation and Alignment]
+
+link:webtab-overlapping-tabs.html[Overlapping Tabs]
+
+link:webtab-tab-moving.html[Tab Moving]
+
+link:webtab-scrolling.html[Scrolling]
+
+link:webtab-validation-in-webtab.html[Validation in WebTab]
+
+link:webtab-api-overview.html[API Overview]
+
+link:webtab-client-side-object-model.html[Client-Side Object Model(CSOM) Overview]

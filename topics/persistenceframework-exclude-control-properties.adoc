@@ -1,0 +1,85 @@
+﻿////
+
+|metadata|
+{
+    "name": "persistenceframework-exclude-control-properties",
+    "controlName": ["PersistenceFramework"],
+    "tags": ["Persistence"],
+    "guid": "76932073-a451-4521-8f42-333795cf9933",  
+    "buildFlags": [],
+    "createdOn": "2011-03-31T07:52:53.4987078Z"
+}
+|metadata|
+////
+
+= Exclude Control Properties
+
+When the Persistence manager is looping through the controls in a page by default it saves all of them. This also means that all the control properties are persisted by default. In a case when you want to persist just some of the properties or want to avoid saving some, you can remove them from the persisted data. The Persistence API provides a class that holds the properties data called pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.propertydata.html[PropertyData]*"] . By excluding some of the properties you reduce the size of the persisted data which sometimes is crucial for the available resources.
+
+.Note:
+[NOTE]
+====
+You also may want to remove properties for security reasons.
+====
+
+You can remove the unnecessary control properties while handling the pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaved_ev.html[PersistenceSaved]*"] event. When you want to remove control from the persisted data, as it is in link:persistenceframework-exclude-control.html[Exclude Control], the control found by its ID, but when you want to remove just a property you need the property’s name. Therefore you must specify a list of strings that contains the names of the properties to be ignored.
+
+[cols="a"]
+|====
+|*In C#:*
+
+|---- 
+protected void PersistenceSaved(object sender, PersistenceEventArgs e) 
+{ 
+ if (e.PersistenceData == null) 
+ { 
+ return; 
+ } 
+ List<string> listIgnoredControlsID = new List<string>() { this.control1.ID }; 
+ List<string> listIgnoredPropertiesID = new List<string>() { "prop1", "prop2" }; 
+ PersistenceData data = e.PersistenceData; 
+ ControlData controlToRemove = null; 
+ foreach (string ignoredControlID in listIgnoredControlsID) 
+ { 
+ controlToRemove = data.Controls.Find(delegate(ControlData controlToFind) 
+ { 
+ return controlToFind.ControlId == ignoredControlID; 
+ }); 
+ if (controlToRemove != null) 
+ { 
+ this.RemovePropertiesFromControl(controlToRemove, 
+ listIgnoredPropertiesID); 
+ controlToRemove = null; 
+ } 
+ } 
+ this.StoredData = data.ToJson(); 
+} 
+private void RemovePropertiesFromControl(ControlData controlToRemove, 
+ List<string> listIgnoredPropertiesID) 
+{ 
+ PropertyData propertyToRemove = null; 
+ foreach (string ignoredPropertyID in listIgnoredPropertiesID) 
+ { 
+ propertyToRemove = controlToRemove.Properties.Find( 
+ delegate(PropertyData propertyToFind) 
+ { 
+ return propertyToFind.Name == ignoredPropertyID; 
+ }); 
+ if (propertyToRemove != null) 
+ { 
+ controlToRemove.Properties.Remove(propertyToRemove); 
+ propertyToRemove = null; 
+ } 
+ } 
+}
+----
+
+|====
+
+== Related Links
+
+link:{SamplesURL}/samples/persistenceframework/editingandselection/clr3.5/excludecontrolproperties/default.aspx?cn=persistence-framework&sid=3f4c3539-1f09-4b29-9f27-02a4d6eafc08[Exclude Control Properties Sample]
+
+link:persistenceframework-exclude-control.html[Exclude control]
+
+link:persistenceframework-persist-control.html[Persist control manually]

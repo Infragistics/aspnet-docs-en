@@ -1,0 +1,91 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-binding-to-xml-data-source",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Data Binding","Grids"],
+    "guid": "{09F1F50D-6AD0-4B94-9ACC-937CA392973B}",  
+    "buildFlags": [],
+    "createdOn": "2009-01-10T14:30:45Z"
+}
+|metadata|
+////
+
+= Binding to Xml Data Source
+
+== Before You Begin
+
+WebHierarchicalDataGrid™ allows you to bind to hierarchical data with sibling bands. The control displays the sibling data as separate container grids. With sibling data, a parent row may have more than one set of data islands. To reference a specific data island belonging to a particular row, use the row's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergridrecord~rowislands.html[RowIslands] property with the band's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band~datamember.html[DataMember] name or key as the accessor.
+
+== What You Will Accomplish
+
+You will learn how to bind to an XmlDataSource that retrieves hierarchical data with sibling data bands. The sample uses the link:code-files-categoriesandproducts.html[CategoriesandProducts] file.
+
+== Follow these Steps
+
+[start=1]
+. Create an ASP.Net web page.
+[start=2]
+. Drag a ScriptManager component from the toolbox onto the page.
+[start=3]
+. Drag a WebHierarchicalDataGrid control from the toolbox onto the page.
+[start=4]
+. Drag an XmlDataSource control from the toolbox onto the page.
+[start=5]
+. Set up the XmlDataSource to use the CategoriesAndProducts.xml data file and set a data path to retrieve the Categories data.
+
+*In HTML:*
+
+----
+<asp:XmlDataSource ID="XmlDataSource1" runat="server" 
+   DataFile="~/App_Data/CategoriesAndProducts.xml" XPath="/Categories/Category">
+</asp:XmlDataSource>
+----
+
+[start=6]
+. Set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datasourceid.html[DataSourceID] property of WebHierarchicalDataGrid to "XmlDataSource1", the ID of the XmlDataSource control.
+[start=7]
+. Set up the root band's column schema.
+
+*In HTML:*
+
+----
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" 
+   AutoGenerateBands=" AutoGenerateColumns=" 
+   DataSourceID="XmlDataSource1" DefaultColumnWidth="" Key="Category" DataKeyFields="CategoryID">
+  <%-- Define columns for Categories data --%>
+   <Columns>
+      <ig:BoundDataField DataFieldName="CategoryID" Key="CategoryID" Header-Text="CategoryID" />
+      <ig:BoundDataField DataFieldName="CategoryName" Key="CategoryName" Header-Text="Category Name" />
+      <ig:BoundDataField DataFieldName="Description" Key="Description" Header-Text="Description" />
+   </Columns>
+  <%-- TODO: define sibling bands --%>
+</ig:WebHierarchicalDataGrid>
+----
+
+[start=8]
+. Define the sibling bands.
+
+*In HTML:*
+
+----
+<Bands>
+   <%-- Sibling band 1 --%>
+   <ig:Band AutoGenerateColumns=" DataMember="Product" DataKeyFields="ProductID">
+      <Columns>
+         <ig:BoundDataField DataFieldName="ProductID" Key="ProductID" Header-Text="ProductID" />
+         <ig:BoundDataField DataFieldName="ProductName" Key="ProductName" Header-Text="Name" />
+         <ig:BoundDataField DataFieldName="QuantityPerUnit" Key="QuantityPerUnit" Header-Text="Quantity Per Unit" />
+         <ig:BoundDataField DataFieldName="UnitPrice" Key="UnitPrice" Header-Text="Unit Price" />
+      </Columns>
+   </ig:Band>
+   </Bands>
+----
+
+[start=9]
+. Run the application. WebHierarchicalDataGrid displays a parent row with nested sibling rows.
+
+== Related Topics
+
+link:webhierarchicaldatagrid-binding-to-self-related-data.html[Binding to Self-Related Data]

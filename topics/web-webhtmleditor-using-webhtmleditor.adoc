@@ -1,0 +1,36 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webhtmleditor-using-webhtmleditor",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Getting Started","How Do I"],
+    "guid": "{29C4922E-E1CD-43D9-85A7-1FCA737752BF}",  
+    "buildFlags": [],
+    "createdOn": "2007-05-11T14:25:27Z"
+}
+|metadata|
+////
+
+= Using WebHtmlEditor
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebHtmlEditor™ control.
+
+* link:webhtmleditor-add-a-special-character-in-webhtmleditor.html[Add a Special Character in WebHtmlEditor]
+* link:webhtmleditor-client-side-programming.html[Client Side Programming]
+* link:webhtmleditor-configuring-the-upload-area-in-iis.html[Configuring the Upload Area in IIS]
+* link:webhtmleditor-creating-and-using-a-custom-language-file.html[Creating and Using a Custom Language File]
+* link:webhtmleditor-creating-custom-skins-for-webhtmleditor.html[Creating Custom Skins for WebHtmlEditor]
+* link:webhtmleditor-customize-the-help-dialog-box-of-webhtmleditor.html[Customize the Help Dialog Box of WebHtmlEditor]
+* link:webhtmleditor-customize-the-tab-strip-of-webhtmleditor.html[Customize the Tab Strip of WebHtmlEditor]
+* link:webhtmleditor-hide-the-tab-strip-of-webhtmleditor.html[Hide the Tab Strip of WebHtmlEditor]
+* link:webhtmleditor-load-a-custom-skin.html[Load a Custom Skin]
+* link:webhtmleditor-improving-webhtmleditor-performance.html[Improving WebHtmlEditor Performance]
+* link:webhtmleditor-make-the-fontsize-drop-down-list-render-previews.html[Make the FontSize Drop-Down List Render Previews]
+* link:webhtmleditor-populating-custom-list-objects-into-webhtmleditors-drop-down-lists.html[Populating Custom List Objects into WebHtmlEditor's Drop-Down Lists]
+* link:webhtmleditor-remove-a-special-character-in-webhtmleditor.html[Remove a Special Character in WebHtmlEditor]
+* link:webhtmleditor-remove-toolbar-buttons-of-webhtmleditor.html[Remove Toolbar Buttons of WebHtmlEditor]
+* link:webhtmleditor-set-the-opacity-and-slide-effects-of-webhtmleditor-dialog-boxes-and-dropdown-lists.html[Set the Opacity and Slide Effects of WebHtmlEditor Dialog Boxes and Drop-Down Lists]
+* link:webhtmleditor-set-where-upload-files-are-stored.html[Set Where Upload Files Are Stored]
+* link:webhtmleditor-using-webhtmleditors-base-styles.html[Using WebHtmlEditor's Base Styles]
+* link:webhtmleditor-using-the-webhtmleditor-designer.html[Using the WebHtmlEditor Designer]

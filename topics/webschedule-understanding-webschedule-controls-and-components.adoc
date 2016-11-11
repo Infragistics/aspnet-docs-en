@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-understanding-webschedule-controls-and-components",
+    "controlName": ["WebSchedule"],
+    "tags": ["Getting Started","Scheduling"],
+    "guid": "{ACFD6E29-36F1-4B20-93A9-62232C290DF4}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= Understanding WebSchedule Controls and Components
+
+This is a great place for you to start learning about the WebSchedule™ controls and components (for example WebCalendarView™, WebMonthView™, WebScheduleInfo™), and their key features and functionalities.
+
+* link:webschedule-about-webschedule-controls-and-components.html[About WebSchedule Controls and Components] -- Introduces you to the WebSchedule controls and components, and describes their key functionalities, as well as how they are interrelated.

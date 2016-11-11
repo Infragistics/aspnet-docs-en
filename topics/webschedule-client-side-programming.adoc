@@ -1,0 +1,30 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-client-side-programming",
+    "controlName": ["WebSchedule"],
+    "tags": [],
+    "guid": "{4F273417-F12C-4139-B714-356FE37030BC}",  
+    "buildFlags": [],
+    "createdOn": "2005-01-08T00:00:00Z"
+}
+|metadata|
+////
+
+= Client Side Programming
+
+The WebSchedule™ object has rich client-side functionality available to match its robust server-side behavior. This functionality includes the ability to size and move appointments client-side.
+
+The client side also offers a strong client-side event model.
+
+Some of the client-side events for the WebScheduleInfo™ object include , , , , .
+
+* link:webschedule-csom-overview.html[CSOM Overview]
+* link:webschedule-adding-an-activity-on-the-client-side.html[Adding an Activity on the Client Side]
+* link:webschedule-create-an-object-the-updates-an-activitys-properties.html[Create an Object that Updates an Activity's Properties]
+* link:webschedule-deleting-an-activity-on-the-client-side.html[Deleting an Activity on the Client Side]
+* link:webschedule-get-the-selected-activity-on-the-client-side.html[Get the Selected Activity on the Client Side]
+* link:webschedule-limiting-appointment-dates-and-times.html[Limiting Appointment Dates and Times]
+* link:webscheduleinfo-retrieve-a-reference-to-the-webscheduleinfo-object-on-the-client-side.html[Retrieve a Reference to the WebScheduleInfo Object on the Client Side]
+* link:webschedule-updating-an-activity-on-the-client-side.html[Updating an Activity on the Client Side]

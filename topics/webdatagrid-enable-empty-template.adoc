@@ -1,0 +1,67 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-enable-empty-template",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids"],
+    "guid": "{9E5BC353-34DB-42B8-AD9B-93F9D8354714}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Enable Empty Template
+
+WebDataGrid™ has an Empty Template that you can use to provide your end-users with a custom display that appears whenever there are no rows in the data source. Like all templates, you can place any control within the Empty Template to provide a custom message to end-users.
+
+You can set up the empty template at design time by right-clicking WebDataGrid, mouse over Edit Template, and selecting Control Templates. You can then drag controls onto the Empty Template surface.
+
+The following code shows you how to create a custom template displaying a message to end-users when WebDataGrid is bound but has no rows. As with the creation of any template, you need a class that implements the ITemplate interface.
+
+image::images\WebDataGrid_Using_Empty_Template_01.png[]
+
+*In Visual Basic:*
+
+----
+Protected Overloads Overrides Sub OnInit(ByVal e As EventArgs) 
+    MyBase.OnInit(e) 
+    'template needs to be instantiated on every postback 
+    Me.WebDataGrid1.EmptyRowsTemplate = New CustomEmptyRowsTemplate() 
+End Sub 
+Private Class CustomEmptyRowsTemplate 
+    Implements ITemplate 
+    #Region "ITemplate Members" 
+    Public Sub InstantiateIn(ByVal container As Control) Implements ITemplate.InstantiateIn
+        Dim label1 As New System.Web.UI.WebControls.Label() 
+        label1.Text = "No Records Exist in Data Source" 
+        label1.ID = "Label1" 
+        container.Controls.Add(label1) 
+    End Sub 
+    #End Region
+End Class
+----
+
+*In C#:*
+
+----
+protected override void OnInit(EventArgs e)
+{
+	base.OnInit(e);
+	//template needs to be instantiated on every postback
+	this.WebDataGrid1.EmptyRowsTemplate = new CustomEmptyRowsTemplate();
+}
+private class CustomEmptyRowsTemplate : ITemplate
+{
+	#region ITemplate Members
+	public void InstantiateIn(Control container)
+	{
+		System.Web.UI.WebControls.Label label1 = new System.Web.UI.WebControls.Label();
+		label1.Text = "No Records Exist in Data Source";
+		label1.ID = "Label1";
+		container.Controls.Add(label1);
+	}
+	#endregion
+}
+----

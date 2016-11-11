@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "webupload",
+    "controlName": ["WebUpload"],
+    "tags": ["Getting Started","Selection"],
+    "guid": "aaec0e24-8215-41d5-9126-ca917c47819e",  
+    "buildFlags": [],
+    "createdOn": "2011-04-01T19:43:30.8123397Z"
+}
+|metadata|
+////
+
+= WebUpload
+
+Click on the links below to find information on how to get WebUpload quickly up and running.
+
+* link:webupload-overview.html[WebUpload Overview]
+* link:webupload-using-client-side-events.html[WebUpload Using Client Side Events]
+* link:webupload-http-module-and-handler.html[WebUpload HTTP Module and Handler]
+* link:webupload-styling-and-theming.html[WebUpload Styling and Theming]
+* link:webupload-accessibility-compliance.html[WebUpload_Accessibility Compliance]
+* link:webupload-known-issues.html[WebUpload Known Issues]
+* link:webupload-jquery-and-asp-net-helper-api-links.html[WebUpload jQuery and ASP.NET Helper API Links]

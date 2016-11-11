@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-webcalendarview-using-webcalendarview",
+    "controlName": ["WebCalendarView"],
+    "tags": ["Getting Started"],
+    "guid": "{61ABA208-8898-487E-A23A-1443B0A71934}",  
+    "buildFlags": [],
+    "createdOn": "2007-05-11T13:59:50Z"
+}
+|metadata|
+////
+
+= Using WebCalendarView
+
+This section is your gateway to important task-based information that will help you to effectively use the various features and functionalities provided by WebCalendarView™ control.
+
+Click the link below to find out how you can:
+
+* link:webcalendarview-change-the-style-of-days-outside-of-the-month.html[Change the Style of Days Outside of the Month]
+* link:webcalendarview-client-side-programming.html[Client Side Programming]
+* link:webcalendarview-hide-the-drop-down-lists-in-webcalendarview.html[Hide the Drop-Down Lists in WebCalendarView]
+* link:webcalendarview-style-webcalendarviews-days.html[Style WebCalendarView's Days]
+* link:webcalendarview-use-editable-designer-regions-in-webcalendarview.html[Use Editable Designer Regions in WebCalendarView]

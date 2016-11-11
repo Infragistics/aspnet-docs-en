@@ -1,0 +1,36 @@
+﻿////
+
+|metadata|
+{
+    "name": "websplitter-websplitter-accessibility-compliance",
+    "controlName": ["WebSplitter"],
+    "tags": ["Section 508"],
+    "guid": "{AA8FA6E7-AB4B-4E7B-BF4B-95E8B3FDCAAD}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebSplitter Accessibility Compliance
+
+All of our ASP.NET controls and components comply with section 508, subpart 1194.22 of the Rehabilitation Act of 1973. Below is a table containing the specific rules of subpart 1194.22 that pertain to the control, and how we comply with each rule. You won't have to do anything as our control does all the work for you.
+
+[options="header", cols="a,a"]
+|====
+|Rules|How We Comply with the Rules
+
+|(a)
+|The WebSplitter supports ToolTips (alt) for collapse/expand images that appear on the splitter panes. They are defined by the following properties: 
+
+WebSplitter.SplitterBar.CollapseNextPaneButton.CollapseAltText 
+
+WebSplitter.SplitterBar.CollapseNextPaneButton.ExpandAltText 
+
+WebSplitter.SplitterBar.CollapsePreviousPaneButton.CollapseAltText 
+
+WebSplitter.SplitterBar.CollapsePreviousPaneButton.ExpandAltText 
+
+If you do not set values for these properties then ToolTips are generated automatically. For example, for the WebSplitter.SplitterBar.CollapsePreviousPaneButton.CollapseAltText property, the default value is set to 'Collapse Left Pane'.
+
+|====

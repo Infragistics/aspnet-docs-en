@@ -1,0 +1,381 @@
+﻿////
+
+|metadata|
+{
+    "name": "gridmigrationselection",
+    "controlName": [],
+    "tags": [],
+    "guid": "fd12f1e1-6c39-4c0f-9df5-eb0cc2409c86",  
+    "buildFlags": [],
+    "createdOn": "2016-03-01T12:49:38.9724828Z"
+}
+|metadata|
+////
+
+= Grid Migration - Selection
+
+Selection behavior of the Infragistics grid controls gives the end users ability to select columns, rows and cells (both single and multiple) and thus help them visualize the grid parts that will eventually be edited or modified.
+
+In order to be used, Selection behavior of the grid must be enabled first.
+
+To enable Selection behavior on “WebGrid” (UltraWebGrid):
+
+Change “SelectTypeCellDefault” (cell selection), “SelectTypeRowDefault” (row selection), “SelectTypeColDefault” (column selection) property/properties from “None” to “Single/Extended” in grid properties (“DisplayLayout”) or add them manually to the .aspx source code:
+
+*In ASPX:*
+
+[source,html]
+----
+<DisplayLayout Name="UltraWebGrid1" SelectTypeCellDefault="Single" >
+</DisplayLayout>
+<DisplayLayout Name="UltraWebGrid1" SelectTypeRowDefault="Extended">
+</DisplayLayout>
+<DisplayLayout Name="UltraWebGrid1" SelectTypeColDefault="Extended">
+</DisplayLayout>
+----
+
+To enable Selection behavior on “WebDataGrid/WebHierarchicalDataGrid”:
+
+[start=1]
+. In the Microsoft® Visual Studio™ property window, locate the Behaviors property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+[start=2]
+. Check the CheckBox next to Selection on the left-hand side to add and enable the behavior.
+
+.Note:
+[NOTE]
+====
+At this point you can configure additional Selection related properties (e.g., what type of selection to allow).
+====
+
+[start=3]
+. The CellClickAction property is set to Cell by default. In this example, we will leave the default value.
+
+.Note:
+[NOTE]
+====
+When enabling RowDeleting you are also prompted to add Selection. If you choose to do so, Selection and RowSelectors will be enabled, with theRowSelectType and CellClickAction Selection properties set to Single and Row, respectively.
+====
+
+[start=4]
+. Click Ok to close the dialog. “WebDataGrid/WebHierarchicalDataGrid” is now set up to select a cell when it is clicked.
+
+The “Selection” behavior can also be added in the .aspx source code for the “WebDataGrid/WebHierarchicalDataGrid” controls:
+
+*In ASPX:*
+
+[source,html]
+----
+<Behaviors>    
+   <ig:Selection CellSelectType="Single" Enabled="true">                                    
+   </ig:Selection>
+</Behaviors>
+----
+
+== Client side code snippets:
+
+== UltraWebGrid Selection
+
+==== Column Selection
+
+*In JavaScript:*
+
+[source,js]
+----
+function MyFunction() {
+            var grid = igtbl_getGridById('UltraWebGrid1'); // get grid
+            var column = grid.Bands[0].getColumnFromKey("Data"); // get column from its key
+            column.Selected = true; // select it
+            column.Element.style.color = "green"; // change color to view selection
+        }
+----
+
+==== Row Selection
+
+*In JavaScript:*
+
+[source,js]
+----
+function MyFunction() {
+            var grid = igtbl_getGridById('UltraWebGrid1'); // get grid
+            var row = grid.Rows.getRow(1); // get row number 1
+            row.setSelected(true); // select row
+            row.Element.style.color = "red"; // change color to view selection
+        }
+----
+
+==== Cell Selection
+
+*In JavaScript:*
+
+[source,js]
+----
+function MyFunction() {
+            var grid = igtbl_getGridById('UltraWebGrid1'); // get grid 
+            var row = grid.Rows.getRow(1); // get row number 1
+            row.setSelected(true); // select row
+            row.Element.style.color = "red"; // change color to view selection
+            var cell = row.getCell(2); // get cell 2 from row 1
+            cell.setSelected(true); // select cell
+            cell.Element.style.color = "blue"; // change color to view selection
+        }
+----
+
+== WebDataGrid Selection
+
+==== Column Selection
+
+*In C#:*
+
+[source,csharp]
+----
+// TO SELECT A COLUMN
+var grid = $find("WebDataGrid1");
+// Select column
+grid.get_behaviors().get_selection().get_selectedColumns().add(grid.get_columns().get_column(0));
+// TO UNSELECT A COLUMN
+// Remove first selected column from collection
+grid.get_behaviors().get_selection().get_selectedColumns().remove(grid.get_behaviors().get_selection().get_selectedColumns().getItem(0));
+----
+
+==== Row Selection
+
+*In JavaScript:*
+
+[source,js]
+----
+// TO SELECT A ROW
+var grid = $find("WebDataGrid1");
+// Select row
+grid.get_behaviors().get_selection().get_selectedRows().add(grid.get_rows().get_row(0));
+// TO UNSELECT A ROW
+// Remove first selected row from collection
+grid.get_behaviors().get_selection().get_selectedRows().remove(grid.get_behaviors().get_selection().get_selectedRows().getItem(0));
+Cell Selection:
+// TO SELECT A CELL
+var grid = $find("WebDataGrid1");
+// Select cell
+grid.get_behaviors().get_selection().get_selectedCells().add(grid.get_rows().get_row(0).get_cell(1));
+// TO UNSELECT A CELL
+// Remove first selected cell from collection
+grid.get_behaviors().get_selection().get_selectedCells().remove(grid.get_behaviors().get_selection().get_selectedCells().getItem(0));
+----
+
+.Note:
+[NOTE]
+====
+Selection Behavior for the grid must be enabled first.
+====
+
+== WebHierarchicalDataGrid Selection
+
+==== Colum Selection
+
+*In JavaScript:*
+
+[source,js]
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var parentGrid = grid.get_gridView();
+var childGrid = grid.get_gridView().get_rows().get_row(3).get_rowIslands(0)[0];
+// PARENT column selection
+if (parentGrid!= null)
+parentGrid.get_behaviors().get_selection().get_selectedColumns().add(parentGrid.get_columns().get_column(0));
+// CHILD column selection
+if (childGrid != null) childGrid.get_behaviors().get_selection().get_selectedColumns().add(childGrid.get_columns().get_column(0));
+----
+
+==== Row Selection
+
+*In JavaScript:*
+
+[source,js]
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var parentGrid = grid.get_gridView();
+var childGrid = grid.get_gridView().get_rows().get_row(3).get_rowIslands(0)[0];
+// PARENT row selection
+if (parentGrid!= null)
+parentGrid.get_behaviors().get_selection().get_selectedRows().add(parentGrid.get_rows().get_row(0));
+// CHILD row selection
+if (childGrid != null) childGrid.get_behaviors().get_selection().get_selectedRows().add(childGrid.get_rows().get_row(0));
+----
+
+==== Cell Selection
+
+*In JavaScript:*
+
+[source,js]
+----
+var grid = $find("WebHierarchicalDataGrid1");
+var parentGrid = grid.get_gridView();
+var childGrid = grid.get_gridView().get_rows().get_row(0).get_rowIslands(0)[0];
+// PARENT cell selection
+if (parentGrid!= null)
+parentGrid.get_behaviors().get_selection().get_selectedCells().add(parentGrid.get_rows().get_row(0).get_cell(0));
+// CHILD cell selection
+if (childGrid != null) childGrid.get_behaviors().get_selection().get_selectedCells().add(childGrid.get_rows().get_row(0).get_cell(0));
+----
+
+.Note:
+[NOTE]
+====
+Selection Behavior for the grid must be enabled first.
+====
+
+== Server side code snippets:
+
+== UltraWebGrid Selection
+
+==== Column Selection
+
+UltraWebGrid1.Bands[0].Columns[0].Selected = true; // or false to unselect
+
+==== Row Selection
+
+UltraWebGrid1.Rows[1].Selected = true; // or false to unselect
+
+==== Cell Selection
+
+UltraWebGrid1.Rows[1].Cells[0].Selected = true; // or false to unselect
+
+== WebDataGrid Selection
+
+==== Column Selection
+
+*In C#:*
+
+[source,csharp]
+----
+// TO SELECT A COLUMN
+// Get selected columns
+SelectedColumnCollection selectedColumns = this.WebDataGrid1.Behaviors.Selection.SelectedColumns;
+// Select column
+selectedColumns.Add(this.WebDataGrid1.Columns[0]);
+// TO UNSELECT A COLUMN
+// Remove first selected column from collection
+selectedColumns.RemoveAt(0);
+----
+
+==== Row Selection
+
+*In C#:*
+
+[source,csharp]
+----
+// TO SELECT A ROW
+// Get selected rows
+SelectedRowCollection selectedRows = this.WebDataGrid1.Behaviors.Selection.SelectedRows;
+// Select row
+selectedRows.Add(this.WebDataGrid1.Rows[0]);
+// TO UNSELECT A ROW
+// Remove first selected row from collection
+selectedRows.RemoveAt(0);
+----
+
+==== Cell Selection
+
+*In C#:*
+
+[source,csharp]
+----
+// TO SELECT A CELL
+// Get selected cells
+SelectedCellCollection selectedCells = this.WebDataGrid1.Behaviors.Selection.SelectedCells;
+// Select cell
+selectedCells.Add(this.WebDataGrid1.Rows[0].Items[1]);
+// TO UNSELECT A CELL
+// Remove first selected cell from collection
+selectedCells.RemoveAt(0);
+----
+
+.Note:
+[NOTE]
+====
+Selection Behavior for the grid must be enabled first.
+====
+
+== WebHierarchicalDataGrid Selection
+
+==== Column Selection
+
+*In C#:*
+
+[source,csharp]
+----
+// Hook up RowIslandDataBound event
+this.WebHierarchicalDataGrid1.RowIslandDataBound += new RowIslandEventHandler(WebHierarchicalDataGrid1_RowIslandDataBound);
+protected void WebHierarchicalDataGrid1_RowIslandDataBound(object sender, RowIslandEventArgs e)
+{       
+   // Selecting a cell in the PARENT band
+   if (e.RowIsland.DataMember == "SqlDataSource1_DefaultView")
+   {
+      Selection s = e.RowIsland.Behaviors.Selection;
+      s.SelectedColumns.Add(e.RowIsland.Columns[2]);
+   }
+   // Selecting a cell in the CHILD band
+   if (e.RowIsland.DataMember == "SqlDataSource2_DefaultView"
+       && e.RowIsland.ParentRow == this.WebHierarchicalDataGrid1.GridView.Rows[0])
+   {
+      Selection s = e.RowIsland.Behaviors.Selection;
+      s.SelectedColumns.Add(e.RowIsland.Columns[2]);
+   }
+}
+----
+
+==== Row Selection
+
+*In C#:*
+
+[source,csharp]
+----
+// Hook up RowIslandDataBound event
+this.WebHierarchicalDataGrid1.RowIslandDataBound += new RowIslandEventHandler(WebHierarchicalDataGrid1_RowIslandDataBound);
+protected void WebHierarchicalDataGrid1_RowIslandDataBound(object sender, RowIslandEventArgs e)
+{
+   // Selecting a cell in the PARENT band
+   if (e.RowIsland.DataMember == "SqlDataSource1_DefaultView")
+   {
+      Selection s = e.RowIsland.Behaviors.Selection;
+      s.SelectedRows.Add(e.RowIsland.Rows[2]);
+   }
+   // Selecting a cell in the CHILD band
+   if (e.RowIsland.DataMember == "SqlDataSource2_DefaultView"
+        && e.RowIsland.ParentRow == this.WebHierarchicalDataGrid1.GridView.Rows[0])
+   {
+      Selection s = e.RowIsland.Behaviors.Selection;
+      s.SelectedRows.Add(e.RowIsland.Rows[4]);
+   }
+}
+----
+
+==== Cell Selection
+
+*In C#:*
+
+[source,csharp]
+----
+// Hook up RowIslandDataBound event
+this.WebHierarchicalDataGrid1.RowIslandDataBound += new RowIslandEventHandler(WebHierarchicalDataGrid1_RowIslandDataBound);
+protected void WebHierarchicalDataGrid1_RowIslandDataBound(object sender, RowIslandEventArgs e)
+{            
+   // Selecting a cell in the PARENT band
+   if (e.RowIsland.DataMember == "SqlDataSource1_DefaultView")
+   {
+      Selection s = e.RowIsland.Behaviors.Selection;
+      s.SelectedCells.Add(e.RowIsland.Rows[5].Items[1]);
+   }
+   // Selecting a cell in the CHILD band
+   if (e.RowIsland.DataMember == "SqlDataSource2_DefaultView"
+       && e.RowIsland.ParentRow == this.WebHierarchicalDataGrid1.GridView.Rows[0])
+   {
+      Selection s = e.RowIsland.Behaviors.Selection;
+      s.SelectedCells.Add(e.RowIsland.Rows[0].Items[3]);
+   }
+}
+----
+
+.Note:
+[NOTE]
+====
+Selection Behavior for the grid must be enabled first.
+====

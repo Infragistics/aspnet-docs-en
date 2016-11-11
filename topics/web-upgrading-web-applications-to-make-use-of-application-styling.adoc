@@ -1,0 +1,50 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-upgrading-web-applications-to-make-use-of-application-styling",
+    "controlName": [],
+    "tags": ["Styling","Tips and Tricks"],
+    "guid": "{62A91E74-ECB0-4BBF-9942-384FAD9EE3D1}",  
+    "buildFlags": [],
+    "createdOn": "2007-09-02T13:49:17Z"
+}
+|metadata|
+////
+
+= Upgrading Web Applications to Make Use of Application Styling
+
+Starting in the 2007 Volume 1 release, Application Styling was made available in the Infragistics ASP.NET product.
+
+There are two ways to approach Application Styling with Infragistics ASP.NET controls:
+
+* Turn on Application Styling for new applications and new forms within an existing application
+* Change an existing application so that it adopts the styles and appearances of a StyleSet instead of the style values that it is currently using.
+
+== Turn on Application Styling for New Applications and Forms within an Existing Application
+
+The most straightforward approach of using Application Styling with Infragistics ASP.NET controls is to turn on Application Styling for new applications and new forms within an existing application. Using this approach, the style settings for existing forms and applications remain as they were and require no changes; whereas new forms added to existing applications can have Application Styling turned on by using the link:web-webpagestyler.html[WebPageStyler] component.
+
+To turn on Application Styling for an entire application, use the Infragistics Application Styling Configuration Tool that is accessible from Microsoft® Visual Studio's Tools menu.
+
+To turn on Application Styling for a specific page or a new form, use the WebPageStyler component that is contained in the Infragistics4.WebUI.Misc assembly. The WebPageStyler™ component contains properties that allow you to:
+
+* enable Application Styling
+* specify a StyleSetName
+* specify a StyleSetPath value
+
+Using these techniques together with the individual controls, Application Styling can be enabled or disabled at the application, page, or control levels.
+
+== Change an Existing Application to Adopt the Styles and Appearances of a StyleSet
+
+Another approach to using Application Styling with Infragistics ASP.NET controls involves changing an existing application so that it adopts the styles and appearances of a StyleSet instead of the style values that it is currently using.
+
+In this case, you need to remove the style settings of the application in order for the style settings of the StyleSet to come through in the precedence order. Remember, the CSS style rules and values found in the CSS files for a given StyleSet can be easily overridden by setting equivalent rules and different values on the application's style objects. This would normally be the situation if Application Styling is enabled for a page that has previously been styled.
+
+So the key to seeing the Application Styling values come through from the StyleSet is to remove appropriate style values that have been set on the application so that they don't override the StyleSet values. Because of the differences between individual applications and style values, you must perform this task at your discretion.
+
+Considering the WebGrid™ and WebCombo™ controls set default styles in order to appear properly when dropped on a form, you can use the Reset Default Styles command to clear these default styles. This command can be found on the control's shortcut menu.
+
+For other styles and controls, you can edit the ASPX page directly or you can edit the Style objects on the design surface to remove style values that are overriding Application Styling settings.
+
+Once again, for updating existing applications to take advantage of Application Styling, there is a great deal of flexibility as to whether an entire application is enabled for Application Styling; just one or more pages are enabled for Application Styling; or just one or more controls on a particular page are enabled Application Styling by using the Enable Application Styling properties of the control, page and application. This way, some controls can retain their previous styles and not be affected by Application Styling, while others can be styled or re-styled using the built-in Application Styling StyleSets or new StyleSets created with Infragistics AppStylist® for ASP.NET.

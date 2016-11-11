@@ -1,0 +1,70 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-auto-post-back-events",
+    "controlName": ["WebHierarchicalDataGrid"],
+    "tags": ["Editing","Events","Grids","Selection"],
+    "guid": "{E6476387-5FB1-4B37-A23D-A2F82F192933}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Auto Post Back Events
+
+WebHierarchicalDataSource™ has behaviors that do not post back by default but you may want to trigger a postback automatically. For this reason, the behavior exposes an AutoPostBack property that you can set to trigger the correpsonding server-side event.
+
+The following lists the behaviors that has the AutoPostBack property and the events that they trigger.
+
+* Activation - ActiveCellChanged event is raised when a cell is activated.
+* Selection - CellSelectionChanged, ColumnSelectionChanged, or RowSelectionChanged is raised when a cell is selected.
+
+If you have Ajax enabled then the events are raised asynchronously; if not, you will get a full page postback.
+
+The following code shows you how to set the AutoPostBack property for cell selection and handle the CellSelectionChanged event.
+
+*In HTML:*
+
+----
+<ig:WebHierarchicalDataGrid ID="WebHierarchicalDataGrid1" runat="server" Height="350px"
+    Width="800px" oncellselectionchanged="WebHierarchicalDataGrid1_CellSelectionChanged">
+    <Behaviors>
+        <ig:Selection>
+            <AutoPostBackFlags CellSelectionChanged="True" />
+        </ig:Selection>
+    </Behaviors>
+</ig:WebHierarchicalDataGrid>
+----
+
+*In Visual Basic:*
+
+----
+AddHandler Me.WebHierarchicalDataGrid1.CellSelectionChanged, _
+    AddressOf Me.WebHierarchicalDataGrid1_CellSelectionChanged
+Me.WebHierarchicalDataGrid1.Behaviors.Selection.AutoPostBackFlags.CellSelectionChanged = True
+----
+
+*In C#:*
+
+----
+this.WebHierarchicalDataGrid1.CellSelectionChanged +=     new SelectedCellEventHandler(WebHierarchicalDataGrid1_CellSelectionChanged);
+this.WebHierarchicalDataGrid1.Behaviors.Selection.AutoPostBackFlags.CellSelectionChanged = true;
+----
+
+== Related Topics
+
+link:webhierarchicaldatagrid-activation.html[Activation]
+
+link:webhierarchicaldatagrid-cell-editing.html[Cell Editing]
+
+link:webhierarchicaldatagrid-enabling-paging.html[Enabling Paging]
+
+link:webhierarchicaldatagrid-enabling-row-adding.html[Enabling Row Adding]
+
+link:webhierarchicaldatagrid-enabling-row-deleting.html[Enabling Row Deleting]
+
+link:webhierachicaldatagrid-selection.html[Selection]
+
+link:webhierarchicaldatagrid-sorting.html[Sorting]

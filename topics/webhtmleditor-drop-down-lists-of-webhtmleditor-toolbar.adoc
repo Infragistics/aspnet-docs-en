@@ -1,0 +1,26 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-drop-down-lists-of-webhtmleditor-toolbar",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{803FE675-22D4-4601-BF9B-026D8C1FDFE8}",  
+    "buildFlags": [],
+    "createdOn": "2006-03-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Drop-Down Lists of WebHtmlEditor's Toolbar
+
+Instances of the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbardropdown.html[ToolbarDropDown]"]  class display a conventional drop down list which users can scroll through to make a selection. Your application should use a drop-down list when there are a limited number of known values an end user can specify for a specific operation, and that list could be too large to fit well on a context menu. Some examples of WebHtmlEditor™ toolbar drop-down lists include font name, font size, and font style.
+
+The following is a list of the drop-down lists in the toolbar of the WebHtmlEditor control.
+
+* CustomDropDown -- Displays a custom drop-down list populated with items specific to your Web application.
+* Insert -- Displays a drop-down list containing text that end users can insert into the document at the current caret position.
+* FontFormatting -- Displays a drop-down list that end users can use to choose formatting (bold, italics, etc) separate from the individual toolbar buttons corresponding to these formats.
+* FontName -- Displays a drop-down list that end users can use to choose the name of a new font family for use within the document.
+* FontSize -- Displays a drop-down list containing font sizes from which end users can choose.
+* FontStyle -- Displays a drop-down list containing font styles from which end users can choose.

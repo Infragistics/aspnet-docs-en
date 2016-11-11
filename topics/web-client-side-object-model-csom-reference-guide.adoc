@@ -1,0 +1,25 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-client-side-object-model-csom-reference-guide",
+    "controlName": [],
+    "tags": ["API"],
+    "guid": "{1E791E6C-0830-4E2E-B24E-0CDED7648053}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= Client-Side Object Model (CSOM) Reference Guide
+
+A JavaScript-based object model, also known as a client-side object model (CSOM), is available on the client for each of our ASP.NET controls and components. This CSOM lets you build rich, responsive, Web applications which keep post-backs to a minimum.
+
+The CSOM Reference Guide contains information on the JavaScript objects, events, utility functions, methods, and properties that will enable you to build Web-based applications using our ASP.NET controls and components without the need for server-side post-backs.
+
+Click a link below to learn more about the CSOM of a particular ASP.NET control/component:
+
+* link:aspnet-ajax-csom.html[ASP.NET AJAX CSOM]
+* link:aspnet-csom.html[ASP.NET CSOM]
+* link:aspnet-jquery-api.html[jQuery API]

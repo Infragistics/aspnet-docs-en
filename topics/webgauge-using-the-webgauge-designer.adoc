@@ -1,0 +1,20 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-using-the-webgauge-designer",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{A16E5675-0A33-4003-A381-4FD94E3E27D6}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using the WebGauge Designer
+
+In this section, you’ll find tutorials that walk you through creating a basic and complex gauge using the Gauge Designer.
+
+* link:webgauge-creating-a-basic-webgauge-using-the-webgauge-designer.html[Creating a Basic WebGauge Using the WebGauge Designer]
+* link:webgauge-creating-a-complex-webgauge-using-the-webgauge-designer.html[Creating a Complex WebGauge Using the WebGauge Designer]

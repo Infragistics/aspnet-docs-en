@@ -1,0 +1,188 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhierarchicaldatagrid-using-itemcommand-event",
+    "controlName": [],
+    "tags": [],
+    "guid": "268f348a-d28c-4ee5-bfab-d43353c4f3de",  
+    "buildFlags": [],
+    "createdOn": "2015-02-25T13:23:55.3980417Z"
+}
+|metadata|
+////
+
+= WebHierarchicalDataGrid - Using ItemCommand Event
+
+=== Before You Begin
+
+The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~itemcommand_ev.html[ItemCommand] server-side event of WebHierarchicalDataGrid allows you to easily respond to events (e.g., button click) from controls placed inside link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.templatedatafield.html[TemplateField] column.
+
+=== What You Will Accomplish
+
+This walkthrough demonstrates how to add an ASP.NET button inside an bound TemplatedField column for Parent and Child band, and handle WebHierarchicalDataGrid's ItemCommand server-side event to display some information when the button is clicked.
+
+=== Follow these Steps
+
+.Note:
+[NOTE]
+====
+This walkthrough assumes you have bound WebHierarchicalDataGrid to a DataSet object at design time. For information on how to populate the WebHierarchicalDataGrid control, see the 
+====
+
+== Related Topics
+ection at the end of this topic.
+
+*Add TemplateField to Parent Band:*
+
+You can follow the steps from link:webdatagrid-using-itemcommand-event.html[Using ItemCommand Event to Access Cell Item (WebDataGrid)]
+
+*Add TemplateField to Child Band:*
+
+[start=1]
+. In Design View select the control/component and a Smart Tag anchor will appear. Select “Edit Bands”.
+[start=2]
+. “Edit WebHierarchicalDataGrid Bands” window will appear. From there select the desired band.
+[start=3]
+. From Properties window, locate the Columns collection, and click the ellipsis button (…).
+
+image::images/Using_ItemCommand_Event_to_Access_Cell_Item_[WHDG]_1.png[]
+
+[start=4]
+. Add a TemplateField to the collection.
+
+.. From Available Fields section select TemplateField and click the Add Field Button.
+.. New column of type TemplateField will be added to the columns collection.
+
+image::images/Using_ItemCommand_Event_to_Access_Cell_Item_[WHDG]_2.png[]
+.. Another way to add TemplateField is to convert Grid Field into a Template Field.
+
+image::images/Using_ItemCommand_Event_to_Access_Cell_Item_[WHDG]_3.png[]
+.. Select some Grid field and press “Convert selected Grid Field into a Template Field”.
+.. Click OK button to close the Columns Collection Editor
+
+[start=2]
+. Add an ASP.NET Button control to the TemplatedField.
+
+.. From the Design view of your page select the WebHierarchicalDataGrid’s smart tag and click on “Edit Templates”
+.. After the Template Editing Mode is open find the “Freight” TemplateField.
+
+image::images/Using_ItemCommand_Event_to_Access_Cell_Item_[WHDG]_4.png[]
+.. From the toolbox, drag a standard ASP.NET button control onto ItemTemplate
+.. Select “End Template Editing” to finish editing.
+
+[start=3]
+. Add a server-side event handler to the ItemCommand event (code-behind).
+
+*In Visual Basic:*
+
+[source,vb]
+----
+Protected Sub WebHierarchicalDataGrid1_ItemCommand(sender As Object, 
+                        e As HandleCommandEventArgs)
+      End Sub
+----
+
+*In C#:*
+
+[source,csharp]
+----
+protected void WebHierarchicalDataGrid1_ItemCommand(object sender, 
+                        HandleCommandEventArgs e)
+          {
+          }
+----
+
+[start=7]
+. Add code to the ItemCommand event to retrieve some row information. When a control sends back an event, the server will want to respond to that event. The ItemCommand will be fired on the server and will expose to you event arguments through the HandleCommandEventArgs object.
+
+_Parent TemplateDataField_
+
+*In ASPX:*
+
+[source,html]
+----
+<ig:TemplateDataField Key="Freight">
+            <ItemTemplate>
+<asp:Button ID="Button1" runat="server" Text="Show Freight" 
+CommandArgument='<%# Eval("Freight") %>' CommandName="Button1Click" />
+            </ItemTemplate>
+            <Header Text="Freight">
+            </Header>
+</ig:TemplateDataField>
+----
+
+_Child TemplateDataField_
+
+*In ASPX:*
+
+[source,html]
+----
+<ig:TemplateDataField Key="Country">
+              <ItemTemplate>
+                              <asp:Button ID="Button2" runat="server" 
+Text="Show country" 
+CommandArgument='<%# Eval("Country") %>' 
+                                      CommandName="ChildButtonClick" />
+              </ItemTemplate>
+              <Header Text="Country">
+              </Header>
+</ig:TemplateDataField>
+----
+
+*In Visual Basic:*
+
+[source,vb]
+----
+Protected Sub WebHierarchicalDataGrid1_ItemCommand(sender As Object, e As HandleCommandEventArgs)
+        If (e.CommandName = "ChildButtonClick") Then
+            'From Child Grid
+            'e.CommandArgument will give you the value from CommandArgument attribute of the corresponding button
+            Dim commandArgument As Object = e.CommandArgument
+            'Make some calculations with Freight field value and pass it to a Label
+            CountryValueLbl.Text = commandArgument.ToString()
+        Else
+            'From Parent Grid
+            Dim commandArgument As Object = e.CommandArgument
+            FreightValueLbl.Text = commandArgument.ToString()
+        End If
+ End Sub
+----
+
+*In C#:*
+
+[source,csharp]
+----
+protected void WebHierarchicalDataGrid1_ItemCommand(object sender, HandleCommandEventArgs e)
+{
+      if (e.CommandName == "ChildButtonClick")
+      {
+                  //From Child Grid
+                  //e.CommandArgument will give you the value from CommandArgument attribute of the corresponding button
+                  object commandArgument = e.CommandArgument;
+                  //Make some calculations with Freight field value and pass it to a Label
+                  CountryValueLbl.Text = commandArgument.ToString();
+      }
+      else
+      {
+            //From Parent Grid
+                  object commandArgument = e.CommandArgument;
+                  FreightValueLbl.Text = commandArgument.ToString();
+      }
+}
+----
+
+[start=8]
+. Run the application. Click one of the buttons, and notice that the field value is displayer above the WebHierarchicalDataGrid, as shown in the screen shot below.
+
+image::images/Using_ItemCommand_Event_to_Access_Cell_Item_[WHDG]_5.png[]
+
+Related Topics
+
+link:webdatagrid-using-itemcommand-event.html[Using ItemCommand Event to Access Cell Item (WebDataGrid)]
+
+link:webdatagrid-using-item-template.html[Using Item Templates]
+
+link:webhierarchicaldatagrid-data-binding.html[WebHierarchicalDataGrid Data Bindings]
+
+link:webhierarchicaldatagrid-binding-to-xml-data-source.html[Binding WHDG to Xml Data Source]

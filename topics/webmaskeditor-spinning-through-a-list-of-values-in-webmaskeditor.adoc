@@ -1,0 +1,81 @@
+﻿////
+
+|metadata|
+{
+    "name": "webmaskeditor-spinning-through-a-list-of-values-in-webmaskeditor",
+    "controlName": ["WebMaskEditor"],
+    "tags": ["Editing","How Do I","Styling"],
+    "guid": "{567743DE-ADBA-42E6-9072-7DA2AFD81C4A}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Spinning through a list of values in WebMaskEditor
+
+WebMaskEditor™ provides the option to spin through a list of values using spin buttons. You can display the spin buttons by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~spinbuttonsdisplay.html[SpinButtonsDisplay]"]  property to either OnRight or OnLeft. By default, this property is set to None. The spin buttons have two buttons: lower and upper so that your end-users can move to the next and previous values. You can customize the lower and upper buttons by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~lowerspinbutton.html[LowerSpinButton]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~upperspinbutton.html[UpperSpinButton]"]  properties respectively.
+
+You can set the SpinButtonsDisplay property either using Microsoft® Visual Studio® Property Window or by using the following code:
+
+*In Visual Basic:*
+
+----
+'Displays the spin buttons on the right
+WebMaskEditor1.Buttons.SpinButtonsDisplay = Infragistics.Web.UI.EditorControls.ButtonDisplay.OnRight
+----
+
+*In C#:*
+
+----
+//Displays the spin buttons on the right
+WebMaskEditor1.Buttons.SpinButtonsDisplay = Infragistics.Web.UI.EditorControls.ButtonDisplay.OnRight;
+----
+
+WebMaskEditor also allows you to spin through the list continuously even if it reaches the first or last value in the list by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~spinwrap.html[SpinWrap]"]  property to True.
+
+== Add and Insert Values into the list
+
+WebMaskEditor allows you to add a list of values that you want to iterate through using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons.html[TextEditorButtons]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~listofvalues.html[ListOfValues]"]  property. You can set the ListOfValues property either using Microsoft® Visual Studio® Property Window:
+
+*In Visual Basic:*
+
+----
+WebMaskEditor1.Buttons.ListOfValues = "ASP.NET|Silverlight|WinForms|WPF|JSF"
+----
+
+*In C#:*
+
+----
+WebMaskEditor1.Buttons.ListOfValues = "ASP.NET|Silverlight|WinForms|WPF|JSF";
+----
+
+.Note:
+[NOTE]
+====
+Items in the list must be separated by the "|" character when using the ListOfValues property.
+====
+
+However you can also insert values into the list using the TextEditorButtons object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~insertlistvalueatindex.html[InsertListValueAtIndex]"]  method.
+
+*In Visual Basic:*
+
+----
+       'Insert the values into the list at a particular index      
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "ASP.NET")
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "Silverlight")
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "WinForms")
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "WPF")
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "JSF")
+----
+
+*In C#:*
+
+----
+        //Insert the values into the list at a particular index                   
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "ASP.NET");
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "Silverlight");
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "WinForms");
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "WPF");
+        WebMaskEditor1.Buttons.InsertListValueAtIndex(0, "JSF");
+----

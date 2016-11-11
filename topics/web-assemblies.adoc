@@ -1,0 +1,162 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-assemblies",
+    "controlName": [],
+    "tags": ["API","FAQ","Getting Started"],
+    "guid": "{851315D9-F0D9-450D-91B2-70BC90D4E937}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-12T00:00:00Z"
+}
+|metadata|
+////
+
+= Assemblies
+
+An assembly is the core of the common language runtime (CLR). It's a collection of the types and resources required by the CLR to execute an application, and is typically stored as a single executable (.exe) or dynamic-link library (DLL). An assembly controls important aspects of an application including deployment, version control, and security permissions.
+
+The following table lists all the ASP.NET assemblies included in the Infragistics ASP.NET product suite. The table also specifies the ASP.NET controls and components included in each assembly, and includes a cross-reference to the resource strings help topic that contains a list of all the resource strings for the assembly.
+
+[options="header", cols="a,a"]
+|====
+|Assembly Name|ASP.NET Controls/Components
+
+|Infragistics4.WebUI.Documents.Excel.v{ProductVersion} 
+
+*Additional Referenced Assemblies*
+
+____ 
+
+Infragistics4.WebUI.Documents.Core.v{ProductVersion} 
+
+____
+| link:waw-infragistics-excel-engine.html[Infragistics Excel Engine]
+
+|Infragistics4.WebUI.Documents.Reports.v{ProductVersion}
+| link:waw-infragistics-document-engine.html[Infragistics Document Engine]
+
+|Infragistics4.WebUI.Documents.Word.v{ProductVersion} 
+
+*Additional Referenced Assemblies*
+
+____ 
+
+Infragistics4.WebUI.Documents.Core.v{ProductVersion} 
+
+Infragistics4.WebUI.Documents.IO.v{ProductVersion} 
+
+____
+| link:word-infragistics-word-library.html[Infragistics Word Engine]
+
+|Infragistics4.Web.v{ProductVersion}
+| 
+
+link:web-webcaptcha.html[WebCaptcha] 
+
+link:web-webcurrencyeditor.html[WebCurrencyEditor] 
+
+link:web-webdatagrid-webdatagrid.html[WebDataGrid] 
+
+link:web-webdatamenu.html[WebDataMenu] 
+
+link:web-webdatatree.html[WebDataTree] 
+
+link:web-webdatepicker.html[WebDatePicker] 
+
+link:web-webdatetimeeditor.html[WebDateTimeEditor] 
+
+link:web-webdialogwindow.html[WebDialogWindow] 
+
+link:web-webdropdown.html[WebDropDown] 
+
+link:web-webexplorerbar.html[WebExplorerBar] 
+
+link:web-webhierarchicaldatagrid.html[WebHierarchicalDataGrid] 
+
+link:web-webhierarchicaldatasource.html[WebHierarchicalDataSource] 
+
+link:web-webimageviewer.html[WebImageViewer] 
+
+link:web-webmaskeditor.html[WebMaskEditor] 
+
+link:web-webmonthcalendar.html[WebMonthCalendar] 
+
+link:web-webnumericeditor.html[WebNumericEditor] 
+
+link:web-webpercenteditor.html[WebPercentEditor] 
+
+link:web-webprogressbar.html[WebProgressBar] 
+
+link:web-webrating.html[WebRating] 
+
+link:web-webslider.html[WebSlider] 
+
+link:web-websplitter.html[WebSplitter] 
+
+link:web-webtab.html[WebTab] 
+
+link:web-webtexteditor.html[WebTextEditor]
+
+|Infragistics4.WebUI.Misc.v{ProductVersion}
+| link:web-webgroupbox.html[WebGroupBox] 
+
+link:web-webpagestyler.html[WebPageStyler]
+
+|Infragistics4.WebUI.UltraWebCalcManager.v{ProductVersion}
+| link:web-webcalcmanager.html[WebCalcManager]
+
+|Infragistics4.WebUI.UltraWebChart.v{ProductVersion}
+| link:web-secureimagepipe.html[SecureImagePipe] 
+
+link:waw-chart.html[WebChart]
+
+|Infragistics4.WebUI.UltraWebGauge.v{ProductVersion}
+| link:web-gaugeimagepipe.html[GaugeImagePipe] 
+
+link:web-webgauge.html[WebGauge]
+
+|Infragistics4.WebUI.WebDataInput.v{ProductVersion}
+| link:web-webimagebutton.html[WebImageButton]
+
+|Infragistics4.WebUI.WebHtmlEditor.v{ProductVersion}
+| link:web-webhtmleditor.html[WebHtmlEditor]
+
+|Infragistics4.WebUI.WebSchedule.v{ProductVersion}
+| link:web-webcalendarview.html[WebCalendarView] 
+
+link:web-webdayview.html[WebDayView] 
+
+link:web-webmonthview.html[WebMonthView] 
+
+link:web-webscheduleinfo.html[WebScheduleInfo]
+
+|Infragistics4.WebUI.WebScheduleDataProvider.v{ProductVersion} 
+
+*Additional Referenced Assemblies*
+
+____ 
+
+Infragistics4.WebUI.WebSchedule.v{ProductVersion} 
+
+____
+| link:web-webscheduleoledbprovider.html[WebScheduleOleDbProvider] 
+
+link:web-webschedulesqlclientprovider.html[WebScheduleSqlClientProvider]
+
+|Infragistics4.WebUI.WebResizingExtender.v{ProductVersion}
+| link:web-webresizingextender.html[WebResizingExtender]
+
+|====
+
+.Note:
+[NOTE]
+====
+Infragistics4.WebUI.Shared is referenced by all Infragistics web assemblies.
+====
+
+== Related Topics
+
+link:web-asp-net-aptca-assemblies.html[ASP.NET APTCA Assemblies] -- Provides an overview of the APTCA assemblies that enable you to deploy your applications in a partially trusted environment.
+
+link:web-adding-an-assembly-to-a-project.html[Adding an Assembly to a Project] -- Explains how to quickly add an Infragistics .NET assembly to your Visual Studio® .NET project.

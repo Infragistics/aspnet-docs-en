@@ -1,0 +1,19 @@
+﻿////
+
+|metadata|
+{
+    "name": "webtab-client-side-object-model",
+    "controlName": ["WebTab"],
+    "tags": ["Events"],
+    "guid": "{8F1174C8-B53B-43B1-91CD-547016145C00}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Client-Side Object Model(CSOM) Overview
+
+The WebTab™ control exposes a robust object model within the client-side JavaScript programming environment. The object model consists of full-fledged JavaScript objects, and events that enable developers to program significant units of functionality pertaining to the control without the need for server-side post-backs.
+
+link:webtab~infragistics.web.ui_namespace.html[WebTab CSOM Overview]

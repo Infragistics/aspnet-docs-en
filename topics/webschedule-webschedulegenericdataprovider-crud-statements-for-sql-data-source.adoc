@@ -1,0 +1,122 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-webschedulegenericdataprovider-crud-statements-for-sql-data-source",
+    "controlName": ["WebSchedule"],
+    "tags": ["Getting Started","Scheduling"],
+    "guid": "{9626245E-389C-4918-8ED4-7E09A26DB4E5}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= WebScheduleGenericDataProvider CRUD Statements for SQL Data Source
+
+When binding WebSchedule™ controls to SQL data source using WebScheduleGenericDataProvider™, you need to define the CRUD statements for the SQL data sources in order to be able to update your data. These statements must be defined correctly or you will experience unexpected behaviors.
+
+The following code shows you how to define the Select, Insert, Update, and Delete statements for SqlDataSource components.
+
+*In HTML:*
+
+----
+<ig_scheduledata:WebScheduleGenericDataProvider runat="server"  ID="WebScheduleGenericProvider1"  
+	WebScheduleInfoID="WebScheduleInfo1"  ActivityDataSourceID="SqlDataSource1" 
+	    VarianceDataSourceID="SqlDataSource4" ResourceDataSourceID="SqlDataSource5"
+	     >
+	<AppointmentBinding DataKeyMember="ID"  ResourceKeyMember="ResourceKey" VarianceKeyMember="VarianceID" RecurrencePatternMember="RecurrencePattern"/>
+	<ResourceBinding DataKeyMember="ID"  />
+	<VarianceBinding DataKeyMember="ID"  ResourceKeyMember="ResourceKey" VarianceKeyMember="VarianceID" RecurrencePatternMember="RecurrencePattern"/>
+</ig_scheduledata:WebScheduleGenericDataProvider>
+<asp:SqlDataSource ID="SqlDataSource5" runat="server" 
+    ConnectionString="<%$ ConnectionStrings:webschedule123ConnectionString %>" 
+    SelectCommand="SELECT * FROM [Resource]">
+</asp:SqlDataSource>
+<asp:SqlDataSource ID="SqlDataSource4" runat="server" 
+    ConnectionString="<%$ ConnectionStrings:webschedule123ConnectionString %>" 
+    DeleteCommand="DELETE FROM [Appointment] WHERE ([OriginalStartDateTimeUtc] IS NOT NULL) AND [VarianceID] = @VarianceID"
+    InsertCommand="INSERT INTO [Appointment] ([StartDateTimeUtc], [Duration], [Subject], [AllDayEvent], [Location], [Status], [EnableReminder], [ShowTimeAs], [Importance], [RecurrenceID], [RecurrencePattern], [VarianceID], [OriginalStartDateTimeUtc], [ResourceKey]) VALUES (@StartDateTimeUtc, @Duration, @Subject, @AllDayEvent, @Location, @Status, @EnableReminder, @ShowTimeAs, @Importance, @RecurrenceID, @RecurrencePattern, @VarianceID, @OriginalStartDateTimeUtc, @ResourceKey)" 
+    SelectCommand="SELECT * FROM [Appointment] WHERE ([OriginalStartDateTimeUtc] IS NOT NULL)" 
+    UpdateCommand="UPDATE [Appointment] SET [Status] = @Status WHERE [ID] = @ID">
+    <DeleteParameters>
+        <asp:Parameter Name="VarianceID" />
+    </DeleteParameters>
+    <UpdateParameters>
+          <asp:Parameter Name="ID" Type="Int32" />
+        <asp:Parameter Name="Status" Type="Int32" />
+    </UpdateParameters>
+    <InsertParameters>
+        <asp:Parameter Name="StartDateTimeUtc" Type="DateTime" />
+        <asp:Parameter Name="Duration" Type="Int32" />
+        <asp:Parameter Name="Subject" Type="String" />
+        <asp:Parameter Name="AllDayEvent" Type="Boolean" />
+        <asp:Parameter Name="Location" Type="String" />
+        <asp:Parameter Name="Status" Type="Int32" />
+        <asp:Parameter Name="EnableReminder" Type="Boolean" />
+        <asp:Parameter Name="ShowTimeAs" Type="Int32" />
+        <asp:Parameter Name="Importance" Type="Int32" />
+       <asp:Parameter Name="ResourceKey" Type="Int32" />
+        <asp:Parameter Name="RecurrenceID" Type="Int32" />
+        <asp:Parameter Name="RecurrencePattern" Type="String" />
+        <asp:Parameter Name="VarianceID"  />
+        <asp:Parameter Name="OriginalStartDateTimeUtc" Type="DateTime" />
+    </InsertParameters>
+</asp:SqlDataSource>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+    ConnectionString="<%$ ConnectionStrings:webschedule123ConnectionString %>" 
+    SelectCommand="SELECT * FROM [Appointment] "
+    DeleteCommand="DELETE FROM [Appointment] WHERE [VarianceID] = @VarianceID" 
+    InsertCommand="INSERT INTO [Appointment] ([StartDateTimeUtc], [Duration], [Subject], [AllDayEvent], [Location], [Status], [EnableReminder], [ShowTimeAs], [Importance], [RecurrencePattern], [VarianceID], [OriginalStartDateTimeUtc], [ResourceKey]) VALUES ( @StartDateTimeUtc, @Duration, @Subject, @AllDayEvent, @Location, @Status, @EnableReminder, @ShowTimeAs, @Importance, @RecurrencePattern, @VarianceID, @OriginalStartDateTimeUtc, @ResourceKey)" 
+    UpdateCommand="UPDATE [Appointment] SET [StartDateTimeUtc] = @StartDateTimeUtc, [Duration] = @Duration, [Subject] = @Subject, [AllDayEvent] = @AllDayEvent, [Location] = @Location, [Status] = @Status, [EnableReminder] = @EnableReminder, [ShowTimeAs] = @ShowTimeAs, [Importance] = @Importance, [RecurrenceID] = @RecurrenceID, [RecurrencePattern] = @RecurrencePattern, [VarianceID] = @VarianceID, [OriginalStartDateTimeUtc] = @OriginalStartDateTimeUtc, [ResourceKey] = @ResourceKey WHERE [ID] = @ID">
+    <DeleteParameters>
+      <asp:Parameter Name="VarianceID" />
+    </DeleteParameters>
+    <UpdateParameters>
+        <asp:Parameter Name="StartDateTimeUtc" Type="DateTime" />
+        <asp:Parameter Name="Duration" Type="Int32" />
+        <asp:Parameter Name="Subject" Type="String" />
+        <asp:Parameter Name="AllDayEvent" Type="Boolean" />
+        <asp:Parameter Name="Location" Type="String" />
+        <asp:Parameter Name="Status" Type="Int32" />
+        <asp:Parameter Name="EnableReminder" Type="Boolean" />
+        <asp:Parameter Name="ShowTimeAs" Type="Int32" />
+        <asp:Parameter Name="Importance" Type="Int32" />
+        <asp:Parameter Name="ID" Type="Int32" />
+        <asp:Parameter Name="RecurrenceID" Type="Int32" />
+        <asp:Parameter Name="RecurrencePattern" Type="String" />
+        <asp:Parameter Name="VarianceID"  />
+        <asp:Parameter Name="OriginalStartDateTimeUtc" Type="DateTime" />
+        <asp:Parameter Name="ResourceKey" Type="Int32" />
+    </UpdateParameters>
+    <InsertParameters>
+        <asp:Parameter Name="StartDateTimeUtc" Type="DateTime" />
+        <asp:Parameter Name="Duration" Type="Int32" />
+        <asp:Parameter Name="Subject" Type="String" />
+        <asp:Parameter Name="AllDayEvent" Type="Boolean" />
+        <asp:Parameter Name="Location" Type="String" />
+        <asp:Parameter Name="Status" Type="Int32" />
+        <asp:Parameter Name="EnableReminder" Type="Boolean" />
+        <asp:Parameter Name="ShowTimeAs" Type="Int32" />
+        <asp:Parameter Name="Importance" Type="Int32" />
+        <asp:Parameter Name="RecurrencePattern" Type="String" />
+        <asp:Parameter Name="VarianceID" />       
+        <asp:Parameter Name="OriginalStartDateTimeUtc" Type="DateTime" />  
+              <asp:Parameter Name="ResourceKey" Type="Int32" />   
+    </InsertParameters>
+    <SelectParameters>
+    <asp:Parameter Name="StartDate" Type="DateTime" />
+    <asp:Parameter Name="EndDate" Type="DateTime" />
+    </SelectParameters>
+</asp:SqlDataSource>
+----
+
+== Related Topics
+
+link:webschedule-handle-concurrency-conflicts.html[Handle Concurrency Conflicts]
+
+link:webschedule-connecting-webschedule-to-a-database-in-visual-studio-2005.html[Connecting WebSchedule to a Database in Visual Studio 2005]
+
+link:webschedule-binding-to-access-data-source-using-webschedulegenericdataprovider.html[Binding to Access Data Source Control Using WebScheduleGenericDataSource]
+
+link:webschedule-binding-to-a-data-set-with-webschedulegenericdataprovider.html[WebSchedule Binding to a Data Set with WebScheduleGenericDataProvider]

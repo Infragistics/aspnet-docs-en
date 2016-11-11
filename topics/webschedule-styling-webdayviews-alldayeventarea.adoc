@@ -1,0 +1,89 @@
+﻿////
+
+|metadata|
+{
+    "name": "webschedule-styling-webdayviews-alldayeventarea",
+    "controlName": ["WebSchedule"],
+    "tags": ["How Do I","Scheduling","Styling"],
+    "guid": "{37C38A24-966C-4502-9DE3-0790E294ABED}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Styling WebDayView's AllDayEventArea
+
+== Before You Begin:
+
+The WebDayView™ has an area at the top that shows  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  that last the whole day, also known as All Day Events. This area referred to as the AllDayEventArea can be styled depending on what you are doing in that area. For instance by default the area is a gray color, but by changing the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~alldayeventareastyle.html[AllDayEventAreaStyle]"]  object you can style it anyway you want. You can also style the area for when it is selected using the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~alldayeventselectedstyle.html[AllDayEventSelectedStyle]"] .
+
+This walk through will show you some simple style changes you can make to the AllDayEventArea using the two aforementioned styling objects.
+
+== Follow These Steps:
+
+[start=1]
+. *Create Project*
+
+Create an ASP.NET project, and setup the WebSchedule using the WebDayView. For information on how to do this you can review the link:webschedule-using-the-webschedule-controls-quick-design.html[Quick Start using the Web Forms Designer] or link:webschedule-creating-webschedule-controls-using-code.html[Setting Up WebSchedule in Code] topics.
+[start=2]
+. *Setting the AllDayEventAreaStyle*
+
+First change the BackColor off the AllDayEventAreaStyle object. The code snippet below shows how to do this.
+
+*In Visual Basic:*
+
+----
+Me.WebDayView1.AllDayEventAreaStyle.BackColor = Color.OrangeRed
+----
+
+*In C#:*
+
+----
+this.WebDayView1.AllDayEventAreaStyle.BackColor = Color.OrangeRed;
+----
+
+[start=3]
+. Next lets also set the BorderStyle off the AllDayEventAreaStyle object. The code snippet below shows how to do this.
+
+*In Visual Basic:*
+
+----
+Me.WebDayView1.AllDayEventAreaStyle.BorderStyle = BorderStyle.Groove
+----
+
+*In C#:*
+
+----
+this.WebDayView1.AllDayEventAreaStyle.BorderStyle = BorderStyle.Groove;
+----
+
+image::images\WebSchedule_Walk_Through_Styling_the_WebDayViews_AllDayEventArea_01.png[]
+
+[start=4]
+. *Setting the AllDayEventAreaSelectedStyle*
+
+Off the AllDayEventAreaSelectedStyle set the BackColor and Cursor to change on mouse over. The following code snippet shows how to do this.
+
+*In Visual Basic:*
+
+----
+Me.WebDayView1.AllDayEventAreaSelectedStyle.BackColor = Color.Red
+Me.WebDayView1.AllDayEventAreaSelectedStyle.Cursor = Infragistics.WebUI.[Shared].Cursors.Hand
+----
+
+*In C#:*
+
+----
+this.WebDayView1.AllDayEventAreaSelectedStyle.BackColor = Color.Red;
+this.WebDayView1.AllDayEventAreaSelectedStyle.Cursor = Infragistics.WebUI.Shared.Cursors.Hand;
+----
+
+image::images\WebSchedule_Walk_Through_Styling_the_WebDayViews_AllDayEventArea_02.png[]
+
+[start=5]
+. There are several other styling changes you can make using the AllDayEventAreaStyle and AllDayEventAreaSelectedStyle. These two objects use the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.style.html[Style]"]  object that can be found in several Infragistics ASP.NET controls.
+
+== What You Accomplished:
+
+This walk through was designed to give you a brief overview of the the WebDayView's AllDayEventAreaStyle and AllDayEventAreaSelectedStyle.

@@ -1,0 +1,85 @@
+﻿////
+
+|metadata|
+{
+    "name": "webhtmleditor-customize-the-help-dialog-box-of-webhtmleditor",
+    "controlName": ["WebHtmlEditor"],
+    "tags": ["Editing"],
+    "guid": "{76CF82BE-7FD4-40C7-9CE5-813DA864740D}",  
+    "buildFlags": [],
+    "createdOn": "2006-04-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Customize the Help Dialog Box of WebHtmlEditor
+
+The Help toolbar item ( 
+
+image::Images/help.gif[]
+
+) is a special kind of item called a  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbardialogbutton.html[ToolbarDialogButton]"] . ToolbarDialogButtons (which include FindReplace, InsertBookmark, etc.) let you customize the content and appearance of the HTML dialog box they pop up to an end user. In this topic you will learn how to display the text, "Learn more about this application <a href="">here</a>", with a hyperlink where end users clicking the Help button on WebHtmlEditor's™ toolbar can find more information.
+
+[start=1]
+. Before you start writing any code, you should place using/imports directives in your code-behind so you don't need to always type out a member's fully qualified name.
+
+*In Visual Basic:*
+
+----
+Imports Infragistics.WebUI.WebHtmlEditor
+----
+
+*In C#:*
+
+----
+using Infragistics.WebUI.WebHtmlEditor;
+----
+
+[start=2]
+. Get the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.basetoolbaritem.html[BaseToolbarItem]"]  that has type  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemtype.html[ToolbarItemType]"] .Help from within the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection.html[ToolbarItemCollection]"]  of your WebHtmlEditor.
+
+*In Visual Basic:*
+
+----
+Dim items As ToolbarItemCollection
+items = WebHtmlEditor1.Toolbar.Items
+Dim helpBtn As BaseToolbarItem
+helpBtn = items.GetByType(ToolbarItemType.Help)
+----
+
+*In C#:*
+
+----
+ToolbarItemCollection items = WebHtmlEditor1.Toolbar.Items;
+BaseToolbarItem helpBtn = items.GetByType( ToolbarItemType.Help);
+----
+
+[start=3]
+. Cast the BaseToolbarItem to a ToolbarDialogButton so that you can set the Dialog.Text property to the custom HTML you want to display. In your HTML, you want to use the <a> tag to provide a link to someplace on your Web site containing more information about your application.
+
+*In Visual Basic:*
+
+----
+Dim html As String
+html = "<p>Learn more about this application " + _
+"<a href='http://www.example.com'>here</a>.</p>"
+CType(helpBtn, ToolbarDialogButton).Dialog.Text = html
+----
+
+*In C#:*
+
+----
+string html = "<p>Learn more about this application " +
+"<a href='http://www.example.com'>here</a>.</p>";
+((ToolbarDialogButton)helpBtn).Dialog.Text = html;
+----
+
+.Note:
+[NOTE]
+====
+The default Help dialog box gets its HTML from the "HelpDialogSampleText" entry in the localization XML file. When your WebHtmlEditor control offers end users the Help button, you should customize the Text property to display help information appropriate for your application.
+====
+
+== Related Topic:
+
+link:webhtmleditor-dialog-box-buttons-of-webhtmleditors-toolbar.html[Dialog Box Buttons of the WebHtmlEditor Toolbar]

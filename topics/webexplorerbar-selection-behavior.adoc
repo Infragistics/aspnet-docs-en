@@ -1,0 +1,91 @@
+﻿////
+
+|metadata|
+{
+    "name": "webexplorerbar-selection-behavior",
+    "controlName": ["WebExplorerBar"],
+    "tags": ["How Do I","Selection"],
+    "guid": "{697A84CD-BE77-4FFD-BBEB-08A1214F4051}",  
+    "buildFlags": [],
+    "createdOn": "2010-01-03T22:57:15Z"
+}
+|metadata|
+////
+
+= Selection Behavior
+
+WebExplorerBar™ supports only one group or item to be selected. When using the mouse, the end user can select a group or item by simply clicking the left mouse button on it, which makes it active and selected. When using the keyboard, the end user activates and selects a node using the Up Arrow or Down Arrow keys.
+
+You can select a group or item by using the following code:
+
+*In HTML:*
+
+----
+<ig:WebExplorerBar ID="WebExplorerBar1" runat="server">
+    <Groups>
+        <ig:ExplorerBarGroup Text="FirstGroup" Selected="true">
+            <Items>
+                <ig:ExplorerBarItem Text="FirstItem">
+                </ig:ExplorerBarItem>
+            </Items>
+        </ig:ExplorerBarGroup>
+    </Groups>
+</ig:WebExplorerBar>
+----
+
+*In Visual Basic:*
+
+----
+'Once you've defined the groups and items at the aspx
+'you can select the first group by the following code
+Me.WebExplorerBar1.Groups(0).Selected = true
+----
+
+*In C#:*
+
+----
+//Once you've defined the groups and items at the aspx
+//you can select the first group by the following code
+this.WebExplorerBar1.Groups[0].Selected = true;
+----
+
+*In Javascript:*
+
+----
+//once you had wire up to the desired browser event
+//add the following code to select the first group
+var explorerBar = $find('<%= WebExplorerBar1.ClientID %>');
+var items = explorerBar.getExplorerBarItems();
+var item = items.getItem(0);
+item.set_selected(true);
+----
+
+.Note:
+[NOTE]
+====
+If you try to select more than one group or item on the server-side, the selected one will be the first one that appears with Selected property set to True.
+====
+
+== Related Topics
+
+link:webexplorerbar-smart-tag.html[WebExplorerBar Smart Tag]
+
+link:webexplorerbar-keyboard-navigation.html[Keyboard Navigation]
+
+link:webexplorerbar-display-modes.html[Display Modes]
+
+link:webexplorerbar-height-properties.html[WebExplorerBar Height Properties]
+
+link:webexplorerbar-setting-navigateurl-and-target-properties.html[Setting NavigateURL and Target Properties]
+
+link:webexplorerbar-binding-to-an-xml-data-source.html[Binding to an XML Data Source]
+
+link:webexplorerbar-binding-to-webhierarchcialdatasource.html[Binding to WebHierarchcialDataSource]
+
+link:webexplorerbar-serverevents.html[Server-Side Events]
+
+link:webexplorerbar-clientside-api.html[ClientSide API]
+
+link:webexplorerbar-clientevents.html[Client-Side Events]
+
+link:webexplorerbar-styling.html[CSS Class Properties]

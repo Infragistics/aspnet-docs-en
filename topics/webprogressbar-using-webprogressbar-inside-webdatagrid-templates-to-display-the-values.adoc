@@ -1,0 +1,114 @@
+﻿////
+
+|metadata|
+{
+    "name": "webprogressbar-using-webprogressbar-inside-webdatagrid-templates-to-display-the-values",
+    "controlName": ["WebProgressBar"],
+    "tags": ["Templating"],
+    "guid": "{A8479D74-6B79-4DE4-8C9B-E271F1E8AA78}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Using WebProgressBar inside WebDataGrid templates to display the values
+
+== Before You Begin
+
+WebProgressBar™ can easily be placed in WebDataGrid™ templates to visually display the value of the cells in the grid.
+
+== What You Will Accomplish
+
+You will learn how to use WebProgressBar inside WebDataGrid templates to display the cell value of the grid.
+
+== Follow these Steps
+
+[start=1]
+. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDataGrid control onto the form.
+[start=2]
+. Add the following code to manually bind data to WebDataGrid in the Page_Load event.
+
+*In Visual Basic:*
+
+----
+        Dim dt As New DataTable()
+        dt.Columns.Add("Column 1", Type.[GetType]("System.Double"))
+        dt.Columns.Add("Column 2")
+        dt.Columns.Add("Column 3")
+        dt.Columns.Add("Column 4")
+        For i As Integer = 1 To 10
+            Dim dr As DataRow = dt.NewRow()
+            dr(0) = i
+            dr(1) = DateTime.Today.AddDays(i)
+            dr(2) = "Test " & i.ToString()
+            dr(3) = (i Mod 2 = 0)
+            dt.Rows.Add(dr)
+        Next
+        Me.WebDataGrid1.DataSource = dt
+        Me.WebDataGrid1.DataBind()
+----
+
+*In C#:*
+
+----
+ DataTable dt = new DataTable();
+        dt.Columns.Add("Column 1", Type.GetType("System.Double"));
+        dt.Columns.Add("Column 2");
+        dt.Columns.Add("Column 3");
+        dt.Columns.Add("Column 4");
+        for (int i = 1; i $$<=$$ 10; i++)
+        {
+            DataRow dr = dt.NewRow();
+            dr[0] = i;
+            dr[1] = DateTime.Today.AddDays(i);
+            dr[2] = "Test " + i.ToString();
+            dr[3] = (i % 2 == 0);
+            dt.Rows.Add(dr);
+        }
+        this.WebDataGrid1.DataSource = dt;
+        this.WebDataGrid1.DataBind();
+----
+
+[start=3]
+. At this point, the WebDataGrid looks similar to the following image with data:
+
+image::images\WebProgressBar_Using_WebProgressBar_as_an_Editor_Control_in_WebDataGrid_02.png[]
+
+[start=4]
+. Stop the project and then click Edit Columns from the smart tag of the WebDataGrid to add a templated column. This opens the WebDataGrid Designer.
+[start=5]
+. Select TemplateField from the Available Fields and click the Add Field button to add a templated column.
+[start=6]
+. Select the added field from the Selected Fields area and set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldatafield~key.html[Key]"]  property to “WPB_Template” and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfieldcaption.html[Header]"]   pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.fieldcaption~text.html[Text]"]  to “WPB”.
+[start=7]
+. Click Apply and OK to close the WebDataGrid Designer.
+[start=8]
+. In the property window, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enablerelativelayout.html[EnableRelativeLayout]"]  property of the WebDataGrid to True , so that the WebProgressBar will not overflow the grid.
+[start=9]
+. Click Edit Templates from the WebDataGrid smart tag to open the grid in template editing mode.
+[start=10]
+. Select WPB_Template from the drop-down list to edit the template.
+[start=11]
+. In the Item Template area, drag and drop a WebProgressBar control and set its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~maximum.html[Maximum]"]  property to 10 using the property window.
+[start=12]
+. Click End Template Editing to complete the template editing.
+[start=13]
+. In the ASPX markup source, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  property of the WebProgressBar to the cell value of the Column1 by using the DataBinder.Eval method.
+
+*In Visual Basic:*
+
+----
+Value=<%# DataBinder.Eval(CType(Container, Infragistics.Web.UI.TemplateContainer).DataItem, "Column 1") %>
+----
+
+*In C#:*
+
+----
+Value=<%# DataBinder.Eval(((Infragistics.Web.UI.TemplateContainer)Container).DataItem, "Column 1") %>
+----
+
+[start=14]
+. Save and run your application. Your WebDataGrid now looks similar to the following image:
+
+image::images\WebProgressBar_Using_WebProgressBar_as_an_Editor_Control_in_WebDataGrid_01.png[]

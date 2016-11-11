@@ -1,0 +1,22 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-working-with-webgauge-presets",
+    "controlName": ["WebGauge"],
+    "tags": ["How Do I"],
+    "guid": "{1D37216D-1AA3-4C66-B1E5-6BDA6DDEA175}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Working with WebGauge Presets
+
+The WebGauge Designer includes various predefined presets designed to help you quickly get started using the WebGauge control. Click the links for information on how you can use these presets:
+
+* link:webgauge-opening-a-webgauge-preset.html[Opening a WebGauge Preset]
+* link:webgauge-creating-a-webgauge-using-a-preset.html[Creating a WebGauge Using a Preset]
+* link:webgauge-modifying-and-saving-a-preset.html[Modifying and Saving a Preset]
+* link:webgauge-applying-a-preset.html[Applying a Preset]

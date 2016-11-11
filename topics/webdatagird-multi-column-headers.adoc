@@ -1,0 +1,214 @@
+﻿////
+|metadata|
+{
+    "name": "webdatagird-multi-column-headers",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Grids","Grouping"],
+    "guid": "dc157194-fe56-48e3-8de1-68a309ce110b",
+    "buildFlags": [],
+    "createdOn": "2011-10-21T08:16:24.6098747Z"
+}
+|metadata|
+////
+
+= Configuring WebDataGrid Multi-Column Headers
+
+== Purpose
+
+This topic shows how to setup multi-column headers in the *WebDataGrid™* .
+
+=== In this topic
+
+This topic contains the following sections:
+
+*Multi-Column Headers Configuration Overview*
+
+** Control configuration chart
+
+*Configuring multi-column headers*
+
+** Multi-column header details
+** Multi-column header property settings
+** Example: configuring multi-column headers
+** Multi-column headers property reference
+
+== Related Topics
+=== Required background
+
+You need to first read the following topics:
+
+* link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid]
+* link:webdatagrid-columns.html[Columns]
+
+== Multi-Column Headers Configuration Overview
+
+=== Control configuration chart
+
+The table below lists the configurablebehaviors of the WebDataGrid control.
+
+[options="header", cols="a,a,a"]
+|====
+|Configurable behavior|Configuration details|Configuration properties
+
+|*Multi-column headers*
+|Multi-column headers are constructed using GroupField objects and adding other columns to the GroupField’s columns collection.
+|
+* GroupField 
+
+* Columns 
+
+|====
+
+== Configuring multi-column headers
+
+=== Multi-column header details
+
+If you need to create multiple levels of headers or group them into categories, enabling multi-column headers provides this functionality. The GroupField object is a field that accepts other columns in its columns collection. The header of the GroupField then displays above the columns in its columns collection. The resizing, sorting, selection, filtering, and moving grid behaviors are re-designed to meet the needs of this new layout.
+
+image::Images/WebDataGrid_MultiHeader_01.png[]
+
+=== Multi-column header property settings
+
+The table below maps the desired configurations to property settings. The properties are accessed through the Columns collection:
+
+[options="header", cols="a,a,a"]
+|====
+|In order to…|Use this property|And set it to...
+
+|*Configure multi-column headers*
+|Columns
+|_Collection of column objects_
+
+|====
+
+=== Example: configuring multi-column headers
+
+=== Introduction
+
+This example demonstrates how to configure the Infragistics Grid with multi-column headers by defining them in an ASP.NET page’s markup.
+
+=== Preview
+
+Following is a preview of the final result.
+
+image::Images/WebDataGrid_MultiHeader_02.png[]
+
+=== Requirements
+
+To complete this procedure, you need the following:
+
+* A WebDataGrid bound to data
+
+=== Overview
+
+Following is a conceptual overview of the process:
+
+*1.*Defining a GroupField*
+
+*2.*Configuring the header text*
+
+*3.*Adding columns to the GroupField’s columns collection*
+
+=== Steps
+
+[start=1]
+. *Define a GroupField.*
+
+.. *Define a GroupField.*
++
+A GroupField is defined like any other column. It is not bound to data but does require a key like other columns.
++
+*In ASPX:*
++
+----
+<ig:GroupField Key="ContactInfo">
+</ig:GroupField>
+----
++
+*In C#:*
++
+----
+GroupField groupField = new GroupField();
+groupField.Key = "ContactInfo";
+----
+
+.. *In C#, add to columns collection.*
+
+*In C#:*
+
+----
+this.WebDataGridView.Columns.Add(groupField);
+----
+
+[start=2]
+. *Configure the header text.*
+
+The header text is the text that is displayed for the column. Configure this on the Text property of the GridField’s Header object.
+
+*In HTML:*
+
+----
+<Header Text="Contact Information" />
+----
+
+*In C#:*
+
+----
+groupField.Header.Text = "Contact Information";
+----
+
+[start=3]
+. *Add columns to the GroupField’s columns collection.*
+
+In order to show the child columns, add them to the Columns collection of the GroupField.
+
+*In HTML:*
+
+----
+<Columns>
+    <ig:BoundDataField DataFieldName="ContactName" Key="ContactName">
+        <Header Text="ContactName" />
+    </ig:BoundDataField>
+    <ig:BoundDataField DataFieldName="ContactTitle" Key="ContactTitle">
+        <Header Text="ContactTitle" />
+    </ig:BoundDataField>
+</Columns>
+----
+
+*In C#:*
+
+----
+/* Creating a  BoundDataField * /
+BoundDataField field = new BoundDataField();
+field.DataFieldName = "ContactName";
+field.Key = " ContactName ";
+field.Header.Text = " ContactName ";
+/* Adding the BoundDataField to be under the GroupedField 
+* which was created above
+*/
+groupField.Columns.Add(field);
+/* Creating a  BoundDataField * /
+field = new BoundDataField();
+field.DataFieldName = "ContactTitle";
+field.Key = " ContactTitle ";
+field.Header.Text = " ContactTitle ";
+/* Adding the BoundDataField to be under the GroupedField 
+* which was created above
+*/
+groupField.Columns.Add(field);
+----
+
+=== Multi-column headers property reference
+
+For detailed information about these properties, refer to their listing in the property reference section:
+
+* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid.html[WebDataGrid API Documentation]
+
+== Related Topics
+
+Following are some other topics you may find useful.
+
+* link:webdatagrid-add-or-remove-a-column.html[Add or Remove a Column]
+* link:webdatagrid-setting-column-settings-for-a-behavior.html[Setting Column Settings for a Behavior]
+* link:webdatagrid-hiding-a-column.html[Hiding a Column]
+* link:webdatagrid-custom-column-styling.html[Custom Column Styling]

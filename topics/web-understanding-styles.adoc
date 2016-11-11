@@ -1,0 +1,60 @@
+﻿////
+
+|metadata|
+{
+    "name": "web-understanding-styles",
+    "controlName": [],
+    "tags": ["Getting Started","How Do I","Styling"],
+    "guid": "{C4F6FFB1-B2E9-451D-8534-D9D7BB9800EC}",  
+    "buildFlags": [],
+    "createdOn": "2005-07-06T00:00:00Z"
+}
+|metadata|
+////
+
+= Understanding Styles
+
+The Infragistics ASP.NET elements offer several powerful, yet flexible means of adding styles to the controls.
+
+=== Application Styling
+
+Application Styling is a ground-breaking concept in ASP.NET development that allows developers and graphic designers to collaborate more efficiently. The developer creates the application while at the same time, graphic designers create styles that can be used in that application. When finished, the graphic designer hands off the style library to the developer who then loads it into the application with only one line of code. Developing world-class applications with a stylish look and feel to go along with it has never been easier. Whether you're a one-person shop or an enterprise-level business, everyone can reap the benefits of Infragistics®' link:web-application-styling-framework-asf.html[Application Styling Framework (ASF)] – and the key to these benefits is in Infragistics' very own Infragistics AppStylist®.
+
+Infragistics AppStylist is a stand-alone application that runs outside of the Microsoft® Visual Studio® IDE. Use the simple point-and-click interface and watch the styles change on the canvas. The user interface is divided into three intuitive sections:
+* 
+
+link:webappstylist-canvas.html[Canvas] -- This section shows an example of your current style while dynamically updating whenever you change the style's settings.
+link:webappstylist-style-explorer.html[Style Explorer] -- This section lets you select styles that you want to modify as well as change those styles based on the role they will play in either a user interface or as an individual component.
+link:webappstylist-properties-panel.html[Properties Panel] -- This section is where you will spend most of your time changing the look and feel of different states.
+
+If you're a developer developing against the Application Styling API, you can get help on link:web-setting-up-your-project-for-styling.html[Setting Up Your Project for Styling]. On the other hand, if you're a graphic designer, you can get help on link:web-styling-your-application.html[Styling Your Application].
+
+=== Style Objects
+
+Infragistics ASP.NET elements are often made up of a combination of unique controls and elements. Because of this, you have the power to style each individual element. Understanding these style objects will help you understand how to use AppStylist. Generally the style information for each individual part of a control is accessed through a control property. These properties expose objects that inherit from the Infragistics.WebUI.Shared.Style object. The base Style object contains formatting settings that can be applied all objects the control. Typical style attributes include foreground color, background color, font settings and border styles. Control specific derivations of the Style class all you to style specific areas of a control..
+
+For example, if you wanted to change the background colors of the selected tab in a UltraWebTab control, you could modify the BackColor property of the SelectedTabStyle object, which the UltraWebTab exposes.
+
+*In Visual Basic:*
+
+----
+Me.UltraWebTab1.SelectedTabStyle.BackColor = Color.LightGray
+----
+
+*In C#:*
+
+----
+this.UltraWebTab1.SelectedTabStyle.BackColor = Color.LightGray;
+----
+
+=== CSS Styles
+
+Every style object exposed by a Infragistics ASP.NET control permits the use of Cascading StyleSheets to specify formatting.
+
+For example using code shown below for the WebGrid, you can set the CellStyle to your own style defined in a Cascading StyleSheet.
+
+----
+grid.Bands(0).Columns(0).CellStyle.CssClass = "Headline"
+----
+
+Setting this value to a CSS class name will use the Cascading StyleSheet's formatting definitions, instead of the style objects formatting definitions.

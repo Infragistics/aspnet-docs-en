@@ -1,0 +1,36 @@
+﻿////
+
+|metadata|
+{
+    "name": "webgauge-file-system-deployment",
+    "controlName": ["WebGauge"],
+    "tags": ["Deployment","How Do I"],
+    "guid": "{817181B8-8F65-4BCE-808B-B4630DA9DC39}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= File System Deployment
+
+This topic shows how to set up WebGauge™ to create images on the file system of the hosting Web server.
+
+*To set up WebGauge for the File System Deployment scenario:*
+
+[start=1]
+. Select the WebGauge control on your Web form.
+[start=2]
+. In the Properties window, expand the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.ultragauge~deploymentscenario.html[DeploymentScenario]"]  property.
+[start=3]
+. Set the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~mode.html[Mode]"]  property to FileSystem. This should be the default setting.
+[start=4]
+. Set the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~imageurl.html[ImageURL]"]  property to a valid folder within the path of the application.
+[start=5]
+. Set the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~deleteoldimages.html[DeleteOldImages]"]  property to False if you do not want old image files to be deleted from the GaugeImages directory after approximately 10 minutes. This property is set to True by default.
+
+.Note:
+[NOTE]
+====
+The Default property is set to a folder named GaugeImage, which should be located in the root of the Application folder. At this time, you can create that folder and allow the correct permissions for creating, updating and deleting files. The Gauge_#SEQNUM(100).#EXT portion of the ImageURL property dictates how WebGauge will name each file it creates. Leave the default for an automatically incrementing file name creation pattern.
+====

@@ -1,0 +1,217 @@
+﻿////
+
+|metadata|
+{
+    "name": "webdatagrid-selection",
+    "controlName": ["WebDataGrid"],
+    "tags": ["Selection"],
+    "guid": "{268BEE98-5AA9-4CE5-B7FE-D3CCF15B0ACC}",  
+    "buildFlags": [],
+    "createdOn": "0001-01-01T00:00:00Z"
+}
+|metadata|
+////
+
+= Selection
+
+The selection behavior enables the selection of rows, cells, and columns of WebDataGrid™. Once the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior is added, the selection type must be set to specify which objects the user can select.
+
+The select type consists of None, Single, and Multiple choices allowing you to set single or multiple selection of an object, or disable the option altogether.
+
+You can also set client-side events and CSS styles for individual objects when adding the selection behavior.
+
+== Enabling Selection
+
+[start=1]
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+[start=2]
+. Check the CheckBox next to Selection on the left-hand side to add and enable the behavior.
+
+.Note:
+[NOTE]
+====
+At this point you can configure additional Selection related properties (e.g., what type of selection to allow).
+====
+
+[start=3]
+. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property is set to Cell by default. In this example, we will leave the default value.
+
+.Note:
+[NOTE]
+====
+When enabling  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]  you are also prompted to add Selection. If you choose to do so, Selection and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~rowselectors.html[RowSelectors]"]  will be enabled, with the pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~rowselecttype.html[RowSelectType]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  Selection properties set to Single and Row, respectively.
+====
+
+[start=4]
+. Click Ok to close the dialog. WebDataGrid is now set up to select a cell when it is clicked.
+
+== Cell Selection
+
+You must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior in order to select cells in WebDataGrid™.
+
+By default, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property of the Selection behavior is set to Cell, allowing cell selection. You can set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellselecttype.html[CellSelectType]"]  property to either Single or Multiple.
+
+== Select/UnSelect a Cell
+
+The user can select cells by using the mouse or keyboard.
+
+To select cells in code, add cells to the selected cells collection. To unselect a cell, remove it from the collection or call the clear method to remove all selected cells. You can do this both server-side and client-side.
+
+*In Visual Basic:*
+
+----
+' TO SELECT A CELL 
+' Get selected cells 
+Dim selectedCells As SelectedCellCollection = Me.WebDataGrid1.Behaviors.Selection.SelectedCells 
+' Select cell 
+selectedCells.Add(Me.WebDataGrid1.Rows(0).Items(1)) 
+' TO UNSELECT A CELL 
+' Remove first selected cell from collection 
+selectedCells.RemoveAt(0)
+----
+
+*In C#:*
+
+----
+// TO SELECT A CELL
+// Get selected cells
+SelectedCellCollection selectedCells = this.WebDataGrid1.Behaviors.Selection.SelectedCells;
+// Select cell
+selectedCells.Add(this.WebDataGrid1.Rows[0].Items[1]);
+// TO UNSELECT A CELL
+// Remove first selected cell from collection
+selectedCells.RemoveAt(0);
+----
+
+*In JavaScript:*
+
+----
+// TO SELECT A CELL
+var grid = $find("WebDataGrid1");
+// Select cell
+grid.get_behaviors().get_selection().get_selectedCells().add(grid.get_rows().get_row(0).get_cell(1));
+// TO UNSELECT A CELL
+// Remove first selected cell from collection
+grid.get_behaviors().get_selection().get_selectedCells().remove(grid.get_behaviors().get_selection().get_selectedCells().getItem(0));
+----
+
+== Column Selection
+
+You must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior in order to select columns in WebDataGrid™. In addition, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~columnselecttype.html[ColumnSelectType]"]  property of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior to either Single or Multiple.
+
+After enabling column selection, the end user can select a column by clicking on the column’s header. You can also select columns in code by adding them to the selected columns collection.
+
+.Note:
+[NOTE]
+====
+You do not need to set ColumnSelectType when selecting columns in code. All you need is the Selection behavior enabled.
+====
+
+*In Visual Basic:*
+
+----
+' TO SELECT A COLUMN
+' Get selected columns 
+Dim selectedColumns As SelectedColumnCollection = Me.WebDataGrid1.Behaviors.Selection.SelectedColumns 
+' Select column 
+selectedColumns.Add(Me.WebDataGrid1.Columns(0)) 
+' TO UNSELECT A COLUMN
+' Remove first selected column in collection 
+selectedColumns.RemoveAt(0)
+----
+
+*In C#:*
+
+----
+// TO SELECT A COLUMN
+// Get selected columns
+SelectedColumnCollection selectedColumns = this.WebDataGrid1.Behaviors.Selection.SelectedColumns;
+// Select column
+selectedColumns.Add(this.WebDataGrid1.Columns[0]);
+// TO UNSELECT A COLUMN
+// Remove first selected column from collection
+selectedColumns.RemoveAt(0);
+----
+
+*In JavaScript:*
+
+----
+// TO SELECT A COLUMN
+var grid = $find("WebDataGrid1");
+// Select column
+grid.get_behaviors().get_selection().get_selectedColumns().add(grid.get_columns().get_column(0));
+// TO UNSELECT A COLUMN
+// Remove first selected column from collection
+grid.get_behaviors().get_selection().get_selectedColumns().remove(grid.get_behaviors().get_selection().get_selectedColumns().getItem(0));
+----
+
+== Row Selection
+
+You must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior in order to select rows in WebDataGrid™. To enable row selection with a mouse click, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property to Row within the Selection behavior. It is set to Cell by default. In addition to this, you can set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~rowselecttype.html[RowSelectType]"]  to either Single or Multiple.
+
+There are several ways to select a row after enabling row selection: you can select a row by clicking on a cell in that row or you can use row selectors. You can also select rows in code by adding them to the selected rows collection. To unselect a row, remove it from the collection.
+
+.Note:
+[NOTE]
+====
+You do not need to set CellClickAction or RowSelectType when selecting rows in code. All you need is the Selection behavior enabled.
+====
+
+*In Visual Basic:*
+
+----
+' TO SELECT A ROW
+' Get selected rows 
+Dim selectedRows As SelectedRowCollection = Me.WebDataGrid1.Behaviors.Selection.SelectedRows 
+' Select row 
+selectedRows.Add(Me.WebDataGrid1.Rows(0)) 
+' TO UNSELECT A ROW
+' Remove first selected row from collection 
+selectedRows.RemoveAt(0)
+----
+
+*In C#:*
+
+----
+// TO SELECT A ROW
+// Get selected rows
+SelectedRowCollection selectedRows = this.WebDataGrid1.Behaviors.Selection.SelectedRows;
+// Select row
+selectedRows.Add(this.WebDataGrid1.Rows[0]);
+// TO UNSELECT A ROW
+// Remove first selected row from collection
+selectedRows.RemoveAt(0);
+----
+
+*In JavaScript:*
+
+----
+// TO SELECT A ROW
+var grid = $find("WebDataGrid1");
+// Select row
+grid.get_behaviors().get_selection().get_selectedRows().add(grid.get_rows().get_row(0));
+// TO UNSELECT A ROW
+// Remove first selected row from collection
+grid.get_behaviors().get_selection().get_selectedRows().remove(grid.get_behaviors().get_selection().get_selectedRows().getItem(0));
+----
+
+== Row Selectors
+
+To select a row with row selectors, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~rowselectors.html[RowSelectors]"]  behavior must be added in addition to enabling row selection. For more information on row selectors, see link:webdatagrid-enabling-row-selectors.html[Enabling Row Selectors].
+
+If row selectors are enabled, you do not need to have CellClickAction set to Row but only RowSelectType set to Single or Multiple.
+
+Once enabled, row selectors can be clicked to select a row. You can also click and drag a row selector to select multiple rows.
+
+== Single Selection
+
+With single selection, the user can only select one cell/column/row at a time in WebDataGrid.
+
+== Multiple Selection
+
+With multiple cell/column/row selection enabled, you can do the following:
+
+* Click for single selection.
+* Click and drag for multiple, continuous selection.
+* Shift-click for multiple, continuous selection.
+* Ctrl-click for multiple, discontinuous selection.
