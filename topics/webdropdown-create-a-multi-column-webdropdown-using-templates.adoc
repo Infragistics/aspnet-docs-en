@@ -16,186 +16,411 @@
 
 == Before You Begin
 
-The WebDropDown™ control’s template feature provides you with great flexibility of using different controls inside the drop-down container so that your end-users can select items from the control of your choice. WebDropDown displays one column from your data model by default, however, you can show multi-columns in the drop-down container by using the template feature along with WebDataGrid as the control placed within the template.
+The WebDropDown™ control’s template feature provides you with great flexibility of using different controls inside the drop-down container so that your end-users can select items from the control of your choice. WebDropDown displays one column from your data model by default. However, you can show multi-columns in the drop-down container by using the template feature along with HTML Table placed within the template.
 
-In this walkthrough,a WebDataGrid™ control that is bound to the Products table of the Northwind database is placed inside the drop-down container. As you select a row in the grid the product name of the selected row is displayed in the WebDropDown control’s value display. Essentially, what you are doing is placing a control inside the WebDropDown template (WebDataGrid in this case) and then listening to the WebDataGrid control’s client-side event that occurs whenever a row is selected. In that WebDataGrid client-side event, you set the WebDropDown control’s current value property using client-side code.
+In this walkthrough, we take advantage of both HeaderTemplate and ItemTemplate exposed by the WebDropDown™. HTML Table will be used for each of these. This approach will help to structure a rendered columns heading separately from the column items. It will help to style the header differently from the data items and achieve a more grid like look. As you select a row in the multi-column WebDropDown™, the contact name of the selected row is displayed in the WebDropDown control’s value display.
 
 .Note:
 [NOTE]
 ====
-Only one control can be placed within the WebDropDown template at this time.
+Controls can be placed within the WebDropDown™ template as well. Keep in mind only one control can be placed within the WebDropDown template at a time.
 ====
 
 == What You Will Accomplish
 
-You will learn how to show the WebDataGrid control in the drop-down container of a WebDropDown control.
+You will learn how to show a grid like structure in the drop-down container of a WebDropDown control.
 
 == Follow these Steps
 
 [start=1]
-. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDropDown control onto the form. Set the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~currentvalue.html[CurrentValue]"]  property to “Select a Product”.
+. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDropDown control onto the form. Set the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~currentvalue.html[CurrentValue]"] property to “Select Owner”. This will be the text initially displayed in the WebDropDown™ input prior to making a selection from the list.
 [start=2]
-. Add an item to the WebDropDown and set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem~text.html[Text]"]  property to “Products”. For more information on how to add items to WebDropDown see the link:webdropdown-getting-started-with-webdropdown.html[Getting Started with WebDropDown] topic.
+. Set the pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem~textfield.html[textfield]"] property to “Name”. It lets you choose the column name you want to show in the value display. Link the WebDropDown™ DataSource to the GetGridData() method supplied at step 10.
 [start=3]
-. Click Edit Templates from the smart tag of the WebDropDown. This will show the WebDropDown in the Template Editing Mode.
+. Set the following WebDropDown properties.
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enableanimations.html[EnableAnimations]"] ="false".
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~DropDownContainerHeight.html[DropDownContainerHeight]"] ="135px".
+pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~DropDownContainerWidth.html[DropDownContainerWidth]"] ="480px".
 [start=4]
-. From the Template Editing Mode smart tag, select Item Templates from the drop-down list.
+. Click Edit Templates from the smart tag of the WebDropDown. This will show the WebDropDown in the Template Editing Mode.
 [start=5]
-. Drag and drop a WebDataGrid control into the Products area. Bind the WebDataGrid to the Products table of the Northwind database. For more information on how to bind WebDataGrid to SqlDataSource, see the link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid] topic.
+. From the Template Editing Mode smart tag, select Item Templates from the drop-down list.
 [start=6]
-. Click Edit Behaviors from the smart tag of the WebDataGrid. This will open the WebDataGrid Designer.
+. Paste the following HTML Table:
+[source]
+----
+<table style="width: 100%" cellspacing="0" cellpadding="4">
+    <tr>
+        <td style="width: 140px;">
+            <%# DataBinder.Eval(Container.DataItem, "Name")%>
+        </td>
+        <td style="width: 220px;">
+            <%# DataBinder.Eval(Container.DataItem, "Company")%>
+        </td>
+        <td style="width: 100px;">
+            <%# DataBinder.Eval(Container.DataItem, "PostalCode")%>
+        </td>
+    </tr>
+</table>
+----
+
 [start=7]
-. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection.html[Selection]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property to Row and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~rowselecttype.html[RowSelectType]"]  property to Single.
+. From the Template Editing Mode smart tag, select HeaderTemplate.
 [start=8]
-. Click Apply and OK to close the WebDataGrid Designer.
+. Paste the following HTML Table for the header:
+[source]
+----
+<table id="TemplateContainer">
+    <tr class="custom_Header">
+        <td class="igg_HeaderCaption" style="width: 140px;">Owner</td>
+        <td class="igg_HeaderCaption" style="width: 220px;">Company</td>
+        <td class="igg_HeaderCaption" style="width: 100px;">PostalCode</td>
+    </tr>
+</table>
+----
+
 [start=9]
-. Click End Template Editing from the Template Editing Mode smart tag of the WebDropDown.
+. Add some css styling.
+[source]
+----
+<style type="text/css">
+    .igg_HeaderCaption {
+        font-size: 12px;
+        padding: 5px 0px 5px 8px;
+        overflow: hidden;
+        text-align: left;
+        height: 25px;
+        font-family: Verdana;
+        font-weight: normal;
+        border-top: 1px solid #777777;
+        border-right: 1px solid #777777;
+        border-bottom: 1px solid #777777;
+        border-left: 1px solid #888888;
+        color: #FFFFFF;
+        background-color: #888888;
+    }
+
+    .igdd_ListItem {
+        border-style: solid;
+        border-color: #FFFFFF #CCCCCC #CCCCCC #CCCCCC;
+        border-width: 1px;
+    }
+
+    .igdd_ListItem:nth-child(odd) {
+        background-color: #F6F6F6;
+    }
+
+    .igdd_ListItemHover {
+        background-color: #CCCCCC !important;
+    }
+
+    .igdd_ListItemActive {
+        background-color: #9ECBD6 !important;
+        border: solid 1px #CCCCCC;
+    }
+	</style>
+----
+
+[start=10]
+. Add the required server side data and bind the WebDropDown list items to it. For this walkthrough, a simple table is used. You can refer to the following link: http://www.infragistics.com/samples/aspnet/drop-down/templates[following online sample], in case you want to see a code the same example but illustrating to attach to an existing database. 
+[source]
+----
+	//generate a table to be used as data source
+	private DataTable GetGridData()
+	{
+		DataTable DS = new DataTable("TestData");
+		DataColumn col = DS.Columns.Add("ID", typeof(int));
+		DS.Columns.Add("Name", typeof(string));
+		DS.Columns.Add("Company", typeof(string));
+		DS.Columns.Add("PostalCode", typeof(string));
+		DS.PrimaryKey = new DataColumn[] { col };
+		DS.Rows.Add(new Object[] { 1, "Maria Anders", "Alfreds Futterkiste", "12209" });
+		DS.Rows.Add(new Object[] { 2, "Antonio Moreno", "Antonio Moreno Taqueria", "05023" });
+		DS.Rows.Add(new Object[] { 3, "Thomas Hardy", "Around the Horn", "WA1 1DP" });
+		DS.Rows.Add(new Object[] { 4, "Hanna Moos", "Blauer See Deilikatessen", "68306" });
+		return DS;
+	}
+----
 
 The above steps can be performed through the following code:
+
+*Markup:*
+[source]
+----
+<ig:WebDropDown ID="webDropDown1" runat="server" Width="200px">
+    <HeaderTemplate>
+        <table id="TemplateContainer">
+            <tr class="custom_Header">
+                <td class="igg_HeaderCaption" style="width: 140px;">Owner</td>
+                <td class="igg_HeaderCaption" style="width: 220px;">Company</td>
+                <td class="igg_HeaderCaption" style="width: 100px;">PostalCode</td>
+            </tr>
+        </table>
+    </HeaderTemplate>
+    <ItemTemplate>
+        <table style="width: 100%" cellspacing="0" cellpadding="4">
+            <tr>
+                <td style="width: 140px;">
+                    <%# DataBinder.Eval(Container.DataItem, "Name")%>
+                </td>
+                <td style="width: 220px;">
+                    <%# DataBinder.Eval(Container.DataItem, "Company")%>
+                </td>
+                <td style="width: 100px;">
+                    <%# DataBinder.Eval(Container.DataItem, "PostalCode")%>
+                </td>
+            </tr>
+        </table>
+    </ItemTemplate>
+</ig:WebDropDown>
+----
+
+*In C#:*
+
+[source]
+----
+
+	protected void Page_Load(object sender, EventArgs e)
+	{
+		//set a data source to bind to
+		this.webDropDown1.DataSource = this.GetGridData();
+		//Set which column to display in the input upon selection
+		this.webDropDown1.TextField = "Name";
+		//Set the current value 
+		this.webDropDown1.CurrentValue = "Select a Contact";
+		this.webDropDown1.EnableAnimations = false;
+		this.webDropDown1.DropDownContainerHeight = 135;
+		this.webDropDown1.DropDownContainerWidth = 480;
+	}
+
+	//generate a table to be used as data source
+	private DataTable GetGridData()
+	{
+		DataTable DS = new DataTable("TestData");
+		DataColumn col = DS.Columns.Add("ID", typeof(int));
+		DS.Columns.Add("Name", typeof(string));
+		DS.Columns.Add("Company", typeof(string));
+		DS.Columns.Add("PostalCode", typeof(string));
+		DS.PrimaryKey = new DataColumn[] { col };
+		DS.Rows.Add(new Object[] { 1, "Maria Anders", "Alfreds Futterkiste", "12209" });
+		DS.Rows.Add(new Object[] { 2, "Antonio Moreno", "Antonio Moreno Taqueria", "05023" });
+		DS.Rows.Add(new Object[] { 3, "Thomas Hardy", "Around the Horn", "WA1 1DP" });
+		DS.Rows.Add(new Object[] { 4, "Hanna Moos", "Blauer See Deilikatessen", "68306" });
+		return DS;
+	}
+----
+
+*In Visual Basic:*
+[source]
+----
+	Protected Sub Page_Load(sender As Object, e As EventArgs)
+		'set a data source to bind to
+		Me.WebDropDown1.DataSource = Me.GetGridData()
+		'Set which column to display in the input upon selection
+		Me.WebDropDown1.TextField = "Name"
+		'Set the current value 
+		Me.WebDropDown1.CurrentValue = "Select a Contact"
+		Me.WebDropDown1.EnableAnimations = False
+		Me.WebDropDown1.DropDownContainerHeight = 135
+		Me.WebDropDown1.DropDownContainerWidth = 480
+		Me.WebDropDown1.DataBind()
+	End Sub
+
+	'generate a table to be used as data source
+	Private Function GetGridData() As DataTable
+		Dim DS As New DataTable("TestData")
+		Dim col As DataColumn = DS.Columns.Add("ID", GetType(Integer))
+		DS.Columns.Add("Name", GetType(String))
+		DS.Columns.Add("Company", GetType(String))
+		DS.Columns.Add("PostalCode", GetType(String))
+		DS.PrimaryKey = New DataColumn() {col}
+		DS.Rows.Add(New [Object]() {1, "Maria Anders", "Alfreds Futterkiste", "12209"})
+		DS.Rows.Add(New [Object]() {2, "Antonio Moreno", "Antonio Moreno Taqueria", "05023"})
+		DS.Rows.Add(New [Object]() {3, "Thomas Hardy", "Around the Horn", "WA1 1DP"})
+		DS.Rows.Add(New [Object]() {4, "Hanna Moos", "Blauer See Deilikatessen", "68306"})
+		Return DS
+	End Function
+----
+
+[start=11]
+. Save and run your application.You will observe that as you click a row in the drop-down container, the text in the value display is changed to the owner name from the row.
+
+image::images/WebDropDown_Create_a_Multi_Column_WebDropDown_using_Templates_01.png[]
+
+
+*Alternative:*
+Instead of using the above approach and specifying all of the templates via the Markup, it is possible to set the HTML tables and the corresponding styling in code behind as well. It will require to implement ITemplate for both HeaderTemplate and ItemTemplate though. The following sample code assumes there is a plain WebDropDown with ID of WebDropDown1 already defined in Markup.
+
+*In C#:*
+
+[source]
+----
+	//ensure these objects are created prior Page_Load event fires
+	protected override void OnInit(EventArgs e)
+	{
+		this.WebDropDown1.HeaderTemplate = new HeaderTemplate();
+		this.WebDropDown1.ItemTemplate = new ItemTemplate();
+	}
+    //helper variable
+    private static string[] ColumnsArr = new string[] { "Name", "Company", "PostalCode" };
+
+	//add a content and styling for the HeaderTemplate
+	private class HeaderTemplate : ITemplate
+	{
+		public void InstantiateIn(Control container)
+		{
+			HtmlTable table = new HtmlTable();
+			table.Style.Add(HtmlTextWriterStyle.Height, "25px");
+			table.Style.Add(HtmlTextWriterStyle.BackgroundColor, "#888888");
+			table.Style.Add(HtmlTextWriterStyle.Color, "#FFFFFF");
+			table.Style.Add(HtmlTextWriterStyle.FontSize, "12px");
+			table.Style.Add(HtmlTextWriterStyle.FontWeight, "normal");
+			table.CellSpacing = 0;
+			table.CellPadding = 4;
+			HtmlTableRow row = new HtmlTableRow();
+			table.Controls.Add(row);
+
+			for (int i = 0; i < 3; i++)
+			{
+				HtmlTableCell cell = new HtmlTableCell();
+				cell.Attributes.Add("class", "igg_HeaderCaption");
+
+				cell.InnerText = ColumnsArr[i].ToString();
+				if (cell.InnerText == "Name")
+				{
+					cell.Style.Add(HtmlTextWriterStyle.Width, "140px");
+				}
+				if (cell.InnerText == "Company")
+				{
+					cell.Style.Add(HtmlTextWriterStyle.Width, "220px");
+				}
+				if (cell.InnerText == "PostalCode")
+				{
+					cell.Style.Add(HtmlTextWriterStyle.Width, "100px");
+				}
+				row.Cells.Add(cell);
+			}
+			container.Controls.Add(table);
+		}
+	}
+
+	//add a content and styling for the ItemTemplate
+	private class ItemTemplate : ITemplate
+	{
+		public void InstantiateIn(Control container)
+		{
+			HtmlTable table = new HtmlTable();
+			table.CellSpacing = 0;
+			table.CellPadding = 4;
+			HtmlTableRow row = new HtmlTableRow();
+			table.Controls.Add(row);
+			for (int i = 0; i < 3; i++)
+			{
+				HtmlTableCell cell = new HtmlTableCell();
+				TemplateContainer templateContainer = container as TemplateContainer;
+				DataRowView dataRow = templateContainer.DataItem as DataRowView;
+
+				cell.InnerText = ColumnsArr[i].ToString();
+				if (cell.InnerText == "Name")
+				{
+					cell.InnerText = dataRow["Name"].ToString();
+					cell.Style.Add(HtmlTextWriterStyle.Width, "140px");
+				}
+				if (cell.InnerText == "Company")
+				{
+					cell.InnerText = dataRow["Company"].ToString();
+					cell.Style.Add(HtmlTextWriterStyle.Width, "220px");
+				}
+				if (cell.InnerText == "PostalCode")
+				{
+					cell.InnerText = dataRow["PostalCode"].ToString();
+					cell.Style.Add(HtmlTextWriterStyle.Width, "100px");
+				}
+				row.Cells.Add(cell);
+			}
+			container.Controls.Add(table);
+		}
+	}
+
+    **Add the same Page_Load and GetGridData method from above for a complete runable sample.
+----
 
 *In Visual Basic:*
 
 [source]
 ----
-Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) 
-    'Set the current value 
-    WebDropDown1.CurrentValue = "Select a Product" 
-    'Set the drop-down container width 
-    WebDropDown1.DropDownContainerWidth = 500; 
-    'Create a new drop-down item 
-    Dim productsItem As New DropDownItem() 
-    'Set the text of the drop-down item 
-    productsItem.Text = "Products" 
-    'Add the drop-down item to the WebDropDown 
-    WebDropDown1.Items.Add(productsItem) 
-    'Creat a template with WebDataGrid 
-    WebDropDown1.ItemTemplate = New multiColumnTemplate() 
-    'This is explained in the step 10
-    WebDropDown1.ClientEvents.ValueChanging = "WebDropDown1_ValueChanging" 
-End Sub 
-Private Class multiColumnTemplate 
-    Implements ITemplate 
-    #Region "Itemplate Members" 
-    Public Sub InstantiateIn(ByVal container As Control) _
+
+Protected Overrides Sub OnInit(e As EventArgs)
+    Me.WebDropDown1.HeaderTemplate = New HeaderTemplate()
+    Me.WebDropDown1.ItemTemplate = New ItemTemplate()
+End Sub
+
+Private Shared ColumnsArr As String() = New String() {"Name", "Company", "PostalCode"}
+	Private Class HeaderTemplate
+		Implements ITemplate
+		Public Sub InstantiateIn(container As Control) Implements ITemplate.InstantiateIn
+			Dim table As New HtmlTable()
+			table.Style.Add(HtmlTextWriterStyle.Height, "25px")
+			table.Style.Add(HtmlTextWriterStyle.BackgroundColor, "#888888")
+			table.Style.Add(HtmlTextWriterStyle.Color, "#FFFFFF")
+			table.Style.Add(HtmlTextWriterStyle.FontSize, "12px")
+			table.Style.Add(HtmlTextWriterStyle.FontWeight, "normal")
+			table.CellSpacing = 0
+			table.CellPadding = 4
+			Dim row As New HtmlTableRow()
+			table.Controls.Add(row)
+
+			For i As Integer = 0 To 2
+				Dim cell As New HtmlTableCell()
+				cell.Attributes.Add("class", "igg_HeaderCaption")
+
+				cell.InnerText = ColumnsArr(i).ToString()
+				If cell.InnerText = "Name" Then
+					cell.Style.Add(HtmlTextWriterStyle.Width, "140px")
+				End If
+				If cell.InnerText = "Company" Then
+					cell.Style.Add(HtmlTextWriterStyle.Width, "220px")
+				End If
+				If cell.InnerText = "PostalCode" Then
+					cell.Style.Add(HtmlTextWriterStyle.Width, "100px")
+				End If
+				row.Cells.Add(cell)
+			Next
+			container.Controls.Add(table)
+		End Sub
+	End Class
+
+	Private Class ItemTemplate
+		Implements ITemplate
+		Public Sub InstantiateIn(container As Control) Implements ITemplate.InstantiateIn
+			Dim table As New HtmlTable()
+			table.CellSpacing = 0
+			table.CellPadding = 4
+			Dim row As New HtmlTableRow()
+			table.Controls.Add(row)
+			For i As Integer = 0 To 2
+				Dim cell As New HtmlTableCell()
+				Dim templateContainer As TemplateContainer = TryCast(container, TemplateContainer)
+				Dim dataRow As DataRowView = TryCast(templateContainer.DataItem, DataRowView)
+
+				cell.InnerText = ColumnsArr(i).ToString()
+				If cell.InnerText = "Name" Then
+					cell.InnerText = dataRow("Name").ToString()
+					cell.Style.Add(HtmlTextWriterStyle.Width, "140px")
+				End If
+				If cell.InnerText = "Company" Then
+					cell.InnerText = dataRow("Company").ToString()
+					cell.Style.Add(HtmlTextWriterStyle.Width, "220px")
+				End If
+				If cell.InnerText = "PostalCode" Then
+					cell.InnerText = dataRow("PostalCode").ToString()
+					cell.Style.Add(HtmlTextWriterStyle.Width, "100px")
+				End If
+				row.Cells.Add(cell)
+			Next
+			container.Controls.Add(table)
+		End Sub
+	End Class
+
+    **Add the same Page_Load and GetGridData method from above (step 10) for a complete runable sample.
 ----
-
-[source]
-----
-        Implements System.Web.UI.ITemplate.InstantiateIn 		
-----
-
-[source]
-----
-        'Create a new WebDataGrid 
-        Dim myGrid As New WebDataGrid() 
-        myGrid.ID = "templateGrid" 
-        'Perform the data binding actions on the grid 
-        Dim con As New SqlConnection("Data Source=.\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True") 
-        Dim ds As New DataSet() 
-        Dim adap As New SqlDataAdapter("Select $$*$$ from Products", con) 
-        adap.Fill(ds, "Products") 
-        myGrid.DataSource = ds 
-        myGrid.DataBind() 
-        'Enable the selection behavior on the grid 
-        myGrid.Behaviors.CreateBehavior(Of Selection)() 
-        myGrid.Behaviors.Selection.CellClickAction = CellClickAction.Row 
-        myGrid.Behaviors.Selection.RowSelectType = SelectType.[Single] 
-       'This is explained in the step 10
-        myGrid.Behaviors.Selection.SelectionClientEvents.RowSelectionChanged = "WebDataGrid1_RowSelectionChanged" 
-        container.Controls.Add(myGrid) 
-    End Sub 
-    #End Region 
-End Class
-----
-
-*In C#:*
-
-----
-protected void Page_Load(object sender, EventArgs e)
-    {
-        //Set the current value 
-        WebDropDown1.CurrentValue = "Select a Product";
-        //Set the drop-down container width
-        WebDropDown1.DropDownContainerWidth = 500;
-        //Create a new drop-down item
-        DropDownItem productsItem = new DropDownItem();
-        //Set the text of the drop-down item
-        productsItem.Text = "Products";
-        //Add the drop-down item to the WebDropDown
-        WebDropDown1.Items.Add(productsItem);
-        //Creat a template with WebDataGrid
-        WebDropDown1.ItemTemplate  = new multiColumnTemplate();  
-         //This is explained in the step 10
-        WebDropDown1.ClientEvents.ValueChanging = "WebDropDown1_ValueChanging";
-    }
-    private class multiColumnTemplate : ITemplate
-    {
-        #region Itemplate Members
-        public void InstantiateIn(Control container)
-        {
-            //Create a new WebDataGrid
-            WebDataGrid myGrid = new WebDataGrid();
-            myGrid.ID = "templateGrid";
-            //Perform the data binding actions on the grid
-            SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Northwind;Integrated Security=True");
-            DataSet ds = new DataSet();
-            SqlDataAdapter adap = new SqlDataAdapter("Select * from Products", con);
-            adap.Fill(ds, "Products");
-            myGrid.DataSource = ds;
-            myGrid.DataBind();
-            //Enable the selection behavior on the grid
-            myGrid.Behaviors.CreateBehavior<Selection>();
-            myGrid.Behaviors.Selection.CellClickAction = CellClickAction.Row;
-            myGrid.Behaviors.Selection.RowSelectType = SelectType.Single;
-//This is explained in the step 10
-myGrid.Behaviors.Selection.SelectionClientEvents.RowSelectionChanged = "WebDataGrid1_RowSelectionChanged";
-            container.Controls.Add(myGrid);
-        }
-        #endregion
-    }
-----
-
-[start=10]
-. Add the following Javascript function for the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selectionclientevents~rowselectionchanged.html[RowSelectionChanged]"]  client-side event of the WebDataGrid:
-
-*In JavaScript:*
-
-----
-        // The client event ‘RowSelectionChanged’ takes two parameters sender and e
-        // sender  is the object which is raising the event
-        // e is the RowSelectionChangedEventArgs
-        function WebDataGrid1_RowSelectionChanged(sender, e) {
-            //Gets reference to the WebDropDown
-            var dropdown = $find("WebDropDown1");
-            //Gets the selected rows collection of the WebDataGrid
-            var selectedRows = e.getSelectedRows();
-            //Gets the row that is selected from the selected rows collection
-            var row = selectedRows.getItem(0);
-            //Gets the second cell object in the row
-            //In this case it is ProductName cell 
-            var cell = row.get_cell(1);
-            //Gets the text in the cell
-            var text = cell.get_text();
-            //Sets the text of the value display to the product name of the selected row
-            dropdown.set_currentValue(text, true);
-   }
-----
-
-In the above code, when a row is clicked the text in the second cell (ProductName ) of the row is displayed in the value display of the WebDropDown.However you must cancel the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownclientevents~valuechanging.html[ValueChanging]"]  client-event of the WebDropDown as it fires and changes the value in the value display.
-
-*In JavaScript:*
-
-----
-        // The client event ‘ValueChanging' takes two parameters sender and e
-        // sender  is the object which is raising the event
-        // e is the DropDownEditEventArgs
-           function WebDropDown1_ValueChanging(sender, e)
-           {
-           e.set_cancel(true);
-           }
-----
-
-[start=11]
-. Save and run your application.You will observe that as you click a row in the drop-down container,the text in the value display is changed to the product name of the row.
-
-image::images/WebDropDown_Create_a_Multi_Column_WebDropDown_using_Templates_01.png[]
