@@ -122,7 +122,7 @@ pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.list
 ----
 
 [start=10]
-. Add the required server side data and bind the WebDropDown list items to it. For this walkthrough, a simple table is used. You can refer to the following link: http://www.infragistics.com/samples/aspnet/drop-down/templates[following online sample], in case you want to see a code the same example but illustrating to attach to an existing database. 
+. Add the required server side data and bind the WebDropDown list items to it. For this walkthrough, a simple table is used. You can refer to the following link: http://www.infragistics.com/samples/aspnet/drop-down/templates[following online sample], in case you want to see the same example but illustrating how to attach to an existing database instead. 
 [source]
 ----
 	//generate a table to be used as data source
