@@ -44,6 +44,16 @@ The following table summarizes the known issues and limitations of the Infragist
 |In scenarios where the `RowEditTemplate` contains WebTextEditors and is manually opened for the adding row the values of the WebTextEditors are not cleared after editing finishes. As a result when entering edit mode again the previous values are retained.
 |image:images\workaround.png[alt="Workaround"]
 
+|<<missing-client-side-handler, ClientSide event handler is not automatically added to aspx script block section>>
+|When the Behaviors Designer is opened from Source View and new client side event handler is added, the script section block is not modified with the JavaScript handler function.
+|image:images\workaround.png[alt="Workaround"]
+
+|<<missing-keyboard-events-during-ime-composition, DropDownProvider  keyboard events are missing during IME composition>>
+|Turn on key events on composition in Firefox. Set the *dom.keyboardevent.dispatch_during_composition* value to true in Firefox _about:config_ page in order to have keyboard events during composition.
+|image:images\workaround.png[alt="Workaround"]
+
+
+
 |=======
 
 === WebHierarchicalDataGrid
@@ -174,7 +184,7 @@ The workaround for that issue is to implement a custom logic on initial load whi
 </EditorProviders>
 ----
 
-The workaround: 
+The workaround:
 
 *In ASPX:*
 
@@ -223,9 +233,25 @@ protected void Page_PreRender(object sender, EventArgs e)
 {
     var templateContainer=  this.WebDataGrid.Behaviors.EditingCore.Behaviors.RowEditTemplate.TemplateContainer;
     WebTextEditor editor =(WebTextEditor)templateContainer.FindControl( "control_Item");
-    editor.Value = null;        
+    editor.Value = null;
 }
 ----
+
+[[missing-client-side-handler]]
+=== ClientSide event handler is not automatically added to aspx script block section
+
+In order to add client events for certain behaviors from the Behaviors Designer by double clicking on the client event box, it is recommended that WebDataGrid's Designer is opened from page *Design View* and not from page *Source View*.
+
+There is a way to add client events from *Source View*, with Visual Studio *Properties window*.
+
+_Example:_ Open the page in a *Source View* -> select *WebDataGrid markup tag*, go to *Behaviors* -> *EditingCore* -> *EditingClientEvents list* in properties window and double click on *RowDeleted event* in order to generate it.
+
+This limitation applies also to WebHierarchicalDataGrid control.
+
+[[missing-keyboard-events-during-ime-composition]]
+=== DropDownProvider keyboard events are missing during IME composition
+Turn on key events on composition in Firefox. Set the *dom.keyboardevent.dispatch_during_composition* value to true in Firefox's *about:config* page in order to have keyboard events during composition.
+
 
 == HierarchicalDataGrid
 
@@ -263,7 +289,7 @@ link:http://stackoverflow.com/questions/9908000/why-internet-explorer-checkbox-a
 
 In order for this scenario to work you should manually change checkbox state, when checkbox, inside WebDropDown item (or any other control), is double-clicked, in Internet Explorer.
 
-The workaround: 
+The workaround:
 
 *In ASPX:*
 [source,html]
