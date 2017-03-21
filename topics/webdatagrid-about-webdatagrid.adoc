@@ -5,7 +5,7 @@
     "name": "webdatagrid-about-webdatagrid",
     "controlName": ["WebDataGrid"],
     "tags": ["Grids"],
-    "guid": "{89790776-61A7-45F1-BC17-7993AA3DD5EB}",  
+    "guid": "{89790776-61A7-45F1-BC17-7993AA3DD5EB}",
     "buildFlags": [],
     "createdOn": "0001-01-01T00:00:00Z"
 }
@@ -19,6 +19,8 @@ WebDataGrid™ is built on top of the Infragistics ASP.NET AJAX framework. It is
 Like all Infragistics ASP.NET AJAX controls, WebDataGrid seamlessly integrates into the Infragistics® Application Styling framework. With CSS based properties, you can manually customize the WebDataGrid control by leveraging your existing style sheets.
 
 All the functionalities for a flexible, feature-rich grid control are present in WebDataGrid.
+
+Each Infragistics ASP.NET Ajax control is tested under *UTF8 character encoding* and it is expected to be used in this encoding.
 
 Some of WebDataGrid's features include:
 
