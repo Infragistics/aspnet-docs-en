@@ -18,9 +18,9 @@ The WebImageViewer's™ ScrollAnimation object allows you to configure the behav
 
 There are three different types of scroll animation:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.scrollanimations~continuous.html[Continuous]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.scrollanimations~nextitem.html[NextItem]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.scrollanimations~page.html[Page]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.scrollanimations~continuous.html[Continuous]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.scrollanimations~nextitem.html[NextItem]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.scrollanimations~page.html[Page]"] 
 
 == Continuous
 
@@ -28,9 +28,9 @@ When the Type property on the ScrollAnimations object is set to this value, the 
 
 The following properties can be set:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.continuousanimation~equationtype.html[EquationType]"]  -- Specifies the equation type of the animation (e.g., EaseOut, EaseIn and Linear).
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.animationobject~duration.html[Duration]"]  -- Specifies the length of time, in milliseconds, it will take for the animation to reach its maximum speed.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.continuousanimation~maxspeed.html[MaxSpeed]"]  -- Specifies the speed of the animation.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.continuousanimation~equationtype.html[EquationType]"]  -- Specifies the equation type of the animation (e.g., EaseOut, EaseIn and Linear).
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.animationobject~duration.html[Duration]"]  -- Specifies the length of time, in milliseconds, it will take for the animation to reach its maximum speed.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.continuousanimation~maxspeed.html[MaxSpeed]"]  -- Specifies the speed of the animation.
 
 == NextItem
 
@@ -38,9 +38,9 @@ When the Type property on the ScrollAnimations object is set to this value, clic
 
 The following properties can be set:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.nextitemanimation~equationtype.html[EquationType]"]  -- Specifies the equation type of the animation (e.g., EaseOut, EaseIn and Linear).
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.animationobject~duration.html[Duration]"]  -- Specifies the length of time, in milliseconds, it will take for the next image to scroll into alignment.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.nextitemanimation~alignment.html[Alignment]"]  -- Specifies the alignment for the next image (i.e., Near, Center and Far).
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.nextitemanimation~equationtype.html[EquationType]"]  -- Specifies the equation type of the animation (e.g., EaseOut, EaseIn and Linear).
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.animationobject~duration.html[Duration]"]  -- Specifies the length of time, in milliseconds, it will take for the next image to scroll into alignment.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.nextitemanimation~alignment.html[Alignment]"]  -- Specifies the alignment for the next image (i.e., Near, Center and Far).
 
 == Page
 
@@ -48,5 +48,5 @@ When the Type property on the ScrollAnimations object is set to this value, clic
 
 The following properties can be set:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.pageanimation~equationtype.html[EquationType]"]  - Specifies the equation type of the animation (e.g., EaseOut, EaseIn and Linear).
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.animationobject~duration.html[Duration]"]  - Specifies the length of time, in milliseconds, it will take for the next page to scroll into view.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.pageanimation~equationtype.html[EquationType]"]  - Specifies the equation type of the animation (e.g., EaseOut, EaseIn and Linear).
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.animationobject~duration.html[Duration]"]  - Specifies the length of time, in milliseconds, it will take for the next page to scroll into view.

@@ -18,7 +18,7 @@ The Infragistics ASP.NET product includes a new feature named Persistence Framew
 
 == How Persistence Framework Works
 
-The Persistence Framework uses reflection to save and load the persisted data. An object called pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.persistencemanager.html[PersistenceManager]*"] is responsible for operating with data in the framework. The manager object is implemented using the Singleton design pattern, which guarantees that we have only one instance that cares for the process.
+The Persistence Framework uses reflection to save and load the persisted data. An object called pick:[asp-net="* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.persistence.persistencemanager.html[PersistenceManager]*"] is responsible for operating with data in the framework. The manager object is implemented using the Singleton design pattern, which guarantees that we have only one instance that cares for the process.
 
 During every request to the server, the framework goes through certain steps. There are two stages of the persistence:
 
@@ -70,10 +70,10 @@ What the developer should care about is how and where to save the persisted data
 
 The Persistence Framework module fires four events. Inside the handlers that you will attach to these events, you can serialize and deserialize, modify and save the persisted data:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistenceloading_ev.html[PersistenceLoading]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistenceloaded_ev.html[PersistenceLoaded]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaving_ev.html[PersistenceSaving]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaved_ev.html[PersistenceSaved]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistenceloading_ev.html[PersistenceLoading]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistenceloaded_ev.html[PersistenceLoaded]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaving_ev.html[PersistenceSaving]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaved_ev.html[PersistenceSaved]"] 
 
 [[ignored_controls]]
 

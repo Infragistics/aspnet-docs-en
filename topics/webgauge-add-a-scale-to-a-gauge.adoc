@@ -56,15 +56,15 @@ image::images/Gauge_Add_Dial_01.png[A blank radial gauge that has a scale applie
 *To add scales to your gauge at design time:*
 
 [start=1]
-. In the Gauges Collection editor window, click the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgauge~scales.html[Scales]"]  property. Then, click the ellipsis button to open the Scales editor.
+. In the Gauges Collection editor window, click the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgauge~scales.html[Scales]"]  property. Then, click the ellipsis button to open the Scales editor.
 [start=2]
 . In the editor, click Add to add a new Scales.
 [start=3]
-. Set the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugescale~endangle.html[EndAngle]"]  property to 405.
+. Set the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgaugescale~endangle.html[EndAngle]"]  property to 405.
 [start=4]
-. Set the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugescale~startangle.html[StartAngle]"]  property to 135.
+. Set the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgaugescale~startangle.html[StartAngle]"]  property to 135.
 [start=5]
-. Click the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.axis.html[Axis]"]  property. Then, from the drop-down list, select Numeric Axis.
+. Click the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.axis.html[Axis]"]  property. Then, from the drop-down list, select Numeric Axis.
 [start=6]
 . Expand the Axis property and set the StartValue property to 0\.
 [start=7]

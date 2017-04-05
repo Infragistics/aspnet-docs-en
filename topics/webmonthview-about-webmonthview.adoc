@@ -18,7 +18,7 @@
 
 The WebMonthView™ control is a day-oriented view on the WebSchedule™. End users may view, add, update, and remove activities over a calendar month span of time. Presenting schedule information in this way delivers broad information emphasizing week-to-week patterns, days having more or less capacity, and activities spanning multiple days or weeks.
 
-pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  are shown for an individual  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource]"] . When the resource name matches the name of the logged on end user (as authenticated by the application) the end user can receive reminder notifications of pending or overdue activities. Otherwise the end user is assumed to be reviewing the schedule information for the resource.
+pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  are shown for an individual  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.resource.html[Resource]"] . When the resource name matches the name of the logged on end user (as authenticated by the application) the end user can receive reminder notifications of pending or overdue activities. Otherwise the end user is assumed to be reviewing the schedule information for the resource.
 
 image::images\WebSchedule_Features_WebMonthView_01.png[]
 

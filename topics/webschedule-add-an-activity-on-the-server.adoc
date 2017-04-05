@@ -14,7 +14,7 @@
 
 = Add an Activity on the Server
 
-In server-side code, you can add a new  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  to the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activitiescollection.html[Activities]"]  collection of the WebScheduleInfo™ after data binding to render that appointment for the current page request. Because your intention is only to render this activity, the PreRender event of the Page class is the best place to put it.
+In server-side code, you can add a new  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  to the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activitiescollection.html[Activities]"]  collection of the WebScheduleInfo™ after data binding to render that appointment for the current page request. Because your intention is only to render this activity, the PreRender event of the Page class is the best place to put it.
 
 .Note:
 [NOTE]
@@ -22,11 +22,11 @@ In server-side code, you can add a new  pick:[asp-net="link:infragistics4.webui.
 The Activities collection is never preserved in ViewState (even when ViewState is enabled) by design because of its redundancy with the data store. On each page request, the WebScheduleInfo re-binds to that data store. If you want to add this activity programmatically to the data store, see link:webschedule-add-an-activity-to-the-database.html[How to Add an Activity to the Database].
 ====
 
-If you do not see the Activity you have added, verify that you have called the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~databind.html[DataBind]"]  method on WebScheduleInfo before adding the Activity. Data binding clears the Activities collection in order to fill it with current scheduling information from the data store.
+If you do not see the Activity you have added, verify that you have called the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~databind.html[DataBind]"]  method on WebScheduleInfo before adding the Activity. Data binding clears the Activities collection in order to fill it with current scheduling information from the data store.
 
 For information on creating the activity, see link:webschedule-create-an-activity-using-code.html[How to Create an Activity in Code].
 
-To add an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"] , you must call the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activitiescollection~add.html[Add]"]  method on the Activities collection with this newly initialized Activity after data binding.
+To add an  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"] , you must call the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activitiescollection~add.html[Add]"]  method on the Activities collection with this newly initialized Activity after data binding.
 
 *In Visual Basic:*
 

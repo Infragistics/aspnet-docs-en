@@ -16,7 +16,7 @@
 
 All of the WebSchedule™ UI elements have a caption that displays across the top. Each view has displays different information in this area and what is displayed in this area can be specified as well.
 
-Sometimes you may not want this Header to be visible for this reason all the controls have a property called  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionHeaderVisible]"] , which is a boolean that will show or hide the caption header.
+Sometimes you may not want this Header to be visible for this reason all the controls have a property called  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionHeaderVisible]"] , which is a boolean that will show or hide the caption header.
 
 The code snippet below shows how you would set this property on all the controls.
 

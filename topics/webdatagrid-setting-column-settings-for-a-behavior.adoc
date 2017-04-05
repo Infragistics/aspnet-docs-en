@@ -21,12 +21,12 @@ For each behavior that you can set on a per column basis in the behaviors editor
 
 There are 6 different types of column settings, one for each behavior. The column settings are listed below.
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columneditsetting.html[ColumnEditSetting]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting.html[ColumnFilteringSetting]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizesetting.html[ColumnResizeSetting]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcolumnsetting.html[EditingColumnSetting]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowaddingcolumnsetting.html[RowAddingColumnSetting]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sortingcolumnsetting.html[SortingColumnSetting]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columneditsetting.html[ColumnEditSetting]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting.html[ColumnFilteringSetting]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizesetting.html[ColumnResizeSetting]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcolumnsetting.html[EditingColumnSetting]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowaddingcolumnsetting.html[RowAddingColumnSetting]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sortingcolumnsetting.html[SortingColumnSetting]"] 
 
 When adding column settings, especially in markup, make sure the setting corresponds to the behavior ( e.g, EditingColumnSetting is the setting to use for the Editing behavior ).
 
@@ -45,15 +45,15 @@ You will restrict data editing to only two columns using the behaviors editor of
 [start=1]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. Only include the columns CustomerID, CompanyName, ContactName, and ContactTitle. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=2]
-. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=3]
-. Check the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]  behavior from the list on the left to enable it.
+. Check the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]  behavior from the list on the left to enable it.
 [start=4]
-. In the properties for Cell Editing, select the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.cellediting~columnsettings.html[ColumnSettings]"]  property and click the ellipsis (…) button to launch the column settings designer.
+. In the properties for Cell Editing, select the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.cellediting~columnsettings.html[ColumnSettings]"]  property and click the ellipsis (…) button to launch the column settings designer.
 [start=5]
 . Add 2 Column Setting items for the CustomerID and CompanyName fields. Since these columns, in most cases, should not be edited by the end-user, you will make them read-only.
 
-.. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey]"]  property of the first column to CustomerID.
+.. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey]"]  property of the first column to CustomerID.
 +
 image::images/WebDataGrid_Setting_Column_Settings_for_a_Behavior_01.png[]
 

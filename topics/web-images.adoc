@@ -20,7 +20,7 @@ When dealing with the images, one thing to keep in mind, is that the browser mus
 
 * Absolute -- The image path is fully specified, starting at the server root.
 * Relative -- The image path is specified relative to the application root.
-* Resolved -- The image path is specified as a combination of the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.iprovideappstyling~imagedirectory.html[ImageDirectory]"]  property, which supplies the path, and the image file name. This type of image path tends to be used most often when working with Infragistics components. Application Styling's image directory is a combination of the StyleSetPath and StyleSetName name ending with images. For example if your Application Style Library is in ~/ig_res/Default, then your image directory would be located at ~/ig_res/Default/images.
+* Resolved -- The image path is specified as a combination of the  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.shared.iprovideappstyling~imagedirectory.html[ImageDirectory]"]  property, which supplies the path, and the image file name. This type of image path tends to be used most often when working with Infragistics components. Application Styling's image directory is a combination of the StyleSetPath and StyleSetName name ending with images. For example if your Application Style Library is in ~/ig_res/Default, then your image directory would be located at ~/ig_res/Default/images.
 
 == Image Gradients
 

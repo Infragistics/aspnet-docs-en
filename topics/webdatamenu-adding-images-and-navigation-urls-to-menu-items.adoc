@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-WebDataMenu™ allows adding images and navigation urls to the menu items without writing any code.You can easily add images and navigation urls by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitem~imageurl.html[ImageUrl]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitem~navigateurl.html[NavigateUrl]"]  properties of the menu item.
+WebDataMenu™ allows adding images and navigation urls to the menu items without writing any code.You can easily add images and navigation urls by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitem~imageurl.html[ImageUrl]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitem~navigateurl.html[NavigateUrl]"]  properties of the menu item.
 
 == What You Will Accomplish
 
@@ -27,7 +27,7 @@ You will learn how to add images and navigation urls to the menu items using the
 [start=1]
 . From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDataMenu control onto the form.
 [start=2]
-. Add two root items using the WebDataMenu Designer and set their  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitem~text.html[Text]"]  property to Products and Services. Add four child items to the Products root item and set their Text,NavigateUrl and ImageUrl properties as shown below :
+. Add two root items using the WebDataMenu Designer and set their  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitem~text.html[Text]"]  property to Products and Services. Add four child items to the Products root item and set their Text,NavigateUrl and ImageUrl properties as shown below :
 
 [options="header", cols="a,a,a"]
 |====

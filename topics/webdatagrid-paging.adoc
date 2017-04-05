@@ -25,9 +25,9 @@ The WebDataGrid™ control’s paging mechanism breaks data into pages reducing 
 [start=3]
 . Check the CheckBox next to Paging from the list on the left to add and enable the behavior.
 [start=4]
-. In the properties, set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging~pagesize.html[PageSize]"]  to 10, increasing the number of records per page to 10\.
+. In the properties, set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging~pagesize.html[PageSize]"]  to 10, increasing the number of records per page to 10\.
 [start=5]
-. Set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging~pagermode.html[PagerMode]"]  to NumericFirstLast which changes the pager links to numbers with links to the first and last pages.
+. Set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging~pagermode.html[PagerMode]"]  to NumericFirstLast which changes the pager links to numbers with links to the first and last pages.
 
 image::images/WebDataGrid_Enabling_Paging_02.png[]
 
@@ -65,7 +65,7 @@ WebDataGrid1.Behaviors.Paging.PagerMode = Infragistics.Web.UI.GridControls.Pager
 ----
 
 [start=7]
-. In the property window, check that the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableajax.html[EnableAjax]"]  property of WebDataGrid is set to True. If not, set it to True. WebDataGrid is ready to page data using AJAX.
+. In the property window, check that the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableajax.html[EnableAjax]"]  property of WebDataGrid is set to True. If not, set it to True. WebDataGrid is ready to page data using AJAX.
 
 image::images/WebDataGrid_Enabling_Paging_01.png[]
 

@@ -14,7 +14,7 @@
 
 = Drag and Drop
 
-The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] Drag and Drop feature provides functionality that allows your end user to drag a node or group of nodes and drop them on the same WebDataTree, or on another one.
+The link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] Drag and Drop feature provides functionality that allows your end user to drag a node or group of nodes and drop them on the same WebDataTree, or on another one.
 
 The behavior has three modes:
 

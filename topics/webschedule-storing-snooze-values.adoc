@@ -14,7 +14,7 @@
 
 = Storing Snooze Values
 
-link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledataproviderbase~snoozepersistencetype.html[SnoozePersistenceType]  is a property located on the WebScheduleDataProviders. It determines how snooze values will be stored when a user chooses to snooze an  link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]  using the Reminder Dialog. There are two enumerated values that it can be set to, ControlState and Cookie.
+link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledataproviderbase~snoozepersistencetype.html[SnoozePersistenceType]  is a property located on the WebScheduleDataProviders. It determines how snooze values will be stored when a user chooses to snooze an  link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]  using the Reminder Dialog. There are two enumerated values that it can be set to, ControlState and Cookie.
 
 == ControlState
 

@@ -16,9 +16,9 @@
 
 == Before You Begin:
 
-Business demands for real-world scheduling applications must sometimes associate additional information with the core concepts of resources (i.e., contact details such as a phone number) and activities (i.e., a follow-up date.) Inheritance is an object-oriented answer to adding properties containing extra information. In this advanced walkthrough you will learn how to extend the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  class with a follow-up Date property, and you will be introduced to other requirements for seamlessly integrating new properties into WebSchedule™ applications.
+Business demands for real-world scheduling applications must sometimes associate additional information with the core concepts of resources (i.e., contact details such as a phone number) and activities (i.e., a follow-up date.) Inheritance is an object-oriented answer to adding properties containing extra information. In this advanced walkthrough you will learn how to extend the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  class with a follow-up Date property, and you will be introduced to other requirements for seamlessly integrating new properties into WebSchedule™ applications.
 
-Before continuing you should feel comfortable using multiple WebSchedule views on a Web form that share a WebSchedule data provider, and working with existing properties on Appointment and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource]"]  objects. You should also have experience extending .NET Framework types using inheritance, overriding virtual members, and applying custom attributes.
+Before continuing you should feel comfortable using multiple WebSchedule views on a Web form that share a WebSchedule data provider, and working with existing properties on Appointment and  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.resource.html[Resource]"]  objects. You should also have experience extending .NET Framework types using inheritance, overriding virtual members, and applying custom attributes.
 
 image::images/WebSchedule_Extending_Appointments_and_Resources_1.PNG[]
 
@@ -122,7 +122,7 @@ public DateTime FollowUpDate
 .Note:
 [NOTE]
 ====
-In a global Web scheduling application, any date/time properties must be stored in a time zone-independent format. Therefore, you should convert them to/from Universal Coordinated Time (UTC) when storing/retrieving their value. Although not shown here, WebScheduleInfo provides your Appointment subclass with two methods for converting date/time values (wrapped in a SmartDate object) between UTC and the application's "display" time zone. See the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~convertutctotimezonetime.html[ConvertUtcToTimeZoneTime]"]  and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~converttimezonetimetoutc.html[ConvertTimeZoneTimeToUtc]"]  methods for more information.
+In a global Web scheduling application, any date/time properties must be stored in a time zone-independent format. Therefore, you should convert them to/from Universal Coordinated Time (UTC) when storing/retrieving their value. Although not shown here, WebScheduleInfo provides your Appointment subclass with two methods for converting date/time values (wrapped in a SmartDate object) between UTC and the application's "display" time zone. See the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~convertutctotimezonetime.html[ConvertUtcToTimeZoneTime]"]  and  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~converttimezonetimetoutc.html[ConvertTimeZoneTimeToUtc]"]  methods for more information.
 ====
 
 [start=5]

@@ -14,7 +14,7 @@
 
 = About WebDataMenu
 
-WebDataMenu™ is a control that can be used to create sophisticated menu layouts composed of menus and menu items. Menus serve as the basic containers of the control and contain a series of child menu items and menus. WebDataMenu is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebDataMenu in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols_namespace.html[Infragistics.Web.UI.NavigationControls]"]  namespace.
+WebDataMenu™ is a control that can be used to create sophisticated menu layouts composed of menus and menu items. Menus serve as the basic containers of the control and contain a series of child menu items and menus. WebDataMenu is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebDataMenu in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols_namespace.html[Infragistics.Web.UI.NavigationControls]"]  namespace.
 
 WebDataMenu includes integrated design-time tools in the form of an advanced Designer UI. This design-time utility helps you quickly and easily set up the control depending on your requirements, providing access to a wide range of WebDataMenu functionality without requiring intensive coding.
 

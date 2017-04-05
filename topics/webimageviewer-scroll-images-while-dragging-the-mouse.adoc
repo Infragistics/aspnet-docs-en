@@ -16,7 +16,7 @@
 
 The WebImageViewer™ control allows the end user to scroll through the images while dragging the mouse. The images are scrolled through using the Continuous scroll animation.
 
-By default, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~enabledragscrolling.html[EnableDragScrolling]"]  property is set to True.
+By default, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webimageviewer~enabledragscrolling.html[EnableDragScrolling]"]  property is set to True.
 
 The following code snippet sets EnableDragScrolling to False
 

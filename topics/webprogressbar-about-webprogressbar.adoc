@@ -14,7 +14,7 @@
 
 = About WebProgressBar
 
-WebProgressBar™ is a control that can be used to display the progress of a task. The WebProgressBar control can either be a static bar on the page or it can show a live updating progress using client-side code. WebProgressBar is built on top of the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebProgressBar in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols_namespace.html[Infragistics.Web.UI.DisplayControls]"]  namespace.
+WebProgressBar™ is a control that can be used to display the progress of a task. The WebProgressBar control can either be a static bar on the page or it can show a live updating progress using client-side code. WebProgressBar is built on top of the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebProgressBar in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols_namespace.html[Infragistics.Web.UI.DisplayControls]"]  namespace.
 
 The WebProgressBar control provides a visual indication of the current progress between a min and max value. The min, max and initial value of the control can be set easily using the control’s smart tag.
 

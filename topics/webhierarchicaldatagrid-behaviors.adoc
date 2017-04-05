@@ -14,44 +14,44 @@
 
 = Behaviors
 
-WebHierarchicalDataGrid™ supports many of the behaviors available in WebDataGrid™. All objects that implement the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand]"]  interface expose behavior settings. This means that you can set behaviors for Band and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid]"]  objects. Many behaviors are inheritable by child grids/bands, whereas others can only be set at the top level of the control. A specific inheritable behavior exposes the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~enableinheritance.html[EnableInheritance]"]  property to control whether a child grid inherits the behavior setting. You can override a behavior by configuring the specific behavior in a child grid/band; bands override top level behaviors and row islands override band behaviors.
+WebHierarchicalDataGrid™ supports many of the behaviors available in WebDataGrid™. All objects that implement the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand]"]  interface expose behavior settings. This means that you can set behaviors for Band and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid]"]  objects. Many behaviors are inheritable by child grids/bands, whereas others can only be set at the top level of the control. A specific inheritable behavior exposes the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting~enableinheritance.html[EnableInheritance]"]  property to control whether a child grid inherits the behavior setting. You can override a behavior by configuring the specific behavior in a child grid/band; bands override top level behaviors and row islands override band behaviors.
 
 === Inheritable Behaviors
 
 The following lists the available inheritable behaviors in WebHierarchicalDataGrid.
 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting.html[Sorting]"]
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering.html[Filtering]"]
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting.html[Sorting]"]
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering.html[Filtering]"]
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]
 
--  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]
+-  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]
 
--  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowediting.html[RowEditing]"]
+-  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowediting.html[RowEditing]"]
 
--  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]
+-  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]
 
--  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding.html[RowAdding]"]
+-  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowadding.html[RowAdding]"]
 
--  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate.html[Row Edit Template]"]
+-  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate.html[Row Edit Template]"]
 
 -  pick:[asp-net="link:webhierarchicaldatagrid-batch-updating.html[Batch Updating]"]
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowselectors.html[RowSelectors]"]
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowselectors.html[RowSelectors]"]
 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow.html[SummaryRow]"]
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow.html[SummaryRow]"]
 pick:[asp-net="link:webhierarchicaldatagrid-cell-merging.html[Cell Merging]"]
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnmoving.html[Column Moving]"]
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizing.html[Column Resizing]"]
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnmoving.html[Column Moving]"]
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizing.html[Column Resizing]"]
 
 === Singular Behaviors
 
 The following behaviors can only be set at the top level of WebHierarchicalDataGrid and applies to all levels.
 
--  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.activation.html[Activation]"]
+-  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.activation.html[Activation]"]
 
--  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection.html[Selection]"]
+-  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection.html[Selection]"]
 
--  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.clipboard.html[Clipboard]"]
+-  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.clipboard.html[Clipboard]"]
 
 == Related Topics
 

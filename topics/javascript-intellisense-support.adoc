@@ -20,13 +20,13 @@ With the 2010 Vol. 2 release comes the JavaScript IntelliSense support for all A
 
 == How to enable JavaScript IntelliSense
 
-To enable JavaScript IntelliSense just add the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.webscriptmanager.html[WebScriptManager] component to your page. It holds the needed references to ASP.NET AJAX controls, and the client-side functionality that they provide.
+To enable JavaScript IntelliSense just add the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.webscriptmanager.html[WebScriptManager] component to your page. It holds the needed references to ASP.NET AJAX controls, and the client-side functionality that they provide.
 
 image::images/JavaScript_IntelliSense_Support_01.png[]
 
 == How to use JavaScript IntelliSense
 
-Once you’ve added link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.webscriptmanager.html[WebScriptManager], you can get a reference to any Infragistics AJAX control. To do this, use the $IG..find method, where is the type of control that you need to cast to. This way the IntelliSense will directly expose its properties, methods and events.
+Once you’ve added link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.webscriptmanager.html[WebScriptManager], you can get a reference to any Infragistics AJAX control. To do this, use the $IG..find method, where is the type of control that you need to cast to. This way the IntelliSense will directly expose its properties, methods and events.
 
 *In Javascript:*
 

@@ -14,7 +14,7 @@
 
 = Drag and Drop Client Side API
 
-The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] control has many features that are available and easy to use on the Client-side. WebDataTree creates a client-side object with the ClientID of the control. To obtain a reference, use the following code:
+The link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] control has many features that are available and easy to use on the Client-side. WebDataTree creates a client-side object with the ClientID of the control. To obtain a reference, use the following code:
 
 ----
 var tree = $find('<%= WebDataTree1.ClientID %>');

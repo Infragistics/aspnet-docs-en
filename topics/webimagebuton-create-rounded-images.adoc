@@ -22,22 +22,22 @@ Whatever format is used, a few properties must be set on the WebImageButton cont
 
 image::Images\WebImageButon_Using_Rounded_Images_01.png[]
 
-Each of these properties reside under  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.webimagebutton~roundedcorners.html[WebImageButton.RoundedCorners]"] .
+Each of these properties reside under  pick:[asp-net="link:{ApiPlatform}webui.webdatainput{ApiVersion}~infragistics.webui.webdatainput.webimagebutton~roundedcorners.html[WebImageButton.RoundedCorners]"] .
 
-*  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.buttonroundedcorners~heightofbottomedge.html[HeightOfBottomEdge]"] :
+*  pick:[asp-net="link:{ApiPlatform}webui.webdatainput{ApiVersion}~infragistics.webui.webdatainput.buttonroundedcorners~heightofbottomedge.html[HeightOfBottomEdge]"] :
 
 The height, from the bottom up, of the portion of the image which must remain static for the button to keep its vertical shape. For buttons which are rounded on the sides and not the bottom, the button will not be able to adjust in height, so this property should be set to 0.
 
 Setting the HeightOfBottomEdge property to 0 prevents the WebImageButton from being reduced beneath its MaxHeight.
-*  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.buttonroundedcorners~widthofrightedge.html[WidthOfRightEdge]"] :
+*  pick:[asp-net="link:{ApiPlatform}webui.webdatainput{ApiVersion}~infragistics.webui.webdatainput.buttonroundedcorners~widthofrightedge.html[WidthOfRightEdge]"] :
 
 The height, from the right side of the button, of the portion of the image which must remain static for the button to keep its horizontal shape.
 
 Setting the WidthOfRightEdge property to 0 prevents the WebImageButton from being reduced beneath its MaxWidth.
-*  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.buttonroundedcorners~maxheight.html[MaxHeight]"] :
+*  pick:[asp-net="link:{ApiPlatform}webui.webdatainput{ApiVersion}~infragistics.webui.webdatainput.buttonroundedcorners~maxheight.html[MaxHeight]"] :
 
 The maximum height which the WebImageButton can support. In most cases, this will be the actual height of the image.
-*  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.buttonroundedcorners~maxwidth.html[MaxWidth]"] :
+*  pick:[asp-net="link:{ApiPlatform}webui.webdatainput{ApiVersion}~infragistics.webui.webdatainput.buttonroundedcorners~maxwidth.html[MaxWidth]"] :
 
 The maximum width which the WebImageButton can support. In most cases, this will be the actual width of the image.
 

@@ -14,7 +14,7 @@
 
 = Drop-Down Lists of WebHtmlEditor's Toolbar
 
-Instances of the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbardropdown.html[ToolbarDropDown]"]  class display a conventional drop down list which users can scroll through to make a selection. Your application should use a drop-down list when there are a limited number of known values an end user can specify for a specific operation, and that list could be too large to fit well on a context menu. Some examples of WebHtmlEditor™ toolbar drop-down lists include font name, font size, and font style.
+Instances of the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.toolbardropdown.html[ToolbarDropDown]"]  class display a conventional drop down list which users can scroll through to make a selection. Your application should use a drop-down list when there are a limited number of known values an end user can specify for a specific operation, and that list could be too large to fit well on a context menu. Some examples of WebHtmlEditor™ toolbar drop-down lists include font name, font size, and font style.
 
 The following is a list of the drop-down lists in the toolbar of the WebHtmlEditor control.
 

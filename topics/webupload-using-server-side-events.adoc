@@ -40,7 +40,7 @@ link:webupload-http-module-and-handler.html[Using the HTTP Handler and Module (W
 
 The WebUpload control includes a server-side implementation in Infragistics.Web.jQuery.dll to process and save the uploaded data using ASP.NET. This is achieved via a HTTP Module and HTTP Handler that process the server events necessary to accept the uploaded data. You can find more in-depth description and examples on how to configure them in the Using the link:webupload-http-module-and-handler.html[HTTP Handler and Module (WebUpload)] topic.
 
-The server architecture designed so that the handler and module communicate using proxy class called –  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.uploadprogressmanager.html[*UploadProgressManager* ]"] . This class is also responsible for triggering the server events. The events are the place where you can handle the file uploading process to perform actions like deleting and moving uploaded files, to cancel uploading, to modify status information.
+The server architecture designed so that the handler and module communicate using proxy class called –  pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.uploadprogressmanager.html[*UploadProgressManager* ]"] . This class is also responsible for triggering the server events. The events are the place where you can handle the file uploading process to perform actions like deleting and moving uploaded files, to cancel uploading, to modify status information.
 
 All the three server events have two arguments – one is sender the other is the event argument. The sender is a containing the *UploadProgressManager* , which fires the events. Event argument is specific for every one of the three events below and each event arg implements the IUploadEventArgs interface.
 
@@ -176,7 +176,7 @@ image::images/WebUpload_Handler_and_Module_01.png[]
 The other JSON properties – size, serverMessage and bytesUploaded, are not needed to be created as enumeration types on the server, like error and status, because they are either dynamically changed strings or numbers.
 ====
 
-*Table 1*: Enumeration of type  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.uploadstatus.html[*UploadStatus* ]"]
+*Table 1*: Enumeration of type  pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.uploadstatus.html[*UploadStatus* ]"]
 
 [options="header", cols="a,a"]
 |====
@@ -214,7 +214,7 @@ The other JSON properties – size, serverMessage and bytesUploaded, are not nee
 
 |====
 
-*Table 2*: Enumeration of type  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.fileerror.html[*FileError* ]"]
+*Table 2*: Enumeration of type  pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.fileerror.html[*FileError* ]"]
 
 [options="header", cols="a,a"]
 |====

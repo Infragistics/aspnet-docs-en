@@ -16,7 +16,7 @@
 
 == Before You Begin:
 
-WebCalcManager™ adds an extender property called  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings.html[CalcSettings]"]  to any control. The CalcSettings property allows for a control to participate in the calculation network. This allows calculations to be performed using almost any control as either the source or destination of a calculation, or possibly both.
+WebCalcManager™ adds an extender property called  pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings.html[CalcSettings]"]  to any control. The CalcSettings property allows for a control to participate in the calculation network. This allows calculations to be performed using almost any control as either the source or destination of a calculation, or possibly both.
 
 This walk through takes the values of two text boxes and adds them together and places the resulting value in a label.
 
@@ -34,7 +34,7 @@ This walk through takes the values of two text boxes and adds them together and 
 image::Images/WebCalcManager_Summing_Two_Controls_at_Design_Time_01.png[]
 
 [start=5]
-. Before any control can be used in a formula, the WebCalcManager needs to know which property of the control to use as the value of the Control. This is specified using the  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~propertyname.html[CalcSettings.PropertyName]"]  property.
+. Before any control can be used in a formula, the WebCalcManager needs to know which property of the control to use as the value of the Control. This is specified using the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~propertyname.html[CalcSettings.PropertyName]"]  property.
 
 Start with the first TextBox on the form (textBox1) and find the CalcSettings property. Expand this property and find the PropertyName property. Click the DropDown arrow to see a list of suggested properties to use. Note that any property of the control can be used; this list is just a suggestion of the most common properties. Choose "Text" from the list.
 
@@ -42,7 +42,7 @@ image::Images/WebCalcManager_Summing_Two_Controls_at_Design_Time_02.png[]
 
 Repeat this process for TextBox2 and Label1.
 [start=6]
-. Once the PropertyNames have been set, the controls will show up in the FormulaBuilder dialog. Go to the CalcSettings property of the Label and find the  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~formula.html[Formula]"]  property. Click the ellipsis to bring up the FormulaBuilder.
+. Once the PropertyNames have been set, the controls will show up in the FormulaBuilder dialog. Go to the CalcSettings property of the Label and find the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~formula.html[Formula]"]  property. Click the ellipsis to bring up the FormulaBuilder.
 
 On the left-hand side of this dialog is the Operands list. The Operands list is a tree of objects which can be used in a formula. Expand the Controls node and you will see the Label and the two TextBoxes. Each entry will be followed by a ".Text" indicating that the Text property of that control will be used.
 

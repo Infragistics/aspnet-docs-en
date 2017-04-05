@@ -16,9 +16,9 @@
 
 == User Average and Vote Count
 
-The WebRating™ control allows you to display rating images to the end users and record their input when they click on an image. The control stores the user’s average rating and vote count in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~average.html[Average]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~votecount.html[VoteCount]"]  properties, respectively. A rating and corresponding vote count is only recorded when the control posts back.
+The WebRating™ control allows you to display rating images to the end users and record their input when they click on an image. The control stores the user’s average rating and vote count in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~average.html[Average]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~votecount.html[VoteCount]"]  properties, respectively. A rating and corresponding vote count is only recorded when the control posts back.
 
-You can enable full-page or asynchronous postbacks by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~autopostbackflags.html[AutoPostBackFlags]"] . pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.ratingautopostbackflags~rated.html[Rated]"]  property. If the property is set to Async or On, the control will post back when a user clicks on a rating image.
+You can enable full-page or asynchronous postbacks by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~autopostbackflags.html[AutoPostBackFlags]"] . pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.ratingautopostbackflags~rated.html[Rated]"]  property. If the property is set to Async or On, the control will post back when a user clicks on a rating image.
 
 .Note:
 [NOTE]
@@ -28,7 +28,7 @@ The Average and VoteCount properties only store the current user’s average and
 
 == Rating Value
 
-The WebRating control’s average value is determined by the value specified for each rating item. This is determined by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.ratingimageitem~value.html[Value]"]  property for each  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.ratingimageitem.html[RatingImageItem]"]  object in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webratingimagecollection.html[WebRatingImageCollection]"]  collection. The average value is then calculated based on which image was clicked and the number of clicks.
+The WebRating control’s average value is determined by the value specified for each rating item. This is determined by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.ratingimageitem~value.html[Value]"]  property for each  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.ratingimageitem.html[RatingImageItem]"]  object in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webratingimagecollection.html[WebRatingImageCollection]"]  collection. The average value is then calculated based on which image was clicked and the number of clicks.
 
 For more information on setting rating values, see link:webrating-adding-webrating-items.html[Adding WebRating Items].
 
@@ -38,19 +38,19 @@ The WebRating control selects the rating value that the user last clicked on. Th
 
 image::images/WebRating_About_WebRating_01.png[]
 
-The selection is controlled by the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~enablecontinuousselection.html[EnableContinuousSelection]"]  property. This value is True by default which renders a selected style on all items preceding the selected value. You can set this property to False to render the selected style for only the selected item.
+The selection is controlled by the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~enablecontinuousselection.html[EnableContinuousSelection]"]  property. This value is True by default which renders a selected style on all items preceding the selected value. You can set this property to False to render the selected style for only the selected item.
 
 image::images/WebRating_About_WebRating_02.png[]
 
-The selected rating value is controlled by the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~precision.html[Precision]"]  property. This property takes 3 RatingPrecision enum values: Exact, Half, and Whole. The Exact value allows the end user to select a value precisely at the point that was clicked. The Half value rounds to the next half value, and Whole value rounds to the next whole value.
+The selected rating value is controlled by the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~precision.html[Precision]"]  property. This property takes 3 RatingPrecision enum values: Exact, Half, and Whole. The Exact value allows the end user to select a value precisely at the point that was clicked. The Half value rounds to the next half value, and Whole value rounds to the next whole value.
 
 .Note:
 [NOTE]
 ====
-With Half or Whole RatingPrecision values, you can still set an exact value by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~value.html[Value]"]  property in code.
+With Half or Whole RatingPrecision values, you can still set an exact value by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~value.html[Value]"]  property in code.
 ====
 
-WebRating also has a property called  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~enableshowselectiononhover.html[EnableShowSelectionOnHover]"]  which controls the display of the selected rating item based on mouse hover. This property is True by default and displays the selected value as the mouse is hovered over other values. When set to False it only displays values where the mouse is hovered.
+WebRating also has a property called  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~enableshowselectiononhover.html[EnableShowSelectionOnHover]"]  which controls the display of the selected rating item based on mouse hover. This property is True by default and displays the selected value as the mouse is hovered over other values. When set to False it only displays values where the mouse is hovered.
 
 == Custom Images and Styles
 

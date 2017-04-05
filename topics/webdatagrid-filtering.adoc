@@ -34,12 +34,12 @@ Filter rules default to All if not specified, showing all values for a column.
 
 *Boolean Filter Rules* – applies to Boolean columns.
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.booleanfilterrules.html[BooleanFilterRules]"] .True - value is true
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.booleanfilterrules.html[BooleanFilterRules]"] .True - value is true
 * BooleanFilterRules.False - value is false
 
 *Date/Time filter rules* - applies to DateTime columns.
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.datetimefilterrules.html[DateTimeFilterRules]"] .Equals – The value is equal to the provided value
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.datetimefilterrules.html[DateTimeFilterRules]"] .Equals – The value is equal to the provided value
 * DateTimeFilterRules.Before – The value falls before today’s date
 * DateTimeFilterRules.After – The value falls after today’s date
 * DateTimeFilterRules.Tomorrow – The value equals tomorrow's date
@@ -61,7 +61,7 @@ Filter rules default to All if not specified, showing all values for a column.
 
 *Numeric filter rules* - applies to numeric columns.
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.numericfilterrules.html[NumericFilterRules]"] .Equals – The cell value equals the provide value
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.numericfilterrules.html[NumericFilterRules]"] .Equals – The cell value equals the provide value
 * NumericFilterRules.DoesNotEqual – The cell value does not equal the provided value
 * NumericFilterRules.GreaterThan – The cell value is greater than the provided value
 * NumericFilterRules.GreaterThanOrEqualTo – The cell value is greater than or equal to the provided value
@@ -70,7 +70,7 @@ Filter rules default to All if not specified, showing all values for a column.
 
 *Text filter rules* - applies to String columns.
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.textfilterrules.html[TextFilterRules]"] .Equals – Cell value completely equals the provided value
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.textfilterrules.html[TextFilterRules]"] .Equals – Cell value completely equals the provided value
 * TextFilterRules.DoesNotEqual – The Cell value does not equal the provided value
 * TextFilterRules.BeginsWith – The cell value begins with the provided value
 * TextFilterRules.EndsWith – The cell value ends with the provided value
@@ -89,16 +89,16 @@ The classes that represent filter conditions are as follows:
 |====
 |Classes|Filter Data Type
 
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.ruleboolnode.html[RuleBoolNode]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.ruleboolnode.html[RuleBoolNode]"] 
 |Boolean
 
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.ruledatenode.html[RuleDateNode]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.ruledatenode.html[RuleDateNode]"] 
 |DateTime
 
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rulenumbernode.html[RuleNumberNode]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rulenumbernode.html[RuleNumberNode]"] 
 |Numeric
 
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.ruletextnode.html[RuleTextNode]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.ruletextnode.html[RuleTextNode]"] 
 |Text
 
 |====
@@ -114,16 +114,16 @@ image::images/WebDataGrid_Filtering.png[]
 [start=1]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Orders table. Retrieve only the OrderID, CustomerID, OrderDate, and RequiredDate fields. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=2]
-. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=3]
 . Check the CheckBox for the Filtering behavior from the list on the left to enable it.
 [start=4]
 . Set the initial filtering condition so that WebDataGrid only filters in data within a certain date.
 
-.. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~columnfilters.html[ColumnFilters]"]  property and click the ellipsis (...) button to launch the Column Filter Editor Dialog.
+.. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~columnfilters.html[ColumnFilters]"]  property and click the ellipsis (...) button to launch the Column Filter Editor Dialog.
 .. Add two Column Filters by clicking the Add Item button.
-.. Set one filter’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilter~columnkey.html[ColumnKey]"]  property as OrderDate and the other as CustomerID, to specify the columns to filter.
-.. Click the expansion indicator of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilter~condition.html[Condition]"]  property for the OrderDate column. The Rule and Value properties appear.
+.. Set one filter’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilter~columnkey.html[ColumnKey]"]  property as OrderDate and the other as CustomerID, to specify the columns to filter.
+.. Click the expansion indicator of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilter~condition.html[Condition]"]  property for the OrderDate column. The Rule and Value properties appear.
 .. Set the Rule to After and the Value to 12/31/1996.
 
 image::images/WebDataGrid_Enabling_WebDataGrid_Filtering_02.png[]

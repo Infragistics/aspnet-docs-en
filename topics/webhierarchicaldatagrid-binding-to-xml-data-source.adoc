@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-WebHierarchicalDataGrid™ allows you to bind to hierarchical data with sibling bands. The control displays the sibling data as separate container grids. With sibling data, a parent row may have more than one set of data islands. To reference a specific data island belonging to a particular row, use the row's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergridrecord~rowislands.html[RowIslands] property with the band's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band~datamember.html[DataMember] name or key as the accessor.
+WebHierarchicalDataGrid™ allows you to bind to hierarchical data with sibling bands. The control displays the sibling data as separate container grids. With sibling data, a parent row may have more than one set of data islands. To reference a specific data island belonging to a particular row, use the row's link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergridrecord~rowislands.html[RowIslands] property with the band's link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band~datamember.html[DataMember] name or key as the accessor.
 
 == What You Will Accomplish
 
@@ -44,7 +44,7 @@ You will learn how to bind to an XmlDataSource that retrieves hierarchical data 
 ----
 
 [start=6]
-. Set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datasourceid.html[DataSourceID] property of WebHierarchicalDataGrid to "XmlDataSource1", the ID of the XmlDataSource control.
+. Set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datasourceid.html[DataSourceID] property of WebHierarchicalDataGrid to "XmlDataSource1", the ID of the XmlDataSource control.
 [start=7]
 . Set up the root band's column schema.
 

@@ -14,9 +14,9 @@
 
 = Show Weekends as Separate Days
 
-WebMonthView™ by default shows the Weekends compressed as one day. You can change this functionality if you want by setting the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview~weekenddisplayformat.html[WeekendDisplayFormat]"]  property.
+WebMonthView™ by default shows the Weekends compressed as one day. You can change this functionality if you want by setting the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webmonthview~weekenddisplayformat.html[WeekendDisplayFormat]"]  property.
 
-The code below shows the setting of this property using the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.weekenddisplayformat.html[WeekendDisplayFormat]"]  enumeration.
+The code below shows the setting of this property using the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.weekenddisplayformat.html[WeekendDisplayFormat]"]  enumeration.
 
 image::images/WebSchedule_How_to_Show_Separate_Days_for_Saturday_and_Sunday_01.png[]
 

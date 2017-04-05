@@ -16,11 +16,11 @@
 
 WebExplorerBar™ provides CSS properties that can be used to customize the outfit of the control. Here is a list of CSS class properties that can be applied to both groups and items:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~cssclass.html[CssClass]"]  – applied to group or item header container.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~selectedcssclass.html[SelectedCssClass]"]  – applied to group or item header container when it becomes selected.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~activecssclass.html[ActiveCssClass]"]  – applied to group or item header container when it becomes active. This happens only when the control has focus. A group or item becomes visually active when we are navigating on it with the keyboard, or clicking on it with the mouse. Active style is usually combined with Selected style.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~disabledcssclass.html[DisabledCssClass]"]  applied to group or item header container when it is disabled.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~hovercssclass.html[HoverCssClass]"]  – applied to group or item header container when it is hovered over.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~cssclass.html[CssClass]"]  – applied to group or item header container.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~selectedcssclass.html[SelectedCssClass]"]  – applied to group or item header container when it becomes selected.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~activecssclass.html[ActiveCssClass]"]  – applied to group or item header container when it becomes active. This happens only when the control has focus. A group or item becomes visually active when we are navigating on it with the keyboard, or clicking on it with the mouse. Active style is usually combined with Selected style.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~disabledcssclass.html[DisabledCssClass]"]  applied to group or item header container when it is disabled.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~hovercssclass.html[HoverCssClass]"]  – applied to group or item header container when it is hovered over.
 
 The following example shows how to apply SelectedCssClass:
 

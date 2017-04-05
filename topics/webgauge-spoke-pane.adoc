@@ -14,7 +14,7 @@
 
 = Spoke Pane
 
-The  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedle~backanchor.html[Back Anchor]"]  property of the WebGauge control is used in connection with the Needle  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugescale~markers.html[Marker]"]  property. The back anchor is drawn underneath the Anchor.
+The  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgaugeneedle~backanchor.html[Back Anchor]"]  property of the WebGauge control is used in connection with the Needle  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgaugescale~markers.html[Marker]"]  property. The back anchor is drawn underneath the Anchor.
 
 You can style the back anchor on your gauge using the Back Anchor Layout tab of the Properties panel. You can access this tab by either clicking Back Anchor in the Gauge Explorer (Radial Gauge > Scales > Markers > Needle > Back Anchor) or clicking the back anchor of your Radial gauge in the interactive preview area.
 

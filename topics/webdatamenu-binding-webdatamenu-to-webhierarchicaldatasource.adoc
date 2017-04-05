@@ -58,7 +58,7 @@ image::images\WebDataMenu_Binding_WebDataMenu_to_WebHierarchicalDataSource_01.pn
 [start=4]
 . At this point your WebDataMenu doesn’t show the data. To specify the data bindings click Edit DataBindings from the WebDataMenu control’s smart tag in order to open the WebDataMenu Designer dialog.
 [start=5]
-. Select the categoriesDataSource_DefaultView and click Add DataBinding. This will add the node to the Selected databindings area. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitembinding~textfield.html[TextField]"]  property to CategoryName by clicking the drop-down list in the property window so that CategoryName will be the display text of the node. Similarly, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitembinding~valuefield.html[ValueField]"]  property to CategoryID.
+. Select the categoriesDataSource_DefaultView and click Add DataBinding. This will add the node to the Selected databindings area. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitembinding~textfield.html[TextField]"]  property to CategoryName by clicking the drop-down list in the property window so that CategoryName will be the display text of the node. Similarly, set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitembinding~valuefield.html[ValueField]"]  property to CategoryID.
 [start=6]
 . Repeat the above step to add the following data bindings to the productsDataSource_DefaultView :
 

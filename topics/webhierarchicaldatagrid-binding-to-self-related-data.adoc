@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-You can bind WebHierarchicalDataGrid™ to a self-related data source. The control displays the data in a hierarchical view; however, it contains only 1 band. Since a self-referential data source can have an infinite amount of levels in its hierarchy, you can use the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~maxdatabinddepth.html[MaxDataBindDepth] property to set the maximum data binding depth.
+You can bind WebHierarchicalDataGrid™ to a self-related data source. The control displays the data in a hierarchical view; however, it contains only 1 band. Since a self-referential data source can have an infinite amount of levels in its hierarchy, you can use the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~maxdatabinddepth.html[MaxDataBindDepth] property to set the maximum data binding depth.
 
 == What You Will Accomplish
 
@@ -37,7 +37,7 @@ You will learn how to bind to a self-referential data set using the Employees ta
 .. Set up a self relation using the EmployeeID and ReportsTo columns.
 .. Set the primary key field for the Employees table.
 .. Store the table in Session state.
-.. Set WebHierchicalDataGrid's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~isselfreference.html[IsSelfReference] property to True to allow self referencing data.
+.. Set WebHierchicalDataGrid's link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~isselfreference.html[IsSelfReference] property to True to allow self referencing data.
 .. Set up the MaxDataBindDepth property to 2 to allow 3 levels of data. The property allows 1 level of data (the root level) with a value of 0, and allows all levels with a value of -1.
 
 *In Visual Basic:*

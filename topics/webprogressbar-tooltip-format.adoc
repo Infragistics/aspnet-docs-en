@@ -14,7 +14,7 @@
 
 = ToolTip Format
 
-WebProgressBar™ supports tooltips that help relay progress information when the mouse is hovered over the control. The tooltip can be formatted to leverage six different values by using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~tooltip.html[ToolTip]"]  property of WebProgressBar along with any of the custom format strings that represent various progress information. The following is the list of intrinsic string values that you can insert into the tooltip format string so that you can customize the information that is displayed in your tooltip:
+WebProgressBar™ supports tooltips that help relay progress information when the mouse is hovered over the control. The tooltip can be formatted to leverage six different values by using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~tooltip.html[ToolTip]"]  property of WebProgressBar along with any of the custom format strings that represent various progress information. The following is the list of intrinsic string values that you can insert into the tooltip format string so that you can customize the information that is displayed in your tooltip:
 
 * {0} or {ProgressValue} : Shows the current progress value
 * {1} or {PercentProgress} : Shows the current progress in percentage
@@ -26,7 +26,7 @@ WebProgressBar™ supports tooltips that help relay progress information when th
 *To show the remaining progress in the tooltip of WebProgressBar :*
 
 [start=1]
-. Place WebProgressBar control on the form and set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~minimum.html[Minimum]"]  ,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~maximum.html[Maximum]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  properties as show in the following code:
+. Place WebProgressBar control on the form and set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~minimum.html[Minimum]"]  ,  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~maximum.html[Maximum]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  properties as show in the following code:
 
 *In Visual Basic:*
 

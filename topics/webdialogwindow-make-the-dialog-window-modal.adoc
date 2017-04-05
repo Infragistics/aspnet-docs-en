@@ -14,7 +14,7 @@
 
 = Make the Dialog Window Modal
 
-There may be times when you need input from your end users and cannot continue without it. In cases like these, you can display the WebDialogWindow™ control's dialog window as a modal dialog box, similar to a modal dialog box in Windows Forms. This is useful if an error occurs and you need your end user to correct the error before they can continue. Turning the dialog window into a modal dialog box requires you to set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~modal.html[Modal]"]  property to True. Once the dialog window is modal, the end user will not be able to interact with any other part of the web page until the dialog window is dismissed again.
+There may be times when you need input from your end users and cannot continue without it. In cases like these, you can display the WebDialogWindow™ control's dialog window as a modal dialog box, similar to a modal dialog box in Windows Forms. This is useful if an error occurs and you need your end user to correct the error before they can continue. Turning the dialog window into a modal dialog box requires you to set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~modal.html[Modal]"]  property to True. Once the dialog window is modal, the end user will not be able to interact with any other part of the web page until the dialog window is dismissed again.
 
 The following code demonstrates how to turn the dialog window into a modal dialog box.
 

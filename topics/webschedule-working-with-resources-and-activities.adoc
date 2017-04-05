@@ -16,7 +16,7 @@
 
 == Before You Begin:
 
-The purpose of this walk-through is to familiarize you with the concepts of  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resources]"]  and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  in WebSchedule™.
+The purpose of this walk-through is to familiarize you with the concepts of  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.resource.html[Resources]"]  and  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  in WebSchedule™.
 
 This walk-through assumes that you have completed one of the following WebSchedule quick-start walk-throughs:
 
@@ -45,7 +45,7 @@ using Infragistics.WebUI.WebSchedule;
 [start=2]
 . *Add a Resource to the WebSchedule database.*
 
-By default, the WebSchedule sample database contains only one resource, "Unassigned". WebSchedule is designed for applications with many users. Resources can be added through the WebSchedule API using the DataProvider's  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider~addresource.html[AddResource]"]  method.
+By default, the WebSchedule sample database contains only one resource, "Unassigned". WebSchedule is designed for applications with many users. Resources can be added through the WebSchedule API using the DataProvider's  pick:[asp-net="link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledbprovider~addresource.html[AddResource]"]  method.
 
 To add a resource to use in this sample, browse to the WebSchedule Admin Sample in the ASP.NET Samples Browser. On the "Manage Resources" tab, click the Add Resource button and enter values in the dialog box to create a new resource.
 
@@ -103,7 +103,7 @@ private void Page_Load(object sender, System.EventArgs e)
 [start=4]
 . *Run the project.*
 
-The result doesn't look any different from the Quick-Start Walk-Through when the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.fetchresourcescontext~activeresourcename.html[ActiveResource]"]  was "Unassigned". However, now only the activities for "Sample User" can be seen and edited in the WebSchedule controls.
+The result doesn't look any different from the Quick-Start Walk-Through when the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.fetchresourcescontext~activeresourcename.html[ActiveResource]"]  was "Unassigned". However, now only the activities for "Sample User" can be seen and edited in the WebSchedule controls.
 
 At this time, you can repeat the steps of this walk-through to add another resource.
 

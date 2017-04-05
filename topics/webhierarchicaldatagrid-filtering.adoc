@@ -22,7 +22,7 @@ The core filtering functionality remains the same as that of WebDataGrid. This a
 
 == Filtering Hierarchical Data
 
-Each band in WebHierarchicalDataGrid can be assigned a Filtering behavior. You can set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editablebehaviorbase~enableinheritance.html[EnableInheritance]"]  property of a band to enable child bands to inherit the setting. This allows you to customize filtering behavior in each band of data. For example, if you want filtering for all bands in WebHierarchicalDataGrid, just enable the Filtering behavior at the root level and set EnableInheritance to True. If you want to disable the behavior for a specific child band, disable the behavior for that specific band.
+Each band in WebHierarchicalDataGrid can be assigned a Filtering behavior. You can set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editablebehaviorbase~enableinheritance.html[EnableInheritance]"]  property of a band to enable child bands to inherit the setting. This allows you to customize filtering behavior in each band of data. For example, if you want filtering for all bands in WebHierarchicalDataGrid, just enable the Filtering behavior at the root level and set EnableInheritance to True. If you want to disable the behavior for a specific child band, disable the behavior for that specific band.
 
 == Filtering Child Bands
 
@@ -39,7 +39,7 @@ Bellow you can find a walkthrough on enabling the filtering functionality.
 [start=1]
 . Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource component retrieving data from the Customers and Orders tables of Northwind. For more information on doing this, see Binding WebHierarchicalDataGrid to a WebHierarchicalDataSource.
 [start=2]
-. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=3]
 . Check the check box for the Activation behavior from the list on the left to enable it.
 [start=4]
@@ -47,11 +47,11 @@ Bellow you can find a walkthrough on enabling the filtering functionality.
 [start=5]
 . Set the initial filtering condition for the Customer band so that WebHierarchicalDataGrid only filters in data for Sales Representatives.
 
-.. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilters.html[ColumnFilters]"]  property and click the ellipsis (...) button to launch the Column Filter Editor Dialog.
+.. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilters.html[ColumnFilters]"]  property and click the ellipsis (...) button to launch the Column Filter Editor Dialog.
 .. Add a Column Filter by clicking the Add Item button.
-.. Set the filter’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilter~columnkey.html[ColumnKey]"]  property to ContactTitle.
+.. Set the filter’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilter~columnkey.html[ColumnKey]"]  property to ContactTitle.
 .. Select RuleTextNode in the drop-down for the Condition property.
-.. Click the expansion indicator of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilter~condition.html[Condition]"]  property for the column. The Rule and Value properties appear.
+.. Click the expansion indicator of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilter~condition.html[Condition]"]  property for the column. The Rule and Value properties appear.
 .. Set the Rule to Equals and the Value to Sales Representative.
 .. Click Apply then OK to close the Column Filter Editor Dialog.
 .. Click Apply then OK to close the Behaviors Editor Dialog.
@@ -59,11 +59,11 @@ Bellow you can find a walkthrough on enabling the filtering functionality.
 [start=6]
 . Set the initial filtering condition for the child Order band so that WebHierarchicalDataGrid only filters in data with dates after 12/31/1996.
 
-.. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~bands.html[Bands]"]  property and click the ellipsis (…) button. The Edit Bands dialog displays.
+.. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~bands.html[Bands]"]  property and click the ellipsis (…) button. The Edit Bands dialog displays.
 .. Add a child band to the root band by clicking the Add Child button.
-.. Change the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band~key.html[Key]"]  to Orders.
-.. Set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band~datamember.html[DataMember]"]  to AccessDataSource2_Orders.
-.. Set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band~datakeyfields.html[DataKeyFields]"]  to OrderID.
+.. Change the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band~key.html[Key]"]  to Orders.
+.. Set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band~datamember.html[DataMember]"]  to AccessDataSource2_Orders.
+.. Set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band~datakeyfields.html[DataKeyFields]"]  to OrderID.
 .. Click the ellipsis (…) button for the Behaviors property.
 .. Check the checkbox for the Filtering behavior.
 .. Click the ellipsis (…) button for the ColumnFilters property.

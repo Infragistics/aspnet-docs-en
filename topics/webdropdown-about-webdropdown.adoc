@@ -14,7 +14,7 @@
 
 = About WebDropDown
 
-WebDropDown™ is a control that allows the end-user to select single or multiple items from a drop-down list. WebDropDown is built on top of the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find the WebDropDown in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols_namespace.html[Infragistics.Web.UI.ListControls]"]  namespace.
+WebDropDown™ is a control that allows the end-user to select single or multiple items from a drop-down list. WebDropDown is built on top of the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find the WebDropDown in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols_namespace.html[Infragistics.Web.UI.ListControls]"]  namespace.
 
 image::images/WebDropDown_About_WebDropDown_01.png[]
 

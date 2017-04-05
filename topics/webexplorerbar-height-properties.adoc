@@ -14,7 +14,7 @@
 
 = WebExplorerBar Height Properties
 
-Configuring the height of WebExplorerBar™ can be done by using control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~height.html[Height]"]  ,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groupcontentsheight.html[GroupContentsHeight]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~maxgroupheight.html[MaxGroupHeight]"]  properties.
+Configuring the height of WebExplorerBar™ can be done by using control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~height.html[Height]"]  ,  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groupcontentsheight.html[GroupContentsHeight]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~maxgroupheight.html[MaxGroupHeight]"]  properties.
 
 * Height – Specifies control container height; if WebExplorerBar Groups and Items content Height exceed the Height property value, a scrollbar occurs.
 

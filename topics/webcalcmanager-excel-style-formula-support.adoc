@@ -22,7 +22,7 @@ In addition, support was added for more complex column summary formulas beyond t
 
 There was also a wish to integrate other simple bound controls into a shared calculation network. For example, a textbox might allow you to enter-in an overall 'factor' value that can be referenced by formulas in one (or more) grid(s) on the same form.
 
-In creating the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.calcengine_namespace.html[CalcEngine]"] , the following design constraints apply:
+In creating the  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.calcengine_namespace.html[CalcEngine]"] , the following design constraints apply:
 
 === Design Constraints
 
@@ -37,7 +37,7 @@ In creating the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion
 
 Formula support, although primarily intended to be used with the WebGrid elements, can be used by other controls as well. Simple bound controls including textboxes, labels and WebEditors™ don't have to be modified in any way to support formulas. Complex controls and components such as the WebGrid require modifications in their object models to support formulas.
 
-This functionality is primarily exposed by the UltraCalcEngine class,  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.ultrawebcalcmanager.html[UltraWebCalcManager]"]  component and the formula designer.
+This functionality is primarily exposed by the UltraCalcEngine class,  pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.ultrawebcalcmanager.html[UltraWebCalcManager]"]  component and the formula designer.
 
 * The UltraCalcEngine is a class and not a component or a control. An UltraCalcEngine represents a calculation network; it performs the tasks of formula compilation, formula evaluation and management of reference objects which are the source of values in a formula evaluation, as well as targets of formula evaluations. Typically, you will not interact with the UltraCalcEngine unless you want to perform some advanced task that can't otherwise be accomplished via normal procedures. Under normal circumstances, you don't even have to be aware of UltraCalcEngine interacting with the UltraCalcManager component or simply with the grid.
 * The UltraCalcManager component is what the user instantiates on the component tray of a form to turn on formula support for the controls on the form.
@@ -58,7 +58,7 @@ References are objects that are either the source of values to be used in formul
 
 Named references as mentioned previously are reference objects maintained by UltraCalcManager that implement the IUltraCalcReference interface. UltraCalcManager exposes named references as a keyed collection of references where the key is the name of the named reference. UltraCalcManager provides a user interface during design-time to allow a user to add named references; these references may contain either constant values or formulas.
 
-In order to minimize the addition of assembly dependencies, the following measures were taken, regarding code/assembly organization: A single, new assembly named Infragistics.Win.UltraCalcEngine was created that contains both the UltraCalcEngine class and the UltraCalcManager component. There will be a similarly-named assembly to support web forms. WinGrid and other controls providing formula support do not depend on this assembly. However, WinGrid does need to communicate with UltraCalcManager for things like formula compilation, evaluation, as well as reference management. It does so via interfaces, like  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.calcengine.iultracalcmanager.html[IUltraCalcManager]"] , defined in the Infragistics.WebUI.Shared assemblies.
+In order to minimize the addition of assembly dependencies, the following measures were taken, regarding code/assembly organization: A single, new assembly named Infragistics.Win.UltraCalcEngine was created that contains both the UltraCalcEngine class and the UltraCalcManager component. There will be a similarly-named assembly to support web forms. WinGrid and other controls providing formula support do not depend on this assembly. However, WinGrid does need to communicate with UltraCalcManager for things like formula compilation, evaluation, as well as reference management. It does so via interfaces, like  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.calcengine.iultracalcmanager.html[IUltraCalcManager]"] , defined in the Infragistics.WebUI.Shared assemblies.
 
 === Defined Interfaces in Shared Assemblies
 

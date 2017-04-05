@@ -17,4 +17,4 @@
 The VideoPlayer is built as a jQuery UI widget with an accompanying ASP.NET Helper. For more information about each API, see the following API documentation:
 
 * link:{jQueryApiLink}/ui.igvideoplayer[VideoPlayer jQuery API]
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.webvideoplayer.html[VideoPlayer ASP.NET Helper API]
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.displaycontrols.webvideoplayer.html[VideoPlayer ASP.NET Helper API]

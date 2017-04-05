@@ -33,14 +33,14 @@ You will learn how to show a grid like structure in the drop-down container of a
 == Follow these Steps
 
 [start=1]
-. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDropDown control onto the form. Set the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~currentvalue.html[CurrentValue]"] property to “Select Owner”. This will be the text initially displayed in the WebDropDown™ input prior to making a selection from the list.
+. From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDropDown control onto the form. Set the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~currentvalue.html[CurrentValue]"] property to “Select Owner”. This will be the text initially displayed in the WebDropDown™ input prior to making a selection from the list.
 [start=2]
-. Set the pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem~textfield.html[textfield]"] property to “Name”. It lets you choose the column name you want to show in the value display. Link the WebDropDown™ DataSource to the GetGridData() method supplied at step 10.
+. Set the pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.dropdownitem~textfield.html[textfield]"] property to “Name”. It lets you choose the column name you want to show in the value display. Link the WebDropDown™ DataSource to the GetGridData() method supplied at step 10.
 [start=3]
 . Set the following WebDropDown properties.
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enableanimations.html[EnableAnimations]"] ="false".
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~DropDownContainerHeight.html[DropDownContainerHeight]"] ="135px".
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~DropDownContainerWidth.html[DropDownContainerWidth]"] ="480px".
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~enableanimations.html[EnableAnimations]"] ="false".
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~DropDownContainerHeight.html[DropDownContainerHeight]"] ="135px".
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~DropDownContainerWidth.html[DropDownContainerWidth]"] ="480px".
 [start=4]
 . Click Edit Templates from the smart tag of the WebDropDown. This will show the WebDropDown in the Template Editing Mode.
 [start=5]

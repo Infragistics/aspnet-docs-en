@@ -16,11 +16,11 @@
 
 == Before You Begin
 
-The WebProgressBar™ control’s progress label text can be accessed so that it can be displayed within any other control. For example, you may want to display the remaining progress within a Label control. The WebProgressBar control’s client side object model (CSOM) exposes this text through the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~formattedlabel.html[FormattedLabel]"]  property.
+The WebProgressBar™ control’s progress label text can be accessed so that it can be displayed within any other control. For example, you may want to display the remaining progress within a Label control. The WebProgressBar control’s client side object model (CSOM) exposes this text through the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~formattedlabel.html[FormattedLabel]"]  property.
 
 == What You Will Accomplish
 
-You will display the WebProgressBar control’s progress label text within a standard label control. You will achieve this by handling the WebProgressBar  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.progressbarclientevents~progresschanged.html[ProgressChanged]"]  client-side event and using the FormattedLabel property.
+You will display the WebProgressBar control’s progress label text within a standard label control. You will achieve this by handling the WebProgressBar  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.progressbarclientevents~progresschanged.html[ProgressChanged]"]  client-side event and using the FormattedLabel property.
 
 In this topic, you will use the WebSlider™ control so that whenever the end-user moves the slider, the WebProgressBar progress is updated. The WebProgressBar formatted label text that shows the remaining percentage is then displayed within a Label control.
 
@@ -33,7 +33,7 @@ In this topic, you will use the WebSlider™ control so that whenever the end-us
 [start=3]
 . The WebProgressBar and WebSlider can be left with their default minimum and maximum values.
 [start=4]
-. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelformatstring.html[LabelFormatString]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelalignment.html[LabelAlignment]"]  properties as shown in the following code:
+. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelformatstring.html[LabelFormatString]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelalignment.html[LabelAlignment]"]  properties as shown in the following code:
 
 *In Visual Basic:*
 
@@ -54,7 +54,7 @@ In this topic, you will use the WebSlider™ control so that whenever the end-us
 ----
 
 [start=5]
-. Handle the WebSlider control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.sliderclientevents~valuechanged.html [ValueChanged]"]  client-side event to display its current value in the WebProgressBar.
+. Handle the WebSlider control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.sliderclientevents~valuechanged.html [ValueChanged]"]  client-side event to display its current value in the WebProgressBar.
 
 *In JavaScript:*
 

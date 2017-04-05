@@ -82,12 +82,12 @@ The following table lists the configurable aspects of the Excel-Style Filtering 
 |<<_Ref336019695,Configuring the Capitalization of the Unique Values in the Filtering Drop-Down>>
 |You can specify the capitalization of values into the filtering dropdown. The available options are: lowercase capitalization, uppercase capitalization, and camelcase capitalization.
 |
-* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] 
+* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] 
 
 |<<_Ref329857572,Configuring the Text for the Null Values in the Filtering Drop-Down>>
 |You can specify custom text for Null values in the filtering drop-down.
 |
-* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]
+* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]
 
 |====
 
@@ -105,7 +105,7 @@ The capitalization options for the unique values are the following:
 *  *Uppercase*   *capitalization*  – the items appear in uppercase letters (all caps)
 *  *Camelcase capitalization*  – the items appear with sentence capitalization (Only the first letter of the item is capitalized even if the item consists of more than one words.)
 
-The capitalization is managed by the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property.
+The capitalization is managed by the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property.
 
 The capitalization of unique values can be set on two levels – per column and for the whole grid depending on whether the respective property of the grid or of the column is being set. The column setting takes priority.
 
@@ -120,15 +120,15 @@ The following table maps the desired capitalization configurations of the proper
 |In order to:|Use this property:|And set it to:
 
 |Configure lowercase capitalization for the items in the filtering drop-down in lower case
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing]
 | _Lower_ 
 
 |Configure uppercase capitalization for the items in the filtering drop-down in upper case
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing]
 | _Upper_ 
 
 |Configure camelcase capitalization for the items in the filtering drop-down with only the first capitalized
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing]
 | _Camel_ 
 
 |Configure the capitalization for a particular column
@@ -152,7 +152,7 @@ To complete the procedure, you need the following:
 
 ==== Configuring the capitalization on grid level
 
-To set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid-level using the designer:
+To set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid-level using the designer:
 
 *1.*  From the smart tag of the  _WebDataGrid_  , open the WebDataGrid Designer.
 
@@ -160,7 +160,7 @@ image::images/WDG_ExcelStyleFiltering_Configuring_CE_1.png[]
 
 *2.*  In the left pane, select the desired filtering behavior.
 
-*3.*  In the right pane, set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_  .
+*3.*  In the right pane, set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_  .
 
 *4.*  Click the OK button.
 
@@ -168,7 +168,7 @@ image::images/WDG_ExcelStyleFiltering_Configuring_CE_1.png[]
 
 For the purpose of this example, the setting will be applied to a column with the key  _ContactName_  . The procedure assumes that the  _ContactName_    __column has been added in advance.__  For information on how to add the column, see the link:webdatagrid-excelstylefiltering-enabling.html[Enabling Excel-Style Filtering (WebDataGrid)] topic.
 
-To set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on the column level:
+To set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on the column level:
 
 *1.*  From the smart tag of the  _WebDataGrid_  , open the WebDataGrid Designer.
 
@@ -178,7 +178,7 @@ To set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcont
 
 In the column setting, from the drop-down, select the ContactName column.
 
-Under the Appearance section, from the drop-down of the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property, select  _Camel_  .
+Under the Appearance section, from the drop-down of the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property, select  _Camel_  .
 
 image::images/WDG_ExcelStyleFiltering_Configuring_CE_2.png[]
 
@@ -190,7 +190,7 @@ image::images/WDG_ExcelStyleFiltering_Configuring_CE_2.png[]
 
 ==== Configuring the capitalization on grid level
 
-The following code demonstrates how to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid level in the ASPX markup.
+The following code demonstrates how to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid level in the ASPX markup.
 
 *In ASPX:*
 
@@ -204,7 +204,7 @@ The following code demonstrates how to set the link:infragistics4.web.v{ProductV
 
 ==== Configuring the capitalization on column level
 
-The following code demonstrates how to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid level in the ASPX markup. The setting is applied to a column with the key  _“_   _ContactName_   _”_  .
+The following code demonstrates how to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid level in the ASPX markup. The setting is applied to a column with the key  _“_   _ContactName_   _”_  .
 
 *In ASPX:*
 
@@ -225,7 +225,7 @@ The following code demonstrates how to set the link:infragistics4.web.v{ProductV
 
 ==== Configuring the capitalization on grid level
 
-The following code demonstrates how to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid level in the code-behind.
+The following code demonstrates how to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid level in the code-behind.
 
 *In C#:*
 
@@ -242,7 +242,7 @@ this.WebDataGrid2.Behaviors.Filtering.UniqueValueCasing = UniqueValueCasing.Came
 
 ==== Configuring the capitalization on column level
 
-The following code demonstrates how to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid level in the code-behind. The setting is applied to a column with the key  _“_   _ContactName_   _”_  .
+The following code demonstrates how to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on grid level in the code-behind. The setting is applied to a column with the key  _“_   _ContactName_   _”_  .
 
 *In C#:*
 
@@ -270,11 +270,11 @@ this.WebDataGrid2.Behaviors.Filtering.ColumnSettings.Add(settingColumn);
 
 === Overview
 
-Setting the null value text allows you to change the text for the item in the filter drop-down. This text will be displayed for the items that have a Null value in the data source / database. The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] property is of type string and has a default value of  _Null_  .
+Setting the null value text allows you to change the text for the item in the filter drop-down. This text will be displayed for the items that have a Null value in the data source / database. The link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] property is of type string and has a default value of  _Null_  .
 
 === Preview
 
-Following is the result after link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property is set to  _My Null_  .
+Following is the result after link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property is set to  _My Null_  .
 
 image::images/WDG_ExcelStyleFiltering_Configuring_CE_3.png[]
 
@@ -282,14 +282,14 @@ image::images/WDG_ExcelStyleFiltering_Configuring_CE_3.png[]
 
 === Property settings
 
-The following table maps the desired configuration of the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] property settings:
+The following table maps the desired configuration of the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] property settings:
 
 [options="header", cols="a,a,a"]
 |====
 |In order to:|Use this property:|And set it to:
 
 |Set the text for the items with null values to _My Null_
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText]
 | _My Null_ 
 
 |====
@@ -307,7 +307,7 @@ To complete the procedure, you need the following:
 
 === Configuring the text for the null values using the designer
 
-To set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] to  _My Null_   on  _WebDataGrid_   using the Designer:
+To set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] to  _My Null_   on  _WebDataGrid_   using the Designer:
 
 *1.*  From the smart tag of the WebDataGrid, open the WebDataGrid Designer.
 
@@ -315,7 +315,7 @@ image::images/WDG_ExcelStyleFiltering_Configuring_CE_4.png[]
 
 *2.*  From the left pane, select the desired filtering behavior.
 
-*3.*  From the right pane, set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] property to  _My Null_  .
+*3.*  From the right pane, set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] property to  _My Null_  .
 
 *4.*  Click the OK button.
 
@@ -323,7 +323,7 @@ image::images/WDG_ExcelStyleFiltering_Configuring_CE_4.png[]
 
 === Configuring the text for the null values in the ASPX markup
 
-The following code demonstrates how to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] of the  _WebDataGrid_   to  _“My Null”_   in the markup.
+The following code demonstrates how to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] of the  _WebDataGrid_   to  _“My Null”_   in the markup.
 
 *In ASPX:*
 
@@ -339,7 +339,7 @@ The following code demonstrates how to set the link:infragistics4.web.v{ProductV
 
 === Configuring the text for the null values in the code-behind
 
-The following code demonstrates how to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] of the  _WebDataGrid_   to  _“My Null”_   in the code behind:
+The following code demonstrates how to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~nullvaluetext.html[NullValueText] of the  _WebDataGrid_   to  _“My Null”_   in the code behind:
 
 *In C#:*
 

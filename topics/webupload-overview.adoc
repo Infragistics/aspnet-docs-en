@@ -118,7 +118,7 @@ link:{SamplesUrl}/web-upload/single-upload[Single WebUpload Sample]
 |====
 
 [start=3]
-. Once the above setup is complete, begin to set options including *ID*, pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[autostartupload]"] and pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~progressurl.html[progressUrl]"] . The last property defines the URL of the HTTP handler that returns file status progress and file size information and handles cancel upload command. That’s all you need on the client-side widget to connect with server-side and get the upload control to work. The remaining options have their default values. For example for the upload mode is single.
+. Once the above setup is complete, begin to set options including *ID*, pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[autostartupload]"] and pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~progressurl.html[progressUrl]"] . The last property defines the URL of the HTTP handler that returns file status progress and file size information and handles cancel upload command. That’s all you need on the client-side widget to connect with server-side and get the upload control to work. The remaining options have their default values. For example for the upload mode is single.
 
 [cols="a"]
 |====

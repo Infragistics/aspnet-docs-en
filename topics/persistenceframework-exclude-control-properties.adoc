@@ -14,7 +14,7 @@
 
 = Exclude Control Properties
 
-When the Persistence manager is looping through the controls in a page by default it saves all of them. This also means that all the control properties are persisted by default. In a case when you want to persist just some of the properties or want to avoid saving some, you can remove them from the persisted data. The Persistence API provides a class that holds the properties data called pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.propertydata.html[PropertyData]*"] . By excluding some of the properties you reduce the size of the persisted data which sometimes is crucial for the available resources.
+When the Persistence manager is looping through the controls in a page by default it saves all of them. This also means that all the control properties are persisted by default. In a case when you want to persist just some of the properties or want to avoid saving some, you can remove them from the persisted data. The Persistence API provides a class that holds the properties data called pick:[asp-net="* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.persistence.propertydata.html[PropertyData]*"] . By excluding some of the properties you reduce the size of the persisted data which sometimes is crucial for the available resources.
 
 .Note:
 [NOTE]
@@ -22,7 +22,7 @@ When the Persistence manager is looping through the controls in a page by defaul
 You also may want to remove properties for security reasons.
 ====
 
-You can remove the unnecessary control properties while handling the pick:[asp-net="* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaved_ev.html[PersistenceSaved]*"] event. When you want to remove control from the persisted data, as it is in link:persistenceframework-exclude-control.html[Exclude Control], the control found by its ID, but when you want to remove just a property you need the property’s name. Therefore you must specify a list of strings that contains the names of the properties to be ignored.
+You can remove the unnecessary control properties while handling the pick:[asp-net="* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.persistence.apppersistencemanager~persistencesaved_ev.html[PersistenceSaved]*"] event. When you want to remove control from the persisted data, as it is in link:persistenceframework-exclude-control.html[Exclude Control], the control found by its ID, but when you want to remove just a property you need the property’s name. Therefore you must specify a list of strings that contains the names of the properties to be ignored.
 
 [cols="a"]
 |====

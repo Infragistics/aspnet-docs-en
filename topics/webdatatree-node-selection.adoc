@@ -14,7 +14,7 @@
 
 = Node Selection
 
-The WebDataTree™ control supports different types of node selection. Selection can be made either using the keyboard and/or the mouse.You can determine the type of selection on WebDataTree, by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~selectiontype.html[SelectionType]"]  property.The following are the different type of selections you can set using the SelectionType property :
+The WebDataTree™ control supports different types of node selection. Selection can be made either using the keyboard and/or the mouse.You can determine the type of selection on WebDataTree, by setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~selectiontype.html[SelectionType]"]  property.The following are the different type of selections you can set using the SelectionType property :
 
 * *None* -- Nodes cannot be selected using the UI.
 * *Single* -- Only one node can be selected.

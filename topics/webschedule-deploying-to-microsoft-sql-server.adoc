@@ -20,7 +20,7 @@ Please recognize that advanced customization of the installation is beyond the s
 
 == What are the requirements for installing to Microsoft SQL Server?
 
-Before you deploy a WebSchedule application to Microsoft SQL Server, please ensure your server host machine meets the minimum system requirements. You should have the latest service pack of Microsoft SQL Server 2000 (or later) or the Microsoft Database Engine (MSDE) installed to use the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulesqlclientprovider.html[WebScheduleSqlClientProvider]"]  control.
+Before you deploy a WebSchedule application to Microsoft SQL Server, please ensure your server host machine meets the minimum system requirements. You should have the latest service pack of Microsoft SQL Server 2000 (or later) or the Microsoft Database Engine (MSDE) installed to use the  pick:[asp-net="link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webschedulesqlclientprovider.html[WebScheduleSqlClientProvider]"]  control.
 
 == Where is the SQL install script for Microsoft SQL Server?
 

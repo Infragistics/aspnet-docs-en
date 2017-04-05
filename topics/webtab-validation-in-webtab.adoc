@@ -14,7 +14,7 @@
 
 = Validation in WebTab
 
-WebTab™ supports validation of ASP validators in the selected tab by default. When the content pane has validators then before changing the selected tab or reloading the tab, the validators are checked. If the validation fails, then the selected tab does not change or reload. This feature can be disabled by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~enablevalidation.html[EnableValidation]"]  property to False.
+WebTab™ supports validation of ASP validators in the selected tab by default. When the content pane has validators then before changing the selected tab or reloading the tab, the validators are checked. If the validation fails, then the selected tab does not change or reload. This feature can be disabled by setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~enablevalidation.html[EnableValidation]"]  property to False.
 
 *In HTML:*
 
@@ -42,7 +42,7 @@ WebTab1.EnableValidation = false;
 .Note:
 [NOTE]
 ====
-This feature validates child controls located in the template of the tab item and for  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  as well (only if ContentUrl points to a local aspx page).
+This feature validates child controls located in the template of the tab item and for  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  as well (only if ContentUrl points to a local aspx page).
 ====
 
 == Related Topics

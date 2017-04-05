@@ -14,11 +14,11 @@
 
 = Remove an Activity from the Database
 
-In server-side code behind you can delete an existing  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  from the database. This may be required when users direct your application to remove an Activity outside of the Edit Appointment dialog, or as part of maintenance to clean-up Activities that have exceeded an age threshold (i.e., 12 months.)
+In server-side code behind you can delete an existing  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  from the database. This may be required when users direct your application to remove an Activity outside of the Edit Appointment dialog, or as part of maintenance to clean-up Activities that have exceeded an age threshold (i.e., 12 months.)
 
 This example makes use of the link:webschedule-locate-an-activity.html[How to Locate an Activity] topic.
 
-Add an ASP.NET Button to your web form named "RemoveButton1", and handle it's Click event. In the event handler, RemoveButton1_Click, you will locate an Activity object to be deleted (you may be able to obtain this from input through a TextBox or other user selection criteria), and then call the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider~removeactivity.html[RemoveActivity]"]  method on the data provider.
+Add an ASP.NET Button to your web form named "RemoveButton1", and handle it's Click event. In the event handler, RemoveButton1_Click, you will locate an Activity object to be deleted (you may be able to obtain this from input through a TextBox or other user selection criteria), and then call the  pick:[asp-net="link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledbprovider~removeactivity.html[RemoveActivity]"]  method on the data provider.
 
 *In Visual Basic:*
 

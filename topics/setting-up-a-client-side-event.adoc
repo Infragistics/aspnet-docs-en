@@ -62,9 +62,9 @@ function WebSplitter1_Expanding(sender, splitArgs){
 [start=3]
 . Return Design view and select the WebSplitter control.
 [start=4]
-. In the Properties window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.websplitter~clientevents.html[ClientEvents]"]  property and expand it.
+. In the Properties window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.websplitter~clientevents.html[ClientEvents]"]  property and expand it.
 [start=5]
-. Next to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.splitterclientevents~expanding.html[Expanding]"]  property, type "WebSplitter1_Expanding". The event is now defined.
+. Next to the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.splitterclientevents~expanding.html[Expanding]"]  property, type "WebSplitter1_Expanding". The event is now defined.
 
 .Note:
 [NOTE]

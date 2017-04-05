@@ -21,9 +21,9 @@ Before running an application that has a WebGauge™ control, the deployment sce
 [start=1]
 . Select the WebGauge control on your Web form.
 [start=2]
-. Expand the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.ultragauge~deploymentscenario.html[DeploymentScenario]"]  property.
+. Expand the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.ultragauge~deploymentscenario.html[DeploymentScenario]"]  property.
 [start=3]
-. Locate the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~mode.html[Mode]"]  property and from its drop-down list, select the Session enumeration member.
+. Locate the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~mode.html[Mode]"]  property and from its drop-down list, select the Session enumeration member.
 [start=4]
 . At this time, you will be prompted to automatically create a Web form that contains the ImagePipe component, which will allow for secure image transmission through the session.
 

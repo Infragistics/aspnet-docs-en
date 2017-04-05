@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-WebDataMenu™ can also be used as a context menu so that your end-user will see a customized pop-up menu just by right-clicking on the page content or by clicking on some other control. This feature can be enabled on WebDataMenu by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatamenu~iscontextmenu.html[IsContextMenu]"]  property to True.
+WebDataMenu™ can also be used as a context menu so that your end-user will see a customized pop-up menu just by right-clicking on the page content or by clicking on some other control. This feature can be enabled on WebDataMenu by simply setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatamenu~iscontextmenu.html[IsContextMenu]"]  property to True.
 
 In this walkthrough, WebDataMenu is used as pop-up menu on the WebDataTree™ control’s nodes providing the options to edit, expand and collapse nodes.
 

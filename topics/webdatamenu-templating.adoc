@@ -14,7 +14,7 @@
 
 = Templating
 
-WebDataMenu™ supports templating , which allows you to define an item template that can be used to customize the appearance of menu items. The item template can be defined using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navcontrol~itemtemplate.html[ItemTemplate]"]  property. The following template methods are supported :
+WebDataMenu™ supports templating , which allows you to define an item template that can be used to customize the appearance of menu items. The item template can be defined using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navcontrol~itemtemplate.html[ItemTemplate]"]  property. The following template methods are supported :
 
 * An individual item can have a specific template associated with it.
 * A collection of templates can be created and you can assign templates from this collection to individual items.
@@ -27,7 +27,7 @@ The following steps will teach you how to assign templates to individual items u
 [start=2]
 . Click the WebDataMenu control’s smart tag and select Edit Template Collection. This will open the WebDataMenu designer, where you can add new templates.
 [start=3]
-. Click add item to add new templates to the template collection. Add four templates Template0,Template1,Template2; set their  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.itemtemplate~templateid.html[TemplateID]"]  property to Red,Blue and Green respectively. Your WebDataMenu now looks similar to the following image :
+. Click add item to add new templates to the template collection. Add four templates Template0,Template1,Template2; set their  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.itemtemplate~templateid.html[TemplateID]"]  property to Red,Blue and Green respectively. Your WebDataMenu now looks similar to the following image :
 
 image::images/WebDataMenu_Assigning_templates_to_individual_items_using_the_templates_collection_01.png[]
 
@@ -56,7 +56,7 @@ image::images/WebDataMenu_Assigning_templates_to_individual_items_using_the_temp
 [start=6]
 . Now click the smart tag and select End Template Editing to close the template editing mode of WebDataMenu.
 [start=7]
-. Add a root item and set its Text property to Color; similarly, add three child items and set their  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitem~text.html[Text]"]  property to Red, Blue and Green. For more information on how to add items, see the link:webdatamenu-getting-started-with-webdatamenu.html[Getting Started with WebDataMenu] topic. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitem~templateid.html[TemplateId]"]  property of Red , Blue and Green items to Red, Blue and Green respectively.
+. Add a root item and set its Text property to Color; similarly, add three child items and set their  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitem~text.html[Text]"]  property to Red, Blue and Green. For more information on how to add items, see the link:webdatamenu-getting-started-with-webdatamenu.html[Getting Started with WebDataMenu] topic. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitem~templateid.html[TemplateId]"]  property of Red , Blue and Green items to Red, Blue and Green respectively.
 [start=8]
 . Your WebDataMenu Designer now looks similar to the following image :
 

@@ -21,7 +21,7 @@ All of our ASP.NET controls and components comply with section 508, subpart 1194
 |Rules|How We Comply with the Rules
 
 |(a)
-|By enabling the control's pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~section508compliant.html[Section508Compliant]"] property, all non-text elements render a text equivalent. 
+|By enabling the control's pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~section508compliant.html[Section508Compliant]"] property, all non-text elements render a text equivalent. 
 
 .Note:
 [NOTE]

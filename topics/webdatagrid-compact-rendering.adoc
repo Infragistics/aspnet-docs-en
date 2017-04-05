@@ -14,7 +14,7 @@
 
 = Compact Rendering and Summaries Filter Properties
 
-The Summary Row behavior has a property called link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow~compactrendering.html[CompactRendering], which specifies how the summaries are rendered. There are three available options:
+The Summary Row behavior has a property called link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow~compactrendering.html[CompactRendering], which specifies how the summaries are rendered. There are three available options:
 
 * Auto (default) – if the maximum number of summaries is one or less, the summaries will be rendered compactly. Otherwise each summary occupies a separate line.
 
@@ -34,7 +34,7 @@ image::images/WebDataGrid_Compact_Rendering_05.png[]
 
 == Summary Row and Filtering Behavior
 
-When Summary Row and Filtering behaviors are enabled, the summary value can be calculated for the filtered data. There is a property called link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow~enablesummariesfilter.html[EnableSummariesFilter], which specifies how the summaries are calculated:
+When Summary Row and Filtering behaviors are enabled, the summary value can be calculated for the filtered data. There is a property called link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow~enablesummariesfilter.html[EnableSummariesFilter], which specifies how the summaries are calculated:
 
 * When EnableSummariesFilter is set to (default), the summaries are calculated for the data that has been filtered.
 * When EnableSummariesFilter is set to , the filtering conditions are ignored and the summaries are calculated for the whole data.

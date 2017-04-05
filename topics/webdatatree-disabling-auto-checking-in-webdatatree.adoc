@@ -14,7 +14,7 @@
 
 = Disabling Auto-Checking in WebDataTree
 
-WebDataTree™ allows you to disable auto-checking of checkbox tree nodes. For example, when an end-user checks a child node in WebDataTree, its parent node (if unchecked) becomes partially checked (TriState CheckBoxMode) or fully checked (if all the child nodes are checked) or if a parent node is checked, all its child nodes are also checked. However with the disable auto-checking feature you can stop the tree nodes from being checked for those scenarios in which this behavior is not needed. You can achieve this by simply setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~enableautochecking.html[EnableAutoChecking]"]  property to False. By default, this property is set to True.
+WebDataTree™ allows you to disable auto-checking of checkbox tree nodes. For example, when an end-user checks a child node in WebDataTree, its parent node (if unchecked) becomes partially checked (TriState CheckBoxMode) or fully checked (if all the child nodes are checked) or if a parent node is checked, all its child nodes are also checked. However with the disable auto-checking feature you can stop the tree nodes from being checked for those scenarios in which this behavior is not needed. You can achieve this by simply setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~enableautochecking.html[EnableAutoChecking]"]  property to False. By default, this property is set to True.
 
 *In Visual Basic:*
 

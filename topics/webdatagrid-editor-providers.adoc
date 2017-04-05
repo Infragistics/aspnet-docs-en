@@ -16,17 +16,17 @@
 
 You have the option to supply an editor other than the default editor for fields in WebDataGrid™. This allows you to provide an editor you deem more appropriate for your application. The editor providers available are as follow:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.currencyeditorprovider.html[CurrencyEditorProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.datepickerprovider.html[DatePickerProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.datetimeeditorprovider.html[DateTimeEditorProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.dropdownprovider.html[DropDownProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.maskeditorprovider.html[MaskEditorProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.monthcalendarprovider.html[MonthCalendarProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.numericeditorprovider.html[NumericEditorProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.percenteditorprovider.html[PercentEditorProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sliderprovider.html[SliderProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.textboxprovider.html[TextBoxProvider]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.texteditorprovider.html[TextEditorProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.currencyeditorprovider.html[CurrencyEditorProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.datepickerprovider.html[DatePickerProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.datetimeeditorprovider.html[DateTimeEditorProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.dropdownprovider.html[DropDownProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.maskeditorprovider.html[MaskEditorProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.monthcalendarprovider.html[MonthCalendarProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.numericeditorprovider.html[NumericEditorProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.percenteditorprovider.html[PercentEditorProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sliderprovider.html[SliderProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.textboxprovider.html[TextBoxProvider]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.texteditorprovider.html[TextEditorProvider]"] 
 
 Some of these editor providers are used by default depending on the data type of WebDataGrid’s columns. The following table lists the data types and their associating editors.
 
@@ -78,4 +78,4 @@ Some of these editor providers are used by default depending on the data type of
 
 |====
 
-To use editor providers, add them to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editorprovidercollection.html[EditorProviders]"]  collection. Once added, you can access an editor provider with its Id and assign it to a particular column. For more information on assigning editor providers, see link:webdatagrid-using-editor-providers.html[Using Editor Providers].
+To use editor providers, add them to the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editorprovidercollection.html[EditorProviders]"]  collection. Once added, you can access an editor provider with its Id and assign it to a particular column. For more information on assigning editor providers, see link:webdatagrid-using-editor-providers.html[Using Editor Providers].

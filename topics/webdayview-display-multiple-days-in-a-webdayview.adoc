@@ -14,9 +14,9 @@
 
 = Display Multiple Days in WebDayView
 
-The WebDayView™ has the ability to show multiple days by setting the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~visibledays.html[VisibleDays]"]  property. It can be set to a minimum of one day to a maximum of fourteen days.
+The WebDayView™ has the ability to show multiple days by setting the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~visibledays.html[VisibleDays]"]  property. It can be set to a minimum of one day to a maximum of fourteen days.
 
-The control will resize itself in order to show an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  in each day shown, using the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~activitywidthminimum.html[ActivityWidthMinimum]"]  property to calculate how much space each activity needs.
+The control will resize itself in order to show an  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  in each day shown, using the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~activitywidthminimum.html[ActivityWidthMinimum]"]  property to calculate how much space each activity needs.
 
 The code below shows setting this property to have the WebDayView display four days.
 

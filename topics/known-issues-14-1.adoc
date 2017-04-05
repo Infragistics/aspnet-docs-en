@@ -103,7 +103,7 @@ Workaround
 .Note:
 [NOTE]
 ====
-You can configure the grid to have a larger height so that the dialog can display fully or you can use the Cell Editing behavior instead of the Row Editing behavior. You also have the option to always hide the Done/Cancel buttons using the Row Editing behavior’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property to keep the experience consistent.
+You can configure the grid to have a larger height so that the dialog can display fully or you can use the Cell Editing behavior instead of the Row Editing behavior. You also have the option to always hide the Done/Cancel buttons using the Row Editing behavior’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property to keep the experience consistent.
 ====
 
 [[_Ref381886973]]
@@ -139,7 +139,7 @@ Workaround
 .Note:
 [NOTE]
 ====
-If automatic scrolling is really important for the project, a possible solution is to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~enableconnectorlines.html[EnableConnectorLines] property to  _false_  . This will disable connector lines, but in that case auto-scrolling while a node is dragged out of the container, is supported.
+If automatic scrolling is really important for the project, a possible solution is to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~enableconnectorlines.html[EnableConnectorLines] property to  _false_  . This will disable connector lines, but in that case auto-scrolling while a node is dragged out of the container, is supported.
 ====
 
 == _WebHierarchicalDataGrid_
@@ -153,7 +153,7 @@ Workaround
 .Note:
 [NOTE]
 ====
-You can configure the grid to have a larger height so that the dialog can display fully or you can use the Cell Editing behavior instead of the Row Editing behavior. You also have the option to always hide the Done/Cancel buttons using the Row Editing behavior’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property to keep the experience consistent.
+You can configure the grid to have a larger height so that the dialog can display fully or you can use the Cell Editing behavior instead of the Row Editing behavior. You also have the option to always hide the Done/Cancel buttons using the Row Editing behavior’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property to keep the experience consistent.
 ====
 
 [[_Ref382597340]]

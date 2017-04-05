@@ -28,7 +28,7 @@ The following table summarizes the purpose and functionality of properties of th
 |====
 |Property|Description
 
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]
 |Configures the capitalization of the individual items in the filtering drop-down list.The allowed values are: 
 
 * _Lower_ (Default) – the items appear in lowercase letters 
@@ -39,7 +39,7 @@ The following table summarizes the purpose and functionality of properties of th
 
 __This property__ __can__ __be set on both__ __the__ __parent and child layouts as well as on column level.__ __The column__ __setting__ __has__ __higher priority.__
 
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]
 |Configures the value for the items in the filtering drop-down for a column with Null values in the data source. It can be set on both the parent and child layouts.
 
 |====

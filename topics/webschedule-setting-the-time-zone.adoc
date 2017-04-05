@@ -16,7 +16,7 @@
 
 == Before You Begin:
 
-WebSchedule™ supports users from multiple time zones in a single web application. Properties such as  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.smartdate~utcnow.html[ActiveDayUtc]"]  are in Coordinated Universal Time (UTC) to facilitate such applications, and Views for users in different time zones will be adjusted accordingly.
+WebSchedule™ supports users from multiple time zones in a single web application. Properties such as  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.shared.smartdate~utcnow.html[ActiveDayUtc]"]  are in Coordinated Universal Time (UTC) to facilitate such applications, and Views for users in different time zones will be adjusted accordingly.
 
 Before beginning this walkthrough, you should be familiar with how to set up a WebScheduleInfo™ and WebSchedule View controls on a page. You should have a WebScheduleInfo on a web form with a valid connection to your WebSchedule database.
 
@@ -118,7 +118,7 @@ This provides the end user with a way of selecting a time zone to use. Code for 
 
 The TimeZone offset, expressed as a number of hours, can be retrieved from the Value of the SelectedItem of the DropDownList created in the previous step. By using this value in conjunction with the TimeSpan.FromHours method, the TimeZoneOffset property of the WebScheduleInfo object can be set.
 
-In the code snippet below, Response.Write is used to print the TimeZone time and UTC time after this property setting. This demonstrates the use of the WebScheduleInfo's  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~utcnow.html[UtcNow]"]  property, and the useful  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~convertutctotimezonetime.html[ConvertUtcToTimeZoneTime]"]  method.
+In the code snippet below, Response.Write is used to print the TimeZone time and UTC time after this property setting. This demonstrates the use of the WebScheduleInfo's  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~utcnow.html[UtcNow]"]  property, and the useful  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~convertutctotimezonetime.html[ConvertUtcToTimeZoneTime]"]  method.
 
 *In Visual Basic:*
 

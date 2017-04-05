@@ -45,26 +45,26 @@ image::images/WebSchedule_The_WebMonthView_Smart_Tag_01.png[]
 
 |WebScheduleInfoID
 |Each view in WebSchedule requires a WebScheduleInfo to function properly. If you already have a WebScheduleInfo on your web form, then it will be visible in the WebScheduleInfoID drop-down.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~webscheduleinfo.html[WebScheduleInfoID]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~webscheduleinfo.html[WebScheduleInfoID]"] 
 
 |Caption Format
 |Change the format of the caption on the WebMonthView. Use the 'M', 'd', and 'y' characters.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionFormatString]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionFormatString]"] 
 
 |Day Header Format
 |Each day has a header and the format of the header can be changed. Use the 'M', 'd', and 'y' characters.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.dayorientedscheduleview~dayheaderformatstring.html[DayHeaderFormatString]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.dayorientedscheduleview~dayheaderformatstring.html[DayHeaderFormatString]"] 
 
 |Time Label Format
 |When an appointment occurs at a specific time, the time is displayed on the day that it occurs. You can change the format of the time label with the 'h', 'H', and 'm' characters. The default is 'HH:mm'.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.dayorientedscheduleview~timelabelformatstring.html[TimeLabelFormatString]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.dayorientedscheduleview~timelabelformatstring.html[TimeLabelFormatString]"] 
 
 |Show Caption
 |Clicking the check box will cause the caption to be visible.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionHeaderVisible]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionHeaderVisible]"] 
 
 |Navigation Buttons
 |This option will show or hide the month navigation buttons at the top of the calendar.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~navigationbuttonsvisible.html[NavigationButtonsVisible]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~navigationbuttonsvisible.html[NavigationButtonsVisible]"] 
 
 |====

@@ -16,7 +16,7 @@
 
 == Before You Begin:
 
-The WebDayView™ has an area at the top that shows  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  that last the whole day, also known as All Day Events. This area referred to as the AllDayEventArea can be styled depending on what you are doing in that area. For instance by default the area is a gray color, but by changing the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~alldayeventareastyle.html[AllDayEventAreaStyle]"]  object you can style it anyway you want. You can also style the area for when it is selected using the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~alldayeventselectedstyle.html[AllDayEventSelectedStyle]"] .
+The WebDayView™ has an area at the top that shows  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  that last the whole day, also known as All Day Events. This area referred to as the AllDayEventArea can be styled depending on what you are doing in that area. For instance by default the area is a gray color, but by changing the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~alldayeventareastyle.html[AllDayEventAreaStyle]"]  object you can style it anyway you want. You can also style the area for when it is selected using the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~alldayeventselectedstyle.html[AllDayEventSelectedStyle]"] .
 
 This walk through will show you some simple style changes you can make to the AllDayEventArea using the two aforementioned styling objects.
 
@@ -82,7 +82,7 @@ this.WebDayView1.AllDayEventAreaSelectedStyle.Cursor = Infragistics.WebUI.Shared
 image::images\WebSchedule_Walk_Through_Styling_the_WebDayViews_AllDayEventArea_02.png[]
 
 [start=5]
-. There are several other styling changes you can make using the AllDayEventAreaStyle and AllDayEventAreaSelectedStyle. These two objects use the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.style.html[Style]"]  object that can be found in several Infragistics ASP.NET controls.
+. There are several other styling changes you can make using the AllDayEventAreaStyle and AllDayEventAreaSelectedStyle. These two objects use the  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.shared.style.html[Style]"]  object that can be found in several Infragistics ASP.NET controls.
 
 == What You Accomplished:
 

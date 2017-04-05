@@ -435,12 +435,12 @@ The following template will NOT be exported:
 
 == WebDataGrid™
 
-* The “tag” attribute is not available on the rows of the grid when  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableclientrendering.html[EnableClientRendering]"]  property is set to true.
-* Actions performed on the client are not guaranteed to propagate to the server and after postback/callback (i.e. if the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.ipaging~pageindexchanging_ev.html[PageIndexChanging]"]  event was handled by the developer and the page index was changed by rebinding on the client, after postback/callback the grid will lose this change).
-* If the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableclientrendering.html[EnableClientRendering]"]  property set to true:
+* The “tag” attribute is not available on the rows of the grid when  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableclientrendering.html[EnableClientRendering]"]  property is set to true.
+* Actions performed on the client are not guaranteed to propagate to the server and after postback/callback (i.e. if the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.ipaging~pageindexchanging_ev.html[PageIndexChanging]"]  event was handled by the developer and the page index was changed by rebinding on the client, after postback/callback the grid will lose this change).
+* If the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableclientrendering.html[EnableClientRendering]"]  property set to true:
 
 ** Assigning an individual CSS class to a particular cell or row will not work.
-**  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.boundcheckboxfield.html[BoundCheckBoxField]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.unboundcheckboxfield.html[UnboundCheckBoxField]"]  columns will only work with Boolean or nullable Boolean type columns.
+**  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.boundcheckboxfield.html[BoundCheckBoxField]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.unboundcheckboxfield.html[UnboundCheckBoxField]"]  columns will only work with Boolean or nullable Boolean type columns.
 
 == WebHierarchicalDataGrid™
 
@@ -473,7 +473,7 @@ The following template will NOT be exported:
 
 == WebUpload™
 
-* It’s recommended when you set the option  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads]"]  its value to be maximum two. When you are uploading more than one file at the same time you are making requests equal to the count of uploaded files. This is why when two files are uploaded simultaneously you have two requests for the current browser’s tab. There is a limitation for the different browsers of the concurrent request for a tab. For Internet Explorer, version 6 and 7, it’s two, for Firefox it is three. That’s why if you don’t want to receive exception in the control it’s recommended to set MaxSimultaneousFilesUploads with value not bigger than two.
+* It’s recommended when you set the option  pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads]"]  its value to be maximum two. When you are uploading more than one file at the same time you are making requests equal to the count of uploaded files. This is why when two files are uploaded simultaneously you have two requests for the current browser’s tab. There is a limitation for the different browsers of the concurrent request for a tab. For Internet Explorer, version 6 and 7, it’s two, for Firefox it is three. That’s why if you don’t want to receive exception in the control it’s recommended to set MaxSimultaneousFilesUploads with value not bigger than two.
 * WebUpload doesn’t support keyboard navigation, except that the control is focusable and gets a part in the tab sequence. When using the TAB key, you can navigate through the control and its elements.
 * When you want to upload files and the browser displays a popup window to select item from your local drives, you are able to select only one file. For multiple uploads you can upload multiple files by adding them individually.
 
@@ -673,8 +673,8 @@ Drag and Drop feature limitations:
 == WebDropDown™
 
 * Numeric pager expands the width and height of dropdown's container.
-* The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem.html[DropDownItem]"]  object's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem~activated.html[Activated]"]  property is now a read-only property.
-* The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown.html[WebDropDown]"]  object's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~selecteditem.html[SelectedItem]"]  property is now a read-only property.
+* The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.dropdownitem.html[DropDownItem]"]  object's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.dropdownitem~activated.html[Activated]"]  property is now a read-only property.
+* The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown.html[WebDropDown]"]  object's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~selecteditem.html[SelectedItem]"]  property is now a read-only property.
 
 == WebCaptcha™
 
@@ -684,14 +684,14 @@ Drag and Drop feature limitations:
 
 == WebSchedule™
 
-* Two new events  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~reminderdismissing_ev.html[ReminderDismissing]"]  and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~reminderdismissed_ev.html[ReminderDismissed]"]  are added to  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo.html[WebScheduleInfo]"]  class.
+* Two new events  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~reminderdismissing_ev.html[ReminderDismissing]"]  and  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~reminderdismissed_ev.html[ReminderDismissed]"]  are added to  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo.html[WebScheduleInfo]"]  class.
 
 == WebDialogWindow™
 
 The following new properties are added :
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~usebodyasparent.html[UseBodyAsParent]"]  -- If the property is enabled, then html element of dialog on client is moved into . That allows to keep WebDialogWindow on top of other elements regardless of its original container. However, that option can not be used if WebDialogWindow is located inside of UpdatePanel or other asynchronous-postback container.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~modaltabindices.html[ModalTabIndices]"]  -- This property allows to avoid changing of tabIndex attributes of elements located outside of modal WebDialogWindow. It can bring minor side effects related to behavior of tab key, but it speeds up performance and fixes problems which occurred when dialog got closed.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~usebodyasparent.html[UseBodyAsParent]"]  -- If the property is enabled, then html element of dialog on client is moved into . That allows to keep WebDialogWindow on top of other elements regardless of its original container. However, that option can not be used if WebDialogWindow is located inside of UpdatePanel or other asynchronous-postback container.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~modaltabindices.html[ModalTabIndices]"]  -- This property allows to avoid changing of tabIndex attributes of elements located outside of modal WebDialogWindow. It can bring minor side effects related to behavior of tab key, but it speeds up performance and fixes problems which occurred when dialog got closed.
 
 == WebHtmlEditor™
 
@@ -1274,7 +1274,7 @@ WebHierarchicalDataSource currently has a known issue with its view state. If da
 
 === Rendering Type
 
-The are known issues with the  pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.buttonroundedcorners~renderingtype.html[RoundedCorners.RenderingType]"]  property.
+The are known issues with the  pick:[asp-net="link:{ApiPlatform}webui.webdatainput{ApiVersion}~infragistics.webui.webdatainput.buttonroundedcorners~renderingtype.html[RoundedCorners.RenderingType]"]  property.
 
 If FileImages is used (which is automatically enabled with all defaults), then Internet Explorer 6 may fail to load and background images and buttons become transparent.
 
@@ -1344,7 +1344,7 @@ Currently, Variance information can be updated only once when bound to a data so
 
 === The SetCollapsedMethod has No Effect
 
-If you change a pane's collapsed state with the setCollapsed client-side method while cancelling the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.splitterclientevents~expanding.html[Expanding]"]  client-side event, you will not see the expand and collapse affect.
+If you change a pane's collapsed state with the setCollapsed client-side method while cancelling the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.splitterclientevents~expanding.html[Expanding]"]  client-side event, you will not see the expand and collapse affect.
 
 == WebDataMenu™
 

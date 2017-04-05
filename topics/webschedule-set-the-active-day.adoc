@@ -14,7 +14,7 @@
 
 = Set the Active Day
 
-The WebScheduleInfo™ control's  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activedayutc.html[ActiveDayUtc]"]  property represents a single date used as a point of reference and focus within the user interface. As such, the ActiveDayUtc is rendered by WebCalendarView™ and WebMonthView™ using a specific style that highlights that date and makes it more noticeable to the user.
+The WebScheduleInfo™ control's  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~activedayutc.html[ActiveDayUtc]"]  property represents a single date used as a point of reference and focus within the user interface. As such, the ActiveDayUtc is rendered by WebCalendarView™ and WebMonthView™ using a specific style that highlights that date and makes it more noticeable to the user.
 
 As different dates are clicked within WebCalendarView and WebMonthView, the ActiveDayUtc property is changed accordingly.
 
@@ -25,7 +25,7 @@ The code below sets the WebSchedule controls to load with October 3, 2005 as the
 .Note:
 [NOTE]
 ====
-If you are creating a new  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.smartdate.html[SmartDate]"]  and are not assigning a time to it you need to use the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~converttimezonetimetoutc.html[ConvertTimeZoneTimeToUtc]"]  method off the WebScheduleInfo.
+If you are creating a new  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.shared.smartdate.html[SmartDate]"]  and are not assigning a time to it you need to use the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~converttimezonetimetoutc.html[ConvertTimeZoneTimeToUtc]"]  method off the WebScheduleInfo.
 ====
 
 image::images\WebSchedule_How_to_Set_the_ActiveDay_01.png[]

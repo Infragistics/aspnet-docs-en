@@ -27,13 +27,13 @@ You will set up paging for the parent band of WebHierarchicalDataGrid using two 
 [start=1]
 . Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource™ component so that it retrieves data from the Categories and products table. For more information on this see the link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Binding to Hierarchical Data Source] topic.
 [start=2]
-. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band.html[Bands]"]  property and click the ellipsis (...) button to launch the Edit WebHierarchicalDataGrid Bands Dialog.
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band.html[Bands]"]  property and click the ellipsis (...) button to launch the Edit WebHierarchicalDataGrid Bands Dialog.
 [start=3]
 . For the parent band locate the Behaviors property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=4]
-. Check the CheckBox next to  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  from the list on the left to add and enable the behavior. For this topic the PageSize is set to 3. The EnableInheritance property can be enabled to set Paging for the child bands.
+. Check the CheckBox next to  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  from the list on the left to add and enable the behavior. For this topic the PageSize is set to 3. The EnableInheritance property can be enabled to set Paging for the child bands.
 [start=5]
-. In the properties, expand  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.pagingclientevents.html[PagingClientEvents]"]  and handle the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.pagingclientevents~pageindexchanged.html[PageIndexChanged]"]  event by entering an event handler name: WebHierarchicalDataGrid1_PageIndexChanged.
+. In the properties, expand  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.pagingclientevents.html[PagingClientEvents]"]  and handle the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.pagingclientevents~pageindexchanged.html[PageIndexChanged]"]  event by entering an event handler name: WebHierarchicalDataGrid1_PageIndexChanged.
 
 image::Images/WebHierarchicalDataGrid_Using_Custom_Paging_Template_01.png[]
 

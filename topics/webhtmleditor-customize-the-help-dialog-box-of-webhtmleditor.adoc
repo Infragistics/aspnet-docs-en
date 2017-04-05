@@ -18,7 +18,7 @@ The Help toolbar item (
 
 image::Images/help.gif[]
 
-) is a special kind of item called a  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbardialogbutton.html[ToolbarDialogButton]"] . ToolbarDialogButtons (which include FindReplace, InsertBookmark, etc.) let you customize the content and appearance of the HTML dialog box they pop up to an end user. In this topic you will learn how to display the text, "Learn more about this application <a href="">here</a>", with a hyperlink where end users clicking the Help button on WebHtmlEditor's™ toolbar can find more information.
+) is a special kind of item called a  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.toolbardialogbutton.html[ToolbarDialogButton]"] . ToolbarDialogButtons (which include FindReplace, InsertBookmark, etc.) let you customize the content and appearance of the HTML dialog box they pop up to an end user. In this topic you will learn how to display the text, "Learn more about this application <a href="">here</a>", with a hyperlink where end users clicking the Help button on WebHtmlEditor's™ toolbar can find more information.
 
 [start=1]
 . Before you start writing any code, you should place using/imports directives in your code-behind so you don't need to always type out a member's fully qualified name.
@@ -36,7 +36,7 @@ using Infragistics.WebUI.WebHtmlEditor;
 ----
 
 [start=2]
-. Get the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.basetoolbaritem.html[BaseToolbarItem]"]  that has type  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemtype.html[ToolbarItemType]"] .Help from within the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection.html[ToolbarItemCollection]"]  of your WebHtmlEditor.
+. Get the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.basetoolbaritem.html[BaseToolbarItem]"]  that has type  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.toolbaritemtype.html[ToolbarItemType]"] .Help from within the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection.html[ToolbarItemCollection]"]  of your WebHtmlEditor.
 
 *In Visual Basic:*
 

@@ -16,7 +16,7 @@
 
 The WebSplitter™ can collapse its panes, thereby hiding the pane's content, freeing its occupied space. By default, all panes are not collapsible, but still display a splitter bar. When a pane can collapse, a collapse icon appears in the splitter bar. The user can use the collapse icon to collapse the pane.
 
-You can define a Pane's collapse direction by setting the Pane's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.splitterpane~collapseddirection.html[CollapseDirection]"]  property. Panes collapse either towards the next pane, or the previous pane.
+You can define a Pane's collapse direction by setting the Pane's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.splitterpane~collapseddirection.html[CollapseDirection]"]  property. Panes collapse either towards the next pane, or the previous pane.
 
 image::images/WebSplitter_How_Panes_Collapse_01.png[]
 
@@ -36,6 +36,6 @@ Collapsing a Pane in WebSplitter will free space by automatically expanding a ne
 
 image::images/WebSplitter_How_Panes_Collapse_04.png[]
 
-If the immediate neighboring Pane is locked, WebSplitter will iterate through the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.websplitter~panes.html[Panes]"]  collection until it locates an unlocked pane it can enlarge.
+If the immediate neighboring Pane is locked, WebSplitter will iterate through the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.websplitter~panes.html[Panes]"]  collection until it locates an unlocked pane it can enlarge.
 
 image::images/WebSplitter_How_Panes_Collapse_05.png[]

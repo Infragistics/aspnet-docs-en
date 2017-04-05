@@ -16,13 +16,13 @@
 
 == Group Row
 
-When using the GroupBy feature in WebHierarchicalDataGrid™, the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid] object groups a column's data into grouped rows represented by the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid~groupedrows.html[GroupedRows] property of type link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecordcollection.html[GroupedRecordCollection]. To access the data row, you must first access this collection of link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecord.html[GroupedRecord] objects.
+When using the GroupBy feature in WebHierarchicalDataGrid™, the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid] object groups a column's data into grouped rows represented by the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergrid~groupedrows.html[GroupedRows] property of type link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupedrecordcollection.html[GroupedRecordCollection]. To access the data row, you must first access this collection of link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupedrecord.html[GroupedRecord] objects.
 
 == Getting Grouped Data Rows
 
-When grouping columns, WebHierarchicalDataGrid still provides a link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergridrecord.html[ContainerGridRecord] collection using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rows.html[Rows] property for you to access the data rows it is bound to; however, if you want only the data rows for a specific group, you must use the GroupedRows property.
+When grouping columns, WebHierarchicalDataGrid still provides a link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergridrecord.html[ContainerGridRecord] collection using the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rows.html[Rows] property for you to access the data rows it is bound to; however, if you want only the data rows for a specific group, you must use the GroupedRows property.
 
-The following code shows you how to access the data rows for the first grouped row in the group rows collection. The serverside code accesses the GroupedRecord object's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecord~rows.html[Rows] property, which returns an enumerator for the data rows. The clientside code calls the group row's get_rows method to get the data rows.
+The following code shows you how to access the data rows for the first grouped row in the group rows collection. The serverside code accesses the GroupedRecord object's link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupedrecord~rows.html[Rows] property, which returns an enumerator for the data rows. The clientside code calls the group row's get_rows method to get the data rows.
 
 *In Visual Basic:*
 
@@ -56,7 +56,7 @@ for (var i = 0; i < groupRow.get_rows().length; i++) {
 
 == Child Group Rows
 
-If your data has child groupings, you can access them by accessing the child link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecordcollection.html[GroupedRecordCollection] object using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecord~childgrouprows.html[ChildGroupRows] property of the parent GroupedRecord object.
+If your data has child groupings, you can access them by accessing the child link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupedrecordcollection.html[GroupedRecordCollection] object using the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupedrecord~childgrouprows.html[ChildGroupRows] property of the parent GroupedRecord object.
 
 The following code is similar to the code above, except it gets the data rows for the first child group row.
 

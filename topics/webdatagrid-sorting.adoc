@@ -19,11 +19,11 @@ WebDataGrid™ allows sorting of data. You can have single or multiple column so
 [start=1]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=2]
-. In the property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. In the property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=3]
 . Check the CheckBox next to Sorting from the list of behaviors on the left to enable the behavior.
 [start=4]
-. Leave  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~sortingmode.html[SortingMode]"]  as Single in the properties.
+. Leave  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting~sortingmode.html[SortingMode]"]  as Single in the properties.
 
 image::images/WebDataGrid_Using_Behaviors_01.png[]
 
@@ -58,9 +58,9 @@ WebDataGrid1.Behaviors.CreateBehavior<Infragistics.Web.UI.GridControls.Sorting>(
 
 image::images/WebDataGrid_Sort_Columns_in_Code_01.png[]
 
-You can sort WebDataGrid using server-side or client-side code. On the server side, you have the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~sortedcolumns.html[SortedColumns]"]  property. On the client, you have the sortColumn method to use.
+You can sort WebDataGrid using server-side or client-side code. On the server side, you have the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting~sortedcolumns.html[SortedColumns]"]  property. On the client, you have the sortColumn method to use.
 
-The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~sortingmode.html[SortingMode]"]  property does not apply to sorting in code. This property is for sorting in the UI. This allows you to restrict users to sorting only single columns,leaving you still capable of sorting multiple columns in code for a flexible data presentation.
+The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting~sortingmode.html[SortingMode]"]  property does not apply to sorting in code. This property is for sorting in the UI. This allows you to restrict users to sorting only single columns,leaving you still capable of sorting multiple columns in code for a flexible data presentation.
 
 The following code shows you how to sort a column in WebDataGrid, assuming sorting is enabled.
 

@@ -14,7 +14,7 @@
 
 = Configuring Captcha Input Field
 
-When using the WebCaptcha™ control in Captcha (default) link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~protectionmode.html[ProtectionMode], the control renders a text input field, link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~inputvalueeditor.html[InputValueEditor], and its value is used for the captcha validation. The text input is the WebTextEditor control, and you may take advantage of all the features that it provides. The WebCaptcha control also provides the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~captchaeditorid.html[CaptchaEditorID] property, which can be used to specify an external input field. Here is an example:
+When using the WebCaptcha™ control in Captcha (default) link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webcaptcha~protectionmode.html[ProtectionMode], the control renders a text input field, link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webcaptcha~inputvalueeditor.html[InputValueEditor], and its value is used for the captcha validation. The text input is the WebTextEditor control, and you may take advantage of all the features that it provides. The WebCaptcha control also provides the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webcaptcha~captchaeditorid.html[CaptchaEditorID] property, which can be used to specify an external input field. Here is an example:
 
 *In HTML:*
 

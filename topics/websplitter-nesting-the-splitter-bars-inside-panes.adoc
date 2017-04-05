@@ -37,11 +37,11 @@ When you finish reading, you will be able to create nested WebSplitter panes in 
 [start=3]
 . Locate the Width property and set it to 800px.
 [start=4]
-. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.websplitter~panes.html[Panes]"]  property and click the ellipse (...) button to launch the SplitterPane collection editor.
+. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.websplitter~panes.html[Panes]"]  property and click the ellipse (...) button to launch the SplitterPane collection editor.
 [start=5]
-. Click the Add button twice in order to add two separate  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.splitterpane.html[SplitterPanes]"] .
+. Click the Add button twice in order to add two separate  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.splitterpane.html[SplitterPanes]"] .
 [start=6]
-. Click on the first SplitterPane and in the Property Window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  property and set its value to http://www.infragistics.com
+. Click on the first SplitterPane and in the Property Window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  property and set its value to http://www.infragistics.com
 [start=7]
 . Click the OK button to close the SplitterPane collection editor.
 [start=8]
@@ -49,7 +49,7 @@ When you finish reading, you will be able to create nested WebSplitter panes in 
 [start=9]
 . Locate the WebSplitter element and then locate the Panes element. This will contain the two SplitterPanes that we created.
 [start=10]
-. In between the second SplitterPane, insert a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~template.html[Template]"]  element. The code should look similar to this:
+. In between the second SplitterPane, insert a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contentpane~template.html[Template]"]  element. The code should look similar to this:
 
 *In HTML:*
 
@@ -75,7 +75,7 @@ When you finish reading, you will be able to create nested WebSplitter panes in 
 [start=14]
 . Next click on the new WebSplitter control that is in the bottom SplitterPane and in the Property Window, delete the value that is contained within the Height and Width property. This will cause the SplitterPanes to resize themselves according to the size of the content contained within.
 [start=15]
-. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.websplitter~orientation.html[Orientation]"]  property and set it to Vertical.
+. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.websplitter~orientation.html[Orientation]"]  property and set it to Vertical.
 [start=16]
 . Locate the Panes collection for the second WebSplitter and click the ellipse button (...) to launch the SplitterPane collection editor.
 [start=17]

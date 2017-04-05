@@ -90,8 +90,8 @@ private class CustomPagerTemplate : ITemplate
 [start=3]
 . In the load event handler of the page, add code to add the paging behavior for WebDataGrid.
 
-.. Enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  behavior.
-.. Handle the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.pagingclientevents~pageindexchanged.html[PageIndexChanged]"]  client-side event.
+.. Enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  behavior.
+.. Handle the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.pagingclientevents~pageindexchanged.html[PageIndexChanged]"]  client-side event.
 .. Instantiate the custom paging template and assign it as the paging template.
 
 *In Visual Basic:*

@@ -24,13 +24,13 @@ WebHierarchicalDataGrid™ provides the ability to create custom columns using c
 
 You can provide a cell, alternate cell, header, and footer template for a column. Setting a specific template for a column means the template will render in place of the element. For example, specifying an item template for a column will create a template for every cell in that column.
 
-You can also specify an item template without making the entire column a template column. Each cell in a column has a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.itemtemplate~template.html[Template]"]  and a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.itemtemplate~templateid.html[TemplateId]"]  property. You can set either one of these properties to define a template for an individual cell.
+You can also specify an item template without making the entire column a template column. Each cell in a column has a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.itemtemplate~template.html[Template]"]  and a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.itemtemplate~templateid.html[TemplateId]"]  property. You can set either one of these properties to define a template for an individual cell.
 
 == Referencing a Control within a Template
 
-You can access a control within an item template by accessing that item and calling its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldataitem~findcontrol.html[FindControl]"]  method.
+You can access a control within an item template by accessing that item and calling its  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.controldataitem~findcontrol.html[FindControl]"]  method.
 
-As for the Header and Footer templates, you can use the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.fieldcaption~templatecontainer.html[TemplateContainer]"]  property off of each object to get reference to the template. Use the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldataitem~findcontrol.html[FindControl]"]  method to find the control.
+As for the Header and Footer templates, you can use the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.fieldcaption~templatecontainer.html[TemplateContainer]"]  property off of each object to get reference to the template. Use the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.controldataitem~findcontrol.html[FindControl]"]  method to find the control.
 
 == Template Editing
 

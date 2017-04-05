@@ -14,7 +14,7 @@
 
 = Using loading items message template in WebDropDown
 
-When using the load-on-demand feature, WebDropDown™ allows you to show a customized loading message by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~loadingitemsmessagetext.html[LoadingItemsMessageText]"]  property. If this property is set, a message will appear notifying the end-user that loading is in progress during AJAX postback. However you can also apply a loading items message template to the loading message using the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~loadingitemsmessagetemplate.html[LoadingItemsMessageTemplate]"]  property.
+When using the load-on-demand feature, WebDropDown™ allows you to show a customized loading message by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~loadingitemsmessagetext.html[LoadingItemsMessageText]"]  property. If this property is set, a message will appear notifying the end-user that loading is in progress during AJAX postback. However you can also apply a loading items message template to the loading message using the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~loadingitemsmessagetemplate.html[LoadingItemsMessageTemplate]"]  property.
 
 == To use loading items message template in WebDropDown:
 

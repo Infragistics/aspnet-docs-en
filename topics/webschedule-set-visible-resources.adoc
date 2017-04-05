@@ -14,9 +14,9 @@
 
 = Set Visible Resources
 
-You can control the number of resources displayed by the WebSchedule™ controls when multiple resource view is enabled. To do this, handle the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~resourcesfetched_ev.html[ResourcesFetched] event and remove the resources you do not want to show using the WebScheduleInfo™ component's link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResources] property.
+You can control the number of resources displayed by the WebSchedule™ controls when multiple resource view is enabled. To do this, handle the link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~resourcesfetched_ev.html[ResourcesFetched] event and remove the resources you do not want to show using the WebScheduleInfo™ component's link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResources] property.
 
-You can also pre-populate the VisibleResources collection by creating link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource] objects and adding them to the collection, preferably in the page's PreLoad event.
+You can also pre-populate the VisibleResources collection by creating link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.resource.html[Resource] objects and adding them to the collection, preferably in the page's PreLoad event.
 
 The following code shows you how to handle the ResourcesFetched event to display the visible resources.
 

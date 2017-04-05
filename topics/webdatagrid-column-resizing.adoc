@@ -51,7 +51,7 @@ It is not recommended that you use percentage widths together with pixel widths 
 
 == Min/Max Width
 
-You can set a minimum and maximum width on a column. This restricts resizing to go beyond these values. Restricting a column’s width requires that you to add a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizesetting.html[Column Resizing Setting]"]  for the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizing.html[ColumnResizing]"]  behavior. The Column Resizing Setting has a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizesetting~minimumwidth.html[MinimumWidth]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizesetting~maximumwidth.html[MaximumWidth]"]  property for which you can set a minimum or maximum value for a column, respectively.
+You can set a minimum and maximum width on a column. This restricts resizing to go beyond these values. Restricting a column’s width requires that you to add a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizesetting.html[Column Resizing Setting]"]  for the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizing.html[ColumnResizing]"]  behavior. The Column Resizing Setting has a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizesetting~minimumwidth.html[MinimumWidth]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizesetting~maximumwidth.html[MaximumWidth]"]  property for which you can set a minimum or maximum value for a column, respectively.
 
 .Note:
 [NOTE]
@@ -66,14 +66,14 @@ You can resize more than one column at a time. You can select multiple columns a
 .Note:
 [NOTE]
 ====
-Multi-Column resizing requires that you enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior for multiple columns. For information on doing this, see link:webdatagrid-selection.html[Selection].
+Multi-Column resizing requires that you enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior for multiple columns. For information on doing this, see link:webdatagrid-selection.html[Selection].
 ====
 
 == *Enabling Column Resizing*
 
 == Before You Begin
 
-The WebDataGrid™ control’s columns are resizable. To allow column resizing, you must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizing.html[ColumnResizing]"]  behavior. Since column widths are empty by default, enabling column resizing alone makes WebDataGrid resize using percentages.
+The WebDataGrid™ control’s columns are resizable. To allow column resizing, you must enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizing.html[ColumnResizing]"]  behavior. Since column widths are empty by default, enabling column resizing alone makes WebDataGrid resize using percentages.
 
 == What You Will Accomplish
 
@@ -84,7 +84,7 @@ You will learn how to enable pixel-based column resizing on all columns of WebDa
 [start=1]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. Retrieve the CustomerID, CompanyName, ContactName, and ContactTitle data. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=2]
-. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~columns.html[Columns]"]  property and click the ellipsis (...) button to launch the Columns Editor Dialog.
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~columns.html[Columns]"]  property and click the ellipsis (...) button to launch the Columns Editor Dialog.
 [start=3]
 . Set a pixel width for each column in the control. This allows for resizing to be based on pixels.
 
@@ -97,17 +97,17 @@ image::images/WebDataGrid_Enabling_Column_Resizing_01.png[]
 [start=4]
 . Click Ok to close the dialog.
 [start=5]
-. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=6]
 . Check the Column Resizing behavior to enable it.
 [start=7]
-. In the properties for the behavior, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizing~columnsettings.html[ColumnSettings]"]  property and click the ellipsis (…) button to launch the Column Settings Designer.
+. In the properties for the behavior, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizing~columnsettings.html[ColumnSettings]"]  property and click the ellipsis (…) button to launch the Column Settings Designer.
 [start=8]
 . Click Add to add a column setting.
 [start=9]
-. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey]"]  property to CustomerID.
+. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey]"]  property to CustomerID.
 [start=10]
-. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizesetting~minimumwidth.html[MinimumWidth]"]  property to 100. This restricts the column from being resized any lower than 100 pixels. You can leave the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizesetting~maximumwidth.html[MaximumWidth]"]  property at -1, allowing your end-users to expand the column to any size.
+. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizesetting~minimumwidth.html[MinimumWidth]"]  property to 100. This restricts the column from being resized any lower than 100 pixels. You can leave the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizesetting~maximumwidth.html[MaximumWidth]"]  property at -1, allowing your end-users to expand the column to any size.
 
 image::images/WebDataGrid_Enabling_Column_Resizing_02.png[]
 

@@ -16,9 +16,9 @@
 
 The Shadow pane lets you modify the angle and depth of the drop shadows on a property (e.g., an anchor).
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.shadow~angle.html[Angle]"]  -- Set this value to an integer from 0 to 100. This value determines the angle of the drop shadow on a property.
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.shadow~angle.html[Angle]"]  -- Set this value to an integer from 0 to 100. This value determines the angle of the drop shadow on a property.
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.shadow~depth.html[Depth]"]  -- Set this value to an integer from 0 to 100. This value determines the distance between the drop shadow and the property (e.g., the anchor).
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.shadow~depth.html[Depth]"]  -- Set this value to an integer from 0 to 100. This value determines the distance between the drop shadow and the property (e.g., the anchor).
 
 image::images/Shadow_Pane_01.png[The shadow pane in the gauge designer.]
 

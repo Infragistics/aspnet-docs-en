@@ -14,7 +14,7 @@
 
 = Overlapping Tabs
 
-WebTab™ provides you with an overlapping feature, which allows you to show each tab overlapping with its adjacent tabs. By default, overlapping of tabs is disabled. However you can enable this feature by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~enableoverlappingtabs.html[EnableOverlappingTabs]"]  property to True. You can also customize the Css classes with respect to this feature by assigning your own Css class to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~cssclasses.html[CssClasses]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabcssclasses~overlappingtabscssclass.html[OverlappingTabsCssClass]"]  property. The applied class is merged with the igtab_XXOverlap Css.
+WebTab™ provides you with an overlapping feature, which allows you to show each tab overlapping with its adjacent tabs. By default, overlapping of tabs is disabled. However you can enable this feature by setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~enableoverlappingtabs.html[EnableOverlappingTabs]"]  property to True. You can also customize the Css classes with respect to this feature by assigning your own Css class to the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~cssclasses.html[CssClasses]"]  object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabcssclasses~overlappingtabscssclass.html[OverlappingTabsCssClass]"]  property. The applied class is merged with the igtab_XXOverlap Css.
 
 *In HTML:*
 

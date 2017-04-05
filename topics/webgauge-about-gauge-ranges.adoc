@@ -14,7 +14,7 @@
 
 = About Gauge Ranges
 
-The  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gaugerange.html[Range]"]  property of the WebGauge control is a visual element that begins and ends at specified values on a scale. The Range property allows you to highlight specific parts of the scale. For example, on a vehicle tachometer, the high RPM zones, which are usually yellow and red, indicate that the engine is running higher than the optimal load.
+The  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.gaugerange.html[Range]"]  property of the WebGauge control is a visual element that begins and ends at specified values on a scale. The Range property allows you to highlight specific parts of the scale. For example, on a vehicle tachometer, the high RPM zones, which are usually yellow and red, indicate that the engine is running higher than the optimal load.
 
 image::images/Gauge_Add_Range_01.png[Radial gauge demonstrating ranges.]
 

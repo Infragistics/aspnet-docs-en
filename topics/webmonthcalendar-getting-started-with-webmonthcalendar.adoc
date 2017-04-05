@@ -32,7 +32,7 @@ image::images/WebMonthCalendar_Views_and_Title_Format_in_WebMonthCalendar_03.png
 
 image::images/WebMonthCalendar_Views_and_Title_Format_in_WebMonthCalendar_04.png[]
 
-The lists that can be opened by the end-user depend on how the WebMonthCalendar control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~titleformat.html[TitleFormat]"]  property is configured. The TitleFormat property can be set to one of the following members of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.calendartitleformat.html[CalendarTitleFormat]"]  enumeration:
+The lists that can be opened by the end-user depend on how the WebMonthCalendar control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~titleformat.html[TitleFormat]"]  property is configured. The TitleFormat property can be set to one of the following members of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.calendartitleformat.html[CalendarTitleFormat]"]  enumeration:
 
 * *Month* -- Title shows single label/button with current month.
 * *MonthYear* -- Title shows single label/button with format based on the YearMonthPattern of the CultureInfo class (CultureInfo.DateTimeFormat.YearMonthPattern).

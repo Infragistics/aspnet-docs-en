@@ -14,7 +14,7 @@
 
 = Hide a Column
 
-WebHierarchicalDataGrid™ allows you to hide columns from your end-users. For example, you may not want to show columns that are meaningless to your end-users. You can achieve this by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldatafield~hidden.html[Hidden]"]  property to true on any type of column. You can hide columns on parent and child levels.
+WebHierarchicalDataGrid™ allows you to hide columns from your end-users. For example, you may not want to show columns that are meaningless to your end-users. You can achieve this by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.controldatafield~hidden.html[Hidden]"]  property to true on any type of column. You can hide columns on parent and child levels.
 
 == To hide a column through the designer:
 

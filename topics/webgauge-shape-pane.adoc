@@ -16,9 +16,9 @@
 
 The Shape pane determines the shape of the dial.
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.dialappearance~shape.html[Shape]"]  -- This value specifies whether the dial is elliptical or rectangle.
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.dialappearance~shape.html[Shape]"]  -- This value specifies whether the dial is elliptical or rectangle.
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.dialappearance~expansion.html[Expansion]"]  -- Set this value to a value from -999 to 99.
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.dialappearance~expansion.html[Expansion]"]  -- Set this value to a value from -999 to 99.
 
 image::images/Shape_Pane_01.png[The shape pane in the gauge designer.]
 

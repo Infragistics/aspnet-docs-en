@@ -14,7 +14,7 @@
 
 = Modify the Resize Handle
 
-A customization request that your end users may ask from you is to change the style of the resize handle that appears in the lower-right corner of the resizing control. The resize handle is controlled by Cascading Style Sheets (CSS). Therefore the easiest way to modify the resize handle is to create a CSS class in your form, and then assign the class name to the  pick:[asp-net="link:infragistics4.webui.webresizingextender.v{ProductVersion}~infragistics.webui.webresizingextender~handleclass.html[HandleClass]"]  property of WebResizingExtender™. This topic will show you how to create an in-line CSS class, and then assign it to the HandleClass property.
+A customization request that your end users may ask from you is to change the style of the resize handle that appears in the lower-right corner of the resizing control. The resize handle is controlled by Cascading Style Sheets (CSS). Therefore the easiest way to modify the resize handle is to create a CSS class in your form, and then assign the class name to the  pick:[asp-net="link:{ApiPlatform}webui.webresizingextender{ApiVersion}~infragistics.webui.webresizingextender~handleclass.html[HandleClass]"]  property of WebResizingExtender™. This topic will show you how to create an in-line CSS class, and then assign it to the HandleClass property.
 
 [start=1]
 . To create a CSS class, inside your page's <head> tags, after the closing <title> tags, create a <style> tag of type "text/css".

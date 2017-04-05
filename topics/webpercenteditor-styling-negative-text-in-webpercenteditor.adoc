@@ -14,7 +14,7 @@
 
 = Styling negative text in WebPercentEditor
 
-WebPercentEditor™ allows you to style negative percent values by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~negativecssclass.html[NegativeCssClass]"]  property. This will make negative values in the WebPercentEditor control apparent.
+WebPercentEditor™ allows you to style negative percent values by simply setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~negativecssclass.html[NegativeCssClass]"]  property. This will make negative values in the WebPercentEditor control apparent.
 
 == To style negative text in WebPercentEditor:
 

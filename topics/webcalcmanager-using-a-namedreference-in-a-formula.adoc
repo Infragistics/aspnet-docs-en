@@ -14,7 +14,7 @@
 
 = Using a NamedReference in a Formula
 
-A  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.namedreference.html[NamedReference]"]  is essentially a formula that is independent of a control. NamedReferences have many uses, such as defining constants or formulas that are used in other calculations but do not need to be visible to the end-user.
+A  pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.namedreference.html[NamedReference]"]  is essentially a formula that is independent of a control. NamedReferences have many uses, such as defining constants or formulas that are used in other calculations but do not need to be visible to the end-user.
 
 The most important properties of the NamedReferences are:
 
@@ -22,22 +22,22 @@ The most important properties of the NamedReferences are:
 |====
 |Property Name|Description
 
-| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.namedreference~category.html[Category]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.namedreference~category.html[Category]"] 
 |Used by the FormulaBuilder to organize NamedReferences.
 
-| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.namedreference~key.html[Key]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.namedreference~key.html[Key]"] 
 |A unique key for this NamedReference. Key is used to reference the NamedReference in a formula.
 
-| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.namedreference~formula.html[Formula]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.namedreference~formula.html[Formula]"] 
 |The formula for this NamedReference. Note that Formula can be a literal, so that NamedReferences can be used as constants.
 
-| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.namedreference~formularesult.html[FormulaResult]"] (run-time only)
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.namedreference~formularesult.html[FormulaResult]"] (run-time only)
 |FormulaResult returns the calculated result of the formula.
 
 |====
 
 [start=1]
-. To add a NamedReference, simply go to the NamedReferences property of the  pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.ultrawebcalcmanager.html[UltraWebCalcManager]"]  component and click the ellipsis to open the collection editor. Use the Add button to add new NamedReferences to the collection.
+. To add a NamedReference, simply go to the NamedReferences property of the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.ultrawebcalcmanager.html[UltraWebCalcManager]"]  component and click the ellipsis to open the collection editor. Use the Add button to add new NamedReferences to the collection.
 [start=2]
 . To create a constant, simply assign a literal value to the Formula. For example, define a NamedReference with a Key of "Pi" and set the Formula to "3.1415".
 

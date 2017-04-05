@@ -41,6 +41,6 @@ image::images/WebScheduleOleDbProvider_The_WebScheduleOleDbProvider_Smart_Tag_01
 
 |WebScheduleInfoID
 |Use the drop-down box to select a WebScheduleInfo to associate with the WebScheduleOleDbProvider.
-| pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledataproviderbase~webscheduleinfoid.html[WebScheduleInfo]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledataproviderbase~webscheduleinfoid.html[WebScheduleInfo]"] 
 
 |====

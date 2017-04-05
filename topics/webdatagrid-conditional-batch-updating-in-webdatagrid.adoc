@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-Binding WebDataGrid™ to a DataSource object such as SqlDataSource or ObjectDataSource using the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasourceid.html[DataSourceID]"]  , the DataSource will provide the conditional batch updating functionality for you. Any add or delete operations will trigger the WebDataGrid’s hidden postbacks to execute those operations with the data. However when editing, WebDataGrid does not postback unless it is handling  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~rowupdated_ev.html[RowUpdated]"]  or  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~rowupdating_ev.html[RowUpdating]"]  events. If not handling any of those events, your data will be updated in the DataSource on the next postback essentially providing the end-user with batch updating functionality.
+Binding WebDataGrid™ to a DataSource object such as SqlDataSource or ObjectDataSource using the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasourceid.html[DataSourceID]"]  , the DataSource will provide the conditional batch updating functionality for you. Any add or delete operations will trigger the WebDataGrid’s hidden postbacks to execute those operations with the data. However when editing, WebDataGrid does not postback unless it is handling  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~rowupdated_ev.html[RowUpdated]"]  or  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~rowupdating_ev.html[RowUpdating]"]  events. If not handling any of those events, your data will be updated in the DataSource on the next postback essentially providing the end-user with batch updating functionality.
 
 == What You Will Accomplish
 
@@ -46,7 +46,7 @@ image::images\WebDataGrid_Conditional_Batch_Updating_in_WebDataGrid_01.png[]
 ** Click Finish to close the Configure Data Source dialog.
 
 [start=4]
-. Set the WebDataGrid’s DataSourceID property to SqlDataSource1 and the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to ProductID in the property window.
+. Set the WebDataGrid’s DataSourceID property to SqlDataSource1 and the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to ProductID in the property window.
 [start=5]
 . Enable the CellEditing Behavior of the grid using the designer or through the following code:
 

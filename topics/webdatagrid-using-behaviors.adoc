@@ -16,13 +16,13 @@
 
 == Before You Begin
 
-To enable features and functionality in WebDataGrid™ use the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. You can add behaviors to this collection in order to enable WebDataGrid’s various features, such as sorting and paging. Behaviors are automatically enabled as you add them to the collection. You can disable a behavior without removing it from the collection by setting its Enabled property to False. Any added behaviors are displayed and accessible through the Microsoft® Visual Studio™ property window under WebDataGrid’s behaviors collection.
+To enable features and functionality in WebDataGrid™ use the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. You can add behaviors to this collection in order to enable WebDataGrid’s various features, such as sorting and paging. Behaviors are automatically enabled as you add them to the collection. You can disable a behavior without removing it from the collection by setting its Enabled property to False. Any added behaviors are displayed and accessible through the Microsoft® Visual Studio™ property window under WebDataGrid’s behaviors collection.
 
 Properties and client-side events that apply to a behavior can be adjusted when adding the behavior or in the property window after adding the behavior.
 
 == What You Will Accomplish
 
-You will learn how to enable sorting for WebDataGrid using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting.html[Sorting]"]  Behavior.
+You will learn how to enable sorting for WebDataGrid using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting.html[Sorting]"]  Behavior.
 
 == Follow these Steps
 
@@ -33,7 +33,7 @@ You will learn how to enable sorting for WebDataGrid using the  pick:[asp-net="l
 [start=3]
 . Check the CheckBox next to Sorting from the list of behaviors on the left to enable the behavior.
 [start=4]
-. Leave  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~sortingmode.html[SortingMode]"]  as Single in the properties.
+. Leave  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting~sortingmode.html[SortingMode]"]  as Single in the properties.
 
 image::images\WebDataGrid_Using_Behaviors_01.png[]
 

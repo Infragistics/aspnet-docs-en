@@ -90,12 +90,12 @@ The following table lists the configurable aspects of the link:webhierarchicalda
 |<<_Ref336284691,Configuring the Capitalization of the Unique Values in the Filtering Drop-Down>>
 |You can specify the capitalization of values into the filtering dropdown. The available options are: lowercase capitalization, uppercase capitalization, and camelcase capitalization.
 |
-* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] 
+* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] 
 
 |<<_Ref336284708,Configuring the Text for the Null Values in the Filtering Drop-Down>>
 |You can specify custom text for Null values in the filtering drop-down.
 |
-* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] 
+* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] 
 
 |====
 
@@ -116,7 +116,7 @@ The capitalization options for the unique values are the following:
 *  *Uppercase*   *capitalization*  – the items appear in uppercase letters (all caps)
 *  *Camelcase capitalization*  – the items appear with sentence capitalization (Only the first letter of the item is capitalized even if the item consists of more than one words.)
 
-The capitalization is managed by the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property.
+The capitalization is managed by the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property.
 
 The capitalization of unique values can be set on several levels:
 
@@ -135,15 +135,15 @@ The column setting takes the highest priority.
 |The following table maps the desired capitalization configurations of the property settings that configure them:In order to:|Use this property:|And set it to:
 
 |Configure lowercase capitalization for the items in the filtering drop-down in lower case
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]
 | _Lower_ 
 
 |Configure uppercase capitalization for the items in the filtering drop-down in upper case
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]
 | _Upper_ 
 
 |Configure camelcase capitalization for the items in the filtering drop-down with only the first capitalized
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]
 | _Camel_ 
 
 |====
@@ -163,7 +163,7 @@ To complete the procedure, you need the following:
 
 *Configuring the capitalization on grid level*
 
-To set the * link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]* property to  _Camel_  on grid-level using the designer:
+To set the * link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]* property to  _Camel_  on grid-level using the designer:
 
 *1**.* From the smart tag of the  _WebDataGrid_,  *open the*  *WebDataGrid Designer* .
 
@@ -171,13 +171,13 @@ image::images/WHDG_ExcelStyleFiltering_Configuring_1.png[]
 
 *2**.* In the left pane,  *select the desired filtering behavior* .
 
-*3**.* In the right pane,  *set the*  * link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]*  *property to*   _Camel_ .
+*3**.* In the right pane,  *set the*  * link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]*  *property to*   _Camel_ .
 
 *4**.*  *Click the*  *OK*  *button* .
 
 *Configuring the capitalization on*band* *level*
 
-The following example demonstrates how to configure the capitalization of the unique valies in the filtering drop-down for the first child band. In this example, the items are being set to appear in all-uppercase letters (The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property is being set to  _Upper_  .).
+The following example demonstrates how to configure the capitalization of the unique valies in the filtering drop-down for the first child band. In this example, the items are being set to appear in all-uppercase letters (The link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property is being set to  _Upper_  .).
 
 *1**.*  *Add the child band*  * .*
 
@@ -191,7 +191,7 @@ image::images/WHDG_ExcelStyleFiltering_Configuring_3.png[]
 
 === Configuring the capitalization of unique values in the ASPX markup
 
-The following code demonstrates how to configure, in the ASPX markup, the unique values with sentence capitalization for the parent (by setting the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on the parent level) and with all-uppercase capitalization for the child (by setting the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Upper_   on the child level).
+The following code demonstrates how to configure, in the ASPX markup, the unique values with sentence capitalization for the parent (by setting the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on the parent level) and with all-uppercase capitalization for the child (by setting the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Upper_   on the child level).
 
 *In ASPX:*
 
@@ -218,7 +218,7 @@ The following code demonstrates how to configure, in the ASPX markup, the unique
 
 === Configuring the capitalization of unique values in the code-behind
 
-The following code demonstrates how to configure, in the code-behind, the unique values with sentence capitalization for the parent (by setting the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on the parent level) and with all-uppercase capitalization for the child (by setting the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Upper_   on the child level).
+The following code demonstrates how to configure, in the code-behind, the unique values with sentence capitalization for the parent (by setting the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Camel_   on the parent level) and with all-uppercase capitalization for the child (by setting the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing] property to  _Upper_   on the child level).
 
 *In C#:*
 
@@ -254,13 +254,13 @@ The following code demonstrates how to configure, in the code-behind, the unique
 
 Setting the null value text allows you to change the text for the item in the filter drop-down. This text will be displayed for the items that have a Null value in the data source/database.
 
-The * link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]* property is of type string and has default value of  _Null_ . This property can be set on both the parent and child levels. In this example, the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property is set to  _CHILD NULL_   for the child band.
+The * link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]* property is of type string and has default value of  _Null_ . This property can be set on both the parent and child levels. In this example, the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property is set to  _CHILD NULL_   for the child band.
 
 [[_Ref336006661]]
 
 === Preview
 
-The following picture demonstrates the null value items displayed as  _CHILD NULL_   as a result of setting the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property to  _CHILD NULL_   string.
+The following picture demonstrates the null value items displayed as  _CHILD NULL_   as a result of setting the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property to  _CHILD NULL_   string.
 
 image::images/WHDG_ExcelStyleFiltering_Configuring_4.png[]
 
@@ -275,7 +275,7 @@ The following table maps the desired configuration to the property settings that
 |In order to:|Use this property:|And set it to:
 
 |Set the text for the items with null values to _CHILD NUL_ in the filtering drop-down of the child band.
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]
 | _CHILD NULL_ 
 
 |====
@@ -293,9 +293,9 @@ To complete the procedure, you need the following:
 
 === Configuring the text for the null values using the Designer
 
-The screenshots below demonstrates how to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] to “ _CHILD NULL_  ” on the child band in the WebHierarchicalDataGrid™ using the designer. First open the Edit Bands from the smart tag of the WebHierarchicalDataGrid™. First the child band has to be added, after that filtering behavior with link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] set to “ _CHILD NULL_  ”.
+The screenshots below demonstrates how to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] to “ _CHILD NULL_  ” on the child band in the WebHierarchicalDataGrid™ using the designer. First open the Edit Bands from the smart tag of the WebHierarchicalDataGrid™. First the child band has to be added, after that filtering behavior with link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] set to “ _CHILD NULL_  ”.
 
-To set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] to  _My Null_   for the child band in the  _WebHierarchicalDataGrid_   using the Designer:
+To set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] to  _My Null_   for the child band in the  _WebHierarchicalDataGrid_   using the Designer:
 
 *1.*  From the smart tag of the  _WebDataGrid_,  *open the*  Edit WebHierarchicalDataGrid Bands dialog.
 
@@ -305,7 +305,7 @@ image::images/WHDG_ExcelStyleFiltering_Configuring_2.png[]
 
 *2.*  From the right pane,  *set the*  FilterType  *property to*   _ExcelStyleFilter_  .
 
-*3.*  From the right pane,  *set the*  link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]  *property to*   _My Null_  .
+*3.*  From the right pane,  *set the*  link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]  *property to*   _My Null_  .
 
 image::images/WHDG_ExcelStyleFiltering_Configuring_6.png[]
 
@@ -315,7 +315,7 @@ image::images/WHDG_ExcelStyleFiltering_Configuring_6.png[]
 
 === Configuring the text for the null values in the ASPX markup
 
-The code snippet below demonstrates how to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property for the child band to “ _CHILD NULL_  ” in the ASPX markup.
+The code snippet below demonstrates how to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property for the child band to “ _CHILD NULL_  ” in the ASPX markup.
 
 *In ASPX:*
 
@@ -337,7 +337,7 @@ The code snippet below demonstrates how to set the link:infragistics4.web.v{Prod
 
 === Configuring the text for the null values in the code-behind
 
-The code snippet below demonstrates how to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property for the child band to “ _CHILD NULL_  ” from the code-behind.
+The code snippet below demonstrates how to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText] property for the child band to “ _CHILD NULL_  ” from the code-behind.
 
 *In C#:*
 

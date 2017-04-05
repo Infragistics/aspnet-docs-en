@@ -16,7 +16,7 @@
 
 === Tabs Overflow
 
-WebTab™ provides you with an option to reduce the width of the tabs in case of overflow. You can easily achieve this by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~tabsoverflow.html[TabsOverflow]"]  property to Reduce.
+WebTab™ provides you with an option to reduce the width of the tabs in case of overflow. You can easily achieve this by setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~tabsoverflow.html[TabsOverflow]"]  property to Reduce.
 
 .Note:
 [NOTE]
@@ -54,7 +54,7 @@ WebTab1.TabsOverflow = TabsOverflow.Reduce;
 
 === Text Overflow
 
-There may be situations where the content of the tab header may not be visible entirely because of less width. To overcome this situation you can provide your end users with an option to click an ellipsis button to show the header content when it is clicked. You can set this feature by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~textoverflow.html[TextOverflow]"]  property to Ellipsis.
+There may be situations where the content of the tab header may not be visible entirely because of less width. To overcome this situation you can provide your end users with an option to click an ellipsis button to show the header content when it is clicked. You can set this feature by setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~textoverflow.html[TextOverflow]"]  property to Ellipsis.
 
 .Note:
 [NOTE]

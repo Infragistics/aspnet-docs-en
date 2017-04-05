@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-WebHierarchicalDataGrid™ provides paging functionality to present data in smaller subsets displayed as pages. To enable paging, add the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  behavior to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridbehaviorcollection.html[Behaviors]"]  collection.
+WebHierarchicalDataGrid™ provides paging functionality to present data in smaller subsets displayed as pages. To enable paging, add the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  behavior to the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridbehaviorcollection.html[Behaviors]"]  collection.
 
 == What You Will Accomplish
 
@@ -31,11 +31,11 @@ You will learn how to enable basic paging for WebHierarchicalDataGrid and set se
 [start=3]
 . Check the CheckBox next to Paging from the list on the left to add and enable the behavior.
 [start=4]
-. In the properties, set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging~pagesize.html[PageSize]"]  to 5, increasing the number of records per page to 5.
+. In the properties, set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging~pagesize.html[PageSize]"]  to 5, increasing the number of records per page to 5.
 [start=5]
-. Set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging~pagermode.html[PagerMode]"]  to NumericFirstLast which changes the pager links to numbers with links to the first and last pages.
+. Set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging~pagermode.html[PagerMode]"]  to NumericFirstLast which changes the pager links to numbers with links to the first and last pages.
 [start=6]
-. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging~enableinheritance.html[EnableInheritance]"]  property to True, to enable Paging for all child levels. The default value is False.
+. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging~enableinheritance.html[EnableInheritance]"]  property to True, to enable Paging for all child levels. The default value is False.
 
 image::images/WebHierarchicalDataGrid_Enabling_Paging_01.png[]
 

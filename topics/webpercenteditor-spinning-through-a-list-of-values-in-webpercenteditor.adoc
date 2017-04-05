@@ -14,7 +14,7 @@
 
 = Spinning through a list of values in WebPercentEditor
 
-WebPercentEditor™ provides the option to spin through a list of values using spin buttons. You can display the spin buttons by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~spinbuttonsdisplay.html[SpinButtonsDisplay]"]  property to either OnRight or OnLeft. By default, this property is set to None. The spin buttons have two buttons: lower and upper so that your end users can move to the next and previous values. You can customize the lower and upper buttons by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~lowerspinbutton.html[LowerSpinButton]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~upperspinbutton.html[UpperSpinButton]"]  properties respectively.
+WebPercentEditor™ provides the option to spin through a list of values using spin buttons. You can display the spin buttons by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~spinbuttonsdisplay.html[SpinButtonsDisplay]"]  property to either OnRight or OnLeft. By default, this property is set to None. The spin buttons have two buttons: lower and upper so that your end users can move to the next and previous values. You can customize the lower and upper buttons by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~lowerspinbutton.html[LowerSpinButton]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~upperspinbutton.html[UpperSpinButton]"]  properties respectively.
 
 You can set the SpinButtonsDisplay property either using Microsoft® Visual Studio® Property Window or by using the following code:
 
@@ -32,11 +32,11 @@ WebPercentEditor1.Buttons.SpinButtonsDisplay = Infragistics.Web.UI.EditorControl
 WebPercentEditor1.Buttons.SpinButtonsDisplay = Infragistics.Web.UI.EditorControls.ButtonDisplay.OnRight;
 ----
 
-WebPercentEditor also allows you to spin through the list continuously even if it reaches the first or last value in the list by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~spinwrap.html[SpinWrap]"]  property to True.
+WebPercentEditor also allows you to spin through the list continuously even if it reaches the first or last value in the list by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~spinwrap.html[SpinWrap]"]  property to True.
 
 == Add and Insert Values into the list:
 
-WebPercentEditor allows you to add a list of values that you want to iterate through using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons.html[TextEditorButtons]"]  object's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~listofvalues.html[ListOfValues]"]  property. You can set the ListOfValues property either using Microsoft® Visual Studio® Property Window or by using the following code:
+WebPercentEditor allows you to add a list of values that you want to iterate through using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons.html[TextEditorButtons]"]  object's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~listofvalues.html[ListOfValues]"]  property. You can set the ListOfValues property either using Microsoft® Visual Studio® Property Window or by using the following code:
 
 *In Visual Basic:*
 
@@ -56,7 +56,7 @@ WebPercentEditor1.Buttons.ListOfValues = "10.1|20.2|30.3|40.4|50.5";
 Items in the list must be separated by the "|" character when using the ListOfValues property.
 ====
 
-However you can also insert values into the list using the TextEditorButtons object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~insertlistvalueatindex.html[InsertListValueAtIndex]"]  method.
+However you can also insert values into the list using the TextEditorButtons object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~insertlistvalueatindex.html[InsertListValueAtIndex]"]  method.
 
 *In Visual Basic:*
 
@@ -82,7 +82,7 @@ WebPercentEditor1.Buttons.InsertListValueAtIndex(4, "50.5");
 
 == Increment/Decrement the editing value:
 
-WebPercentEditor also allows you to increment/decrement the editing value using the spin buttons. You can set the increment/decrement factor by simply setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~spindelta.html[SpinDelta]"]  property. For instance, if you set the SpinDelta property to 10 then clicking the upper button increases the value by 10. Similarly clicking the lower button decreases the value by 10.
+WebPercentEditor also allows you to increment/decrement the editing value using the spin buttons. You can set the increment/decrement factor by simply setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~spindelta.html[SpinDelta]"]  property. For instance, if you set the SpinDelta property to 10 then clicking the upper button increases the value by 10. Similarly clicking the lower button decreases the value by 10.
 
 You can set the SpinDelta property either using Microsoft® Visual Studio® Property Window or by using the following code:
 

@@ -14,7 +14,7 @@
 
 = Setting the Culture of WebCurrencyEditor
 
-WebCurrencyEditor™ allows you set a specific culture on how to display the currency by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~culture.html[Culture]"]  property. WebCurrencyEditor relies on the CultureInfo class in order to format its data. By default it will use the current culture that is set on your system.
+WebCurrencyEditor™ allows you set a specific culture on how to display the currency by setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~culture.html[Culture]"]  property. WebCurrencyEditor relies on the CultureInfo class in order to format its data. By default it will use the current culture that is set on your system.
 
 You can set the Culture property either by using the Microsoft® Visual Studio® Property Window or by using the following code:
 

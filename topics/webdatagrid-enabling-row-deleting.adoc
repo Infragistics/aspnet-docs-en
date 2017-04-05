@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-To delete data in WebDataGrid™, add the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]  behavior to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. This behavior allows your end-users to delete rows in WebDataGrid. You also need the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior enabled for deleting to function in the UI. When enabling RowDeleting in the designer you will be prompted to add the Selection behavior as well.
+To delete data in WebDataGrid™, add the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]  behavior to the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. This behavior allows your end-users to delete rows in WebDataGrid. You also need the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior enabled for deleting to function in the UI. When enabling RowDeleting in the designer you will be prompted to add the Selection behavior as well.
 
 A row can be deleted by selecting the row and pressing the delete key.
 
@@ -41,17 +41,17 @@ You will allow row deletion in the WebDataGrid control.
 [start=1]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=2]
-. In the Microsoft® Visual Studio™ property window, Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID so that changes in WebDataGrid can be updated to the data source.
+. In the Microsoft® Visual Studio™ property window, Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID so that changes in WebDataGrid can be updated to the data source.
 [start=3]
 . In the same window, locate the Behaviors property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=4]
 . Check the CheckBox next to Row Deleting from the list on the left to add and enable the behavior. You are prompted to add Selection as well.
 [start=5]
-. Click Yes to confirm the prompt. The Selection and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~rowselectors.html[RowSelectors]"]  behaviors are added to WebDataGrid.
+. Click Yes to confirm the prompt. The Selection and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~rowselectors.html[RowSelectors]"]  behaviors are added to WebDataGrid.
 [start=6]
 . Click Apply then Ok.
 [start=7]
-. Check that  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableajax.html[EnableAjax]"]  is True in the property window of WebDataGrid. If not, set it to True. Now when you select a row in WebDataGrid and press DELETE, the row is deleted from the control as well as the underlying data source.
+. Check that  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableajax.html[EnableAjax]"]  is True in the property window of WebDataGrid. If not, set it to True. Now when you select a row in WebDataGrid and press DELETE, the row is deleted from the control as well as the underlying data source.
 
 You can also delete a row programmatically on the client
 

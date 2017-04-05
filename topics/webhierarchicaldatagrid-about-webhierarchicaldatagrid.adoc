@@ -27,7 +27,7 @@ image::images/WebHierarchicalDataGrid_Binding_to_Data_03.png[]
 
 == Hierarchical View
 
-The WebHierarchicalDataGrid control is built upon WebDataGrid. WebHierarchcalDataGrid creates a collection of  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid]"]  objects to display the different hierarchical views. These objects can have child ContainerGrid objects of their own.
+The WebHierarchicalDataGrid control is built upon WebDataGrid. WebHierarchcalDataGrid creates a collection of  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid]"]  objects to display the different hierarchical views. These objects can have child ContainerGrid objects of their own.
 
 ===== ContainerGrid
 
@@ -35,17 +35,17 @@ A ContainerGrid object overrides WebDataGrid with a modified rendering engine th
 
 If you have a 2 level hierarchical data structure, WebHierarchicalDataGrid creates a ContainerGrid object for the root level and it also creates additional ContainerGrid objects for the nested data of each parent row.
 
-You can access the root ContainerGrid object by referencing the WebHierarchicalDataGrid control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~gridview.html[GridView]"]  property . Further, you can access a row’s child ContainerGrid objects by using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergridrecord.html[ContainerGridRecord]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergridrecord~rowislands.html[RowIslands]"]  property. If you are using Load on Demand, make sure that the ContainerGrid exists; i.e, the parent row is expanded before trying to access the row island.
+You can access the root ContainerGrid object by referencing the WebHierarchicalDataGrid control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~gridview.html[GridView]"]  property . Further, you can access a row’s child ContainerGrid objects by using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergridrecord.html[ContainerGridRecord]"]  object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergridrecord~rowislands.html[RowIslands]"]  property. If you are using Load on Demand, make sure that the ContainerGrid exists; i.e, the parent row is expanded before trying to access the row island.
 
 ===== Bands
 
-A  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band.html[Band]"]  object represents all the data islands belonging to a level in the hierarchy. You can use the Band object to set properties, styles, and behaviors specific to each data level. Each Band object implements the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand]"]  interface. WebHierarchicalDataGrid implements IBand and represents the root band.
+A  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band.html[Band]"]  object represents all the data islands belonging to a level in the hierarchy. You can use the Band object to set properties, styles, and behaviors specific to each data level. Each Band object implements the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand]"]  interface. WebHierarchicalDataGrid implements IBand and represents the root band.
 
-A ContainerGrid object exposes the Bands property of type  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.bandcollection.html[BandCollection]"]  containing the different data bands in the control. If you have a data source with a parent-child relationship, WebHierarchicalDataGrid's Bands collection will contain 1 Band object for the child data; the parent band is WebHierarchicalDataGrid itself and settings on this object will apply to only the parent data level. For more information on how to configure settings for different bands see, link:webhierarchicaldatagrid-behaviors.html[Behaviors].
+A ContainerGrid object exposes the Bands property of type  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.bandcollection.html[BandCollection]"]  containing the different data bands in the control. If you have a data source with a parent-child relationship, WebHierarchicalDataGrid's Bands collection will contain 1 Band object for the child data; the parent band is WebHierarchicalDataGrid itself and settings on this object will apply to only the parent data level. For more information on how to configure settings for different bands see, link:webhierarchicaldatagrid-behaviors.html[Behaviors].
 
 ===== Rows
 
-The ContainerGrid object's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid~rows.html[Rows] property of type link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergridrecordcollection.html[ContainerGridRecordCollection] holds ContainerGridRecord objects representing each row belonging to the grid. Each row contains the data cells as well as the ContainerGrid for any nested data.
+The ContainerGrid object's link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergrid~rows.html[Rows] property of type link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergridrecordcollection.html[ContainerGridRecordCollection] holds ContainerGridRecord objects representing each row belonging to the grid. Each row contains the data cells as well as the ContainerGrid for any nested data.
 
 ===== Accessing Row Islands
 

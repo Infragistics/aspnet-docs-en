@@ -80,7 +80,7 @@ Another example of a custom list with a toolbar drop-down list is the Insert lis
 
 Suppose your Web application let users create content for regulatory documents and you want to make a library of boilerplate text passages available (such as the customary disclaimer of forward-looking statements commonly found in the press releases of public companies.) Users should be able to select these predefined text passages by a short, descriptive name to save themselves some typing.
 
-Adding these custom items to the Insert Toolbar drop-down list requires you to create (name, value) pairs as  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbardropdownitem.html[ToolbarDropDownItem]"]  objects, and then add them to the Toolbar drop-down list during the PreRender event of the Page, as shown in the example below.
+Adding these custom items to the Insert Toolbar drop-down list requires you to create (name, value) pairs as  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.toolbardropdownitem.html[ToolbarDropDownItem]"]  objects, and then add them to the Toolbar drop-down list during the PreRender event of the Page, as shown in the example below.
 
 *In Visual Basic:*
 

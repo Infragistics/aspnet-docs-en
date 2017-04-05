@@ -14,9 +14,9 @@
 
 = Hide the Day-of-the-Week Header
 
-The WebMonthView™ by default displays a header across the top right under the caption header. This header displays the day of the week in the format you specify by setting the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview~dayofweekheaderformat.html[DayofWeekHeaderFormat]"]  property.
+The WebMonthView™ by default displays a header across the top right under the caption header. This header displays the day of the week in the format you specify by setting the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webmonthview~dayofweekheaderformat.html[DayofWeekHeaderFormat]"]  property.
 
-You can hide this header if you want to by setting the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview~dayofweekheadersvisible.html[DayofWeekHeadersVisible]"]  property. The code snippet below shows how to do this.
+You can hide this header if you want to by setting the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webmonthview~dayofweekheadersvisible.html[DayofWeekHeadersVisible]"]  property. The code snippet below shows how to do this.
 
 image::images\WebSchedule_How_to_Hide_the_Day_of_the_Week_Header_01.png[]
 

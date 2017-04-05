@@ -14,7 +14,7 @@
 
 = Selection
 
-The selection behavior enables the selection of rows, cells, and columns of WebDataGrid™. Once the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior is added, the selection type must be set to specify which objects the user can select.
+The selection behavior enables the selection of rows, cells, and columns of WebDataGrid™. Once the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior is added, the selection type must be set to specify which objects the user can select.
 
 The select type consists of None, Single, and Multiple choices allowing you to set single or multiple selection of an object, or disable the option altogether.
 
@@ -23,7 +23,7 @@ You can also set client-side events and CSS styles for individual objects when a
 == Enabling Selection
 
 [start=1]
-. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=2]
 . Check the CheckBox next to Selection on the left-hand side to add and enable the behavior.
 
@@ -34,12 +34,12 @@ At this point you can configure additional Selection related properties (e.g., w
 ====
 
 [start=3]
-. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property is set to Cell by default. In this example, we will leave the default value.
+. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property is set to Cell by default. In this example, we will leave the default value.
 
 .Note:
 [NOTE]
 ====
-When enabling  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]  you are also prompted to add Selection. If you choose to do so, Selection and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~rowselectors.html[RowSelectors]"]  will be enabled, with the pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~rowselecttype.html[RowSelectType]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  Selection properties set to Single and Row, respectively.
+When enabling  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]  you are also prompted to add Selection. If you choose to do so, Selection and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~rowselectors.html[RowSelectors]"]  will be enabled, with the pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~rowselecttype.html[RowSelectType]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  Selection properties set to Single and Row, respectively.
 ====
 
 [start=4]
@@ -47,9 +47,9 @@ When enabling  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragist
 
 == Cell Selection
 
-You must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior in order to select cells in WebDataGrid™.
+You must enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior in order to select cells in WebDataGrid™.
 
-By default, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property of the Selection behavior is set to Cell, allowing cell selection. You can set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellselecttype.html[CellSelectType]"]  property to either Single or Multiple.
+By default, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property of the Selection behavior is set to Cell, allowing cell selection. You can set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~cellselecttype.html[CellSelectType]"]  property to either Single or Multiple.
 
 == Select/UnSelect a Cell
 
@@ -97,7 +97,7 @@ grid.get_behaviors().get_selection().get_selectedCells().remove(grid.get_behavio
 
 == Column Selection
 
-You must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior in order to select columns in WebDataGrid™. In addition, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~columnselecttype.html[ColumnSelectType]"]  property of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior to either Single or Multiple.
+You must enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior in order to select columns in WebDataGrid™. In addition, set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~columnselecttype.html[ColumnSelectType]"]  property of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior to either Single or Multiple.
 
 After enabling column selection, the end user can select a column by clicking on the column’s header. You can also select columns in code by adding them to the selected columns collection.
 
@@ -147,7 +147,7 @@ grid.get_behaviors().get_selection().get_selectedColumns().remove(grid.get_behav
 
 == Row Selection
 
-You must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior in order to select rows in WebDataGrid™. To enable row selection with a mouse click, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property to Row within the Selection behavior. It is set to Cell by default. In addition to this, you can set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~rowselecttype.html[RowSelectType]"]  to either Single or Multiple.
+You must enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~selection.html[Selection]"]  behavior in order to select rows in WebDataGrid™. To enable row selection with a mouse click, set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property to Row within the Selection behavior. It is set to Cell by default. In addition to this, you can set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~rowselecttype.html[RowSelectType]"]  to either Single or Multiple.
 
 There are several ways to select a row after enabling row selection: you can select a row by clicking on a cell in that row or you can use row selectors. You can also select rows in code by adding them to the selected rows collection. To unselect a row, remove it from the collection.
 
@@ -197,7 +197,7 @@ grid.get_behaviors().get_selection().get_selectedRows().remove(grid.get_behavior
 
 == Row Selectors
 
-To select a row with row selectors, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~rowselectors.html[RowSelectors]"]  behavior must be added in addition to enabling row selection. For more information on row selectors, see link:webdatagrid-enabling-row-selectors.html[Enabling Row Selectors].
+To select a row with row selectors, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~rowselectors.html[RowSelectors]"]  behavior must be added in addition to enabling row selection. For more information on row selectors, see link:webdatagrid-enabling-row-selectors.html[Enabling Row Selectors].
 
 If row selectors are enabled, you do not need to have CellClickAction set to Row but only RowSelectType set to Single or Multiple.
 

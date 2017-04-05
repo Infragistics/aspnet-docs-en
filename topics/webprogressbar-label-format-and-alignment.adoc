@@ -14,7 +14,7 @@
 
 = Label Format and Alignment
 
-WebProgressBar™ contains a label that helps relay progress information. The label can be formatted to leverage six different values by using the WebProgressBar control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelformatstring.html[LabelFormatString]"]  property along with any custom format strings that represent progress information. The following is the list of intrinsic string values that you can insert into the label format string so that you can customize the information that is displayed in your label:
+WebProgressBar™ contains a label that helps relay progress information. The label can be formatted to leverage six different values by using the WebProgressBar control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelformatstring.html[LabelFormatString]"]  property along with any custom format strings that represent progress information. The following is the list of intrinsic string values that you can insert into the label format string so that you can customize the information that is displayed in your label:
 
 * {0} or {ProgressValue} : Shows the current progress value
 * {1} or {PercentProgress} : Shows the current progress in percentage
@@ -23,7 +23,7 @@ WebProgressBar™ contains a label that helps relay progress information. The la
 * {4} or {Min} : Shows the minimum value
 * {5} or {Max} : Shows the maximum value
 
-WebProgressBar supports label positioning within the progress bar by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelalignment.html[LabelAlignment]"]  property to either of the following four options:
+WebProgressBar supports label positioning within the progress bar by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~labelalignment.html[LabelAlignment]"]  property to either of the following four options:
 
 * LeftOrTop : Aligns the label left or top depending on the orientation
 * Center : Aligns the label in the center

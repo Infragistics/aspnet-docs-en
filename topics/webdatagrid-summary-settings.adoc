@@ -27,17 +27,17 @@ The following topic will show you how to set up the summaries for a specific col
 [start=1]
 . Bind the grid and add average summary as shown in the link:webdatagrid-summary-row.html[Summary Row] topic.
 [start=2]
-. From the Edit Grid Behavior dialog, click on Summary Row and then click on the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow~columnsettings.html[ColumnSettings] ellipsis (...) to launch the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsetting.html[ColumnSetting] dialog.
+. From the Edit Grid Behavior dialog, click on Summary Row and then click on the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow~columnsettings.html[ColumnSettings] ellipsis (...) to launch the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsetting.html[ColumnSetting] dialog.
 [start=3]
-. Click on the add item button and choose ProductID from the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey] drop-down.
+. Click on the add item button and choose ProductID from the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey] drop-down.
 
 image::images/WebDataGrid_Summary_Settings_01.png[]
 
 [start=4]
-. Set link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrowsetting~showsummarybutton.html[ShowSummaryButton] to False. This way the summary button (showing the list of the summaries) for the ProductID column will not be shown at the header. Other available properties from this level are:
+. Set link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrowsetting~showsummarybutton.html[ShowSummaryButton] to False. This way the summary button (showing the list of the summaries) for the ProductID column will not be shown at the header. Other available properties from this level are:
 
-** link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrowsetting~enablecolumnsummaryoptions.html[EnableColumnSummaryOptions] – if this is set to False, the default summary types won’t be available via the drop-down.
-** link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrowsetting~enabled.html[Enabled] – if this is set to False, the user will not be able to calculate any summaries for this column.
+** link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrowsetting~enablecolumnsummaryoptions.html[EnableColumnSummaryOptions] – if this is set to False, the default summary types won’t be available via the drop-down.
+** link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrowsetting~enabled.html[Enabled] – if this is set to False, the user will not be able to calculate any summaries for this column.
 
 The following markup gets generated:
 
@@ -82,19 +82,19 @@ Me.WebDataGrid1.Behaviors.SummaryRow.ColumnSettings.Add(settings)
 [start=5]
 . Click on the add item button and choose UnitPrice from the ColumnKey drop-down.
 [start=6]
-. Click on the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrowsetting~summarysettings.html[SummarySettings] Collection ellipsis(…) to open the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summarysetting.html[SummarySetting] Dialog.
+. Click on the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrowsetting~summarysettings.html[SummarySettings] Collection ellipsis(…) to open the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summarysetting.html[SummarySetting] Dialog.
 [start=7]
 . Click on the add item button. The following screen should appear:
 
 image::images/WebDataGrid_Summary_Settings_02.png[]
 
 [start=8]
-. Choose Max from the SummaryType drop-down. Set link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summarysetting~showoptionindropdown.html[ShowOptionInDropDown] to False and click ok. This way the Max summary will not be available at the summary options drop down.
+. Choose Max from the SummaryType drop-down. Set link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summarysetting~showoptionindropdown.html[ShowOptionInDropDown] to False and click ok. This way the Max summary will not be available at the summary options drop down.
 
 image::images/WebDataGrid_Summary_Settings_03.png[]
 
 [start=9]
-. Click on the add item button and choose Average from the SummaryType drop-down. Change the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summarysetting~formatstring.html[FormatString] to {0} = {1:##.00}. This will format the Average summary for the UnitPrice column to show only two decimal places.
+. Click on the add item button and choose Average from the SummaryType drop-down. Change the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summarysetting~formatstring.html[FormatString] to {0} = {1:##.00}. This will format the Average summary for the UnitPrice column to show only two decimal places.
 
 image::images/WebDataGrid_Summary_Settings_04.png[]
 

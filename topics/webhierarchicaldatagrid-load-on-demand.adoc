@@ -14,9 +14,9 @@
 
 = Load On Demand
 
-The WebHierarchicalDataGrid™ control has a load on demand feature; the control only retrieves data when needed, such as when a row is expanded. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~initialdatabinddepth.html[InitialDataBindDepth]"]  property controls this feature. The property is set to 0 by default, initially only loading the root data. Any numeric value thereafter determines the successive data level(s) to load at start up. A value of -1 disables load on demand and loads all data levels.
+The WebHierarchicalDataGrid™ control has a load on demand feature; the control only retrieves data when needed, such as when a row is expanded. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~initialdatabinddepth.html[InitialDataBindDepth]"]  property controls this feature. The property is set to 0 by default, initially only loading the root data. Any numeric value thereafter determines the successive data level(s) to load at start up. A value of -1 disables load on demand and loads all data levels.
 
-The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~enableajax.html[EnableAjax]"]  property affects the manner in which data is received when using load on demand. The property is True by default and allows data retrieval to be asynchronous. If this property is False, data retrieval results in a full page postback.
+The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~enableajax.html[EnableAjax]"]  property affects the manner in which data is received when using load on demand. The property is True by default and allows data retrieval to be asynchronous. If this property is False, data retrieval results in a full page postback.
 
 ===== Automatic Mode
 
@@ -51,9 +51,9 @@ this.WebHierarchicalDataGrid1.InitialDataBindDepth = 0;
 
 ===== Server Events
 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislandspopulating_ev.html[RowIslandsPopulating]"]  – This is a cancelable event that is raised before row islands are created and bound. You can use this event for manual load on demand. If canceled and no new row islands are created the row is not expanded on the client.
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislandspopulating_ev.html[RowIslandsPopulating]"]  – This is a cancelable event that is raised before row islands are created and bound. You can use this event for manual load on demand. If canceled and no new row islands are created the row is not expanded on the client.
 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislandspopulated_ev.html[RowIslandsPopulated]"]  – This is the event that is raised after row islands are created and bound.
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislandspopulated_ev.html[RowIslandsPopulated]"]  – This is the event that is raised after row islands are created and bound.
 
 ===== Client Events
 
@@ -63,7 +63,7 @@ Populated – This is the event that is raised after child rows are received fro
 
 ===== Manual Mode
 
-You can manually control the load on demand process. The control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislandspopulating_ev.html[RowIslandsPopulating] event is raised every time a row is expanded; at this point, data is requested for the row’s child row island(s). You can use this event to manually create a container grid that represents the row island(s) and then bind it to the data that you retrieved.
+You can manually control the load on demand process. The control’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislandspopulating_ev.html[RowIslandsPopulating] event is raised every time a row is expanded; at this point, data is requested for the row’s child row island(s). You can use this event to manually create a container grid that represents the row island(s) and then bind it to the data that you retrieved.
 
 The following code shows you how to perform manual load on demand using the Categories and Products tables from the Northwind database. Be sure to include the following namespaces:
 

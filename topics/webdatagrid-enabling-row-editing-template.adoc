@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-To supply the end-user with a custom template for data editing in WebDataGrid™, enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate.html[Row Editing Template]"]  behavior. The template allows the end-user to edit a row's data through a pop-up that can contain any controls. Changes that occur in the template are applied back to the data source.
+To supply the end-user with a custom template for data editing in WebDataGrid™, enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate.html[Row Editing Template]"]  behavior. The template allows the end-user to edit a row's data through a pop-up that can contain any controls. Changes that occur in the template are applied back to the data source.
 
 == What You Will Accomplish
 
@@ -27,21 +27,21 @@ You will set up the Row Editing Template for data editing in WebDataGrid.
 [start=1]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=2]
-. In the Microsoft® Visual Studio™ property window, Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID so that changes in WebDataGrid can be updated to the data source.
+. In the Microsoft® Visual Studio™ property window, Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID so that changes in WebDataGrid can be updated to the data source.
 [start=3]
-. In the same window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. In the same window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=4]
-. Check the CheckBox next to Row Editing Template from the list on the left to add and enable the behavior. Notice the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior is added as well.
+. Check the CheckBox next to Row Editing Template from the list on the left to add and enable the behavior. Notice the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior is added as well.
 [start=5]
 . In the properties for Row Editing Template, set the actions that will pop up the template.
 
-.. Expand  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate~editmodeactions.html[EditModeActions]"]  and set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditmodeactions~rowselectormouseclick.html[RowSelectorMouseClick]"]  to None. Since we do not have row selectors at this point, we do not need this action enabled.
-.. Set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditmodeactions~mouseclick.html[MouseClick]"]  to Double. This will bring up the template when the end-user double-clicks on a cell in WebDataGrid.
+.. Expand  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate~editmodeactions.html[EditModeActions]"]  and set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.roweditmodeactions~rowselectormouseclick.html[RowSelectorMouseClick]"]  to None. Since we do not have row selectors at this point, we do not need this action enabled.
+.. Set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.roweditmodeactions~mouseclick.html[MouseClick]"]  to Double. This will bring up the template when the end-user double-clicks on a cell in WebDataGrid.
 
 .Note:
 [NOTE]
 ====
-If you want updates to persist immediately after you edit a row, you need to enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior as well as handle the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~rowupdating_ev.html[RowUpdating]"]  server-side event of WebDataGrid. For more information on data editing in WebDataGrid, see link:webdatagrid-editting.html[Editing].
+If you want updates to persist immediately after you edit a row, you need to enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior as well as handle the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore~rowupdating_ev.html[RowUpdating]"]  server-side event of WebDataGrid. For more information on data editing in WebDataGrid, see link:webdatagrid-editting.html[Editing].
 ====
 
 image::images/WebDataGrid_Enabling_Row_Editing_Template_01.png[]

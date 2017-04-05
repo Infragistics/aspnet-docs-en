@@ -16,10 +16,10 @@
 
 While using Application Styling, you may ask the following question: "What if I have an existing project that I want to use Application Styling in, but I don't want to turn on Application Styling on the entire project?". There is a solution to this scenario, and it is the link:web-webpagestyler.html[WebPageStyler] component. This component is quite simple in its functionality and properties. The component has the following four properties:
 
-*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.iprovideappstyling~enableappstyling.html[EnableAppStyling]"]  -- Enables/disables Application Styling for only the ASPX page that it is on. The default value is NotSet.
-*  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.htmlboxprogressbar~enableviewstate.html[EnableViewState]"]  -- Enables ViewState for the component, for use in page postback. The default value is True.
-*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.smartwebcontrol~stylesetname.html[StyleSetName]"]  -- The name of the StyleSet used for the ASPX page.
-*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.smartwebcontrol~stylesetpath.html[StyleSetPath]"]  -- The path to the StyleSet. The default value is Null.
+*  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.shared.iprovideappstyling~enableappstyling.html[EnableAppStyling]"]  -- Enables/disables Application Styling for only the ASPX page that it is on. The default value is NotSet.
+*  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.htmlboxprogressbar~enableviewstate.html[EnableViewState]"]  -- Enables ViewState for the component, for use in page postback. The default value is True.
+*  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.smartwebcontrol~stylesetname.html[StyleSetName]"]  -- The name of the StyleSet used for the ASPX page.
+*  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.smartwebcontrol~stylesetpath.html[StyleSetPath]"]  -- The path to the StyleSet. The default value is Null.
 
 *To enable Application Styling using the WebPageStyler component:*
 

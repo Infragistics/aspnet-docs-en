@@ -16,7 +16,7 @@
 
 == Before You Begin:
 
-The WebSchedule's™ WebDayView™, WebMonthView™ and WebCalendarView™ have a navigational area in their header area that can be customized and styled. The  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.dayorientedscheduleview~captionheaderstyle.html[CaptionsHeaderStyle]"]  object is based on the standard Style object found on most of the Infragistics ASP.NET controls.
+The WebSchedule's™ WebDayView™, WebMonthView™ and WebCalendarView™ have a navigational area in their header area that can be customized and styled. The  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.dayorientedscheduleview~captionheaderstyle.html[CaptionsHeaderStyle]"]  object is based on the standard Style object found on most of the Infragistics ASP.NET controls.
 
 The following procedure shows you how to change the BackColor on the buttons, as well as the Cursor.
 

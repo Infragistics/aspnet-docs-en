@@ -18,9 +18,9 @@ Multi Resource View gives you multiple buttons for multiple resources allowing y
 
 You can use the following style properties to style resources and activities for Multi Resource View:
 
-* link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~fadedappointmentstyle.html[FadedAppointmentStyle]– Style for inactive appointments and inactive resource buttons.
-* link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~resourcebuttonactivestyle.html[ResourceButtonActiveStyle] – Style for active resource buttons.
-* link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~resourcebuttonstyle.html[ResourceButtonStyle] – Style for all resource buttons. Overwrites the above styles if this is set.
+* link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~fadedappointmentstyle.html[FadedAppointmentStyle]– Style for inactive appointments and inactive resource buttons.
+* link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~resourcebuttonactivestyle.html[ResourceButtonActiveStyle] – Style for active resource buttons.
+* link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~resourcebuttonstyle.html[ResourceButtonStyle] – Style for all resource buttons. Overwrites the above styles if this is set.
 
 The following code shows you how to set the active resource button and its appointments to a green color and inactive buttons and appointments to a silver color.
 

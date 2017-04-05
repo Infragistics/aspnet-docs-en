@@ -16,15 +16,15 @@
 
 WebExplorerBar™ has a large variety of client-side events, which provides the developer with flexibility to create interactive applications. Here is a list of available events:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemclick.html[ItemClick]"]  – occurs whenever mouse click occurs for a group or item.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemhovered.html[ItemHovered]"]  – occurs whenever a group or item is hovered.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemunhovered.html[ItemUnhovered]"]  – occurs whenever a group or item is unhovered.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemexpanding.html[ItemExpanding]"]  – occurs whenever a group or item is going to be expanded. This can be canceled.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemexpanded.html[ItemExpanded]"]  – occurs whenever a group or item has just expanded.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemcollapsing.html[ItemCollapsing]"]  – occurs whenever a group or item is going to be collapsed. This can be canceled.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemcollapsed.html[ItemCollapsed]"]  – occurs whenever a group or item has just been collapsed.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itempopulating.html[ItemPopulating]"]  – occurs before a group fetches its child items from the server. This can be canceled.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itempopulated.html[ItemPopulated]"]  – occurs after a group fetches its child items from the server.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemclick.html[ItemClick]"]  – occurs whenever mouse click occurs for a group or item.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemhovered.html[ItemHovered]"]  – occurs whenever a group or item is hovered.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemunhovered.html[ItemUnhovered]"]  – occurs whenever a group or item is unhovered.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemexpanding.html[ItemExpanding]"]  – occurs whenever a group or item is going to be expanded. This can be canceled.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemexpanded.html[ItemExpanded]"]  – occurs whenever a group or item has just expanded.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemcollapsing.html[ItemCollapsing]"]  – occurs whenever a group or item is going to be collapsed. This can be canceled.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itemcollapsed.html[ItemCollapsed]"]  – occurs whenever a group or item has just been collapsed.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itempopulating.html[ItemPopulating]"]  – occurs before a group fetches its child items from the server. This can be canceled.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbarclientevents~itempopulated.html[ItemPopulated]"]  – occurs after a group fetches its child items from the server.
 
 .Note:
 [NOTE]

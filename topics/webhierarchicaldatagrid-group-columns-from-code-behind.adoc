@@ -14,7 +14,7 @@
 
 = Group Columns from Code Behind
 
-Using the GroupBy feature in WebHierarchicalDataGrid™ allows you to present data to your end users in an organized fashion. You can group columns from code behind by adding columns to the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedcolumns.html[GroupedColumns] collection.
+Using the GroupBy feature in WebHierarchicalDataGrid™ allows you to present data to your end users in an organized fashion. You can group columns from code behind by adding columns to the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupedcolumns.html[GroupedColumns] collection.
 
 The following code shows you how to group by the CategoryName column.
 

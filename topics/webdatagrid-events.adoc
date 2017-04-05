@@ -18,7 +18,7 @@
 
 The WebDataGrid™ control’s many behaviors have both server-side and client-side events. These events have the suffix "ing" or "ed" appended to them reflecting the order in which they occur. Depending on the behavior, there are usually two events on each side: an "ing" and an "ed" event.
 
-For example, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior has a RowUpdating and a RowUpdated event on both the server and client.
+For example, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior has a RowUpdating and a RowUpdated event on both the server and client.
 
 == Order of Events
 

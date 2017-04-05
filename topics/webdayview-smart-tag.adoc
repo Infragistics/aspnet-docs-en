@@ -58,15 +58,15 @@ image::images/WebSchedule_The_WebDayView_Smart_Tag_01.png[]
 
 |WebScheduleInfoID
 |Each view in WebSchedule requires a WebScheduleInfo to function properly. If you already have a WebScheduleInfo on your web form, then it will be visible in the WebScheduleInfoID drop-down.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~webscheduleinfo.html[WebScheduleInfoID]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~webscheduleinfo.html[WebScheduleInfoID]"] 
 
 |TimeSlot Interval
 |The WebDayView is divided into intervals of time. The default interval is thirty minutes; therefore, you see two sections of time between each hour.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~timeslotinterval.html[TimeSlotInterval]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~timeslotinterval.html[TimeSlotInterval]"] 
 
 |Visible Days
 |This property determines how many days you want to show in the WebDayView. You can show a maximum of 14 days and a minimum of one day.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~visibledays.html[VisibleDays]"]
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~visibledays.html[VisibleDays]"]
 
 |====
 
@@ -103,38 +103,38 @@ image::images/WebSchedule_The_WebDayView_Smart_Tag_01.png[]
 
 |WebScheduleInfoID
 |Each view in WebSchedule requires a WebScheduleInfo to function properly. If you already have a WebScheduleInfo on your web form, then it will be visible in the WebScheduleInfoID drop-down.
-| link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~webscheduleinfo.html[WebScheduleInfoID]
+| link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~webscheduleinfo.html[WebScheduleInfoID]
 
 |TimeSlot Interval
 |The WebDayView is divided into intervals of time. The default interval is thirty minutes; therefore, you see two sections of time between each hour.
-| link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~timeslotinterval.html[TimeSlotInterval]
+| link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~timeslotinterval.html[TimeSlotInterval]
 
 |Visible Days
 |This property determines how many days you want to show in the WebDayView. You can show a maximum of 14 days and a minimum of one day.
-| link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~visibledays.html[VisibleDays]
+| link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~visibledays.html[VisibleDays]
 
 |Caption Text
 |If you are showing a caption, this is where you can set the text for it.
-| link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~captionheadertext.html[CaptionHeaderText]
+| link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~captionheadertext.html[CaptionHeaderText]
 
 |Show Caption
 |Clicking the check box will cause the caption to be visible.
-| link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionHeaderVisible]
+| link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionHeaderVisible]
 
 |Navigation Buttons
 |This option will show or hide the month navigation buttons at the top of the calendar.
-| link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~navigationbuttonsvisible.html[NavigationButtonsVisible]
+| link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~navigationbuttonsvisible.html[NavigationButtonsVisible]
 
 |Caption Text
 |If you are showing a caption, this is where you can set the text for it.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~captionheadertext.html[CaptionHeaderText]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~captionheadertext.html[CaptionHeaderText]"] 
 
 |Show Caption
 |Clicking the check box will cause the caption to be visible.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionHeaderVisible]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~captionheadervisible.html[CaptionHeaderVisible]"] 
 
 |Navigation Buttons
 |This option will show or hide the month navigation buttons at the top of the calendar.
-| pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~navigationbuttonsvisible.html[NavigationButtonsVisible]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~navigationbuttonsvisible.html[NavigationButtonsVisible]"] 
 
 |====

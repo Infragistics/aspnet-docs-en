@@ -18,7 +18,7 @@
 
 The WebDayView™ control is a time segment-oriented view on the WebSchedule. End users may view, add, update, and remove activities covering one or more days. Up to fourteen days can be displayed side-by-side. The granularity of the WebDayView isolates differences in activity with a granularity that can go down to minutes, and identifies time periods having conflicting, multi-tasking, or no activity. It provides the end user with a rich and intuitive means of manipulating aspects of an activity's timing and length.
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]  are shown for an individual link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource] over the course of a week. When the resource name matches the name of the logged on end user (as authenticated by the application) the end user can receive reminder notifications of pending or overdue activities. Otherwise the end user is assumed to be reviewing the schedule information for the resource.
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activities]  are shown for an individual link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.resource.html[Resource] over the course of a week. When the resource name matches the name of the logged on end user (as authenticated by the application) the end user can receive reminder notifications of pending or overdue activities. Otherwise the end user is assumed to be reviewing the schedule information for the resource.
 
 image::images\WebSchedule_Features_WebDayView_01.png[]
 

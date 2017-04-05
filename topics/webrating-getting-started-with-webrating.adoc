@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-The WebRating™ control records average and vote count for the user interacting with the control. The control stores the average rating value and total vote count for the user in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~average.html[Average]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~votecount.html[VoteCount]"]  properties, respectively.
+The WebRating™ control records average and vote count for the user interacting with the control. The control stores the average rating value and total vote count for the user in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~average.html[Average]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~votecount.html[VoteCount]"]  properties, respectively.
 
 == What You Will Accomplish
 
@@ -29,8 +29,8 @@ You will learn how to set up WebRating to record the user’s ratings.
 [start=2]
 . Set up the WebRating control with the following options.
 
-.. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~autopostbackflags.html[AutoPostBackFlags]"] . pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.ratingautopostbackflags~rated.html[Rated]"]  property to Async. With this setting, WebRating will post back to the server every time a rating item is clicked, allowing the control to keep track of the average and vote count of the end user.
-.. Handle the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.ratingclientevents~rated.html[Rated]"]  client-side event. In this event handler you will display the user’s vote count and average rating on the page.
+.. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~autopostbackflags.html[AutoPostBackFlags]"] . pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.ratingautopostbackflags~rated.html[Rated]"]  property to Async. With this setting, WebRating will post back to the server every time a rating item is clicked, allowing the control to keep track of the average and vote count of the end user.
+.. Handle the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.ratingclientevents~rated.html[Rated]"]  client-side event. In this event handler you will display the user’s vote count and average rating on the page.
 
 *In HTML:*
 

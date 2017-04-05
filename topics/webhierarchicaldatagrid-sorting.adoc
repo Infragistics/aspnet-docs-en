@@ -43,7 +43,7 @@ If you want Sorting only on specific bands, click the WebHierarchicalDataGrid co
 ====
 
 [start=5]
-. Set link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~enableinheritance.html[EnableInheritance] property to True. This enables all the child levels to automatically inherit Sorting behavior. The property’s default value is False.
+. Set link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting~enableinheritance.html[EnableInheritance] property to True. This enables all the child levels to automatically inherit Sorting behavior. The property’s default value is False.
 [start=6]
 . Click Apply and OK to close the dialog window.
 
@@ -60,11 +60,11 @@ image::Images/WebHierarchicalDataGrid_Enabling_Sorting_02.png[]
 
 == Sort Columns in Code
 
-You can sort WebHierarchicalDataGrid using server-side or client-side code. On the server side, you have the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~sortedcolumns.html[SortedColumns]"]  property. In this topic, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabinding_ev.html[RowIslandDataBinding]"]  event is handled to sort parent and child columns.
+You can sort WebHierarchicalDataGrid using server-side or client-side code. On the server side, you have the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting~sortedcolumns.html[SortedColumns]"]  property. In this topic, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabinding_ev.html[RowIslandDataBinding]"]  event is handled to sort parent and child columns.
 
 On the client, you have the sortColumn method to use. The sortColumn method requires the column name and the sort direction parameters. The Sort direction is 0, 1, or 2 for none, ascending, or descending. The RowExpanded client event can be handled to sort a column in the child level.
 
-The following code shows you how to sort a column in WebHierarchicalDataGrid, assuming sorting is enabled and its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property set to true.
+The following code shows you how to sort a column in WebHierarchicalDataGrid, assuming sorting is enabled and its  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property set to true.
 
 *In Visual Basic:*
 

@@ -42,6 +42,6 @@ image::Images\WebHierarchicalDataGrid_Smart_Tag.png[]
 
 |Choose Data Source
 |The dropdown list allows you to select an existing data source or configure a new data source.
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datasourceid.html[DataSourceID]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datasourceid.html[DataSourceID]"] 
 
 |====

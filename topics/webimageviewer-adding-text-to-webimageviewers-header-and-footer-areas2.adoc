@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-The WebImageViewer™ control's image viewer contains  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~header.html[Header]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~footer.html[Footer]"]  areas where you can place descriptive text. This text can be whatever your application requires, from describing the current image, to a copyright notice.
+The WebImageViewer™ control's image viewer contains  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webimageviewer~header.html[Header]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webimageviewer~footer.html[Footer]"]  areas where you can place descriptive text. This text can be whatever your application requires, from describing the current image, to a copyright notice.
 
 == What You Will Accomplish
 

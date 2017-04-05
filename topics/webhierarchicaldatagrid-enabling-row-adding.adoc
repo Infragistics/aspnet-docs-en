@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-You can use the WebHierarchicalDataGrid™ control’s Add New Row feature to allow your end-users to add new records. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding.html[RowAdding]"]  behavior provides a blank row that is always present on the control. When you enter new data to the Add New Row and then lose focus on the row, that row is inserted in WebHierarchicalDataGrid and its underlying data source. For a row to obtain or lose focus, you must have the Activation behavior enabled. For more information on the Activation behavior, see the link:webhierarchicaldatagrid-activation.html[Activation] topic.
+You can use the WebHierarchicalDataGrid™ control’s Add New Row feature to allow your end-users to add new records. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowadding.html[RowAdding]"]  behavior provides a blank row that is always present on the control. When you enter new data to the Add New Row and then lose focus on the row, that row is inserted in WebHierarchicalDataGrid and its underlying data source. For a row to obtain or lose focus, you must have the Activation behavior enabled. For more information on the Activation behavior, see the link:webhierarchicaldatagrid-activation.html[Activation] topic.
 
 .Note:
 [NOTE]
@@ -31,13 +31,13 @@ You will learn how to allow users to add new rows to WebHierarchicalDataGrid.
 == Follow these Steps
 
 [start=1]
-. Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource™ component retrieving data from the Categories and Products table. For more information on doing this, see the link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Using the WebHierarchicalDataSource] topic. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datakeyfields.html[DataKeyFields]"]  property for each Data source that you bind to the HierarchicalDataGrid so that changes can be updated to the data source. In the Microsoft® Visual Studio property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (…) button to launch the Behaviors Editor dialog.
+. Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource™ component retrieving data from the Categories and Products table. For more information on doing this, see the link:webhierarchicaldatasource-using-webhierarchicaldatasource.html[Using the WebHierarchicalDataSource] topic. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~datakeyfields.html[DataKeyFields]"]  property for each Data source that you bind to the HierarchicalDataGrid so that changes can be updated to the data source. In the Microsoft® Visual Studio property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (…) button to launch the Behaviors Editor dialog.
 [start=2]
-. Check the CheckBox for Row Adding from the list on the left to add the behavior. Notice that the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]  behavior is checked as well.
+. Check the CheckBox for Row Adding from the list on the left to add the behavior. Notice that the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]  behavior is checked as well.
 [start=3]
-. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property of the EditingCore and Row Adding Behaviors to True. This enables all the child levels to automatically inherit Row Adding behavior. The property’s default value is False.
+. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property of the EditingCore and Row Adding Behaviors to True. This enables all the child levels to automatically inherit Row Adding behavior. The property’s default value is False.
 [start=4]
-. In the properties, check that  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding~alignment.html[Alignment]"]  is set to Bottom. This positions the Add New Row at the bottom of WebHierarchicalDataGrid.
+. In the properties, check that  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowadding~alignment.html[Alignment]"]  is set to Bottom. This positions the Add New Row at the bottom of WebHierarchicalDataGrid.
 [start=5]
 . Click Apply, then Ok to close the editor. Your end-users are now able to add new rows to WebHierarchicalDataGrid by entering data into the row and causing the row to lose focus by pressing the keyboard Enter key.
 

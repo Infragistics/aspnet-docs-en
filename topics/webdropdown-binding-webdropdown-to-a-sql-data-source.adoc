@@ -65,7 +65,7 @@ image::images\WebDropDown_Binding_WebDropDown_to_a_SQL_Data_Source_02.png[]
 [start=16]
 . In the Property window for WebDropDown, set the DataSourceID property to be the id of the SqlDataSource component.
 [start=17]
-. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]"]  property to CompanyName.
+. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]"]  property to CompanyName.
 [start=18]
 . Save and run the application. WebDropDown displays the list of company names similar to the following image:
 

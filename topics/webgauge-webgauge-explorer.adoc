@@ -22,6 +22,6 @@ The following screen shot shows the Gauge Explorer of the designer with a Radial
 
 image::images/Gauge_Gauge_Explorer_02.png[Screen shot of gauge designer, with explorer area highlighted.]
 
-The Gauge Explorer also allows you to drill down to the individual properties of your gauge. When you select a gauge property from the Gauge Explorer, the property appears highlighted on the gauge in the interactive preview area. For example, if you have a Radial gauge that represents a clock, clicking on the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugeneedle.html[Needle]"]  property of the gauge through the Gauge Explorer highlights the hand of the clock in the interactive preview area, as shown in the following screen shot.
+The Gauge Explorer also allows you to drill down to the individual properties of your gauge. When you select a gauge property from the Gauge Explorer, the property appears highlighted on the gauge in the interactive preview area. For example, if you have a Radial gauge that represents a clock, clicking on the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgaugeneedle.html[Needle]"]  property of the gauge through the Gauge Explorer highlights the hand of the clock in the interactive preview area, as shown in the following screen shot.
 
 image::images/Gauge_Gauge_Explorer_01.png[Shows how selecting the needle property in the gauge explorer highlights the needle in the preview area.]

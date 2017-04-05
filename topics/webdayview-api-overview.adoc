@@ -18,8 +18,8 @@ This section lists each namespace that is relevant to the control. We also give 
 
 === WebSchedule Namespace:
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule_namespace.html[Infragistics.WebUI.WebSchedule]
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule_namespace.html[Infragistics.WebUI.WebSchedule]
 
 === Key Classes:
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview.html[WebDayView]
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview.html[WebDayView]

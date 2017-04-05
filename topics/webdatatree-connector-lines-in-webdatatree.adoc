@@ -14,7 +14,7 @@
 
 = Connector Lines in WebDataTree
 
-WebDataTree™ provides the option of having connector lines that are drawn between the nodes that are siblings of the same parent. This can be achieved by setting the WebDataTree control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~enableconnectorlines.html[EnableConnectorLines]"]  property. By default, this property is set to False. However setting this property to True results in considerably more mark-up being emitted to the client to account for the images that are used to draw the connecting lines.
+WebDataTree™ provides the option of having connector lines that are drawn between the nodes that are siblings of the same parent. This can be achieved by setting the WebDataTree control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~enableconnectorlines.html[EnableConnectorLines]"]  property. By default, this property is set to False. However setting this property to True results in considerably more mark-up being emitted to the client to account for the images that are used to draw the connecting lines.
 
 You can set the EnableConnectorLines property either using the Microsoft® Visual Studio® Property Window or by using the following code:
 

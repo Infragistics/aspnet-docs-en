@@ -25,9 +25,9 @@ You will learn how to set up and use WebDocumentExporter to export WebDataGrid /
 [start=2]
 . Drag a WebDocumentExporter control from the Visual Studio Toolbox onto your page:
 
-.. Set the WebDocumentExporter’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.baseexporter~exportmode.html[ExportMode] property to Download.
+.. Set the WebDocumentExporter’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.baseexporter~exportmode.html[ExportMode] property to Download.
 .. Set the control’s ID property to WebDocumentExporter.
-.. Set the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.baseexporter~downloadname.html[DownloadName] property to “ExportedData”.
+.. Set the control’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.baseexporter~downloadname.html[DownloadName] property to “ExportedData”.
 
 *In HTML:*
 
@@ -44,7 +44,7 @@ ExportMode ="Download" DownloadName="ExportedData" />
 .Note:
 [NOTE]
 ====
-by default, WebDocumentExporter exports the data in PDF document format. If you want to export in XPS document, you need to set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~format.html[Format] property to XPS.
+by default, WebDocumentExporter exports the data in PDF document format. If you want to export in XPS document, you need to set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~format.html[Format] property to XPS.
 ====
 
 
@@ -54,7 +54,7 @@ by default, WebDocumentExporter exports the data in PDF document format. If you 
 .. Set the button’s ID property to btnExport.
 .. Set the control’s Text property to “Export Data”.
 .. Set the control’s OnClick to “btnExport_Click”.
-.. Define the “btnExport_Click” handler in the code-behind and call WebDocumentExporter's link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~export.html[Export] method.
+.. Define the “btnExport_Click” handler in the code-behind and call WebDocumentExporter's link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter~export.html[Export] method.
 
 *In HTML:*
 

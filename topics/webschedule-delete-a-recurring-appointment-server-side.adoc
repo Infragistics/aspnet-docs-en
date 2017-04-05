@@ -17,9 +17,9 @@
 Deleting a recurring appointment involves four steps:
 
 [start=1]
-. Retrieve a recurring  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"] .
+. Retrieve a recurring  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]"] .
 [start=2]
-. Get the root activity of the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.recurrence.html[Recurrence]"] .
+. Get the root activity of the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.recurrence.html[Recurrence]"] .
 [start=3]
 . Delete the recurrence.
 [start=4]

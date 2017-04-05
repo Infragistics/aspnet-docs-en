@@ -29,7 +29,7 @@ You will learn how to add groups and items to WebExplorerBar.
 [start=2]
 . Drag a WebExplorerBar control onto the page.
 [start=3]
-. Add an link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbargroup.html[ExplorerBarGroup] object to the group collection using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groups.html[Groups] property of WebExplorerBar.
+. Add an link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbargroup.html[ExplorerBarGroup] object to the group collection using the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groups.html[Groups] property of WebExplorerBar.
 
 *In HTML:*
 
@@ -62,9 +62,9 @@ this.WebExplorerBar1.Groups.Add(group);
 ----
 
 [start=4]
-. Add 2 ExplorerBarItem objects to the item collection using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritemcollection.html[Items] property.
+. Add 2 ExplorerBarItem objects to the item collection using the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritemcollection.html[Items] property.
 [start=5]
-. Set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~text.html[Text] property to "Documents" for one link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritem.html[ExplorerBarItem] object and "Samples" for the other.
+. Set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~text.html[Text] property to "Documents" for one link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritem.html[ExplorerBarItem] object and "Samples" for the other.
 
 *In HTML:*
 

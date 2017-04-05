@@ -16,7 +16,7 @@
 
 The Tab Strip region is automatically shown at the bottom of the WebHtmlEditor™ control when you use the control in your applications. Sometimes your application may not require users to access HTML view, and in these situations you should hide the Tab Strip region. Hiding a WebHtmlEditor region can be done in the design-time environment, or using code. In this example, code is added to the code-behind file to hide the tab strip at run time.
 
-The WebHtmlEditor has a property called  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~tabstripdisplay.html[TabStripDisplay]"]  property that defaults to True. To hide the Tab Strip region, set this property to False with the following assignment statement from the Page_Load event handler
+The WebHtmlEditor has a property called  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~tabstripdisplay.html[TabStripDisplay]"]  property that defaults to True. To hide the Tab Strip region, set this property to False with the following assignment statement from the Page_Load event handler
 
 *In Visual Basic:*
 

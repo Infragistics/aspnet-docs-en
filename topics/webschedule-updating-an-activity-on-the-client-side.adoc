@@ -16,7 +16,7 @@
 
 == Before You Begin:
 
-The WebSchedule™ allows  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[activities]"]  to be updated Client-Side. This walk through goes over how you update an activity client-side. The main method used to update an activity client-side is called updateActivity.
+The WebSchedule™ allows  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[activities]"]  to be updated Client-Side. This walk through goes over how you update an activity client-side. The main method used to update an activity client-side is called updateActivity.
 
 The updateActivity method takes three parameters:
 

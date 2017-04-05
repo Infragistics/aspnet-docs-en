@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-WebDropDown™ supports binding to a Web Service using its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasource.html[DataSource]"]  property.In this walkthrough, a simple Web Service is created with a method which returns the days of the week as a string array. This string array is bound to WebDropDown so that the days of the week are displayed in the drop-down container.
+WebDropDown™ supports binding to a Web Service using its  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasource.html[DataSource]"]  property.In this walkthrough, a simple Web Service is created with a method which returns the days of the week as a string array. This string array is bound to WebDropDown so that the days of the week are displayed in the drop-down container.
 
 == What You Will Accomplish
 

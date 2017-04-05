@@ -14,7 +14,7 @@
 
 = About WebCurrencyEditor
 
-WebCurrencyEditor™ is an editor control which allows currency editing functionality and provides various appearance and behavior based properties. WebCurrencyEditor is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebCurrencyEditor in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols_namespace.html[Infragistics.Web.UI.EditorControls]"]  namespace.
+WebCurrencyEditor™ is an editor control which allows currency editing functionality and provides various appearance and behavior based properties. WebCurrencyEditor is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebCurrencyEditor in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols_namespace.html[Infragistics.Web.UI.EditorControls]"]  namespace.
 
 image::images/WebCurrencyEditor_About_WebCurrencyEditor_01.png[]
 

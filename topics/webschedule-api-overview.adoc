@@ -20,32 +20,32 @@ This section lists each namespace that is relevant to the control. We also give 
 |====
 |*WebSchedule Namespace:* 
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule_namespace.html[Infragistics.WebUI.UltraWebSchedule]
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule_namespace.html[Infragistics.WebUI.UltraWebSchedule]
 |*KeyClasses:* 
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity] +
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity] +
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment] + 
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointment] + 
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webcalendarview.html[WebCalendarView] +
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webcalendarview.html[WebCalendarView] +
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview.html[WebDayView] + 
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview.html[WebDayView] + 
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview.html[WebMonthView] +
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webmonthview.html[WebMonthView] +
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo.html[WebScheduleInfo]
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo.html[WebScheduleInfo]
 
 |*Data Namespace:* 
 
-link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data_namespace.html[Infragistics.WebUI.Data]
+link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data_namespace.html[Infragistics.WebUI.Data]
 |*Key Classes:* 
 
-link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledataproviderbase.html[WebScheduleDataProviderBase] +
+link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledataproviderbase.html[WebScheduleDataProviderBase] +
 
-link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider.html[WebScheduleDbProvider] + 
+link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledbprovider.html[WebScheduleDbProvider] + 
 
-link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduleoledbprovider.html[WebScheduleOleDbProvider] +
+link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduleoledbprovider.html[WebScheduleOleDbProvider] +
 
-link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webschedulesqlclientprovider.html[WebScheduleSqlClientProvider]
+link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webschedulesqlclientprovider.html[WebScheduleSqlClientProvider]
 
 |====

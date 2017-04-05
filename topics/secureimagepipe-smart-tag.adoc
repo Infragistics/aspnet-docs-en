@@ -30,10 +30,10 @@ image::images/SecureImagePipe_The_SecureImagePipe_Smart_Tag_01.png[]
 
 |ImageType
 |Specifies the image file format used to stream the chart.
-| pick:[asp-net="link:infragistics4.webui.ultrawebchart.v{ProductVersion}~infragistics.webui.ultrawebchart.secureimagepipe~imagetype.html[ImageType]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebchart{ApiVersion}~infragistics.webui.ultrawebchart.secureimagepipe~imagetype.html[ImageType]"] 
 
 |PragmaNoCache
 |Cache setting of the chart image in the browser.
-| pick:[asp-net="link:infragistics4.webui.ultrawebchart.v{ProductVersion}~infragistics.webui.ultrawebchart.secureimagepipe~pragmanocache.html[PragmaNoCache]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebchart{ApiVersion}~infragistics.webui.ultrawebchart.secureimagepipe~pragmanocache.html[PragmaNoCache]"] 
 
 |====

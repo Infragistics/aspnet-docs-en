@@ -14,14 +14,14 @@
 
 = Load a Preset
 
-All of the WebSchedule™ controls can have presets applied to them at run-time, using the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.webcontrolbase~loadpreset.html[LoadPreset]"]  method. This method has several overloads, taking a the name of the preset file, and a boolean.
+All of the WebSchedule™ controls can have presets applied to them at run-time, using the  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.webcontrolbase~loadpreset.html[LoadPreset]"]  method. This method has several overloads, taking a the name of the preset file, and a boolean.
 
 The boolean determines if the control will be reset before the new preset is applied.
 
 .Note:
 [NOTE]
 ====
-This reset will clear the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledataproviderbase~webscheduleinfoid.html[WebScheduleInfoID]"]  also, and you would have to reset the WebScheduleInfo™ for the control at run-time if you apply Presets and pass in true as the boolean, at run-time.
+This reset will clear the  pick:[asp-net="link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledataproviderbase~webscheduleinfoid.html[WebScheduleInfoID]"]  also, and you would have to reset the WebScheduleInfo™ for the control at run-time if you apply Presets and pass in true as the boolean, at run-time.
 ====
 
 The code snippet below shows how to apply a preset at run-time, and reset the the control, and then reset the control's WebScheduleInfo.

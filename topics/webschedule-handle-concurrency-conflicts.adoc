@@ -14,13 +14,13 @@
 
 = Handle Concurrency Conflicts
 
-In multi-user WebSchedule™ applications, a concurrency conflict occurs when two users simultaneously update an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"] . Only changes made by the first user are accepted.
+In multi-user WebSchedule™ applications, a concurrency conflict occurs when two users simultaneously update an  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]"] . Only changes made by the first user are accepted.
 
 For example, Adam and Becky are looking at the same appointment and they each open the "Edit Appointment" dialog at 9:30. If Adam commits his changes at 9:35, and Becky commits her changes at 9:40 based on looking at appointment information as it had existed prior to Adam's change, then Becky has caused a concurrency conflict.
 
 The routine manner for dealing with concurrency conflicts is to notify Becky that someone else has already modified the appointment since the last time she opened it, abandon her change and give her refreshed information about the appointment.
 
-This example shows you how to do this in your WebSchedule application by handling the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider~dataprovidererror_ev.html[DataProviderError]"]  event. You will check whether the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.dataprovidererroreventargs~condition.html[ErrorCondition]"]  property indicates a concurrency conflict has occurred, and if so, cause a pop-up message box to explain the situation to users that have submitted a change based on old information.
+This example shows you how to do this in your WebSchedule application by handling the  pick:[asp-net="link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledbprovider~dataprovidererror_ev.html[DataProviderError]"]  event. You will check whether the  pick:[asp-net="link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.dataprovidererroreventargs~condition.html[ErrorCondition]"]  property indicates a concurrency conflict has occurred, and if so, cause a pop-up message box to explain the situation to users that have submitted a change based on old information.
 
 *In Visual Basic:*
 

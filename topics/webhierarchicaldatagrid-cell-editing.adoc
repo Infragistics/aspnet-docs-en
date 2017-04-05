@@ -25,7 +25,7 @@ The following code shows you how to retrieve and edit the value of a cell in Web
 .Note:
 [NOTE]
 ====
-You need the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]  behavior enabled and its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property set to true in order to edit cells programmatically.
+You need the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]  behavior enabled and its  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property set to true in order to edit cells programmatically.
 ====
 
 *In Visual Basic:*
@@ -71,9 +71,9 @@ childGrid.get_rows().get_row(0).get_cell(1).set_value("NewChildValue");
 
 == Enabling Cell Editing
 
-To enable data editing in WebHierarchicalDataGrid, add the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]  behavior to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editablebehaviorbase~editmodeactions.html[EditModeActions]"]  property of the CellEditing behavior lets you determine what actions will cause a cell to enter edit mode.
+To enable data editing in WebHierarchicalDataGrid, add the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]  behavior to the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editablebehaviorbase~editmodeactions.html[EditModeActions]"]  property of the CellEditing behavior lets you determine what actions will cause a cell to enter edit mode.
 
-If you have handled the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowupdating_ev.html[RowUpdating]"]  event, changes will commit immediately to your data source as you lose focus on the edited row. For a row to obtain or lose focus, you must have the Activation behavior enabled. For more information on the Activation behavior, see the link:webhierarchicaldatagrid-activation.html[Activation] topic.
+If you have handled the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowupdating_ev.html[RowUpdating]"]  event, changes will commit immediately to your data source as you lose focus on the edited row. For a row to obtain or lose focus, you must have the Activation behavior enabled. For more information on the Activation behavior, see the link:webhierarchicaldatagrid-activation.html[Activation] topic.
 
 .Note:
 [NOTE]
@@ -88,11 +88,11 @@ To enable cell editing follow these steps:
 [start=2]
 . In the Microsoft® Visual Studio property window, locate the Behaviors property and click the ellipsis (…) button to launch the Behaviors Editor dialog.
 [start=3]
-. Check the checkbox next to Cell Editing from the list of behaviors on the left to enable the behavior. Notice that the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]  behavior is added as well.
+. Check the checkbox next to Cell Editing from the list of behaviors on the left to enable the behavior. Notice that the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore.html[EditingCore]"]  behavior is added as well.
 [start=4]
-. Set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property of the EditingCore and Cell Editing behaviors to True. This enables all the child levels to automatically inherit Cell Editing behavior. The property’s default value is False.
+. Set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore~enableinheritance.html[EnableInheritance]"]  property of the EditingCore and Cell Editing behaviors to True. This enables all the child levels to automatically inherit Cell Editing behavior. The property’s default value is False.
 [start=5]
-. In the Cell Editing property section, under the EditModeActions property, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editmodeactions~mouseclick.html[MouseClick]"]  property to Single. This specifies that a cell enters edit mode on a single click. Default is Double Click.
+. In the Cell Editing property section, under the EditModeActions property, set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editmodeactions~mouseclick.html[MouseClick]"]  property to Single. This specifies that a cell enters edit mode on a single click. Default is Double Click.
 [start=6]
 . Click Apply then Ok.
 [start=7]

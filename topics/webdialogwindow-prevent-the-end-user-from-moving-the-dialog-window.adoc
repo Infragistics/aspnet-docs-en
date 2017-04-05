@@ -16,7 +16,7 @@
 
 If you allow your end user to have multiple dialog windows open on the web page at once, you may decide to give them the option to lock them in place. Your end users may appreciate this option, especially if they accidentally move a dialog window when they had it in the perfect location. This situation can arise if multiple dialog windows are displaying different customer statistics, such as a "card view" in a presentation grid.
 
-By setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~moveable.html[Moveable]"]  property to False, the end user will not be able to move the dialog window around the web page. You can present this ability to your end user in a "Lock Windows in Place" option, perhaps. Keep in mind, if there are multiple dialog windows open at once, you'll have to set each Moveable property individually.
+By setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~moveable.html[Moveable]"]  property to False, the end user will not be able to move the dialog window around the web page. You can present this ability to your end user in a "Lock Windows in Place" option, perhaps. Keep in mind, if there are multiple dialog windows open at once, you'll have to set each Moveable property individually.
 
 The following code demonstrates how to lock a dialog window in place, preventing the end user from moving it.
 

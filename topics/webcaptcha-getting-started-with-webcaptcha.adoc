@@ -14,7 +14,7 @@
 
 = Getting Started with WebCaptcha
 
-The WebCaptcha™ component provides easy to use protection against automated form submissions. All you need to do to create a WebForm with an instance of WebCaptcha, is to drag and drop link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.webscriptmanager.html[WebScriptManager] and WebCaptcha components from Visual Studio Toolbox. The generated code should look like:
+The WebCaptcha™ component provides easy to use protection against automated form submissions. All you need to do to create a WebForm with an instance of WebCaptcha, is to drag and drop link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.webscriptmanager.html[WebScriptManager] and WebCaptcha components from Visual Studio Toolbox. The generated code should look like:
 
 *In HTML:*
 
@@ -30,7 +30,7 @@ image::images/WebCaptcha_Getting_Started_With_WebCaptcha_01.png[WebCaptcha_Getti
 .Note:
 [NOTE]
 ====
-By dropping the WebCaptcha onto your form, the control automatically registers link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.captchaimagehandler.html[CaptchaImageHandler] in the web.config file. The handler has the following definition:
+By dropping the WebCaptcha onto your form, the control automatically registers link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.captchaimagehandler.html[CaptchaImageHandler] in the web.config file. The handler has the following definition:
 ====
 
 ----

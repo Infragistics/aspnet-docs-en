@@ -37,7 +37,7 @@ WebTab™ allows you to manually add tabs using its rich user interface designer
 .Note:
 [NOTE]
 ====
-The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  property has priority over the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~usercontrolurl.html[UserControlUrl]"]  property and the template(explicit child controls) meaning that the user control and the template are ignored and not rendered if content url is set. Also if the UserControlUrl property is set then the user control renders itself as a template on the client replacing any existing templates.
+The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  property has priority over the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contentpane~usercontrolurl.html[UserControlUrl]"]  property and the template(explicit child controls) meaning that the user control and the template are ignored and not rendered if content url is set. Also if the UserControlUrl property is set then the user control renders itself as a template on the client replacing any existing templates.
 ====
 
 [start=4]
@@ -73,7 +73,7 @@ image::images/WebTab_Adding_Tabs_to_the_WebTab_02.png[]
 .Note:
 [NOTE]
 ====
-If you see javascript errors, it is recommended to set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabpostbackoptions~enableloadondemandurl.html[EnableLoadOnDemandUrl]"]  property to True. However, this property prevents loading ContentUrl until the respective tab is selected. For more information see link:webtab-using-load-on-demand-for-tabs-with-content-url-set.html[Using Load on Demand for Tabs with Content Url Set].
+If you see javascript errors, it is recommended to set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabpostbackoptions~enableloadondemandurl.html[EnableLoadOnDemandUrl]"]  property to True. However, this property prevents loading ContentUrl until the respective tab is selected. For more information see link:webtab-using-load-on-demand-for-tabs-with-content-url-set.html[Using Load on Demand for Tabs with Content Url Set].
 ====
 
 === Adding Tabs Programatically :

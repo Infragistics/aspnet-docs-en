@@ -14,7 +14,7 @@
 
 = Tickmark Layout Tab
 
-The  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gaugescaletickmarkappearance.html[Tickmark]"]  property on the WebGauge control is used to visually display the values on a scale of your Radial or Linear gauge. There are two types of tick marks:
+The  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.gaugescaletickmarkappearance.html[Tickmark]"]  property on the WebGauge control is used to visually display the values on a scale of your Radial or Linear gauge. There are two types of tick marks:
 
 * minor tick marks
 * major tick marks

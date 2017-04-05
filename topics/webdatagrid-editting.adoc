@@ -14,12 +14,12 @@
 
 = Editing Behavior Overview (WebDataGrid)
 
-WebDataGrid™ is read-only by default. You must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior to allow interaction with the control. After EditingCore is enabled you can edit WebDataGrid in code; however, if you want to allow your end-users to edit, delete, and add data using WebDataGrid's UI, you must enable additional behaviors. These are all considered dependent behaviors specific to the user interaction. Once editing is enabled, data updates commit immediately to the data source.
+WebDataGrid™ is read-only by default. You must enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior to allow interaction with the control. After EditingCore is enabled you can edit WebDataGrid in code; however, if you want to allow your end-users to edit, delete, and add data using WebDataGrid's UI, you must enable additional behaviors. These are all considered dependent behaviors specific to the user interaction. Once editing is enabled, data updates commit immediately to the data source.
 
 .Note:
 [NOTE]
 ====
-Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to the name of the primary key column in your data source to ensure that changes in WebDataGrid can be updated in data source.
+Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to the name of the primary key column in your data source to ensure that changes in WebDataGrid can be updated in data source.
 ====
 
 == Dependent Behaviors

@@ -32,7 +32,7 @@ Also, when you disable automatic persistence, Persistence events do not fire. Fo
 
 == Saving Control State
 
-To save the required controls, you need an instance of the Persistence Framework class,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.persistence.persistencemanager.html[*PersistenceManager* ]"] . This class is implemented as a singleton; therefore you are ensured to have only one instance working at any time.
+To save the required controls, you need an instance of the Persistence Framework class,  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.persistence.persistencemanager.html[*PersistenceManager* ]"] . This class is implemented as a singleton; therefore you are ensured to have only one instance working at any time.
 
 The Persistence manager allows for manual loading and saving of data for the controls. *Listing 1* demonstrates the persistence of three controls and then shows the retrieving of their state.
 

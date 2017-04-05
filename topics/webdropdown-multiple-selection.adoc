@@ -14,15 +14,15 @@
 
 = Multiple Selection
 
-WebDropDown™ allows the end user to perform single and multiple item selection from its dropdown container. By default, single selection is enabled ; in order to enable multiple selection the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~displaymode.html[DisplayMode]"]  property should be set to either *DropDown* or *DropDownList* and the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enablemultipleselection.html[EnableMultipleSelection]"]  property must be set to true.
+WebDropDown™ allows the end user to perform single and multiple item selection from its dropdown container. By default, single selection is enabled ; in order to enable multiple selection the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~displaymode.html[DisplayMode]"]  property should be set to either *DropDown* or *DropDownList* and the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~enablemultipleselection.html[EnableMultipleSelection]"]  property must be set to true.
 
-When items are selected, what the end-user sees in the Value Display component is formed by concatenating the display values of all selected items by using a predefined delimiter. By default the delimiter is set to comma. However we can change the delimiter by setting the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~multiselectvaluedelimiter.html[MultiSelectValueDelimiter]"]  property.
+When items are selected, what the end-user sees in the Value Display component is formed by concatenating the display values of all selected items by using a predefined delimiter. By default the delimiter is set to comma. However we can change the delimiter by setting the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~multiselectvaluedelimiter.html[MultiSelectValueDelimiter]"]  property.
 
-Multiple-Selection can be performed by either using the checkbox or keyboard by setting the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~multipleselectiontype.html[MultipleSelectionType]"]  property.
+Multiple-Selection can be performed by either using the checkbox or keyboard by setting the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~multipleselectiontype.html[MultipleSelectionType]"]  property.
 
 == Multiple Selection using CheckBoxes.
 
-WebDropDown allows multiple selection using CheckBoxes. You can enable multiple selection using checkboxes by setting the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~multipleselectiontype.html[MultipleSelectionType]"]  property to Checkbox. This will render a checkbox in front of every list item.
+WebDropDown allows multiple selection using CheckBoxes. You can enable multiple selection using checkboxes by setting the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~multipleselectiontype.html[MultipleSelectionType]"]  property to Checkbox. This will render a checkbox in front of every list item.
 
 == To select multiple items from the drop-down list using checkboxes:
 
@@ -71,7 +71,7 @@ image::images/WebDropDown_Multiple_Selection_using_CheckBoxes_01.png[]
 
 Multiple selection can also be performed using the keyboard. Holding the CTRL/SHIFT key(s) will allow multiple selection the same fashion that exists in Windows Explorer. Multiple selection is performed by holding the CTRL/SHIFT key(s) and clicking on the items or navigating with the UP/DOWN Arrow keys . When items are selected, the end-user sees a delimited set of values in the Value Display component; this display is formed by concatenating the display values of all selected items by using the predefined delimiter, which is comma by default.
 
-You can enable keyboard multiple selection by setting the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~multipleselectiontype.html[MultipleSelectionType]"]  property to Keyboard.
+You can enable keyboard multiple selection by setting the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~multipleselectiontype.html[MultipleSelectionType]"]  property to Keyboard.
 
 == To select multiple items from the drop-down list using the keyboard:
 

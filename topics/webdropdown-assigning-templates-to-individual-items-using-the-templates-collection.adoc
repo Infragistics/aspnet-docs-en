@@ -29,7 +29,7 @@ You will learn how to assign templates to individual items using the templates c
 [start=2]
 . Click the WebDropDown control’s smart tag and select Edit Template Collection. This will open the WebDropDown designer, where you can add new templates.
 [start=3]
-. Click add item to add new templates to the template collection. Add three templates Template1,Template2, and Template3; set their  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.itemtemplate~templateid.html[TemplateID]"]  property to buttonTemplate, textboxTemplate, and labelTemplate respectively. Your WebDropDown Designer now looks similar to the following image:
+. Click add item to add new templates to the template collection. Add three templates Template1,Template2, and Template3; set their  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.itemtemplate~templateid.html[TemplateID]"]  property to buttonTemplate, textboxTemplate, and labelTemplate respectively. Your WebDropDown Designer now looks similar to the following image:
 
 image::images/WebDropDown_Assigning_templates_to_individual_items_using_the_templates_collection_01.png[]
 

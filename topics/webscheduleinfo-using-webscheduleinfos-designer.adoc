@@ -36,7 +36,7 @@ Right-click on the control, and select click Quick Design. This will activate th
 image::images/WebSchedule_Walk_Through_Using_the_WebScheduleInfo_Designers_01.png[]
 
 [start=4]
-. *The Feature Picker is loaded.* The WebScheduleInfo designer loads with the Feature Picker selected. The Feature Picker is designed to allow you to quickly and easily set some of the standard functional properties of the control in a convenient location, without making you scroll though the entire properties listing of the control. Some of the features that you can set are  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~allowalldayevents.html[AllowAllDayEvents]"] ,  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~weekrule.html[WeekRule]"] , and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~enablereminders.html[EnableReminders]"] .
+. *The Feature Picker is loaded.* The WebScheduleInfo designer loads with the Feature Picker selected. The Feature Picker is designed to allow you to quickly and easily set some of the standard functional properties of the control in a convenient location, without making you scroll though the entire properties listing of the control. Some of the features that you can set are  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~allowalldayevents.html[AllowAllDayEvents]"] ,  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~weekrule.html[WeekRule]"] , and  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~enablereminders.html[EnableReminders]"] .
 [start=5]
 . *Review the Control Settings area.* The Control Settings area displays on the right-hand area of the WebScheduleInfo's properties dialog box exactly as it would appear in Visual Studio .NET's Properties dialog box.
 
@@ -45,7 +45,7 @@ image::images/WebSchedule_Walk_Through_Using_the_WebScheduleInfo_Designers_02.pn
 [start=6]
 . *Work with some of the key styling objects.*
 
-One advantage that the Control Settings area has over the Visual Studio .NET's Properties dialog box is that in the middle of the area, it conveniently pulls out some of the key styling objects that you may want to use. If you select  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~clientevents.html[ClientEvents]"] , you will notice that the Properties area in the right-hand area of the window will change to show that particular style's properties.
+One advantage that the Control Settings area has over the Visual Studio .NET's Properties dialog box is that in the middle of the area, it conveniently pulls out some of the key styling objects that you may want to use. If you select  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~clientevents.html[ClientEvents]"] , you will notice that the Properties area in the right-hand area of the window will change to show that particular style's properties.
 
 image::images/WebSchedule_Walk_Through_Using_the_WebScheduleInfo_Designers_03.png[]
 

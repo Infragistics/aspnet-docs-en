@@ -14,7 +14,7 @@
 
 = Disabling typing text when no match is found
 
-WebDropDown™ can easily be configured to not allow the end-user to type any kind of unwanted text in the value display; you can accomplish this without writing a single line of code. You can achieve this functionality by setting the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enablecustomvalues.html[EnableCustomValues]"]  property to False. By default, this property is set to True. When EnableCustomValues property is set to False, the end-user cannot type in the text that does not match the text of any item in the drop-down list.
+WebDropDown™ can easily be configured to not allow the end-user to type any kind of unwanted text in the value display; you can accomplish this without writing a single line of code. You can achieve this functionality by setting the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~enablecustomvalues.html[EnableCustomValues]"]  property to False. By default, this property is set to True. When EnableCustomValues property is set to False, the end-user cannot type in the text that does not match the text of any item in the drop-down list.
 
 You can set the EnableCustomValues property either using the Microsoft® Visual Studio® Property Window or by using the following code:
 

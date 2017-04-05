@@ -14,15 +14,15 @@
 
 = Cell Editing (WebDataGrid)
 
-The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]  behaviors are essential for cell editing in WebDataGrid™. You can edit a cell through the UI or by using code.
+The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]  behaviors are essential for cell editing in WebDataGrid™. You can edit a cell through the UI or by using code.
 
 == 
 
 == Before You Begin
 
-To enable data editing in WebDataGrid™, add the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]  behavior to the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editablebehaviorbase~editmodeactions.html[EditModeActions]"]  property of the CellEditing behavior lets you determine what actions will cause a cell to enter edit mode.
+To enable data editing in WebDataGrid™, add the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.cellediting.html[CellEditing]"]  behavior to the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editablebehaviorbase~editmodeactions.html[EditModeActions]"]  property of the CellEditing behavior lets you determine what actions will cause a cell to enter edit mode.
 
-If you have handled the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingcore~rowupdating_ev.html[RowUpdating]"]  event, changes will commit immediately to your data source as you lose focus on the edited row. For a row to obtain or lose focus, you must have the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior enabled. For more information on the Activation behavior, see link:webdatagrid-activation.html[Activation].
+If you have handled the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingcore~rowupdating_ev.html[RowUpdating]"]  event, changes will commit immediately to your data source as you lose focus on the edited row. For a row to obtain or lose focus, you must have the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior enabled. For more information on the Activation behavior, see link:webdatagrid-activation.html[Activation].
 
 .Note:
 [NOTE]
@@ -39,13 +39,13 @@ You will learn how to update data from the Customers table with the WebDataGrid 
 [start=1]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=2]
-. In the Microsoft® Visual Studio™ property window for WebDataGrid, Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID so that changes in WebDataGrid can be updated to the data source.
+. In the Microsoft® Visual Studio™ property window for WebDataGrid, Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID so that changes in WebDataGrid can be updated to the data source.
 [start=3]
 . In the same window, locate the Behaviors property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=4]
-. Check the CheckBox next to Cell Editing from the list on the left to add and enable the behavior. Notice that the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior is added as well.
+. Check the CheckBox next to Cell Editing from the list on the left to add and enable the behavior. Notice that the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior is added as well.
 [start=5]
-. In the Cell Editing property section, under the EditModeActions property, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editmodeactions~mouseclick.html[MouseClick]"]  property to Single. This specifies that a cell enters edit mode on a single click.
+. In the Cell Editing property section, under the EditModeActions property, set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editmodeactions~mouseclick.html[MouseClick]"]  property to Single. This specifies that a cell enters edit mode on a single click.
 
 image::images/WebDataGrid_Enabling_Cell_Editing_01.png[]
 
@@ -88,7 +88,7 @@ WebDataGrid1.Behaviors.EditingCore.Behaviors.CellEditing.EditModeActions.MouseCl
 [start=7]
 . Go to the events view of the property window for WebDataGrid and handle the RowUpdating event. You do not have to add any code to the event handler.
 [start=8]
-. Check that  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableajax.html[EnableAjax]"]  is True in the property window of WebDataGrid. If not, set it to True.
+. Check that  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enableajax.html[EnableAjax]"]  is True in the property window of WebDataGrid. If not, set it to True.
 [start=9]
 . Run the application. When you click on a cell, the cell enters edit mode allowing you to change the data. Once you click off of the cell you just edited, the change is committed to your data source via AJAX.
 
@@ -115,7 +115,7 @@ The following code shows you how to retrieve and edit the value of a cell in Web
 .Note:
 [NOTE]
 ====
-You need only the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior enabled in order to edit cells programmatically.
+You need only the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior enabled in order to edit cells programmatically.
 ====
 
 *In Visual Basic:*

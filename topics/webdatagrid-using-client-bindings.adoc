@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-When you enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate.html[Row Editing Template]"]  for the first time and accept the default controls for the template, each TextBox control is already bound to a field in WebDataGrid™. However, if you want to add controls to the Row Editing Template or you do not accept the default controls, you will not have automatic bindings between the controls and any fields in WebDataGrid; you have to configure this binding.
+When you enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate.html[Row Editing Template]"]  for the first time and accept the default controls for the template, each TextBox control is already bound to a field in WebDataGrid™. However, if you want to add controls to the Row Editing Template or you do not accept the default controls, you will not have automatic bindings between the controls and any fields in WebDataGrid; you have to configure this binding.
 
 The Client Bindings collection allows you to add custom bindings to controls in the Row Editing Template. You can provide a simple Javascript statement to get or set a value or supply a code fragment for more complex bindings.
 
@@ -121,7 +121,7 @@ private class CustomRowEditingTemplate : ITemplate
 
 image::images/WebDataGrid_Using_Client_Bindings_01.png[]
 
-.. In the properties, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate~clientbindings.html[ClientBindings]"]  property and click the ellipsis (…) button to launch the Client Bindings editor.
+.. In the properties, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate~clientbindings.html[ClientBindings]"]  property and click the ellipsis (…) button to launch the Client Bindings editor.
 .. Find the CompanyName in the Column Key column and set its Control ID to NameTextBox1, the id of the textbox in the Row Editing Template.
 .. Click the right arrow button at the edge of the editor to expand it. The editor shows more advanced settings. Here you can provide custom Javascript code fragments to bind a control to something. By default, when you select a Control ID for a column, simple statements are provided to get and set the value for the control.
 .. Click the each of the refresh buttons in the get and set sections of the editor to see the Javascript statements to get and set the editor's value.

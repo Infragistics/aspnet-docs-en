@@ -14,7 +14,7 @@
 
 = Disabling Drop-Down Items
 
-WebDropDown™ allows individual items to be disabled. For instance, you may not want the end-users to select or activate particular items in the drop-down container. You may even want to avoid auto-filtering on certain items. This functionality can be achieved by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem.html[DropDownItem]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem~disabled.html[Disabled]"]  property.
+WebDropDown™ allows individual items to be disabled. For instance, you may not want the end-users to select or activate particular items in the drop-down container. You may even want to avoid auto-filtering on certain items. This functionality can be achieved by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.dropdownitem.html[DropDownItem]"]  object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.dropdownitem~disabled.html[Disabled]"]  property.
 
 == To disable individual drop-down items:
 
