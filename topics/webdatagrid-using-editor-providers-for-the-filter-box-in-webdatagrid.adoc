@@ -15,7 +15,7 @@
 
 == Before You Begin
 
-When you enable the WebDataGrid™ control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering.html[Filtering]"]  Behavior, the filter row contains an editor provider which is automatically chosen depending on the column’s data type (as long as the grid knows the column’s data type). For more information on the data types and their associated editors see link:webdatagrid-editor-providers.html[About Editor Providers]. WebDataGrid allows you to set a different editor provider rather than the default one depending on your application.
+When you enable the WebDataGrid™ control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering.html[Filtering]"]  Behavior, the filter row contains an editor provider which is automatically chosen depending on the column’s data type (as long as the grid knows the column’s data type). For more information on the data types and their associated editors see link:webdatagrid-editor-providers.html[About Editor Providers]. WebDataGrid allows you to set a different editor provider rather than the default one depending on your application.
 
 == What You Will Accomplish
 
@@ -32,13 +32,13 @@ You will learn how to set an editor provider for the filter row when WebDataGrid
 [start=4]
 . Check the checkbox for the Filtering behavior from the list on the left to enable it.
 [start=5]
-. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~columnsettings.html[ColumnSettings]"]  property and click the ellipsis (…) button to launch the Column Setting dialog.
+. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~columnsettings.html[ColumnSettings]"]  property and click the ellipsis (…) button to launch the Column Setting dialog.
 [start=6]
-. Add a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsetting.html[ColumnSetting]"]  by clicking the add item button.
+. Add a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsetting.html[ColumnSetting]"]  by clicking the add item button.
 [start=7]
-. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey]"]  property to OrderDate from the drop-down list.
+. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey]"]  property to OrderDate from the drop-down list.
 [start=8]
-. Click the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columneditsetting~editorid.html[EditorID]"]  property and select Add/Modify EditorProviders list from the drop-down list.
+. Click the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columneditsetting~editorid.html[EditorID]"]  property and select Add/Modify EditorProviders list from the drop-down list.
 
 image:images/WebDataGrid_Using_Editor_Providers_for_the Filter_Box_in_WebDataGrid_01.png[]
 

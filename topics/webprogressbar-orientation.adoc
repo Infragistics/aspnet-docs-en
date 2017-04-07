@@ -14,7 +14,7 @@
 
 = Orientation
 
-WebProgressBar™ can be oriented horizontally or vertically by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~orientation.html[Orientation]"]  property to Horizontal or Vertical. By default, the Orientation property is set to Horizontal and the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~fillmode.html[FillMode]"]  is set to FromLeftOrTop. When the Orientation property is set to:
+WebProgressBar™ can be oriented horizontally or vertically by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~orientation.html[Orientation]"]  property to Horizontal or Vertical. By default, the Orientation property is set to Horizontal and the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~fillmode.html[FillMode]"]  is set to FromLeftOrTop. When the Orientation property is set to:
 
 * Horizontal -- By default the progress bar is filled from left to right.
 * Vertical -- By default the progress bar is filled from top to bottom.
@@ -22,7 +22,7 @@ WebProgressBar™ can be oriented horizontally or vertically by setting the  pic
 .Note:
 [NOTE]
 ====
-Setting the Orientation property to Horizontal or Vertical does not swap the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~height.html[Height]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~width.html[Width]"]  of WebProgressBar. However you can change the height and width by setting the Height and Width properties.
+Setting the Orientation property to Horizontal or Vertical does not swap the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~height.html[Height]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~width.html[Width]"]  of WebProgressBar. However you can change the height and width by setting the Height and Width properties.
 ====
 
 The Orientation property can be set using the smart tag or through the Microsoft® Visual Studio® Property Window or by using the following code :
@@ -39,7 +39,7 @@ WebProgressBar1.Orientation = Orientation.Vertical
 WebProgressBar1.Orientation = Orientation.Vertical;
 ----
 
-The following images show the WebProgressBar with horizontal and vertical orientations when the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  property is set to 30 :
+The following images show the WebProgressBar with horizontal and vertical orientations when the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  property is set to 30 :
 
 *Horizontal*
 

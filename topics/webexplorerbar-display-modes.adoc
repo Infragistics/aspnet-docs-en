@@ -14,15 +14,15 @@
 
 = Display Modes
 
-The WebExplorerBar™ control has two properties to control the way it behaves:  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groupexpandbehavior.html[GroupExpandBehavior]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groupexpandaction.html[GroupExpandAction]"]  . GroupExpandBehavior controls how many groups can be expanded and GroupExpandAction controls the action of expanding these groups.
+The WebExplorerBar™ control has two properties to control the way it behaves:  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groupexpandbehavior.html[GroupExpandBehavior]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~groupexpandaction.html[GroupExpandAction]"]  . GroupExpandBehavior controls how many groups can be expanded and GroupExpandAction controls the action of expanding these groups.
 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.groupexpandbehavior.html[GroupExpandBehavior]"]  is an enum that has the following values:
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.groupexpandbehavior.html[GroupExpandBehavior]"]  is an enum that has the following values:
 
 * SingleExpanded – Only one group can be expanded at a time.
 * AllExpanded – All groups are expanded and stay expanded.
 * AnyExpandable – All groups can be expanded and collapsed. Default value.
 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.groupexpandaction.html[GroupExpandAction]"]  is an enum that has the following values:
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.groupexpandaction.html[GroupExpandAction]"]  is an enum that has the following values:
 
 * HeaderClick – Default value where a group is expanded when the group header is clicked.
 * ButtonClick– A group is expanded only when the expander icon is clicked.

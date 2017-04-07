@@ -14,7 +14,7 @@
 
 = Disabling Menu Items
 
-WebDataMenu™ allows individual items to be disabled. For instance, you may want the end-users not to select or activate certain menu items. You can achieve this functionality by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitem.html[NavItem]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitem~enabled.html[Enabled]"]  property.
+WebDataMenu™ allows individual items to be disabled. For instance, you may want the end-users not to select or activate certain menu items. You can achieve this functionality by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitem.html[NavItem]"]  object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitem~enabled.html[Enabled]"]  property.
 
 == To disable individual menu items :
 

@@ -29,9 +29,9 @@ You will set up WebDataGrid paging using two buttons and a dropdown list. The tw
 [start=2]
 . In the Microsoft® Visual Studio™ property window, locate the Behaviors property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=3]
-. Check the CheckBox next to  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  from the list on the left to add and enable the behavior.
+. Check the CheckBox next to  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging.html[Paging]"]  from the list on the left to add and enable the behavior.
 [start=4]
-. In the properties, expand  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.paging~pagingclientevents.html[PagingClientEvents]"]  and handle the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.pagingclientevents~pageindexchanged.html[PageIndexChanged]"]  event by inputting an event handler name: WebDataGrid1_PageIndexChanged.
+. In the properties, expand  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.paging~pagingclientevents.html[PagingClientEvents]"]  and handle the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.pagingclientevents~pageindexchanged.html[PageIndexChanged]"]  event by inputting an event handler name: WebDataGrid1_PageIndexChanged.
 
 image::images/WebDataGrid_Using_Custom_Paging_Template_02.png[]
 

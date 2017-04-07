@@ -14,7 +14,7 @@
 
 = Orientation Types
 
-WebImageViewer™ can be oriented horizontally (default) and vertically. When the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~orientation.html[Orientation]"]  property is set to Horizontal and using the Default style as provided by the Infragistics Application Styling Framework, images can be scrolled in a horizontal fashion. This means you can either click the Left or Right navigation buttons or simply click and drag the images from side to side. When the Orientation property is set to Vertical, the navigation buttons will be located on the top and bottom of the WebImageViewer. You can also click and drag the images from up and down.
+WebImageViewer™ can be oriented horizontally (default) and vertically. When the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webimageviewer~orientation.html[Orientation]"]  property is set to Horizontal and using the Default style as provided by the Infragistics Application Styling Framework, images can be scrolled in a horizontal fashion. This means you can either click the Left or Right navigation buttons or simply click and drag the images from side to side. When the Orientation property is set to Vertical, the navigation buttons will be located on the top and bottom of the WebImageViewer. You can also click and drag the images from up and down.
 
 .Note:
 [NOTE]

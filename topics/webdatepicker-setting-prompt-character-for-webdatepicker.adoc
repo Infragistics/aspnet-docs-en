@@ -14,7 +14,7 @@
 
 = Setting Prompt Character for WebDatePicker
 
-WebDatePicker™ allows you to set the prompt character that is used to fill missing date fields when the control has focus by simply setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~promptchar.html[PromptChar]"]  property. By default the prompt character is set to '_'.
+WebDatePicker™ allows you to set the prompt character that is used to fill missing date fields when the control has focus by simply setting the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~promptchar.html[PromptChar]"]  property. By default the prompt character is set to '_'.
 
 You can set the PromptChar property either by using the Microsoft® Visual Studio® Property Window or by using the following code:
 

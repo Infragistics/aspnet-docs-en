@@ -14,15 +14,15 @@
 
 = Create an Activity Using Code
 
-You may need to create an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  server-side in code. The code below shows how to create an activity. For information on how to add the Activity to the WebScheduleInfo™, see link:webschedule-add-an-activity-on-the-server.html[How to Add an Activity Server-Side].
+You may need to create an  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  server-side in code. The code below shows how to create an activity. For information on how to add the Activity to the WebScheduleInfo™, see link:webschedule-add-an-activity-on-the-server.html[How to Add an Activity Server-Side].
 
 .Note:
 [NOTE]
 ====
-Ensure the Activity was affiliated with the active Resource whose scheduling information is currently being viewed. In this example, the Activity was linked to the Unassigned Resource which is always present. However, when you set the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcename.html[ActiveResourceName]"]  property on WebScheduleInfo to a different Resource, Activities belonging to the Unassigned Resource would not be shown.
+Ensure the Activity was affiliated with the active Resource whose scheduling information is currently being viewed. In this example, the Activity was linked to the Unassigned Resource which is always present. However, when you set the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcename.html[ActiveResourceName]"]  property on WebScheduleInfo to a different Resource, Activities belonging to the Unassigned Resource would not be shown.
 ====
 
-The code below creates a new instance of the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  class and sets some of the initial properties on it, including which  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource]"]  organizes it.
+The code below creates a new instance of the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  class and sets some of the initial properties on it, including which  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.resource.html[Resource]"]  organizes it.
 
 *In Visual Basic:*
 

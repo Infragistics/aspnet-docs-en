@@ -14,7 +14,7 @@
 
 = Setting Min and Max Dates for WebMonthCalendar
 
-WebMonthCalendar™ allows you to set a range of dates you want to display in the calendar by simply setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~mindate.html[MinDate]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~maxdate.html[MaxDate]"]  properties. The end-user therefore cannot view the dates out of the range you have set on the control.
+WebMonthCalendar™ allows you to set a range of dates you want to display in the calendar by simply setting the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~mindate.html[MinDate]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~maxdate.html[MaxDate]"]  properties. The end-user therefore cannot view the dates out of the range you have set on the control.
 
 You can set the MinDate and MaxDate properties either by using the Microsoft® Visual Studio® Property Window or by using the following code:
 

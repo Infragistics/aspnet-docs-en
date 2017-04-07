@@ -72,7 +72,7 @@ The following table lists the configurable aspects of the  _WebMaskEditor_   con
 2*.* Get the WebMaskEditor mask on Server-side
 |The InputMask property is the one that needs to be used for setting and getting the _WebMaskEditor_ ’s masks.
 |
-* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmaskeditor~inputmask.html[InputMask] 
+* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmaskeditor~inputmask.html[InputMask] 
 
 |1 .Set the _WebMaskEditor_ mask on Client-side 
 
@@ -90,7 +90,7 @@ The following table lists the configurable aspects of the  _WebMaskEditor_   con
 
 === Overview
 
-In order to get or set the  _WebMaskEditor_   mask on the server, you simply need to get or set the control property called ` link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmaskeditor~inputmask.html[InputMask]`.
+In order to get or set the  _WebMaskEditor_   mask on the server, you simply need to get or set the control property called ` link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmaskeditor~inputmask.html[InputMask]`.
 
 [[_Ref326941857]]
 

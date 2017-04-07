@@ -13,7 +13,7 @@
 
 = Working with Digital WebGauges
 
-In order to work effectively with Digital gauges, there are a couple of properties (i.e.,  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.segmenteddigitalgauge~mode.html[Mode]"]  and  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.segmenteddigitalgauge~unlitbrushelement.html[UnlitBrushElement]"] ) that you need to understand.
+In order to work effectively with Digital gauges, there are a couple of properties (i.e.,  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.segmenteddigitalgauge~mode.html[Mode]"]  and  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.segmenteddigitalgauge~unlitbrushelement.html[UnlitBrushElement]"] ) that you need to understand.
 
 image::images/Gauge_Working_with_Digital_Gauges_01.png[Digital Gauge pointing out the UnlitBrushElement, and mode area.]
 

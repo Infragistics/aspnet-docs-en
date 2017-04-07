@@ -14,13 +14,13 @@
 
 = About Multi Resource View
 
-The WebSchedule™ controls (WebDayView™ and WebMonthView™) allow you to display scheduling information from multiple resources. To enable multiple resource view, set the WebScheduleInfo™ component's link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultiresourceview.html[EnableMultiResourceView] property to True.
+The WebSchedule™ controls (WebDayView™ and WebMonthView™) allow you to display scheduling information from multiple resources. To enable multiple resource view, set the WebScheduleInfo™ component's link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultiresourceview.html[EnableMultiResourceView] property to True.
 
 == Overlay Mode
 
 Overlay mode allows your end users to see scheduling information for different resources in one view; the active resource displays with a unique style to distinguish it from the inactive resources. For information on customizing the styles for active and inactive resources, see link:webschedule-styling-active-and-inactive-resources.html[Styling Active and Inactive Resources].
 
-A tab control allows you to switch between the different resources. Set the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~enablemultiresourcecaption.html[EnableMultiResourceCaption] to True or False to control this behavior.
+A tab control allows you to switch between the different resources. Set the link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~enablemultiresourcecaption.html[EnableMultiResourceCaption] to True or False to control this behavior.
 
 image::images/WebSchedule_Enable_Multi_Resource_View_01.png[]
 
@@ -32,17 +32,17 @@ Figure 2 - WebDayView.
 
 == Events
 
-The WebScheduleInfo component contains a link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResource] collection that holds Resource objects with scheduling information to be displayed by the WebSchedule controls. You can handle WebScheduleInfo's link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~resourcesfetched_ev.html[ResourcesFetched] event to manipulate the VisibleResource collection to render only the information you want. You can also pre-populate resources into the collection in the page's PreLoad event. For more information on handling this event, see link:webschedule-set-visible-resources.html[Set Visible Resources].
+The WebScheduleInfo component contains a link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResource] collection that holds Resource objects with scheduling information to be displayed by the WebSchedule controls. You can handle WebScheduleInfo's link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~resourcesfetched_ev.html[ResourcesFetched] event to manipulate the VisibleResource collection to render only the information you want. You can also pre-populate resources into the collection in the page's PreLoad event. For more information on handling this event, see link:webschedule-set-visible-resources.html[Set Visible Resources].
 
 The following events are available when working with resources:
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfoclientevents~activeresourcechanging.html[ActiveResourceChanging] – Client-side event raised when the active resource is about to change.
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfoclientevents~activeresourcechanging.html[ActiveResourceChanging] – Client-side event raised when the active resource is about to change.
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcechanging_ev.html[ActiveResourceChanging] – Server-side event raised when the active resource is about to change.
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcechanging_ev.html[ActiveResourceChanging] – Server-side event raised when the active resource is about to change.
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfoclientevents~activeresourcechanged.html[ActiveResourceChanged] – Client-side event raised after the active resource has changed.
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfoclientevents~activeresourcechanged.html[ActiveResourceChanged] – Client-side event raised after the active resource has changed.
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcechanged_ev.html[ActiveResourceChanged] – Server-side event raised after the active resource has changed.
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcechanged_ev.html[ActiveResourceChanged] – Server-side event raised after the active resource has changed.
 
 The following code shows you how to enable multiple resource view.
 

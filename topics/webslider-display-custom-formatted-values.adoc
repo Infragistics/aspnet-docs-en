@@ -14,7 +14,7 @@
 
 = Display Custom Formatted Values
 
-WebSlider™ displays its values as the primary value followed by the secondary value in a label. You can customize the way WebSlider displays its values by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.slidervaluelabel~format.html[Format]"]  property of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.slidervaluelabel.html[ValueLabel]"]  object. You can access the values using the strings {0} and {1} for the primary value and secondary value, respectively.
+WebSlider™ displays its values as the primary value followed by the secondary value in a label. You can customize the way WebSlider displays its values by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.slidervaluelabel~format.html[Format]"]  property of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.slidervaluelabel.html[ValueLabel]"]  object. You can access the values using the strings {0} and {1} for the primary value and secondary value, respectively.
 
 You must also resize the value label if you use custom values that may be longer than the default size of the label.
 

@@ -20,7 +20,7 @@ The WebDataGrid™ control’s cells support activation. A cell is active when i
 
 == Activation Behavior
 
-Cell activation in WebDataGrid is a behavior. To enable, click the elipsis (...) button for  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  in the property window and check the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior in the Behaviors editor.
+Cell activation in WebDataGrid is a behavior. To enable, click the elipsis (...) button for  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  in the property window and check the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior in the Behaviors editor.
 
 .Note:
 [NOTE]
@@ -43,7 +43,7 @@ WebDataGrid's cell activation behaves in the following ways:
 
 == Activation with Code
 
-WebDataGrid provides properties and methods to get or set an active cell: use the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.activation~activecell.html[ActiveCell] property when on the server and use get or set accessors when on the client. Set active cell to null to clear WebDataGrid of an active cell. You can get the row or column from the active cell if you need them.
+WebDataGrid provides properties and methods to get or set an active cell: use the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.activation~activecell.html[ActiveCell] property when on the server and use get or set accessors when on the client. Set active cell to null to clear WebDataGrid of an active cell. You can get the row or column from the active cell if you need them.
 
 *In Visual Basic:*
 
@@ -113,4 +113,4 @@ The following are ways to activate WebDataGrid with the mouse:
 
 == Activation Styling:
 
-The active elements of WebDataGrid can be styled individually using CSS. This can be done by creating a CSS style and setting the appropriate property for the element you want to style. For example, to style an active row, set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.activation~activerowcssclass.html[ActiveRowCssClass] property.
+The active elements of WebDataGrid can be styled individually using CSS. This can be done by creating a CSS style and setting the appropriate property for the element you want to style. For example, to style an active row, set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.activation~activerowcssclass.html[ActiveRowCssClass] property.

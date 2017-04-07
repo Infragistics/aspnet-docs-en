@@ -18,8 +18,8 @@ This section lists each namespace that is relevant to the control. We also give 
 
 === WebDataInput Namespace:
 
-pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput_namespace.html[Infragistics.WebUI.WebDataInput]"]
+pick:[asp-net="link:{ApiPlatform}webui.webdatainput{ApiVersion}~infragistics.webui.webdatainput_namespace.html[Infragistics.WebUI.WebDataInput]"]
 
 === Key Class:
 
-pick:[asp-net="link:infragistics4.webui.webdatainput.v{ProductVersion}~infragistics.webui.webdatainput.webimagebutton.html[WebImageButton]"]
+pick:[asp-net="link:{ApiPlatform}webui.webdatainput{ApiVersion}~infragistics.webui.webdatainput.webimagebutton.html[WebImageButton]"]

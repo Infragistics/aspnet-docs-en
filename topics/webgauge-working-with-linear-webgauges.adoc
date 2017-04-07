@@ -20,7 +20,7 @@ image::images/Gauge_Working_with_Linear_Gauges_01.png[Linear gauge pointing out 
 
 == Scales
 
-The scale displays the range of values of your gauge. The  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.lineargauge~scales.html[Scales]"]  property includes various properties, including  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.lineargaugescale~labels.html[Labels]"] ,  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.lineargaugescale~markers.html[Markers]"]  and  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.lineargaugescale~majortickmarks.html[TickMarks]"] .
+The scale displays the range of values of your gauge. The  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.lineargauge~scales.html[Scales]"]  property includes various properties, including  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.lineargaugescale~labels.html[Labels]"] ,  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.lineargaugescale~markers.html[Markers]"]  and  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.lineargaugescale~majortickmarks.html[TickMarks]"] .
 
 ===== Tick Marks
 

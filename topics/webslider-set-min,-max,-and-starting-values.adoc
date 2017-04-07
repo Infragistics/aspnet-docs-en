@@ -16,10 +16,10 @@
 
 There are several WebSlider™ properties that you need to set to have the appropriate minimum, maximum, and starting values for your application.
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webslider~minvalue.html[MinValue]"]  – the minimum value.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webslider~maxvalue.html[MaxValue]"]  – the maximum value.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webslider~value.html[Value]"]  – the current value.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webslider~valuelabel.html[ValueLabel]"]  – displays the current value when the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.slidervaluelabel~location.html[Location]"]  is set.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webslider~minvalue.html[MinValue]"]  – the minimum value.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webslider~maxvalue.html[MaxValue]"]  – the maximum value.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webslider~value.html[Value]"]  – the current value.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webslider~valuelabel.html[ValueLabel]"]  – displays the current value when the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.slidervaluelabel~location.html[Location]"]  is set.
 
 The following example code shows you how to set the min, max, and starting value for WebSlider.
 

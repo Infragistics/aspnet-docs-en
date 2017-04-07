@@ -16,14 +16,14 @@
 
 Navigation buttons within the WebSchedule UI elements can be customized by using your own images in place of the buttons.
 
-To show your own Previous and Next buttons, simply set the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~prevbuttonimage.html[PrevButtonImage]"]  and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~nextbuttonimage.html[NextButtonImage]"]  object properties on the WebMonthView™ or WebDayView™ control.
+To show your own Previous and Next buttons, simply set the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~prevbuttonimage.html[PrevButtonImage]"]  and  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~nextbuttonimage.html[NextButtonImage]"]  object properties on the WebMonthView™ or WebDayView™ control.
 
 The PrevButtonImage and NextButtonImage objects both have four properties that you can set:
 
-*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.simpleimage~url.html[Url]"]  -- This property is the primary one that you set to the source of the image you want to display for that button.
-*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.image~height.html[Height]"]  -- This property is used to specify the height of the image on the user interface, and is optional.
-*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.image~width.html[Width]"]  -- This property is used to specify the width of the image on the user interface.
-*  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.simpleimage~alternatetext.html[AlternateText]"]  -- This property can be set to the string you would want to show if the image wasn't available.
+*  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.simpleimage~url.html[Url]"]  -- This property is the primary one that you set to the source of the image you want to display for that button.
+*  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.image~height.html[Height]"]  -- This property is used to specify the height of the image on the user interface, and is optional.
+*  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.image~width.html[Width]"]  -- This property is used to specify the width of the image on the user interface.
+*  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.simpleimage~alternatetext.html[AlternateText]"]  -- This property can be set to the string you would want to show if the image wasn't available.
 
 The code below shows an example of setting the Url property of both the PrevButtonImage and NextButtonImage objects.
 

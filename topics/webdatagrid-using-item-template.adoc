@@ -27,9 +27,9 @@ You will learn how to set up an item template for a column in WebDataGrid. This 
 [start=1]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=2]
-. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~columns.html[Columns]"]  property and click the ellipsis (...) button to launch the Columns Editor Dialog.
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~columns.html[Columns]"]  property and click the ellipsis (...) button to launch the Columns Editor Dialog.
 [start=3]
-. Select a column in the Available Fields section, under TemplateField, and click the Add Field button to add a template column. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldatafield~key.html[Key]"]  to TemplateColumn1 and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfieldcaption.html[Header]"]   pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.fieldcaption~text.html[Text]"]  to Edit. You can also select the column you intend to use as a template column from the Selected Fields section and click the Convert Selected Grid Field into a Template Field link.
+. Select a column in the Available Fields section, under TemplateField, and click the Add Field button to add a template column. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.controldatafield~key.html[Key]"]  to TemplateColumn1 and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfieldcaption.html[Header]"]   pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.fieldcaption~text.html[Text]"]  to Edit. You can also select the column you intend to use as a template column from the Selected Fields section and click the Convert Selected Grid Field into a Template Field link.
 
 image::images/WebDataGrid_Using_Item_Template_01.png[]
 
@@ -167,7 +167,7 @@ return false;
 .Note:
 [NOTE]
 ====
-Since the buttons function to modify WebDataGrid, you must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior. For more information on doing this, see link:webdatagrid-editting.html[Editing]. You also need the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior. For more information, see link:webdatagrid-activation.html[Activation].
+Since the buttons function to modify WebDataGrid, you must enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior. For more information on doing this, see link:webdatagrid-editting.html[Editing]. You also need the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior. For more information, see link:webdatagrid-activation.html[Activation].
 ====
 
 .Note:

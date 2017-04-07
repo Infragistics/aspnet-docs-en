@@ -14,7 +14,7 @@
 
 = Setting Minimum Number of Valid Fields for WebDatePicker
 
-WebDatePicker™ allows you to set the minimum number of fields in the date string in order to make the date entered valid. This means that you can configure WebDatePicker to allow your end-user to enter the month and the year only and the date will be valid. This functionality can be achieved by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~minimumnumberofvalidfields.html[MinimumNumberOfValidFields]"]  property to a value from 0 to 7. If this property is set to 0 then all the fields are validated in any edit mode format. Date fields are counted from the left to right as they appear in the date format pattern.
+WebDatePicker™ allows you to set the minimum number of fields in the date string in order to make the date entered valid. This means that you can configure WebDatePicker to allow your end-user to enter the month and the year only and the date will be valid. This functionality can be achieved by simply setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~minimumnumberofvalidfields.html[MinimumNumberOfValidFields]"]  property to a value from 0 to 7. If this property is set to 0 then all the fields are validated in any edit mode format. Date fields are counted from the left to right as they appear in the date format pattern.
 
 .Note:
 [NOTE]

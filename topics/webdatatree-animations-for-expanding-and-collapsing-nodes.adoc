@@ -14,7 +14,7 @@
 
 = Animations for Expanding and Collapsing Nodes
 
-WebDataTree™ supports different animation types for node expanding and collapsing. You can easily set the animation duration by setting the WebDataTree control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~animationduration.html[AnimationDuration]"]  property.The following are the different types of animation properties of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~animationequationtype.html[AnimationEquationType]"]  object that you can set for node expanding and collapsing:
+WebDataTree™ supports different animation types for node expanding and collapsing. You can easily set the animation duration by setting the WebDataTree control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~animationduration.html[AnimationDuration]"]  property.The following are the different types of animation properties of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~animationequationtype.html[AnimationEquationType]"]  object that you can set for node expanding and collapsing:
 
 * *None* -- No animations on WebDataTree.
 * *Linear* -- Expanding/Collapsing of the nodes takes place with constant speed, based on the animation duration.

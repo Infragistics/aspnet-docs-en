@@ -225,7 +225,7 @@ Not all of the classes are custom for the upload control. Some of them are reuse
 
 == File Extensions Icons
 
-When the Upload property pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~showfileextensionicon.html[showFileExtensionIcon]"] is set to true, the control displays an icon to the left of the file name indicating the type of the file being uploaded.
+When the Upload property pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~showfileextensionicon.html[showFileExtensionIcon]"] is set to true, the control displays an icon to the left of the file name indicating the type of the file being uploaded.
 
 *Figure 3: File Extension icon during an upload*
 
@@ -268,7 +268,7 @@ If the file type is outside the built-in ones, a default icon is applied.
 
 == Modifying File Extensions Icons
 
-If you want to customize the file extension icons, you can override the default values by providing new icons to the pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~fileextensionicons.html[fileExtensionIcons]"] property.
+If you want to customize the file extension icons, you can override the default values by providing new icons to the pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~fileextensionicons.html[fileExtensionIcons]"] property.
 
 The *fileExtensionIcons* property accepts an an array of objects that maps to each file type. Listing 1 demonstrates how to associate existing extension styles to a new CSS class.
 

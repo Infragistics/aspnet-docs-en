@@ -22,13 +22,13 @@ The WebCalcManager™ is a non-visual component that extends the capabilities of
 |====
 |Property Name|Description
 
-| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~alias.html[Alias]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~alias.html[Alias]"] 
 |Gets or sets the alias name of the control.
 
-| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~errorvalue.html[ErrorValue]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~errorvalue.html[ErrorValue]"] 
 |Gets or sets the value displayed in the element when an error occurs in the formula.
 
-| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~formula.html[Formula]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~formula.html[Formula]"] 
 |Gets or sets which property (Text, Tag, Value, etc., based on the element) is used as either the source or target of any calculations involving the control. 
 
 .Note:
@@ -37,7 +37,7 @@ The WebCalcManager™ is a non-visual component that extends the capabilities of
 that in order for a control to function properly as the Source value of a calculation, the property must also have a changed event. For example, if using the Text property, the control must have a TextChanged event. Otherwise, the CalcManager cannot detect changes in the property.
 ====
 
-| pick:[asp-net="link:infragistics4.webui.ultrawebcalcmanager.v{ProductVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~propertyname.html[PropertyName]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.ultrawebcalcmanager{ApiVersion}~infragistics.webui.ultrawebcalcmanager.calcsettings~propertyname.html[PropertyName]"] 
 |Gets or sets the name of the property that is used as either the source or target (or both) of any calculations involving the control. If no PropertyName is set, or if the PropertyName is invalid, then the control will not participate in any calculations and a Reference Error may be generated. 
 
 In order for the CalcManager to properly use a control's property as the source value in a calculation the property must follow the same guidelines as a Bindable property. That is, the control must expose the property publicly and also expose a PropertyChanged event. For Example, if The Text property is being used, then the control must also have a TextChanged event. If there is no such event, the calculation will not function correctly. This applies only to source properties. If the control is only being used at the target for the calculated value of a formula, the event is not required.

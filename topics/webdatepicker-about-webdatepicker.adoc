@@ -14,7 +14,7 @@
 
 = About WebDatePicker
 
-WebDatePicker™ is a control that provides a date editor along with a drop-down calendar and provides various appearance and behavior based properties. WebDatePicker is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebDatePicker in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols_namespace.html[Infragistics.Web.UI.EditorControls]"]  namespace.
+WebDatePicker™ is a control that provides a date editor along with a drop-down calendar and provides various appearance and behavior based properties. WebDatePicker is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebDatePicker in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols_namespace.html[Infragistics.Web.UI.EditorControls]"]  namespace.
 
 image::images/WebDatePicker_About_WebDatePicker_01.png[]
 

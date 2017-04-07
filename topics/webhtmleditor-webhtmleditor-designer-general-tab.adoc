@@ -14,7 +14,7 @@
 
 = WebHtmlEditor Designer (General Tab)
 
-The first tab that you're going to learn about is the General tab. Like most tabs, this tab contains several drop-down lists that allow you to specify enumerated property values, for example, whether the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~buttonmode.html[ButtonMode]"]  property should use an Image, basic HTML button, TwoStateImage, or ThreeStateImage (each one a value from the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.buttonmode.html[ButtonMode]"]  enumeration).
+The first tab that you're going to learn about is the General tab. Like most tabs, this tab contains several drop-down lists that allow you to specify enumerated property values, for example, whether the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~buttonmode.html[ButtonMode]"]  property should use an Image, basic HTML button, TwoStateImage, or ThreeStateImage (each one a value from the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.buttonmode.html[ButtonMode]"]  enumeration).
 
 Key feature of the General tab are the font, formatting and special character lists that control the group of choices that appear in the toolbar's drop-down lists.
 

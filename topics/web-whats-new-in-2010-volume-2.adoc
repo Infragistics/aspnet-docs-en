@@ -83,7 +83,7 @@ The new WebScriptManager control enables the javascript IntelliSense for Infragi
 
 == Related Topics
 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.webscriptmanager.html[WebScriptManager]"]
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.webscriptmanager.html[WebScriptManager]"]
 
 == New WebDataTree Drag and Drop Feature
 

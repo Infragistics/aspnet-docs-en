@@ -186,7 +186,7 @@ The following table is a full list of the WebHtmlEditor™ toolbar buttons (in t
 
 |Save
 |General-Purpose Toolbar
-|Raises a postback to the Web server. On the Web Server, your application retrieves content from the WebHtmlEditor control using the pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~text.html[Text]"] property, and should then perform actions consistent with saving the user's changes.
+|Raises a postback to the Web server. On the Web Server, your application retrieves content from the WebHtmlEditor control using the pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~text.html[Text]"] property, and should then perform actions consistent with saving the user's changes.
 
 |image::Images/open.gif[] 
 

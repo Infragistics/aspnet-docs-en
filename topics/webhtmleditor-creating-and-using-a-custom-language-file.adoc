@@ -16,11 +16,11 @@
 
 == Before You Begin
 
-WebHtmlEditor™ provides built-in link:webhtmleditor-multi-language-support.html[multi-language support] through the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~localizationtype.html[LocalizationType]"]  property, which you can set to use built-in language files: English (default), French, German, and Spanish. With the help of the built-in language files, you can change WebHtmlEditor's labels, ToolTips, dialog boxes, and static text. However, in some cases, you may need the WebHtmlEditor control to provide support for a language that is not part of the built-in language files.
+WebHtmlEditor™ provides built-in link:webhtmleditor-multi-language-support.html[multi-language support] through the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~localizationtype.html[LocalizationType]"]  property, which you can set to use built-in language files: English (default), French, German, and Spanish. With the help of the built-in language files, you can change WebHtmlEditor's labels, ToolTips, dialog boxes, and static text. However, in some cases, you may need the WebHtmlEditor control to provide support for a language that is not part of the built-in language files.
 
 == What You Will Accomplish
 
-This walkthrough will guide you through the process of creating an Italian custom language file, and use it by setting it to the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~localizationfile.html[LocalizationFile]"]  property to modify the link:webhtmleditor-drop-down-lists-of-webhtmleditor-toolbar.html[Toolbar Drop-Downs Lists].
+This walkthrough will guide you through the process of creating an Italian custom language file, and use it by setting it to the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~localizationfile.html[LocalizationFile]"]  property to modify the link:webhtmleditor-drop-down-lists-of-webhtmleditor-toolbar.html[Toolbar Drop-Downs Lists].
 
 image::images/WebHtmlEditor_Creating_and_Using_a_Custom_Language_File_01.png[]
 

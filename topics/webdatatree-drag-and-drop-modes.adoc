@@ -16,7 +16,7 @@
 
 Drag and Drop Modes
 
-link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] supports three link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.dragdropsettings~dragdropmode.html[drag and drop modes].
+link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] supports three link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.dragdropsettings~dragdropmode.html[drag and drop modes].
 
 * *Copy* – copies selected node(s) to the dropped location
 * *Move* – cuts selected node(s) and moves them to the new location

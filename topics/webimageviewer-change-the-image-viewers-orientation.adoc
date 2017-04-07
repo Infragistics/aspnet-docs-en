@@ -21,7 +21,7 @@ The WebImageViewer™ control supports two orientation modes:
 
 For more information, see link:webimageviewer-orientation-types.html[Orientation Types].
 
-When the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~orientation.html[Orientation]"]  property is set to Horizontal, the height of each image is set to 100% to fill the available vertical space.
+When the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webimageviewer~orientation.html[Orientation]"]  property is set to Horizontal, the height of each image is set to 100% to fill the available vertical space.
 
 When the Orientation property is set to Vertical, the width of each image is set to 100% to fill the available horizontal space.
 

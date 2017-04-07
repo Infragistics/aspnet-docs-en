@@ -14,7 +14,7 @@
 
 = Separators
 
-WebDataMenu™ can have menu- items that can be rendered as a separator by simply setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datamenuitem.html[DataMenuItem]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datamenuitem~isseparator.html[IsSeparator]"]  property to True.
+WebDataMenu™ can have menu- items that can be rendered as a separator by simply setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.datamenuitem.html[DataMenuItem]"]  object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.datamenuitem~isseparator.html[IsSeparator]"]  property to True.
 
 .Note:
 [NOTE]

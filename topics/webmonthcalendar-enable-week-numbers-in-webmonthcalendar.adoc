@@ -14,7 +14,7 @@
 
 = Enable Week Numbers in WebMonthCalendar
 
-In some countries, week numbers are used; WebMonthCalendar™ provides you with an option to show week numbers to your end-user. This can be achieved by simply setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~enableweeknumbers.html[EnableWeekNumbers]"]  property to True. By default, this property is set to False.
+In some countries, week numbers are used; WebMonthCalendar™ provides you with an option to show week numbers to your end-user. This can be achieved by simply setting the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~enableweeknumbers.html[EnableWeekNumbers]"]  property to True. By default, this property is set to False.
 
 You can set the EnableWeekNumbers property either by using the Microsoft® Visual Studio® Property Window or by using the following code:
 
@@ -30,7 +30,7 @@ WebMonthCalendar1.EnableWeekNumbers = true
 WebMonthCalendar1.EnableWeekNumbers = true;
 ----
 
-You can also set your own label to be displayed in the column header of the week numbers by setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~weeknumberlabel.html[WeekNumberLabel]"]  property.
+You can also set your own label to be displayed in the column header of the week numbers by setting the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~weeknumberlabel.html[WeekNumberLabel]"]  property.
 
 *In Visual Basic:*
 
@@ -48,7 +48,7 @@ image::images/WebMonthCalendar_Enabling_Week_Numbers_in_WebMonthCalendar_01.png[
 
 == Rules for Week Numbers
 
-WebMonthCalendar allows you to set different rules for determining the first week of the year. You can set these rules by setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~weekrule.html[WeekRule]"]  property to one of the following options:
+WebMonthCalendar allows you to set different rules for determining the first week of the year. You can set these rules by setting the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~weekrule.html[WeekRule]"]  property to one of the following options:
 
 * *FirstDay* -- The first week starts with the first week of the year that has one to seven days.
 * *FirstFullWeek* -- The first week starts with the first week of the year that has seven full days.

@@ -14,12 +14,12 @@
 
 = Hiding Days of Previous and Next Months in WebMonthCalendar
 
-WebMonthCalendar™ allows you to hide other month days from displaying to the end-user. You can achieve this by simply setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~hideothermonthdays.html[HideOtherMonthDays]"]  property to True. By default, this property is set to False.
+WebMonthCalendar™ allows you to hide other month days from displaying to the end-user. You can achieve this by simply setting the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~hideothermonthdays.html[HideOtherMonthDays]"]  property to True. By default, this property is set to False.
 
 .Note:
 [NOTE]
 ====
-If HideOtherMonthDays property is enabled, then the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~changemonthtodateclicked.html[ChangeMonthToDateClicked]"]  property has no effect.
+If HideOtherMonthDays property is enabled, then the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~changemonthtodateclicked.html[ChangeMonthToDateClicked]"]  property has no effect.
 ====
 
 You can set the HideOtherMonthDays property either by using the Microsoft® Visual Studio® Property Window or by using the following code:

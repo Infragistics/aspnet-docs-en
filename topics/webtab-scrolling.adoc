@@ -14,7 +14,7 @@
 
 = Scrolling
 
-WebTab™ displays scroll buttons to navigate through the tabs when the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~displaymode.html[DisplayMode]"]  is set to Scrollable. These scroll buttons can be easily customized using the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~scrollbuttons.html[ScrollButtons]"]  property. The ScrollButtons property provides you with a bunch of options where you can set the CSS classes and image URLs for the buttons and also the scrolling speed. The ScrollButtons object's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabscrollbuttons~scrollposition.html[ScrollPosition]"]  property allows you to set the scroll position of tab items in number of pixels.
+WebTab™ displays scroll buttons to navigate through the tabs when the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~displaymode.html[DisplayMode]"]  is set to Scrollable. These scroll buttons can be easily customized using the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~scrollbuttons.html[ScrollButtons]"]  property. The ScrollButtons property provides you with a bunch of options where you can set the CSS classes and image URLs for the buttons and also the scrolling speed. The ScrollButtons object's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabscrollbuttons~scrollposition.html[ScrollPosition]"]  property allows you to set the scroll position of tab items in number of pixels.
 
 *In HTML:*
 
@@ -50,7 +50,7 @@ WebTab1.ScrollButtons.EndSpeed = 1000;
 .Note:
 [NOTE]
 ====
-The value in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabscrollbuttons~startspeed.html[StartSpeed]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabscrollbuttons~endspeed.html[EndSpeed]"]  properties defines number of pixels per second. During the first 1.5 seconds the scroll speed is gradually increased from the start speed to the end speed.
+The value in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabscrollbuttons~startspeed.html[StartSpeed]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabscrollbuttons~endspeed.html[EndSpeed]"]  properties defines number of pixels per second. During the first 1.5 seconds the scroll speed is gradually increased from the start speed to the end speed.
 ====
 
 == Related Topics

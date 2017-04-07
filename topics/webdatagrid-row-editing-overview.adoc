@@ -102,7 +102,7 @@ The following table summarizes the user interaction capabilities of the  _WebDat
 |By default, row editing is set up to begin Edit mode on double-click or double tap.
 |image::images/workaround.png[] 
 
-Configurable with the Editing behavior’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editmodeactions_members.html[EditModeActions] property.
+Configurable with the Editing behavior’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editmodeactions_members.html[EditModeActions] property.
 
 |Commit the changes made to a row and exit Edit mode
 |
@@ -119,7 +119,7 @@ Clicking the Done button or pressing the Enter key on the keyboard accepts any c
 
 * The clicking and tapping behavior is configurable using events. See also the link:{SamplesUrl}/data-grid/row-editing-client-events[Row Editing Client Events] sample. 
 
-* The Done and Cancel button dialog can be hidden with the Editing behavior’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property. 
+* The Done and Cancel button dialog can be hidden with the Editing behavior’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property. 
 
 |Reject the changes made to a row and exit Edit mode
 |The Cancel button 
@@ -128,7 +128,7 @@ The Esc key
 |Clicking the Cancel button or pressing the Esc key on the keyboard rejects any changes made to the row in Edit mode and exits Edit mode.
 |image::images/workaround.png[] 
 
-The Done and Cancel button dialog can be hidden with the Editing behavior’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property.
+The Done and Cancel button dialog can be hidden with the Editing behavior’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowediting~enabledialog.html[EnableDialog] property.
 
 |====
 

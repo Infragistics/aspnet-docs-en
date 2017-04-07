@@ -18,10 +18,10 @@ This section lists each namespace that is relevant to the control. We also give 
 
 === WebPanel and WebGroupBox Namespace:
 
-link:infragistics4.webui.misc.v{ProductVersion}~infragistics.webui.misc_namespace.html[Infragistics.WebUI.Misc]
+link:{ApiPlatform}webui.misc{ApiVersion}~infragistics.webui.misc_namespace.html[Infragistics.WebUI.Misc]
 
 === Key Classes:
 
-link:infragistics4.webui.misc.v{ProductVersion}~infragistics.webui.misc.webgroupbox.html[WebGroupBox]
+link:{ApiPlatform}webui.misc{ApiVersion}~infragistics.webui.misc.webgroupbox.html[WebGroupBox]
 
-link:infragistics4.webui.misc.v{ProductVersion}~infragistics.webui.misc.miscrenderbase.html[MiscRenderBase]
+link:{ApiPlatform}webui.misc{ApiVersion}~infragistics.webui.misc.miscrenderbase.html[MiscRenderBase]

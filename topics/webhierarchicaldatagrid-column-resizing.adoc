@@ -59,15 +59,15 @@ WebHierarchicalDataGrid1.GridView.Behaviors
         .ColumnResizing.EnableInheritance = true;
 ----
 
-In each of the examples the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizing~enableinheritance.html[EnableInheritance]"]  property determines whether the functionality transfers to the child bands or not.
+In each of the examples the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizing~enableinheritance.html[EnableInheritance]"]  property determines whether the functionality transfers to the child bands or not.
 
 == Column Resizing Events
 
-The new functionality comes with a few client-side events that provide the user with the ability to execute custom code during and after the resizing occurs. The client-side events supported by the Column Resizing functionality of the WebHierarchicalDataGrid are:  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizingclientevents~columnresizing.html[ColumnResizing]"] ,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizingclientevents~columnresizedragging.html[ColumnResizeDragging]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizingclientevents~columnresized.html[ColumnResized]"] .
+The new functionality comes with a few client-side events that provide the user with the ability to execute custom code during and after the resizing occurs. The client-side events supported by the Column Resizing functionality of the WebHierarchicalDataGrid are:  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizingclientevents~columnresizing.html[ColumnResizing]"] ,  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizingclientevents~columnresizedragging.html[ColumnResizeDragging]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizingclientevents~columnresized.html[ColumnResized]"] .
 
 == Subscribing with the Designer
 
-You can subscribe to all the aforementioned events using the Designer. To do this, click on the Behaviors link in the link:webhierarchicaldatagrid-webhierarchicaldatagrid-smart-tag.html[WebHierarchicalDataGrid Smart Tag]. Then select Column Resizing and expand the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnresizing~columnresizingclientevents.html[ColumnResizingClientEvents]"]  property. Below you can find a screenshot of a sample WebHierarchicalDataGrid Behaviors Designer with most client events subscribed to.
+You can subscribe to all the aforementioned events using the Designer. To do this, click on the Behaviors link in the link:webhierarchicaldatagrid-webhierarchicaldatagrid-smart-tag.html[WebHierarchicalDataGrid Smart Tag]. Then select Column Resizing and expand the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnresizing~columnresizingclientevents.html[ColumnResizingClientEvents]"]  property. Below you can find a screenshot of a sample WebHierarchicalDataGrid Behaviors Designer with most client events subscribed to.
 
 image::images/WebHierarchicalDataGrid_Column_Resizing_01.png[]
 
@@ -97,7 +97,7 @@ function ColumnResizing_ColumnResizing(sender, eventArgs)
 
 == Server Events
 
-When a column resize operation happens for a band, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~columnresized_ev.html[ColumnResized]"]  server event will fire with the sender being the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand]"]  that the resize happened in rather than a WebHierarchicalDataGrid.
+When a column resize operation happens for a band, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~columnresized_ev.html[ColumnResized]"]  server event will fire with the sender being the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand]"]  that the resize happened in rather than a WebHierarchicalDataGrid.
 
 == Related Topics
 

@@ -14,13 +14,13 @@
 
 = List Animations in WebMonthCalendar
 
-WebMonthCalendar™ supports fade and slide animations for opening and closing the list of months, years and year ranges. You can set different types of properties related to animations used for opening and closing the drop-down lists by setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~listanimation.html[ListAnimation]"]  property. The following are the list of animations you can apply to WebMonthCalendar using the ListAnimation property:
+WebMonthCalendar™ supports fade and slide animations for opening and closing the list of months, years and year ranges. You can set different types of properties related to animations used for opening and closing the drop-down lists by setting the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~listanimation.html[ListAnimation]"]  property. The following are the list of animations you can apply to WebMonthCalendar using the ListAnimation property:
 
 * *FadeCloseDuration* -- Allows you to set the duration of fade animation in milliseconds when the list is closing. However setting the value to 0 disables the fade animation when the list is closing.
-* *FadeCloseEquationType* -- Allows you to set the equation type of fade animation to one of the members of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.animationequationtype.html[AnimationEquationType]"]  enumeration when the list is closing.
+* *FadeCloseEquationType* -- Allows you to set the equation type of fade animation to one of the members of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.animationequationtype.html[AnimationEquationType]"]  enumeration when the list is closing.
 * *FadeOpenDuration* -- Allows you to set the duration of fade animation in milliseconds when the list is opening. However setting the value to 0 disables the fade animation when the list is opening.
 * *FadeOpenEquationType* -- Allows you to set the equation type of fade animation to one of the members of the AnimationEquationType enumeration when the list is opening.
-* *SlideCloseDirection* -- Allows you to set the direction of slide animation to one of the members of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.slidedirection.html[SlideDirection]"]  enumeration when the list is closing.
+* *SlideCloseDirection* -- Allows you to set the direction of slide animation to one of the members of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.slidedirection.html[SlideDirection]"]  enumeration when the list is closing.
 * *SlideCloseDuration* -- Allows you to set the duration of slide animation in milliseconds when the list is closing. However setting the value to 0 disables the slide animation when the list is closing.
 * *SlideCloseEquationType* -- Allows you to set the equation type of slide animation to one of the members of the AnimationEquationType enumeration when the list is closing.
 * *SlideOpenDirection* -- Allows you to set the direction of slide animation to one of the members of the SlideDirection enumeration when the list is opening.

@@ -39,7 +39,7 @@ You can place all of the code you see below in your Web application's Page_Load 
 [start=1]
 . Before you start writing any code, you should place using/imports directives in your code-behind so you don't need to always type out a member's fully qualified name.
 [start=2]
-. Base styles apply to all toolbar items that share a common toolbar item type. The most common are the buttons, and their base style is the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~buttonstyle.html[ButtonStyle]"]  property on the WebHtmlEditor control. Set the background of all buttons to LightYellow with the following statement.
+. Base styles apply to all toolbar items that share a common toolbar item type. The most common are the buttons, and their base style is the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~buttonstyle.html[ButtonStyle]"]  property on the WebHtmlEditor control. Set the background of all buttons to LightYellow with the following statement.
 
 *In Visual Basic:*
 
@@ -103,7 +103,7 @@ this.WebHtmlEditor1.Toolbar.Items.GetByType(
 ----
 
 [start=6]
-. Menus are another type of toolbar item that have their own base style in the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~menustyle.html[MenuStyle]"]  property. You have probably guessed already that all base-style properties are exposed at the WebHtmlEditor control level, while the style properties for customizing individual Toolbar items are on each contained Toolbar item object. Set all menus to an Aqua background.
+. Menus are another type of toolbar item that have their own base style in the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~menustyle.html[MenuStyle]"]  property. You have probably guessed already that all base-style properties are exposed at the WebHtmlEditor control level, while the style properties for customizing individual Toolbar items are on each contained Toolbar item object. Set all menus to an Aqua background.
 
 *In Visual Basic:*
 

@@ -48,12 +48,12 @@ You will learn how to bind to data using the WebExplorerBar control and an XmlDa
 ----
 
 [start=5]
-. Set WebExplorerBar's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~datasourceid.html[DataSourceID]"]  property to XmlDataSource1, the id of the XmlDataSource component.
+. Set WebExplorerBar's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webexplorerbar~datasourceid.html[DataSourceID]"]  property to XmlDataSource1, the id of the XmlDataSource component.
 [start=6]
 . Set the data bindings to display the CategoryName and ProductName attributes from the Category and Product nodes, respectively.
 
-.. Create a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembinding.html[ExplorerBarItemBinding]"]  object and set its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembinding~datamember.html[DataMember]"]  property to "Category".
-.. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembinding~textfield.html[TextField]"]  property to "CategoryName".
+.. Create a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembinding.html[ExplorerBarItemBinding]"]  object and set its  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembinding~datamember.html[DataMember]"]  property to "Category".
+.. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembinding~textfield.html[TextField]"]  property to "CategoryName".
 .. Create a second ExplorerBarItemBinding object and set its DataMember property to "Product".
 .. Set the TextField property to "ProductName".
 

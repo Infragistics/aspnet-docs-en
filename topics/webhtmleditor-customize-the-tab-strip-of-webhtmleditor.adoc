@@ -17,7 +17,7 @@
 WebHtmlEditor™ exposes properties enabling your application to customize the tab strip region, such as the text on its labels (and their icons). In the following procedure, you will set the label appearing on the HTML view tab to "Source" through the design-time environment.
 
 [start=1]
-. Select WebHtmlEditor on the design surface and search through the Properties Window for the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~tabstrip.html[TabStrip]"]  property. Expand the property to view the list of sub-properties, which allow you to customize the tab strip region.
+. Select WebHtmlEditor on the design surface and search through the Properties Window for the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~tabstrip.html[TabStrip]"]  property. Expand the property to view the list of sub-properties, which allow you to customize the tab strip region.
 
 image::images/WebHtmlEditor_Customize_the_Tab_Strip_of_WebHtmlEditor_01.png[]
 

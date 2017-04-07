@@ -14,7 +14,7 @@
 
 = Multi-mode Display
 
-WebDropDown™ allows you to specify one of several different behavioral modes. For instance, you may want your end-users to simply select from a list of values without allowing them to type into the drop-down editor. Other times, you may want your end-users to type into the drop-down editor and try to find a list item by auto-filtering. You may even want to use WebDropDown as a read-only lookup control where the display value represents a user-friendly string that comes from a lookup table so that you do not have to present meaningless foreign key values to your end-users. These behavioral modes are a functionality of the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~displaymode.html[DisplayMode]"]  property.
+WebDropDown™ allows you to specify one of several different behavioral modes. For instance, you may want your end-users to simply select from a list of values without allowing them to type into the drop-down editor. Other times, you may want your end-users to type into the drop-down editor and try to find a list item by auto-filtering. You may even want to use WebDropDown as a read-only lookup control where the display value represents a user-friendly string that comes from a lookup table so that you do not have to present meaningless foreign key values to your end-users. These behavioral modes are a functionality of the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~displaymode.html[DisplayMode]"]  property.
 
 The following is a list of WebDropDown display modes:
 
@@ -49,7 +49,7 @@ The following is a list of WebDropDown display modes:
 .Note:
 [NOTE]
 ====
-When the control provides both display and value properties or when templating is used, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]"]  property should be set.
+When the control provides both display and value properties or when templating is used, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]"]  property should be set.
 ====
 
 You can set the DisplayMode property either using the Microsoft® Visual Studio® Property Window or by using the following code:

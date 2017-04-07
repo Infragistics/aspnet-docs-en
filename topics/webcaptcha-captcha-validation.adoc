@@ -16,7 +16,7 @@
 
 WebCaptcha™ control provides the functionality to check its validation status on both server side and client side.
 
-* On the server side, the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~validate.html[Validate] method is called automatically when the page loads. During this event you can also use the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~isvalid.html[IsValid] property to check if the validation was successful. You may also check the validation status in any other event by calling the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~validate.html[Validate] method and then checking the control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webcaptcha~isvalid.html[IsValid] property.
+* On the server side, the control’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webcaptcha~validate.html[Validate] method is called automatically when the page loads. During this event you can also use the control’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webcaptcha~isvalid.html[IsValid] property to check if the validation was successful. You may also check the validation status in any other event by calling the control’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webcaptcha~validate.html[Validate] method and then checking the control’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webcaptcha~isvalid.html[IsValid] property.
 
 *In C#:*
 

@@ -14,9 +14,9 @@
 
 = About Multi Day Event Banner
 
-The WebDayView™ and WebMonthView™ WebSchedule™ controls can display a continuous banner for events that span multiple days, weeks, months, or years. The WebScheduleInfo™ component's link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventbanner.html[EnableMultiDayEventBanner] property controls this feature, which is True by default. If EnableMultiDayEventBanner is set to false, a multiple day event displays as single blocks across multiple days.
+The WebDayView™ and WebMonthView™ WebSchedule™ controls can display a continuous banner for events that span multiple days, weeks, months, or years. The WebScheduleInfo™ component's link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventbanner.html[EnableMultiDayEventBanner] property controls this feature, which is True by default. If EnableMultiDayEventBanner is set to false, a multiple day event displays as single blocks across multiple days.
 
-You can also display arrows indicating the start and end dates that the event spans, by setting the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventarrows.html[EnableMultiDayEventArrows] property, which is True by default.
+You can also display arrows indicating the start and end dates that the event spans, by setting the link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventarrows.html[EnableMultiDayEventArrows] property, which is True by default.
 
 image::images/WebScheduleGenericDataProvider_About_Multi_Day_Event_Banner_01.png[]
 

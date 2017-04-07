@@ -36,9 +36,9 @@ When you finish reading, you will have a WebForm with an instance of the WebImag
 [start=2]
 . Click the WebImageViewer control and in the Property Window, set the Width property to 600PX and the Height property to 100PX.
 [start=3]
-. In the Property Window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~header.html[Header]"]  property and expand it. Set the following properties:
+. In the Property Window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webimageviewer~header.html[Header]"]  property and expand it. Set the following properties:
 
-**  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.captionarea~text.html[Text]"]  -- “My Pictures”
+**  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.captionarea~text.html[Text]"]  -- “My Pictures”
 ** Visible -- true
 
 [start=4]

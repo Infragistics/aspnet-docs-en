@@ -14,7 +14,7 @@
 
 = Get the Selected Activity on the Client Side
 
-WebDayView™ and WebMonthView™ all have a method called getSelectedActivity off them client-side that can be used to get access to the selected  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"] . This can be used when deleting or updating an activity client-side.
+WebDayView™ and WebMonthView™ all have a method called getSelectedActivity off them client-side that can be used to get access to the selected  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]"] . This can be used when deleting or updating an activity client-side.
 
 The code snippet below shows this method being used. Notice the testing to make sure that an activity is selected to avoid null errors.
 

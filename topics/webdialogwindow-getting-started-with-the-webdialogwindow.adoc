@@ -33,23 +33,23 @@ When you finish reading, you will have successfully created your first applicati
 [start=1]
 . In the Visual Studio Toolbox, locate the WebDialogWindow control and double click it to get an instance on your WebForm.
 [start=2]
-. Click the WebDialogWindow control and in the Property Window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~header.html[Header]"]  property and expand it.
+. Click the WebDialogWindow control and in the Property Window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~header.html[Header]"]  property and expand it.
 [start=3]
-. Within the Header property, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.layoutheader~captiontext.html[CaptionText]"]  property and set it to My Dialog.
+. Within the Header property, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.layoutheader~captiontext.html[CaptionText]"]  property and set it to My Dialog.
 [start=4]
-. Scroll down and locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.layoutheader~maximizebox.html[MaximizeBox]"]  property and expand it. Set its Visible property to true.
+. Scroll down and locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.layoutheader~maximizebox.html[MaximizeBox]"]  property and expand it. Set its Visible property to true.
 [start=5]
-. Scroll down and locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.layoutheader~minimizebox.html[MinimizeBox]"]  property and expand it. Set its Visible property to true.
+. Scroll down and locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.layoutheader~minimizebox.html[MinimizeBox]"]  property and expand it. Set its Visible property to true.
 [start=6]
-. Now we can go back to the top most level of WebDialogWindow properties. Scroll down and locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~modal.html[Modal]"]  property and set it to true.
+. Now we can go back to the top most level of WebDialogWindow properties. Scroll down and locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~modal.html[Modal]"]  property and set it to true.
 [start=7]
-. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~resizer.html[Resizer]"]  property and expand it. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.resizer~enabled.html[Enabled]"]  property and set it to true.
+. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~resizer.html[Resizer]"]  property and expand it. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.resizer~enabled.html[Enabled]"]  property and set it to true.
 [start=8]
 . At this point, you can place content inside of the ContentPane's Template. This means you can drag and drop any control into this area, usually located towards the top of the WebDialogWindow control. Alternatively, you can also specify a URL which will allow you to show any resource within the ContentPane of the WebDialogWindow control.
 [start=9]
-. Now you can go back to the top most level of WebDialogWindow properties and locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~windowstate.html[WindowState]"]  property and set its value to Hidden.
+. Now you can go back to the top most level of WebDialogWindow properties and locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~windowstate.html[WindowState]"]  property and set its value to Hidden.
 [start=10]
-. In this particular example, we will use a URL to show the main Infragistics web site within the dialog. Click the WebDialogWindow control and in the property window, locate and expand the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~contentpane.html[ContentPane]"]  property. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  property and set its value to http://www.infragistics.com
+. In this particular example, we will use a URL to show the main Infragistics web site within the dialog. Click the WebDialogWindow control and in the property window, locate and expand the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~contentpane.html[ContentPane]"]  property. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  property and set its value to http://www.infragistics.com
 
 .Note:
 [NOTE]

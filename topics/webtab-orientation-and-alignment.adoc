@@ -14,7 +14,7 @@
 
 = Orientation and Alignment
 
-WebTab™ supports different types of orientation and alignment of the tabs. The tabs can be oriented either horizontally or vertically by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~taborientation.html[TabOrientation]"]  property to Horizontal or Vertical respectively. The tabs can be aligned in eight different positions with respect to the content pane by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~tablocation.html[TabLocation]"]  property to one of the members of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tablocation.html[TabLocation]"]  enumeration.
+WebTab™ supports different types of orientation and alignment of the tabs. The tabs can be oriented either horizontally or vertically by simply setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~taborientation.html[TabOrientation]"]  property to Horizontal or Vertical respectively. The tabs can be aligned in eight different positions with respect to the content pane by setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~tablocation.html[TabLocation]"]  property to one of the members of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tablocation.html[TabLocation]"]  enumeration.
 
 *In HTML:*
 

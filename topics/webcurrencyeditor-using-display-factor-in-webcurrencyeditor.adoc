@@ -14,7 +14,7 @@
 
 = Using Display Factor in WebCurrencyEditor
 
-WebCurrencyEditor™ allows you to set a factor that multiplies the value in the control and displays it as the text in the editor. For example, if the display factor is 100 and the end user enters 80 into the editor (which is reflected by the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~text.html[Text]"]  property), then the editor's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~value.html[Value]"]  property will be 0.8. You can set the display factor by simply setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~displayfactor.html[DisplayFactor]"]  property. By default, this property is set to 1.
+WebCurrencyEditor™ allows you to set a factor that multiplies the value in the control and displays it as the text in the editor. For example, if the display factor is 100 and the end user enters 80 into the editor (which is reflected by the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~text.html[Text]"]  property), then the editor's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~value.html[Value]"]  property will be 0.8. You can set the display factor by simply setting the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~displayfactor.html[DisplayFactor]"]  property. By default, this property is set to 1.
 
 *In Visual Basic:*
 

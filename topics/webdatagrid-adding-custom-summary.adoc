@@ -27,21 +27,21 @@ You will learn how to add (as an option in the summary drop down) and display a 
 [start=1]
 . Follow the steps from 1 to 6 from the link:webdatagrid-summary-row.html[Summary Row] topic.
 [start=2]
-. At Collection Editor Dialog click Add button. Choose Custom from link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summarytype.html[SummaryType] and type STDEV against CustomSummaryName. The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summary~customsummaryname.html[CustomSummaryName] property is shown at the summary row against the custom summary value.
+. At Collection Editor Dialog click Add button. Choose Custom from link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summarytype.html[SummaryType] and type STDEV against CustomSummaryName. The link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summary~customsummaryname.html[CustomSummaryName] property is shown at the summary row against the custom summary value.
 
 image::images/WebDataGrid_Custom_Summary_Row_01.png[]
 
 [start=3]
-. From the Edit Grid Behaviors Dialog and Summary Row properties window, click on the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow~columnsettings.html[ColumnSettings] ellipsis(…) to launch the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsetting.html[ColumnSetting] Dialog.
+. From the Edit Grid Behaviors Dialog and Summary Row properties window, click on the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow~columnsettings.html[ColumnSettings] ellipsis(…) to launch the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsetting.html[ColumnSetting] Dialog.
 [start=4]
-. At the Column Setting Dialog, click on add item button. Choose UnitPrice against the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey] property.
+. At the Column Setting Dialog, click on add item button. Choose UnitPrice against the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey] property.
 
 image::images/WebDataGrid_Custom_Summary_Row_02.png[]
 
 [start=5]
-. Click on the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summarysettings.html[SummarySettings] ellipsis(…) to launch the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summarysetting.html[SummarySetting] Collection Editor Dialog.
+. Click on the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summarysettings.html[SummarySettings] ellipsis(…) to launch the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summarysetting.html[SummarySetting] Collection Editor Dialog.
 [start=6]
-. Click on the Add button and choose Custom from the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summarysetting~summarytype.html[SummaryType] drop down. Type Standard Deviation against the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summarysetting~customsummaryname.html[CustomSummaryName], which is shown at the summary select drop-down.
+. Click on the Add button and choose Custom from the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summarysetting~summarytype.html[SummaryType] drop down. Type Standard Deviation against the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summarysetting~customsummaryname.html[CustomSummaryName], which is shown at the summary select drop-down.
 
 image::images/WebDataGrid_Custom_Summary_Row_03.png[]
 
@@ -111,7 +111,7 @@ WebDataGrid1.Behaviors.SummaryRow.ColumnSummaries.Add(stdevInfo);
 ----
 
 [start=7]
-. In order to add custom summaries, we need to handle a link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow~calculatecustomsummary_ev.html[CalculateCustomSummary] event. After you attach to the event, add the following code:
+. In order to add custom summaries, we need to handle a link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow~calculatecustomsummary_ev.html[CalculateCustomSummary] event. After you attach to the event, add the following code:
 
 *In Visual Basic:*
 

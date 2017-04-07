@@ -14,8 +14,8 @@
 
 = ActiveDay Events
 
-The  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.smartdate~utcnow.html[ActiveDayUtc]"]  property has two events that fire both client side and server side as the controls are switching their active day.
+The  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.shared.smartdate~utcnow.html[ActiveDayUtc]"]  property has two events that fire both client side and server side as the controls are switching their active day.
 
-On the server and the client, the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activedaychanging_ev.html[ActiveDayChanging]"]  event is fired before the value is actually changed. This allows for the change to be cancelled. The ActiveDayChanging event also has access to the NewDate that is being set as the ActiveDay, as well as the OldDate which is the ActiveDay that is being replaced.
+On the server and the client, the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~activedaychanging_ev.html[ActiveDayChanging]"]  event is fired before the value is actually changed. This allows for the change to be cancelled. The ActiveDayChanging event also has access to the NewDate that is being set as the ActiveDay, as well as the OldDate which is the ActiveDay that is being replaced.
 
-When the ActiveDay value has been changed, the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activedaychanged_ev.html[ActiveDayChanged]"]  event is fired on both the client and server to provide notification of the new ActiveDay. The ActiveDayChanged event has access to the NewDate that is being set as the ActiveDay.
+When the ActiveDay value has been changed, the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~activedaychanged_ev.html[ActiveDayChanged]"]  event is fired on both the client and server to provide notification of the new ActiveDay. The ActiveDayChanged event has access to the NewDate that is being set as the ActiveDay.

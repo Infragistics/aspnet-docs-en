@@ -62,9 +62,9 @@ image::images/WebGrid_Binding_WebGrid_To_SQL_Data_Source_02.png[]
 [start=13]
 . Click Finish to close the configuration wizard. SqlDataSource is set up to retrieve the Customers data from the Northwind database.
 [start=14]
-. In the properties window for WebDataGrid, set  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasourceid.html[DataSourceID]"]  to be the id of the SqlDataSource component.
+. In the properties window for WebDataGrid, set  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasourceid.html[DataSourceID]"]  to be the id of the SqlDataSource component.
 [start=15]
-. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID.
+. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID.
 [start=16]
 . Run the application. WebDataGrid binds to the customers table and displays its data.
 

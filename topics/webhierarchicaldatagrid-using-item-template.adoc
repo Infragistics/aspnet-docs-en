@@ -33,7 +33,7 @@ You will learn how to set up an item template for columns in the parent and chil
 
 Follow the same procedure and add a column setting for the child band as well. For setting columns in the child band, the child band must be selected in the Edit WebHierarchicalDataGrid Bands dialog window and then follow step3. Set the key of the template column to ChildTemplateColumn1.
 
-You can also add a template column in code. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabinding_ev.html[RowIslandDataBinding]"]  event is handled to add a template column in code.
+You can also add a template column in code. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabinding_ev.html[RowIslandDataBinding]"]  event is handled to add a template column in code.
 
 *In Visual Basic:*
 

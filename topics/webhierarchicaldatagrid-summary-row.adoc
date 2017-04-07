@@ -16,7 +16,7 @@
 
 The Summary Row feature of WebDataGrid™ is available in WebHierarchicalDataGrid™. The behavior allows adding standard summaries (Count; Sum; Average; Min; Max) as well as custom ones.
 
-Each band in WebHierarchicalDataGrid can be assigned a Summary Row behavior. You can set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow~enableinheritance.html[EnableInheritance] property of a band to enable child bands to inherit the setting. This allows you to customize summary row behavior in each band of data. For example, if you want summaries for all bands in WebHierarchicalDataGrid, just enable the SummaryRow behavior at the root level and set EnableInheritance to True. If you want to disable the behavior for a specific child band, disable the behavior for that specific band.
+Each band in WebHierarchicalDataGrid can be assigned a Summary Row behavior. You can set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow~enableinheritance.html[EnableInheritance] property of a band to enable child bands to inherit the setting. This allows you to customize summary row behavior in each band of data. For example, if you want summaries for all bands in WebHierarchicalDataGrid, just enable the SummaryRow behavior at the root level and set EnableInheritance to True. If you want to disable the behavior for a specific child band, disable the behavior for that specific band.
 
 When enabled, the behavior adds a summary button to each header. When the button is pressed, a drop-down with available summaries appears.
 
@@ -35,28 +35,28 @@ In order to enable summaries for WebHierarchicalDataGrid and allow end-users to 
 [start=1]
 . Bind WebHierarchicalDataGrid to a WebHierarchicalDataSource component retrieving data from the Products and Orders tables of Northwind. For more information on doing this, see Binding WebHierarchicalDataGrid to a WebHierarchicalDataSource.
 [start=2]
-. In the Microsoft® Visual Studio™ property window, locate the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors] property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. In the Microsoft® Visual Studio™ property window, locate the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors] property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=3]
-. Check the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow.html[Summary Row] behavior and set Enable and link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow~enableinheritance.html[EnableInheritance] to True.
+. Check the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow.html[Summary Row] behavior and set Enable and link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow~enableinheritance.html[EnableInheritance] to True.
 [start=4]
 . Add an Average summary for the Products band (UnitPrice column).
 
-.. Locate the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaryrow~columnsummaries.html[ColumnSummaries] property and click the ellipsis (...) button to launch the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsummaryinfo.html[ColumnSummaryInfo] Dialog.
+.. Locate the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaryrow~columnsummaries.html[ColumnSummaries] property and click the ellipsis (...) button to launch the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsummaryinfo.html[ColumnSummaryInfo] Dialog.
 .. Add a Column Summary by clicking the Add Item Button.
-.. Set the summary’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsummaryinfo~columnkey.html[ColumnKey] property to UnitPrice.
-.. Locate the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summaries.html[Summaries] property and click the ellipsis (...) button to launch the the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summary.html[Summary] Collection Editor Dialog.
-.. Set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.summary~summarytype.html[SummaryType] property to Average.
+.. Set the summary’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsummaryinfo~columnkey.html[ColumnKey] property to UnitPrice.
+.. Locate the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summaries.html[Summaries] property and click the ellipsis (...) button to launch the the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summary.html[Summary] Collection Editor Dialog.
+.. Set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.summary~summarytype.html[SummaryType] property to Average.
 .. Click Apply then OK to close the Summary Collection Editor Dialog, and do the same to close ColumnSummaryInfo Dialog.
 .. Click Apply then OK to close the Behaviors Editor Dialog.
 
 [start=5]
 . Add a Sum summary for the child Orders band (Quantity column).
 
-.. Locate the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band.html[Band] property and click the ellipsis (…) button. The Edit Bands dialog displays.
+.. Locate the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band.html[Band] property and click the ellipsis (…) button. The Edit Bands dialog displays.
 .. Add a child band to the root band by clicking the Add Child button.
-.. Change the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band~key.html[Key] to Orders.
-.. Set link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band~datamember.html[DataMember] to AccessDataSource2_Orders.
-.. Set link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.band~datakeyfields.html[DataKeyFields] to OrderID.
+.. Change the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band~key.html[Key] to Orders.
+.. Set link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band~datamember.html[DataMember] to AccessDataSource2_Orders.
+.. Set link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.band~datakeyfields.html[DataKeyFields] to OrderID.
 .. Click the ellipsis (…) button for the Behaviors property.
 .. Check the checkbox for the Summary Row behavior.
 .. Click the ellipsis (…) button for the ColumnSummaries property.

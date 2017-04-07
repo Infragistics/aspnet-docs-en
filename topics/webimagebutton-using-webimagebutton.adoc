@@ -19,7 +19,7 @@ The following tutorial is intended to familiarize the developer with the WebImag
 [start=1]
 . *Add a WebImageButton to the WebForm and set the Text property.*
 
-Setting the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~text.html[Text]"]  property is not a requirement, but most buttons will have text on them to indicate their function.
+Setting the  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~text.html[Text]"]  property is not a requirement, but most buttons will have text on them to indicate their function.
 
 image::Images/WebImageButton_Tutorial_01.png[]
 
@@ -34,11 +34,11 @@ WebImageButton also supports Transparent colors, when the background is a simple
 
 image::Images/WebImageButton_Tutorial_03.png[]
 
-Another important thing to note when the WebImageButton has been customized to this level: it may be a good idea to set the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~usebrowserdefaults.html[UseBrowserDefaults]"]  property to False so that the client browser will no longer fall back on its default style settings when a particular appearance property is not explicitly set.
+Another important thing to note when the WebImageButton has been customized to this level: it may be a good idea to set the  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~usebrowserdefaults.html[UseBrowserDefaults]"]  property to False so that the client browser will no longer fall back on its default style settings when a particular appearance property is not explicitly set.
 [start=3]
 . *Set a PressedAppearance for the WebImageButton.*
 
-This is done through the  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~pressedappearance.html[PressedAppearance]"]  property. In this sample, PressedAppearance.Style.BackColor is set to White, and a 5px Yellow border is used under PressedAppearance.Style. Run this page and click the button to observe how the appearance changes when it is being pressed. Also observe how the InnerBorder color does not change; since no properties were set under PressedAppearance.InnerBorder, the settings under Appearance.InnerBorder are not overridden.
+This is done through the  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.buttons.webbuttonbase~pressedappearance.html[PressedAppearance]"]  property. In this sample, PressedAppearance.Style.BackColor is set to White, and a 5px Yellow border is used under PressedAppearance.Style. Run this page and click the button to observe how the appearance changes when it is being pressed. Also observe how the InnerBorder color does not change; since no properties were set under PressedAppearance.InnerBorder, the settings under Appearance.InnerBorder are not overridden.
 
 image::Images/WebImageButton_Tutorial_04.png[]
 

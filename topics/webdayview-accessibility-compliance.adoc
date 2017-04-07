@@ -21,7 +21,7 @@ All of our ASP.NET controls and components comply with section 508, subpart 1194
 |Rules|How We Comply with the Rules
 
 |(a)
-|By enabling the control's pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~section508compliant.html[Section508Compliant]"] property, all non-text elements render a text equivalent. 
+|By enabling the control's pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~section508compliant.html[Section508Compliant]"] property, all non-text elements render a text equivalent. 
 
 .Note:
 [NOTE]
@@ -30,13 +30,13 @@ A text equivalent is supplied by default, but this can be customized to suit you
 ====
 
 |(d)
-|There is nothing to enable to get this behavior. If you assign the pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~stylesheetfilename.html[StyleSheetFileName]"] property to non-existent style sheet file name, the view still renders and functions.
+|There is nothing to enable to get this behavior. If you assign the pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~stylesheetfilename.html[StyleSheetFileName]"] property to non-existent style sheet file name, the view still renders and functions.
 
 |(h)
 |By enabling the control's Section508Compliant property, scope attributes are rendered to identify DayOfWeek headers as column headers, and WeekNumbers as row headers.
 
 |(n)
-|By setting the pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleviewbase~enablekeyboardnavigation.html[EnableKeyboardNavigation]"] and TabIndex properties, you can use the keyboard to navigate the control and its elements. 
+|By setting the pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleviewbase~enablekeyboardnavigation.html[EnableKeyboardNavigation]"] and TabIndex properties, you can use the keyboard to navigate the control and its elements. 
 
 You can navigate the control as follows: 
 

@@ -14,7 +14,7 @@
 
 = Setting minimum and maximum values for WebCurrencyEditor
 
-WebCurrencyEditor™ allows you to set a range of currency values that your end-user can enter into the editor by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~minvalue.html[MinValue]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~maxvalue.html[MaxValue]"]  properties. If an end-user types a currency value more than the maximum value then the editor sets the value to the maximum value. Similarly, if an end-user types a currency value less than the minimum value then the editor sets the value to the minimum value.
+WebCurrencyEditor™ allows you to set a range of currency values that your end-user can enter into the editor by simply setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~minvalue.html[MinValue]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webnumericeditor~maxvalue.html[MaxValue]"]  properties. If an end-user types a currency value more than the maximum value then the editor sets the value to the maximum value. Similarly, if an end-user types a currency value less than the minimum value then the editor sets the value to the minimum value.
 
 You can set the MinValue and MaxValue properties either by using the Microsoft® Visual Studio® Property Window or by using the following code:
 

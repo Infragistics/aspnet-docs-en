@@ -29,7 +29,7 @@ In Visual Studio 2005/2008 (.NET Framework 2.0/3.5), each Infragistics ASP.NET c
 .Note:
 [NOTE]
 ====
-This property has effect only when  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~taborientation.html[TabOrientation]"]  is horizontal and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~displaymode.html[DisplayMode]"]  is single row or multi row, with width set on the tab.
+This property has effect only when  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~taborientation.html[TabOrientation]"]  is horizontal and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~displaymode.html[DisplayMode]"]  is single row or multi row, with width set on the tab.
 ====
 
 * Enable ContentPane Rounded Background – Allows you to show the content pane of the WebTab with rounded background.

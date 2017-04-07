@@ -80,21 +80,21 @@ image::images\WebProgressBar_Using_WebProgressBar_as_an_Editor_Control_in_WebDat
 [start=5]
 . Select TemplateField from the Available Fields and click the Add Field button to add a templated column.
 [start=6]
-. Select the added field from the Selected Fields area and set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.controldatafield~key.html[Key]"]  property to “WPB_Template” and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfieldcaption.html[Header]"]   pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.fieldcaption~text.html[Text]"]  to “WPB”.
+. Select the added field from the Selected Fields area and set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.controldatafield~key.html[Key]"]  property to “WPB_Template” and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfieldcaption.html[Header]"]   pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.fieldcaption~text.html[Text]"]  to “WPB”.
 [start=7]
 . Click Apply and OK to close the WebDataGrid Designer.
 [start=8]
-. In the property window, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enablerelativelayout.html[EnableRelativeLayout]"]  property of the WebDataGrid to True , so that the WebProgressBar will not overflow the grid.
+. In the property window, set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~enablerelativelayout.html[EnableRelativeLayout]"]  property of the WebDataGrid to True , so that the WebProgressBar will not overflow the grid.
 [start=9]
 . Click Edit Templates from the WebDataGrid smart tag to open the grid in template editing mode.
 [start=10]
 . Select WPB_Template from the drop-down list to edit the template.
 [start=11]
-. In the Item Template area, drag and drop a WebProgressBar control and set its  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~maximum.html[Maximum]"]  property to 10 using the property window.
+. In the Item Template area, drag and drop a WebProgressBar control and set its  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~maximum.html[Maximum]"]  property to 10 using the property window.
 [start=12]
 . Click End Template Editing to complete the template editing.
 [start=13]
-. In the ASPX markup source, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  property of the WebProgressBar to the cell value of the Column1 by using the DataBinder.Eval method.
+. In the ASPX markup source, set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  property of the WebProgressBar to the cell value of the Column1 by using the DataBinder.Eval method.
 
 *In Visual Basic:*
 

@@ -14,7 +14,7 @@
 
 = Change the Style of Days Outside of the Month
 
-WebCalendarView™ has the ability to  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.style.html[Style]"]  days of months that are displayed, but aren't part of that actual month. Setting the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webcalendarview~othermonthdaystyle.html[OtherMonthDayStyle]"]  helps differentiate the days of the other month from the actual month's days more clearly.
+WebCalendarView™ has the ability to  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.shared.style.html[Style]"]  days of months that are displayed, but aren't part of that actual month. Setting the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webcalendarview~othermonthdaystyle.html[OtherMonthDayStyle]"]  helps differentiate the days of the other month from the actual month's days more clearly.
 
 The following code snippet sets the OtherMonthDayStyle BackColor to Purple.
 

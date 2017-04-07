@@ -18,15 +18,15 @@
 
 The Outlook GroupBy feature of WebHierarchicalDataGrid™ allows your end users to group data into a more readable and navigable view. The feature displays a section at the top or bottom of the control where your end users can drag columns into, in order to group their data.
 
-Once a column is grouped, the control uses a link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid] object to render the grouped data. WebHierarchicalDataGrid displays the column header in the Groupby area with link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedrecord.html[GroupedRecord] objects displaying in place of the normal link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridrecord.html[GridRecord] objects. A GroupedRecord object displays the value and number of items in the group by default, and can be expanded to display the GridRecord objects nested within.
+Once a column is grouped, the control uses a link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.containergrid.html[ContainerGrid] object to render the grouped data. WebHierarchicalDataGrid displays the column header in the Groupby area with link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupedrecord.html[GroupedRecord] objects displaying in place of the normal link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridrecord.html[GridRecord] objects. A GroupedRecord object displays the value and number of items in the group by default, and can be expanded to display the GridRecord objects nested within.
 
 image::images/WebHierarchcialDataGrid_AboutOutlookGroupby_01.png[]
 
 == Hierarchical Outlook GroupBy
 
-Each object in WebHierarchicalDataGrid that implements the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand] interface contains the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband~groupingsettings.html[GroupingSettings] property of type link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupingsettings.html[GroupingSettings] which you can use to set properties specific to the Groupby feature. The GroupingSettings object contains an link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupingsettings~enablecolumngrouping.html[EnableColumnGrouping] property that you can set to control the way the grouping mechanism of each band of data.
+Each object in WebHierarchicalDataGrid that implements the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand] interface contains the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.iband~groupingsettings.html[GroupingSettings] property of type link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupingsettings.html[GroupingSettings] which you can use to set properties specific to the Groupby feature. The GroupingSettings object contains an link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupingsettings~enablecolumngrouping.html[EnableColumnGrouping] property that you can set to control the way the grouping mechanism of each band of data.
 
-EnableColumnGrouping takes the following link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.defaultableboolean.html[DefaultableBoolean] enum values:
+EnableColumnGrouping takes the following link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.defaultableboolean.html[DefaultableBoolean] enum values:
 
 * True – GroupBy is enabled for the IBand and any child IBand objects.
 * False – GroupBy is disabled for the IBand and any child IBand objects.
@@ -34,7 +34,7 @@ EnableColumnGrouping takes the following link:infragistics4.web.v{ProductVersion
 
 The GroupingSettings object's EnableColumnGrouping property of the root band (WebHierarchicalDataGrid) is False by default, disabling grouping for the root and all child bands. If you want to control each individual level manually, set each band's EnableColumnGrouping individually.
 
-WebHierarchicalDataGrid also exposes the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.hierarchicalgridgroupingsettings~groupareavisibility.html[GroupAreaVisibility] property through the GroupingSettings object. This property displays or hides the GroupBy area of the control. It is visible by default.
+WebHierarchicalDataGrid also exposes the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.hierarchicalgridgroupingsettings~groupareavisibility.html[GroupAreaVisibility] property through the GroupingSettings object. This property displays or hides the GroupBy area of the control. It is visible by default.
 
 .Note:
 [NOTE]
@@ -44,19 +44,19 @@ If all the bands have the EnableColumnGrouping property set to False, the groupb
 
 == Grouped Column Settings
 
-The GroupingSettings property also contains the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupingsettings~columnsettings.html[ColumnSettings] property of type link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columngroupingsettings.html[ColumnGroupingSettings] which you can use to add ColumnGroupingSetting objects enabling you to set individual options for grouped columns.
+The GroupingSettings property also contains the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupingsettings~columnsettings.html[ColumnSettings] property of type link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columngroupingsettings.html[ColumnGroupingSettings] which you can use to add ColumnGroupingSetting objects enabling you to set individual options for grouped columns.
 
 For example, you can enable grouping only for a specific column and set its sort direction as well as display a remove button for the column by using a ColumnGroupingSetting object.
 
 == Ungroup Columns
 
-WebHierarchicalDataGrid stores grouped columns in the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupedcolumns.html[GroupedColumns] collection. To ungroup a column, drag the column header out of the Groupby area, click the remove button on the column header, or remove the column from the GroupedColumns collection.
+WebHierarchicalDataGrid stores grouped columns in the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupedcolumns.html[GroupedColumns] collection. To ungroup a column, drag the column header out of the Groupby area, click the remove button on the column header, or remove the column from the GroupedColumns collection.
 
 == Enabling Outlook GroupBy
 
-Each object that implements the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand] interface in the control exposes the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband~groupingsettings.html[GroupingSettings] property. Using this property, you can enable the Outlook GroupBy by setting the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.groupingsettings~enablecolumngrouping.html[EnableColumnGrouping] property to True. You can make the GroupBy area visible by setting the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.hierarchicalgridgroupingsettings~groupareavisibility.html[GroupAreaVisibility] property to Visibility.Visible.
+Each object that implements the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.iband.html[IBand] interface in the control exposes the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.iband~groupingsettings.html[GroupingSettings] property. Using this property, you can enable the Outlook GroupBy by setting the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.groupingsettings~enablecolumngrouping.html[EnableColumnGrouping] property to True. You can make the GroupBy area visible by setting the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.hierarchicalgridgroupingsettings~groupareavisibility.html[GroupAreaVisibility] property to Visibility.Visible.
 
-You can display the GroupBy area on the top or bottom of the control using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.hierarchicalgridgroupingsettings~groupbyarealocation.html[GroupByAreaLocation] property. This provides a place, at the top of your control by default, for your end users to drag columns for grouping.
+You can display the GroupBy area on the top or bottom of the control using the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.hierarchicalgridgroupingsettings~groupbyarealocation.html[GroupByAreaLocation] property. This provides a place, at the top of your control by default, for your end users to drag columns for grouping.
 
 The following code shows you how to enable GroupBy and display the GroupBy area.
 

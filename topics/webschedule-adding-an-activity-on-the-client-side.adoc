@@ -16,7 +16,7 @@
 
 == Before You Begin:
 
-The WebSchedule™ allows  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[activities]"]  to be added Client-Side. This walk through goes over how you go about adding an activity client-side. The main method used to add an activity client-side is called addActivity.
+The WebSchedule™ allows  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[activities]"]  to be added Client-Side. This walk through goes over how you go about adding an activity client-side. The main method used to add an activity client-side is called addActivity.
 
 The addActivity method takes two parameters:
 

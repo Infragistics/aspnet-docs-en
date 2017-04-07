@@ -316,7 +316,7 @@ The following steps demonstrate how to enable the Row Editing behavior in the co
 
 *Add the EditingCore Behavior to the*   *_WebDataGrid_*   *behaviors collection*
 
-The EditingCore behavior is added directly to the  _WebDataGrid’s_   `Behaviors` collection using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridbehaviorcollection~createbehavior.html[CreateBehavior] method.
+The EditingCore behavior is added directly to the  _WebDataGrid’s_   `Behaviors` collection using the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridbehaviorcollection~createbehavior.html[CreateBehavior] method.
 
 *In C#:*
 

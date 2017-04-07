@@ -14,7 +14,7 @@
 
 = About WebTab
 
-WebTab™ is a control that provides a multi-row tabbed layout with various appearance and behavior-based properties. WebTab is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebTab in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols_namespace.html[Infragistics.Web.UI.LayoutControls]"]  namespace.
+WebTab™ is a control that provides a multi-row tabbed layout with various appearance and behavior-based properties. WebTab is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebTab in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols_namespace.html[Infragistics.Web.UI.LayoutControls]"]  namespace.
 
 Like all Infragistics ASP.NET AJAX controls, WebTab seamlessly integrates into the Infragistics® Application Styling Framework. With CSS-based properties you can manually customize the WebTab by leveraging your existing style sheets.
 

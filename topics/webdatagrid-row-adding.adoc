@@ -14,7 +14,7 @@
 
 = Row Adding (WebDataGrid)
 
-WebDataGrid™ allows adding rows with the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding.html[Row Adding]"]  behavior. Enabling this behavior places an Add New Row, reserved for adding data, onto the control’s user interface. Your end-users can enter values into the cells of this row. When the Add New Row loses focus, the row is added to WebDataGrid and the new record is committed to the underlying data source. You need the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior enabled in order to put a row in focus.
+WebDataGrid™ allows adding rows with the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowadding.html[Row Adding]"]  behavior. Enabling this behavior places an Add New Row, reserved for adding data, onto the control’s user interface. Your end-users can enter values into the cells of this row. When the Add New Row loses focus, the row is added to WebDataGrid and the new record is committed to the underlying data source. You need the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior enabled in order to put a row in focus.
 
 .Note:
 [NOTE]
@@ -28,11 +28,11 @@ The Add New Row can be positioned at the bottom or top of WebDataGrid. This is a
 
 The Add New Row uses the editors for WebDataGrid’s columns. It determines what the data type of a column is and uses the default editor for that data type. For example, if one of your fields is of type String, Add New Row uses a TextBox for that cell.
 
-You can also having different settings per cell by adding a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowaddingcolumnsetting.html[Row Adding Column Setting]"]  for the behavior. For more information on column settings, see link:webdatagrid-setting-column-settings-for-a-behavior.html[Setting Column Settings for a Behavior].
+You can also having different settings per cell by adding a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowaddingcolumnsetting.html[Row Adding Column Setting]"]  for the behavior. For more information on column settings, see link:webdatagrid-setting-column-settings-for-a-behavior.html[Setting Column Settings for a Behavior].
 
 == Navigation
 
-With the Activation enabled, you can click on a cell to activate a cell in the Add New Row, and depending on the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editablebehaviorbase~editmodeactions.html[EditModeActions]"] , the cell will enter edit mode. Clicking off the row adds it to WebDataGrid if it contains data. You can use the keyboard to navigate the Add New Row as well.
+With the Activation enabled, you can click on a cell to activate a cell in the Add New Row, and depending on the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editablebehaviorbase~editmodeactions.html[EditModeActions]"] , the cell will enter edit mode. Clicking off the row adds it to WebDataGrid if it contains data. You can use the keyboard to navigate the Add New Row as well.
 
 *Tab* - Focus goes to the next cell. If you are on the last cell, tabbing commits the row.
 
@@ -44,7 +44,7 @@ With the Activation enabled, you can click on a cell to activate a cell in the A
 
 == Before You Begin
 
-You can use the WebDataGrid™ control’s Add New Row feature to allow your end-users to add new records. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding.html[Row Adding]"]  behavior provides a blank row that is always present on the control. When you enter new data to the Add New Row and then lose focus on the row, that row is inserted in WebDataGrid and its underlying data source. For a row to obtain or lose focus, you must have the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior enabled. For more information on the Activation behavior, see link:webdatagrid-activation.html[Activation].
+You can use the WebDataGrid™ control’s Add New Row feature to allow your end-users to add new records. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowadding.html[Row Adding]"]  behavior provides a blank row that is always present on the control. When you enter new data to the Add New Row and then lose focus on the row, that row is inserted in WebDataGrid and its underlying data source. For a row to obtain or lose focus, you must have the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]  behavior enabled. For more information on the Activation behavior, see link:webdatagrid-activation.html[Activation].
 
 .Note:
 [NOTE]
@@ -61,13 +61,13 @@ You will learn how to allow users to add new rows to WebDataGrid, using the Add 
 [start=1]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. For more information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=2]
-. In the Microsoft® Visual Studio™ property window, Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID so that changes in WebDataGrid can be updated to the data source.
+. In the Microsoft® Visual Studio™ property window, Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datakeyfields.html[DataKeyFields]"]  property to CustomerID so that changes in WebDataGrid can be updated to the data source.
 [start=3]
-. In the same window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. In the same window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=4]
-. Check the CheckBox for Row Adding from the list on the left to add the behavior. Notice that the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior is checked as well.
+. Check the CheckBox for Row Adding from the list on the left to add the behavior. Notice that the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior is checked as well.
 [start=5]
-. In the properties, check that  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding~alignment.html[Alignment]"]  is set to Bottom. This positions the Add New Row at the bottom of WebDataGrid.
+. In the properties, check that  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowadding~alignment.html[Alignment]"]  is set to Bottom. This positions the Add New Row at the bottom of WebDataGrid.
 [start=6]
 . Click Apply then Ok to close the editor. Your end-users are now able to add new rows to WebDataGrid by entering data into the row and causing the row to lose focus by clicking elsewhere or by pressing the keyboard Enter key.
 
@@ -75,7 +75,7 @@ image::images/WebDataGrid_Enabling_Row_Adding_01.png[]
 
 == *Add a Row in Code*
 
-You can add a row to WebDataGrid™ on the client side. You do not need the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowadding.html[Row Adding]"]  behavior enabled to add a row using code. The only behavior you need enabled is the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior and BatchUpdating should be set to true. In addition, you have to fill in all required values for the row before adding it.
+You can add a row to WebDataGrid™ on the client side. You do not need the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowadding.html[Row Adding]"]  behavior enabled to add a row using code. The only behavior you need enabled is the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~editingcore.html[EditingCore]"]  behavior and BatchUpdating should be set to true. In addition, you have to fill in all required values for the row before adding it.
 
 *In JavaScript:*
 

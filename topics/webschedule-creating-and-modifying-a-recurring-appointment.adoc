@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-A recurring appointment is a special type of  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  that is created from a base activity. You can create the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.recurrence.html[Recurrence]"]  object either in code with the CreateRecurrence method or by using the Recurrence dialog box. Once a recurrence is created, you have the option of modifying either a single occurrence of the recurrence object or the entire series.
+A recurring appointment is a special type of  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  that is created from a base activity. You can create the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.recurrence.html[Recurrence]"]  object either in code with the CreateRecurrence method or by using the Recurrence dialog box. Once a recurrence is created, you have the option of modifying either a single occurrence of the recurrence object or the entire series.
 
 == What You will Accomplish
 
@@ -35,7 +35,7 @@ image::images/WebSchedule_Creating_and_Modifying_a_Recurring_Appointment_01.png[
 .Note:
 [NOTE]
 ====
-The recurrence button will be available only if WebScheduleInfo's™  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~enablerecurringactivities.html[EnableRecurringActivities]"]  property is set to True (by default, it is set to False).
+The recurrence button will be available only if WebScheduleInfo's™  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~enablerecurringactivities.html[EnableRecurringActivities]"]  property is set to True (by default, it is set to False).
 ====
 
 image::images/WebSchedule_Creating_and_Modifying_a_Recurring_Appointment_02.png[]

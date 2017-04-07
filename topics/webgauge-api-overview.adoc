@@ -20,24 +20,24 @@ This section lists each namespace that is relevant to the WebGauge™ control. W
 |====
 |*WebGauge Namespace:* 
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge_namespace.html[Infragistics.WebUI.UltraWebGauge]"]
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge_namespace.html[Infragistics.WebUI.UltraWebGauge]"]
 |*Key Classes:* 
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.ultragauge.html[UltraGauge]"] 
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.ultragauge.html[UltraGauge]"] 
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.gaugeimagepipe.html[GaugeImagePipe]"]
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.gaugeimagepipe.html[GaugeImagePipe]"]
 
 |*Resources Namespace:* 
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources_namespace.html[Infragistics.UltraGauge.Resources]"]
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources_namespace.html[Infragistics.UltraGauge.Resources]"]
 |*Key Classes and Interface:* 
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.igaugecomponent.html[IGaugeComponent]"] 
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.igaugecomponent.html[IGaugeComponent]"] 
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.digitalgauge.html[DigitalGauge]"] 
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.digitalgauge.html[DigitalGauge]"] 
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.lineargauge.html[LinearGauge]"] 
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.lineargauge.html[LinearGauge]"] 
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgauge.html[RadialGauge]"]
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgauge.html[RadialGauge]"]
 
 |====

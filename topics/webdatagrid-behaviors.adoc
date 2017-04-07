@@ -13,7 +13,7 @@
 
 = Behaviors
 
-The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection allows you to customize the behavior of WebDataGrid™. You can combine multiple behaviors according to your needs. The control loads only the client-side javascript for the behaviors that are added on the server-side (pay to play model). This increases performance in WebDataGrid since you will only incur the necessary overhead for the functionalities you require.
+The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection allows you to customize the behavior of WebDataGrid™. You can combine multiple behaviors according to your needs. The control loads only the client-side javascript for the behaviors that are added on the server-side (pay to play model). This increases performance in WebDataGrid since you will only incur the necessary overhead for the functionalities you require.
 
 The following links have specific information about WebDataGrid’s behaviors.
 

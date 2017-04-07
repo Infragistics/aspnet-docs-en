@@ -23,11 +23,11 @@ WebDropDown™ allows custom end-user entered values to be persisted. For instan
 [start=2]
 . Bind the drop-down to the Categories table of the Northwind database. For more information on how to bind WebDropDown to SQLDataSource, see link:webdropdown-binding-webdropdown-to-a-sql-data-source.html[Binding WebDropDown to a Sql Data Source]. Now you will have a SqlDataSource component on the form with SqlDataSource1 as its name.
 [start=3]
-. In the Microsoft® Visual Studio® Property Window set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]"]  property of WebDropDown to CategoryName and the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~valuefield.html[ValueField]"]  property to CategoryID.
+. In the Microsoft® Visual Studio® Property Window set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]"]  property of WebDropDown to CategoryName and the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~valuefield.html[ValueField]"]  property to CategoryID.
 [start=4]
-. Set the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enablepersistingcustomvalues.html[EnablePersistingCustomValues]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enablecustomvalueselection.html[EnableCustomValueSelection]"]  properties to True.
+. Set the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~enablepersistingcustomvalues.html[EnablePersistingCustomValues]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~enablecustomvalueselection.html[EnableCustomValueSelection]"]  properties to True.
 [start=5]
-. Add an event handler for the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~itemadded_ev.html[ItemAdded]"]  event. This event, in conjunction with the EnablePersistingCustomValues property, will fire whenever your end-user types in a value into the WebDropDown editor and the value does not exist in the list.
+. Add an event handler for the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~itemadded_ev.html[ItemAdded]"]  event. This event, in conjunction with the EnablePersistingCustomValues property, will fire whenever your end-user types in a value into the WebDropDown editor and the value does not exist in the list.
 
 .Note:
 [NOTE]
@@ -52,7 +52,7 @@ SqlDataSource1.InsertCommand = "insert into Categories (CategoryName) Values ('"
 SqlDataSource1.InsertCommand = "insert into Categories (CategoryName) Values ('" +((DropDownItem)e.Value).Text + "')";SqlDataSource1.Insert();
 ----
 
-In the above code we first cast the value of the item that is raising the ItemAdded event into an object of  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.dropdownitem.html[DropDownItem]"]  class and then get the Text of the item and insert it into the database.
+In the above code we first cast the value of the item that is raising the ItemAdded event into an object of  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.dropdownitem.html[DropDownItem]"]  class and then get the Text of the item and insert it into the database.
 [start=7]
 . Save and run the application. You will observe that the custom values you enter will persist similar to the following images:
 

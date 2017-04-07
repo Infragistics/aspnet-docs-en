@@ -16,7 +16,7 @@
 
 == The WebScheduleInfo
 
-The WebScheduleInfo™ component manages and exposes all scheduling information and control state synchronized across one or more WebSchedule views. It centralizes data management of classes and collections important within the WebSchedule object model including the collection of  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activitiescollection.html[Activities]"]  and the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResource]"] .
+The WebScheduleInfo™ component manages and exposes all scheduling information and control state synchronized across one or more WebSchedule views. It centralizes data management of classes and collections important within the WebSchedule object model including the collection of  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activitiescollection.html[Activities]"]  and the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResource]"] .
 
 image::images/WebScheduleInfo_About_WebScheduleInfo_01.png[]
 
@@ -24,4 +24,4 @@ Within the context of a Model-View-Controller paradigm the WebScheduleInfo acts 
 
 The WebScheduleInfo ties together data bound from the WebSchedule data providers during data binding to make it available to the WebSchedule views through the WebSchedule object model.
 
-End users cannot see the WebScheduleInfo (it is a nonvisual element) but they feel it's effects when your application takes advantage of the client-side object model it maintains through client-side scripting. Examples of default behavior furnished by the WebScheduleInfo client-side object model include serving as the hub for raising the Web dialog forms to add or edit an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  (regardless of the WebSchedule view from which the action originated), mediating active day synchronization, and popping up reminder notifications.
+End users cannot see the WebScheduleInfo (it is a nonvisual element) but they feel it's effects when your application takes advantage of the client-side object model it maintains through client-side scripting. Examples of default behavior furnished by the WebScheduleInfo client-side object model include serving as the hub for raising the Web dialog forms to add or edit an  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  (regardless of the WebSchedule view from which the action originated), mediating active day synchronization, and popping up reminder notifications.

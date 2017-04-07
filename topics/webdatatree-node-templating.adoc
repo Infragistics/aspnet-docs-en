@@ -25,7 +25,7 @@ WebDataTree also allows you to display a pre-defined message when no nodes exist
 [start=1]
 . From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDataTree control onto the form.
 [start=2]
-. In the source code, include the following code between the WebDataTree tags to show the pre-defined message using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~nonodestemplate.html[NoNodesTemplate]"]  tags.
+. In the source code, include the following code between the WebDataTree tags to show the pre-defined message using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~nonodestemplate.html[NoNodesTemplate]"]  tags.
 
 *In HTML :*
 
@@ -49,7 +49,7 @@ In the top of this topic are listed all the methods for customizing nodes that W
 [start=2]
 . Click the WebDataTree control’s smart tag and select Edit Template Collection. This will open the WebDataTree designer, where you can add new templates.
 [start=3]
-. Click add item to add new templates to the template collection. Add three templates Template1,Template2, and Template3;set their  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.itemtemplate~templateid.html[TemplateID]"]  property to buttonTemplate, textboxTemplate, and labelTemplate respectively. Your WebDataTree Designer now looks similar to the following image:
+. Click add item to add new templates to the template collection. Add three templates Template1,Template2, and Template3;set their  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.itemtemplate~templateid.html[TemplateID]"]  property to buttonTemplate, textboxTemplate, and labelTemplate respectively. Your WebDataTree Designer now looks similar to the following image:
 
 image::images/WebDataTree_Assigning_templates_to_individual_nodes_using_the_templates_collection_01.png[]
 
@@ -78,7 +78,7 @@ image::images/WebDataTree_Assigning_templates_to_individual_nodes_using_the_temp
 [start=6]
 . Now click the smart tag and select End Template Editing to close the template editing mode of WebDataTree.
 [start=7]
-. Add three nodes buttonNode, textboxNode, labelNode to the WebDataTree and set their  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitem~templateid.html[TemplateId]"]  property to buttonTemplate, textboxTemplate and labelTemplate respectively. For more information on how to add nodes, see the link:webdatatree-getting-started-with-webdatatree.html[Getting Started with WebDataTree] topic.
+. Add three nodes buttonNode, textboxNode, labelNode to the WebDataTree and set their  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitem~templateid.html[TemplateId]"]  property to buttonTemplate, textboxTemplate and labelTemplate respectively. For more information on how to add nodes, see the link:webdatatree-getting-started-with-webdatatree.html[Getting Started with WebDataTree] topic.
 [start=8]
 . Your WebDataTree Designer now looks similar to the following image :
 

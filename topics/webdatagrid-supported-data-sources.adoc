@@ -18,9 +18,9 @@
 
 WebDataGrid™ uses a discoverable approach for data binding. This means that all of the records returned by the data source are displayed by WebDataGrid; you must specify the fields that you do not want to show in the control.
 
-In addition, WebDataGrid is strictly a flat data control: it will only display one level of data. If the data source you use contains hierarchical data, by default, only the root level data will be displayed. You can specify which level of data to display using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.iband~datamember.html[DataMember]"]  property.
+In addition, WebDataGrid is strictly a flat data control: it will only display one level of data. If the data source you use contains hierarchical data, by default, only the root level data will be displayed. You can specify which level of data to display using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.iband~datamember.html[DataMember]"]  property.
 
-Binding to data requires setting the DataSource property at runtime or the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasourceid.html[DataSourceID]"]  property at design time or at runtime. An explicit call to DataBind is not needed as data is requested automatically in the Page PreRender event or on the first attempt to access a row.
+Binding to data requires setting the DataSource property at runtime or the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.flatdataboundcontrol~datasourceid.html[DataSourceID]"]  property at design time or at runtime. An explicit call to DataBind is not needed as data is requested automatically in the Page PreRender event or on the first attempt to access a row.
 
 == Data Operations
 

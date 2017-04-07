@@ -25,16 +25,16 @@ You can also set client-side events and CSS styles for individual objects when a
 To enable selection follow these steps.
 
 [start=1]
-. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. In the Microsoft® Visual Studio™ property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=2]
 . Check the checkbox next to Selection on the left-hand side to add and enable the behavior.
 [start=3]
-. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property is set to Cell by default. In this example, we will leave the default value.
+. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property is set to Cell by default. In this example, we will leave the default value.
 
 .Note:
 [NOTE]
 ====
-When enabling  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]  you are also prompted to add the Selection behavior. If you choose to do so, Selection will be enabled with the and CellClickAction properties set to Single and Row, respectively.
+When enabling  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowdeleting.html[RowDeleting]"]  you are also prompted to add the Selection behavior. If you choose to do so, Selection will be enabled with the and CellClickAction properties set to Single and Row, respectively.
 ====
 
 [start=4]
@@ -42,7 +42,7 @@ When enabling  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragist
 
 == Cell Selection
 
-By default, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property of the Selection behavior is set to Cell, allowing cell selection. You can set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.selection~cellselecttype.html[CellSelectType]"]  property to either Single or Multiple.
+By default, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~cellclickaction.html[CellClickAction]"]  property of the Selection behavior is set to Cell, allowing cell selection. You can set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.selection~cellselecttype.html[CellSelectType]"]  property to either Single or Multiple.
 
 ===== Select a Cell
 
@@ -50,7 +50,7 @@ The end user can select cells by using the mouse or keyboard.
 
 To select cells in code, add cells to the selected cells collection. To unselect a cell, remove it from the collection or call the clear method to remove all selected cells. You can do this both server-side and client-side.
 
-In this example, for the server-side code the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabound_ev.html[RowIslandDataBound]"]  event is handled to perform cell selection. Similarly for the client-side code, to select cells in the child band, the Populated client-side event is handled.
+In this example, for the server-side code the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabound_ev.html[RowIslandDataBound]"]  event is handled to perform cell selection. Similarly for the client-side code, to select cells in the child band, the Populated client-side event is handled.
 
 *In Visual Basic:*
 
@@ -117,7 +117,7 @@ After enabling column selection, the end user can select a column by clicking on
 You do not need to set ColumnSelectType when selecting columns in code. All you need is the Selection behavior enabled.
 ====
 
-In this example, for the server-side code the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabound_ev.html[RowIslandDataBound]"]  event is handled to perform column selection. Similarly for the client-side code, to select columns in the child band the Populated client-side event is handled.
+In this example, for the server-side code the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabound_ev.html[RowIslandDataBound]"]  event is handled to perform column selection. Similarly for the client-side code, to select columns in the child band the Populated client-side event is handled.
 
 *In Visual Basic:*
 
@@ -184,7 +184,7 @@ There are several ways to select a row after enabling row selection: you can sel
 You do not need to set CellClickAction or RowSelectType when selecting rows in code. All you need is the Selection behavior enabled.
 ====
 
-In this example, for the server-side code the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabound_ev.html[RowIslandDataBound]"]  event is handled to perform row selection. Similarly for the client-side code, to select rows in the child band the Populated client event is handled.
+In this example, for the server-side code the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabound_ev.html[RowIslandDataBound]"]  event is handled to perform row selection. Similarly for the client-side code, to select rows in the child band the Populated client event is handled.
 
 *In Visual Basic:*
 

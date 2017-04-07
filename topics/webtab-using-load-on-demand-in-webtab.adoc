@@ -23,7 +23,7 @@ WebTab™ handles a large number of tabs without incurring a loss in performance
 [start=2]
 . Add tabs to WebTab as shown in the link:webtab-getting-started-with-webtab.html[Adding Tabs to the WebTab] topic.
 [start=3]
-. In the Properties window expand  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~postbackoptions.html[PostBackOptions]"]  ; select the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabpostbackoptions~enableloadondemand.html[EnableLoadOnDemand]"]  property and set it to True to enable the load-on-demand feature in the WebTab. You can also enable this feature through the following code:
+. In the Properties window expand  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~postbackoptions.html[PostBackOptions]"]  ; select the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabpostbackoptions~enableloadondemand.html[EnableLoadOnDemand]"]  property and set it to True to enable the load-on-demand feature in the WebTab. You can also enable this feature through the following code:
 
 *In HTML:*
 

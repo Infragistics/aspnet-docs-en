@@ -30,34 +30,34 @@ image::images/WebDialogWindow_Smart_Tag_01.png[WebImageViewer_Smart_Tag_01]
 
 |Moveable
 |Deselecting this check box will prevent your end user from moving the dialog window.
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~moveable.html[Movable]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~moveable.html[Movable]"] 
 
 |Resizable
 |Selecting this check box will allow your end user to resize the dialog window.
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.resizer~enabled.html[Resizer.Enabled]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.resizer~enabled.html[Resizer.Enabled]"] 
 
 |Modal
 |Selecting this check box will turn the dialog window into a modal dialog box.
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~modal.html[Modal]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~modal.html[Modal]"] 
 
 |WindowState
 |Select from the drop-down list whether you want the dialog window to be visible, minimized, maximized, or hidden when the page first loads.
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~windowstate.html[WindowState]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~windowstate.html[WindowState]"] 
 
 |InitialLocation
 |Choose Centered from the drop-down list if you would like the dialog window to always appear in the center of the web page.
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~initiallocation.html[InitialLocation]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~initiallocation.html[InitialLocation]"] 
 
 |Close Button
 |Selecting this check box will display the close button to the right of the header area.
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.restoredialogbutton~visible.html[Header.CloseBox.Visible]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.restoredialogbutton~visible.html[Header.CloseBox.Visible]"] 
 
 |Minimize Button
 |Selecting this check box will display the minimize button to the right of the header area.
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.restoredialogbutton~visible.html[Header.MinimizeBox.Visible]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.restoredialogbutton~visible.html[Header.MinimizeBox.Visible]"] 
 
 |Maximize Button
 |Selecting this check box will display the maximize button to the right of the header area.
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.restoredialogbutton~visible.html[Header.MaximizeBox.Visible]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.restoredialogbutton~visible.html[Header.MaximizeBox.Visible]"] 
 
 |====

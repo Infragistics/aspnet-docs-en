@@ -77,7 +77,7 @@ This topic contains the following sections:
 
 === Enabling Excel-Style Filtering summary
 
-By default, in  _WebHierarchicalDataGrid_  , the standard (non-Excel type) of filtering is enabled. Excel-Style Filtering option is enabled by setting the  _WebHierarchicalDataGrid_  ’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~filtertype.html[FilterType] property to  _ExcelStyleFilter_  . This enables Excel-Style Filtering on all columns, but you can use the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting.html[ColumnFilteringSetting] property to disable the feature on per-column basis.
+By default, in  _WebHierarchicalDataGrid_  , the standard (non-Excel type) of filtering is enabled. Excel-Style Filtering option is enabled by setting the  _WebHierarchicalDataGrid_  ’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~filtertype.html[FilterType] property to  _ExcelStyleFilter_  . This enables Excel-Style Filtering on all columns, but you can use the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting.html[ColumnFilteringSetting] property to disable the feature on per-column basis.
 
 The following section demonstrates how to enable Excel-Style Filtering on all columns:
 
@@ -99,11 +99,11 @@ The following table maps the desired filtering behavior to the property settings
 |In order to:|Use this property:|And set it to:
 
 |Enable Excel-Style Filtering
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~filtertype.html[FilterType]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~filtertype.html[FilterType]
 |_ExcelStyleFilter_
 
 |Disable filtering on a column
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting.html[Enable (of ColumnSetting)]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting.html[Enable (of ColumnSetting)]
 | _false_ 
 
 |====
@@ -156,7 +156,7 @@ The WebDataGrid Designer dialog opens up. *2. Enable Excel-Style Filtering on bo
 
 A. In the Edit Grid Behaviors dialog. dialog, in the left-hand side panel, *check* *Filtering* .
 
-B. In the right-hand side panel, *set the* * link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.filtering~filtertype.html[FilterType]* *property to*  _ExcelStyleFilter_  .
+B. In the right-hand side panel, *set the* * link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.filtering~filtertype.html[FilterType]* *property to*  _ExcelStyleFilter_  .
 
 B. In the right-hand side panel, *set the* *EnableInheritance* *property to*  _True_  .
 

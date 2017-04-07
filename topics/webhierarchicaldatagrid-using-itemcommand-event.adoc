@@ -16,7 +16,7 @@
 
 === Before You Begin
 
-The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~itemcommand_ev.html[ItemCommand] server-side event of WebHierarchicalDataGrid allows you to easily respond to events (e.g., button click) from controls placed inside link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.templatedatafield.html[TemplateField] column.
+The link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~itemcommand_ev.html[ItemCommand] server-side event of WebHierarchicalDataGrid allows you to easily respond to events (e.g., button click) from controls placed inside link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.templatedatafield.html[TemplateField] column.
 
 === What You Will Accomplish
 

@@ -153,13 +153,13 @@ The following samples provide additional information related to this topic.
 |Sample|Purpose
 
 | link:{SamplesUrl}/data-grid/excel-style-filtering-unique-value-casing[Excel-Style Filtering Unique Value Casing]
-|This sample demonstrates the Excel-Style Filtering’s ` link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]` property.
+|This sample demonstrates the Excel-Style Filtering’s ` link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~uniquevaluecasing.html[UniqueValueCasing]` property.
 
 | link:{SamplesUrl}/data-grid/excel-style-filtering-bound-unbound-fields[Excel-Style Filtering - Bound/Unbound Fields]
 |This sample demonstrates Excel- Style Filtering with Bound and Unbound fields as well as with Bound and Unbound checkboxes.
 
 | link:{SamplesUrl}/data-grid/excel-style-filtering-dropdown-null-value-text[Excel-Style Filtering Drop-Down Null Value Text]
-|This sample demonstrates h the ` link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]` property of the Excel Style Filtering, setting the string to _Null_ .
+|This sample demonstrates h the ` link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnfilteringsetting~nullvaluetext.html[NullValueText]` property of the Excel Style Filtering, setting the string to _Null_ .
 
 | link:{SamplesUrl}/data-grid/excel-style-filtering-with-crud-enabled[Excel-Style Filtering with CRUD Enabled]
 |This sample demonstrates Excel-Style Filtering with editing.

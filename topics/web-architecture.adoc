@@ -27,9 +27,9 @@ The server-side objects are designed and implemented to operate within the Micro
 
 === WebControlBase
 
-link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.webcontrolbase.html[WebControlBase]  is the class on which virtually all of the Infragistics controls are built. That class in turn inherits from the ASP.NET WebControl class. Some of the functionality contained in the WebControlBase class includes image directory resolution and client browser capabilities.
+link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.webcontrolbase.html[WebControlBase]  is the class on which virtually all of the Infragistics controls are built. That class in turn inherits from the ASP.NET WebControl class. Some of the functionality contained in the WebControlBase class includes image directory resolution and client browser capabilities.
 
-Two interfaces implemented by WebControlBase are  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.webcontrols.iprovideimagedirectoryresolution.html[IProvideImageDirectoryResolution]"]  and  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.util.serialization.isupportpresetserialization.html[ISupportPresetSerialization]"] .
+Two interfaces implemented by WebControlBase are  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.webcontrols.iprovideimagedirectoryresolution.html[IProvideImageDirectoryResolution]"]  and  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.util.serialization.isupportpresetserialization.html[ISupportPresetSerialization]"] .
 
 IProvideImageDirectoryResolution allows control designers and control rendering logic to obtain image directory resolution for image tags that are being rendered to the page.
 
@@ -37,11 +37,11 @@ ISupportPresetSerialization allows external objects such as designers to initiat
 
 === RendererBase
 
-The  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.rendererbase.html[RendererBase]"]  class provides common rendering logic and functionality that various controls use in rendering their contents to the browser. Tasks such as rendering styles and attributes to the html stream as well as formatting of the html for readability are handled here.
+The  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.shared.rendererbase.html[RendererBase]"]  class provides common rendering logic and functionality that various controls use in rendering their contents to the browser. Tasks such as rendering styles and attributes to the html stream as well as formatting of the html for readability are handled here.
 
 === Infragistics.WebUI.Shared.Style
 
-The Infragistics  pick:[asp-net="link:infragistics4.webui.shared.v{ProductVersion}~infragistics.webui.shared.style.html[Style]"]  class extends the System.Web.UI.Style class and provides additional CSS styling properties along with a CustomRules property that allows developers to specify any CSS style rule that is not already encompassed by the class.
+The Infragistics  pick:[asp-net="link:{ApiPlatform}webui.shared{ApiVersion}~infragistics.webui.shared.style.html[Style]"]  class extends the System.Web.UI.Style class and provides additional CSS styling properties along with a CustomRules property that allows developers to specify any CSS style rule that is not already encompassed by the class.
 
 In addition to these basic common objects, Infragistics.WebUI.Shared also exposes many additional objects that are used by the internals of the WebControl elements. These include ViewState management classes, rendering classes and collection management classes.
 

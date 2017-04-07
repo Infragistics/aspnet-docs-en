@@ -17,7 +17,7 @@ WebHtmlEditor™ lets end users enter special characters that are uncommon on mo
 
 image::images/WebHtmlEditor_How_Do_I_Add_a_Special_Character_1.PNG[]
 
-In the example code below, you will add the Greek letter sigma (S), to the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~specialcharacterlist.html[SpecialCharacterList]"]  property so your end users receive the Special Characters drop-down list shown above.
+In the example code below, you will add the Greek letter sigma (S), to the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~specialcharacterlist.html[SpecialCharacterList]"]  property so your end users receive the Special Characters drop-down list shown above.
 
 In the Page_Load event handler of your Web form, add an HTML character entity reference for the special character that you want to be available in the Special Characters Toolbar drop-down list.
 

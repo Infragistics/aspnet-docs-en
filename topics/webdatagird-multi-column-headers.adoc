@@ -202,7 +202,7 @@ groupField.Columns.Add(field);
 
 For detailed information about these properties, refer to their listing in the property reference section:
 
-* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid.html[WebDataGrid API Documentation]
+* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid.html[WebDataGrid API Documentation]
 
 == Related Topics
 

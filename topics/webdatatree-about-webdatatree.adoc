@@ -14,7 +14,7 @@
 
 = About WebDataTree
 
-WebDataTree™ is a control that can be used to display hierarchical data, represented by expandable tree nodes. WebDataTree is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebDataTree in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols_namespace.html[Infragistics.Web.UI.NavigationControls]"]  namespace.
+WebDataTree™ is a control that can be used to display hierarchical data, represented by expandable tree nodes. WebDataTree is built using the Infragistics ASP.NET AJAX Framework to leverage a proven code base that promotes a high performance and responsive end-user experience. You can find WebDataTree in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols_namespace.html[Infragistics.Web.UI.NavigationControls]"]  namespace.
 
 WebDataTree includes integrated design-time tools in the form of an advanced Designer UI. This design-time utility helps you to quickly and easily set up the control depending on your requirements, providing access to a wide range of functionality without requiring intensive coding.
 

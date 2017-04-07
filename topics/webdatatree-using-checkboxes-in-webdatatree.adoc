@@ -20,7 +20,7 @@ WebDataTree™ allows using checkboxes to determine whether the child nodes unde
 
 image::images/WebDataTree_Using_CheckBoxes_in_WebDataTree_01.png[]
 
-You can use checkboxes in bi-state by setting the WebDataTree control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~checkboxmode.html[CheckBoxMode]"]  property to BiState. By default, this property is set to Off. You can set the CheckBoxMode property either using the Microsoft® Visual Studio® Property Window or by using the following code:
+You can use checkboxes in bi-state by setting the WebDataTree control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~checkboxmode.html[CheckBoxMode]"]  property to BiState. By default, this property is set to Off. You can set the CheckBoxMode property either using the Microsoft® Visual Studio® Property Window or by using the following code:
 
 *In Visual Basic:*
 

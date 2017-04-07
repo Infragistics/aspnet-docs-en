@@ -16,14 +16,14 @@
 
 == Before You Begin
 
-The WebScheduleInfo™ component's link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventarrows.html[EnableMultiDayEventArrows] property allows you to display arrows labeling date an event occurs "from" and the date it occurs "to".
+The WebScheduleInfo™ component's link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventarrows.html[EnableMultiDayEventArrows] property allows you to display arrows labeling date an event occurs "from" and the date it occurs "to".
 
 image::images/WebScheduleGenericDataProvider_Localize_Multi_Day_Event_Banner_Caption_01.png[]
 
 These labels are available for the WebDayView™ and WebMonthView™ controls. If you need to localize these labels, you can use the following two properties:
 
-* link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~multidayeventfromarrowcaption.html[MultiDayEventFromArrowCaption]
-* link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~multidayeventtoarrowcaption.html[MultiDayEventToArrowCaption]
+* link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~multidayeventfromarrowcaption.html[MultiDayEventFromArrowCaption]
+* link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~multidayeventtoarrowcaption.html[MultiDayEventToArrowCaption]
 
 You should be familiar with how to set up the WebSchedule controls and components on your webpage.
 

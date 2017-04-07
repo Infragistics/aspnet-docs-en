@@ -18,8 +18,8 @@ You can control how WebSlider™ behaves when your end users single-click or dou
 
 You can control the track’s behavior by setting the appropriate properties:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.slidertrack~clickaction.html[ClickAction]"]  -- On a click, the thumb will move to the clicked point by setting the ClickAction property to MoveToPoint.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.slidertrack~doubleclickaction.html[DoubleClickAction]"]  -- On a double-click, the thumb can move to the clicked point by setting the DoubleClickAction property to MoveToPoint.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.slidertrack~clickaction.html[ClickAction]"]  -- On a click, the thumb will move to the clicked point by setting the ClickAction property to MoveToPoint.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.slidertrack~doubleclickaction.html[DoubleClickAction]"]  -- On a double-click, the thumb can move to the clicked point by setting the DoubleClickAction property to MoveToPoint.
 
 The following example code demonstrates how to move the thumb on a mouse click.
 

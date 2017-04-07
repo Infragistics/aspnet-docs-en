@@ -14,7 +14,7 @@
 
 = Change the Default Action of a Button
 
-WebHtmlEditor's™  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.clientsideevents~beforeaction.html[BeforeAction]"]  client-side event contains an "act" parameter which allows you to get or set the action that WebHtmlEditor is about to perform related to the end user's action. This is useful if you want to disable the default action or change the action.
+WebHtmlEditor's™  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.clientsideevents~beforeaction.html[BeforeAction]"]  client-side event contains an "act" parameter which allows you to get or set the action that WebHtmlEditor is about to perform related to the end user's action. This is useful if you want to disable the default action or change the action.
 
 The following JavaScript will change the default bold action to underline when the end user clicks the Bold button.
 

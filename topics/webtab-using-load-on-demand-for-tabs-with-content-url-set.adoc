@@ -14,7 +14,7 @@
 
 = Using Load on Demand for Tabs with Content Url Set
 
-WebTab allows you to enable the load-on-demand feature for tab items with  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  by setting the EnableLoadOnDemandUrl property to True. This property can be used when the ContentUrl is set to websites that run scripts like jquery.js,which may attempt to set focus or calculate offsets on initialization regardless of html element visibility. These actions may result in javascript exceptions being raised. The workaround for these bugs is to set the EnableLoadOnDemandUrl property to True, which allows only visible selected ContentUrl to load.
+WebTab allows you to enable the load-on-demand feature for tab items with  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentUrl]"]  by setting the EnableLoadOnDemandUrl property to True. This property can be used when the ContentUrl is set to websites that run scripts like jquery.js,which may attempt to set focus or calculate offsets on initialization regardless of html element visibility. These actions may result in javascript exceptions being raised. The workaround for these bugs is to set the EnableLoadOnDemandUrl property to True, which allows only visible selected ContentUrl to load.
 
 === To enable load-on-demand feature for tabs with ContentUrl:
 
@@ -23,7 +23,7 @@ WebTab allows you to enable the load-on-demand feature for tab items with  pick:
 [start=2]
 . Add tabs to WebTab as shown in the link:webtab-getting-started-with-webtab.html[Adding Tabs to the WebTab] topic.
 [start=3]
-. In the Properties window expand  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~postbackoptions.html[PostBackOptions]"]  ; select the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabpostbackoptions~enableloadondemandurl.html[EnableLoadOnDemandUrl]"]  property and set it to True to enable the load-on-demand feature for tabs with ContentUrl set. You can also enable this feature through the following code:
+. In the Properties window expand  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~postbackoptions.html[PostBackOptions]"]  ; select the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabpostbackoptions~enableloadondemandurl.html[EnableLoadOnDemandUrl]"]  property and set it to True to enable the load-on-demand feature for tabs with ContentUrl set. You can also enable this feature through the following code:
 
 *In HTML:*
 

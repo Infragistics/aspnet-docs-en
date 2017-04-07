@@ -16,7 +16,7 @@
 
 The Font pane is used to edit the font settings of the labels on your gauge.
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.labelappearance~font.html[Font]"]  -- This value specifies the font (e.g., Trebuchet MS) of the labels.
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.labelappearance~font.html[Font]"]  -- This value specifies the font (e.g., Trebuchet MS) of the labels.
 
 Size -- Set this value to an integer from 0 to 100. This value sets the size of the labels' font.
 

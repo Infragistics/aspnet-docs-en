@@ -20,7 +20,7 @@ When using the WebUpload control be aware of the following limitations of the co
 [start=1]
 . The max uploaded size for a file is 2 GB. This is browser limitation. Some browsers like newer versions of Opera allow 4GB files.
 [start=2]
-. It’s recommended when you set the option pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[maxSimultaneousFilesUploads]"] , its value must be the maximum value as dictated by the browser. When you are uploading more than one file at a time you are making requests equal to the count of uploaded files. For IE6 it is recommended this option to be 1, for other browsers it is recommended to be 1 or 2. For instance Mozilla FireFox 3.6+ could handle a maximum value of 3.
+. It’s recommended when you set the option pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[maxSimultaneousFilesUploads]"] , its value must be the maximum value as dictated by the browser. When you are uploading more than one file at a time you are making requests equal to the count of uploaded files. For IE6 it is recommended this option to be 1, for other browsers it is recommended to be 1 or 2. For instance Mozilla FireFox 3.6+ could handle a maximum value of 3.
 [start=3]
 . The igUpload control doesn’t support keyboard navigation, except during tabbed navigation, then the control will gain focus on the page. When using the TAB key, you can navigate the control and its elements.
 [start=4]

@@ -17,9 +17,9 @@
 Adding a recurring appointment involves three steps:
 
 [start=1]
-. Create an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"] .
+. Create an  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"] .
 [start=2]
-. Create the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.recurrence.html[Recurrence]"]  object.
+. Create the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.recurrence.html[Recurrence]"]  object.
 [start=3]
 . Add the appointment to the database.
 

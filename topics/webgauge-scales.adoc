@@ -14,7 +14,7 @@
 
 = Scales
 
-Click the links below to learn about the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgauge~scales.html[Scales]"]  property of the WebGauge control, as well as to access a task-based procedure on creating scales:
+Click the links below to learn about the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgauge~scales.html[Scales]"]  property of the WebGauge control, as well as to access a task-based procedure on creating scales:
 
 * link:webgauge-about-gauge-scales.html[About Gauge Scales]
 * link:webgauge-create-a-dial.html[Create a Dial]

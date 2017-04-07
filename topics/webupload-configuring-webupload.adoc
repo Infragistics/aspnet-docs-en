@@ -114,34 +114,34 @@ The following table lists the configurable aspects of  _WebUpload_  . Additional
 |<<_Ref350640827,File selection mode (Single/Multiple)>>
 |You can configure whether users, when selecting the files to upload, will be able to select multiple files or only one file at a time.
 |
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] 
 
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] 
 
 |<<_Ref348004537,Upload trigger(Manual/Auto)>>
 |You can configure whether the upload will start automatically once the user has added the file(s) to the _WebUpload_ panel or manually (on user’s pressing the Upload button).
 |
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload] 
 
 |<<_Ref350640910,The Allowed File Types>>
 |You can configure which types of files will be allowed for users to upload.
 |
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~allowedextensions.html[AllowedExtensions] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~allowedextensions.html[AllowedExtensions] 
 
 |<<_Ref334453966,Maximum number of files to upload>>
 |You can configure the maximum number of files that can be uploaded per page refresh.
 |
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] 
 
 |<<_Ref350640978,Maximum number of simultaneously uploading files>>
 |This setting configures the threshold on the number of simultaneous file uploads.
 |
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads] 
 
 |<<_Ref350641009,File display mode>>
 |You can configure how many files to be displayed in the panel of the _WebUpload_ control.
 |
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] 
 
 |====
 
@@ -174,7 +174,7 @@ The following pictures illustrate the two alternative file selection approaches:
 
 The default file selection mode is Single File.
 
-The file selection mode is managed by the link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] and link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] options. Setting link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] to  _true_   makes sense only when link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] is  _Multiple_  . When link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] is  _Single_  , link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] has no effect.
+The file selection mode is managed by the link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] and link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] options. Setting link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] to  _true_   makes sense only when link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] is  _Multiple_  . When link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] is  _Single_  , link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] has no effect.
 
 The File Selection Mode feature employs the link:http://www.w3.org/TR/html-markup/input.file.html#input.file[HTML 5 multiple attribute] of the `input` element. This makes the feature browser-dependent. If an unsupported browser is used, then setting the feature’s properties has no effect, meaning that users will not be able to select multiple files from the file Open dialog or drag-and-drop them onto the  _WebUpload_   control. For the list of the supported browsers, see <<_Ref350629718,Requirements>>.
 
@@ -212,9 +212,9 @@ The following table maps the desired configuration to its respective property se
 
 |Set the file selection mode to Multiple Files
 |
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] 
 
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~multiplefiles.html[MultipleFiles] 
 
 |
 * _“Multiple”_ 
@@ -223,7 +223,7 @@ The following table maps the desired configuration to its respective property se
 
 |Set the file selection mode to Single File
 |
-* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] 
+* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode] 
 
 |
 * _“Single”_ 
@@ -271,7 +271,7 @@ You can configure whether the upload will start automatically once the user has 
 
 The default upload trigger is Manual.
 
-The upload trigger is managed by the link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload] option of the  _WebUpload_   control.
+The upload trigger is managed by the link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload] option of the  _WebUpload_   control.
 
 [[_Ref341791614]]
 
@@ -284,11 +284,11 @@ The following table maps the desired configuration to its respective property se
 |In order to:|Use this property:|And set it to:
 
 |Enable automatic upload
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload]
 |_True_
 
 |Disable automatic upload
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload]
 | _False_ 
 
 |====
@@ -303,7 +303,7 @@ This example demonstrates how to enable automatic upload for users a result of t
 |====
 |Property|Value
 
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[AutoStartUpload]
 |_True_
 
 |====
@@ -325,7 +325,7 @@ Following is the code that implements this example.
 
 === Overview
 
-You can configure which types of files will be allowed for users to upload. This functionality is handled by explicitly listing the file name extensions of the allowed file types in a list of permissible file types. This list is a collection of `FileUploadExtension` objects representing the allowed file extensions as the value of the link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~allowedextensions.html[AllowedExtensions] property.
+You can configure which types of files will be allowed for users to upload. This functionality is handled by explicitly listing the file name extensions of the allowed file types in a list of permissible file types. This list is a collection of `FileUploadExtension` objects representing the allowed file extensions as the value of the link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~allowedextensions.html[AllowedExtensions] property.
 
 By default, all file types can be uploaded.
 
@@ -342,7 +342,7 @@ The following table maps the desired configuration to its respective property se
 |In order to:|Use this property:|And set it to:
 
 |Define allowed extensions
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~allowedextensions.html[AllowedExtensions]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~allowedextensions.html[AllowedExtensions]
 |Collection of `FileUploadExtension` objects
 
 |====
@@ -357,7 +357,7 @@ This example demonstrates how to set allowed users to upload .xls and .doc files
 |====
 |Property|Value
 
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~allowedextensions.html[AllowedExtensions]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~allowedextensions.html[AllowedExtensions]
 |Collection of `FileUploadExtension` objects
 
 |====
@@ -405,7 +405,7 @@ The following table maps the desired configuration to its respective property se
 |In order to:|Use this property:|And set it to:
 
 |Set maximum uploaded files
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles]
 |The desired integer value
 
 |====
@@ -420,7 +420,7 @@ This example demonstrates how to set the maximum number of files to upload to 2:
 |====
 |Property|Value
 
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles]
 | _2_ 
 
 |====
@@ -448,7 +448,7 @@ Following is the code that implements this example.
 
 You can limit the number of files that can be simultaneously uploaded. Selecting files in excess of this threshold, limits the number of simultaneously uploaded files to this threshold, on a first come first serve basis, holding the excess files in abeyance until the number of files being uploaded falls below this threshold. This process continues with each of the remaining files being added to the simultaneous upload as other files complete their upload.
 
-The maximum number of files that can be uploading simultaneously is managed by the link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads] property.
+The maximum number of files that can be uploading simultaneously is managed by the link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads] property.
 
 [[_Ref348004585]]
 
@@ -461,7 +461,7 @@ The following table maps the desired configuration to its respective property se
 |In order to:|Use this property:|And set it to:
 
 |Set the maximum number of simultaneous file uploads
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads]
 |The desired integer value
 
 |====
@@ -476,7 +476,7 @@ The code samples below demonstrate how to set maximum simultaneous files uploads
 |====
 |Property|Value
 
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxsimultaneousfilesuploads.html[MaxSimultaneousFilesUploads]
 |2
 
 |====
@@ -519,10 +519,10 @@ The following pictures compare Single File mode and Multiple Files mode.
 
 The default file mode setting is Single File.
 
-The number of displayed files in Multiple Files mode cannot exceed the link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] setting. Depending on the situation, exceeding the link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] setting result with the following:
+The number of displayed files in Multiple Files mode cannot exceed the link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] setting. Depending on the situation, exceeding the link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] setting result with the following:
 
-* When MultipleFiles = False, disables the Add button when the number of files equals the link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] setting.
-* When MultipleFiles = True, throws an error if the number of selected files exceeds the link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] setting.
+* When MultipleFiles = False, disables the Add button when the number of files equals the link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] setting.
+* When MultipleFiles = True, throws an error if the number of selected files exceeds the link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~maxuploadedfiles.html[MaxUploadedFiles] setting.
 
 [[_Ref341791589]]
 
@@ -535,11 +535,11 @@ The following table maps the desired configuration to its respective property se
 |In order to:|Use this property:|And set it to:
 
 |Set the display mode to Single File
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode]
 | _“single”_ 
 
 |Set the display mode to Multiple Files
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode]
 | _"multiple"_ 
 
 |====
@@ -554,7 +554,7 @@ This example demonstrates setting the display mode to Multiple Files. This is a 
 |====
 |Property|Value
 
-| link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode]
+| link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~mode.html[Mode]
 |" _Multiple_ "
 
 |====

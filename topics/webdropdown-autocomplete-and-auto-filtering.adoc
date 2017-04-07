@@ -22,11 +22,11 @@ WebDropDown™ supports the autocomplete feature which causes the dropdown conta
 .Note:
 [NOTE]
 ====
-The autocomplete feature works only when the WebDropDown control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~displaymode.html[DisplayMode]"]  property is set to DropDown.
+The autocomplete feature works only when the WebDropDown control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~displaymode.html[DisplayMode]"]  property is set to DropDown.
 ====
 
 
-When the end-user starts typing into WebDropDown , the first possible match from the drop-down list is displayed in the value display and the appended characters are selected in the value display (the delta characters). This functionality which is enabled by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enableautocompletefirstmatch.html[EnableAutoCompleteFirstMatch]"]  property works even when the drop-down container is not shown or disabled.
+When the end-user starts typing into WebDropDown , the first possible match from the drop-down list is displayed in the value display and the appended characters are selected in the value display (the delta characters). This functionality which is enabled by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~enableautocompletefirstmatch.html[EnableAutoCompleteFirstMatch]"]  property works even when the drop-down container is not shown or disabled.
 
 You can set the EnableAutoCompleteFirstMatch property either using the Microsoft® Visual Studio® Property Window or by using the following code:
 
@@ -46,11 +46,11 @@ WebDropDown1.EnableAutoCompleteFirstMatch = false;
 
 == Auto Filtering
 
-WebDropDown supports client-side or server-side auto filtering. As the end user begins to type into the editable textbox, the WebDropDown attempts to match the entered values in the underlying data source by initiating an AJAX callback .This can be configured by setting the WebDropDown control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enableautofiltering.html[EnableAutoFiltering] property to Client or Server. By default , this property is set to Off.When the EnableAutoFiltering Property is set to :
+WebDropDown supports client-side or server-side auto filtering. As the end user begins to type into the editable textbox, the WebDropDown attempts to match the entered values in the underlying data source by initiating an AJAX callback .This can be configured by setting the WebDropDown control’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~enableautofiltering.html[EnableAutoFiltering] property to Client or Server. By default , this property is set to Off.When the EnableAutoFiltering Property is set to :
 
 * *Off* -- Only finding, selecting, activating and scrolling to the first match is performed.
 * *Client* -- The filtering is performed only on the client-side items collection contents, with no postbacks taking place.
-* *Server* -- The filtering is performed on all the items in the drop-down list on the server by making AJAX callbacks. The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~autofiltertimeoutms.html[AutoFilterTimeoutMs]  property controls the timeout until an AJAX request is made which is particularly useful for a slow connection or when the end-users type slowly.
+* *Server* -- The filtering is performed on all the items in the drop-down list on the server by making AJAX callbacks. The link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~autofiltertimeoutms.html[AutoFilterTimeoutMs]  property controls the timeout until an AJAX request is made which is particularly useful for a slow connection or when the end-users type slowly.
 
 .Note:
 [NOTE]
@@ -76,7 +76,7 @@ WebDropDown1.EnableAutoFiltering = Infragistics.Web.UI.ListControls.AutoFilterin
 
 == Configuring the filtering queries:
 
-The autocomplete feature will work using a StartsWith query by default; however, this can be configured by setting the WebDropDown control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~autofilterquerytype.html[AutoFilterQueryType]  property to one of the following options:
+The autocomplete feature will work using a StartsWith query by default; however, this can be configured by setting the WebDropDown control’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~autofilterquerytype.html[AutoFilterQueryType]  property to one of the following options:
 
 * StartsWith
 * EndsWith
@@ -101,7 +101,7 @@ WebDropDown1.AutoFilterQueryType = Infragistics.Web.UI.ListControls.AutoFilterQu
 
 == Setting the number of displayed search results in the drop-down container :
 
-You can set the number of search results to be displayed in the drop-down container by setting the WebDropDown control’s link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~autofilterresultsize.html[AutoFilterResultSize]  property. You can set the AutoFilterResultSize property either using the Visual Studio Property Window or by using the following code:
+You can set the number of search results to be displayed in the drop-down container by setting the WebDropDown control’s link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~autofilterresultsize.html[AutoFilterResultSize]  property. You can set the AutoFilterResultSize property either using the Visual Studio Property Window or by using the following code:
 
 *In Visual Basic:*
 
@@ -117,7 +117,7 @@ WebDropDown1.AutoFilterResultSize = 10;
 
 == Search results Sort order:
 
-Search results Sorting can be configured for ascending or descending order by setting the WebDropDown control’s  link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~autofiltersortorder.html[AutoFilterSortOrder]  property to *Ascending* or *Descending* . By default this property is set to None.
+Search results Sorting can be configured for ascending or descending order by setting the WebDropDown control’s  link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~autofiltersortorder.html[AutoFilterSortOrder]  property to *Ascending* or *Descending* . By default this property is set to None.
 
 You can set the AutoFilterSortOrder property either using the Visual Studio property window or by using the following code:
 
@@ -137,7 +137,7 @@ WebDropDown1.AutoFilterSortOrder = Infragistics.Web.UI.ListControls.DropDownAuto
 
 == Caching of filtering results on the client :
 
-Caching of filtering results on the client is possible by setting the  link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~enablecachingonclient.html[EnableCachingOnClient]  property. It works only when the EnableAutoFiltering property is set to Server. For instance, when subsequent queries for the same string are performed, the results for the second and other filtering operations are obtained from the client cache and no postback will be made to the server. By default this property is set to False.
+Caching of filtering results on the client is possible by setting the  link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~enablecachingonclient.html[EnableCachingOnClient]  property. It works only when the EnableAutoFiltering property is set to Server. For instance, when subsequent queries for the same string are performed, the results for the second and other filtering operations are obtained from the client cache and no postback will be made to the server. By default this property is set to False.
 
 You can set the EnableCachingOnClient property either using the Visual Studio property window or by using the following code:
 

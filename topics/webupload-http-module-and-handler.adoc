@@ -20,7 +20,7 @@ The WebUpload control is ASP.NET wrapper for the client-side only jQuery Upload.
 
 An HttpModule may be configured to manage the file upload process. It implements the .NET IHttpModule interface so that it plugs into the HTTP Request process. . Therefore all the requests, even those that are not coming from the upload control, pass through HttpModule. That’s why HttpModule filters the requests that are relevant only to the upload control.
 
-The examples below demonstrate how to configure an pick:[asp-net="* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.uploadmodule.html[HttpModule]*"] for IIS6 (or development server) or for deploying on an IIS7 server.
+The examples below demonstrate how to configure an pick:[asp-net="* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.uploadmodule.html[HttpModule]*"] for IIS6 (or development server) or for deploying on an IIS7 server.
 
 == For IIS6 (development Environment)
 
@@ -59,7 +59,7 @@ The examples below demonstrate how to configure an pick:[asp-net="* link:infragi
 
 == HTTP Handler
 
-An pick:[asp-net="* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.uploadstatushandler.html[HttpHandler]*"] implements the .NET IHttpHandler interface and is used to communicate with the client widget. The handler has two main functions – to receive commands from the client and to return status back to the client.
+An pick:[asp-net="* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.uploadstatushandler.html[HttpHandler]*"] implements the .NET IHttpHandler interface and is used to communicate with the client widget. The handler has two main functions – to receive commands from the client and to return status back to the client.
 
 All the requests between the upload control and the handler are sent via Ajax. Using Ajax as a communication mechanism is a natural choice as the handler returns status messages in JSON.
 
@@ -70,7 +70,7 @@ As contrasted from the HttpModule, the HttpHandler is accessible via a URL. Comm
 image::images/WebUpload_Handler_and_Module_01.png[]
 
 * *Cancel* : When this command is requested the file upload process is canceled
-* *fileSize*: This command is called in two special cases when the size of the file to be uploaded is needed from the handler to display in the control. The first is when pick:[asp-net="* link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[autostartupload]*"] property is set to false. The size information is required as the file is not processing until the user starts the upload. The second case is when *autostartupload* property is set to true but there are files placed in the uploading queue and their uploading process is not started.
+* *fileSize*: This command is called in two special cases when the size of the file to be uploaded is needed from the handler to display in the control. The first is when pick:[asp-net="* link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.webupload~autostartupload.html[autostartupload]*"] property is set to false. The size information is required as the file is not processing until the user starts the upload. The second case is when *autostartupload* property is set to true but there are files placed in the uploading queue and their uploading process is not started.
 
 To enable the handler you need to add the appropriate sections in Web.config file – either for development server or for IIS7:
 
@@ -118,7 +118,7 @@ This example is uses IGUploadStatusHandler.ashx as a default name for the handle
 
 == UploadProgressManager and Server Events
 
-The server architecture designed so that the handler and module communicate using proxy class called –  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.uploadprogressmanager.html[*UploadProgressManager* ]"] . This class is also responsible for triggering the server events. The events are the place where you can handle the file uploading process to perform actions like deleting and moving uploaded files, to cancel uploading, to modify status information.
+The server architecture designed so that the handler and module communicate using proxy class called –  pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.uploadprogressmanager.html[*UploadProgressManager* ]"] . This class is also responsible for triggering the server events. The events are the place where you can handle the file uploading process to perform actions like deleting and moving uploaded files, to cancel uploading, to modify status information.
 
 All the three server events have two arguments – one is sender the other is the event argument. The sender is a containing the *UploadProgressManager* , which fires the events. Event argument is specific for every one of the three events below and each event arg implements the IUploadEventArgs interface.
 
@@ -253,7 +253,7 @@ image::images/WebUpload_Handler_and_Module_01.png[]
 The other JSON properties – size, serverMessage and bytesUploaded, are not needed to be created as enumeration types on the server, like error and status, because they are either dynamically changed strings or numbers.
 ====
 
-*Table 1*: Enumeration of type  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.uploadstatus.html[*UploadStatus* ]"]
+*Table 1*: Enumeration of type  pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.uploadstatus.html[*UploadStatus* ]"]
 
 [options="header", cols="a,a"]
 |====
@@ -291,7 +291,7 @@ The other JSON properties – size, serverMessage and bytesUploaded, are not nee
 
 |====
 
-*Table 2*: Enumeration of type  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.fileerror.html[*FileError* ]"]
+*Table 2*: Enumeration of type  pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.fileerror.html[*FileError* ]"]
 
 [options="header", cols="a,a"]
 |====

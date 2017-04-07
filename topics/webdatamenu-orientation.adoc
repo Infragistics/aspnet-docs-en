@@ -14,9 +14,9 @@
 
 = Orientation
 
-WebDataMenu™ can be oriented horizontally or vertically by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datamenugroupsettings.html[DataMenuGroupSettings]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datamenugroupsettings~orientation.html[Orientation]"]  property to Vertical or Horizontal. By default, this property is set to Vertical.
+WebDataMenu™ can be oriented horizontally or vertically by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.datamenugroupsettings.html[DataMenuGroupSettings]"]  object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.datamenugroupsettings~orientation.html[Orientation]"]  property to Vertical or Horizontal. By default, this property is set to Vertical.
 
-The Orientation property can be set using the Microsoft® Visual Studio® Property Window (expand the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatamenu~groupsettings.html[GroupSettings]"]  property to set the Orientation property) or by using the following code :
+The Orientation property can be set using the Microsoft® Visual Studio® Property Window (expand the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatamenu~groupsettings.html[GroupSettings]"]  property to set the Orientation property) or by using the following code :
 
 *In Visual Basic:*
 
@@ -40,14 +40,14 @@ image::images/WebDataMenu_Orientation_01.png[]
 
 You can also configure WebDataMenu to have a complex orientation, which means you can set the orientation of one item to be horizontal and another item to be vertical.
 
-The following steps shows how to set a different orientation for different items in the WebDataMenu by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datamenugroupsettings~orientation.html[Orientation]"]  property on the item level. This overrides the Orientation property that is set on the control level.
+The following steps shows how to set a different orientation for different items in the WebDataMenu by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.datamenugroupsettings~orientation.html[Orientation]"]  property on the item level. This overrides the Orientation property that is set on the control level.
 
 [start=1]
 . From the Visual Studio™ Toolbox, drag and drop a ScriptManager component and a WebDataMenu control onto the form.
 [start=2]
 . Add items to WebDataMenu as shown in the link:webdatamenu-getting-started-with-webdatamenu.html[Getting Started with WebDataMenu] topic .
 [start=3]
-. Select the Edit item in the WebDataMenu designer and expand the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatamenu~groupsettings.html[GroupSettings]"]  property. Set the Orientation property to Horizontal from the drop-down list. Your WebDataMenu designer now looks similar to the following image:
+. Select the Edit item in the WebDataMenu designer and expand the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatamenu~groupsettings.html[GroupSettings]"]  property. Set the Orientation property to Horizontal from the drop-down list. Your WebDataMenu designer now looks similar to the following image:
 
 image::images/WebDataMenu_Complex_Oreintation_01.png[]
 

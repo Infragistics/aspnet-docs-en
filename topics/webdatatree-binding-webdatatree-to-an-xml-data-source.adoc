@@ -88,7 +88,7 @@ image::images/WebDataTree_Binding_WebDataTree_to_an%20Xml_Data_Source_03.png[]
 [start=12]
 . To specify the data bindings click Edit DataBindings from the WebDataTree control’s smart tag. This opens the WebDataTree Designer dialog.
 [start=13]
-. Select Customer node and click the Add Databinding button. This will add the node to the Selected databindings area. Set the  link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]  property to CustomerName by clicking the drop-down combo in the property window so that CustomerName will be the display text of the node. Similarly, set the   link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webdropdown~valuefield.html[ValueField]  property to CustomerID .
+. Select Customer node and click the Add Databinding button. This will add the node to the Selected databindings area. Set the  link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~textfield.html[TextField]  property to CustomerName by clicking the drop-down combo in the property window so that CustomerName will be the display text of the node. Similarly, set the   link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webdropdown~valuefield.html[ValueField]  property to CustomerID .
 
 
 .Note:

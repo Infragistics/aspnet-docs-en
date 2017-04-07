@@ -14,7 +14,7 @@
 
 = Create an Object that Updates an Activity's Properties
 
-If you update  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  client-side you will need to create an object that mimics the properties of an activity. You can list every property if you are updating every property of the activity, but you can also define only the properties you want to update in the object and exclude the ones you don't want to update.
+If you update  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  client-side you will need to create an object that mimics the properties of an activity. You can list every property if you are updating every property of the activity, but you can also define only the properties you want to update in the object and exclude the ones you don't want to update.
 
 The JavaScript code snippet below shows how to create an object that updated all the properties of an activity.
 

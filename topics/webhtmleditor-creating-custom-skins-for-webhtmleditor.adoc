@@ -14,7 +14,7 @@
 
 = Creating Custom Skins for WebHtmlEditor
 
-In this walkthrough you will learn about skinning WebHtmlEditor™ control programmatically. You will envision a consistent-looking style that you'd like to apply to WebHtmlEditor. Next, you will write the code to make the necessary settings to the WebHtmlEditor control through the code-behind file on the first request to the page. Then you will store the skin information for later use as an XML file using the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~saveskin.html[SaveSkin]"]  method. The goal of this walkthrough is to make yourself a skin file with an Aqua-colored motif for your WebHtmlEditor as shown in the following screenshot, although you can substitute any color scheme you desire.
+In this walkthrough you will learn about skinning WebHtmlEditor™ control programmatically. You will envision a consistent-looking style that you'd like to apply to WebHtmlEditor. Next, you will write the code to make the necessary settings to the WebHtmlEditor control through the code-behind file on the first request to the page. Then you will store the skin information for later use as an XML file using the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~saveskin.html[SaveSkin]"]  method. The goal of this walkthrough is to make yourself a skin file with an Aqua-colored motif for your WebHtmlEditor as shown in the following screenshot, although you can substitute any color scheme you desire.
 
 image::images/Creating_Custom_Skins_for_WebHtmlEditor_01.PNG[]
 

@@ -73,7 +73,7 @@ function WebSlider1_ValueChanged(sender, e)
 ----
 
 [start=10]
-. Be sure to hook up the event handler to WebSlider's client-side event. You can do this by inputting the name of the JavaScript funtion as the value for the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.sliderclientevents~valuechanged.html[ValueChanged]"]  field under  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.sliderclientevents.html[ClientEvents]"]  in WebSlider’s property window.
+. Be sure to hook up the event handler to WebSlider's client-side event. You can do this by inputting the name of the JavaScript funtion as the value for the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.sliderclientevents~valuechanged.html[ValueChanged]"]  field under  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.sliderclientevents.html[ClientEvents]"]  in WebSlider’s property window.
 [start=11]
 . Run the application. You can use the WebSlider control to change the value of the text box.
 

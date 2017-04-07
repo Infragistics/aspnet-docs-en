@@ -14,18 +14,18 @@
 
 = Add an Activity to the Database
 
-In server-side code behind you can add a new  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  to the Activity table in the database for persistence. This example makes use of the link:webschedule-create-an-activity-using-code.html[How to Create an Activity in Code] topic. You will need three things to add an Activity to the database:
+In server-side code behind you can add a new  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activity]"]  to the Activity table in the database for persistence. This example makes use of the link:webschedule-create-an-activity-using-code.html[How to Create an Activity in Code] topic. You will need three things to add an Activity to the database:
 
 [start=1]
-. A concrete instance of an Activity (for example, an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  object.)
+. A concrete instance of an Activity (for example, an  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  object.)
 [start=2]
-. The  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resource]"]  (person or thing) this Activity is owned by, organized by, or pertains to.
+. The  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.resource.html[Resource]"]  (person or thing) this Activity is owned by, organized by, or pertains to.
 [start=3]
 . A data provider derived from the WebScheduleDbProvider class.
 
 Add an ASP.NET Button to your WebForm named "AddButton1", and handle it's Click event to make a new Appointment object.
 
-Pass this along with the Unassigned Resource (or other associated Resource) to the  pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledbprovider~addactivity.html[AddActivity]"]  method on the data provider.
+Pass this along with the Unassigned Resource (or other associated Resource) to the  pick:[asp-net="link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledbprovider~addactivity.html[AddActivity]"]  method on the data provider.
 
 *In Visual Basic:*
 

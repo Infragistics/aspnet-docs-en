@@ -82,7 +82,7 @@ image::images\WebDataMenu_Binding_WebDataMenu_to_an_Xml_Data_Source_02.png[]
 [start=9]
 . Select the Xml file you want to use and click OK. In this case, Orders.xml.
 [start=10]
-. In the Property window for WebDataMenu, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.framework.data.hierarchicaldataboundcontrolmain~datasourceid.html[DataSourceID]"]  property to be the id of the XmlDataSource component.
+. In the Property window for WebDataMenu, set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.framework.data.hierarchicaldataboundcontrolmain~datasourceid.html[DataSourceID]"]  property to be the id of the XmlDataSource component.
 [start=11]
 . At this point, when you save and run your application your WebDataMenu just shows the items from your Xml file but doesn’t show the data. Your WebForm looks similar to the following image when the menu items are selected:
 
@@ -91,7 +91,7 @@ image::images\WebDataMenu_Binding_WebDataMenu_to_an_Xml_Data_Source_03.png[]
 [start=12]
 . To specify the data bindings click Edit DataBindings from the WebDataMenu control’s smart tag. This opens the WebDataMenu Designer dialog.
 [start=13]
-. Select Customer node and click the Add Databinding button. This will add the item to the Selected databindings area. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitembinding~textfield.html[TextField]"]  property to CustomerName by clicking the dropdown combo in the property window so that CustomerName will be the display text of the item. Similarly, set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.navitembinding~valuefield.html[ValueField]"]  property to CustomerID .
+. Select Customer node and click the Add Databinding button. This will add the item to the Selected databindings area. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitembinding~textfield.html[TextField]"]  property to CustomerName by clicking the dropdown combo in the property window so that CustomerName will be the display text of the item. Similarly, set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.navitembinding~valuefield.html[ValueField]"]  property to CustomerID .
 
 .Note:
 [NOTE]

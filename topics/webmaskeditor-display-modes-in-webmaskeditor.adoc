@@ -14,9 +14,9 @@
 
 = Display Modes in WebMaskEditor
 
-WebMaskEditor™ provides you with two different options on how to display the text when control has no focus and no data. This option can be set by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmaskeditor~displaymode.html[DisplayMode]"]  property.
+WebMaskEditor™ provides you with two different options on how to display the text when control has no focus and no data. This option can be set by simply setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmaskeditor~displaymode.html[DisplayMode]"]  property.
 
-You can set the DisplayMode property to one of the members in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.maskdisplaymode.html[MaskDisplayMode]"]  enumeration, either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+You can set the DisplayMode property to one of the members in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.maskdisplaymode.html[MaskDisplayMode]"]  enumeration, either by using the Microsoft® Visual Studio® Property Window or by using the following code:
 
 *In Visual Basic:*
 

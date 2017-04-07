@@ -14,7 +14,7 @@
 
 = Display Modes
 
-WebTab™ supports different types of rendering mode so that the tabs are arranged in a single row or in multi rows or with scroll buttons. The following are the different types of display mode (  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabdisplaymode.html[TabDisplayMode]"]  enumeration) that can be set in a WebTab:
+WebTab™ supports different types of rendering mode so that the tabs are arranged in a single row or in multi rows or with scroll buttons. The following are the different types of display mode (  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabdisplaymode.html[TabDisplayMode]"]  enumeration) that can be set in a WebTab:
 
 * *SingleRow* – Tabs are placed in a single row without scroll buttons.
 
@@ -30,7 +30,7 @@ When there are more number of tabs with width set on the control, some tabs may 
 .Note:
 [NOTE]
 ====
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem.html[ContentTabItem]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~nextrow.html[NextRow]"]  property is used to force the tab onto the next row when  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~displaymode.html[DisplayMode]"]  is set to MultiRow.
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contenttabitem.html[ContentTabItem]"]  object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~nextrow.html[NextRow]"]  property is used to force the tab onto the next row when  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~displaymode.html[DisplayMode]"]  is set to MultiRow.
 ====
 
 * *MultiRowAuto* – Tabs are placed in multiple, rows and row breaks are adjusted dynamically on the client.

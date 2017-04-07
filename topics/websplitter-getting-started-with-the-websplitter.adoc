@@ -35,15 +35,15 @@ When you finish reading, you will have a WebForm with an instance of the WebSpli
 [start=2]
 . Click on the WebSplitter control and in the Property Window, locate and set the Height property to 600px. Locate and set the Width property to 800px.
 [start=3]
-. In the Property Window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.websplitter~orientation.html[Orientation]"]  property and set it to Vertical.
+. In the Property Window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.websplitter~orientation.html[Orientation]"]  property and set it to Vertical.
 [start=4]
-. Next we will add several Content Panes to the WebSplitter control. In the Property Window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.websplitter~panes.html[Panes]"]  property and click the ellipsis button (...) to launch the SplitterPane Collection Editor.
+. Next we will add several Content Panes to the WebSplitter control. In the Property Window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.websplitter~panes.html[Panes]"]  property and click the ellipsis button (...) to launch the SplitterPane Collection Editor.
 [start=5]
 . In the SplitterPane Collection Editor, click the Add button two times. This will add SplitterPane1 and SplitterPane2 to the collection.
 [start=6]
-. Click on SplitterPane1 and in the Property Window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentURL]"]  property and set it to http://www.infragistics.com. Click the OK button to close the dialog. The first SplitterPane will load the Infragistics web site as its content.
+. Click on SplitterPane1 and in the Property Window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contentpane~contenturl.html[ContentURL]"]  property and set it to http://www.infragistics.com. Click the OK button to close the dialog. The first SplitterPane will load the Infragistics web site as its content.
 [start=7]
-. Next we will use the second SplitterPane to host some controls. We will do this by adding a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contentpane~template.html[Template]"]  to the SplitterPane. In order to do this, on Default.aspx, click on the Source button to show the page markup.
+. Next we will use the second SplitterPane to host some controls. We will do this by adding a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contentpane~template.html[Template]"]  to the SplitterPane. In order to do this, on Default.aspx, click on the Source button to show the page markup.
 
 Locate the Panes collection underneath the WebSplitter definition. From the steps we have taken so far, the markup should look like this:
 

@@ -62,11 +62,11 @@ You will learn how to display the WebDialogWindow control using the client-side 
 [start=14]
 . In Design view, select the WebDialogWindow control.
 [start=15]
-. Locate the WebDialogWindow control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~header.html[Header]"]  property, and expand it. Find the Header property's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.layoutheader~captiontext.html[CaptionText]"]  property and set it to "Product Not Available Dialog".
+. Locate the WebDialogWindow control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~header.html[Header]"]  property, and expand it. Find the Header property's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.layoutheader~captiontext.html[CaptionText]"]  property and set it to "Product Not Available Dialog".
 [start=16]
-. Set WebDialogWindow's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~initiallocation.html[InitialLocation]"]  property to Centered. If you wish, you can resize the dialog so it's only as large as its content.
+. Set WebDialogWindow's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~initiallocation.html[InitialLocation]"]  property to Centered. If you wish, you can resize the dialog so it's only as large as its content.
 [start=17]
-. When the application first runs, you will want the WebDialogWindow control hidden - do this by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~windowstate.html[WindowState]"]  property to Hidden.
+. When the application first runs, you will want the WebDialogWindow control hidden - do this by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webdialogwindow~windowstate.html[WindowState]"]  property to Hidden.
 [start=18]
 . Create the WebImageViewer's ImageClick client-side event. For information on creating client-side events, see link:setting-up-a-client-side-event.html[Setting Up a Client Side Event].
 [start=19]

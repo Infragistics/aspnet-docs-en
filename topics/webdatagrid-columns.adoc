@@ -24,13 +24,13 @@ Clicking the ellipsis (…) button of the Columns property for WebDataGrid bring
 
 image::images/WebDataGrid_About_Columns_01.png[]
 
-In the top left section you will find the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.boundcheckboxfield.html[BoundCheckBoxField]"] , the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.bounddatafield.html[BoundField]"] , the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.unboundcheckboxfield.html[UnboundCheckBoxField]"] , the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.unboundfield.html[UnboundField]"]  and the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.templatedatafield.html[TemplateField]"]  nodes. The columns nested within these nodes are columns available to the WebDataGrid control. You can select one of these columns and click the *Add* button to add a column to the columns collection, displaying them in the grid.
+In the top left section you will find the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.boundcheckboxfield.html[BoundCheckBoxField]"] , the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.bounddatafield.html[BoundField]"] , the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.unboundcheckboxfield.html[UnboundCheckBoxField]"] , the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.unboundfield.html[UnboundField]"]  and the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.templatedatafield.html[TemplateField]"]  nodes. The columns nested within these nodes are columns available to the WebDataGrid control. You can select one of these columns and click the *Add* button to add a column to the columns collection, displaying them in the grid.
 
 The Selected Fields section displays columns currently defined in the grid. This is the section where you can set up the column schema that you want for the control.
 
 Beneath the selected fields are options to auto-generate fields or convert a field into a template field. Checking the check box for auto-generating fields generates all columns based on the data source in addition to the columns defined in the Selected Fields section. The “convert” option converts a selected field to a template field or converts it back to a bound field if it is already a template.
 
-On the right side are all the properties associated with a selected column. Here you can set options such as the format string, header/footer properties, key,  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.bounddatafield~datafieldname.html[DataFieldName]"] , and width for a column. The DataFieldName property specifies which field name in the underlying data source associated with the selection column. The header and footer properties allow you to set properties such as text for the header and footer.
+On the right side are all the properties associated with a selected column. Here you can set options such as the format string, header/footer properties, key,  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.bounddatafield~datafieldname.html[DataFieldName]"] , and width for a column. The DataFieldName property specifies which field name in the underlying data source associated with the selection column. The header and footer properties allow you to set properties such as text for the header and footer.
 
 .Note:
 [NOTE]
@@ -44,7 +44,7 @@ A bound field is a column generated from the data source. All available fields r
 
 == Bound Checkbox Field
 
-A bound checkbox field is a field generated from the data source that is rendered as a checkbox. The bound checkbox field can represent any kind of data, however non-Boolean data must be converted using a converter class implementing the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.ibooleanconverter.html[IBooleanConverter]"]  interface.
+A bound checkbox field is a field generated from the data source that is rendered as a checkbox. The bound checkbox field can represent any kind of data, however non-Boolean data must be converted using a converter class implementing the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.ibooleanconverter.html[IBooleanConverter]"]  interface.
 
 == Unbound Field
 

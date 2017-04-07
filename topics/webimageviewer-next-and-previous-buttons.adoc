@@ -18,7 +18,7 @@ The WebImageViewer™ control uses a viewport to restrict the visible portion of
 
 While navigating through the images they are scrolled using a scroll animation. For more information, see link:webimageviewer-change-how-the-image-viewer-scrolls-through-images.html[Change how the Image Viewer Scrolls Through Images].
 
-By default, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.imagebutton~visible.html[Visible]"]  property on the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~nextbutton.html[NextButton]"]  object and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~previousbutton.html[PreviousButton]"]  object is set to True.
+By default, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.imagebutton~visible.html[Visible]"]  property on the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webimageviewer~nextbutton.html[NextButton]"]  object and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webimageviewer~previousbutton.html[PreviousButton]"]  object is set to True.
 
 The following code snippet shows how to set properties on the NextButton object.
 

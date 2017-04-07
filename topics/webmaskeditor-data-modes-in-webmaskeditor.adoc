@@ -14,13 +14,13 @@
 
 = Data Modes in WebMaskEditor
 
-WebMaskEditor™ allows you to specify if input mask literals should be included with the value property. You can configure this behavior by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmaskeditor~datamode.html[DataMode]"]  property This behavior can be configured according to the following variations:
+WebMaskEditor™ allows you to specify if input mask literals should be included with the value property. You can configure this behavior by simply setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmaskeditor~datamode.html[DataMode]"]  property This behavior can be configured according to the following variations:
 
 * Whether or not the literal characters (non-editable part of mask such as slashes or dashes in date values) should be included.
 * Whether or not the required empty mask positions should be included.
 * Whether or not the optional empty mask positions should be included.
 
-You can set the DataMode property to one of the members in the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.maskdatamode.html[MaskDataMode]"]  enumeration, either by using the Microsoft® Visual Studio® Property Window or by using the following code:
+You can set the DataMode property to one of the members in the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.maskdatamode.html[MaskDataMode]"]  enumeration, either by using the Microsoft® Visual Studio® Property Window or by using the following code:
 
 *In Visual Basic:*
 

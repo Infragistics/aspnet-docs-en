@@ -13,7 +13,7 @@
 
 = Tab Moving
 
-WebTab™ supports tab moving by your end users with a mouse drag. You can enable this feature by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~tabmoving.html[TabMoving]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabmoving~enabled.html[Enabled]"]  property to True.
+WebTab™ supports tab moving by your end users with a mouse drag. You can enable this feature by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~tabmoving.html[TabMoving]"]  object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabmoving~enabled.html[Enabled]"]  property to True.
 
 .Note:
 [NOTE]
@@ -21,7 +21,7 @@ WebTab™ supports tab moving by your end users with a mouse drag. You can enabl
 It is not recommended to use this feature when multi-row tabs are enabled because of the limited support.
 ====
 
-You can also apply your own Css classes for the main html element and the mark-up copy of the tab item by using the TabMoving object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabmoving~cssclass.html[CssClass]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabmoving~markupcssclass.html[MarkUpCssClass]"]  properties respectively.
+You can also apply your own Css classes for the main html element and the mark-up copy of the tab item by using the TabMoving object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabmoving~cssclass.html[CssClass]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabmoving~markupcssclass.html[MarkUpCssClass]"]  properties respectively.
 
 *In HTML:*
 
@@ -50,7 +50,7 @@ WebTab1.TabMoving.MarkUpCssClass = "copyCss";
 .Note:
 [NOTE]
 ====
-TabMoving feature affects the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~visibleindex.html[VisibleIndex]"]  property of the tab item. This property can be set both on the server and on the client.
+TabMoving feature affects the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.contenttabitem~visibleindex.html[VisibleIndex]"]  property of the tab item. This property can be set both on the server and on the client.
 ====
 
 == Related Topics

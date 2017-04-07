@@ -14,7 +14,7 @@
 
 = Add a Recurring Appointment Client Side
 
-Using WebSchedule's™ client-side object model (CSOM), you can create a recurring appointment client side. To do so, you will need to obtain an  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  object. This can be done either by creating a new appointment or retrieving one from the Activities collection. Once you have a reference to an appointment, you can create a recurrence object from it with the CreateRecurrence function. Once you set up the recurrence object, set the recurrence of the appointment to the recurrence object created with the setRecurrence function. Finally, add the activity to the Activities collection.
+Using WebSchedule's™ client-side object model (CSOM), you can create a recurring appointment client side. To do so, you will need to obtain an  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"]  object. This can be done either by creating a new appointment or retrieving one from the Activities collection. Once you have a reference to an appointment, you can create a recurrence object from it with the CreateRecurrence function. Once you set up the recurrence object, set the recurrence of the appointment to the recurrence object created with the setRecurrence function. Finally, add the activity to the Activities collection.
 
 *In JavaScript:*
 

@@ -18,8 +18,8 @@ This section lists each namespace that is relevant to the component. We also giv
 
 === WebDocumentExporter Namespace:
 
-link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols_namespace.html[Infragistics.Web.UI.GridControls]
+link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols_namespace.html[Infragistics.Web.UI.GridControls]
 
 === Key Classes:
 
-link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter.html[WebDocumentExporter]
+link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdocumentexporter.html[WebDocumentExporter]

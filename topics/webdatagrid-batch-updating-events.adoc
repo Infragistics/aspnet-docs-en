@@ -20,8 +20,8 @@ Batch Updating Client Events
 
 The activation of the batch updating functionality fires two client events that you can use when undoing modified rows:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingclientevents~batchupdateundone.html[batchUndone]"]  - fired upon recovering a deleted row (the user has clicked the Undo button)
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editingclientevents~batchupdateundoing.html[batchUndoing]"]  - fired upon restoring a change made to a row (the user has pressed Ctrl+Z)
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingclientevents~batchupdateundone.html[batchUndone]"]  - fired upon recovering a deleted row (the user has clicked the Undo button)
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editingclientevents~batchupdateundoing.html[batchUndoing]"]  - fired upon restoring a change made to a row (the user has pressed Ctrl+Z)
 
 The following markup code snippet demonstrates how to attach to these events.
 
@@ -126,15 +126,15 @@ Table 2: Reference table for the server event arguments
 |====
 |Arguments|Descripton
 
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid_members.html[sender]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid_members.html[sender]"] 
 |Pointer to the WebDataGrid server instance.
 
-| pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowupdatingeventargs_members.html[RowUpdatingEventArgs]"] 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowupdatedeventargs_members.html[RowUpdatedEventArgs]"] 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowaddingeventargs_members.html[RowAddingEventArgs]"] 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowaddedeventargs_members.html[RowAddedEventArgs]"] 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeletingeventargs.html[RowDeletingEventArgs]"] 
-pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.rowdeletedeventargs_members.html[RowDeletedEventArgs]"] 
+| pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowupdatingeventargs_members.html[RowUpdatingEventArgs]"] 
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowupdatedeventargs_members.html[RowUpdatedEventArgs]"] 
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowaddingeventargs_members.html[RowAddingEventArgs]"] 
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowaddedeventargs_members.html[RowAddedEventArgs]"] 
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowdeletingeventargs.html[RowDeletingEventArgs]"] 
+pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.rowdeletedeventargs_members.html[RowDeletedEventArgs]"] 
 |Object that contains information for the server event and current context.
 
 |====

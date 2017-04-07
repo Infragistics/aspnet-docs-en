@@ -14,7 +14,7 @@
 
 = Make the FontSize Drop-Down List Render Previews
 
-WebHtmlEditor™ provides a  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~fontsizelist.html[FontSizeList]"]  property that accepts font sizes your users can apply to ranges of text. For this to work, the strings you add to the FontSizeList property must be valid values of the size attribute on an HTML font tag.
+WebHtmlEditor™ provides a  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~fontsizelist.html[FontSizeList]"]  property that accepts font sizes your users can apply to ranges of text. For this to work, the strings you add to the FontSizeList property must be valid values of the size attribute on an HTML font tag.
 
 [cols="a,a"]
 |====

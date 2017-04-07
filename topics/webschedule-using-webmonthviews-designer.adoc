@@ -42,7 +42,7 @@ The screen captures below are smaller than the actual size, and may be cropped t
 image::images/WebSchedule_Walk_Through_Using_the_WebMonthView_Designers_01.png[]
 
 [start=4]
-. *The Feature Picker is loaded.* The WebMonthView Designer loads with the Feature Picker selected. The Feature Picker is designed to allow you to quickly and easily set some of the standard functional properties of the control in a convenient location, without making you scroll though the entire properties listing of the control. Some of the many features that you can set include  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview~weeknumbersvisible.html[WeekNumbersVisible]"] ,  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview~dayofweekheadersvisible.html[DayOfWeekHeadersVisible]"] , and  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview~weekenddisplayformat.html[WeekendDisplayFormat]"] .
+. *The Feature Picker is loaded.* The WebMonthView Designer loads with the Feature Picker selected. The Feature Picker is designed to allow you to quickly and easily set some of the standard functional properties of the control in a convenient location, without making you scroll though the entire properties listing of the control. Some of the many features that you can set include  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webmonthview~weeknumbersvisible.html[WeekNumbersVisible]"] ,  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webmonthview~dayofweekheadersvisible.html[DayOfWeekHeadersVisible]"] , and  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webmonthview~weekenddisplayformat.html[WeekendDisplayFormat]"] .
 [start=5]
 . *Select the Presets node.* The next node of interest is the Presets node. Selecting this node will change the Designer to display the following.
 
@@ -78,7 +78,7 @@ image::images/WebSchedule_Walk_Through_Using_the_WebMonthView_Designers_04.png[]
 [start=10]
 . *Work with some of the key styling objects.*
 
-One advantage that the Control Settings area has over the Visual Studio .NET's Properties dialog box is that in the middle of the area, it conveniently pulls out some of the key styling objects that you may want to use. If you select  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.dayorientedscheduleview~activedayheaderstyle.html[ActiveDayHeaderStyle]"] , you will notice that the Properties area in the right-hand area of the window will change to show that particular style's properties.
+One advantage that the Control Settings area has over the Visual Studio .NET's Properties dialog box is that in the middle of the area, it conveniently pulls out some of the key styling objects that you may want to use. If you select  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.dayorientedscheduleview~activedayheaderstyle.html[ActiveDayHeaderStyle]"] , you will notice that the Properties area in the right-hand area of the window will change to show that particular style's properties.
 
 image::images/WebSchedule_Walk_Through_Using_the_WebMonthView_Designers_05.png[]
 

@@ -18,7 +18,7 @@ WebDataGrid™ supports virtual scrolling which allows it to send partial amount
 
 == Row Cache and Load Threshold
 
-WebDataGrid allows you to configure the size of the row cache by setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.virtualscrolling.html[VirtualScrolling]"]  object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~rowcachefactor.html[RowCacheFactor]"]  property. The number of rows in the cache is equal to the visible rows multiplied by the RowCacheFactor. You can also configure the threshold value which notifies the grid that it has reached a specific point in the row cache and additional rows are required; this functionality can be set through the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~thresholdfactor.html[ThresholdFactor]"]  property.
+WebDataGrid allows you to configure the size of the row cache by setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.virtualscrolling.html[VirtualScrolling]"]  object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~rowcachefactor.html[RowCacheFactor]"]  property. The number of rows in the cache is equal to the visible rows multiplied by the RowCacheFactor. You can also configure the threshold value which notifies the grid that it has reached a specific point in the row cache and additional rows are required; this functionality can be set through the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~thresholdfactor.html[ThresholdFactor]"]  property.
 
 For example, if WebDataGrid has a view port of 10 rows with the RowCacheFactor set to 3, the row cache equals 30 rows. If you scroll to row 101, you would see rows 101 through 110 in the view port. The additional cached rows out of view are rows 91 through 100 and rows 111-120. If the ThresholdFactor is .5 and the view port contains 10 rows, the threshold is at 5 rows from the end of the row cache. So in this example, the threshold would be at rows 95 and 115. If you scroll to one of these rows WebDataGrid makes a request for additional rows.
 
@@ -32,12 +32,12 @@ If the value of the AverageRowHeight property is significantly different from th
 
 == Scrolling Modes
 
-The virtual scrolling mechanism can be operated in two different modes by simply setting the VirtualScrolling object’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~scrollingmode.html[ScrollingMode]"]  property:
+The virtual scrolling mechanism can be operated in two different modes by simply setting the VirtualScrolling object’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~scrollingmode.html[ScrollingMode]"]  property:
 
 * *Virtual* -- In this mode, the end-user can instantly scroll through the rows that are already cached within the grid. When attempting to scroll beyond the cached records, an AJAX request is made to retrieve the next batch of records that belong within that range.
 * *Deferred* -- In this mode, the end-user can scroll through the data records by clicking and dragging the vertical scrollbar. However, the grid will only jump to the records at the scroll bar position once the end-user releases the mouse capture on the scrollbar. While the end-user is scrolling, the index of the first visible row is displayed as a tooltip. The grid uses the selected row as the top most visible row in the grid and resets the cache based on that row.
 
-Scrolling through data that is within the row cache is a smooth process. WebDataGrid exhibits a slight pause if scrolling results in a data request. Since it is possible that the end-user can hold down the scroll bar and drag erratically, a concept known as a data fetch delay has been added to WebDataGrid and exposed as a property that can be configured. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~datafetchdelay.html[DataFetchDelay]"]  property allows you to specify the amount of time that needs to elapse after the end user stops scrolling. When this time has elapsed WebDataGrid will then initiate its request to fetch the additional rows. You can granularly control and tweak when WebDataGrid requests additional rows.
+Scrolling through data that is within the row cache is a smooth process. WebDataGrid exhibits a slight pause if scrolling results in a data request. Since it is possible that the end-user can hold down the scroll bar and drag erratically, a concept known as a data fetch delay has been added to WebDataGrid and exposed as a property that can be configured. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~datafetchdelay.html[DataFetchDelay]"]  property allows you to specify the amount of time that needs to elapse after the end user stops scrolling. When this time has elapsed WebDataGrid will then initiate its request to fetch the additional rows. You can granularly control and tweak when WebDataGrid requests additional rows.
 
 You can enable the virtual scrolling behavior on WebDataGrid through the designer, through the Microsoft® Visual Studio® Property Window, or by using the following code:
 
@@ -55,7 +55,7 @@ WebDataGrid1.Behaviors.VirtualScrolling.Enabled = true;
 
 == Virtual Scrolling and Paging
 
-WebDataGrid allows you to use the Virtual Scrolling behavior even when the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~paging.html[Paging]"]  behavior is enabled. For example, if the PageSize is set to 500 and the RowCacheFactor is set to 3 with 10 visible rows in the WebDataGrid and when the end-user scrolls to the row beyond the row index 30 or beyond the virtual scrolling threshold, virtual scrolling will be initiated to request more rows from the server. However if the row cache size is greater than the page size, virtual scrolling will not take place as all the rows have already been loaded into the WebDataGrid’s current page.
+WebDataGrid allows you to use the Virtual Scrolling behavior even when the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~paging.html[Paging]"]  behavior is enabled. For example, if the PageSize is set to 500 and the RowCacheFactor is set to 3 with 10 visible rows in the WebDataGrid and when the end-user scrolls to the row beyond the row index 30 or beyond the virtual scrolling threshold, virtual scrolling will be initiated to request more rows from the server. However if the row cache size is greater than the page size, virtual scrolling will not take place as all the rows have already been loaded into the WebDataGrid’s current page.
 
 == Tooltip Visibility
 
@@ -80,7 +80,7 @@ WebDataGrid1.Behaviors.VirtualScrolling.TooltipVisibility = Infragistics.Web.UI.
 [start=2]
 . Bind WebDataGrid to a SqlDataSource component and configure it to retrieve data from the Customers table. For more information on doing this, see the link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid] topic.
 [start=3]
-. In the property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (…) button to launch the Edit Behaviors Dialog.
+. In the property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (…) button to launch the Edit Behaviors Dialog.
 [start=4]
 . Check the Virtual Scrolling Behavior to enable it as shown in the following image:
 
@@ -113,7 +113,7 @@ WebDataGrid1.Behaviors.CreateBehavior<Infragistics.Web.UI.GridControls.VirtualSc
 ----
 
 [start=6]
-. Save and run your application. You will observe that you can instantly scroll through the rows that are already cached within the grid; and also a timed delay depending on the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~datafetchdelay.html[DataFetchDelay]"]  property when you try to scroll beyond the cached records.
+. Save and run your application. You will observe that you can instantly scroll through the rows that are already cached within the grid; and also a timed delay depending on the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.virtualscrolling~datafetchdelay.html[DataFetchDelay]"]  property when you try to scroll beyond the cached records.
 
 Virtual Scrolling Limitation
 

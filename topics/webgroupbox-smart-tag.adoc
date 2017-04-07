@@ -42,6 +42,6 @@ image::images/WebGroupBox_WebGroupBox_Smart_Tag_01.png[]
 
 |Text
 |The text that will be displayed for this control. The text appears vertically centered with respect to the top border
-| pick:[asp-net="link:infragistics4.webui.misc.v{ProductVersion}~infragistics.webui.misc.webgroupbox~text.html[Text]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.misc{ApiVersion}~infragistics.webui.misc.webgroupbox~text.html[Text]"] 
 
 |====

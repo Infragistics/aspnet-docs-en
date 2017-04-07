@@ -14,7 +14,7 @@
 
 = Format the First Day of the Month in WebMonthView
 
-WebMonthView™ allows designers to specify a different day number format string through the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webmonthview~firstdayheaderformatstring.html[FirstDayHeaderFormatString]"]  property. This format string gets applied on the first visible day (in the top-left corner) and on the first calendar day of every month.
+WebMonthView™ allows designers to specify a different day number format string through the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webmonthview~firstdayheaderformatstring.html[FirstDayHeaderFormatString]"]  property. This format string gets applied on the first visible day (in the top-left corner) and on the first calendar day of every month.
 
 The default FirstDayHeaderFormatString includes the abbreviated month. In this example, you will learn how to customize the FirstDayHeaderFormatString in code-behind to display only the day number (with no accompanying month.)
 

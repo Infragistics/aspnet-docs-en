@@ -14,14 +14,14 @@
 
 = Styling WebRating
 
-The WebRating control allows you to set custom images and styles for a unique look and feel. WebRating exposes the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~customimages.html[CustomImages]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~ratingimage.html[RatingImage]"]  properties that you can use to customize the look of the control.
+The WebRating control allows you to set custom images and styles for a unique look and feel. WebRating exposes the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~customimages.html[CustomImages]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~ratingimage.html[RatingImage]"]  properties that you can use to customize the look of the control.
 
 The RatingImage property allows you to set CSS styles for the rating items’ different states: normal, hovered, and selected. The CustomImages property allows you to define individual rating items that you want to display. You can specify custom CSS classes for the rating items just like you would with the RatingImage property.
 
 .Note:
 [NOTE]
 ====
-When using custom images you must set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~imageheight.html[ImageHeight]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webrating~imagewidth.html[ImageWidth]"]  properties on WebRating to define the image size.
+When using custom images you must set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~imageheight.html[ImageHeight]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webrating~imagewidth.html[ImageWidth]"]  properties on WebRating to define the image size.
 ====
 
 == Rating Image

@@ -14,7 +14,7 @@
 
 = Removing a Behavior
 
-You can remove a behavior from the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection in order to disable it. If a behavior has dependent behaviors when you remove it, you will remove those dependent behaviors as well. You can also disable the behavior without removing it by setting its Enabled property to False.
+You can remove a behavior from the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  collection in order to disable it. If a behavior has dependent behaviors when you remove it, you will remove those dependent behaviors as well. You can also disable the behavior without removing it by setting its Enabled property to False.
 
 At design time bring up the Behaviors Editor dialog and uncheck the behavior you want to remove.
 

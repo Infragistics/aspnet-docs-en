@@ -14,7 +14,7 @@
 
 = Setting NavigateURL and Target Properties
 
-You can use WebExplorerBar™ as a navigational layout for your pages. The control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbargroup.html[ExplorerBarGroup]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritem.html[ExplorerBarItem]"]  objects have a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~navigateurl.html[NavigateUrl]"]  property and a  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~target.html[Target]"]  property that you can use to set the URL of your page and the target to load the page, respectively.
+You can use WebExplorerBar™ as a navigational layout for your pages. The control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbargroup.html[ExplorerBarGroup]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritem.html[ExplorerBarItem]"]  objects have a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~navigateurl.html[NavigateUrl]"]  property and a  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.explorerbaritembase~target.html[Target]"]  property that you can use to set the URL of your page and the target to load the page, respectively.
 
 The following code shows you how to use WebExplorerBar's items as navigational links to web pages and load the pages in an iframe.
 

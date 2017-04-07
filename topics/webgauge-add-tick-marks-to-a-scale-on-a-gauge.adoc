@@ -78,11 +78,11 @@ image::images/Gauge_Add_Scales_01.png[Radial gauge with tickmarks set on it.]
 *To add tick marks to your scales at design time:*
 
 [start=1]
-. In the Gauges Collection editor window, click the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgauge~scales.html[Scales]"]  property. Then, click the ellipsis (…) button to open the Scales editor.
+. In the Gauges Collection editor window, click the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgauge~scales.html[Scales]"]  property. Then, click the ellipsis (…) button to open the Scales editor.
 [start=2]
-. Expand the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugescale~majortickmarks.html[MajorTickmarks]"]  property. Then click the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.brushelement.html[BrushElement]"]  property, and from the drop-down list, select Solid Fill.
+. Expand the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgaugescale~majortickmarks.html[MajorTickmarks]"]  property. Then click the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.brushelement.html[BrushElement]"]  property, and from the drop-down list, select Solid Fill.
 [start=3]
-. Expand the BrushElement property and set the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.solidfillbrushelement~color.html[Color]"]  property to 189, 189, 189.
+. Expand the BrushElement property and set the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.solidfillbrushelement~color.html[Color]"]  property to 189, 189, 189.
 [start=4]
 . Under the MajorTickmarks property, set the following properties:
 
@@ -93,7 +93,7 @@ image::images/Gauge_Add_Scales_01.png[Radial gauge with tickmarks set on it.]
 ** EndWidth -- 3
 
 [start=5]
-. Expand the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.radialgaugescale~minortickmarks.html[MinorTickmarks]"]  property. Then click the BrushElement property, and from the drop down list, select SolidFill.
+. Expand the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.radialgaugescale~minortickmarks.html[MinorTickmarks]"]  property. Then click the BrushElement property, and from the drop down list, select SolidFill.
 
 [start=6]
 . Expand the BrushElement property. Then set the Color property to 240, 240, 240\.

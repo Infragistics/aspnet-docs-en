@@ -67,7 +67,7 @@ Name="Infragistics.Web.UI.SharedScripts.igAnimation.js" />
 ----
 
 [start=4]
-. Add an link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid.html[WebDataGrid] control to the page and connect it to data. For information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
+. Add an link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid.html[WebDataGrid] control to the page and connect it to data. For information on doing this, see link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid].
 [start=5]
 . Add a ListBox control to the page.
 [start=6]

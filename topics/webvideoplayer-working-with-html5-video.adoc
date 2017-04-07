@@ -30,7 +30,7 @@ The WebVideoPlayer™ control uses the HTML5-specific <video> tag to play videos
 
 |====
 
-Earlier versions of these browsers are not HTML5 video compatible. Initializing the control in any of older browser versions results in firing the  pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.displaycontrols.videoplayerclientevents~browsernotsupported.html[BrowserNotSupported]"]  event, which if unhandled displays a user-friendly message with links to the download pages of the respective supported browsers.
+Earlier versions of these browsers are not HTML5 video compatible. Initializing the control in any of older browser versions results in firing the  pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.displaycontrols.videoplayerclientevents~browsernotsupported.html[BrowserNotSupported]"]  event, which if unhandled displays a user-friendly message with links to the download pages of the respective supported browsers.
 
 image::images/WebVideoPlayer_Working_with_HTML5_Video_01.png[]
 

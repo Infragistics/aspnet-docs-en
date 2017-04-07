@@ -16,9 +16,9 @@
 
 WebGauge™ is unlike other web controls because in addition to generating HTML, it generates an image on the server upon every request. This image must be deployed in some way so that it is accessible in the client's browser window.
 
-Two options are provided through the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.ultragauge~deploymentscenario.html[DeploymentScenario]"]  property:
+Two options are provided through the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.ultragauge~deploymentscenario.html[DeploymentScenario]"]  property:
 
-* DeploymentScenario = Session: Gauge images are streamed through a page called GaugeImage.aspx which contains a single  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.gaugeimagepipe.html[GaugeImagePipe]"]  control.
+* DeploymentScenario = Session: Gauge images are streamed through a page called GaugeImage.aspx which contains a single  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.gaugeimagepipe.html[GaugeImagePipe]"]  control.
 * DeploymentScenario = FileSystem: Gauge images are saved as files on the file system.
 
 The following sections provide more detailed descriptions of the above-mentioned scenarios:
@@ -41,6 +41,6 @@ If the DeploymentScenario.Scenario property is set to Session, then the applicat
 
 == File System-Based Deployment
 
-In file-system image deployment, an image is saved to the file system on the web server and a URL is generated to correspond to the image that was saved. If the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~imageurl.html[DeploymentScenario.ImageURL]"]  property contains the token "#SEQNUM," then the gauge will save a finite number of images before the file name is reset. For example, if the ImageURL property is set to "Gauge_#SEQNUM(100).jpg", then files will be generated with names like "Gauge_1.jpg", "Gauge_2.jpg", ... "Gauge_99.jpg", "Gauge_100.jpg", then back to "Gauge_1.jpg" again.
+In file-system image deployment, an image is saved to the file system on the web server and a URL is generated to correspond to the image that was saved. If the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~imageurl.html[DeploymentScenario.ImageURL]"]  property contains the token "#SEQNUM," then the gauge will save a finite number of images before the file name is reset. For example, if the ImageURL property is set to "Gauge_#SEQNUM(100).jpg", then files will be generated with names like "Gauge_1.jpg", "Gauge_2.jpg", ... "Gauge_99.jpg", "Gauge_100.jpg", then back to "Gauge_1.jpg" again.
 
-In this scenario, the user account under which the web application is running must have permission to write and modify files in the folder specified under the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~filepath.html[DeploymentScenario.FilePath]"]  property. By default, this user account is "ASPNET" in Windows® XP and "NETWORK SERVICE" in Windows Server 2003.
+In this scenario, the user account under which the web application is running must have permission to write and modify files in the folder specified under the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~filepath.html[DeploymentScenario.FilePath]"]  property. By default, this user account is "ASPNET" in Windows® XP and "NETWORK SERVICE" in Windows Server 2003.

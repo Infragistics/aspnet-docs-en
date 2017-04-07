@@ -136,7 +136,7 @@ _formData_: Gets reference to FormData object(if the browser supports HTML5 file
 
 The following tables map the message codes returned from the server with their meanings.
 
-*Table 2:* Enumeration of type pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.uploadstatus.html[UploadStatus]"]
+*Table 2:* Enumeration of type pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.uploadstatus.html[UploadStatus]"]
 
 [options="header", cols="a,a"]
 |====
@@ -174,7 +174,7 @@ The following tables map the message codes returned from the server with their m
 
 |====
 
-*Table 3*: Enumeration of type pick:[asp-net="link:infragistics4.web.jquery.v{ProductVersion}~infragistics.web.ui.editorcontrols.fileerror.html[FileError]"] (for server side error)
+*Table 3*: Enumeration of type pick:[asp-net="link:{ApiPlatform}web.jquery{ApiVersion}~infragistics.web.ui.editorcontrols.fileerror.html[FileError]"] (for server side error)
 
 [options="header", cols="a,a"]
 |====

@@ -14,7 +14,7 @@
 
 = Loop through the Activities Collection on the Client Side
 
-When working with the WebSchedule™ you may want to loop over the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  available client-side. The code below shows how to loop over the Activities collection client-side and find an activity that's  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment~subject.html[Subject]"]  is New  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"] , and displays an alert box showing its  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment~location.html[Location]"] .
+When working with the WebSchedule™ you may want to loop over the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[Activities]"]  available client-side. The code below shows how to loop over the Activities collection client-side and find an activity that's  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment~subject.html[Subject]"]  is New  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointment]"] , and displays an alert box showing its  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment~location.html[Location]"] .
 
 *In JavaScript:*
 

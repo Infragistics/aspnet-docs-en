@@ -14,7 +14,7 @@
 
 = Edit and Display Modes in WebDateTimeEditor
 
-WebDateTimeEditor™ allows you to specify different format strings for when the control is in edit and display modes. You can set the format of the date used for edit mode (i.e. when the control has input focus) by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~editmodeformat.html[EditModeFormat]"]  property. Similarly, you can set the format of the date used for display mode (i.e. when the control doesn’t have input focus) by simply setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~displaymodeformat.html[DisplayModeFormat]"]  property.
+WebDateTimeEditor™ allows you to specify different format strings for when the control is in edit and display modes. You can set the format of the date used for edit mode (i.e. when the control has input focus) by simply setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~editmodeformat.html[EditModeFormat]"]  property. Similarly, you can set the format of the date used for display mode (i.e. when the control doesn’t have input focus) by simply setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webdatetimeeditor~displaymodeformat.html[DisplayModeFormat]"]  property.
 
 .Note:
 [NOTE]

@@ -14,9 +14,9 @@
 
 = Style Multi Day Event Banner
 
-You can customize the look of the multiday event arrows when displaying events spanning multiple days. The WebMonthView™ and WebDayView™ WebSchedule™ controls expose the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~multidayeventarrowleftstyle.html[MultiDayEventArrowLeftStyle] and link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~multidayeventarrowrightstyle.html[MultiDayEventArrowRightStyle] properties to allow you to set custom styles.
+You can customize the look of the multiday event arrows when displaying events spanning multiple days. The WebMonthView™ and WebDayView™ WebSchedule™ controls expose the link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~multidayeventarrowleftstyle.html[MultiDayEventArrowLeftStyle] and link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~multidayeventarrowrightstyle.html[MultiDayEventArrowRightStyle] properties to allow you to set custom styles.
 
-To change the style of the banner itself, use the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~alldayeventstyle.html[AllDayEventStyle] property.
+To change the style of the banner itself, use the link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~alldayeventstyle.html[AllDayEventStyle] property.
 
 The following code shows you how to set custom multiday event arrow images and change the banner's background color for WebDayView.
 

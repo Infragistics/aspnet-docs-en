@@ -72,7 +72,7 @@ This topic contains the following sections:
 
 The multi-column footer functionality allows you to merge multiple columns footers. This means that the text of the footer of one column is spread across several columns.
 
-Configuring multi-column footers involves creating a link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfield_members.html[GridField] or its descendant instance and setting the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfield~footer.html[Footer] property object. The link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfield~footer.html[Footer] property object is of class link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfieldfootercaption_members.html[GridFieldFooterCaption] and has link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfieldfootercaption~colspan.html[ColSpan] property. This property is responsible for configuring multi-column footers. After setting this property all you need to do is to set the footer text in the Text property of the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfield~footer.html[Footer].
+Configuring multi-column footers involves creating a link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfield_members.html[GridField] or its descendant instance and setting the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfield~footer.html[Footer] property object. The link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfield~footer.html[Footer] property object is of class link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfieldfootercaption_members.html[GridFieldFooterCaption] and has link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfieldfootercaption~colspan.html[ColSpan] property. This property is responsible for configuring multi-column footers. After setting this property all you need to do is to set the footer text in the Text property of the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfield~footer.html[Footer].
 
 Unlike the multi-column header functionality there is no nesting of footers into a group. When configuring multi-column footers, you need to keep in mind the following:
 
@@ -102,7 +102,7 @@ You can span footers in  _GridField_   instances or its descendants.
 
 === Requirements
 
-The  _WebDataGrid_   bound to data with link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~showfooter.html[ShowFooter] property set to  _true_  .
+The  _WebDataGrid_   bound to data with link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~showfooter.html[ShowFooter] property set to  _true_  .
 
 [[_Ref321833485]]
 
@@ -116,7 +116,7 @@ The following table lists the aspects in which multi-column footers can be confi
 
 |Number of columns
 |
-* link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfieldfootercaption~colspan.html[ColSpan] 
+* link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfieldfootercaption~colspan.html[ColSpan] 
 
 |====
 

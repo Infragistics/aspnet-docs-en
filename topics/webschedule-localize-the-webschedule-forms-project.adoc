@@ -14,7 +14,7 @@
 
 = Localize the WebSchedule Forms Project
 
-Localizing Web projects can be a time-consuming process when creating global applications. The WebSchedule controls and components can be easily localized by selecting the setting WebScheduleInfo's™  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~cultureinfo.html[CultureInfo]"]  property. However, setting this property has no effect on the different WebSchedule forms (i.e., Appointment, Recurrence, and Reminder).
+Localizing Web projects can be a time-consuming process when creating global applications. The WebSchedule controls and components can be easily localized by selecting the setting WebScheduleInfo's™  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~cultureinfo.html[CultureInfo]"]  property. However, setting this property has no effect on the different WebSchedule forms (i.e., Appointment, Recurrence, and Reminder).
 
 Because the WebSchedule forms are located in a separate Web project file, we have fully localized the project by creating the string.resx file located in the App_GlobalResources folder. Before you modify any of these forms, it's important to understand the link:webschedule-guidelines-for-customizing-the-appointments-and-reminders-forms.html[Guidelines for Customizing the Appointments and Reminders Forms].
 

@@ -45,4 +45,4 @@ The following table summarizes what’s new in 2015 Volume 1 release. Additional
 
 === EnableSpellCheck property of WebHtmlEditor
 
-Since 2015.1 the WebSpellchecker component has been removed from the toolset. WebHtmlEditor has a new property  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~enablespellcheck.html[EnableSpellCheck]"] , which sets the spellcheck attribute to the editor. When the property is set to true the WebHtmlEditor uses spelling and grammar check of the browser.
+Since 2015.1 the WebSpellchecker component has been removed from the toolset. WebHtmlEditor has a new property  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~enablespellcheck.html[EnableSpellCheck]"] , which sets the spellcheck attribute to the editor. When the property is set to true the WebHtmlEditor uses spelling and grammar check of the browser.

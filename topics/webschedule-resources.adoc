@@ -14,9 +14,9 @@
 
 = Resources
 
-link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resources]  are people or things having  link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activity.html[activities]  that are managed by your scheduling application. Examples include employees in a factory, or conference rooms in an office.
+link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.resource.html[Resources]  are people or things having  link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activity.html[activities]  that are managed by your scheduling application. Examples include employees in a factory, or conference rooms in an office.
 
-In WebSchedule™, activities can be displayed for one active resource at a time. This resource is also called the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResources] .
+In WebSchedule™, activities can be displayed for one active resource at a time. This resource is also called the link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~visibleresources.html[VisibleResources] .
 
 End users viewing your WebSchedule application do not need to be resources, but when they are they can receive reminder notifications for their activities as described in the link:webschedule-reminders.html[Reminders] topic.
 

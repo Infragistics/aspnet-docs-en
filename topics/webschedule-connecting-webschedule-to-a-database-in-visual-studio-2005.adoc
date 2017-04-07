@@ -86,7 +86,7 @@ image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visu
 image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visual_Studio_NET_2005_7.png[]
 
 [start=16]
-. Connect the WebSchedule OLE DB data provider to the WebScheduleInfo™ control by setting the data provider's  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo.html[WebScheduleInfo]"]  property to the ID given to your WebScheduleInfo component (i.e., "WebScheduleInfo1").
+. Connect the WebSchedule OLE DB data provider to the WebScheduleInfo™ control by setting the data provider's  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo.html[WebScheduleInfo]"]  property to the ID given to your WebScheduleInfo component (i.e., "WebScheduleInfo1").
 [start=17]
 . 
 

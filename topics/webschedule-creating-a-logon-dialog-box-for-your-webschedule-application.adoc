@@ -18,7 +18,7 @@
 
 A common way to use WebSchedule™ in a web application is to allow users to log on and view or edit their own activities. This walkthrough creates a simple example of a logon dialog for your WebSchedule application.
 
-Before beginning this walkthrough, you should be familiar with the concept of Resources in WebSchedule, and you should have already added a few  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.resource.html[Resources]"]  beyond the default "Unassigned" resource. You should have a WebScheduleInfo™ on a web form with a valid connection to your WebSchedule database.
+Before beginning this walkthrough, you should be familiar with the concept of Resources in WebSchedule, and you should have already added a few  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.resource.html[Resources]"]  beyond the default "Unassigned" resource. You should have a WebScheduleInfo™ on a web form with a valid connection to your WebSchedule database.
 
 == Follow These Steps:
 
@@ -110,7 +110,7 @@ private void logonButton_Click(object sender, System.EventArgs e)
 [start=6]
 . *Add code to set the WebScheduleInfo's ActiveResourceName property.*
 
-The user is redirected to the next page (Destination.aspx), which contains one or more WebSchedule View controls. This page should evaluate the querystring passed in the previous step and set the  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcename.html[ActiveResourceName]"]  property of the WebScheduleInfo object.
+The user is redirected to the next page (Destination.aspx), which contains one or more WebSchedule View controls. This page should evaluate the querystring passed in the previous step and set the  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~activeresourcename.html[ActiveResourceName]"]  property of the WebScheduleInfo object.
 
 *In Visual Basic:*
 

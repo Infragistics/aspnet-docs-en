@@ -16,9 +16,9 @@
 
 WebProgressBar works as an indicator which shows the end user to what extent a task is completed by indicating the progress starting from a minimum value and ending at a maximum value. There are several WebProgressBar properties that you need to set to have the required minimum, maximum and current values for your application.
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~minimum.html[Minimum]"]  -- Starting value of the bar.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~maximum.html[Maximum]"]  -- Ending value of the bar.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  -- Current progress of the bar.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~minimum.html[Minimum]"]  -- Starting value of the bar.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~maximum.html[Maximum]"]  -- Ending value of the bar.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.displaycontrols.webprogressbar~value.html[Value]"]  -- Current progress of the bar.
 
 .Note:
 [NOTE]

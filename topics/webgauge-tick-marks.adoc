@@ -14,7 +14,7 @@
 
 = Tick Marks
 
-This section provides you with useful information about the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.gaugescaletickmarkappearance.html[TickMark]"]  property of the WebGauge control, as well as a task-based procedure on how to add tick marks to your scale:
+This section provides you with useful information about the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.gaugescaletickmarkappearance.html[TickMark]"]  property of the WebGauge control, as well as a task-based procedure on how to add tick marks to your scale:
 
 * link:webgauge-about-gauge-tick-marks.html[About Gauge Tick Marks]
 * link:webgauge-add-tick-marks-to-a-scale-on-a-gauge.html[Add Tick Marks to a Scale on a Gauge]

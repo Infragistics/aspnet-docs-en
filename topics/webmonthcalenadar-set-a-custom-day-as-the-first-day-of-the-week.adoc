@@ -14,7 +14,7 @@
 
 = Set a Custom Day as the First Day of the Week
 
-WebMonthCalendar™ allows you to set any day as the first day of the week. This can be done by simply setting the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~firstdayofweek.html[FirstDayOfWeek]"]  property to one of the following FirstDayOfWeek enumeration members:
+WebMonthCalendar™ allows you to set any day as the first day of the week. This can be done by simply setting the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~firstdayofweek.html[FirstDayOfWeek]"]  property to one of the following FirstDayOfWeek enumeration members:
 
 * *Sunday* -- Indicates that the first day of the week is Sunday.
 * *Monday* -- Indicates that the first day of the week is Monday.

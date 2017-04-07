@@ -21,13 +21,13 @@ This topic shows how to set up WebGauge™ to create images on the file system o
 [start=1]
 . Select the WebGauge control on your Web form.
 [start=2]
-. In the Properties window, expand the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.ultragauge~deploymentscenario.html[DeploymentScenario]"]  property.
+. In the Properties window, expand the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.ultragauge~deploymentscenario.html[DeploymentScenario]"]  property.
 [start=3]
-. Set the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~mode.html[Mode]"]  property to FileSystem. This should be the default setting.
+. Set the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~mode.html[Mode]"]  property to FileSystem. This should be the default setting.
 [start=4]
-. Set the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~imageurl.html[ImageURL]"]  property to a valid folder within the path of the application.
+. Set the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~imageurl.html[ImageURL]"]  property to a valid folder within the path of the application.
 [start=5]
-. Set the  pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~deleteoldimages.html[DeleteOldImages]"]  property to False if you do not want old image files to be deleted from the GaugeImages directory after approximately 10 minutes. This property is set to True by default.
+. Set the  pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.webui.ultrawebgauge.webgaugedeploymentscenario~deleteoldimages.html[DeleteOldImages]"]  property to False if you do not want old image files to be deleted from the GaugeImages directory after approximately 10 minutes. This property is set to True by default.
 
 .Note:
 [NOTE]

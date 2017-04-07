@@ -41,6 +41,6 @@ image::images/WebScheduleSqlClientProvider_The_WebScheduleSqlClientProvider_Smar
 
 |WebScheduleInfoID
 |Use the drop-down box to select a WebScheduleInfo to associate with the WebScheduleSqlClientProvider.
-| pick:[asp-net="link:infragistics4.webui.webscheduledataprovider.v{ProductVersion}~infragistics.webui.data.webscheduledataproviderbase~webscheduleinfoid.html[WebScheduleInfo]"] 
+| pick:[asp-net="link:{ApiPlatform}webui.webscheduledataprovider{ApiVersion}~infragistics.webui.data.webscheduledataproviderbase~webscheduleinfoid.html[WebScheduleInfo]"] 
 
 |====

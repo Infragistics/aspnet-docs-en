@@ -16,7 +16,7 @@
 
 As navigation within the WebSchedule™ elements takes place, the ActiveDay property of WebScheduleInfo™ is updated accordingly so that the ActiveDay is always visible within the user interface. If multiple view elements are connected to a common WebScheduleInfo element on the page, then, by default, all elements are synchronized to the same active day as the user navigates from one month, week or day to the next.
 
-If no synchronization is desired, set the WebScheduleInfo  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~activedayclientsynchronization.html[ActiveDayClientSynchronization]"]  property to  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.activedayclientsynchronization.html[ActiveDayClientSynchronization.None]"] .
+If no synchronization is desired, set the WebScheduleInfo  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~activedayclientsynchronization.html[ActiveDayClientSynchronization]"]  property to  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.activedayclientsynchronization.html[ActiveDayClientSynchronization.None]"] .
 
 The following code snippet shows how you can set the ActiveDayClientSynchronization property in code.
 

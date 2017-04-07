@@ -32,7 +32,7 @@ using Infragistics.WebUI.WebHtmlEditor;
 ----
 
 [start=2]
-. Look up the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemtype.html[ToolbarItemType]"]  enumeration values corresponding to the buttons not required by your Web application.
+. Look up the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.toolbaritemtype.html[ToolbarItemType]"]  enumeration values corresponding to the buttons not required by your Web application.
 
 For example, if you do not want your Web application to support uploading and attaching media files, you can remove your end users' access to the following buttons:
 
@@ -41,7 +41,7 @@ For example, if you do not want your Web application to support uploading and at
 ** InsertImage
 
 [start=3]
-. In the code-behind file, add code to an event handler (for example, the Page_Load handler) occuring before render to remove these buttons if they exist in the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection.html[ToolbarItemCollection]"]  class using its  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection~remove.html[Remove]"]  method which takes a ToolbarItemType as its argument.
+. In the code-behind file, add code to an event handler (for example, the Page_Load handler) occuring before render to remove these buttons if they exist in the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection.html[ToolbarItemCollection]"]  class using its  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.toolbaritemcollection~remove.html[Remove]"]  method which takes a ToolbarItemType as its argument.
 
 *In Visual Basic:*
 

@@ -14,7 +14,7 @@
 
 = Handle Server Side Event
 
-When using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] drag and drop functionality, there are several server-side events that you can handle to perform your logic. The following code shows how you can handle the WebDataTree control’s serverNodeDropped event and access the event args:
+When using the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree™] drag and drop functionality, there are several server-side events that you can handle to perform your logic. The following code shows how you can handle the WebDataTree control’s serverNodeDropped event and access the event args:
 
 *In HTML:*
 
@@ -44,9 +44,9 @@ When using the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navi
 
 WebDataTree drag and drop has the following new server-side events:
 
-* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~nodeadded_ev.html[NodeAdded]* – occurs after add/insert, whenever node has been successfully added to the collection.
-* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~noderemoved_ev.html[NodeRemoved]* – occurs after removale, whenever node has been successfully removed from the collection.
-* *link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree~nodedropped_ev.html[NodeDropped]* – occurs just after node has been successfully dropped
+* *link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~nodeadded_ev.html[NodeAdded]* – occurs after add/insert, whenever node has been successfully added to the collection.
+* *link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~noderemoved_ev.html[NodeRemoved]* – occurs after removale, whenever node has been successfully removed from the collection.
+* *link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree~nodedropped_ev.html[NodeDropped]* – occurs just after node has been successfully dropped
 
 == Related Topics
 

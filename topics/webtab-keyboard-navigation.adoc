@@ -25,5 +25,5 @@ WebTab™ supports very easy navigation through the tabs using the keyboard.
 .Note:
 [NOTE]
 ====
-WebTab responds to the keyboard only if the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~enableactivation.html[EnableActivation]"]  property is set to True.
+WebTab responds to the keyboard only if the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~enableactivation.html[EnableActivation]"]  property is set to True.
 ====

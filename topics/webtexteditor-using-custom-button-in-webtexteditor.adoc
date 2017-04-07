@@ -14,7 +14,7 @@
 
 = Using Custom Button in WebTextEditor
 
-WebTextEditor™ allows you to have a customized button mainly to raise client and server events. These events can be used to implement custom actions like showing alerts, dialogs, and drop-downs or perform validations, raise postbacks etc. You can display the custom button on the left or on the right by simply setting the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~custombuttondisplay.html[CustomButtonDisplay]"]  property. A list of key actions that trigger the custom button click event can be set by using the control's  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~custombuttonhotkeys.html[CustomButtonHotKeys]"]  property.
+WebTextEditor™ allows you to have a customized button mainly to raise client and server events. These events can be used to implement custom actions like showing alerts, dialogs, and drop-downs or perform validations, raise postbacks etc. You can display the custom button on the left or on the right by simply setting the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~custombuttondisplay.html[CustomButtonDisplay]"]  property. A list of key actions that trigger the custom button click event can be set by using the control's  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~custombuttonhotkeys.html[CustomButtonHotKeys]"]  property.
 
 *In Visual Basic:*
 
@@ -28,7 +28,7 @@ WebTextEditor1.Buttons.CustomButtonDisplay = Infragistics.Web.UI.EditorControls.
 WebTextEditor1.Buttons.CustomButtonDisplay = Infragistics.Web.UI.EditorControls.ButtonDisplay.OnRight;
 ----
 
-You can also set various properties like text, images, tooltip for the custom button by using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~custombutton.html[CustomButton]"]  property.
+You can also set various properties like text, images, tooltip for the custom button by using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.texteditorbuttons~custombutton.html[CustomButton]"]  property.
 
 *In Visual Basic:*
 

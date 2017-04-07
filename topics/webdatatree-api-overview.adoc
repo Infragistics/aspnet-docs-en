@@ -18,12 +18,12 @@ This section lists each namespace that is relevant to the control. We also give 
 
 === WebDataTree Namespace:
 
-link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols_namespace.html[Infragistics.Web.UI.NavigationControls]
+link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols_namespace.html[Infragistics.Web.UI.NavigationControls]
 
 === Key Classes:
 
-link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreenode.html[DataTreeNode]
+link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.datatreenode.html[DataTreeNode]
 
-link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.datatreenodecollection.html[DataTreeNodeCollection]
+link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.datatreenodecollection.html[DataTreeNodeCollection]
 
-link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree]
+link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.navigationcontrols.webdatatree.html[WebDataTree]

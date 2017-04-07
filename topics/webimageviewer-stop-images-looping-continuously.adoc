@@ -16,7 +16,7 @@
 
 When the end user is navigating through the images using the Next or Previous buttons, the images will loop continuously. However, in some cases you may not want your end user to be able to loop through the images continuously. For example, if you have an array of images that describe an installation process, it would be incorrect to show the first image again after the last image.
 
-By default, the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.listcontrols.webimageviewer~wraparound.html[WrapAround]"]  property is set to True. This property can only be set on the server; however, it can be retrieved on the client via the get_wrapAround() method.
+By default, the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.listcontrols.webimageviewer~wraparound.html[WrapAround]"]  property is set to True. This property can only be set on the server; however, it can be retrieved on the client via the get_wrapAround() method.
 
 The example code below shows you how to set the WrapAround property to False.
 

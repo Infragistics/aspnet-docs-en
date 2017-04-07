@@ -360,9 +360,9 @@ link:webschedule-binding-to-access-data-source-using-webschedulegenericdataprovi
 
 == New WebSchedule Multi Day Event Banner
 
-The WebDayView™ and WebMonthView™ WebSchedule™ controls can display a continuous banner for events that span multiple days, weeks, months, or years. The WebScheduleInfo™ component's link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventbanner.html[EnableMultiDayEventBanner] property controls this feature, which is True by default. If EnableMultiDayEventBanner is set to false, a multiple day event displays as single blocks across multiple days.
+The WebDayView™ and WebMonthView™ WebSchedule™ controls can display a continuous banner for events that span multiple days, weeks, months, or years. The WebScheduleInfo™ component's link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventbanner.html[EnableMultiDayEventBanner] property controls this feature, which is True by default. If EnableMultiDayEventBanner is set to false, a multiple day event displays as single blocks across multiple days.
 
-You can also display arrows indicating the start and end dates that the event spans, by setting the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventarrows.html[EnableMultiDayEventArrows] property, which is True by default.
+You can also display arrows indicating the start and end dates that the event spans, by setting the link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultidayeventarrows.html[EnableMultiDayEventArrows] property, which is True by default.
 
 image::images/WebScheduleGenericDataProvider_About_Multi_Day_Event_Banner_01.png[]
 
@@ -376,13 +376,13 @@ link:webschedulegenericdataprovider-style-multi-day-event-banner.html[Style Mult
 
 == New WebSchedule Multi Resource View
 
-The WebSchedule™ controls (WebDayView™ and WebMonthView™) allow you to display scheduling information from multiple resources. To enable multiple resource view, set the WebScheduleInfo component's link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultiresourceview.html[EnableMultiResourceView] property to True.
+The WebSchedule™ controls (WebDayView™ and WebMonthView™) allow you to display scheduling information from multiple resources. To enable multiple resource view, set the WebScheduleInfo component's link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webscheduleinfo~enablemultiresourceview.html[EnableMultiResourceView] property to True.
 
 == Overlay Mode
 
 Overlay mode allows your end users to see scheduling information for different resources in one view; the active resource displays with a unique style to distinguish it from the inactive resources. For information on customizing the styles for active and inactive resources, see link:webschedule-styling-active-and-inactive-resources.html[Styling Active and Inactive Resources].
 
-A tab control allows you to switch between the different resources. Set the link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.webdayview~enablemultiresourcecaption.html[EnableMultiResourceCaption] to True or False to control this behavior.
+A tab control allows you to switch between the different resources. Set the link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.webdayview~enablemultiresourcecaption.html[EnableMultiResourceCaption] to True or False to control this behavior.
 
 image::images/WebSchedule_Enable_Multi_Resource_View_01.png[]
 

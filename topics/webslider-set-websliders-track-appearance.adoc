@@ -16,7 +16,7 @@
 
 You can customize the WebSlider™ control's track appearance when you enable two values. For more information on using two values, see link:webslider-edit-two-values.html[Edit Two Values].
 
-The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.slidertrack~fillvaluemode.html[FillValueMode]"]  property allows you to customize how the track appears when you are using two values:
+The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.slidertrack~fillvaluemode.html[FillValueMode]"]  property allows you to customize how the track appears when you are using two values:
 
 * Range – Show only the range between the primary value and the secondary value, when the secondary value is greater.
 * Main Value – Show only the range of the main value.

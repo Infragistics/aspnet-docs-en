@@ -18,8 +18,8 @@ Your end user can change WebSlider's value in various different ways; they can c
 
 There are several properties you can set to specify the amount of change in WebSlider’s value when your end user clicks a button or presses a key.
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webslider~smallchange.html[SmallChange]"]  -- Specifies the increment amount when your end user clicks a button or presses an arrow key.
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webslider~largechange.html[LargeChange]"]  -- Specifies the increment amount when your end user presses PAGE UP or PAGE DOWN.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webslider~smallchange.html[SmallChange]"]  -- Specifies the increment amount when your end user clicks a button or presses an arrow key.
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webslider~largechange.html[LargeChange]"]  -- Specifies the increment amount when your end user presses PAGE UP or PAGE DOWN.
 
 The following example code demonstrates how to set the small and large increments of WebSlider.
 

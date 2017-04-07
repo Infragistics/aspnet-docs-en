@@ -16,11 +16,11 @@
 
 == Before You Begin
 
-Some default editors in WebDataGrid™ may not be useful in your application. However, you can specify the editor that proves most useful for a column by using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editorprovidercollection.html[EditorProviders]"]  collection.
+Some default editors in WebDataGrid™ may not be useful in your application. However, you can specify the editor that proves most useful for a column by using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editorprovidercollection.html[EditorProviders]"]  collection.
 
 == What You Will Accomplish
 
-You will learn how to use the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.datepickerprovider.html[DatePickerProvider]"]  in a DateTime column for editing.
+You will learn how to use the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.datepickerprovider.html[DatePickerProvider]"]  in a DateTime column for editing.
 
 == Follow these Steps
 
@@ -31,23 +31,23 @@ You will learn how to use the  pick:[asp-net="link:infragistics4.web.v{ProductVe
 [start=3]
 . Click the + button to drop-down a list of possible editors. Select one to make it available later when you are setting up columns. For our purposes, select the DatePickerProvider.
 [start=4]
-. Leave the ID for the editor as DatePickerProvider1 in the property grid on the right. You will need this ID later when setting the editor for a column. You can set any additional properties for the editor control by expanding the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.editorprovider`1~editorcontrol.html[EditorControl]"]  property.
+. Leave the ID for the editor as DatePickerProvider1 in the property grid on the right. You will need this ID later when setting the editor for a column. You can set any additional properties for the editor control by expanding the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.editorprovider`1~editorcontrol.html[EditorControl]"]  property.
 
 image::images/WebDataGrid_Using_Editor_Providers_01.png[]
 
 [start=5]
 . Click Apply then OK to close the designer.
 [start=6]
-. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
+. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors.html[Behaviors]"]  property and click the ellipsis (...) button to launch the Behaviors Editor Dialog.
 [start=7]
 . Check the Cell Editing behavior in the list on the left to enable editing.
 [start=8]
-. Locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.cellediting~columnsettings.html[ColumnSettings]"]  property in the property grid on the right and click the ellipsis (...) button to launch the Column Settings Editor Dialog.
+. Locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.cellediting~columnsettings.html[ColumnSettings]"]  property in the property grid on the right and click the ellipsis (...) button to launch the Column Settings Editor Dialog.
 [start=9]
 . Configure WebDataGrid to use the DatePickerProvider for editing of the RequiredDate column.
 
 .. Add a column setting by clicking the Add button.
-.. Set the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey]"]  as RequiredDate.
+.. Set the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.columnsetting~columnkey.html[ColumnKey]"]  as RequiredDate.
 .. For the EditorID property, click the dropdown list and select DatePickerProvider1. Only editors that are added to the EditorProviders collection are available here.
 .. Leave ReadOnly as False.
 .. Click OK.

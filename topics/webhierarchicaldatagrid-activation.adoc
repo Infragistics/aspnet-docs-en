@@ -30,7 +30,7 @@ With Activation turned on, pressing the + key on your keyboard will expand the c
 
 === Activation at Design Time
 
-Cell activation in WebHierarchicalDataGrid is a behavior. To enable it, click the ellipsis (...) button for  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behavior]"]  in the property window and check the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.activation.html[Activation]"]  behavior in the Behaviors editor.
+Cell activation in WebHierarchicalDataGrid is a behavior. To enable it, click the ellipsis (...) button for  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~behaviors.html[Behavior]"]  in the property window and check the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.activation.html[Activation]"]  behavior in the Behaviors editor.
 
 WebHierarchicalDataGrid’s cell activation behaves in the following ways:
 
@@ -47,9 +47,9 @@ WebHierarchicalDataGrid’s cell activation behaves in the following ways:
 
 === Activation through Code
 
-WebHierarchicalDataGrid provides properties and methods to get or set an active cell. Use the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.activation~activecell.html[ActiveCell]"]  property when on the server and use the get or set accessors when on the client. Set the ActiveCell property to Null if you want to clear WebHierarchicalDataGrid of an active cell. You can get the row or column from the active cell if you need them.
+WebHierarchicalDataGrid provides properties and methods to get or set an active cell. Use the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.activation~activecell.html[ActiveCell]"]  property when on the server and use the get or set accessors when on the client. Set the ActiveCell property to Null if you want to clear WebHierarchicalDataGrid of an active cell. You can get the row or column from the active cell if you need them.
 
-The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabound_ev.html[RowIslandDataBound]"]  server-side event is handled to activate the parent and child cell.
+The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webhierarchicaldatagrid~rowislanddatabound_ev.html[RowIslandDataBound]"]  server-side event is handled to activate the parent and child cell.
 
 The following code assumes Activation Behavior is enabled.
 

@@ -16,7 +16,7 @@
 
 == Before You Begin
 
-WebMonthCalendar™ allows you to customize the appearance or define your own text for specific days in the calendar. Your own custom CSS classes can be used to style the text of any day in the calendar. This can be achieved by setting the control’s  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~customdays.html[CustomDays]"]  property.
+WebMonthCalendar™ allows you to customize the appearance or define your own text for specific days in the calendar. Your own custom CSS classes can be used to style the text of any day in the calendar. This can be achieved by setting the control’s  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.editorcontrols.webmonthcalendar~customdays.html[CustomDays]"]  property.
 
 == What You Will Accomplish
 

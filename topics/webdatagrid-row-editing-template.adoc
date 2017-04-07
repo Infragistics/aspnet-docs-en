@@ -14,11 +14,11 @@
 
 = Row Editing Template (WebDataGrid)
 
-The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate.html[Row Editing Template]"]  is a feature that allows you to present the end-user with a custom interface for data editing in WebDataGrid™. You can populate this template with any controls. The template appears when the end-user attempts to edit a row. You can set options to designate which actions will cause the template to appear using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate~editmodeactions.html[EditModeActions]"]  property. The end-user edits data using the template and when the template closes, changes are applied to the corresponding row.
+The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate.html[Row Editing Template]"]  is a feature that allows you to present the end-user with a custom interface for data editing in WebDataGrid™. You can populate this template with any controls. The template appears when the end-user attempts to edit a row. You can set options to designate which actions will cause the template to appear using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.roweditingtemplate~editmodeactions.html[EditModeActions]"]  property. The end-user edits data using the template and when the template closes, changes are applied to the corresponding row.
 
 == Default Template Generation
 
-When you first enable Row Editing Template, you have the option to populate it with the default TextBox editor control. The  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfield~header.html[Header]"]  information of each column is written within the created <div> tag.
+When you first enable Row Editing Template, you have the option to populate it with the default TextBox editor control. The  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfield~header.html[Header]"]  information of each column is written within the created <div> tag.
 
 == Data Binding
 

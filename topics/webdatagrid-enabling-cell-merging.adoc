@@ -38,7 +38,7 @@ The following table lists the materials required as a prerequisite to understand
 
 === Overview
 
-By default, link:webdatagrid-cell-merging.html[Cell Merging] is disabled. To enable it, you need to have the sorting behavior enabled and set the link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~enablecellmerging.html[EnableCellMerging] property to  _true_  . By default, Cell Merging is handled on the server side. If you don’t want to make requests to the server, you can render Cell Merging on the client side.
+By default, link:webdatagrid-cell-merging.html[Cell Merging] is disabled. To enable it, you need to have the sorting behavior enabled and set the link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting~enablecellmerging.html[EnableCellMerging] property to  _true_  . By default, Cell Merging is handled on the server side. If you don’t want to make requests to the server, you can render Cell Merging on the client side.
 
 === Property settings
 
@@ -49,7 +49,7 @@ The following table maps the desired Enable Cell Merging to property settings.
 |In order to:|Use this property:|And set it to:
 
 |Enable Cell Merging
-| link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.sorting~enablecellmerging.html[EnableCellMerging]
+| link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.sorting~enablecellmerging.html[EnableCellMerging]
 | _true_ 
 
 |====

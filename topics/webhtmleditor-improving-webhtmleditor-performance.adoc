@@ -83,7 +83,7 @@ You can limit the performance impact of WebHtmlEditor's pre-rendered dialog boxe
 
 == Use a small color picker
 
-As a special case of the previous optimization tip ("Use Simple Custom Dialog Content" section), one of the more complicated dialog boxes shown by WebHtmlEditor is the pop-up color picker. By using the  pick:[asp-net="link:infragistics4.webui.webhtmleditor.v{ProductVersion}~infragistics.webui.webhtmleditor.webhtmleditor~colorpalettesize.html[ColorPaletteSize]"]  property, you can reduce the amount of HTML necessary to render this dialog box. This property can be set programmatically in code-behind or through the Properties window (press F4 in Microsoft® Visual Studio® .NET) as shown in the following screenshot.
+As a special case of the previous optimization tip ("Use Simple Custom Dialog Content" section), one of the more complicated dialog boxes shown by WebHtmlEditor is the pop-up color picker. By using the  pick:[asp-net="link:{ApiPlatform}webui.webhtmleditor{ApiVersion}~infragistics.webui.webhtmleditor.webhtmleditor~colorpalettesize.html[ColorPaletteSize]"]  property, you can reduce the amount of HTML necessary to render this dialog box. This property can be set programmatically in code-behind or through the Properties window (press F4 in Microsoft® Visual Studio® .NET) as shown in the following screenshot.
 
 image::images/WebHtmlEditor_Improving_WebHtmlEditor_Performance_01.png[]
 

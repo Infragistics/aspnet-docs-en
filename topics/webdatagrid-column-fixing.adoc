@@ -51,7 +51,7 @@ If column moving behavior is also enabled, then column moving can be performed w
 
 == Fixing a column with keyboard :
 
-WebDataGrid allows fixing and unfixing of columns through keyboard shortcuts. In order to support this feature, you must enable the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~columnfixing.html[ColumnFixing]"]  and  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]   pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~behaviors.html[Behaviors]"]  . Once enabled, your end users simply activate a cell in the column that they wish to fix or unfix and then and press the Ctrl+Shift+F keys.
+WebDataGrid allows fixing and unfixing of columns through keyboard shortcuts. In order to support this feature, you must enable the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~columnfixing.html[ColumnFixing]"]  and  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.behaviors~activation.html[Activation]"]   pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~behaviors.html[Behaviors]"]  . Once enabled, your end users simply activate a cell in the column that they wish to fix or unfix and then and press the Ctrl+Shift+F keys.
 
 == *Enabling Column Fixing*
 
@@ -62,7 +62,7 @@ Follow these steps to enable column fixing by using the WebDataGrid Designer.
 [start=2]
 . Bind WebDataGrid to a SqlDataSource component and configure it to retrieve data from the Customers table. For more information on doing this, see the link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid] topic.
 [start=3]
-. In the property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (…) button to launch the Edit Grid Behaviors Dialog.
+. In the property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis (…) button to launch the Edit Grid Behaviors Dialog.
 [start=4]
 . Check the Column Fixing Behavior to enable it and you will see the Default Grid and Column Widths dialog which provides you with the option of setting the widths of the grid and the columns at design time similar to the following image:
 
@@ -80,8 +80,8 @@ In order to use the Column Fixing behavior, a width must be set on the grid as w
 However you can also set the widths of the grid and the columns (in case you want to set different widths for the columns) by following these steps:
 
 ** Set the width of the grid to 700px by setting the control's link:http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(System.Web.UI.WebControls.WebControl.Width)&rd=true[Width] property.
-** In the property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~columns.html[Columns]"]  property and click the ellipsis(…) button to launch the WebDataGrid Designer Dialog.
-** From the Selected Fields(WebDataGrid.Columns) section, select each field and set their  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.gridfield~width.html[Width]"]  property to 150px as shown in the following image:
+** In the property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~columns.html[Columns]"]  property and click the ellipsis(…) button to launch the WebDataGrid Designer Dialog.
+** From the Selected Fields(WebDataGrid.Columns) section, select each field and set their  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.gridfield~width.html[Width]"]  property to 150px as shown in the following image:
 
 image::images/WebDataGrid_Enabling_Column_Fixing_02.png[]
 

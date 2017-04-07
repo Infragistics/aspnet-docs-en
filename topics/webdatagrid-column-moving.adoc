@@ -61,7 +61,7 @@ Follow these steps to enable column moving by using the WebDataGrid Designer.
 [start=2]
 . Bind WebDataGrid to a SqlDataSource component retrieving data from the Customers table. Retrieve the CustomerID, CompanyName, ContactName, and ContactTitle data. For more information on doing this, see the link:webdatagrid-getting-started-with-webdatagrid.html[Getting Started with WebDataGrid] topic.
 [start=3]
-. In the property window, locate the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.gridcontrols.webdatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis(…) button to launch the Edit Behaviors Dialog.
+. In the property window, locate the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.gridcontrols.webdatagrid~behaviors.html[Behaviors]"]  property and click the ellipsis(…) button to launch the Edit Behaviors Dialog.
 [start=4]
 . Check the Column Moving behavior to enable it as shown in the following image :
 

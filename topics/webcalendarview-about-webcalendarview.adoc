@@ -16,7 +16,7 @@
 
 The WebCalendarView™ control can be used for viewing appointments over a month time span. This control can be used for easier navigation between different months.
 
-The WebCalendarView displays any days with  pick:[asp-net="link:infragistics4.webui.webschedule.v{ProductVersion}~infragistics.webui.webschedule.appointment.html[Appointments]"]  in a highlighted style. To help you easily locate days that you are available for appointments.
+The WebCalendarView displays any days with  pick:[asp-net="link:{ApiPlatform}webui.webschedule{ApiVersion}~infragistics.webui.webschedule.appointment.html[Appointments]"]  in a highlighted style. To help you easily locate days that you are available for appointments.
 
 The WebCalendarView can be styled using Cascading Style Sheets, or using one of the predefined Presets. Using these methods the WebCalendarView can be completely styled at design-time as well as at run-time, to give you the look you want. This giving your form a more professional look.
 

@@ -22,12 +22,12 @@ WebTab™ can have tabs with different states that are indicated by different vi
 * *Activated* – When the end user clicks on a tab or navigates using the keyboard and hits the Enter key, the tab gets activated. Upon click, a tab will be activated as well as selected. If a tab is activated by the end user using the keyboard and pressing the Enter key, then the tab becomes selected; the tab’s corresponding events will fire.
 * *Disabled* – hover, selection or activation style is applied on that item.
 
-These states are enabled by default. You can also disable these states by using the following properties of the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabitemstates.html[TabItemStates]"]  object:
+These states are enabled by default. You can also disable these states by using the following properties of the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabitemstates.html[TabItemStates]"]  object:
 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabitemstates~enableactive.html[EnableActive]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabitemstates~enabledisabled.html[EnableDisabled]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabitemstates~enablehover.html[EnableHover]"] 
-*  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.tabitemstates~enableselected.html[EnableSelected]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabitemstates~enableactive.html[EnableActive]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabitemstates~enabledisabled.html[EnableDisabled]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabitemstates~enablehover.html[EnableHover]"] 
+*  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.tabitemstates~enableselected.html[EnableSelected]"] 
 
 *In HTML:*
 
@@ -57,7 +57,7 @@ WebTab1.TabItemStates.EnableHover = false;
 The more states are enabled, the higher the possibility of the tabs flickering when a state is changed or when the page is complex and has large resources. Disabling particular states may reduce flickering of tab items, though the end user will get a simple UI.
 ====
 
-You can also set you own Css classes to these states using the  pick:[asp-net="link:infragistics4.web.v{ProductVersion}~infragistics.web.ui.layoutcontrols.webtab~tabitemcssclasses.html[TabItemCssClasses]"]  property.
+You can also set you own Css classes to these states using the  pick:[asp-net="link:{ApiPlatform}web{ApiVersion}~infragistics.web.ui.layoutcontrols.webtab~tabitemcssclasses.html[TabItemCssClasses]"]  property.
 
 *In HTML:*
 

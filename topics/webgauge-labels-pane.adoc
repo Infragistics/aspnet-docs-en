@@ -16,9 +16,9 @@
 
 The Labels pane lets you set the text and the rotation angle of the annotation on your gauge.
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.labelappearance~formatstring.html[Format String]"]  -- This value specifies the text of your annotation.
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.labelappearance~formatstring.html[Format String]"]  -- This value specifies the text of your annotation.
 
-pick:[asp-net="link:infragistics4.webui.ultrawebgauge.v{ProductVersion}~infragistics.ultragauge.resources.labelappearance~rotationangle.html[Rotation Angle]"]  -- Set this value to an integer from 0 to 100. This value sets the rotation angle of your annotation.
+pick:[asp-net="link:{ApiPlatform}webui.ultrawebgauge{ApiVersion}~infragistics.ultragauge.resources.labelappearance~rotationangle.html[Rotation Angle]"]  -- Set this value to an integer from 0 to 100. This value sets the rotation angle of your annotation.
 
 image::images/Annotations_Label_Pane_01.png[The labels pane in the gauge designer.]
 
