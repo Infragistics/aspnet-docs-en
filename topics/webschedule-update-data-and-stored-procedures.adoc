@@ -32,8 +32,8 @@ You will learn how to update your existing data base to use the updated stored p
 [start=1]
 . Locate the Upgrade2to9.2.sql file in the following paths:
 
-** Windows XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
-** Windows Vista or later-- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+** Windows XP -- {InstallPathXP}{PlatformName}\WebSchedule\Data
+** Windows Vista or later-- {InstallPathVista}{PlatformName}\WebSchedule\Data
 
 [start=2]
 . Double-click the file to open it in SQL Server. If you are using SQL Server Express, you need SQL Server Management Studio Express to open the file.
