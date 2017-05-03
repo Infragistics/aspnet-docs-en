@@ -39,8 +39,8 @@ image::images/WebSchedule_Connecting_WebSchedule_to_a_Database_in_Microsoft_Visu
 [start=4]
 . The WebSchedule1.mdb file is installed in the following default location, depending on your operating system:
 
-** XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
-** Vista or later -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+** XP -- {InstallPathXP}{PlatformName}\WebSchedule\Data
+** Vista or later -- {InstallPathVista}{PlatformName}\WebSchedule\Data
 
 Right-click on the App_Data folder and select Add Existing Item…. You can then navigate to the Infragistics ASP.NET samples installation folder containing the WebSchedule2.mdb file (or your own Access database file).
 

@@ -556,13 +556,13 @@ In addition, you will also need to deploy your database.
 
 * If you are using WebScheduleOleDbProvider, you must deploy an .mdb. A blank .mdb database file is provided for you in the following folder, depending on your operating system:
 
-** XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
-** Vista -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+** XP -- {InstallPathXP}{PlatformName}\WebSchedule\Data
+** Vista -- {InstallPathVista}{PlatformName}\WebSchedule\Data
 
 * If you are using WebScheduleSqlClientProvider you must run the SQL installation script, WebSchedule2.sql to create a blank database. This script is provided in the following folder, depending on your operating system:
 
-** XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
-** Vista -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+** XP -- {InstallPathXP}{PlatformName}\WebSchedule\Data
+** Vista -- {InstallPathVista}{PlatformName}\WebSchedule\Data
 
 Additionally, see link:webschedule-deploying-to-microsoft-sql-server.html[Deploying on SQL Server] for more information.
 

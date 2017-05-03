@@ -26,8 +26,8 @@ Before you deploy a WebSchedule application to Microsoft SQL Server, please ensu
 
 WebSchedule installs an SQL install script for you to create the required tables, relationships, stored procedures, indexes and default data expected by the WebSchedule data model. The path where this script can be found is in the following default installation folder, depending on your operating system:
 
-* XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
-* Vista -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+* XP -- {InstallPathXP}{PlatformName}\WebSchedule\Data
+* Vista -- {InstallPathVista}{PlatformName}\WebSchedule\Data
 
 The name of this script file starts with WebSchedule, followed by a number identifying the data model schema version, and it has an ".sql" file extension.
 
