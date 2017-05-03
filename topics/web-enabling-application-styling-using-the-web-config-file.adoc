@@ -30,7 +30,7 @@ If you want to enable Application Styling for your entire Web application withou
 image::images/Web_Enabling_Application_Styling_Using_the_Web_Config_File_01.png[]
 
 [start=4]
-. Right-click the ig_res folder and select Add Existing Item…. Navigate to the following folder where the StyleSets are installed by default: {InstallPathXP}{ProductNameVersion}\ASP.NET\StyleLibraries. Copy all the CSS files and images, and paste them into the corresponding folders created in the preceding steps.
+. Right-click the ig_res folder and select Add Existing Item…. Navigate to the following folder where the StyleSets are installed by default: {InstallPathXP}\ASP.NET\StyleLibraries. Copy all the CSS files and images, and paste them into the corresponding folders created in the preceding steps.
 
 .Note:
 [NOTE]

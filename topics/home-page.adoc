@@ -255,9 +255,9 @@ This folder contains the assemblies for the Excel Engine and Document Engine.
 
 ===== Web Presets
 
-XP -- {InstallPathXP}{ProductNameVersion}\Presets\CLR2xCLR35\Web
+XP -- {InstallPathXP}\Presets\CLR2xCLR35\Web
 
-Vista \ Windows 7 -- {InstallPathVista}{ProductNameVersion}\Presets\CLR2xCLR35\Web
+Vista \ Windows 7 -- {InstallPathVista}\Presets\CLR2xCLR35\Web
 
 This folder contains all the in-box presets provided by Infragistics for all Infragistics ASP.NET controls and components. You can use a preset to apply a range of formatting and behavior options across the elements of your interface and applications.
 
@@ -279,7 +279,7 @@ C:\Documents and Settings\[USERID]\MyDocuments\Infragistics\{ProductNameVersion}
 
 C:\Documents and Settings\AllUsers\Documents\Infragistics\{ProductNameVersion}\ASP.NET\StyleLibraries
 
-*In Vista* {InstallPathVista}{ProductNameVersion}\ASP.NET\StyleLibraries
+*In Vista* {InstallPathVista}{PlatformName}\ASP.NET\StyleLibraries
 
 This folder contains all the styles available within ASP.NET. Styles are used by the Application Styling Framework (ASF) when styling your application.
 
