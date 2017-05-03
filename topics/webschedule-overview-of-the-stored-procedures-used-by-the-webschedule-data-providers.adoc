@@ -17,8 +17,8 @@ In the following table you will find the names, descriptions, parameter lists an
 
 Complete Transact SQL definitions for all stored procedures listed here can be found in the "WebSchedule2.sql" database script. You can find this script in the following folder, depending on your operating system:
 
-* XP -- {InstallPathXP}{ProductNameVersion}\WebSchedule\Data
-* Vista or later -- {InstallPathVista}{ProductNameVersion}\WebSchedule\Data
+* XP -- {InstallPathXP}{PlatformName}\WebSchedule\Data
+* Vista or later -- {InstallPathVista}{PlatformName}\WebSchedule\Data
 
 .Note:
 [NOTE]
